@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chxRecordar = new System.Windows.Forms.CheckBox();
-            this.txtContrasenia = new System.Windows.Forms.TextBox();
             this.lblContrasenia = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -65,8 +64,8 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnMostrarPass = new System.Windows.Forms.Button();
             this.btnAlerta = new System.Windows.Forms.Button();
+            this.contrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.groupBox1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabInicioSesion.SuspendLayout();
@@ -77,9 +76,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnMostrarPass);
+            this.groupBox1.Controls.Add(this.contrasenia);
             this.groupBox1.Controls.Add(this.chxRecordar);
-            this.groupBox1.Controls.Add(this.txtContrasenia);
             this.groupBox1.Controls.Add(this.lblContrasenia);
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.lblUsuario);
@@ -93,13 +91,6 @@
             resources.ApplyResources(this.chxRecordar, "chxRecordar");
             this.chxRecordar.Name = "chxRecordar";
             this.chxRecordar.UseVisualStyleBackColor = true;
-            // 
-            // txtContrasenia
-            // 
-            resources.ApplyResources(this.txtContrasenia, "txtContrasenia");
-            this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.UseSystemPasswordChar = true;
-            this.txtContrasenia.TextChanged += new System.EventHandler(this.txtContrasenia_TextChanged);
             // 
             // lblContrasenia
             // 
@@ -321,19 +312,6 @@
             resources.ApplyResources(this.lblNombre, "lblNombre");
             this.lblNombre.Name = "lblNombre";
             // 
-            // btnMostrarPass
-            // 
-            this.btnMostrarPass.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btnMostrarPass, "btnMostrarPass");
-            this.btnMostrarPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMostrarPass.FlatAppearance.BorderSize = 0;
-            this.btnMostrarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnMostrarPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnMostrarPass.Image = global::ProyectoCompra.Properties.Resources.ocultar_contrasenia;
-            this.btnMostrarPass.Name = "btnMostrarPass";
-            this.btnMostrarPass.UseVisualStyleBackColor = false;
-            this.btnMostrarPass.Click += new System.EventHandler(this.btnMostrarPass_Click);
-            // 
             // btnAlerta
             // 
             resources.ApplyResources(this.btnAlerta, "btnAlerta");
@@ -347,6 +325,11 @@
             this.btnAlerta.UseVisualStyleBackColor = true;
             this.btnAlerta.MouseEnter += new System.EventHandler(this.btnAlerta_MouseEnter);
             this.btnAlerta.MouseLeave += new System.EventHandler(this.btnAlerta_MouseLeave);
+            // 
+            // contrasenia
+            // 
+            resources.ApplyResources(this.contrasenia, "contrasenia");
+            this.contrasenia.Name = "contrasenia";
             // 
             // frmInicioSesion
             // 
@@ -374,11 +357,9 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtContrasenia;
         private System.Windows.Forms.Label lblContrasenia;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Button btnMostrarPass;
         private System.Windows.Forms.ComboBox cbxIdiomas;
         private System.Windows.Forms.CheckBox chxRecordar;
         private System.Windows.Forms.TabControl tabControl;
@@ -410,6 +391,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnAceptar;
+        private Controles.ctrlContrasenia contrasenia;
     }
 }
 

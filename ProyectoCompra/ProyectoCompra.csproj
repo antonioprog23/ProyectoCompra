@@ -71,6 +71,12 @@
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
+    <Compile Include="Controles\Contraseña.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Contraseña.Designer.cs">
+      <DependentUpon>Contraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
     <Compile Include="Formularios\FrmCarrito.cs">
       <SubType>Form</SubType>
@@ -110,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\Contraseña.resx">
+      <DependentUpon>Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,7 +181,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controles\" />
     <Folder Include="Procedimientos almacenados\" />
   </ItemGroup>
   <ItemGroup>

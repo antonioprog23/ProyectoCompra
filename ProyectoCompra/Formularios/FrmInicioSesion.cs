@@ -1,5 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
+using ProyectoCompra.Controles;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Drawing;
@@ -27,26 +28,12 @@ namespace ProyectoCompra.Formularios
 
         #endregion
 
-        private void btnMostrarPass_Click(object sender, EventArgs e)
-        {
-            if (txtContrasenia.UseSystemPasswordChar)
-            {
-                btnMostrarPass.Image = Properties.Resources.mostrar_contrasenia;
-                txtContrasenia.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                btnMostrarPass.Image = Properties.Resources.ocultar_contrasenia;
-                txtContrasenia.UseSystemPasswordChar = true;
-            }
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Usuario usuario = null;
-            if (!txtUsuario.Text.Equals("") && !txtContrasenia.Text.Equals(""))
+            if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
             {
-                usuario = new Usuario(txtUsuario.Text, txtContrasenia.Text);
+                usuario = new Usuario(txtUsuario.Text);
                 int idUsuario = BDUsuario.comprobarUsuarioExiste(usuario);
                 if (idUsuario == 0)
                 {
@@ -56,8 +43,8 @@ namespace ProyectoCompra.Formularios
                 {
                     MessageBox.Show("Bienvenido");
                     usuarioEncontrado = new Usuario(idUsuario);
-                    FicheroAuxiliar.escribirFichero(usuarioEncontrado);
-                    BDCliente.obtenerUltimoAcceso(idUsuario);
+                    //FicheroAuxiliar.escribirFichero(usuarioEncontrado);
+                    //BDCliente.obtenerUltimoAcceso(idUsuario);
                     Application.Restart();
                 }
             }
@@ -96,7 +83,7 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = null;
             if (!textUsuario.Text.Equals("") && !txtContrasena.Text.Equals("") && !txtRepContrasenia.Text.Equals(""))
             {
-                    usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
+                usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
             }
             return usuario;
         }
