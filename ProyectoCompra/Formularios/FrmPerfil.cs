@@ -53,16 +53,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnMostrarPass_Click(object sender, EventArgs e)
         {
-            if (txtMostrarContrasenia.UseSystemPasswordChar)
-            {
-                btnMostrarPass.Image = Properties.Resources.mostrar_contrasenia;
-                txtMostrarContrasenia.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                btnMostrarPass.Image = Properties.Resources.ocultar_contrasenia;
-                txtMostrarContrasenia.UseSystemPasswordChar = true;
-            }
+
         }
     }
 }

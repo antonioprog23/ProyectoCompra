@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,8 +62,8 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnMostrarPass = new System.Windows.Forms.Button();
+            this.txtMostrarContrasenia = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,6 +78,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(128, 103);
             this.panel1.TabIndex = 1;
+            // 
+            // btnConfiguracion
+            // 
+            this.btnConfiguracion.Image = global::ProyectoCompra.Properties.Resources.icon_configuracion;
+            this.btnConfiguracion.Location = new System.Drawing.Point(51, 3);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(37, 33);
+            this.btnConfiguracion.TabIndex = 1;
+            this.toolTip.SetToolTip(this.btnConfiguracion, "Configuración.");
+            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(94, 3);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(29, 34);
+            this.btnCerrarSesion.TabIndex = 0;
+            this.toolTip.SetToolTip(this.btnCerrarSesion, "Cerrar sesión.");
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnCancelar
             // 
@@ -165,6 +189,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnMostrarPass);
+            this.groupBox2.Controls.Add(this.txtMostrarContrasenia);
             this.groupBox2.Controls.Add(this.lblMostrarUsuario);
             this.groupBox2.Controls.Add(this.lblMostrarCorreo);
             this.groupBox2.Controls.Add(this.lblContrasenia);
@@ -360,27 +386,32 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
-            // btnConfiguracion
+            // btnMostrarPass
             // 
-            this.btnConfiguracion.Image = global::ProyectoCompra.Properties.Resources.icon_configuracion;
-            this.btnConfiguracion.Location = new System.Drawing.Point(51, 3);
-            this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(37, 33);
-            this.btnConfiguracion.TabIndex = 1;
-            this.toolTip.SetToolTip(this.btnConfiguracion, "Configuración.");
-            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnMostrarPass.BackColor = System.Drawing.Color.White;
+            this.btnMostrarPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMostrarPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnMostrarPass.FlatAppearance.BorderSize = 0;
+            this.btnMostrarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnMostrarPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnMostrarPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarPass.Image = global::ProyectoCompra.Properties.Resources.ocultar_contrasenia;
+            this.btnMostrarPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnMostrarPass.Location = new System.Drawing.Point(346, 78);
+            this.btnMostrarPass.Name = "btnMostrarPass";
+            this.btnMostrarPass.Size = new System.Drawing.Size(19, 22);
+            this.btnMostrarPass.TabIndex = 23;
+            this.btnMostrarPass.UseVisualStyleBackColor = false;
             // 
-            // btnCerrarSesion
+            // txtMostrarContrasenia
             // 
-            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(94, 3);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(29, 34);
-            this.btnCerrarSesion.TabIndex = 0;
-            this.toolTip.SetToolTip(this.btnCerrarSesion, "Cerrar sesión.");
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.txtMostrarContrasenia.Font = new System.Drawing.Font("Arial Nova", 8.25F);
+            this.txtMostrarContrasenia.Location = new System.Drawing.Point(153, 78);
+            this.txtMostrarContrasenia.Name = "txtMostrarContrasenia";
+            this.txtMostrarContrasenia.Size = new System.Drawing.Size(187, 21);
+            this.txtMostrarContrasenia.TabIndex = 22;
+            this.txtMostrarContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMostrarContrasenia.UseSystemPasswordChar = true;
             // 
             // FrmPerfil
             // 
@@ -443,5 +474,7 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Button btnMostrarPass;
+        private System.Windows.Forms.TextBox txtMostrarContrasenia;
     }
 }
