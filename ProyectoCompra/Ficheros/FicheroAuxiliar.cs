@@ -16,7 +16,7 @@ namespace ProyectoCompra.Ficheros
                 {
                     sw.WriteLine(usuario.toStringConSeparador());
                     File.SetAttributes(FICHERO, FileAttributes.Encrypted);
-                    File.SetAttributes(FICHERO, FileAttributes.Hidden);
+                    //File.SetAttributes(FICHERO, FileAttributes.Hidden);
                 }
             }
             catch (DirectoryNotFoundException d)
