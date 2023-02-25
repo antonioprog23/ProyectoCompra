@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblDireccion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="lblDireccion.Text" xml:space="preserve">
+    <value>* Address:</value>
+  </data>
+  <data name="lblSexo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="lblSexo.Text" xml:space="preserve">
+    <value>* Sex:</value>
+  </data>
+  <data name="lblEdad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="lblEdad.Text" xml:space="preserve">
+    <value>* Age:</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>* Date of birth:</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>* Surname:</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>* Name:</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Customer data</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>* Repeat password:</value>
+  </data>
+  <data name="lblContrase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="lblContrase.Text" xml:space="preserve">
+    <value>* Password:</value>
+  </data>
+  <data name="lblCorreo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="lblCorreo.Text" xml:space="preserve">
+    <value>* E-mail:</value>
+  </data>
+  <data name="lblUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="lblUsuario.Text" xml:space="preserve">
+    <value>* User:</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>User data</value>
+  </data>
+  <data name="btnCancelar.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnAceptar.Text" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAA19JREFUSEvtUk1vG1UUtdiAhPgBkNKmtGpa6kShTStkp0lqp4lTp3Y1iRNo0gAJ
+        FKhUFTZISLCFRVdZIbqkK0IS1bHjz/HYceI0ZlMqsWHBEnXRjOOZN5+m7eG+4QkJAVVbsoMjHb337j33
+        3PvejO+/hZ3C6LtaMTorjrsLvST16UrsPlsbu8/3Irx70ErRO8b6JKzaFPSKdEeEdwe6Is2xtXFYmzOw
+        b70Nk5qY5bEPRPrfAZnIs7oS/8WqXYBbn4O7NUdN3gKrSHdR7n9OyJ4eeuncvFlNwKHJ3fp7aH1/Cc7W
+        O7DoufRSdF7Ing6mnGgzKjHGp3fqs8hcn0Lm6ynvJt63UGKmVUzsFfInh6lEU1Z1nKa/SJPPQYpFIMUj
+        3t7ZmoFZlcDkSFrInwy6HD1Ff84Da2PSa+DSs0wnholDaNXpuW5N0zNNQJcjD1j+dEiUPT6YPHTbrMTh
+        1CY9s9bWRVyaPoP3ib/WZ+BuTsHZmIBRHoWWH/hRlD0eWC58hcnDsNbOw15PkNmbaG1ewMezg8Swt3dr
+        b3g5uxIDK4ahZYNXRfmjgW+6ntcLA3et8gjs6nmacgzuBn2H2gQ++zCEzy+HyHyC4uOwNyTYazEYpWFq
+        ELh372bgBWHzz2C54FesGIJVjlDxKPEc3PW4xy+u9uHLj/rh8sbVuJezK2dhKkNguVNopnuuC5u/R3M5
+        cEDLBSxTPg1LOQO7PAynMkLkzUZw+0YYP9wYJFMR47ckjVUaBMv3YSfV4zjZQIew+yua6eMyywdgFvph
+        8SZyCLYShl3iDCE/H0SRaNGenzm5xiwOwCj0Ql89icaKXxF2f4aW6T6rpY89ZNnXYfIm+V5YVMRXMx8k
+        kyC6Ow/hta5DMPi5ECRTasY1uV56ogDY6gns3PQ/1JOHJWH7OwDfM83k0Z+0VDdY5jiM7Amw7ElvNTI9
+        Xowzc60L2WudFCNNjsdJRzRIy7hu9Ri0lU6oSwd/5p7C3udTFw9+0kwepuRR6Gk/WMoPnZPOWvJV4hHK
+        daCZ7KCV6zh5jHIrfmhCr6W4/ggaywewvdD2qbD3+RpLey6rS+2txvIrlNwPdbEd6nf7iC9DXWjD9rec
+        L/1Bla8UVxf2oLG4l9iOnaX9aAiqi/ta2wsvXhH2/+NR8Pl+A6Tbo5ljxCr7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="lblAlerta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 13</value>
+  </data>
+  <data name="lblAlerta.Text" xml:space="preserve">
+    <value>Fields * are required.</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>New user</value>
+  </data>
+</root>
