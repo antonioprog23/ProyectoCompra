@@ -16,7 +16,7 @@ namespace ProyectoCompra.Ficheros
                 {
                     sw.WriteLine(usuario.toStringConSeparador());
                     File.SetAttributes(FICHERO, FileAttributes.Encrypted);
-                    //File.SetAttributes(FICHERO, FileAttributes.Hidden);
+                    File.SetAttributes(FICHERO, FileAttributes.Normal);
                 }
             }
             catch (DirectoryNotFoundException d)
@@ -34,12 +34,15 @@ namespace ProyectoCompra.Ficheros
             Usuario usuario = null;
             try
             {
-                using (StreamReader sr = new StreamReader(FICHERO))
+                if (File.Exists(FICHERO))
                 {
-                    string linea = sr.ReadLine();
-                    if (linea != null)
+                    using (StreamReader sr = new StreamReader(FICHERO))
                     {
-                        usuario = new Usuario(linea);
+                        string linea = sr.ReadLine();
+                        if (linea != null)
+                        {
+                            usuario = new Usuario(linea);
+                        }
                     }
                 }
             }

@@ -14,14 +14,18 @@ namespace ProyectoCompra.Formularios
             InitializeComponent();
         }
 
+        public FrmPerfil(Usuario usuario)
+        {
+            InitializeComponent();
+            this.usuarioRecuperado = usuario;
+        }
+
         private void frmPerfil_Load(object sender, EventArgs e)
         {
-            Usuario usuario = FicheroAuxiliar.leerFichero();
-            if (usuario != null)
+            //Usuario usuario = FicheroAuxiliar.leerFichero();
+            if (usuarioRecuperado != null)
             {
-                usuarioRecuperado = BDCliente.obtenerDatos(usuario.idUsuario);
-                if (usuarioRecuperado != null)
-                {
+                //usuarioRecuperado = BDCliente.obtenerDatos(usuario.idUsuario);
                     lblMostrarId.Text = usuarioRecuperado.idUsuario.ToString();
                     lblMostrarUsuario.Text = usuarioRecuperado.username.ToString();
                     txtMostrarContrasenia.Text = usuarioRecuperado.password.ToString();
@@ -35,7 +39,6 @@ namespace ProyectoCompra.Formularios
                     lblMostrarDireccion.Text = usuarioRecuperado.cliente.direccion.ToString();
                     txtMostrarContrasenia.Text = usuarioRecuperado.password.ToString();
                     lblMostrarUltimoAcceso.Text = usuarioRecuperado.fechaAlta.ToString();
-                }
             }
         }
 

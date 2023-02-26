@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="contrasenia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 124</value>
+    <value>26, 124</value>
   </data>
   <data name="contrasenia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 30</value>
+    <value>213, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="contrasenia.TabIndex" type="System.Int32, mscorlib">
@@ -367,7 +367,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnAceptar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 371</value>
+    <value>351, 371</value>
   </data>
   <data name="btnAceptar.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 25</value>
@@ -422,33 +422,6 @@
   </data>
   <data name="&gt;&gt;lblAlerta.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="btnCancelar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 371</value>
-  </data>
-  <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="btnCancelar.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btnCancelar.Text" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.Name" xml:space="preserve">
-    <value>btnCancelar</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.Parent" xml:space="preserve">
-    <value>tabRegistrarse</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="txtRepContrasenia.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Nova, 8.25pt</value>
@@ -694,7 +667,7 @@
     <value>tabRegistrarse</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="txtDireccion.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 142</value>
@@ -1042,7 +1015,7 @@
     <value>tabRegistrarse</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnAlerta.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1092,7 +1065,7 @@
     <value>tabRegistrarse</value>
   </data>
   <data name="&gt;&gt;btnAlerta.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="tabRegistrarse.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

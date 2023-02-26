@@ -15,9 +15,17 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmMain : Form
     {
+        private Usuario usuarioRecuperado;
+
         public FrmMain()
         {
             InitializeComponent();
+        }
+
+        public FrmMain(Usuario usuario)
+        {
+            InitializeComponent();
+            this.usuarioRecuperado = usuario;
         }
 
         private void btnIdentificarse_Click(object sender, EventArgs e)
@@ -28,7 +36,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            FrmPerfil frmPerfil = new FrmPerfil();
+            FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado);
             frmPerfil.ShowDialog();
         }
 
@@ -40,12 +48,12 @@ namespace ProyectoCompra.Formularios
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
-            if (FicheroAuxiliar.leerFichero() == null)
+            if (usuarioRecuperado == null)
             {
                 btnIdentificarse.Visible = true;
                 btnPerfil.Visible = false;
