@@ -59,9 +59,10 @@ namespace ProyectoCompra.Base_datos
         }
 
 
-        public static Usuario obtenerDatos(int idUsario)
+        public static Usuario obtenerDatos(params string [] datos)
         {
             Usuario usuarioCompleto = null;
+            Cliente cliente = null;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
@@ -69,7 +70,8 @@ namespace ProyectoCompra.Base_datos
                 {
                     cmd.CommandText = "ConsultarUsuario";
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Id_Usuario", idUsario);
+                    cmd.Parameters.AddWithValue("@Usuario_name", datos[0]);
+                    cmd.Parameters.AddWithValue("@Contrasenia", datos[1]);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -86,8 +88,7 @@ namespace ProyectoCompra.Base_datos
                             string sexo = reader.GetString(9);
                             string direccion = reader.GetString(10);
                             string correo = reader.GetString(11);
-                            DateTime fechaUltimoAcceso = reader.GetDateTime(12);
-                            Cliente cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, direccion, correo);
+                            cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, direccion, correo);
                             usuarioCompleto = new Usuario(idUsuario, cliente, usuarioName, contrasenia, Convert.ToString(fechaAlta));
                         }
                     }
@@ -118,7 +119,6 @@ namespace ProyectoCompra.Base_datos
             }
             return fechaUltimoAcceso;
         }
-
-
+             
     }
 }

@@ -14,8 +14,6 @@ namespace ProyectoCompra.Formularios
         public frmInicioSesion()
         {
             InitializeComponent();
-            // (Image.FromFile("C:\\Users\\anton\\Downloads\\idioma_castellano.png"));
-            //cbxIdiomas.Items.Add(new { Icon = Image.FromFile("C:\\Users\\anton\\Downloads\\idioma_castellano.png") });
         }
 
         #region Eventos
@@ -30,21 +28,17 @@ namespace ProyectoCompra.Formularios
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Usuario usuario = null;
             if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
             {
-                usuario = new Usuario(txtUsuario.Text);
-                int idUsuario = BDUsuario.comprobarUsuarioExiste(usuario);
-                if (idUsuario == 0)
+                usuarioEncontrado = BDCliente.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia);
+                if (usuarioEncontrado == null)
                 {
                     MessageBox.Show("Usuario no encontrado.");
                 }
                 else
                 {
                     MessageBox.Show("Bienvenido");
-                    usuarioEncontrado = new Usuario(idUsuario);
-                    //FicheroAuxiliar.escribirFichero(usuarioEncontrado);
-                    //BDCliente.obtenerUltimoAcceso(idUsuario);
+                    FrmMain main = new FrmMain(usuarioEncontrado);
                     Application.Restart();
                 }
             }
@@ -86,11 +80,6 @@ namespace ProyectoCompra.Formularios
                 usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
             }
             return usuario;
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void btnAlerta_MouseEnter(object sender, EventArgs e)

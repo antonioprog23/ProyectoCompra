@@ -41,7 +41,6 @@
             this.tabRegistrarse = new System.Windows.Forms.TabPage();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblAlerta = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtRepContrasenia = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
@@ -146,7 +145,6 @@
             this.tabRegistrarse.BackColor = System.Drawing.Color.White;
             this.tabRegistrarse.Controls.Add(this.btnAceptar);
             this.tabRegistrarse.Controls.Add(this.lblAlerta);
-            this.tabRegistrarse.Controls.Add(this.btnCancelar);
             this.tabRegistrarse.Controls.Add(this.groupBox2);
             this.tabRegistrarse.Controls.Add(this.groupBox3);
             this.tabRegistrarse.Controls.Add(this.btnAlerta);
@@ -164,13 +162,6 @@
             // 
             resources.ApplyResources(this.lblAlerta, "lblAlerta");
             this.lblAlerta.Name = "lblAlerta";
-            // 
-            // btnCancelar
-            // 
-            resources.ApplyResources(this.btnCancelar, "btnCancelar");
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // groupBox2
             // 
@@ -367,7 +358,6 @@
         private System.Windows.Forms.TabPage tabRegistrarse;
         private System.Windows.Forms.Label lblAlerta;
         private System.Windows.Forms.Button btnAlerta;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtRepContrasenia;
         private System.Windows.Forms.TextBox txtContrasena;
