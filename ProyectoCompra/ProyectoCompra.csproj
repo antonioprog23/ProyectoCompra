@@ -71,17 +71,17 @@
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
-    <Compile Include="Controles\Contraseña.cs">
+    <Compile Include="Controles\CtrlContraseña.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\Contraseña.Designer.cs">
-      <DependentUpon>Contraseña.cs</DependentUpon>
+    <Compile Include="Controles\CtrlContraseña.Designer.cs">
+      <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controles\TextBoxTipo.cs">
+    <Compile Include="Controles\CtrlTextBoxTipo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\TextBoxTipo.Designer.cs">
-      <DependentUpon>TextBoxTipo.cs</DependentUpon>
+    <Compile Include="Controles\CtrlTextBoxTipo.Designer.cs">
+      <DependentUpon>CtrlTextBoxTipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
     <Compile Include="Formularios\FrmCarrito.cs">
@@ -122,11 +122,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controles\Contraseña.resx">
-      <DependentUpon>Contraseña.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\CtrlContraseña.resx">
+      <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controles\TextBoxTipo.resx">
-      <DependentUpon>TextBoxTipo.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\CtrlTextBoxTipo.resx">
+      <DependentUpon>CtrlTextBoxTipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
