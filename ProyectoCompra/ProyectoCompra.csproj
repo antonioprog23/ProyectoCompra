@@ -77,6 +77,12 @@
     <Compile Include="Controles\Contraseña.Designer.cs">
       <DependentUpon>Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\TextBoxTipo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\TextBoxTipo.Designer.cs">
+      <DependentUpon>TextBoxTipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
     <Compile Include="Formularios\FrmCarrito.cs">
       <SubType>Form</SubType>
@@ -118,6 +124,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\Contraseña.resx">
       <DependentUpon>Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\TextBoxTipo.resx">
+      <DependentUpon>TextBoxTipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
