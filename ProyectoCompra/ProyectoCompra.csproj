@@ -90,6 +90,12 @@
     <Compile Include="Formularios\FrmCarrito.Designer.cs">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmAlimentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmAlimentacion.Designer.cs">
+      <DependentUpon>FrmAlimentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmUsuarioEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmAlimentacion.resx">
+      <DependentUpon>FrmAlimentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuarioEdit.en.resx">
       <DependentUpon>FrmUsuarioEdit.cs</DependentUpon>
