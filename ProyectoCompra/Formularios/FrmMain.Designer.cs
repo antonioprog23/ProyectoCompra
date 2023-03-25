@@ -30,64 +30,61 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxAlimentacion = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
+            this.btnLimpiezaCalzado = new System.Windows.Forms.Button();
+            this.btnInsecticidas = new System.Windows.Forms.Button();
+            this.btnLejiasAmoniacos = new System.Windows.Forms.Button();
+            this.btnLavavajillas = new System.Windows.Forms.Button();
+            this.btnLimpiezaHogar = new System.Windows.Forms.Button();
+            this.btnLavadoRopa = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
+            this.btnLocionSolar = new System.Windows.Forms.Button();
+            this.btnCuidadoCabello = new System.Windows.Forms.Button();
+            this.btnCuidadoFacial = new System.Windows.Forms.Button();
+            this.btnBotiquin = new System.Windows.Forms.Button();
+            this.btnBucal = new System.Windows.Forms.Button();
+            this.btnPerfumeria = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnClimatizacion = new System.Windows.Forms.Button();
+            this.btnCafeteras = new System.Windows.Forms.Button();
+            this.btnHornoPlaca = new System.Windows.Forms.Button();
+            this.btnSecadora = new System.Windows.Forms.Button();
+            this.btnFrigorificos = new System.Windows.Forms.Button();
+            this.btnLavadora = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAudio = new System.Windows.Forms.Button();
+            this.btnTablets = new System.Windows.Forms.Button();
+            this.btnInformatica = new System.Windows.Forms.Button();
+            this.btnFotografia = new System.Windows.Forms.Button();
+            this.btnTelefonia = new System.Windows.Forms.Button();
+            this.btnTelevisores = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.button52 = new System.Windows.Forms.Button();
+            this.btnTextilHogar = new System.Windows.Forms.Button();
+            this.btnCasaDecoracion = new System.Windows.Forms.Button();
+            this.btnMascotas = new System.Windows.Forms.Button();
+            this.btnBricolaje = new System.Windows.Forms.Button();
+            this.btnJardin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSaludo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnIdentificarse = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblContador = new System.Windows.Forms.Label();
-            this.button39 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button37 = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.mnAlimentacion = new System.Windows.Forms.MenuStrip();
             this.iTEM1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -106,37 +103,40 @@
             this.fríosYCongeladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bebidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drogueríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuidadoPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.electrodomésticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tecnologíaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hogarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuidadoPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button38 = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button43 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
-            this.button45 = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.button46 = new System.Windows.Forms.Button();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
-            this.button49 = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.button52 = new System.Windows.Forms.Button();
-            this.button53 = new System.Windows.Forms.Button();
-            this.button54 = new System.Windows.Forms.Button();
-            this.button55 = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
-            this.button57 = new System.Windows.Forms.Button();
+            this.btnLogoMain = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.btnNutricionDep = new System.Windows.Forms.Button();
+            this.btnComidasInt = new System.Windows.Forms.Button();
+            this.btnConservas = new System.Windows.Forms.Button();
+            this.btnDesayunoMerienda = new System.Windows.Forms.Button();
+            this.btnAceitesSalsas = new System.Windows.Forms.Button();
+            this.btnLacteosHuevos = new System.Windows.Forms.Button();
+            this.btnSushi = new System.Windows.Forms.Button();
+            this.btnPescados = new System.Windows.Forms.Button();
+            this.btnCharcuteria = new System.Windows.Forms.Button();
+            this.btnCarne = new System.Windows.Forms.Button();
+            this.btnQuesos = new System.Windows.Forms.Button();
+            this.btnVerdurasHortalizas = new System.Windows.Forms.Button();
+            this.btnPastas = new System.Windows.Forms.Button();
+            this.btnPlatosListos = new System.Windows.Forms.Button();
+            this.btnMantequillas = new System.Windows.Forms.Button();
+            this.btnPasteles = new System.Windows.Forms.Button();
+            this.btnPostres = new System.Windows.Forms.Button();
+            this.btnCongelados = new System.Windows.Forms.Button();
+            this.btnSinAlcohol = new System.Windows.Forms.Button();
+            this.btnBebidaEcologica = new System.Windows.Forms.Button();
+            this.btnCavaSidra = new System.Windows.Forms.Button();
+            this.btnBebidaAlcohol = new System.Windows.Forms.Button();
+            this.btnAguaSoda = new System.Windows.Forms.Button();
+            this.btnZumos = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxAlimentacion.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -148,22 +148,22 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.mnAlimentacion.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.mnAlimentacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel1.Controls.Add(this.gbxAlimentacion);
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
             this.flowLayoutPanel1.Controls.Add(this.groupBox3);
             this.flowLayoutPanel1.Controls.Add(this.groupBox4);
@@ -177,15 +177,15 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1191, 584);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // groupBox1
+            // gbxAlimentacion
             // 
-            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1159, 143);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Alimentación";
+            this.gbxAlimentacion.Controls.Add(this.tableLayoutPanel1);
+            this.gbxAlimentacion.Location = new System.Drawing.Point(3, 3);
+            this.gbxAlimentacion.Name = "gbxAlimentacion";
+            this.gbxAlimentacion.Size = new System.Drawing.Size(1159, 143);
+            this.gbxAlimentacion.TabIndex = 0;
+            this.gbxAlimentacion.TabStop = false;
+            this.gbxAlimentacion.Text = "Alimentación";
             // 
             // tableLayoutPanel1
             // 
@@ -196,87 +196,18 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.button6, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnNutricionDep, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnComidasInt, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnConservas, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnDesayunoMerienda, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnAceitesSalsas, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnLacteosHuevos, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 20);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(958, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(185, 101);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Nutrición deportiva";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(767, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(183, 101);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Comidas internacionales";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Location = new System.Drawing.Point(576, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(183, 101);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Conservas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Location = new System.Drawing.Point(385, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 101);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Desayuno y merienda";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Location = new System.Drawing.Point(194, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 101);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Aceites, vinagres y salsas especiales";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 101);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lácteos y huevos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -297,72 +228,18 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Controls.Add(this.button7, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button8, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button9, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button10, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button11, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button12, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSushi, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnPescados, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnCharcuteria, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnCarne, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnQuesos, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnVerdurasHortalizas, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 17);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(958, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(185, 101);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(767, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(183, 101);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(576, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(183, 101);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(385, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(183, 101);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(194, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(183, 101);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(3, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(183, 101);
-            this.button12.TabIndex = 0;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -383,72 +260,18 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Controls.Add(this.button13, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button14, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button15, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button16, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button17, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button18, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnPastas, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnPlatosListos, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnMantequillas, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnPasteles, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnPostres, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnCongelados, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 17);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(958, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(185, 101);
-            this.button13.TabIndex = 5;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(767, 3);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(183, 101);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(576, 3);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(183, 101);
-            this.button15.TabIndex = 3;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(385, 3);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(183, 101);
-            this.button16.TabIndex = 2;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(194, 3);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(183, 101);
-            this.button17.TabIndex = 1;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(3, 3);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(183, 101);
-            this.button18.TabIndex = 0;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -469,72 +292,18 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.Controls.Add(this.button19, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button20, 4, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button21, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button22, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button23, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button24, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnSinAlcohol, 5, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnBebidaEcologica, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnCavaSidra, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnBebidaAlcohol, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnAguaSoda, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnZumos, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 17);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(958, 3);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(185, 101);
-            this.button19.TabIndex = 5;
-            this.button19.Text = "button19";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(767, 3);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(183, 101);
-            this.button20.TabIndex = 4;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(576, 3);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(183, 101);
-            this.button21.TabIndex = 3;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(385, 3);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(183, 101);
-            this.button22.TabIndex = 2;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(194, 3);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(183, 101);
-            this.button23.TabIndex = 1;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(3, 3);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(183, 101);
-            this.button24.TabIndex = 0;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -555,12 +324,12 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel5.Controls.Add(this.button25, 5, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button26, 4, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button27, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button28, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button29, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button30, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnLimpiezaCalzado, 5, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnInsecticidas, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnLejiasAmoniacos, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnLavavajillas, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnLimpiezaHogar, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnLavadoRopa, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 17);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
@@ -568,59 +337,65 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
-            // button25
+            // btnLimpiezaCalzado
             // 
-            this.button25.Location = new System.Drawing.Point(958, 3);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(185, 101);
-            this.button25.TabIndex = 5;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
+            this.btnLimpiezaCalzado.Location = new System.Drawing.Point(958, 3);
+            this.btnLimpiezaCalzado.Name = "btnLimpiezaCalzado";
+            this.btnLimpiezaCalzado.Size = new System.Drawing.Size(185, 101);
+            this.btnLimpiezaCalzado.TabIndex = 5;
+            this.btnLimpiezaCalzado.Text = "Limpieza calzado";
+            this.btnLimpiezaCalzado.UseVisualStyleBackColor = true;
             // 
-            // button26
+            // btnInsecticidas
             // 
-            this.button26.Location = new System.Drawing.Point(767, 3);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(183, 101);
-            this.button26.TabIndex = 4;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
+            this.btnInsecticidas.Location = new System.Drawing.Point(767, 3);
+            this.btnInsecticidas.Name = "btnInsecticidas";
+            this.btnInsecticidas.Size = new System.Drawing.Size(183, 101);
+            this.btnInsecticidas.TabIndex = 4;
+            this.btnInsecticidas.Text = "Insecticidas";
+            this.btnInsecticidas.UseVisualStyleBackColor = true;
             // 
-            // button27
+            // btnLejiasAmoniacos
             // 
-            this.button27.Location = new System.Drawing.Point(576, 3);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(183, 101);
-            this.button27.TabIndex = 3;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
+            this.btnLejiasAmoniacos.Location = new System.Drawing.Point(576, 3);
+            this.btnLejiasAmoniacos.Name = "btnLejiasAmoniacos";
+            this.btnLejiasAmoniacos.Size = new System.Drawing.Size(183, 101);
+            this.btnLejiasAmoniacos.TabIndex = 3;
+            this.btnLejiasAmoniacos.Text = "Lejías y amoníacos ";
+            this.btnLejiasAmoniacos.UseVisualStyleBackColor = true;
             // 
-            // button28
+            // btnLavavajillas
             // 
-            this.button28.Location = new System.Drawing.Point(385, 3);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(183, 101);
-            this.button28.TabIndex = 2;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
+            this.btnLavavajillas.Image = global::ProyectoCompra.Properties.Resources.icon_lavavajillas;
+            this.btnLavavajillas.Location = new System.Drawing.Point(385, 3);
+            this.btnLavavajillas.Name = "btnLavavajillas";
+            this.btnLavavajillas.Size = new System.Drawing.Size(183, 101);
+            this.btnLavavajillas.TabIndex = 2;
+            this.btnLavavajillas.Text = "Lavavajillas";
+            this.btnLavavajillas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLavavajillas.UseVisualStyleBackColor = true;
             // 
-            // button29
+            // btnLimpiezaHogar
             // 
-            this.button29.Location = new System.Drawing.Point(194, 3);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(183, 101);
-            this.button29.TabIndex = 1;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
+            this.btnLimpiezaHogar.Image = global::ProyectoCompra.Properties.Resources.icon_limpieza_hogar;
+            this.btnLimpiezaHogar.Location = new System.Drawing.Point(194, 3);
+            this.btnLimpiezaHogar.Name = "btnLimpiezaHogar";
+            this.btnLimpiezaHogar.Size = new System.Drawing.Size(183, 101);
+            this.btnLimpiezaHogar.TabIndex = 1;
+            this.btnLimpiezaHogar.Text = "Limpieza Hogar";
+            this.btnLimpiezaHogar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpiezaHogar.UseVisualStyleBackColor = true;
             // 
-            // button30
+            // btnLavadoRopa
             // 
-            this.button30.Location = new System.Drawing.Point(3, 3);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(183, 101);
-            this.button30.TabIndex = 0;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
+            this.btnLavadoRopa.Image = global::ProyectoCompra.Properties.Resources.icon_lavado_ropa;
+            this.btnLavadoRopa.Location = new System.Drawing.Point(3, 3);
+            this.btnLavadoRopa.Name = "btnLavadoRopa";
+            this.btnLavadoRopa.Size = new System.Drawing.Size(183, 101);
+            this.btnLavadoRopa.TabIndex = 0;
+            this.btnLavadoRopa.Text = "Lavado de ropa";
+            this.btnLavadoRopa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLavadoRopa.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -641,12 +416,12 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel6.Controls.Add(this.button31, 5, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button32, 4, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button33, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button34, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button35, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button36, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnLocionSolar, 5, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnCuidadoCabello, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnCuidadoFacial, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnBotiquin, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnBucal, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnPerfumeria, 0, 0);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(6, 17);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
@@ -654,59 +429,340 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
-            // button31
+            // btnLocionSolar
             // 
-            this.button31.Location = new System.Drawing.Point(958, 3);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(185, 101);
-            this.button31.TabIndex = 5;
-            this.button31.Text = "button31";
-            this.button31.UseVisualStyleBackColor = true;
+            this.btnLocionSolar.Location = new System.Drawing.Point(958, 3);
+            this.btnLocionSolar.Name = "btnLocionSolar";
+            this.btnLocionSolar.Size = new System.Drawing.Size(185, 101);
+            this.btnLocionSolar.TabIndex = 5;
+            this.btnLocionSolar.Text = "Loción solar";
+            this.btnLocionSolar.UseVisualStyleBackColor = true;
             // 
-            // button32
+            // btnCuidadoCabello
             // 
-            this.button32.Location = new System.Drawing.Point(767, 3);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(183, 101);
-            this.button32.TabIndex = 4;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
+            this.btnCuidadoCabello.Location = new System.Drawing.Point(767, 3);
+            this.btnCuidadoCabello.Name = "btnCuidadoCabello";
+            this.btnCuidadoCabello.Size = new System.Drawing.Size(183, 101);
+            this.btnCuidadoCabello.TabIndex = 4;
+            this.btnCuidadoCabello.Text = "Cuidado cabello";
+            this.btnCuidadoCabello.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCuidadoCabello.UseVisualStyleBackColor = true;
             // 
-            // button33
+            // btnCuidadoFacial
             // 
-            this.button33.Location = new System.Drawing.Point(576, 3);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(183, 101);
-            this.button33.TabIndex = 3;
-            this.button33.Text = "button33";
-            this.button33.UseVisualStyleBackColor = true;
+            this.btnCuidadoFacial.Location = new System.Drawing.Point(576, 3);
+            this.btnCuidadoFacial.Name = "btnCuidadoFacial";
+            this.btnCuidadoFacial.Size = new System.Drawing.Size(183, 101);
+            this.btnCuidadoFacial.TabIndex = 3;
+            this.btnCuidadoFacial.Text = "Cuidado facial";
+            this.btnCuidadoFacial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCuidadoFacial.UseVisualStyleBackColor = true;
             // 
-            // button34
+            // btnBotiquin
             // 
-            this.button34.Location = new System.Drawing.Point(385, 3);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(183, 101);
-            this.button34.TabIndex = 2;
-            this.button34.Text = "button34";
-            this.button34.UseVisualStyleBackColor = true;
+            this.btnBotiquin.Location = new System.Drawing.Point(385, 3);
+            this.btnBotiquin.Name = "btnBotiquin";
+            this.btnBotiquin.Size = new System.Drawing.Size(183, 101);
+            this.btnBotiquin.TabIndex = 2;
+            this.btnBotiquin.Text = "Botiquín";
+            this.btnBotiquin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBotiquin.UseVisualStyleBackColor = true;
             // 
-            // button35
+            // btnBucal
             // 
-            this.button35.Location = new System.Drawing.Point(194, 3);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(183, 101);
-            this.button35.TabIndex = 1;
-            this.button35.Text = "button35";
-            this.button35.UseVisualStyleBackColor = true;
+            this.btnBucal.Location = new System.Drawing.Point(194, 3);
+            this.btnBucal.Name = "btnBucal";
+            this.btnBucal.Size = new System.Drawing.Size(183, 101);
+            this.btnBucal.TabIndex = 1;
+            this.btnBucal.Text = "Higiene bucal";
+            this.btnBucal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBucal.UseVisualStyleBackColor = true;
             // 
-            // button36
+            // btnPerfumeria
             // 
-            this.button36.Location = new System.Drawing.Point(3, 3);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(183, 101);
-            this.button36.TabIndex = 0;
-            this.button36.Text = "button36";
-            this.button36.UseVisualStyleBackColor = true;
+            this.btnPerfumeria.Location = new System.Drawing.Point(3, 3);
+            this.btnPerfumeria.Name = "btnPerfumeria";
+            this.btnPerfumeria.Size = new System.Drawing.Size(183, 101);
+            this.btnPerfumeria.TabIndex = 0;
+            this.btnPerfumeria.Text = "Perfumería";
+            this.btnPerfumeria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPerfumeria.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.tableLayoutPanel7);
+            this.groupBox7.Location = new System.Drawing.Point(3, 897);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(1159, 143);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Electrodomésticos";
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 6;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel7.Controls.Add(this.btnClimatizacion, 5, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btnCafeteras, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btnHornoPlaca, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btnSecadora, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btnFrigorificos, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btnLavadora, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(6, 17);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1147, 108);
+            this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // btnClimatizacion
+            // 
+            this.btnClimatizacion.Location = new System.Drawing.Point(958, 3);
+            this.btnClimatizacion.Name = "btnClimatizacion";
+            this.btnClimatizacion.Size = new System.Drawing.Size(185, 101);
+            this.btnClimatizacion.TabIndex = 5;
+            this.btnClimatizacion.Text = "Climatización";
+            this.btnClimatizacion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClimatizacion.UseVisualStyleBackColor = true;
+            // 
+            // btnCafeteras
+            // 
+            this.btnCafeteras.Location = new System.Drawing.Point(767, 3);
+            this.btnCafeteras.Name = "btnCafeteras";
+            this.btnCafeteras.Size = new System.Drawing.Size(183, 101);
+            this.btnCafeteras.TabIndex = 4;
+            this.btnCafeteras.Text = "Cafeteras";
+            this.btnCafeteras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCafeteras.UseVisualStyleBackColor = true;
+            // 
+            // btnHornoPlaca
+            // 
+            this.btnHornoPlaca.Location = new System.Drawing.Point(576, 3);
+            this.btnHornoPlaca.Name = "btnHornoPlaca";
+            this.btnHornoPlaca.Size = new System.Drawing.Size(183, 101);
+            this.btnHornoPlaca.TabIndex = 3;
+            this.btnHornoPlaca.Text = "Hornos, placas y campanas";
+            this.btnHornoPlaca.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHornoPlaca.UseVisualStyleBackColor = true;
+            // 
+            // btnSecadora
+            // 
+            this.btnSecadora.Location = new System.Drawing.Point(385, 3);
+            this.btnSecadora.Name = "btnSecadora";
+            this.btnSecadora.Size = new System.Drawing.Size(183, 101);
+            this.btnSecadora.TabIndex = 2;
+            this.btnSecadora.Text = "Secadoras";
+            this.btnSecadora.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSecadora.UseVisualStyleBackColor = true;
+            // 
+            // btnFrigorificos
+            // 
+            this.btnFrigorificos.Location = new System.Drawing.Point(194, 3);
+            this.btnFrigorificos.Name = "btnFrigorificos";
+            this.btnFrigorificos.Size = new System.Drawing.Size(183, 101);
+            this.btnFrigorificos.TabIndex = 1;
+            this.btnFrigorificos.Text = "Frigoríficos";
+            this.btnFrigorificos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFrigorificos.UseVisualStyleBackColor = true;
+            // 
+            // btnLavadora
+            // 
+            this.btnLavadora.Location = new System.Drawing.Point(3, 3);
+            this.btnLavadora.Name = "btnLavadora";
+            this.btnLavadora.Size = new System.Drawing.Size(183, 101);
+            this.btnLavadora.TabIndex = 0;
+            this.btnLavadora.Text = "Lavadoras";
+            this.btnLavadora.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLavadora.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.tableLayoutPanel8);
+            this.groupBox8.Location = new System.Drawing.Point(3, 1046);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(1159, 143);
+            this.groupBox8.TabIndex = 7;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Tecnología";
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 6;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel8.Controls.Add(this.btnAudio, 5, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnTablets, 4, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnInformatica, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnFotografia, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnTelefonia, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnTelevisores, 0, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(6, 17);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1147, 108);
+            this.tableLayoutPanel8.TabIndex = 3;
+            // 
+            // btnAudio
+            // 
+            this.btnAudio.Location = new System.Drawing.Point(958, 3);
+            this.btnAudio.Name = "btnAudio";
+            this.btnAudio.Size = new System.Drawing.Size(185, 101);
+            this.btnAudio.TabIndex = 5;
+            this.btnAudio.Text = "Audio";
+            this.btnAudio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAudio.UseVisualStyleBackColor = true;
+            // 
+            // btnTablets
+            // 
+            this.btnTablets.Location = new System.Drawing.Point(767, 3);
+            this.btnTablets.Name = "btnTablets";
+            this.btnTablets.Size = new System.Drawing.Size(183, 101);
+            this.btnTablets.TabIndex = 4;
+            this.btnTablets.Text = "Tablets";
+            this.btnTablets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTablets.UseVisualStyleBackColor = true;
+            // 
+            // btnInformatica
+            // 
+            this.btnInformatica.Location = new System.Drawing.Point(576, 3);
+            this.btnInformatica.Name = "btnInformatica";
+            this.btnInformatica.Size = new System.Drawing.Size(183, 101);
+            this.btnInformatica.TabIndex = 3;
+            this.btnInformatica.Text = "Informática";
+            this.btnInformatica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInformatica.UseVisualStyleBackColor = true;
+            // 
+            // btnFotografia
+            // 
+            this.btnFotografia.Location = new System.Drawing.Point(385, 3);
+            this.btnFotografia.Name = "btnFotografia";
+            this.btnFotografia.Size = new System.Drawing.Size(183, 101);
+            this.btnFotografia.TabIndex = 2;
+            this.btnFotografia.Text = "Fotografía";
+            this.btnFotografia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFotografia.UseVisualStyleBackColor = true;
+            // 
+            // btnTelefonia
+            // 
+            this.btnTelefonia.Location = new System.Drawing.Point(194, 3);
+            this.btnTelefonia.Name = "btnTelefonia";
+            this.btnTelefonia.Size = new System.Drawing.Size(183, 101);
+            this.btnTelefonia.TabIndex = 1;
+            this.btnTelefonia.Text = "Telefonía";
+            this.btnTelefonia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTelefonia.UseVisualStyleBackColor = true;
+            // 
+            // btnTelevisores
+            // 
+            this.btnTelevisores.Location = new System.Drawing.Point(3, 3);
+            this.btnTelevisores.Name = "btnTelevisores";
+            this.btnTelevisores.Size = new System.Drawing.Size(183, 101);
+            this.btnTelevisores.TabIndex = 0;
+            this.btnTelevisores.Text = "Televisores";
+            this.btnTelevisores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTelevisores.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.tableLayoutPanel9);
+            this.groupBox9.Location = new System.Drawing.Point(3, 1195);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(1159, 143);
+            this.groupBox9.TabIndex = 8;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Hogar";
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 6;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel9.Controls.Add(this.button52, 5, 0);
+            this.tableLayoutPanel9.Controls.Add(this.btnTextilHogar, 4, 0);
+            this.tableLayoutPanel9.Controls.Add(this.btnCasaDecoracion, 3, 0);
+            this.tableLayoutPanel9.Controls.Add(this.btnMascotas, 2, 0);
+            this.tableLayoutPanel9.Controls.Add(this.btnBricolaje, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.btnJardin, 0, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(6, 17);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1147, 108);
+            this.tableLayoutPanel9.TabIndex = 3;
+            // 
+            // button52
+            // 
+            this.button52.Location = new System.Drawing.Point(958, 3);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(185, 101);
+            this.button52.TabIndex = 5;
+            this.button52.Text = "button52";
+            this.button52.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button52.UseVisualStyleBackColor = true;
+            // 
+            // btnTextilHogar
+            // 
+            this.btnTextilHogar.Location = new System.Drawing.Point(767, 3);
+            this.btnTextilHogar.Name = "btnTextilHogar";
+            this.btnTextilHogar.Size = new System.Drawing.Size(183, 101);
+            this.btnTextilHogar.TabIndex = 4;
+            this.btnTextilHogar.Text = "Textil hogar";
+            this.btnTextilHogar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTextilHogar.UseVisualStyleBackColor = true;
+            // 
+            // btnCasaDecoracion
+            // 
+            this.btnCasaDecoracion.Location = new System.Drawing.Point(576, 3);
+            this.btnCasaDecoracion.Name = "btnCasaDecoracion";
+            this.btnCasaDecoracion.Size = new System.Drawing.Size(183, 101);
+            this.btnCasaDecoracion.TabIndex = 3;
+            this.btnCasaDecoracion.Text = "Casa y decoración";
+            this.btnCasaDecoracion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCasaDecoracion.UseVisualStyleBackColor = true;
+            // 
+            // btnMascotas
+            // 
+            this.btnMascotas.Location = new System.Drawing.Point(385, 3);
+            this.btnMascotas.Name = "btnMascotas";
+            this.btnMascotas.Size = new System.Drawing.Size(183, 101);
+            this.btnMascotas.TabIndex = 2;
+            this.btnMascotas.Text = "Mascotas";
+            this.btnMascotas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMascotas.UseVisualStyleBackColor = true;
+            // 
+            // btnBricolaje
+            // 
+            this.btnBricolaje.Location = new System.Drawing.Point(194, 3);
+            this.btnBricolaje.Name = "btnBricolaje";
+            this.btnBricolaje.Size = new System.Drawing.Size(183, 101);
+            this.btnBricolaje.TabIndex = 1;
+            this.btnBricolaje.Text = "Bricolaje";
+            this.btnBricolaje.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBricolaje.UseVisualStyleBackColor = true;
+            // 
+            // btnJardin
+            // 
+            this.btnJardin.Location = new System.Drawing.Point(3, 3);
+            this.btnJardin.Name = "btnJardin";
+            this.btnJardin.Size = new System.Drawing.Size(183, 101);
+            this.btnJardin.TabIndex = 0;
+            this.btnJardin.Text = "Jardín y aire libre";
+            this.btnJardin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnJardin.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -739,20 +795,6 @@
             this.panel2.Size = new System.Drawing.Size(849, 28);
             this.panel2.TabIndex = 8;
             // 
-            // btnPerfil
-            // 
-            this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(792, 1);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(53, 27);
-            this.btnPerfil.TabIndex = 4;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
             // btnIdentificarse
             // 
             this.btnIdentificarse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -771,12 +813,12 @@
             // 
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.Controls.Add(this.lblContador);
-            this.panel3.Controls.Add(this.button39);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.btnBuscar);
+            this.panel3.Controls.Add(this.txtBuscar);
             this.panel3.Controls.Add(this.button37);
-            this.panel3.Location = new System.Drawing.Point(8, 32);
+            this.panel3.Location = new System.Drawing.Point(0, 32);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1075, 41);
+            this.panel3.Size = new System.Drawing.Size(1083, 41);
             this.panel3.TabIndex = 7;
             // 
             // lblContador
@@ -789,35 +831,12 @@
             this.lblContador.TabIndex = 6;
             this.lblContador.Text = "0";
             // 
-            // button39
+            // txtBuscar
             // 
-            this.button39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button39.Image = ((System.Drawing.Image)(resources.GetObject("button39.Image")));
-            this.button39.Location = new System.Drawing.Point(334, 10);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(29, 22);
-            this.button39.TabIndex = 5;
-            this.button39.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 21);
-            this.textBox1.TabIndex = 4;
-            // 
-            // button37
-            // 
-            this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button37.FlatAppearance.BorderSize = 0;
-            this.button37.Image = global::ProyectoCompra.Properties.Resources.icon_carrito;
-            this.button37.Location = new System.Drawing.Point(975, 2);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(96, 36);
-            this.button37.TabIndex = 3;
-            this.button37.UseMnemonic = false;
-            this.button37.UseVisualStyleBackColor = false;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
+            this.txtBuscar.Location = new System.Drawing.Point(3, 11);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(325, 21);
+            this.txtBuscar.TabIndex = 4;
             // 
             // mnAlimentacion
             // 
@@ -825,7 +844,7 @@
             this.mnAlimentacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.mnAlimentacion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.mnAlimentacion.Font = new System.Drawing.Font("Arial Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnAlimentacion.GripMargin = new System.Windows.Forms.Padding(0);
+            this.mnAlimentacion.GripMargin = new System.Windows.Forms.Padding(0, 0, 4, 4);
             this.mnAlimentacion.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.mnAlimentacion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mnAlimentacion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -965,6 +984,12 @@
             this.drogueríaToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.drogueríaToolStripMenuItem.Text = "Droguería";
             // 
+            // cuidadoPersonalToolStripMenuItem
+            // 
+            this.cuidadoPersonalToolStripMenuItem.Name = "cuidadoPersonalToolStripMenuItem";
+            this.cuidadoPersonalToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.cuidadoPersonalToolStripMenuItem.Text = "Cuidado personal";
+            // 
             // electrodomésticosToolStripMenuItem
             // 
             this.electrodomésticosToolStripMenuItem.Name = "electrodomésticosToolStripMenuItem";
@@ -983,286 +1008,328 @@
             this.hogarToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
             this.hogarToolStripMenuItem.Text = "Hogar";
             // 
-            // cuidadoPersonalToolStripMenuItem
+            // btnLogoMain
             // 
-            this.cuidadoPersonalToolStripMenuItem.Name = "cuidadoPersonalToolStripMenuItem";
-            this.cuidadoPersonalToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
-            this.cuidadoPersonalToolStripMenuItem.Text = "Cuidado personal";
+            this.btnLogoMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLogoMain.Image = global::ProyectoCompra.Properties.Resources.icon_logo;
+            this.btnLogoMain.Location = new System.Drawing.Point(12, 8);
+            this.btnLogoMain.Name = "btnLogoMain";
+            this.btnLogoMain.Size = new System.Drawing.Size(89, 101);
+            this.btnLogoMain.TabIndex = 3;
+            this.btnLogoMain.UseVisualStyleBackColor = true;
             // 
-            // button38
+            // btnPerfil
             // 
-            this.button38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button38.Image = global::ProyectoCompra.Properties.Resources.icon_logo;
-            this.button38.Location = new System.Drawing.Point(12, 8);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(89, 101);
-            this.button38.TabIndex = 3;
-            this.button38.UseVisualStyleBackColor = true;
+            this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(792, 1);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(53, 27);
+            this.btnPerfil.TabIndex = 4;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
-            // groupBox7
+            // btnBuscar
             // 
-            this.groupBox7.Controls.Add(this.tableLayoutPanel7);
-            this.groupBox7.Location = new System.Drawing.Point(3, 897);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1159, 143);
-            this.groupBox7.TabIndex = 6;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Electrodomésticos";
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(334, 10);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(29, 22);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel7
+            // button37
             // 
-            this.tableLayoutPanel7.ColumnCount = 6;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.Controls.Add(this.button40, 5, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button41, 4, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button42, 3, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button43, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button44, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button45, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(6, 17);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1147, 108);
-            this.tableLayoutPanel7.TabIndex = 3;
+            this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button37.FlatAppearance.BorderSize = 0;
+            this.button37.Image = global::ProyectoCompra.Properties.Resources.icon_carrito;
+            this.button37.Location = new System.Drawing.Point(975, 2);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(96, 36);
+            this.button37.TabIndex = 3;
+            this.button37.UseMnemonic = false;
+            this.button37.UseVisualStyleBackColor = false;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
-            // button40
+            // btnNutricionDep
             // 
-            this.button40.Location = new System.Drawing.Point(958, 3);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(185, 101);
-            this.button40.TabIndex = 5;
-            this.button40.Text = "button40";
-            this.button40.UseVisualStyleBackColor = true;
+            this.btnNutricionDep.Image = global::ProyectoCompra.Properties.Resources.icon_nutricion_deportiva;
+            this.btnNutricionDep.Location = new System.Drawing.Point(958, 3);
+            this.btnNutricionDep.Name = "btnNutricionDep";
+            this.btnNutricionDep.Size = new System.Drawing.Size(185, 101);
+            this.btnNutricionDep.TabIndex = 5;
+            this.btnNutricionDep.Text = "Nutrición deportiva";
+            this.btnNutricionDep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNutricionDep.UseVisualStyleBackColor = true;
             // 
-            // button41
+            // btnComidasInt
             // 
-            this.button41.Location = new System.Drawing.Point(767, 3);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(183, 101);
-            this.button41.TabIndex = 4;
-            this.button41.Text = "button41";
-            this.button41.UseVisualStyleBackColor = true;
+            this.btnComidasInt.Image = ((System.Drawing.Image)(resources.GetObject("btnComidasInt.Image")));
+            this.btnComidasInt.Location = new System.Drawing.Point(767, 3);
+            this.btnComidasInt.Name = "btnComidasInt";
+            this.btnComidasInt.Size = new System.Drawing.Size(183, 101);
+            this.btnComidasInt.TabIndex = 4;
+            this.btnComidasInt.Text = "Comidas internacionales";
+            this.btnComidasInt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnComidasInt.UseVisualStyleBackColor = true;
             // 
-            // button42
+            // btnConservas
             // 
-            this.button42.Location = new System.Drawing.Point(576, 3);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(183, 101);
-            this.button42.TabIndex = 3;
-            this.button42.Text = "button42";
-            this.button42.UseVisualStyleBackColor = true;
+            this.btnConservas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnConservas.Image = global::ProyectoCompra.Properties.Resources.icon_conservas;
+            this.btnConservas.Location = new System.Drawing.Point(576, 3);
+            this.btnConservas.Name = "btnConservas";
+            this.btnConservas.Size = new System.Drawing.Size(183, 101);
+            this.btnConservas.TabIndex = 3;
+            this.btnConservas.Text = "Conservas";
+            this.btnConservas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConservas.UseVisualStyleBackColor = true;
             // 
-            // button43
+            // btnDesayunoMerienda
             // 
-            this.button43.Location = new System.Drawing.Point(385, 3);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(183, 101);
-            this.button43.TabIndex = 2;
-            this.button43.Text = "button43";
-            this.button43.UseVisualStyleBackColor = true;
+            this.btnDesayunoMerienda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnDesayunoMerienda.Image = global::ProyectoCompra.Properties.Resources.icon_desayuno;
+            this.btnDesayunoMerienda.Location = new System.Drawing.Point(385, 3);
+            this.btnDesayunoMerienda.Name = "btnDesayunoMerienda";
+            this.btnDesayunoMerienda.Size = new System.Drawing.Size(183, 101);
+            this.btnDesayunoMerienda.TabIndex = 2;
+            this.btnDesayunoMerienda.Text = "Desayuno y merienda";
+            this.btnDesayunoMerienda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDesayunoMerienda.UseVisualStyleBackColor = true;
             // 
-            // button44
+            // btnAceitesSalsas
             // 
-            this.button44.Location = new System.Drawing.Point(194, 3);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(183, 101);
-            this.button44.TabIndex = 1;
-            this.button44.Text = "button44";
-            this.button44.UseVisualStyleBackColor = true;
+            this.btnAceitesSalsas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAceitesSalsas.Image = global::ProyectoCompra.Properties.Resources.icon_aceite;
+            this.btnAceitesSalsas.Location = new System.Drawing.Point(194, 3);
+            this.btnAceitesSalsas.Name = "btnAceitesSalsas";
+            this.btnAceitesSalsas.Size = new System.Drawing.Size(183, 101);
+            this.btnAceitesSalsas.TabIndex = 1;
+            this.btnAceitesSalsas.Text = "Aceites, vinagres y salsas";
+            this.btnAceitesSalsas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAceitesSalsas.UseVisualStyleBackColor = true;
             // 
-            // button45
+            // btnLacteosHuevos
             // 
-            this.button45.Location = new System.Drawing.Point(3, 3);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(183, 101);
-            this.button45.TabIndex = 0;
-            this.button45.Text = "button45";
-            this.button45.UseVisualStyleBackColor = true;
+            this.btnLacteosHuevos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLacteosHuevos.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
+            this.btnLacteosHuevos.Location = new System.Drawing.Point(3, 3);
+            this.btnLacteosHuevos.Name = "btnLacteosHuevos";
+            this.btnLacteosHuevos.Size = new System.Drawing.Size(183, 101);
+            this.btnLacteosHuevos.TabIndex = 0;
+            this.btnLacteosHuevos.Text = "Lácteos y huevos";
+            this.btnLacteosHuevos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLacteosHuevos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLacteosHuevos.UseVisualStyleBackColor = true;
             // 
-            // groupBox8
+            // btnSushi
             // 
-            this.groupBox8.Controls.Add(this.tableLayoutPanel8);
-            this.groupBox8.Location = new System.Drawing.Point(3, 1046);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(1159, 143);
-            this.groupBox8.TabIndex = 7;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Tecnología";
+            this.btnSushi.Image = global::ProyectoCompra.Properties.Resources.icon_sushi;
+            this.btnSushi.Location = new System.Drawing.Point(958, 3);
+            this.btnSushi.Name = "btnSushi";
+            this.btnSushi.Size = new System.Drawing.Size(185, 101);
+            this.btnSushi.TabIndex = 5;
+            this.btnSushi.Text = "Sushi";
+            this.btnSushi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSushi.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel8
+            // btnPescados
             // 
-            this.tableLayoutPanel8.ColumnCount = 6;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel8.Controls.Add(this.button46, 5, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button47, 4, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button48, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button49, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button50, 1, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button51, 0, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(6, 17);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1147, 108);
-            this.tableLayoutPanel8.TabIndex = 3;
+            this.btnPescados.Image = global::ProyectoCompra.Properties.Resources.icon_pescados_mariscos;
+            this.btnPescados.Location = new System.Drawing.Point(767, 3);
+            this.btnPescados.Name = "btnPescados";
+            this.btnPescados.Size = new System.Drawing.Size(183, 101);
+            this.btnPescados.TabIndex = 4;
+            this.btnPescados.Text = "Pescados, mariscos y moluscos";
+            this.btnPescados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPescados.UseVisualStyleBackColor = true;
             // 
-            // button46
+            // btnCharcuteria
             // 
-            this.button46.Location = new System.Drawing.Point(958, 3);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(185, 101);
-            this.button46.TabIndex = 5;
-            this.button46.Text = "button46";
-            this.button46.UseVisualStyleBackColor = true;
+            this.btnCharcuteria.Image = global::ProyectoCompra.Properties.Resources.icon_charcuteria;
+            this.btnCharcuteria.Location = new System.Drawing.Point(576, 3);
+            this.btnCharcuteria.Name = "btnCharcuteria";
+            this.btnCharcuteria.Size = new System.Drawing.Size(183, 101);
+            this.btnCharcuteria.TabIndex = 3;
+            this.btnCharcuteria.Text = "Charcutería";
+            this.btnCharcuteria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCharcuteria.UseVisualStyleBackColor = true;
             // 
-            // button47
+            // btnCarne
             // 
-            this.button47.Location = new System.Drawing.Point(767, 3);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(183, 101);
-            this.button47.TabIndex = 4;
-            this.button47.Text = "button47";
-            this.button47.UseVisualStyleBackColor = true;
+            this.btnCarne.Image = global::ProyectoCompra.Properties.Resources.icon_carne;
+            this.btnCarne.Location = new System.Drawing.Point(385, 3);
+            this.btnCarne.Name = "btnCarne";
+            this.btnCarne.Size = new System.Drawing.Size(183, 101);
+            this.btnCarne.TabIndex = 2;
+            this.btnCarne.Text = "Carne";
+            this.btnCarne.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCarne.UseVisualStyleBackColor = true;
             // 
-            // button48
+            // btnQuesos
             // 
-            this.button48.Location = new System.Drawing.Point(576, 3);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(183, 101);
-            this.button48.TabIndex = 3;
-            this.button48.Text = "button48";
-            this.button48.UseVisualStyleBackColor = true;
+            this.btnQuesos.Image = global::ProyectoCompra.Properties.Resources.icon_queso;
+            this.btnQuesos.Location = new System.Drawing.Point(194, 3);
+            this.btnQuesos.Name = "btnQuesos";
+            this.btnQuesos.Size = new System.Drawing.Size(183, 101);
+            this.btnQuesos.TabIndex = 1;
+            this.btnQuesos.Text = "Quesos";
+            this.btnQuesos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnQuesos.UseVisualStyleBackColor = true;
             // 
-            // button49
+            // btnVerdurasHortalizas
             // 
-            this.button49.Location = new System.Drawing.Point(385, 3);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(183, 101);
-            this.button49.TabIndex = 2;
-            this.button49.Text = "button49";
-            this.button49.UseVisualStyleBackColor = true;
+            this.btnVerdurasHortalizas.Image = global::ProyectoCompra.Properties.Resources.icon_verduras;
+            this.btnVerdurasHortalizas.Location = new System.Drawing.Point(3, 3);
+            this.btnVerdurasHortalizas.Name = "btnVerdurasHortalizas";
+            this.btnVerdurasHortalizas.Size = new System.Drawing.Size(183, 101);
+            this.btnVerdurasHortalizas.TabIndex = 0;
+            this.btnVerdurasHortalizas.Text = "Verduras y hortalizas";
+            this.btnVerdurasHortalizas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVerdurasHortalizas.UseVisualStyleBackColor = true;
             // 
-            // button50
+            // btnPastas
             // 
-            this.button50.Location = new System.Drawing.Point(194, 3);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(183, 101);
-            this.button50.TabIndex = 1;
-            this.button50.Text = "button50";
-            this.button50.UseVisualStyleBackColor = true;
+            this.btnPastas.Image = global::ProyectoCompra.Properties.Resources.icon_pasta;
+            this.btnPastas.Location = new System.Drawing.Point(958, 3);
+            this.btnPastas.Name = "btnPastas";
+            this.btnPastas.Size = new System.Drawing.Size(185, 101);
+            this.btnPastas.TabIndex = 5;
+            this.btnPastas.Text = "Masas, bases, pasta fresca";
+            this.btnPastas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPastas.UseVisualStyleBackColor = true;
             // 
-            // button51
+            // btnPlatosListos
             // 
-            this.button51.Location = new System.Drawing.Point(3, 3);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(183, 101);
-            this.button51.TabIndex = 0;
-            this.button51.Text = "button51";
-            this.button51.UseVisualStyleBackColor = true;
+            this.btnPlatosListos.Image = global::ProyectoCompra.Properties.Resources.icon_platos_listos;
+            this.btnPlatosListos.Location = new System.Drawing.Point(767, 3);
+            this.btnPlatosListos.Name = "btnPlatosListos";
+            this.btnPlatosListos.Size = new System.Drawing.Size(183, 101);
+            this.btnPlatosListos.TabIndex = 4;
+            this.btnPlatosListos.Text = "Platos calentar y listo";
+            this.btnPlatosListos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPlatosListos.UseVisualStyleBackColor = true;
             // 
-            // groupBox9
+            // btnMantequillas
             // 
-            this.groupBox9.Controls.Add(this.tableLayoutPanel9);
-            this.groupBox9.Location = new System.Drawing.Point(3, 1195);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(1159, 143);
-            this.groupBox9.TabIndex = 8;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Hogar";
+            this.btnMantequillas.Image = global::ProyectoCompra.Properties.Resources.icon_mantequilla;
+            this.btnMantequillas.Location = new System.Drawing.Point(576, 3);
+            this.btnMantequillas.Name = "btnMantequillas";
+            this.btnMantequillas.Size = new System.Drawing.Size(183, 101);
+            this.btnMantequillas.TabIndex = 3;
+            this.btnMantequillas.Text = "Mantequillas, margarinas y nata";
+            this.btnMantequillas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMantequillas.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel9
+            // btnPasteles
             // 
-            this.tableLayoutPanel9.ColumnCount = 6;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel9.Controls.Add(this.button52, 5, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button53, 4, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button54, 3, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button55, 2, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button56, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button57, 0, 0);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(6, 17);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1147, 108);
-            this.tableLayoutPanel9.TabIndex = 3;
+            this.btnPasteles.Image = global::ProyectoCompra.Properties.Resources.icon_pasteles;
+            this.btnPasteles.Location = new System.Drawing.Point(385, 3);
+            this.btnPasteles.Name = "btnPasteles";
+            this.btnPasteles.Size = new System.Drawing.Size(183, 101);
+            this.btnPasteles.TabIndex = 2;
+            this.btnPasteles.Text = "Pasteles";
+            this.btnPasteles.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPasteles.UseVisualStyleBackColor = true;
             // 
-            // button52
+            // btnPostres
             // 
-            this.button52.Location = new System.Drawing.Point(958, 3);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(185, 101);
-            this.button52.TabIndex = 5;
-            this.button52.Text = "button52";
-            this.button52.UseVisualStyleBackColor = true;
+            this.btnPostres.Image = global::ProyectoCompra.Properties.Resources.icon_postres;
+            this.btnPostres.Location = new System.Drawing.Point(194, 3);
+            this.btnPostres.Name = "btnPostres";
+            this.btnPostres.Size = new System.Drawing.Size(183, 101);
+            this.btnPostres.TabIndex = 1;
+            this.btnPostres.Text = "Postres";
+            this.btnPostres.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPostres.UseVisualStyleBackColor = true;
             // 
-            // button53
+            // btnCongelados
             // 
-            this.button53.Location = new System.Drawing.Point(767, 3);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(183, 101);
-            this.button53.TabIndex = 4;
-            this.button53.Text = "button53";
-            this.button53.UseVisualStyleBackColor = true;
+            this.btnCongelados.Image = global::ProyectoCompra.Properties.Resources.icon_congelados;
+            this.btnCongelados.Location = new System.Drawing.Point(3, 3);
+            this.btnCongelados.Name = "btnCongelados";
+            this.btnCongelados.Size = new System.Drawing.Size(183, 101);
+            this.btnCongelados.TabIndex = 0;
+            this.btnCongelados.Text = "Congelados";
+            this.btnCongelados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCongelados.UseVisualStyleBackColor = true;
             // 
-            // button54
+            // btnSinAlcohol
             // 
-            this.button54.Location = new System.Drawing.Point(576, 3);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(183, 101);
-            this.button54.TabIndex = 3;
-            this.button54.Text = "button54";
-            this.button54.UseVisualStyleBackColor = true;
+            this.btnSinAlcohol.Image = global::ProyectoCompra.Properties.Resources.icon_sin_alcohol;
+            this.btnSinAlcohol.Location = new System.Drawing.Point(958, 3);
+            this.btnSinAlcohol.Name = "btnSinAlcohol";
+            this.btnSinAlcohol.Size = new System.Drawing.Size(185, 101);
+            this.btnSinAlcohol.TabIndex = 5;
+            this.btnSinAlcohol.Text = "Bebidas sin alcohol";
+            this.btnSinAlcohol.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSinAlcohol.UseVisualStyleBackColor = true;
             // 
-            // button55
+            // btnBebidaEcologica
             // 
-            this.button55.Location = new System.Drawing.Point(385, 3);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(183, 101);
-            this.button55.TabIndex = 2;
-            this.button55.Text = "button55";
-            this.button55.UseVisualStyleBackColor = true;
+            this.btnBebidaEcologica.Image = global::ProyectoCompra.Properties.Resources.icon_bebida_ecologica;
+            this.btnBebidaEcologica.Location = new System.Drawing.Point(767, 3);
+            this.btnBebidaEcologica.Name = "btnBebidaEcologica";
+            this.btnBebidaEcologica.Size = new System.Drawing.Size(183, 101);
+            this.btnBebidaEcologica.TabIndex = 4;
+            this.btnBebidaEcologica.Text = "Bebidas Ecológicas";
+            this.btnBebidaEcologica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBebidaEcologica.UseVisualStyleBackColor = true;
             // 
-            // button56
+            // btnCavaSidra
             // 
-            this.button56.Location = new System.Drawing.Point(194, 3);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(183, 101);
-            this.button56.TabIndex = 1;
-            this.button56.Text = "button56";
-            this.button56.UseVisualStyleBackColor = true;
+            this.btnCavaSidra.Image = global::ProyectoCompra.Properties.Resources.icon_cavas;
+            this.btnCavaSidra.Location = new System.Drawing.Point(576, 3);
+            this.btnCavaSidra.Name = "btnCavaSidra";
+            this.btnCavaSidra.Size = new System.Drawing.Size(183, 101);
+            this.btnCavaSidra.TabIndex = 3;
+            this.btnCavaSidra.Text = "Champagne cavas y sidras";
+            this.btnCavaSidra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCavaSidra.UseVisualStyleBackColor = true;
             // 
-            // button57
+            // btnBebidaAlcohol
             // 
-            this.button57.Location = new System.Drawing.Point(3, 3);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(183, 101);
-            this.button57.TabIndex = 0;
-            this.button57.Text = "button57";
-            this.button57.UseVisualStyleBackColor = true;
+            this.btnBebidaAlcohol.Image = global::ProyectoCompra.Properties.Resources.icon_bebida_alcohol;
+            this.btnBebidaAlcohol.Location = new System.Drawing.Point(385, 3);
+            this.btnBebidaAlcohol.Name = "btnBebidaAlcohol";
+            this.btnBebidaAlcohol.Size = new System.Drawing.Size(183, 101);
+            this.btnBebidaAlcohol.TabIndex = 2;
+            this.btnBebidaAlcohol.Text = "Bebidas con alcohol";
+            this.btnBebidaAlcohol.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBebidaAlcohol.UseVisualStyleBackColor = true;
+            // 
+            // btnAguaSoda
+            // 
+            this.btnAguaSoda.Image = global::ProyectoCompra.Properties.Resources.icon_agua;
+            this.btnAguaSoda.Location = new System.Drawing.Point(194, 3);
+            this.btnAguaSoda.Name = "btnAguaSoda";
+            this.btnAguaSoda.Size = new System.Drawing.Size(183, 101);
+            this.btnAguaSoda.TabIndex = 1;
+            this.btnAguaSoda.Text = "Aguda, soda y gaseosas";
+            this.btnAguaSoda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAguaSoda.UseVisualStyleBackColor = true;
+            // 
+            // btnZumos
+            // 
+            this.btnZumos.Image = global::ProyectoCompra.Properties.Resources.icon_zumo_frutas;
+            this.btnZumos.Location = new System.Drawing.Point(3, 3);
+            this.btnZumos.Name = "btnZumos";
+            this.btnZumos.Size = new System.Drawing.Size(183, 101);
+            this.btnZumos.TabIndex = 0;
+            this.btnZumos.Text = "Zumos de frutas";
+            this.btnZumos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnZumos.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1205, 715);
-            this.Controls.Add(this.button38);
+            this.Controls.Add(this.btnLogoMain);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Arial Nova Cond", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1275,7 +1342,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.gbxAlimentacion.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1287,6 +1354,12 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1294,72 +1367,66 @@
             this.panel3.PerformLayout();
             this.mnAlimentacion.ResumeLayout(false);
             this.mnAlimentacion.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.tableLayoutPanel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxAlimentacion;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNutricionDep;
+        private System.Windows.Forms.Button btnComidasInt;
+        private System.Windows.Forms.Button btnConservas;
+        private System.Windows.Forms.Button btnDesayunoMerienda;
+        private System.Windows.Forms.Button btnAceitesSalsas;
+        private System.Windows.Forms.Button btnLacteosHuevos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnSushi;
+        private System.Windows.Forms.Button btnPescados;
+        private System.Windows.Forms.Button btnCharcuteria;
+        private System.Windows.Forms.Button btnCarne;
+        private System.Windows.Forms.Button btnQuesos;
+        private System.Windows.Forms.Button btnVerdurasHortalizas;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button btnPastas;
+        private System.Windows.Forms.Button btnPlatosListos;
+        private System.Windows.Forms.Button btnMantequillas;
+        private System.Windows.Forms.Button btnPasteles;
+        private System.Windows.Forms.Button btnPostres;
+        private System.Windows.Forms.Button btnCongelados;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button btnSinAlcohol;
+        private System.Windows.Forms.Button btnBebidaEcologica;
+        private System.Windows.Forms.Button btnCavaSidra;
+        private System.Windows.Forms.Button btnBebidaAlcohol;
+        private System.Windows.Forms.Button btnAguaSoda;
+        private System.Windows.Forms.Button btnZumos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button btnLimpiezaCalzado;
+        private System.Windows.Forms.Button btnInsecticidas;
+        private System.Windows.Forms.Button btnLejiasAmoniacos;
+        private System.Windows.Forms.Button btnLavavajillas;
+        private System.Windows.Forms.Button btnLimpiezaHogar;
+        private System.Windows.Forms.Button btnLavadoRopa;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button btnLocionSolar;
+        private System.Windows.Forms.Button btnCuidadoCabello;
+        private System.Windows.Forms.Button btnCuidadoFacial;
+        private System.Windows.Forms.Button btnBotiquin;
+        private System.Windows.Forms.Button btnBucal;
+        private System.Windows.Forms.Button btnPerfumeria;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnIdentificarse;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button button37;
         private System.Windows.Forms.MenuStrip mnAlimentacion;
         private System.Windows.Forms.ToolStripMenuItem fríosYCongeladosToolStripMenuItem;
@@ -1385,31 +1452,31 @@
         private System.Windows.Forms.ToolStripMenuItem frutasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carnesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verdurasYHortalizasToolStripMenuItem;
-        private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.Button btnLogoMain;
         private System.Windows.Forms.Label lblSaludo;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button43;
-        private System.Windows.Forms.Button button44;
-        private System.Windows.Forms.Button button45;
+        private System.Windows.Forms.Button btnClimatizacion;
+        private System.Windows.Forms.Button btnCafeteras;
+        private System.Windows.Forms.Button btnHornoPlaca;
+        private System.Windows.Forms.Button btnSecadora;
+        private System.Windows.Forms.Button btnFrigorificos;
+        private System.Windows.Forms.Button btnLavadora;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.Button button47;
-        private System.Windows.Forms.Button button48;
-        private System.Windows.Forms.Button button49;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.Button button51;
+        private System.Windows.Forms.Button btnAudio;
+        private System.Windows.Forms.Button btnTablets;
+        private System.Windows.Forms.Button btnInformatica;
+        private System.Windows.Forms.Button btnFotografia;
+        private System.Windows.Forms.Button btnTelefonia;
+        private System.Windows.Forms.Button btnTelevisores;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.Button button54;
-        private System.Windows.Forms.Button button55;
-        private System.Windows.Forms.Button button56;
-        private System.Windows.Forms.Button button57;
+        private System.Windows.Forms.Button btnTextilHogar;
+        private System.Windows.Forms.Button btnCasaDecoracion;
+        private System.Windows.Forms.Button btnMascotas;
+        private System.Windows.Forms.Button btnBricolaje;
+        private System.Windows.Forms.Button btnJardin;
     }
 }

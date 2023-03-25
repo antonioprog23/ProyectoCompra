@@ -202,13 +202,7 @@
     <None Include="Resources\icon_lacteos.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_aceite.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icon_desayuno.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon_conservas.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_carrito.png" />
@@ -230,6 +224,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nutricion_deportiva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_comida_internacional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_conservas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_aceite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_verduras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_queso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_carne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_charcuteria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pescados_mariscos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_sushi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_congelados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_postres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pasteles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_mantequilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_platos_listos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pasta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cavas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_sin_alcohol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bebida_ecologica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bebida_alcohol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_zumo_frutas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_agua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lavavajillas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_limpieza_hogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lavado_ropa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
