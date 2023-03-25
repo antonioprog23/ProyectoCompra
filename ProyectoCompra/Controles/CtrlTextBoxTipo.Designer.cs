@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCompra.Controles
 {
-    partial class TextBoxTipo
+    partial class CtrlTextBoxTipo
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
