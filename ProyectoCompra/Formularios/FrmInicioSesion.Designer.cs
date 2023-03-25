@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.contrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.chxRecordar = new System.Windows.Forms.CheckBox();
             this.lblContrasenia = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -64,7 +65,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnAlerta = new System.Windows.Forms.Button();
-            this.contrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.groupBox1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabInicioSesion.SuspendLayout();
@@ -84,6 +84,11 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // contrasenia
+            // 
+            resources.ApplyResources(this.contrasenia, "contrasenia");
+            this.contrasenia.Name = "contrasenia";
             // 
             // chxRecordar
             // 
@@ -316,11 +321,6 @@
             this.btnAlerta.UseVisualStyleBackColor = true;
             this.btnAlerta.MouseEnter += new System.EventHandler(this.btnAlerta_MouseEnter);
             this.btnAlerta.MouseLeave += new System.EventHandler(this.btnAlerta_MouseLeave);
-            // 
-            // contrasenia
-            // 
-            resources.ApplyResources(this.contrasenia, "contrasenia");
-            this.contrasenia.Name = "contrasenia";
             // 
             // frmInicioSesion
             // 

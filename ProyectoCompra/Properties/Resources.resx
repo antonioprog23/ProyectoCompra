@@ -154,4 +154,73 @@
   <data name="icon_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icon_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_agua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_agua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_bebida_alcohol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_bebida_alcohol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_bebida_ecologica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_bebida_ecologica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_carne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_carne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_cavas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_cavas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_charcuteria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_charcuteria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_comida_internacional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_comida_internacional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_congelados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_congelados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_lavado_ropa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_lavado_ropa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_lavavajillas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_lavavajillas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_limpieza_hogar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_limpieza_hogar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_mantequilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_mantequilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nutricion_deportiva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_nutricion_deportiva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_pasta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pasta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_pasteles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pasteles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_pescados_mariscos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pescados_mariscos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_platos_listos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_platos_listos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_postres" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_postres.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_queso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_queso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sin_alcohol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_sin_alcohol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_sushi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_sushi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_verduras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_verduras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_zumo_frutas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_zumo_frutas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
