@@ -50,10 +50,18 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = crearUsuario();
             if (cliente != null && usuario != null)
             {
-                if (BDCliente.insertarDatos(cliente, usuario))
+                int codigoUsuarioConNombreUsado = BDCliente.consultarUsuarioName(textUsuario.Text);
+                if (codigoUsuarioConNombreUsado == -1)
                 {
-                    MessageBox.Show("Usuario creado.");
-                    Close();
+                    if ((BDCliente.insertarDatos(cliente, usuario)))
+                    {
+                        MessageBox.Show("Usuario creado.");
+                        Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("¡El nombre de usuario ya existe!");
                 }
             }
             else
@@ -106,16 +114,6 @@ namespace ProyectoCompra.Formularios
                     txtEdad.Text = "";
                 }
             }
-        }
-
-        private void txtContrasenia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

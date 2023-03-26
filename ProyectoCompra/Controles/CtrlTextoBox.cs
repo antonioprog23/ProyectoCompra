@@ -12,10 +12,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoCompra.Controles
 {
-    public partial class CtrlTextBoxTipo : UserControl
+    public partial class CtrlTextoBox : UserControl
     {
         private bool isNumerico;
-        public CtrlTextBoxTipo()
+        public CtrlTextoBox()
         {
             InitializeComponent();
         }
@@ -49,8 +49,4 @@ namespace ProyectoCompra.Controles
             }
         }
     }
-
-
-
-
 }

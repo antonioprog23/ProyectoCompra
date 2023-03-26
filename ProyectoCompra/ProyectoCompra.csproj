@@ -77,11 +77,11 @@
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controles\CtrlTextBoxTipo.cs">
+    <Compile Include="Controles\CtrlTextoBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\CtrlTextBoxTipo.Designer.cs">
-      <DependentUpon>CtrlTextBoxTipo.cs</DependentUpon>
+    <Compile Include="Controles\CtrlTextoBox.Designer.cs">
+      <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
     <Compile Include="Formularios\FrmCarrito.cs">
@@ -131,8 +131,8 @@
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controles\CtrlTextBoxTipo.resx">
-      <DependentUpon>CtrlTextBoxTipo.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
+      <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
@@ -198,9 +198,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Procedimientos almacenados\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\mostrar_contrasenia.png" />
   </ItemGroup>
