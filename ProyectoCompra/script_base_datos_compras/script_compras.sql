@@ -21,7 +21,6 @@ CREATE TABLE cliente
 	sexo NVARCHAR(15) NOT NULL,
 	direccion NVARCHAR(30) NOT NULL,
 )
-DROP TABLE cliente
 
 -- USUARIO
 CREATE TABLE usuario
@@ -39,7 +38,7 @@ CREATE TABLE detalle_usuario
 (
 	id_usuario int NOT NULL PRIMARY KEY,
 	fecha_alta DATETIME NOT NULL,
-	fecha_ultima_modificacion DATETIME NOT NULL,
+	fecha_ultima_modificacion DATETIME,
 	CONSTRAINT constraint_id_usuario_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario) ON DELETE CASCADE
 )
 
@@ -108,5 +107,3 @@ CREATE TABLE Factura (
     fecha_factura DATETIME,
     CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (id_pedido) REFERENCES pedido (id_pedido) ON DELETE CASCADE
 )
-
-
