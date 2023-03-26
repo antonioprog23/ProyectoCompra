@@ -4,12 +4,12 @@ IF OBJECT_ID ('InsertarDatosLogin','P') IS NOT NULL
 	PRINT 'Procedimiento almacenado borrado.'
 GO
 CREATE PROCEDURE InsertarDatosLogin
-@Id_Usuario INT NOT NULL,
-@Usuario_Name NVARCHAR(30) NOT NULL
+@Id_Usuario INT,
+@Usuario_Name NVARCHAR(30)
 AS
-
 BEGIN
 	SET NOCOUNT ON
 	DECLARE @Id_Cliente INT
-	SELECT id_usuario FROM dbo.usuario
+	SET @Id_Cliente = (SELECT id_cliente FROM usuario WHERE usuario_name = @Usuario_Name)
+	INSERT INTO usuario_login VALUES (@Id_Usuario, CAST(GETDATE() AS DATE))
 END
