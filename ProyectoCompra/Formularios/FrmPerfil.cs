@@ -24,18 +24,18 @@ namespace ProyectoCompra.Formularios
         {
             if (usuarioRecuperado != null)
             {
-                lblMostrarId.Text = usuarioRecuperado.idUsuario.ToString();
-                lblMostrarUsuario.Text = usuarioRecuperado.username.ToString();
-                ctrlMostrarContrasenia.TextBoxtxtContrasenia = usuarioRecuperado.password.ToString();
+                lblMostrarId.Text = usuarioRecuperado.idUsuario.ToString().ToUpper();
+                lblMostrarUsuario.Text = usuarioRecuperado.username.ToString().ToUpper(); ;
+                ctrlMostrarContrasenia.TextBoxtxtContrasenia = usuarioRecuperado.password.ToString().ToUpper(); ;
                 lblMostrarFAlta.Text = usuarioRecuperado.fechaAlta;
-                lblMostrarNombre.Text = usuarioRecuperado.cliente.nombre.ToString();
-                lblMostrarApellido.Text = usuarioRecuperado.cliente.apellido.ToString();
-                lblMostrarEdad.Text = usuarioRecuperado.cliente.edad.ToString();
-                lblMostrarFNacimiento.Text = usuarioRecuperado.cliente.fechaNacimiento;
-                lblMostrarSexo.Text = usuarioRecuperado.cliente.sexo.ToString();
-                lblMostrarCorreo.Text = usuarioRecuperado.cliente.correo.ToString();
-                lblMostrarDireccion.Text = usuarioRecuperado.cliente.direccion.ToString();
-                lblMostrarUltimaModificacion.Text = usuarioRecuperado.fechaUltimaModificacion.ToString();
+                lblMostrarNombre.Text = usuarioRecuperado.cliente.nombre.ToString().ToUpper();
+                lblMostrarApellido.Text = usuarioRecuperado.cliente.apellido.ToString().ToUpper();
+                lblMostrarEdad.Text = usuarioRecuperado.cliente.edad.ToString().ToUpper();
+                lblMostrarFNacimiento.Text = usuarioRecuperado.cliente.fechaNacimiento.ToUpper();
+                lblMostrarSexo.Text = usuarioRecuperado.cliente.sexo.ToString().ToUpper();
+                lblMostrarCorreo.Text = usuarioRecuperado.cliente.correo.ToString().ToUpper();
+                lblMostrarDireccion.Text = usuarioRecuperado.cliente.direccion.ToString().ToUpper();
+                lblMostrarUltimaModificacion.Text = usuarioRecuperado.fechaUltimaModificacion.ToString().ToUpper();
             }
         }
 

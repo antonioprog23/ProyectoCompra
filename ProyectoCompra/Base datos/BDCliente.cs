@@ -15,37 +15,33 @@ namespace ProyectoCompra.Base_datos
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
-                using (SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("", connection))
+                using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    using (SqlCommand cmd = new SqlCommand("InsertarDatos", connection, transaction))
                     {
-                        using (SqlCommand cmd = new SqlCommand("", connection, transaction))
+                        try
                         {
-                            try
-                            {
-                                cmd.CommandText = "InsertarDatos";
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                                //CLIENTE
-                                cmd.Parameters.AddWithValue("@Nombre", cliente.nombre);
-                                cmd.Parameters.AddWithValue("@Apellido", cliente.apellido);
-                                cmd.Parameters.AddWithValue("@Edad", cliente.edad);
-                                cmd.Parameters.AddWithValue("@Fecha_Nacimiento", cliente.fechaNacimiento);
-                                cmd.Parameters.AddWithValue("@Sexo", cliente.sexo);
-                                cmd.Parameters.AddWithValue("@Direccion", cliente.direccion);
-                                cmd.Parameters.AddWithValue("@CorreoElectronico", cliente.correo);
-                                //USUARIO
-                                cmd.Parameters.AddWithValue("@Usuario_name", usuario.username);
-                                cmd.Parameters.AddWithValue("@Contrasenia", usuario.password);
-                                cmd.ExecuteNonQuery();
-                                transaction.Commit();
-                                insertado = true;
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                                transaction.Rollback();
-                                insertado = false;
-                            }
+                            //cmd.CommandText = "InsertarDatos";
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            //CLIENTE
+                            cmd.Parameters.AddWithValue("@Nombre", cliente.nombre);
+                            cmd.Parameters.AddWithValue("@Apellido", cliente.apellido);
+                            cmd.Parameters.AddWithValue("@Edad", cliente.edad);
+                            cmd.Parameters.AddWithValue("@Fecha_Nacimiento", cliente.fechaNacimiento);
+                            cmd.Parameters.AddWithValue("@Sexo", cliente.sexo);
+                            cmd.Parameters.AddWithValue("@Direccion", cliente.direccion);
+                            cmd.Parameters.AddWithValue("@CorreoElectronico", cliente.correo);
+                            //USUARIO
+                            cmd.Parameters.AddWithValue("@Usuario_name", usuario.username);
+                            cmd.Parameters.AddWithValue("@Contrasenia", usuario.password);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            insertado = true;
+                        }
+                        catch (SqlException)
+                        {
+                            insertado = false;
+                            transaction.Rollback();
                         }
                     }
                 }
@@ -116,27 +112,41 @@ namespace ProyectoCompra.Base_datos
             return idUsuario;
         }
 
-        public static string obtenerUltimoAcceso(int idUsario)
+        public static bool actualiarDatos(params string[] datos)
         {
-            string fechaUltimoAcceso = null;
+            bool actualizado = false;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
-                using (SqlCommand cmd = new SqlCommand("EditarUsuario", connection))
+                using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Id_Usuario", idUsario);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand("ActualizarDatos", connection, transaction))
                     {
-                        while (reader.Read())
+                        try
                         {
-                            fechaUltimoAcceso = reader.GetString(0);
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@Usuario_name", datos[0]);
+                            cmd.Parameters.AddWithValue("@Direccion", datos[1]);
+                            cmd.Parameters.AddWithValue("@Correo_Electronico", datos[2]);
+                            cmd.Parameters.AddWithValue("@Contrasenia", datos[3]);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            actualizado = true;
+                        }
+                        catch (SqlException)
+                        {
+                            actualizado = false;
+                            transaction.Rollback();
                         }
                     }
                 }
             }
-            return fechaUltimoAcceso;
+            return actualizado;
         }
+
+
+
+
 
     }
 }
