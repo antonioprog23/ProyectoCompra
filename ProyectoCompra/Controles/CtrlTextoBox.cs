@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoCompra.Controles
 {
     public partial class CtrlTextoBox : UserControl
     {
         private bool isNumerico;
+
         public CtrlTextoBox()
         {
             InitializeComponent();
@@ -23,15 +17,6 @@ namespace ProyectoCompra.Controles
         [Browsable(true)]
         [Category("Tipo TextBox")]
         public bool IsNumerico { get => isNumerico; set => isNumerico = value; }
-        protected override void OnLayout(LayoutEventArgs levent)
-        {
-            base.OnLayout(levent);
-
-            // Ajustar el tamaño y la posición del control en relación con el formulario contenedor
-            this.Width = this.Parent.ClientSize.Width;
-            this.Height = this.Parent.ClientSize.Height;
-            this.Location = new Point(0, 0);
-        }
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
@@ -48,5 +33,7 @@ namespace ProyectoCompra.Controles
                 textBox.Select(textBox.Text.Length, 0);
             }
         }
+
+        public string Texto { get { return textBox.Text; } set { textBox.Text = value; } }
     }
 }

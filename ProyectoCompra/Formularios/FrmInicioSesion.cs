@@ -30,7 +30,7 @@ namespace ProyectoCompra.Formularios
         {
             if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
             {
-                usuarioEncontrado = BDCliente.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia);
+                usuarioEncontrado = BDCliente.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia,"");
                 if (usuarioEncontrado == null)
                 {
                     MessageBox.Show("Usuario no encontrado.");
@@ -38,7 +38,8 @@ namespace ProyectoCompra.Formularios
                 else
                 {
                     MessageBox.Show("Bienvenido");
-                    FrmMain main = new FrmMain(usuarioEncontrado);
+                    Usuario usuarioFichero = new Usuario(usuarioEncontrado.idUsuario);
+                    FicheroAuxiliar.escribirFichero(usuarioFichero);
                     Application.Restart();
                 }
             }
@@ -85,7 +86,14 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = null;
             if (!textUsuario.Text.Equals("") && !txtContrasena.Text.Equals("") && !txtRepContrasenia.Text.Equals(""))
             {
-                usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
+                if (txtContrasena.Text.Equals(txtRepContrasenia.Text))
+                {
+                    usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
+                }
+                else
+                {
+                    MessageBox.Show("¡Las contraseñas no coinciden!");
+                }
             }
             return usuario;
         }

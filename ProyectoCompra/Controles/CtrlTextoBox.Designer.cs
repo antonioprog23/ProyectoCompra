@@ -33,18 +33,21 @@
             // 
             // textBox
             // 
+            this.textBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox.Location = new System.Drawing.Point(0, 0);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(100, 20);
+            this.textBox.Size = new System.Drawing.Size(204, 20);
             this.textBox.TabIndex = 0;
+            this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CtrlTextoBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.textBox);
             this.Name = "CtrlTextoBox";
-            this.Size = new System.Drawing.Size(100, 20);
+            this.Size = new System.Drawing.Size(204, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 

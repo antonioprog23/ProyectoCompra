@@ -66,6 +66,7 @@ namespace ProyectoCompra.Base_datos
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Usuario_name", datos[0]);
                     cmd.Parameters.AddWithValue("@Contrasenia", datos[1]);
+                    cmd.Parameters.AddWithValue("@Id_Usuario", datos[2]);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -75,15 +76,16 @@ namespace ProyectoCompra.Base_datos
                             string usuarioName = reader.GetString(2);
                             string contrasenia = reader.GetString(3);
                             DateTime fechaAlta = reader.GetDateTime(4);
-                            string nombre = reader.GetString(5);
-                            string apellido = reader.GetString(6);
-                            int edad = reader.GetInt32(7);
-                            DateTime fechaNacimiento = reader.GetDateTime(8);
-                            string sexo = reader.GetString(9);
-                            string direccion = reader.GetString(10);
-                            string correo = reader.GetString(11);
+                            DateTime fechaUltimaModificacion = reader.GetDateTime(5);
+                            string nombre = reader.GetString(6);
+                            string apellido = reader.GetString(7);
+                            int edad = reader.GetInt32(8);
+                            DateTime fechaNacimiento = reader.GetDateTime(9);
+                            string sexo = reader.GetString(10);
+                            string direccion = reader.GetString(11);
+                            string correo = reader.GetString(12);
                             cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, direccion, correo);
-                            usuarioCompleto = new Usuario(idUsuario, cliente, usuarioName, contrasenia, Convert.ToString(fechaAlta));
+                            usuarioCompleto = new Usuario(idUsuario, cliente, usuarioName, contrasenia, Convert.ToString(fechaAlta), Convert.ToString(fechaUltimaModificacion));
                         }
                     }
                 }
@@ -93,7 +95,7 @@ namespace ProyectoCompra.Base_datos
 
         public static int consultarUsuarioName(string usuarioName)
         {
-            int idUsuario=-1;
+            int idUsuario = -1;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
