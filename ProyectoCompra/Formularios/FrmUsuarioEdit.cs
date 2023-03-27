@@ -34,11 +34,26 @@ namespace ProyectoCompra.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            bool actualizado = BDCliente.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ctrlContrasenia.TextBoxtxtContrasenia);
-            if (actualizado)
+            if (!txtDireccion.Texto.Equals("") || !txtCorreo.Texto.Equals("") || !ctrlContrasenia.TextBoxtxtContrasenia.Equals("") || !txtRepContrasenia.Text.Equals(""))
             {
-                MessageBox.Show("¡Los datos se han actualizado correctamente!");
-                Close();
+                MessageBox.Show("AQUI");
+                if (ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text) && (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals("")))
+                {
+                    if (BDCliente.actualiarDatos(txtUsuario.Texto, "", "", ctrlContrasenia.TextBoxtxtContrasenia))
+                    {
+                        MessageBox.Show("Los DATOS se han actualizado correctamente.");
+                        Application.Restart();
+                    }
+                }
+                if (BDCliente.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ""))
+                {
+                    MessageBox.Show("Los datos se han actualizado correctamente.");
+                    Application.Restart();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Al menos rellena un campo de los posibles a modificar.");
             }
         }
 
