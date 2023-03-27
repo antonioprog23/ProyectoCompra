@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioEdit));
             this.gbxCliente = new System.Windows.Forms.GroupBox();
+            this.txtEdad = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTextoBox10 = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtDireccion = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtNombre = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtApellido = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
@@ -40,20 +45,15 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRepContrasenia = new System.Windows.Forms.Label();
             this.gbxUsuario = new System.Windows.Forms.GroupBox();
+            this.txtRepContrasenia = new System.Windows.Forms.TextBox();
+            this.ctrlContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
+            this.txtCorreo = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtUsuario = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblContrase = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.ctrlContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
-            this.txtCorreo = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtUsuario = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.ctrlTextoBox10 = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtDireccion = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtNombre = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtApellido = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtEdad = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtRepContrasenia = new System.Windows.Forms.TextBox();
             this.gbxCliente.SuspendLayout();
             this.gbxUsuario.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,41 @@
             resources.ApplyResources(this.gbxCliente, "gbxCliente");
             this.gbxCliente.Name = "gbxCliente";
             this.gbxCliente.TabStop = false;
+            // 
+            // txtEdad
+            // 
+            resources.ApplyResources(this.txtEdad, "txtEdad");
+            this.txtEdad.IsNumerico = true;
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Texto = "";
+            // 
+            // ctrlTextoBox10
+            // 
+            resources.ApplyResources(this.ctrlTextoBox10, "ctrlTextoBox10");
+            this.ctrlTextoBox10.IsNumerico = false;
+            this.ctrlTextoBox10.Name = "ctrlTextoBox10";
+            this.ctrlTextoBox10.Texto = "";
+            // 
+            // txtDireccion
+            // 
+            resources.ApplyResources(this.txtDireccion, "txtDireccion");
+            this.txtDireccion.IsNumerico = false;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Texto = "";
+            // 
+            // txtNombre
+            // 
+            resources.ApplyResources(this.txtNombre, "txtNombre");
+            this.txtNombre.IsNumerico = false;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Texto = "";
+            // 
+            // txtApellido
+            // 
+            resources.ApplyResources(this.txtApellido, "txtApellido");
+            this.txtApellido.IsNumerico = false;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Texto = "";
             // 
             // lblDireccion
             // 
@@ -140,6 +175,32 @@
             this.gbxUsuario.Name = "gbxUsuario";
             this.gbxUsuario.TabStop = false;
             // 
+            // txtRepContrasenia
+            // 
+            resources.ApplyResources(this.txtRepContrasenia, "txtRepContrasenia");
+            this.txtRepContrasenia.Name = "txtRepContrasenia";
+            this.txtRepContrasenia.UseSystemPasswordChar = true;
+            // 
+            // ctrlContrasenia
+            // 
+            resources.ApplyResources(this.ctrlContrasenia, "ctrlContrasenia");
+            this.ctrlContrasenia.Name = "ctrlContrasenia";
+            this.ctrlContrasenia.TextBoxtxtContrasenia = "";
+            // 
+            // txtCorreo
+            // 
+            resources.ApplyResources(this.txtCorreo, "txtCorreo");
+            this.txtCorreo.IsNumerico = false;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Texto = "";
+            // 
+            // txtUsuario
+            // 
+            resources.ApplyResources(this.txtUsuario, "txtUsuario");
+            this.txtUsuario.IsNumerico = false;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Texto = "";
+            // 
             // lblContrase
             // 
             resources.ApplyResources(this.lblContrase, "lblContrase");
@@ -168,59 +229,6 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // ctrlContrasenia
-            // 
-            resources.ApplyResources(this.ctrlContrasenia, "ctrlContrasenia");
-            this.ctrlContrasenia.Name = "ctrlContrasenia";
-            // 
-            // txtCorreo
-            // 
-            resources.ApplyResources(this.txtCorreo, "txtCorreo");
-            this.txtCorreo.IsNumerico = false;
-            this.txtCorreo.Name = "txtCorreo";
-            // 
-            // txtUsuario
-            // 
-            resources.ApplyResources(this.txtUsuario, "txtUsuario");
-            this.txtUsuario.IsNumerico = false;
-            this.txtUsuario.Name = "txtUsuario";
-            // 
-            // ctrlTextoBox10
-            // 
-            resources.ApplyResources(this.ctrlTextoBox10, "ctrlTextoBox10");
-            this.ctrlTextoBox10.IsNumerico = false;
-            this.ctrlTextoBox10.Name = "ctrlTextoBox10";
-            // 
-            // txtDireccion
-            // 
-            resources.ApplyResources(this.txtDireccion, "txtDireccion");
-            this.txtDireccion.IsNumerico = false;
-            this.txtDireccion.Name = "txtDireccion";
-            // 
-            // txtNombre
-            // 
-            resources.ApplyResources(this.txtNombre, "txtNombre");
-            this.txtNombre.IsNumerico = false;
-            this.txtNombre.Name = "txtNombre";
-            // 
-            // txtApellido
-            // 
-            resources.ApplyResources(this.txtApellido, "txtApellido");
-            this.txtApellido.IsNumerico = false;
-            this.txtApellido.Name = "txtApellido";
-            // 
-            // txtEdad
-            // 
-            resources.ApplyResources(this.txtEdad, "txtEdad");
-            this.txtEdad.IsNumerico = true;
-            this.txtEdad.Name = "txtEdad";
-            // 
-            // txtRepContrasenia
-            // 
-            resources.ApplyResources(this.txtRepContrasenia, "txtRepContrasenia");
-            this.txtRepContrasenia.Name = "txtRepContrasenia";
-            this.txtRepContrasenia.UseSystemPasswordChar = true;
             // 
             // FrmUsuarioEdit
             // 

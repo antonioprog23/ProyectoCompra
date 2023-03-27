@@ -117,6 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtEdad.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtEdad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 116</value>
+  </data>
+  <data name="txtEdad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="txtEdad.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
   <data name="&gt;&gt;txtEdad.Name" xml:space="preserve">
     <value>txtEdad</value>
   </data>
@@ -128,6 +142,18 @@
   </data>
   <data name="&gt;&gt;txtEdad.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="ctrlTextoBox10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ctrlTextoBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 191</value>
+  </data>
+  <data name="ctrlTextoBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 31</value>
+  </data>
+  <data name="ctrlTextoBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="&gt;&gt;ctrlTextoBox10.Name" xml:space="preserve">
     <value>ctrlTextoBox10</value>
@@ -141,6 +167,18 @@
   <data name="&gt;&gt;ctrlTextoBox10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="txtDireccion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtDireccion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 145</value>
+  </data>
+  <data name="txtDireccion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 21</value>
+  </data>
+  <data name="txtDireccion.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
   <data name="&gt;&gt;txtDireccion.Name" xml:space="preserve">
     <value>txtDireccion</value>
   </data>
@@ -152,6 +190,18 @@
   </data>
   <data name="&gt;&gt;txtDireccion.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="txtNombre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtNombre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 23</value>
+  </data>
+  <data name="txtNombre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 21</value>
+  </data>
+  <data name="txtNombre.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;txtNombre.Name" xml:space="preserve">
     <value>txtNombre</value>
@@ -165,6 +215,18 @@
   <data name="&gt;&gt;txtNombre.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="txtApellido.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtApellido.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 53</value>
+  </data>
+  <data name="txtApellido.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 21</value>
+  </data>
+  <data name="txtApellido.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
   <data name="&gt;&gt;txtApellido.Name" xml:space="preserve">
     <value>txtApellido</value>
   </data>
@@ -176,128 +238,6 @@
   </data>
   <data name="&gt;&gt;txtApellido.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.Name" xml:space="preserve">
-    <value>lblDireccion</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cbxSexo.Name" xml:space="preserve">
-    <value>cbxSexo</value>
-  </data>
-  <data name="&gt;&gt;cbxSexo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxSexo.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;cbxSexo.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblSexo.Name" xml:space="preserve">
-    <value>lblSexo</value>
-  </data>
-  <data name="&gt;&gt;lblSexo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSexo.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;lblSexo.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblEdad.Name" xml:space="preserve">
-    <value>lblEdad</value>
-  </data>
-  <data name="&gt;&gt;lblEdad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEdad.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;lblEdad.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;dateFNacimiento.Name" xml:space="preserve">
-    <value>dateFNacimiento</value>
-  </data>
-  <data name="&gt;&gt;dateFNacimiento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateFNacimiento.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;dateFNacimiento.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblFNacimiento.Name" xml:space="preserve">
-    <value>lblFNacimiento</value>
-  </data>
-  <data name="&gt;&gt;lblFNacimiento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFNacimiento.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;lblFNacimiento.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lblApellido.Name" xml:space="preserve">
-    <value>lblApellido</value>
-  </data>
-  <data name="&gt;&gt;lblApellido.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblApellido.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;lblApellido.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblNombre.Name" xml:space="preserve">
-    <value>lblNombre</value>
-  </data>
-  <data name="&gt;&gt;lblNombre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNombre.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;lblNombre.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gbxCliente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="gbxCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 191</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gbxCliente.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="gbxCliente.Text" xml:space="preserve">
-    <value>Datos cliente</value>
-  </data>
-  <data name="&gt;&gt;gbxCliente.Name" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;gbxCliente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxCliente.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gbxCliente.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="lblDireccion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -528,6 +468,30 @@
   <data name="&gt;&gt;lblNombre.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="gbxCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="gbxCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 191</value>
+  </data>
+  <data name="gbxCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbxCliente.Text" xml:space="preserve">
+    <value>Datos cliente</value>
+  </data>
+  <data name="&gt;&gt;gbxCliente.Name" xml:space="preserve">
+    <value>gbxCliente</value>
+  </data>
+  <data name="&gt;&gt;gbxCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxCliente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxCliente.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="lblRepContrasenia.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -566,6 +530,9 @@
   </data>
   <data name="txtRepContrasenia.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
+  </data>
+  <data name="txtRepContrasenia.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;txtRepContrasenia.Name" xml:space="preserve">
     <value>txtRepContrasenia</value>
@@ -817,126 +784,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnEditar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ctrlTextoBox10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ctrlTextoBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 191</value>
-  </data>
-  <data name="ctrlTextoBox10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 31</value>
-  </data>
-  <data name="ctrlTextoBox10.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;ctrlTextoBox10.Name" xml:space="preserve">
-    <value>ctrlTextoBox10</value>
-  </data>
-  <data name="&gt;&gt;ctrlTextoBox10.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ctrlTextoBox10.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;ctrlTextoBox10.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtDireccion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtDireccion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 145</value>
-  </data>
-  <data name="txtDireccion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 21</value>
-  </data>
-  <data name="txtDireccion.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.Name" xml:space="preserve">
-    <value>txtDireccion</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txtNombre.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 23</value>
-  </data>
-  <data name="txtNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 21</value>
-  </data>
-  <data name="txtNombre.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;txtNombre.Name" xml:space="preserve">
-    <value>txtNombre</value>
-  </data>
-  <data name="&gt;&gt;txtNombre.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtNombre.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;txtNombre.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txtApellido.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtApellido.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 53</value>
-  </data>
-  <data name="txtApellido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 21</value>
-  </data>
-  <data name="txtApellido.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;txtApellido.Name" xml:space="preserve">
-    <value>txtApellido</value>
-  </data>
-  <data name="&gt;&gt;txtApellido.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtApellido.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;txtApellido.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtEdad.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtEdad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 116</value>
-  </data>
-  <data name="txtEdad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 23</value>
-  </data>
-  <data name="txtEdad.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;txtEdad.Name" xml:space="preserve">
-    <value>txtEdad</value>
-  </data>
-  <data name="&gt;&gt;txtEdad.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtEdad.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;txtEdad.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
