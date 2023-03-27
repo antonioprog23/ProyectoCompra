@@ -22,23 +22,20 @@ namespace ProyectoCompra.Formularios
 
         private void frmPerfil_Load(object sender, EventArgs e)
         {
-            //Usuario usuario = FicheroAuxiliar.leerFichero();
             if (usuarioRecuperado != null)
             {
-                //usuarioRecuperado = BDCliente.obtenerDatos(usuario.idUsuario);
-                    lblMostrarId.Text = usuarioRecuperado.idUsuario.ToString();
-                    lblMostrarUsuario.Text = usuarioRecuperado.username.ToString();
-                    txtMostrarContrasenia.Text = usuarioRecuperado.password.ToString();
-                    lblMostrarFAlta.Text = usuarioRecuperado.fechaAlta;
-                    lblMostrarNombre.Text = usuarioRecuperado.cliente.nombre.ToString();
-                    lblMostrarApellido.Text = usuarioRecuperado.cliente.apellido.ToString();
-                    lblMostrarEdad.Text = usuarioRecuperado.cliente.edad.ToString();
-                    lblMostrarFNacimiento.Text = usuarioRecuperado.cliente.fechaNacimiento;
-                    lblMostrarSexo.Text = usuarioRecuperado.cliente.sexo.ToString();
-                    lblMostrarCorreo.Text = usuarioRecuperado.cliente.correo.ToString();
-                    lblMostrarDireccion.Text = usuarioRecuperado.cliente.direccion.ToString();
-                    txtMostrarContrasenia.Text = usuarioRecuperado.password.ToString();
-                    lblMostrarUltimoAcceso.Text = usuarioRecuperado.fechaAlta.ToString();
+                lblMostrarId.Text = usuarioRecuperado.idUsuario.ToString();
+                lblMostrarUsuario.Text = usuarioRecuperado.username.ToString();
+                ctrlMostrarContrasenia.TextBoxtxtContrasenia = usuarioRecuperado.password.ToString();
+                lblMostrarFAlta.Text = usuarioRecuperado.fechaAlta;
+                lblMostrarNombre.Text = usuarioRecuperado.cliente.nombre.ToString();
+                lblMostrarApellido.Text = usuarioRecuperado.cliente.apellido.ToString();
+                lblMostrarEdad.Text = usuarioRecuperado.cliente.edad.ToString();
+                lblMostrarFNacimiento.Text = usuarioRecuperado.cliente.fechaNacimiento;
+                lblMostrarSexo.Text = usuarioRecuperado.cliente.sexo.ToString();
+                lblMostrarCorreo.Text = usuarioRecuperado.cliente.correo.ToString();
+                lblMostrarDireccion.Text = usuarioRecuperado.cliente.direccion.ToString();
+                lblMostrarUltimaModificacion.Text = usuarioRecuperado.fechaUltimaModificacion.ToString();
             }
         }
 
@@ -54,9 +51,9 @@ namespace ProyectoCompra.Formularios
             frmCrearUsuario.ShowDialog();
         }
 
-        private void btnMostrarPass_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

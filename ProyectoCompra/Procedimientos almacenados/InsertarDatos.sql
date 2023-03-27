@@ -33,6 +33,6 @@ BEGIN
 	INSERT INTO usuario (Id_Usuario,Id_Cliente,Usuario_name, Contrasenia, Correo_Electronico) VALUES
 						(@Id_Usuario,@Id_Cliente,@Usuario_name, @Contrasenia, @CorreoElectronico)
 
-	INSERT INTO detalle_usuario (id_usuario,fecha_alta) VALUES
-				(@id_usuario,@fecha_alta);
+	INSERT INTO detalle_usuario (id_usuario,fecha_alta,fecha_ultima_modificacion) VALUES
+				(@id_usuario,@fecha_alta,@fecha_alta);
 END

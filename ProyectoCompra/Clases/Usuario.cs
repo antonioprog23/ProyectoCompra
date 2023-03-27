@@ -16,14 +16,16 @@ namespace ProyectoCompra.Clases
         public string username { get; set; }
         public string password { get; set; }
         public string fechaAlta { get; set; }
+        public string fechaUltimaModificacion { get; set; }
 
-        public Usuario(int idUsuario, Cliente cliente, string username, string password, string fechaAlta)
+        public Usuario(int idUsuario, Cliente cliente, string username, string password, string fechaAlta, string fechaUltimaModificacion)
         {
             this.idUsuario = idUsuario;
             this.cliente = cliente;
             this.username = username;
             this.password = password;
             this.fechaAlta = fechaAlta;
+            this.fechaUltimaModificacion = fechaUltimaModificacion;
         }
 
         public Usuario(int idUsuario)

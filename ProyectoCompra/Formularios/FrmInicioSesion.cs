@@ -30,7 +30,7 @@ namespace ProyectoCompra.Formularios
         {
             if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
             {
-                usuarioEncontrado = BDCliente.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia);
+                usuarioEncontrado = BDCliente.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia,"");
                 if (usuarioEncontrado == null)
                 {
                     MessageBox.Show("Usuario no encontrado.");
@@ -38,7 +38,8 @@ namespace ProyectoCompra.Formularios
                 else
                 {
                     MessageBox.Show("Bienvenido");
-                    FrmMain main = new FrmMain(usuarioEncontrado);
+                    Usuario usuarioFichero = new Usuario(usuarioEncontrado.idUsuario);
+                    FicheroAuxiliar.escribirFichero(usuarioFichero);
                     Application.Restart();
                 }
             }
@@ -50,10 +51,18 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = crearUsuario();
             if (cliente != null && usuario != null)
             {
-                if (BDCliente.insertarDatos(cliente, usuario))
+                int codigoUsuarioConNombreUsado = BDCliente.consultarUsuarioName(textUsuario.Text);
+                if (codigoUsuarioConNombreUsado == -1)
                 {
-                    MessageBox.Show("Usuario creado.");
-                    Close();
+                    if ((BDCliente.insertarDatos(cliente, usuario)))
+                    {
+                        MessageBox.Show("Usuario creado.");
+                        Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("¡El nombre de usuario ya existe!");
                 }
             }
             else
@@ -77,7 +86,14 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = null;
             if (!textUsuario.Text.Equals("") && !txtContrasena.Text.Equals("") && !txtRepContrasenia.Text.Equals(""))
             {
-                usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
+                if (txtContrasena.Text.Equals(txtRepContrasenia.Text))
+                {
+                    usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
+                }
+                else
+                {
+                    MessageBox.Show("¡Las contraseñas no coinciden!");
+                }
             }
             return usuario;
         }
@@ -106,16 +122,6 @@ namespace ProyectoCompra.Formularios
                     txtEdad.Text = "";
                 }
             }
-        }
-
-        private void txtContrasenia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

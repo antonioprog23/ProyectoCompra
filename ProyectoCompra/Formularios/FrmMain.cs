@@ -2,13 +2,6 @@
 using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -20,12 +13,6 @@ namespace ProyectoCompra.Formularios
         public FrmMain()
         {
             InitializeComponent();
-        }
-
-        public FrmMain(Usuario usuario)
-        {
-            InitializeComponent();
-            this.usuarioRecuperado = usuario;
         }
 
         private void btnIdentificarse_Click(object sender, EventArgs e)
@@ -53,6 +40,12 @@ namespace ProyectoCompra.Formularios
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
+            Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
+            if (usuarioFichero != null)
+            {
+                usuarioRecuperado = BDCliente.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());
+            }
+
             if (usuarioRecuperado == null)
             {
                 btnIdentificarse.Visible = true;

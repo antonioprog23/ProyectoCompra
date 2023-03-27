@@ -34,9 +34,9 @@
             // 
             // btnMostrarPass
             // 
+            this.btnMostrarPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMostrarPass.BackColor = System.Drawing.Color.White;
             this.btnMostrarPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMostrarPass.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMostrarPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMostrarPass.FlatAppearance.BorderSize = 0;
             this.btnMostrarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -44,20 +44,20 @@
             this.btnMostrarPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrarPass.Image = global::ProyectoCompra.Properties.Resources.ocultar_contrasenia;
             this.btnMostrarPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnMostrarPass.Location = new System.Drawing.Point(199, 0);
+            this.btnMostrarPass.Location = new System.Drawing.Point(191, 0);
             this.btnMostrarPass.Name = "btnMostrarPass";
-            this.btnMostrarPass.Size = new System.Drawing.Size(20, 23);
+            this.btnMostrarPass.Size = new System.Drawing.Size(18, 21);
             this.btnMostrarPass.TabIndex = 25;
             this.btnMostrarPass.UseVisualStyleBackColor = false;
             this.btnMostrarPass.Click += new System.EventHandler(this.btnMostrarPass_Click);
             // 
             // txtContrasenia
             // 
-            this.txtContrasenia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtContrasenia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContrasenia.Font = new System.Drawing.Font("Arial Nova", 8.25F);
             this.txtContrasenia.Location = new System.Drawing.Point(0, 0);
             this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.Size = new System.Drawing.Size(190, 21);
+            this.txtContrasenia.Size = new System.Drawing.Size(209, 21);
             this.txtContrasenia.TabIndex = 24;
             this.txtContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContrasenia.UseSystemPasswordChar = true;
@@ -66,10 +66,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.btnMostrarPass);
             this.Controls.Add(this.txtContrasenia);
             this.Name = "ctrlContrasenia";
-            this.Size = new System.Drawing.Size(219, 23);
+            this.Size = new System.Drawing.Size(209, 24);
             this.ResumeLayout(false);
             this.PerformLayout();
 

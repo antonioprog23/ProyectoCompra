@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCompra.Controles
 {
-    partial class CtrlTextBoxTipo
+    partial class CtrlTextoBox
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -33,19 +33,21 @@
             // 
             // textBox
             // 
+            this.textBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox.Location = new System.Drawing.Point(0, 0);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(180, 20);
+            this.textBox.Size = new System.Drawing.Size(204, 20);
             this.textBox.TabIndex = 0;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TextBoxTipo
+            // CtrlTextoBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.textBox);
-            this.Name = "TextBoxTipo";
-            this.Size = new System.Drawing.Size(180, 21);
+            this.Name = "CtrlTextoBox";
+            this.Size = new System.Drawing.Size(204, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 
