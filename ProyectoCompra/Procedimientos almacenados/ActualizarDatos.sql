@@ -1,4 +1,3 @@
-USE Compras
 IF OBJECT_ID ('ActualizarDatos','P') IS NOT NULL
 	DROP PROCEDURE ActualizarDatos;
 	PRINT 'Procedimiento almacenado borrado.'
@@ -12,15 +11,26 @@ AS
 
 BEGIN
 	SET NOCOUNT ON
-	IF (@Direccion IS NOT NULL)
-		UPDATE cliente SET direccion = @Direccion 
-		WHERE id_cliente = (SELECT id_cliente FROM usuario
-							WHERE usuario_name = @Usuario_Name)
-	IF (@Contrasenia IS NOT NULL)
-		UPDATE usuario SET contrasenia = @Contrasenia
-		WHERE usuario_name = @Usuario_name
-
-	IF (@Correo_Electronico IS NOT NULL)
-		UPDATE usuario SET correo_electronico = @Correo_Electronico
-		WHERE usuario_name = @Usuario_name
+	UPDATE usuario 
+	SET contrasenia = CASE 
+							WHEN @Contrasenia IS NOT NULL AND @Contrasenia != ''
+								THEN @Contrasenia
+							ELSE contrasenia
+					  END,
+	correo_electronico = CASE 
+								WHEN @Correo_Electronico IS NOT NULL AND @Correo_Electronico != ''
+									THEN @Correo_Electronico
+								ELSE correo_electronico
+						 END
+	WHERE usuario_name = @Usuario_Name
+							
+	UPDATE cliente
+	SET direccion = CASE
+							WHEN @Direccion IS NOT NULL AND @Direccion != ''
+								THEN @Direccion
+							ELSE direccion
+					END
+	WHERE id_cliente = (SELECT id_cliente
+										 FROM usuario 
+													WHERE usuario_name = @Usuario_Name)
 END

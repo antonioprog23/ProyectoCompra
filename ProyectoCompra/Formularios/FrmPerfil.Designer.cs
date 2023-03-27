@@ -43,6 +43,7 @@
             this.lblMostrarId = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ctrlMostrarContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.lblMostrarUsuario = new System.Windows.Forms.Label();
             this.lblMostrarCorreo = new System.Windows.Forms.Label();
             this.lblContrasenia = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.ctrlMostrarContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -202,6 +202,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos usuario";
             // 
+            // ctrlMostrarContrasenia
+            // 
+            this.ctrlMostrarContrasenia.AutoSize = true;
+            this.ctrlMostrarContrasenia.Location = new System.Drawing.Point(153, 82);
+            this.ctrlMostrarContrasenia.Name = "ctrlMostrarContrasenia";
+            this.ctrlMostrarContrasenia.Size = new System.Drawing.Size(209, 24);
+            this.ctrlMostrarContrasenia.TabIndex = 22;
+            this.ctrlMostrarContrasenia.TextBoxtxtContrasenia = "";
+            // 
             // lblMostrarUsuario
             // 
             this.lblMostrarUsuario.AutoSize = true;
@@ -283,7 +292,7 @@
             // lblMostrarSexo
             // 
             this.lblMostrarSexo.AutoSize = true;
-            this.lblMostrarSexo.Location = new System.Drawing.Point(150, 81);
+            this.lblMostrarSexo.Location = new System.Drawing.Point(150, 131);
             this.lblMostrarSexo.Name = "lblMostrarSexo";
             this.lblMostrarSexo.Size = new System.Drawing.Size(35, 13);
             this.lblMostrarSexo.TabIndex = 16;
@@ -292,7 +301,7 @@
             // lblMostrarApellido
             // 
             this.lblMostrarApellido.AutoSize = true;
-            this.lblMostrarApellido.Location = new System.Drawing.Point(150, 104);
+            this.lblMostrarApellido.Location = new System.Drawing.Point(150, 57);
             this.lblMostrarApellido.Name = "lblMostrarApellido";
             this.lblMostrarApellido.Size = new System.Drawing.Size(35, 13);
             this.lblMostrarApellido.TabIndex = 15;
@@ -301,7 +310,7 @@
             // lblMostrarEdad
             // 
             this.lblMostrarEdad.AutoSize = true;
-            this.lblMostrarEdad.Location = new System.Drawing.Point(150, 129);
+            this.lblMostrarEdad.Location = new System.Drawing.Point(150, 108);
             this.lblMostrarEdad.Name = "lblMostrarEdad";
             this.lblMostrarEdad.Size = new System.Drawing.Size(35, 13);
             this.lblMostrarEdad.TabIndex = 14;
@@ -319,7 +328,7 @@
             // lblMostrarFNacimiento
             // 
             this.lblMostrarFNacimiento.AutoSize = true;
-            this.lblMostrarFNacimiento.Location = new System.Drawing.Point(150, 57);
+            this.lblMostrarFNacimiento.Location = new System.Drawing.Point(150, 81);
             this.lblMostrarFNacimiento.Name = "lblMostrarFNacimiento";
             this.lblMostrarFNacimiento.Size = new System.Drawing.Size(35, 13);
             this.lblMostrarFNacimiento.TabIndex = 12;
@@ -339,7 +348,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSexo.Location = new System.Drawing.Point(28, 81);
+            this.lblSexo.Location = new System.Drawing.Point(28, 131);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(34, 13);
             this.lblSexo.TabIndex = 9;
@@ -349,7 +358,7 @@
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblEdad.Location = new System.Drawing.Point(28, 129);
+            this.lblEdad.Location = new System.Drawing.Point(28, 108);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(35, 13);
             this.lblEdad.TabIndex = 7;
@@ -359,7 +368,7 @@
             // 
             this.lblFNacimiento.AutoSize = true;
             this.lblFNacimiento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblFNacimiento.Location = new System.Drawing.Point(28, 57);
+            this.lblFNacimiento.Location = new System.Drawing.Point(28, 81);
             this.lblFNacimiento.Name = "lblFNacimiento";
             this.lblFNacimiento.Size = new System.Drawing.Size(109, 13);
             this.lblFNacimiento.TabIndex = 4;
@@ -369,7 +378,7 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblApellido.Location = new System.Drawing.Point(28, 104);
+            this.lblApellido.Location = new System.Drawing.Point(28, 57);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(47, 13);
             this.lblApellido.TabIndex = 2;
@@ -384,14 +393,6 @@
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
-            // 
-            // ctrlMostrarContrasenia
-            // 
-            this.ctrlMostrarContrasenia.AutoSize = true;
-            this.ctrlMostrarContrasenia.Location = new System.Drawing.Point(153, 82);
-            this.ctrlMostrarContrasenia.Name = "ctrlMostrarContrasenia";
-            this.ctrlMostrarContrasenia.Size = new System.Drawing.Size(209, 24);
-            this.ctrlMostrarContrasenia.TabIndex = 22;
             // 
             // FrmPerfil
             // 
