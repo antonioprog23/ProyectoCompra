@@ -1,11 +1,6 @@
 ﻿using ProyectoCompra.Clases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Base_datos
@@ -58,8 +53,7 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
-
-        public static Usuario obtenerDatos(params string [] datos)
+        public static Usuario obtenerDatos(params string[] datos)
         {
             Usuario usuarioCompleto = null;
             Cliente cliente = null;
@@ -72,6 +66,7 @@ namespace ProyectoCompra.Base_datos
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Usuario_name", datos[0]);
                     cmd.Parameters.AddWithValue("@Contrasenia", datos[1]);
+                    cmd.Parameters.AddWithValue("@Id_Usuario", datos[2]);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -81,20 +76,44 @@ namespace ProyectoCompra.Base_datos
                             string usuarioName = reader.GetString(2);
                             string contrasenia = reader.GetString(3);
                             DateTime fechaAlta = reader.GetDateTime(4);
-                            string nombre = reader.GetString(5);
-                            string apellido = reader.GetString(6);
-                            int edad = reader.GetInt32(7);
-                            DateTime fechaNacimiento = reader.GetDateTime(8);
-                            string sexo = reader.GetString(9);
-                            string direccion = reader.GetString(10);
-                            string correo = reader.GetString(11);
+                            DateTime fechaUltimaModificacion = reader.GetDateTime(5);
+                            string nombre = reader.GetString(6);
+                            string apellido = reader.GetString(7);
+                            int edad = reader.GetInt32(8);
+                            DateTime fechaNacimiento = reader.GetDateTime(9);
+                            string sexo = reader.GetString(10);
+                            string direccion = reader.GetString(11);
+                            string correo = reader.GetString(12);
                             cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, direccion, correo);
-                            usuarioCompleto = new Usuario(idUsuario, cliente, usuarioName, contrasenia, Convert.ToString(fechaAlta));
+                            usuarioCompleto = new Usuario(idUsuario, cliente, usuarioName, contrasenia, Convert.ToString(fechaAlta), Convert.ToString(fechaUltimaModificacion));
                         }
                     }
                 }
             }
             return usuarioCompleto;
+        }
+
+        public static int consultarUsuarioName(string usuarioName)
+        {
+            int idUsuario = -1;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("ConsultarUsuarioName", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Usuario_name", usuarioName);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            idUsuario = reader.GetInt32(0);
+                        }
+                    }
+
+                }
+            }
+            return idUsuario;
         }
 
         public static string obtenerUltimoAcceso(int idUsario)
@@ -103,9 +122,8 @@ namespace ProyectoCompra.Base_datos
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
-                using (SqlCommand cmd = new SqlCommand("", connection))
+                using (SqlCommand cmd = new SqlCommand("EditarUsuario", connection))
                 {
-                    cmd.CommandText = "EditarUsuario";
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Id_Usuario", idUsario);
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -119,6 +137,6 @@ namespace ProyectoCompra.Base_datos
             }
             return fechaUltimoAcceso;
         }
-             
+
     }
 }

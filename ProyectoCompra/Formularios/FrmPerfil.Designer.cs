@@ -36,8 +36,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblMostrarUltimoAcceso = new System.Windows.Forms.Label();
-            this.lblUltimoAcceso = new System.Windows.Forms.Label();
+            this.lblMostrarUltimaModificacion = new System.Windows.Forms.Label();
+            this.lblUltimaModificacion = new System.Windows.Forms.Label();
             this.lblMostrarFAlta = new System.Windows.Forms.Label();
             this.lblFechaAlta = new System.Windows.Forms.Label();
             this.lblMostrarId = new System.Windows.Forms.Label();
@@ -62,8 +62,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.btnMostrarPass = new System.Windows.Forms.Button();
-            this.txtMostrarContrasenia = new System.Windows.Forms.TextBox();
+            this.ctrlMostrarContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -109,6 +108,7 @@
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -122,8 +122,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblMostrarUltimoAcceso);
-            this.panel2.Controls.Add(this.lblUltimoAcceso);
+            this.panel2.Controls.Add(this.lblMostrarUltimaModificacion);
+            this.panel2.Controls.Add(this.lblUltimaModificacion);
             this.panel2.Controls.Add(this.lblMostrarFAlta);
             this.panel2.Controls.Add(this.lblFechaAlta);
             this.panel2.Controls.Add(this.lblMostrarId);
@@ -133,23 +133,23 @@
             this.panel2.Size = new System.Drawing.Size(252, 103);
             this.panel2.TabIndex = 6;
             // 
-            // lblMostrarUltimoAcceso
+            // lblMostrarUltimaModificacion
             // 
-            this.lblMostrarUltimoAcceso.AutoSize = true;
-            this.lblMostrarUltimoAcceso.Location = new System.Drawing.Point(150, 64);
-            this.lblMostrarUltimoAcceso.Name = "lblMostrarUltimoAcceso";
-            this.lblMostrarUltimoAcceso.Size = new System.Drawing.Size(35, 13);
-            this.lblMostrarUltimoAcceso.TabIndex = 10;
-            this.lblMostrarUltimoAcceso.Text = "label2";
+            this.lblMostrarUltimaModificacion.AutoSize = true;
+            this.lblMostrarUltimaModificacion.Location = new System.Drawing.Point(150, 64);
+            this.lblMostrarUltimaModificacion.Name = "lblMostrarUltimaModificacion";
+            this.lblMostrarUltimaModificacion.Size = new System.Drawing.Size(35, 13);
+            this.lblMostrarUltimaModificacion.TabIndex = 10;
+            this.lblMostrarUltimaModificacion.Text = "label2";
             // 
-            // lblUltimoAcceso
+            // lblUltimaModificacion
             // 
-            this.lblUltimoAcceso.AutoSize = true;
-            this.lblUltimoAcceso.Location = new System.Drawing.Point(28, 64);
-            this.lblUltimoAcceso.Name = "lblUltimoAcceso";
-            this.lblUltimoAcceso.Size = new System.Drawing.Size(77, 13);
-            this.lblUltimoAcceso.TabIndex = 9;
-            this.lblUltimoAcceso.Text = "Último acceso:";
+            this.lblUltimaModificacion.AutoSize = true;
+            this.lblUltimaModificacion.Location = new System.Drawing.Point(28, 64);
+            this.lblUltimaModificacion.Name = "lblUltimaModificacion";
+            this.lblUltimaModificacion.Size = new System.Drawing.Size(101, 13);
+            this.lblUltimaModificacion.TabIndex = 9;
+            this.lblUltimaModificacion.Text = "Última modificación:";
             // 
             // lblMostrarFAlta
             // 
@@ -189,8 +189,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnMostrarPass);
-            this.groupBox2.Controls.Add(this.txtMostrarContrasenia);
+            this.groupBox2.Controls.Add(this.ctrlMostrarContrasenia);
             this.groupBox2.Controls.Add(this.lblMostrarUsuario);
             this.groupBox2.Controls.Add(this.lblMostrarCorreo);
             this.groupBox2.Controls.Add(this.lblContrasenia);
@@ -386,32 +385,13 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
-            // btnMostrarPass
+            // ctrlMostrarContrasenia
             // 
-            this.btnMostrarPass.BackColor = System.Drawing.Color.White;
-            this.btnMostrarPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMostrarPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMostrarPass.FlatAppearance.BorderSize = 0;
-            this.btnMostrarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnMostrarPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnMostrarPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarPass.Image = global::ProyectoCompra.Properties.Resources.ocultar_contrasenia;
-            this.btnMostrarPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnMostrarPass.Location = new System.Drawing.Point(346, 78);
-            this.btnMostrarPass.Name = "btnMostrarPass";
-            this.btnMostrarPass.Size = new System.Drawing.Size(19, 22);
-            this.btnMostrarPass.TabIndex = 23;
-            this.btnMostrarPass.UseVisualStyleBackColor = false;
-            // 
-            // txtMostrarContrasenia
-            // 
-            this.txtMostrarContrasenia.Font = new System.Drawing.Font("Arial Nova", 8.25F);
-            this.txtMostrarContrasenia.Location = new System.Drawing.Point(153, 78);
-            this.txtMostrarContrasenia.Name = "txtMostrarContrasenia";
-            this.txtMostrarContrasenia.Size = new System.Drawing.Size(187, 21);
-            this.txtMostrarContrasenia.TabIndex = 22;
-            this.txtMostrarContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMostrarContrasenia.UseSystemPasswordChar = true;
+            this.ctrlMostrarContrasenia.AutoSize = true;
+            this.ctrlMostrarContrasenia.Location = new System.Drawing.Point(153, 82);
+            this.ctrlMostrarContrasenia.Name = "ctrlMostrarContrasenia";
+            this.ctrlMostrarContrasenia.Size = new System.Drawing.Size(209, 24);
+            this.ctrlMostrarContrasenia.TabIndex = 22;
             // 
             // FrmPerfil
             // 
@@ -448,8 +428,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblMostrarUltimoAcceso;
-        private System.Windows.Forms.Label lblUltimoAcceso;
+        private System.Windows.Forms.Label lblMostrarUltimaModificacion;
+        private System.Windows.Forms.Label lblUltimaModificacion;
         private System.Windows.Forms.Label lblMostrarFAlta;
         private System.Windows.Forms.Label lblFechaAlta;
         private System.Windows.Forms.Label lblMostrarId;
@@ -474,7 +454,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Button btnMostrarPass;
-        private System.Windows.Forms.TextBox txtMostrarContrasenia;
+        private Controles.ctrlContrasenia ctrlMostrarContrasenia;
     }
 }

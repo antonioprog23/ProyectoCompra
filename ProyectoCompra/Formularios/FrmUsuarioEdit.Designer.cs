@@ -30,26 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioEdit));
             this.gbxCliente = new System.Windows.Forms.GroupBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtEdad = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTextoBox10 = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtDireccion = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtNombre = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtApellido = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
             this.dateFNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblFNacimiento = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRepContrasenia = new System.Windows.Forms.Label();
             this.gbxUsuario = new System.Windows.Forms.GroupBox();
             this.txtRepContrasenia = new System.Windows.Forms.TextBox();
-            this.txtContrasenia = new System.Windows.Forms.TextBox();
+            this.ctrlContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
+            this.txtCorreo = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtUsuario = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblContrase = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -59,26 +60,57 @@
             // 
             // gbxCliente
             // 
+            this.gbxCliente.Controls.Add(this.txtEdad);
+            this.gbxCliente.Controls.Add(this.ctrlTextoBox10);
             this.gbxCliente.Controls.Add(this.txtDireccion);
+            this.gbxCliente.Controls.Add(this.txtNombre);
+            this.gbxCliente.Controls.Add(this.txtApellido);
             this.gbxCliente.Controls.Add(this.lblDireccion);
             this.gbxCliente.Controls.Add(this.cbxSexo);
             this.gbxCliente.Controls.Add(this.lblSexo);
-            this.gbxCliente.Controls.Add(this.txtEdad);
             this.gbxCliente.Controls.Add(this.lblEdad);
             this.gbxCliente.Controls.Add(this.dateFNacimiento);
             this.gbxCliente.Controls.Add(this.lblFNacimiento);
-            this.gbxCliente.Controls.Add(this.txtApellido);
             this.gbxCliente.Controls.Add(this.lblApellido);
-            this.gbxCliente.Controls.Add(this.txtNombre);
             this.gbxCliente.Controls.Add(this.lblNombre);
             resources.ApplyResources(this.gbxCliente, "gbxCliente");
             this.gbxCliente.Name = "gbxCliente";
             this.gbxCliente.TabStop = false;
             // 
+            // txtEdad
+            // 
+            resources.ApplyResources(this.txtEdad, "txtEdad");
+            this.txtEdad.IsNumerico = true;
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Texto = "";
+            // 
+            // ctrlTextoBox10
+            // 
+            resources.ApplyResources(this.ctrlTextoBox10, "ctrlTextoBox10");
+            this.ctrlTextoBox10.IsNumerico = false;
+            this.ctrlTextoBox10.Name = "ctrlTextoBox10";
+            this.ctrlTextoBox10.Texto = "";
+            // 
             // txtDireccion
             // 
             resources.ApplyResources(this.txtDireccion, "txtDireccion");
+            this.txtDireccion.IsNumerico = false;
             this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Texto = "";
+            // 
+            // txtNombre
+            // 
+            resources.ApplyResources(this.txtNombre, "txtNombre");
+            this.txtNombre.IsNumerico = false;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Texto = "";
+            // 
+            // txtApellido
+            // 
+            resources.ApplyResources(this.txtApellido, "txtApellido");
+            this.txtApellido.IsNumerico = false;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Texto = "";
             // 
             // lblDireccion
             // 
@@ -99,11 +131,6 @@
             resources.ApplyResources(this.lblSexo, "lblSexo");
             this.lblSexo.Name = "lblSexo";
             // 
-            // txtEdad
-            // 
-            resources.ApplyResources(this.txtEdad, "txtEdad");
-            this.txtEdad.Name = "txtEdad";
-            // 
             // lblEdad
             // 
             resources.ApplyResources(this.lblEdad, "lblEdad");
@@ -119,20 +146,10 @@
             resources.ApplyResources(this.lblFNacimiento, "lblFNacimiento");
             this.lblFNacimiento.Name = "lblFNacimiento";
             // 
-            // txtApellido
-            // 
-            resources.ApplyResources(this.txtApellido, "txtApellido");
-            this.txtApellido.Name = "txtApellido";
-            // 
             // lblApellido
             // 
             resources.ApplyResources(this.lblApellido, "lblApellido");
             this.lblApellido.Name = "lblApellido";
-            // 
-            // txtNombre
-            // 
-            resources.ApplyResources(this.txtNombre, "txtNombre");
-            this.txtNombre.Name = "txtNombre";
             // 
             // lblNombre
             // 
@@ -147,12 +164,12 @@
             // gbxUsuario
             // 
             this.gbxUsuario.Controls.Add(this.txtRepContrasenia);
-            this.gbxUsuario.Controls.Add(this.txtContrasenia);
+            this.gbxUsuario.Controls.Add(this.ctrlContrasenia);
+            this.gbxUsuario.Controls.Add(this.txtCorreo);
+            this.gbxUsuario.Controls.Add(this.txtUsuario);
             this.gbxUsuario.Controls.Add(this.lblRepContrasenia);
             this.gbxUsuario.Controls.Add(this.lblContrase);
-            this.gbxUsuario.Controls.Add(this.txtCorreo);
             this.gbxUsuario.Controls.Add(this.lblCorreo);
-            this.gbxUsuario.Controls.Add(this.txtUsuario);
             this.gbxUsuario.Controls.Add(this.lblUsuario);
             resources.ApplyResources(this.gbxUsuario, "gbxUsuario");
             this.gbxUsuario.Name = "gbxUsuario";
@@ -164,31 +181,35 @@
             this.txtRepContrasenia.Name = "txtRepContrasenia";
             this.txtRepContrasenia.UseSystemPasswordChar = true;
             // 
-            // txtContrasenia
+            // ctrlContrasenia
             // 
-            resources.ApplyResources(this.txtContrasenia, "txtContrasenia");
-            this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.UseSystemPasswordChar = true;
+            resources.ApplyResources(this.ctrlContrasenia, "ctrlContrasenia");
+            this.ctrlContrasenia.Name = "ctrlContrasenia";
+            this.ctrlContrasenia.TextBoxtxtContrasenia = "";
+            // 
+            // txtCorreo
+            // 
+            resources.ApplyResources(this.txtCorreo, "txtCorreo");
+            this.txtCorreo.IsNumerico = false;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Texto = "";
+            // 
+            // txtUsuario
+            // 
+            resources.ApplyResources(this.txtUsuario, "txtUsuario");
+            this.txtUsuario.IsNumerico = false;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Texto = "";
             // 
             // lblContrase
             // 
             resources.ApplyResources(this.lblContrase, "lblContrase");
             this.lblContrase.Name = "lblContrase";
             // 
-            // txtCorreo
-            // 
-            resources.ApplyResources(this.txtCorreo, "txtCorreo");
-            this.txtCorreo.Name = "txtCorreo";
-            // 
             // lblCorreo
             // 
             resources.ApplyResources(this.lblCorreo, "lblCorreo");
             this.lblCorreo.Name = "lblCorreo";
-            // 
-            // txtUsuario
-            // 
-            resources.ApplyResources(this.txtUsuario, "txtUsuario");
-            this.txtUsuario.Name = "txtUsuario";
             // 
             // lblUsuario
             // 
@@ -233,27 +254,28 @@
 
         private System.Windows.Forms.GroupBox gbxCliente;
         private System.Windows.Forms.Label lblFNacimiento;
-        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DateTimePicker dateFNacimiento;
         private System.Windows.Forms.Label lblRepContrasenia;
-        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.ComboBox cbxSexo;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.GroupBox gbxUsuario;
         private System.Windows.Forms.Label lblContrase;
-        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
+        private Controles.CtrlTextoBox ctrlTextoBox10;
+        private Controles.CtrlTextoBox txtDireccion;
+        private Controles.CtrlTextoBox txtNombre;
+        private Controles.CtrlTextoBox txtApellido;
+        private Controles.ctrlContrasenia ctrlContrasenia;
+        private Controles.CtrlTextoBox txtCorreo;
+        private Controles.CtrlTextoBox txtUsuario;
+        private Controles.CtrlTextoBox txtEdad;
         private System.Windows.Forms.TextBox txtRepContrasenia;
-        private System.Windows.Forms.TextBox txtContrasenia;
     }
 }

@@ -39,14 +39,14 @@ namespace ProyectoCompra.Formularios
 
         private void cargarDatosAEditar()
         {
-            txtNombre.Text = usuarioModificar.cliente.nombre;
-            txtApellido.Text = usuarioModificar.cliente.apellido;
-            txtEdad.Text = usuarioModificar.cliente.edad.ToString();
+            txtNombre.Texto = usuarioModificar.cliente.nombre;
+            txtApellido.Texto = usuarioModificar.cliente.apellido;
+            txtEdad.Texto = usuarioModificar.cliente.edad.ToString();
             cbxSexo.Text = usuarioModificar.cliente.sexo;
             dateFNacimiento.Value = Convert.ToDateTime(usuarioModificar.cliente.fechaNacimiento);
-            txtDireccion.Text = usuarioModificar.cliente.direccion.ToString();
-            txtCorreo.Text = usuarioModificar.cliente.correo.ToString();
-            txtUsuario.Text = usuarioModificar.username.ToString();
+            txtDireccion.Texto = usuarioModificar.cliente.direccion.ToString();
+            txtCorreo.Texto = usuarioModificar.cliente.correo.ToString();
+            txtUsuario.Texto = usuarioModificar.username.ToString();
         }
 
         private void deshabilitarDatosCliente()
@@ -57,6 +57,7 @@ namespace ProyectoCompra.Formularios
             cbxSexo.Enabled = false;
             dateFNacimiento.Enabled = false;
             txtDireccion.Enabled = false;
+            txtUsuario.Enabled = false;
         }
 
         #endregion

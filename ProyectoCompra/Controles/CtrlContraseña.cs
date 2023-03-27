@@ -31,6 +31,6 @@ namespace ProyectoCompra.Controles
             }
         }
 
-        public string TextBoxtxtContrasenia { get { return txtContrasenia.Text; } }
+        public string TextBoxtxtContrasenia { get { return txtContrasenia.Text; } set { txtContrasenia.Text = value; } }
     }
 }
