@@ -34,7 +34,12 @@ namespace ProyectoCompra.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            bool actualizado = BDCliente.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ctrlContrasenia.TextBoxtxtContrasenia);
+            if (actualizado)
+            {
+                MessageBox.Show("¡Los datos se han actualizado correctamente!");
+                Close();
+            }
         }
 
         private void cargarDatosAEditar()
@@ -44,8 +49,8 @@ namespace ProyectoCompra.Formularios
             txtEdad.Texto = usuarioModificar.cliente.edad.ToString();
             cbxSexo.Text = usuarioModificar.cliente.sexo;
             dateFNacimiento.Value = Convert.ToDateTime(usuarioModificar.cliente.fechaNacimiento);
-            txtDireccion.Texto = usuarioModificar.cliente.direccion.ToString();
-            txtCorreo.Texto = usuarioModificar.cliente.correo.ToString();
+            //txtDireccion.Texto = usuarioModificar.cliente.direccion.ToString();
+            //txtCorreo.Texto = usuarioModificar.cliente.correo.ToString();
             txtUsuario.Texto = usuarioModificar.username.ToString();
         }
 
@@ -56,7 +61,7 @@ namespace ProyectoCompra.Formularios
             txtEdad.Enabled = false;
             cbxSexo.Enabled = false;
             dateFNacimiento.Enabled = false;
-            txtDireccion.Enabled = false;
+            //txtDireccion.Enabled = false;
             txtUsuario.Enabled = false;
         }
 
