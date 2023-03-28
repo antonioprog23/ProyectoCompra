@@ -24,7 +24,7 @@ namespace ProyectoCompra.Formularios
         {
             if (usuarioRecuperado != null)
             {
-                lblMostrarId.Text = usuarioRecuperado.idUsuario.ToString().ToUpper();
+                lblMostrarId.Text = usuarioRecuperado.idUsuario.ToString("D16").ToUpper();
                 lblMostrarUsuario.Text = usuarioRecuperado.username.ToString().ToUpper(); ;
                 ctrlMostrarContrasenia.TextBoxtxtContrasenia = usuarioRecuperado.password.ToString().ToUpper(); ;
                 lblMostrarFAlta.Text = usuarioRecuperado.fechaAlta;

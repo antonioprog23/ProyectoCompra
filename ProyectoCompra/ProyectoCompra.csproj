@@ -84,6 +84,12 @@
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
+    <Compile Include="Formularios\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="Formularios\FrmAlimentacion.Designer.cs">
       <DependentUpon>FrmAlimentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmUsuarioEdit.cs">
       <SubType>Form</SubType>
@@ -134,11 +146,17 @@
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmAlimentacion.resx">
       <DependentUpon>FrmAlimentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuarioEdit.en.resx">
       <DependentUpon>FrmUsuarioEdit.cs</DependentUpon>
@@ -198,7 +216,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icon_lejia.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mostrar_contrasenia.png" />
   </ItemGroup>
@@ -306,6 +326,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_lavado_ropa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_insecticida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_limpieza_calzado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cuidado_cabello.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_locion_solar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_botiquin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cuidado_facial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_higiene_bucal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_perfumeria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_frigorifico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lavadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_horno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_secadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_climatizacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cafetera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_informatica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_tablets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_televisor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_telefonia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_fotografia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_casa_decoracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_mascotas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bricolaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_jardin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_textil_hogar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
