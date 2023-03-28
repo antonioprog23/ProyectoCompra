@@ -6,56 +6,29 @@ using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
 {
-    public partial class FrmMain : Form
+    public partial class FrmMain : FrmBase
     {
-        private Usuario usuarioRecuperado;
-
         public FrmMain()
         {
             InitializeComponent();
         }
 
-        private void btnIdentificarse_Click(object sender, EventArgs e)
+        private void btnLacteosHuevos_Click(object sender, EventArgs e)
         {
-            frmInicioSesion inicioSesion = new frmInicioSesion();
-            inicioSesion.ShowDialog();
+            FrmProductos frmProductos = new FrmProductos();
+            frmProductos.ShowDialog();
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-            FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado);
-            frmPerfil.ShowDialog();
+            FrmProductos frmProductos = new FrmProductos();
+            frmProductos.ShowDialog();
         }
 
-        private void button37_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            FrmCarrito frmCarrito = new FrmCarrito();
-            frmCarrito.ShowDialog();
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmMain_Shown(object sender, EventArgs e)
-        {
-            Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
-            if (usuarioFichero != null)
-            {
-                usuarioRecuperado = BDCliente.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());
-            }
-
-            if (usuarioRecuperado == null)
-            {
-                btnIdentificarse.Visible = true;
-                btnPerfil.Visible = false;
-            }
-            else
-            {
-                btnIdentificarse.Visible = false;
-                btnPerfil.Visible = true;
-            }
+            FrmProductos frmProductos = new FrmProductos();
+            frmProductos.ShowDialog();
         }
     }
 }
