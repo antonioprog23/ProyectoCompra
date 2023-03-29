@@ -30,6 +30,13 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.gbxAlimentacion = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSushi = new System.Windows.Forms.Button();
@@ -94,15 +101,9 @@
             this.btnBricolaje = new System.Windows.Forms.Button();
             this.btnJardin = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.gbxAlimentacion.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -119,7 +120,6 @@
             this.tableLayoutPanel8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -148,6 +148,96 @@
             this.gbxAlimentacion.TabIndex = 0;
             this.gbxAlimentacion.TabStop = false;
             this.gbxAlimentacion.Text = "Alimentación";
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 6;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.Controls.Add(this.button1, 5, 0);
+            this.tableLayoutPanel10.Controls.Add(this.button2, 4, 0);
+            this.tableLayoutPanel10.Controls.Add(this.button3, 3, 0);
+            this.tableLayoutPanel10.Controls.Add(this.button4, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.button5, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 17);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1147, 108);
+            this.tableLayoutPanel10.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::ProyectoCompra.Properties.Resources.icon_nutricion_deportiva;
+            this.button1.Location = new System.Drawing.Point(958, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(185, 101);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Nutrición deportiva";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::ProyectoCompra.Properties.Resources.icon_comida_internacional;
+            this.button2.Location = new System.Drawing.Point(767, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(183, 101);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Comidas internacionales";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::ProyectoCompra.Properties.Resources.icon_conservas;
+            this.button3.Location = new System.Drawing.Point(576, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(183, 101);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Conservas";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = global::ProyectoCompra.Properties.Resources.icon_desayuno;
+            this.button4.Location = new System.Drawing.Point(385, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(183, 101);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Desayuno y merienda";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Image = global::ProyectoCompra.Properties.Resources.icon_aceite;
+            this.button5.Location = new System.Drawing.Point(194, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(183, 101);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Aceites, vinagres y salsas";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
+            this.button6.Location = new System.Drawing.Point(3, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(183, 101);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Lacteos y huevos";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox2
             // 
@@ -937,96 +1027,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 6;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.Controls.Add(this.button1, 5, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button2, 4, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button3, 3, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button4, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button5, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button6, 0, 0);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 17);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1147, 108);
-            this.tableLayoutPanel10.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::ProyectoCompra.Properties.Resources.icon_nutricion_deportiva;
-            this.button1.Location = new System.Drawing.Point(958, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 101);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Nutrición deportiva";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::ProyectoCompra.Properties.Resources.icon_comida_internacional;
-            this.button2.Location = new System.Drawing.Point(767, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 101);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Comidas internacionales";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::ProyectoCompra.Properties.Resources.icon_conservas;
-            this.button3.Location = new System.Drawing.Point(576, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 101);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Conservas";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::ProyectoCompra.Properties.Resources.icon_desayuno;
-            this.button4.Location = new System.Drawing.Point(385, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(183, 101);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Desayuno y merienda";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::ProyectoCompra.Properties.Resources.icon_aceite;
-            this.button5.Location = new System.Drawing.Point(194, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(183, 101);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Aceites, vinagres y salsas";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
-            this.button6.Location = new System.Drawing.Point(3, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(183, 101);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Lacteos y huevos";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1042,6 +1042,7 @@
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.gbxAlimentacion.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1058,7 +1059,6 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

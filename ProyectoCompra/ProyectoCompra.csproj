@@ -77,6 +77,24 @@
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlMenu.Designer.cs">
+      <DependentUpon>CtrlMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlProducto.Designer.cs">
+      <DependentUpon>CtrlProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlProductosMostrar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlProductosMostrar.Designer.cs">
+      <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlTextoBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +160,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlMenu.resx">
+      <DependentUpon>CtrlMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlProducto.resx">
+      <DependentUpon>CtrlProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlProductosMostrar.resx">
+      <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>

@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoCompra.Formularios
+namespace ProyectoCompra.Controles
 {
-    public partial class FrmProductos : FrmBase
+    public partial class CtrlProducto : UserControl
     {
-        public FrmProductos()
+        public CtrlProducto()
         {
             InitializeComponent();
-
         }
     }
 }
