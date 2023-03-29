@@ -52,7 +52,7 @@
             this.groupBox1.Controls.Add(this.ctrlProductosMostrar1);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1155, 2143);
+            this.groupBox1.Size = new System.Drawing.Size(1167, 2143);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -60,9 +60,9 @@
             // ctrlProductosMostrar1
             // 
             this.ctrlProductosMostrar1.AutoSize = true;
-            this.ctrlProductosMostrar1.Location = new System.Drawing.Point(6, 20);
+            this.ctrlProductosMostrar1.Location = new System.Drawing.Point(6, 14);
             this.ctrlProductosMostrar1.Name = "ctrlProductosMostrar1";
-            this.ctrlProductosMostrar1.Size = new System.Drawing.Size(1143, 2103);
+            this.ctrlProductosMostrar1.Size = new System.Drawing.Size(1155, 2109);
             this.ctrlProductosMostrar1.TabIndex = 0;
             // 
             // FrmProductos
