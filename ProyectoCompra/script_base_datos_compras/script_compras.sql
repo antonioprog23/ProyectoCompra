@@ -3,10 +3,15 @@ USE Compras
 -- SENTENCES DROP
 -- DROP TABLE cliente
 -- DROP TABLE usuario
+-- DROP TABLE detalle_usuario
+-- DROP TABLE usuario_login
+-- DROP TABLE usuario_invitado
 -- DROP TABLE producto
+-- DROP TABLE categoria
 -- DROP TABLE linea_pedido
 -- DROP TABLE pedido
 -- DROP TABLE estado_pedido
+-- DROP TABLE factura
 
 -- TABLES
 
@@ -58,14 +63,23 @@ CREATE TABLE usuario_invitado (
     CONSTRAINT constraint_id_usuario_invitado_fk FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
 )
 
+-- CATEGORIA
+CREATE TABLE categoria
+(
+	id_categoria INT IDENTITY PRIMARY KEY,
+	descripcion NVARCHAR(50) NOT NULL
+)
+
 -- PRODUCTO
 CREATE TABLE producto
 (
 	id_producto INT PRIMARY KEY,
+	id_categoria INT NOT NULL,
 	nombre NVARCHAR(30) NOT NULL,
 	descripcion NVARCHAR(30) NOT NULL,
 	precio DECIMAL(5,2) NOT NULL,
 	fabricante NVARCHAR(30) NOT NULL,
+	CONSTRAINT constraint_id_categoria_fk FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria)
 )
 
 -- ESTADO
