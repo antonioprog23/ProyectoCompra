@@ -14,14 +14,14 @@ namespace ProyectoCompra.Clases
         public int id_categoria { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        public float precio { get; set; }
+        public decimal precio { get; set; }
         public string fabricante { get; set; }
 
         #endregion
 
         #region Constructor
 
-        public Producto(int id_producto, int id_categoria, string nombre, string descripcion, float precio, string fabricante)
+        public Producto(int id_producto, int id_categoria, string nombre, string descripcion, decimal precio, string fabricante)
         {
             this.id_producto = id_producto;
             this.id_categoria = id_categoria;

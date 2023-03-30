@@ -13,22 +13,15 @@ namespace ProyectoCompra.Formularios
             InitializeComponent();
         }
 
-        private void btnLacteosHuevos_Click(object sender, EventArgs e)
-        {
-            FrmProductos frmProductos = new FrmProductos();
-            frmProductos.ShowDialog();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
-            FrmProductos frmProductos = new FrmProductos();
+            FrmProductos frmProductos = new FrmProductos(sender);
             frmProductos.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FrmProductos frmProductos = new FrmProductos();
-            frmProductos.ShowDialog();
+
         }
     }
 }

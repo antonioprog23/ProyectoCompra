@@ -19,8 +19,8 @@ USE Compras
 CREATE TABLE cliente
 (
 	id_cliente int PRIMARY KEY,
-	nombre NVARCHAR(30) NOT NULL,
-	apellido NVARCHAR(30) NOT NULL,
+	nombre NVARCHAR(50) NOT NULL,
+	apellido NVARCHAR(50) NOT NULL,
 	edad INT NOT NULL,
 	fecha_nacimiento DATE NOT NULL,
 	sexo NVARCHAR(15) NOT NULL,
@@ -32,9 +32,9 @@ CREATE TABLE usuario
 (
 	id_usuario int PRIMARY KEY,
 	id_cliente int NOT NULL,
-	usuario_name NVARCHAR(30) NOT NULL,
-	contrasenia NVARCHAR(30) NOT NULL,
-	correo_electronico NVARCHAR(30) NOT NULL
+	usuario_name NVARCHAR(50) NOT NULL,
+	contrasenia NVARCHAR(50) NOT NULL,
+	correo_electronico NVARCHAR(50) NOT NULL
 	CONSTRAINT constraint_id_cliente_fk FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente) ON DELETE CASCADE
 )
 
@@ -84,10 +84,10 @@ CREATE TABLE producto
 (
 	id_producto INT PRIMARY KEY,
 	id_categoria INT NOT NULL,
-	nombre NVARCHAR(30) NOT NULL,
-	descripcion NVARCHAR(30) NOT NULL,
+	nombre NVARCHAR(50) NOT NULL,
+	descripcion NVARCHAR(50) NOT NULL,
 	precio DECIMAL(5,2) NOT NULL,
-	fabricante NVARCHAR(30) NOT NULL,
+	fabricante NVARCHAR(50) NOT NULL,
 	CONSTRAINT constraint_id_categoria_fk FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria)
 )
 
@@ -95,7 +95,7 @@ CREATE TABLE producto
 CREATE TABLE estado_pedido
 (
 	id_estado_pedido INT IDENTITY PRIMARY KEY,
-	descripcion NVARCHAR(30)
+	descripcion NVARCHAR(50)
 )
 
 -- PEDIDO
@@ -199,21 +199,25 @@ INSERT INTO subcategoria (id_categoria,descripcion) VALUES (9,'Mascotas')
 INSERT INTO subcategoria (id_categoria,descripcion) VALUES (9,'Casa y decoración')
 INSERT INTO subcategoria (id_categoria,descripcion) VALUES (9,'Textil hogar')
 
--- PRODUCTOS
-select * from producto p
-INNER JOIN categoria c ON (p.id_categoria = c.id_categoria)
-INNER JOIN subcategoria s ON (s.id_categoria = c.id_categoria)
-
+-- PRODUCTO
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (1, 1, 'Leche entera', 'Leche fresca de vaca', 1.99, 'Lácteos S.A.')
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (2, 1, 'Queso cheddar', 'Queso de vaca de sabor fuerte', 3.99, 'Lácteos S.A.')
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (3, 1, 'Yogur natural', 'Yogur hecho con leche fresca', 0.99, 'Lácteos S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (4, 1, 'Mantequilla sin sal', 'Mantequilla de vaca sin sal aniadida', 2.49, 'Lácteos S.A.')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (4, 1, 'Mantequilla sin sal', 'Mantequilla de vaca sin sal añadida', 2.49, 'Lácteos S.A.')
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (5, 1, 'Huevo fresco', 'Huevo de gallina fresco', 0.25, 'Granja Avícola S.A.')
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (6, 1, 'Huevo de codorniz', 'Huevo pequeño de codorniz', 0.50, 'Granja Avícola S.A.')
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (7, 1, 'Huevo orgánico', 'Huevo de gallina criada orgánicamente', 0.75, 'Granja Orgánica S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES  (8, 1, 'Queso brie', 'Queso suave de vaca con corteza blanca', 5.99, 'Lácteos S.A.')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (8, 1, 'Queso brie', 'Queso suave de vaca con corteza blanca', 5.99, 'Lácteos S.A.')
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (9, 1, 'Leche desnatada', 'Leche fresca de vaca sin grasa', 1.49, 'Lácteos S.A.')
 INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (10, 1, 'Huevo de pato', 'Huevo grande de pato', 1.00, 'Granja Avícola S.A.')
-
-
-
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (11, 1, 'Leche entera 1L', 'Leche entera pasteurizada de alta calidad', 1.50, 'Granja La Pradera')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (12, 1, 'Leche semi-desnatada 1L', 'Leche semi-desnatada pasteurizada de alta calidad', 1.30, 'Granja El Roble')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (13, 1, 'Leche desnatada 1L', 'Leche desnatada pasteurizada de alta calidad', 1.20, 'Granja La Alhambra');
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (14, 1, 'Huevos camperos 6 unidades', 'Huevos camperos de gallinas criadas en libertad', 2.50, 'Granja El Paraíso')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (15, 1, 'Huevos de corral 6 unidades', 'Huevos de gallinas criadas en corrales amplios', 2.00, 'Granja La Montaña')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (16, 1, 'Huevos ecológicos 6 unidades', 'Huevos de gallinas criadas en granjas ecológicas', 3.00, 'Granja El Bosque')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (17, 1, 'Leche de almendras 1L', 'Leche de almendras sin lactosa y baja en calorías', 2.50, 'Marca Almendra');
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (18, 1, 'Leche de soja 1L', 'Leche de soja sin lactosa y rica en proteínas', 2.00, 'Marca Soja');
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (19, 1, 'Leche de avena 1L', 'Leche de avena sin lactosa y rica en fibra', 2.20, 'Marca Avena');
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (20, 1, 'Huevos orgánicos 6 unidades', 'Huevos de gallinas criadas en granjas orgánicas', 3.50, 'Granja La Huerta')
+INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (21, 1, 'Huevos blancos 12 unidades', 'Huevos blancos de gallinas de raza seleccionada', 2.50, 'Granja El Pinar')
