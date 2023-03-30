@@ -20,9 +20,11 @@ namespace ProyectoCompra.Controles
             {
                 for (int j = 0; j < tableLayout.ColumnCount; j++)
                 {
-                    CtrlProducto ctrlProducto = new CtrlProducto();
-                    ctrlProducto.Dock = DockStyle.Left;
-                    tableLayout.Controls.Add(ctrlProducto,j,i);
+                    Button button = new Button();
+                    button.Dock = DockStyle.Left;
+                    button.Width = 184;
+                    button.Height = 184;
+                    tableLayout.Controls.Add(button, j,i);
                 }
             }
         }

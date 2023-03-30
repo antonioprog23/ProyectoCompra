@@ -65,10 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base datos\BDCliente.cs" />
+    <Compile Include="Base datos\BDProducto.cs" />
     <Compile Include="Base datos\BDUsuario.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
     <Compile Include="Controles\CtrlContraseña.cs">
@@ -419,6 +420,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_textil_hogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,7 +30,7 @@ namespace ProyectoCompra.Formularios
         {
             if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
             {
-                usuarioEncontrado = BDCliente.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia,"");
+                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia,"");
                 if (usuarioEncontrado == null)
                 {
                     MessageBox.Show("Usuario no encontrado.");
@@ -51,10 +51,10 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = crearUsuario();
             if (cliente != null && usuario != null)
             {
-                int codigoUsuarioConNombreUsado = BDCliente.consultarUsuarioName(textUsuario.Text);
+                int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text);
                 if (codigoUsuarioConNombreUsado == -1)
                 {
-                    if ((BDCliente.insertarDatos(cliente, usuario)))
+                    if ((BDUsuario.insertarDatos(cliente, usuario)))
                     {
                         MessageBox.Show("Usuario creado.");
                         Close();

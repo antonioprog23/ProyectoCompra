@@ -46,16 +46,16 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.7957F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.2043F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(180, 184);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(178, 178);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblNombreProd
             // 
             this.lblNombreProd.AutoSize = true;
             this.lblNombreProd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombreProd.Location = new System.Drawing.Point(3, 152);
+            this.lblNombreProd.Location = new System.Drawing.Point(3, 147);
             this.lblNombreProd.Name = "lblNombreProd";
-            this.lblNombreProd.Size = new System.Drawing.Size(174, 32);
+            this.lblNombreProd.Size = new System.Drawing.Size(172, 31);
             this.lblNombreProd.TabIndex = 0;
             this.lblNombreProd.Text = "label1";
             this.lblNombreProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,9 +65,10 @@
             this.btnProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnProducto.Location = new System.Drawing.Point(3, 3);
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(174, 146);
+            this.btnProducto.Size = new System.Drawing.Size(172, 141);
             this.btnProducto.TabIndex = 1;
             this.btnProducto.Text = "button1";
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProducto.UseVisualStyleBackColor = true;
             // 
             // CtrlProducto
@@ -77,7 +78,7 @@
             this.AutoSize = true;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CtrlProducto";
-            this.Size = new System.Drawing.Size(186, 190);
+            this.Size = new System.Drawing.Size(184, 184);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
