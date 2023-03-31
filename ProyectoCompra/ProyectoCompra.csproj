@@ -151,6 +151,11 @@
     <Compile Include="Formularios\FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Iconos\AlimentacionSub1.Designer.cs">
+      <DependentUpon>AlimentacionSub1.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
@@ -198,6 +203,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Iconos\AlimentacionSub1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionSub1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -423,6 +432,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
+    <None Include="Resources\1 %281%29.png" />
+    <None Include="Resources\descarga.htm" />
+    <None Include="Resources\1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

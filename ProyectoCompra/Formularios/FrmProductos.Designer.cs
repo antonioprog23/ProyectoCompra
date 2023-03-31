@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxCategoria = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxCategoria.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel1.Controls.Add(this.gbxCategoria);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 116);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1192, 584);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // groupBox1
+            // gbxCategoria
             // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1154, 590);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gbxCategoria.AutoSize = true;
+            this.gbxCategoria.Controls.Add(this.tableLayoutPanel1);
+            this.gbxCategoria.Location = new System.Drawing.Point(3, 3);
+            this.gbxCategoria.Name = "gbxCategoria";
+            this.gbxCategoria.Size = new System.Drawing.Size(1154, 590);
+            this.gbxCategoria.TabIndex = 0;
+            this.gbxCategoria.TabStop = false;
+            this.gbxCategoria.Text = "groupBox1";
             // 
             // tableLayoutPanel1
             // 
@@ -85,8 +85,8 @@
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbxCategoria.ResumeLayout(false);
+            this.gbxCategoria.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -94,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxCategoria;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

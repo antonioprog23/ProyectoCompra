@@ -35,8 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnAceites = new System.Windows.Forms.Button();
+            this.btnLacteos = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSushi = new System.Windows.Forms.Button();
@@ -162,8 +162,8 @@
             this.tableLayoutPanel10.Controls.Add(this.button2, 4, 0);
             this.tableLayoutPanel10.Controls.Add(this.button3, 3, 0);
             this.tableLayoutPanel10.Controls.Add(this.button4, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button5, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnAceites, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnLacteos, 0, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 17);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
@@ -215,29 +215,29 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnAceites
             // 
-            this.button5.Image = global::ProyectoCompra.Properties.Resources.icon_aceite;
-            this.button5.Location = new System.Drawing.Point(194, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(183, 101);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Aceites, vinagres y salsas";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnAceites.Image = global::ProyectoCompra.Properties.Resources.icon_aceite;
+            this.btnAceites.Location = new System.Drawing.Point(194, 3);
+            this.btnAceites.Name = "btnAceites";
+            this.btnAceites.Size = new System.Drawing.Size(183, 101);
+            this.btnAceites.TabIndex = 1;
+            this.btnAceites.Text = "Aceites, vinagres y salsas";
+            this.btnAceites.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAceites.UseVisualStyleBackColor = true;
+            this.btnAceites.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // btnLacteos
             // 
-            this.button6.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
-            this.button6.Location = new System.Drawing.Point(3, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(183, 101);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Lacteos y huevos";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnLacteos.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
+            this.btnLacteos.Location = new System.Drawing.Point(3, 3);
+            this.btnLacteos.Name = "btnLacteos";
+            this.btnLacteos.Size = new System.Drawing.Size(183, 101);
+            this.btnLacteos.TabIndex = 0;
+            this.btnLacteos.Text = "Lacteos y huevos";
+            this.btnLacteos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLacteos.UseVisualStyleBackColor = true;
+            this.btnLacteos.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox2
             // 
@@ -1135,7 +1135,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnAceites;
+        public System.Windows.Forms.Button btnLacteos;
     }
 }

@@ -82,13 +82,13 @@ CREATE TABLE subcategoria
 -- PRODUCTO
 CREATE TABLE producto
 (
-	id_producto INT PRIMARY KEY,
-	id_categoria INT NOT NULL,
+	id_producto INT IDENTITY PRIMARY KEY,
+	id_subcategoria INT NOT NULL,
 	nombre NVARCHAR(50) NOT NULL,
 	descripcion NVARCHAR(50) NOT NULL,
 	precio DECIMAL(5,2) NOT NULL,
 	fabricante NVARCHAR(50) NOT NULL,
-	CONSTRAINT constraint_id_categoria_fk FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria)
+	CONSTRAINT constraint_id_subcategoria_fk FOREIGN KEY (id_subcategoria) REFERENCES subcategoria (id_subcategoria)
 )
 
 -- ESTADO
@@ -200,24 +200,55 @@ INSERT INTO subcategoria (id_categoria,descripcion) VALUES (9,'Casa y decoración
 INSERT INTO subcategoria (id_categoria,descripcion) VALUES (9,'Textil hogar')
 
 -- PRODUCTO
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (1, 1, 'Leche entera', 'Leche fresca de vaca', 1.99, 'Lácteos S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (2, 1, 'Queso cheddar', 'Queso de vaca de sabor fuerte', 3.99, 'Lácteos S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (3, 1, 'Yogur natural', 'Yogur hecho con leche fresca', 0.99, 'Lácteos S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (4, 1, 'Mantequilla sin sal', 'Mantequilla de vaca sin sal añadida', 2.49, 'Lácteos S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (5, 1, 'Huevo fresco', 'Huevo de gallina fresco', 0.25, 'Granja Avícola S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (6, 1, 'Huevo de codorniz', 'Huevo pequeño de codorniz', 0.50, 'Granja Avícola S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (7, 1, 'Huevo orgánico', 'Huevo de gallina criada orgánicamente', 0.75, 'Granja Orgánica S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (8, 1, 'Queso brie', 'Queso suave de vaca con corteza blanca', 5.99, 'Lácteos S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (9, 1, 'Leche desnatada', 'Leche fresca de vaca sin grasa', 1.49, 'Lácteos S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (10, 1, 'Huevo de pato', 'Huevo grande de pato', 1.00, 'Granja Avícola S.A.')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (11, 1, 'Leche entera 1L', 'Leche entera pasteurizada de alta calidad', 1.50, 'Granja La Pradera')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (12, 1, 'Leche semi-desnatada 1L', 'Leche semi-desnatada pasteurizada de alta calidad', 1.30, 'Granja El Roble')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (13, 1, 'Leche desnatada 1L', 'Leche desnatada pasteurizada de alta calidad', 1.20, 'Granja La Alhambra');
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (14, 1, 'Huevos camperos 6 unidades', 'Huevos camperos de gallinas criadas en libertad', 2.50, 'Granja El Paraíso')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (15, 1, 'Huevos de corral 6 unidades', 'Huevos de gallinas criadas en corrales amplios', 2.00, 'Granja La Montaña')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (16, 1, 'Huevos ecológicos 6 unidades', 'Huevos de gallinas criadas en granjas ecológicas', 3.00, 'Granja El Bosque')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (17, 1, 'Leche de almendras 1L', 'Leche de almendras sin lactosa y baja en calorías', 2.50, 'Marca Almendra');
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (18, 1, 'Leche de soja 1L', 'Leche de soja sin lactosa y rica en proteínas', 2.00, 'Marca Soja');
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (19, 1, 'Leche de avena 1L', 'Leche de avena sin lactosa y rica en fibra', 2.20, 'Marca Avena');
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (20, 1, 'Huevos orgánicos 6 unidades', 'Huevos de gallinas criadas en granjas orgánicas', 3.50, 'Granja La Huerta')
-INSERT INTO producto (id_producto, id_categoria, nombre, descripcion, precio, fabricante) VALUES (21, 1, 'Huevos blancos 12 unidades', 'Huevos blancos de gallinas de raza seleccionada', 2.50, 'Granja El Pinar')
+-- SUBCATEGORIA 1
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche entera', 'Leche fresca de vaca', 1.99, 'Lácteos S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Queso cheddar', 'Queso de vaca de sabor fuerte', 3.99, 'Lácteos S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Yogur natural', 'Yogur hecho con leche fresca', 0.99, 'Lácteos S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Mantequilla sin sal', 'Mantequilla de vaca sin sal añadida', 2.49, 'Lácteos S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevo fresco', 'Huevo de gallina fresco', 0.25, 'Granja Avícola S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevo de codorniz', 'Huevo pequeño de codorniz', 0.50, 'Granja Avícola S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevo orgánico', 'Huevo de gallina criada orgánicamente', 0.75, 'Granja Orgánica S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Queso brie', 'Queso suave de vaca con corteza blanca', 5.99, 'Lácteos S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche desnatada', 'Leche fresca de vaca sin grasa', 1.49, 'Lácteos S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevo de pato', 'Huevo grande de pato', 1.00, 'Granja Avícola S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche entera 1L', 'Leche entera pasteurizada de alta calidad', 1.50, 'Granja La Pradera')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche semi-desnatada 1L', 'Leche semi-desnatada pasteurizada de alta calidad', 1.30, 'Granja El Roble')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche desnatada 1L', 'Leche desnatada pasteurizada de alta calidad', 1.20, 'Granja La Alhambra');
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevos camperos 6 unidades', 'Huevos camperos de gallinas criadas en libertad', 2.50, 'Granja El Paraíso')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevos de corral 6 unidades', 'Huevos de gallinas criadas en corrales amplios', 2.00, 'Granja La Montaña')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevos ecológicos 6 unidades', 'Huevos de gallinas criadas en granjas ecológicas', 3.00, 'Granja El Bosque')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche de almendras 1L', 'Leche de almendras sin lactosa y baja en calorías', 2.50, 'Marca Almendra');
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche de soja 1L', 'Leche de soja sin lactosa y rica en proteínas', 2.00, 'Marca Soja');
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche de avena 1L', 'Leche de avena sin lactosa y rica en fibra', 2.20, 'Marca Avena');
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevos orgánicos 6 unidades', 'Huevos de gallinas criadas en granjas orgánicas', 3.50, 'Granja La Huerta')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevos blancos 12 unidades', 'Huevos blancos de gallinas de raza seleccionada', 2.50, 'Granja El Pinar')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche entera', 'Leche fresca de vaca, en botella de 1 litro', 1.20, 'Central Lechera Asturiana')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche semidesnatada', 'Leche fresca de vaca, en botella de 1 litro', 1.10, 'Pascual')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Leche desnatada', 'Leche fresca de vaca, en botella de 1 litro', 1.00, 'El Corte Inglés')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Queso manchego', 'Queso de oveja, curado en bodega', 12.50, 'Artesanos Queseros Manchegos')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Queso de cabra', 'Queso de cabra, semicurado en aceite de oliva', 6.80, 'La Antigua')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevos XL', 'Huevos frescos de gallina, tamaño XL, en pack de 6 unidades', 2.30, 'Campofrío')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (1, 'Huevos M', 'Huevos frescos de gallina, tamaño M, en pack de 12 unidades', 1.50, 'El Granero')
+-- SUBCATEGORIA 2
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de oliva extra virgen', 'Aceite de oliva obtenido de aceitunasnarbequina', 10.50, 'Aceitunas S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Vinagre de vino tinto', 'Vinagre elaborado a partir de vino tinto', 3.20, 'Bodega El Palomar')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Salsa de soja', 'Salsa oriental elaborada a partir de soja y trigo', 2.50, 'Soya Ltda.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de girasol', 'Aceite de semillas de girasol prensado en frío', 5.80, 'Girasol S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Vinagre balsámico de Módena', 'Vinagre balsámico de la región italiana de Módena', 7.90, 'Acetaia di Modena')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Salsa de tomate', 'Salsa elaborada a partir de tomates frescos y especias', 2.30, 'Tomates del Huerto')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de aguacate', 'Aceite obtenido a partir del aguacate Hass', 8.60, 'Aguacates del Sur')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Vinagre de manzana', 'Vinagre elaborado a partir de manzanas frescas', 4.50, 'Manzanas del Valle')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Salsa picante', 'Elaborada con chiles y especias', 2.90, 'Chiles del Huerto')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de sésamo', 'Aceite de semillas de sésamo tostadas', 6.20, 'Sésamo Ltda.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Vinagre de arroz', 'Vinagre elaborado a partir de arroz', 3.80, 'Arrozal S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Salsa de curry', 'Salsa de origen indio con mezcla de especias', 4.50, 'Curry del Sur')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de cacahuete', 'Aceite de cacahuetes tostados', 5.90, 'Cacahuetes S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Vinagre de sidra', 'Vinagre elaborado a partir de manzanas de sidra', 6.80, 'Sidrería El Pomar')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Salsa de queso azul', 'Salsa cremosa con sabor a queso azul', 3.50, 'Quesos del Valle')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de nuez', 'Aceite de nueces prensadas en frío', 7.60, 'Nueces del Bosque')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Vinagre de Jerez', 'Vinagre de la región española de Jerez', 8.50, 'Bodegas La Gitana')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Salsa barbacoa', 'Salsa dulce y ahumada para carnes a la parrilla', 2.80, 'Barbacoa S.A.')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de trufa', 'Aceite de oliva con aroma y sabor a trufa negra', 12.50, 'Trufas del Norte')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Vinagre de vino blanco', 'Vinagre elaborado a partir de vino blanco', 3.20, 'Bodega El Palomar')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Salsa de pesto', 'Salsa italiana con base de albahaca y piñones', 4.90, 'Pesto di Genova')
+INSERT INTO producto (id_subcategoria, nombre, descripcion, precio, fabricante) VALUES (2, 'Aceite de romero', 'Aceite de oliva con aroma y sabor a romero', 8.90, 'Romero del Huerto')
