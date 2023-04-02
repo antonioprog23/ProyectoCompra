@@ -1,5 +1,4 @@
 ﻿using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
 using System;
 using System.Drawing;
 using System.Windows.Forms;

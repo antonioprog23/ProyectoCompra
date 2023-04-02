@@ -3,12 +3,6 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -24,6 +18,11 @@ namespace ProyectoCompra.Formularios
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
+            //CARRITO
+            List<Carrito> productos = FicheroCarrito.leerFichero();
+            lblContador.Text = productos.Count.ToString();
+
+            //USUARO 
             Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
             if (usuarioFichero != null)
             {

@@ -24,9 +24,15 @@ namespace ProyectoCompra.Formularios
         {
             List<Carrito> productos = FicheroCarrito.leerFichero();
             tbProductos.RowCount = productos.Count;
-            for (int i = 0; i <= tbProductos.RowCount; i++)
+            for (int i = 0; i < tbProductos.RowCount; i++)
             {
                 CtrlProductoCarrito producto = new CtrlProductoCarrito();
+                Label nombre = (Label)producto.Controls.Find("lblNombreMostrar", true)[0];
+                nombre.Text = productos[i].GetProducto().nombre;
+                Label precio = (Label)producto.Controls.Find("lblPrecioMostrar", true)[0];
+                precio.Text = productos[i].GetProducto().precio.ToString();
+                NumericUpDown cantidad = (NumericUpDown)producto.Controls.Find("cantidad", true)[0];
+                cantidad.Text = productos[i].GetCantidad().ToString();
                 tbProductos.Controls.Add(producto);
             }
         }
