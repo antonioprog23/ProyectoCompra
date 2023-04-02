@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
@@ -115,6 +116,12 @@
     <Compile Include="Formularios\FrmAlimentacion.Designer.cs">
       <DependentUpon>FrmAlimentacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmDetalleProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmDetalleProducto.Designer.cs">
+      <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,12 +158,17 @@
     <Compile Include="Formularios\FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Iconos\AlimentacionSub1.Designer.cs">
-      <DependentUpon>AlimentacionSub1.resx</DependentUpon>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AlimentacionS1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS1.resx</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AlimentacionS2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS2.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
@@ -178,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmAlimentacion.resx">
       <DependentUpon>FrmAlimentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmDetalleProducto.resx">
+      <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -204,9 +219,14 @@
     <EmbeddedResource Include="Formularios\FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Iconos\AlimentacionSub1.resx">
+    <EmbeddedResource Include="Properties\AlimentacionS1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AlimentacionSub1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <LastGenOutput>AlimentacionS1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS2.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -432,9 +452,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
-    <None Include="Resources\1 %281%29.png" />
+    <Content Include="Resources\1_1.jpeg" />
+    <None Include="Resources\2_1.jpeg" />
     <None Include="Resources\descarga.htm" />
-    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\en\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
