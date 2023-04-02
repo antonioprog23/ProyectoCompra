@@ -4,7 +4,6 @@ using ProyectoCompra.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Resources;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -12,6 +11,7 @@ namespace ProyectoCompra.Formularios
     public partial class FrmProductos : FrmBase
     {
         private List<Producto> lista;
+        private Producto producto;
         private int categoria;
         private int subCategoria;
 
@@ -27,14 +27,6 @@ namespace ProyectoCompra.Formularios
         {
             cargarNombreGroupBox();
             cargarBotones();
-
-        }
-
-        private void button_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(button.Image);
-            frmDetalleProducto.ShowDialog();
         }
 
         private void cargarBotones()
@@ -56,6 +48,7 @@ namespace ProyectoCompra.Formularios
                         button.Text = lista[contador].nombre;
                         button.Click += new EventHandler(button_Click);
                         tableLayoutPanel1.Controls.Add(button, j, i);
+                        button.Name = contador.ToString();
                         contador++;
                         Image image = obtenerImagen(contador);
                         button.Image = image;
@@ -63,6 +56,14 @@ namespace ProyectoCompra.Formularios
 
                 }
             }
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            producto = obtenerProducto(Convert.ToInt32(button.Name));
+            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(button.Image, producto);
+            frmDetalleProducto.ShowDialog();
         }
 
         private Image obtenerImagen(int contador)
@@ -91,6 +92,11 @@ namespace ProyectoCompra.Formularios
             }
 
             return image;
+        }
+
+        private Producto obtenerProducto(int contador)
+        {
+            return lista[contador];
         }
 
         private void cargarNombreGroupBox()

@@ -1,11 +1,8 @@
-﻿using System;
+﻿using ProyectoCompra.Clases;
+using ProyectoCompra.Controles;
+using ProyectoCompra.Ficheros;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -21,6 +18,17 @@ namespace ProyectoCompra.Formularios
         {
             FrmModoCompra frmModoCompra = new FrmModoCompra();
             frmModoCompra.ShowDialog();
+        }
+
+        private void FrmCarrito_Load(object sender, EventArgs e)
+        {
+            List<Carrito> productos = FicheroCarrito.leerFichero();
+            tbProductos.RowCount = productos.Count;
+            for (int i = 0; i <= tbProductos.RowCount; i++)
+            {
+                CtrlProductoCarrito producto = new CtrlProductoCarrito();
+                tbProductos.Controls.Add(producto);
+            }
         }
     }
 }

@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Base datos\BDProducto.cs" />
     <Compile Include="Base datos\BDUsuario.cs" />
+    <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Producto.cs" />
@@ -79,11 +80,11 @@
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controles\CtrlProducto.cs">
+    <Compile Include="Controles\CtrlProductoCarrito.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\CtrlProducto.Designer.cs">
-      <DependentUpon>CtrlProducto.cs</DependentUpon>
+    <Compile Include="Controles\CtrlProductoCarrito.Designer.cs">
+      <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\CtrlProductosMostrar.cs">
       <SubType>UserControl</SubType>
@@ -98,6 +99,7 @@
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
+    <Compile Include="Ficheros\FicheroCarrito.cs" />
     <Compile Include="Formularios\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,8 +175,8 @@
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controles\CtrlProducto.resx">
-      <DependentUpon>CtrlProducto.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\CtrlProductoCarrito.resx">
+      <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlProductosMostrar.resx">
       <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>

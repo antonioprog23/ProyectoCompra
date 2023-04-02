@@ -31,6 +31,14 @@ namespace ProyectoCompra.Clases
             this.fabricante = fabricante;
         }
 
+        public Producto(int id_producto, string nombre, decimal precio, string descripcion)
+        {
+            this.id_producto = id_producto;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.precio = precio;
+        }
+
         #endregion
 
         #region
