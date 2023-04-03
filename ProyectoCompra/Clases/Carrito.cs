@@ -51,6 +51,7 @@ namespace ProyectoCompra.Clases
         public Producto GetProducto() { return this.producto; }
 
         public int GetCantidad() { return this.cantidad; }
+        public void SetCantidad(int cantidad) { this.cantidad = cantidad; }
         public Image GetImage() { return this.imagen; }
 
         public string toStringConSeparador()

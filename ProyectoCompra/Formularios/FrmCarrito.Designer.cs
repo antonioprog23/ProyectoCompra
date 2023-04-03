@@ -35,22 +35,22 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gbProductos = new System.Windows.Forms.GroupBox();
-            this.lblContador = new System.Windows.Forms.Label();
-            this.gbTotal = new System.Windows.Forms.GroupBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.gbIVA = new System.Windows.Forms.GroupBox();
-            this.lblIVA = new System.Windows.Forms.Label();
             this.gbSubTotal = new System.Windows.Forms.GroupBox();
             this.lblSubTotal = new System.Windows.Forms.Label();
+            this.gbIVA = new System.Windows.Forms.GroupBox();
+            this.lblIVA = new System.Windows.Forms.Label();
+            this.gbTotal = new System.Windows.Forms.GroupBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.gbProductos = new System.Windows.Forms.GroupBox();
+            this.lblContador = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.gbProductos.SuspendLayout();
-            this.gbTotal.SuspendLayout();
-            this.gbIVA.SuspendLayout();
             this.gbSubTotal.SuspendLayout();
+            this.gbIVA.SuspendLayout();
+            this.gbTotal.SuspendLayout();
+            this.gbProductos.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVaciarCarrito
@@ -133,43 +133,24 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(150, 488);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // gbProductos
+            // gbSubTotal
             // 
-            this.gbProductos.Controls.Add(this.lblContador);
-            this.gbProductos.Location = new System.Drawing.Point(3, 3);
-            this.gbProductos.Name = "gbProductos";
-            this.gbProductos.Size = new System.Drawing.Size(144, 114);
-            this.gbProductos.TabIndex = 4;
-            this.gbProductos.TabStop = false;
-            this.gbProductos.Text = "Productos";
+            this.gbSubTotal.Controls.Add(this.lblSubTotal);
+            this.gbSubTotal.Location = new System.Drawing.Point(3, 247);
+            this.gbSubTotal.Name = "gbSubTotal";
+            this.gbSubTotal.Size = new System.Drawing.Size(144, 115);
+            this.gbSubTotal.TabIndex = 7;
+            this.gbSubTotal.TabStop = false;
+            this.gbSubTotal.Text = "SubTotal";
             // 
-            // lblContador
+            // lblSubTotal
             // 
-            this.lblContador.Location = new System.Drawing.Point(6, 17);
-            this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(132, 94);
-            this.lblContador.TabIndex = 0;
-            this.lblContador.Text = "label1";
-            this.lblContador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gbTotal
-            // 
-            this.gbTotal.Controls.Add(this.lblTotal);
-            this.gbTotal.Location = new System.Drawing.Point(3, 369);
-            this.gbTotal.Name = "gbTotal";
-            this.gbTotal.Size = new System.Drawing.Size(144, 112);
-            this.gbTotal.TabIndex = 5;
-            this.gbTotal.TabStop = false;
-            this.gbTotal.Text = "Total";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Location = new System.Drawing.Point(6, 17);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(135, 92);
-            this.lblTotal.TabIndex = 0;
-            this.lblTotal.Text = "label2";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSubTotal.Location = new System.Drawing.Point(6, 17);
+            this.lblSubTotal.Name = "lblSubTotal";
+            this.lblSubTotal.Size = new System.Drawing.Size(132, 95);
+            this.lblSubTotal.TabIndex = 0;
+            this.lblSubTotal.Text = "label4";
+            this.lblSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gbIVA
             // 
@@ -190,24 +171,43 @@
             this.lblIVA.Text = "3";
             this.lblIVA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gbSubTotal
+            // gbTotal
             // 
-            this.gbSubTotal.Controls.Add(this.lblSubTotal);
-            this.gbSubTotal.Location = new System.Drawing.Point(3, 247);
-            this.gbSubTotal.Name = "gbSubTotal";
-            this.gbSubTotal.Size = new System.Drawing.Size(144, 115);
-            this.gbSubTotal.TabIndex = 7;
-            this.gbSubTotal.TabStop = false;
-            this.gbSubTotal.Text = "SubTotal";
+            this.gbTotal.Controls.Add(this.lblTotal);
+            this.gbTotal.Location = new System.Drawing.Point(3, 369);
+            this.gbTotal.Name = "gbTotal";
+            this.gbTotal.Size = new System.Drawing.Size(144, 112);
+            this.gbTotal.TabIndex = 5;
+            this.gbTotal.TabStop = false;
+            this.gbTotal.Text = "Total";
             // 
-            // lblSubTotal
+            // lblTotal
             // 
-            this.lblSubTotal.Location = new System.Drawing.Point(6, 17);
-            this.lblSubTotal.Name = "lblSubTotal";
-            this.lblSubTotal.Size = new System.Drawing.Size(132, 95);
-            this.lblSubTotal.TabIndex = 0;
-            this.lblSubTotal.Text = "label4";
-            this.lblSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotal.Location = new System.Drawing.Point(6, 17);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(135, 92);
+            this.lblTotal.TabIndex = 0;
+            this.lblTotal.Text = "label2";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gbProductos
+            // 
+            this.gbProductos.Controls.Add(this.lblContador);
+            this.gbProductos.Location = new System.Drawing.Point(3, 3);
+            this.gbProductos.Name = "gbProductos";
+            this.gbProductos.Size = new System.Drawing.Size(144, 114);
+            this.gbProductos.TabIndex = 4;
+            this.gbProductos.TabStop = false;
+            this.gbProductos.Text = "Productos";
+            // 
+            // lblContador
+            // 
+            this.lblContador.Location = new System.Drawing.Point(6, 17);
+            this.lblContador.Name = "lblContador";
+            this.lblContador.Size = new System.Drawing.Size(132, 94);
+            this.lblContador.TabIndex = 0;
+            this.lblContador.Text = "label1";
+            this.lblContador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmCarrito
             // 
@@ -230,10 +230,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.gbProductos.ResumeLayout(false);
-            this.gbTotal.ResumeLayout(false);
-            this.gbIVA.ResumeLayout(false);
             this.gbSubTotal.ResumeLayout(false);
+            this.gbIVA.ResumeLayout(false);
+            this.gbTotal.ResumeLayout(false);
+            this.gbProductos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

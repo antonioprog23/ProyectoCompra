@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblIdMostrar = new System.Windows.Forms.Label();
+            this.lblIdProducto = new System.Windows.Forms.Label();
             this.cantidad = new System.Windows.Forms.NumericUpDown();
             this.lblPrecioMostrar = new System.Windows.Forms.Label();
             this.lblNombreMostrar = new System.Windows.Forms.Label();
@@ -43,6 +45,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblIdMostrar);
+            this.groupBox1.Controls.Add(this.lblIdProducto);
             this.groupBox1.Controls.Add(this.cantidad);
             this.groupBox1.Controls.Add(this.lblPrecioMostrar);
             this.groupBox1.Controls.Add(this.lblNombreMostrar);
@@ -53,13 +57,30 @@
             this.groupBox1.Controls.Add(this.lblImage);
             this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 110);
+            this.groupBox1.Size = new System.Drawing.Size(287, 129);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // lblIdMostrar
+            // 
+            this.lblIdMostrar.AutoSize = true;
+            this.lblIdMostrar.Location = new System.Drawing.Point(167, 25);
+            this.lblIdMostrar.Name = "lblIdMostrar";
+            this.lblIdMostrar.Size = new System.Drawing.Size(0, 13);
+            this.lblIdMostrar.TabIndex = 10;
+            // 
+            // lblIdProducto
+            // 
+            this.lblIdProducto.AutoSize = true;
+            this.lblIdProducto.Location = new System.Drawing.Point(112, 25);
+            this.lblIdProducto.Name = "lblIdProducto";
+            this.lblIdProducto.Size = new System.Drawing.Size(21, 13);
+            this.lblIdProducto.TabIndex = 9;
+            this.lblIdProducto.Text = "ID:";
+            // 
             // cantidad
             // 
-            this.cantidad.Location = new System.Drawing.Point(185, 73);
+            this.cantidad.Location = new System.Drawing.Point(170, 94);
             this.cantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -78,7 +99,7 @@
             // lblPrecioMostrar
             // 
             this.lblPrecioMostrar.AutoSize = true;
-            this.lblPrecioMostrar.Location = new System.Drawing.Point(180, 51);
+            this.lblPrecioMostrar.Location = new System.Drawing.Point(167, 72);
             this.lblPrecioMostrar.Name = "lblPrecioMostrar";
             this.lblPrecioMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblPrecioMostrar.TabIndex = 6;
@@ -86,7 +107,7 @@
             // lblNombreMostrar
             // 
             this.lblNombreMostrar.AutoSize = true;
-            this.lblNombreMostrar.Location = new System.Drawing.Point(180, 29);
+            this.lblNombreMostrar.Location = new System.Drawing.Point(167, 50);
             this.lblNombreMostrar.Name = "lblNombreMostrar";
             this.lblNombreMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblNombreMostrar.TabIndex = 5;
@@ -94,7 +115,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(127, 75);
+            this.lblCantidad.Location = new System.Drawing.Point(112, 96);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(52, 13);
             this.lblCantidad.TabIndex = 4;
@@ -103,7 +124,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(127, 51);
+            this.lblPrecio.Location = new System.Drawing.Point(112, 72);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(40, 13);
             this.lblPrecio.TabIndex = 3;
@@ -112,7 +133,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(127, 29);
+            this.lblNombre.Location = new System.Drawing.Point(112, 50);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 2;
@@ -129,9 +150,9 @@
             // 
             // lblImage
             // 
-            this.lblImage.Location = new System.Drawing.Point(6, 16);
+            this.lblImage.Location = new System.Drawing.Point(6, 15);
             this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(100, 88);
+            this.lblImage.Size = new System.Drawing.Size(100, 111);
             this.lblImage.TabIndex = 0;
             // 
             // CtrlProductoCarrito
@@ -141,7 +162,7 @@
             this.AutoSize = true;
             this.Controls.Add(this.groupBox1);
             this.Name = "CtrlProductoCarrito";
-            this.Size = new System.Drawing.Size(293, 113);
+            this.Size = new System.Drawing.Size(293, 132);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
@@ -160,5 +181,7 @@
         private System.Windows.Forms.Label lblPrecioMostrar;
         private System.Windows.Forms.Label lblNombreMostrar;
         private System.Windows.Forms.NumericUpDown cantidad;
+        private System.Windows.Forms.Label lblIdMostrar;
+        private System.Windows.Forms.Label lblIdProducto;
     }
 }
