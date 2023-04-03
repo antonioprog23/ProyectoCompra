@@ -10,7 +10,6 @@ namespace ProyectoCompra.Formularios
     public partial class FrmCarrito : Form
     {
         private List<Carrito> productos;
-
         public FrmCarrito()
         {
             InitializeComponent();
@@ -44,6 +43,7 @@ namespace ProyectoCompra.Formularios
                 cantidad.Text = productos[i].GetCantidad().ToString();
                 Label imagen = (Label)producto.Controls.Find("lblImage", true)[0];
                 imagen.Image = productos[i].GetImage();
+                producto.botonBorrar.Click += new EventHandler(BototnBorrar_Click);
                 tbProductos.Controls.Add(producto);
             }
 
@@ -62,5 +62,15 @@ namespace ProyectoCompra.Formularios
             }
             return subtTotal;
         }
+
+        public void BototnBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult confirmarBorrado = MessageBox.Show("¿Estás seguro de borrar el producto?", "Borrar producto", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmarBorrado == DialogResult.OK)
+            {
+
+            }
+        }
+
     }
 }

@@ -53,7 +53,7 @@
             this.groupBox1.Controls.Add(this.lblImage);
             this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 110);
+            this.groupBox1.Size = new System.Drawing.Size(287, 110);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -120,13 +120,12 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(305, 81);
+            this.btnBorrar.Image = global::ProyectoCompra.Properties.Resources.icon_borrar;
+            this.btnBorrar.Location = new System.Drawing.Point(264, 15);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.Size = new System.Drawing.Size(17, 15);
             this.btnBorrar.TabIndex = 1;
-            this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // lblImage
             // 
@@ -142,7 +141,7 @@
             this.AutoSize = true;
             this.Controls.Add(this.groupBox1);
             this.Name = "CtrlProductoCarrito";
-            this.Size = new System.Drawing.Size(391, 113);
+            this.Size = new System.Drawing.Size(293, 113);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();

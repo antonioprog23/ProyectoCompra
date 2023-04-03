@@ -455,6 +455,7 @@
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
     <Content Include="Resources\1_1.jpeg" />
+    <None Include="Resources\icon_borrar.png" />
     <None Include="Resources\descarga.htm" />
   </ItemGroup>
   <ItemGroup>
