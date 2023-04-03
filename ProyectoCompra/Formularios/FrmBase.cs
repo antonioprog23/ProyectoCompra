@@ -10,7 +10,7 @@ namespace ProyectoCompra.Formularios
     public partial class FrmBase : Form
     {
         private Usuario usuarioRecuperado;
-
+        
         public FrmBase()
         {
             InitializeComponent();
@@ -18,10 +18,6 @@ namespace ProyectoCompra.Formularios
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
-            //CARRITO
-            List<Carrito> productos = FicheroCarrito.leerFichero();
-            lblContador.Text = productos.Count.ToString();
-
             //USUARO 
             Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
             if (usuarioFichero != null)
@@ -59,6 +55,11 @@ namespace ProyectoCompra.Formularios
         {
             FrmCarrito frmCarrito = new FrmCarrito();
             frmCarrito.ShowDialog();
+        }
+
+        public Label GetLabelContador()
+        {
+            return this.lblContador;
         }
     }
 }
