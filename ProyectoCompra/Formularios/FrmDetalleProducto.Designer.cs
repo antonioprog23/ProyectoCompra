@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDetalleProducto));
             this.lblImage = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -48,13 +49,13 @@
             this.lblImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblImage.Location = new System.Drawing.Point(12, 10);
             this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(114, 169);
+            this.lblImage.Size = new System.Drawing.Size(182, 169);
             this.lblImage.TabIndex = 0;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(132, 25);
+            this.lblNombre.Location = new System.Drawing.Point(200, 34);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(48, 14);
             this.lblNombre.TabIndex = 1;
@@ -63,7 +64,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(132, 50);
+            this.lblDescripcion.Location = new System.Drawing.Point(200, 59);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(67, 14);
             this.lblDescripcion.TabIndex = 2;
@@ -72,7 +73,7 @@
             // lblFabricante
             // 
             this.lblFabricante.AutoSize = true;
-            this.lblFabricante.Location = new System.Drawing.Point(132, 98);
+            this.lblFabricante.Location = new System.Drawing.Point(200, 107);
             this.lblFabricante.Name = "lblFabricante";
             this.lblFabricante.Size = new System.Drawing.Size(60, 14);
             this.lblFabricante.TabIndex = 4;
@@ -81,7 +82,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(132, 73);
+            this.lblPrecio.Location = new System.Drawing.Point(200, 82);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(41, 14);
             this.lblPrecio.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             this.lblFabricanteMostrar.AutoSize = true;
             this.lblFabricanteMostrar.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFabricanteMostrar.Location = new System.Drawing.Point(205, 98);
+            this.lblFabricanteMostrar.Location = new System.Drawing.Point(273, 107);
             this.lblFabricanteMostrar.Name = "lblFabricanteMostrar";
             this.lblFabricanteMostrar.Size = new System.Drawing.Size(61, 14);
             this.lblFabricanteMostrar.TabIndex = 8;
@@ -101,7 +102,7 @@
             // 
             this.lblPrecioMostrar.AutoSize = true;
             this.lblPrecioMostrar.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioMostrar.Location = new System.Drawing.Point(205, 73);
+            this.lblPrecioMostrar.Location = new System.Drawing.Point(273, 82);
             this.lblPrecioMostrar.Name = "lblPrecioMostrar";
             this.lblPrecioMostrar.Size = new System.Drawing.Size(41, 14);
             this.lblPrecioMostrar.TabIndex = 7;
@@ -111,7 +112,7 @@
             // 
             this.lblDescripcionMostrar.AutoSize = true;
             this.lblDescripcionMostrar.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionMostrar.Location = new System.Drawing.Point(205, 50);
+            this.lblDescripcionMostrar.Location = new System.Drawing.Point(273, 59);
             this.lblDescripcionMostrar.Name = "lblDescripcionMostrar";
             this.lblDescripcionMostrar.Size = new System.Drawing.Size(67, 14);
             this.lblDescripcionMostrar.TabIndex = 6;
@@ -121,7 +122,7 @@
             // 
             this.lblNombreMostrar.AutoSize = true;
             this.lblNombreMostrar.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMostrar.Location = new System.Drawing.Point(205, 25);
+            this.lblNombreMostrar.Location = new System.Drawing.Point(273, 34);
             this.lblNombreMostrar.Name = "lblNombreMostrar";
             this.lblNombreMostrar.Size = new System.Drawing.Size(49, 14);
             this.lblNombreMostrar.TabIndex = 5;
@@ -130,7 +131,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(132, 127);
+            this.lblCantidad.Location = new System.Drawing.Point(200, 136);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(51, 14);
             this.lblCantidad.TabIndex = 9;
@@ -139,7 +140,7 @@
             // dwCantidad
             // 
             this.dwCantidad.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dwCantidad.Location = new System.Drawing.Point(208, 125);
+            this.dwCantidad.Location = new System.Drawing.Point(276, 134);
             this.dwCantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -158,11 +159,17 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(373, 154);
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(413, 147);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 25);
+            this.btnAgregar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAgregar.Size = new System.Drawing.Size(35, 32);
             this.btnAgregar.TabIndex = 12;
-            this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 

@@ -23,7 +23,6 @@ namespace ProyectoCompra.Formularios
             this.producto = producto;
             FrmBase = new FrmBase();
             lista = FicheroCarrito.leerFichero();
-            FrmBase.GetLabelContador().Text = lista.Count.ToString();
         }
 
         private void FrmDetalleProducto_Load(object sender, EventArgs e)
@@ -39,8 +38,6 @@ namespace ProyectoCompra.Formularios
         {
             Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), Image);
             carrito.insertarProducto(producto);
-            
-            FrmBase.GetLabelContador().Text = lista.Count.ToString();
             Close();
         }
 

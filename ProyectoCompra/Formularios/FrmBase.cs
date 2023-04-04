@@ -10,10 +10,15 @@ namespace ProyectoCompra.Formularios
     public partial class FrmBase : Form
     {
         private Usuario usuarioRecuperado;
-        
+        private Carrito carrito;
+        private List<Carrito> lista;
+
         public FrmBase()
         {
             InitializeComponent();
+            carrito = new Carrito();
+            lista = carrito.GetLista();
+            lblContador.Text = lista.Count.ToString();
         }
 
         private void FrmBase_Load(object sender, EventArgs e)
@@ -60,6 +65,11 @@ namespace ProyectoCompra.Formularios
         public Label GetLabelContador()
         {
             return this.lblContador;
+        }
+
+        private void lblContador_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

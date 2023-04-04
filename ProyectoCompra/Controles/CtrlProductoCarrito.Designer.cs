@@ -141,6 +141,12 @@
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Image = global::ProyectoCompra.Properties.Resources.icon_borrar;
             this.btnBorrar.Location = new System.Drawing.Point(264, 15);
             this.btnBorrar.Name = "btnBorrar";

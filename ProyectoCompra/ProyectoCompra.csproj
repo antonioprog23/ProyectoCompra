@@ -455,6 +455,14 @@
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
     <Content Include="Resources\1_1.jpeg" />
+    <Content Include="Resources\1_2.jpeg" />
+    <Content Include="Resources\1_3.jpg" />
+    <Content Include="Resources\1_4.png" />
+    <Content Include="Resources\1_5.jpg" />
+    <Content Include="Resources\1_6.jpeg" />
+    <Content Include="Resources\1_7.png" />
+    <Content Include="Resources\1_8.jpg" />
+    <None Include="Resources\icon_aniadir_carrito.png" />
     <None Include="Resources\icon_borrar.png" />
     <None Include="Resources\descarga.htm" />
   </ItemGroup>
