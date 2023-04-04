@@ -9,12 +9,14 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmCarrito : Form
     {
+        private Carrito carrito;
         private List<Carrito> productos;
 
         public FrmCarrito()
         {
             InitializeComponent();
-            productos = FicheroCarrito.leerFichero();
+            carrito = new Carrito();
+            productos = carrito.GetLista();
         }
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
@@ -54,9 +56,9 @@ namespace ProyectoCompra.Formularios
             }
 
             //SUBTOTAL
-            lblSubTotal.Text = calcularSubTotal().ToString();
+            lblSubTotal.Text = calcularSubTotal().ToString("N2");
             //TOTAL
-            lblTotal.Text = Convert.ToString(Convert.ToDecimal(lblSubTotal.Text) * ((Convert.ToDecimal(lblIVA.Text) / 100) + 1));
+            lblTotal.Text = (Convert.ToDecimal(lblSubTotal.Text) * ((Convert.ToDecimal(lblIVA.Text) / 100) + 1)).ToString("N2");
         }
 
         private decimal calcularSubTotal()
@@ -75,13 +77,7 @@ namespace ProyectoCompra.Formularios
             if (confirmarBorrado == DialogResult.Yes)
             {
                 Button button = sender as Button;
-                Carrito carrito = productos.Find(p => p.GetProducto().id_producto == Convert.ToInt32(button.Name));
-                productos.Remove(carrito);
-                FicheroCarrito.borrarFicheroAux();
-                foreach (Carrito c in productos)
-                {
-                    FicheroCarrito.escribirFichero(c);
-                }
+                carrito.borrarProducto(new Producto(Convert.ToInt32(button.Name)));
                 actualizarVentana();
             }
 
@@ -113,8 +109,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnVaciarCarrito_Click(object sender, EventArgs e)
         {
-            productos.Clear();
-            FicheroCarrito.borrarFicheroAux();
+            carrito.vaciarCarrito();
             actualizarVentana();
         }
     }

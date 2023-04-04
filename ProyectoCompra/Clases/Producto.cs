@@ -39,6 +39,11 @@ namespace ProyectoCompra.Clases
             this.precio = precio;
         }
 
+        public Producto(int id_producto)
+        {
+            this.id_producto = id_producto;
+        }
+
         #endregion
 
         #region
