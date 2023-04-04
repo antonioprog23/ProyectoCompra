@@ -73,6 +73,56 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_10 {
+            get {
+                object obj = ResourceManager.GetObject("_1_10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_11 {
+            get {
+                object obj = ResourceManager.GetObject("_1_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_12 {
+            get {
+                object obj = ResourceManager.GetObject("_1_12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_13 {
+            get {
+                object obj = ResourceManager.GetObject("_1_13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_14 {
+            get {
+                object obj = ResourceManager.GetObject("_1_14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1_2 {
             get {
                 object obj = ResourceManager.GetObject("_1_2", resourceCulture);
@@ -136,6 +186,16 @@ namespace ProyectoCompra.Properties {
         internal static System.Drawing.Bitmap _1_8 {
             get {
                 object obj = ResourceManager.GetObject("_1_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_9 {
+            get {
+                object obj = ResourceManager.GetObject("_1_9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

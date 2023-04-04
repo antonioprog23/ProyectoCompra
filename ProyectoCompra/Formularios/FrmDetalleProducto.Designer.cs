@@ -51,6 +51,7 @@
             this.lblImage.Name = "lblImage";
             this.lblImage.Size = new System.Drawing.Size(182, 169);
             this.lblImage.TabIndex = 0;
+            this.lblImage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNombre
             // 
