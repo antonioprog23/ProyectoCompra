@@ -61,6 +61,7 @@
             this.btnVaciarCarrito.TabIndex = 3;
             this.btnVaciarCarrito.Text = "Vaciar carrito";
             this.btnVaciarCarrito.UseVisualStyleBackColor = true;
+            this.btnVaciarCarrito.Click += new System.EventHandler(this.btnVaciarCarrito_Click);
             // 
             // btnConfirmarCompra
             // 

@@ -110,5 +110,12 @@ namespace ProyectoCompra.Formularios
             FrmCarrito frmCarrito = new FrmCarrito();
             frmCarrito.ShowDialog();
         }
+
+        private void btnVaciarCarrito_Click(object sender, EventArgs e)
+        {
+            productos.Clear();
+            FicheroCarrito.borrarFicheroAux();
+            actualizarVentana();
+        }
     }
 }
