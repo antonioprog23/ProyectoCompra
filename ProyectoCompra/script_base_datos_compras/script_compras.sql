@@ -131,6 +131,16 @@ CREATE TABLE Factura (
     CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (id_pedido) REFERENCES pedido (id_pedido) ON DELETE CASCADE
 )
 
+-- CARRITO
+CREATE TABLE carrito
+(
+	id_usuario INT PRIMARY KEY IDENTITY,
+	id_producto INT NOT NULL,
+	cantidad INT NOT NULL,
+	CONSTRAINT constraint_id_usuario_carrito_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),
+	CONSTRAINT constraint_id_producto_carrito_fk FOREIGN KEY (id_producto) REFERENCES producto (id_producto)
+)
+
 -- INSERT INTO
 
 -- CATEGORIA
