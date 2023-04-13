@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base datos\BDCarrito.cs" />
     <Compile Include="Base datos\BDProducto.cs" />
     <Compile Include="Base datos\BDUsuario.cs" />
     <Compile Include="Clases\Carrito.cs" />
@@ -454,6 +455,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
+    <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
     <Content Include="Resources\1_1.jpeg" />
     <Content Include="Resources\1_10.jpg" />
     <Content Include="Resources\1_11.jpg" />

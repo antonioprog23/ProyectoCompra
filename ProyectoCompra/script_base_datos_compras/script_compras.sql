@@ -134,7 +134,7 @@ CREATE TABLE Factura (
 -- CARRITO
 CREATE TABLE carrito
 (
-	id_usuario INT PRIMARY KEY IDENTITY,
+	id_usuario INT PRIMARY KEY,
 	id_producto INT NOT NULL,
 	cantidad INT NOT NULL,
 	CONSTRAINT constraint_id_usuario_carrito_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),

@@ -1,8 +1,4 @@
-﻿using ProyectoCompra.Base_datos;
-using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
-using System;
-using System.Windows.Forms;
+﻿using System;
 
 namespace ProyectoCompra.Formularios
 {

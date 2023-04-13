@@ -1,4 +1,5 @@
-﻿using ProyectoCompra.Clases;
+﻿using ProyectoCompra.Base_datos;
+using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections;
@@ -36,8 +37,10 @@ namespace ProyectoCompra.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), Image);
-            carrito.insertarProducto(producto);
+            //Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), Image);
+            //carrito.insertarProducto(producto);
+            Usuario usuario = FicheroAuxiliar.leerFichero();
+            BDCarrito.insertarProductoCarrito(usuario.idUsuario,producto,3); 
             Close();
         }
 
