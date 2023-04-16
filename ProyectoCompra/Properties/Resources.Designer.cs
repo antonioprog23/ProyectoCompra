@@ -83,6 +83,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_aniadir_carrito {
+            get {
+                object obj = ResourceManager.GetObject("icon_aniadir_carrito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_audio {
             get {
                 object obj = ResourceManager.GetObject("icon_audio", resourceCulture);
@@ -106,6 +116,16 @@ namespace ProyectoCompra.Properties {
         internal static System.Drawing.Bitmap icon_bebida_ecologica {
             get {
                 object obj = ResourceManager.GetObject("icon_bebida_ecologica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_borrar {
+            get {
+                object obj = ResourceManager.GetObject("icon_borrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

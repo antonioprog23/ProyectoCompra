@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
@@ -65,10 +66,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base datos\BDCliente.cs" />
+    <Compile Include="Base datos\BDCarrito.cs" />
+    <Compile Include="Base datos\BDProducto.cs" />
     <Compile Include="Base datos\BDUsuario.cs" />
+    <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
     <Compile Include="Controles\CtrlContraseña.cs">
@@ -76,6 +80,18 @@
     </Compile>
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlProductoCarrito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlProductoCarrito.Designer.cs">
+      <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlProductosMostrar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlProductosMostrar.Designer.cs">
+      <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\CtrlTextoBox.cs">
       <SubType>UserControl</SubType>
@@ -101,6 +117,12 @@
     </Compile>
     <Compile Include="Formularios\FrmAlimentacion.Designer.cs">
       <DependentUpon>FrmAlimentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmDetalleProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmDetalleProducto.Designer.cs">
+      <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmProductos.cs">
       <SubType>Form</SubType>
@@ -139,9 +161,25 @@
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\AlimentacionS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS2.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlProductoCarrito.resx">
+      <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlProductosMostrar.resx">
+      <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
@@ -154,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmAlimentacion.resx">
       <DependentUpon>FrmAlimentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmDetalleProducto.resx">
+      <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -179,6 +220,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>AlimentacionS1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS2.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -401,6 +451,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_textil_hogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
+    <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
+    <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
+    <Content Include="Resources\1_1.jpeg" />
+    <Content Include="Resources\1_10.jpg" />
+    <Content Include="Resources\1_11.jpg" />
+    <Content Include="Resources\1_12.jpg" />
+    <Content Include="Resources\1_13.jpg" />
+    <Content Include="Resources\1_14.jpg" />
+    <Content Include="Resources\1_15.jpg" />
+    <Content Include="Resources\1_16.jpeg" />
+    <Content Include="Resources\1_17.jpg" />
+    <Content Include="Resources\1_18.jpg" />
+    <Content Include="Resources\1_19.jpg" />
+    <Content Include="Resources\1_2.jpeg" />
+    <Content Include="Resources\1_20.jpeg" />
+    <Content Include="Resources\1_21.jpg" />
+    <Content Include="Resources\1_3.jpg" />
+    <Content Include="Resources\1_4.png" />
+    <Content Include="Resources\1_5.jpg" />
+    <Content Include="Resources\1_6.jpeg" />
+    <Content Include="Resources\1_7.png" />
+    <Content Include="Resources\1_8.jpg" />
+    <Content Include="Resources\1_9.jpg" />
+    <None Include="Resources\icon_aniadir_carrito.png" />
+    <None Include="Resources\icon_borrar.png" />
+    <None Include="Resources\descarga.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\en\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

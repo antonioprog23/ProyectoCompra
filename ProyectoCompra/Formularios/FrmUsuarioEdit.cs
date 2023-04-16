@@ -39,13 +39,13 @@ namespace ProyectoCompra.Formularios
                 MessageBox.Show("AQUI");
                 if (ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text) && (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals("")))
                 {
-                    if (BDCliente.actualiarDatos(txtUsuario.Texto, "", "", ctrlContrasenia.TextBoxtxtContrasenia))
+                    if (BDUsuario.actualiarDatos(txtUsuario.Texto, "", "", ctrlContrasenia.TextBoxtxtContrasenia))
                     {
                         MessageBox.Show("Los DATOS se han actualizado correctamente.");
                         Application.Restart();
                     }
                 }
-                if (BDCliente.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ""))
+                if (BDUsuario.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ""))
                 {
                     MessageBox.Show("Los datos se han actualizado correctamente.");
                     Application.Restart();

@@ -30,6 +30,13 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.gbxAlimentacion = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnNutricionDep = new System.Windows.Forms.Button();
+            this.btnComidaInternacional = new System.Windows.Forms.Button();
+            this.btnConserva = new System.Windows.Forms.Button();
+            this.btnDesayunoMer = new System.Windows.Forms.Button();
+            this.btnAceites = new System.Windows.Forms.Button();
+            this.btnLacteos = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSushi = new System.Windows.Forms.Button();
@@ -94,15 +101,9 @@
             this.btnBricolaje = new System.Windows.Forms.Button();
             this.btnJardin = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.gbxAlimentacion.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -119,7 +120,6 @@
             this.tableLayoutPanel8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -148,6 +148,100 @@
             this.gbxAlimentacion.TabIndex = 0;
             this.gbxAlimentacion.TabStop = false;
             this.gbxAlimentacion.Text = "Alimentación";
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 6;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel10.Controls.Add(this.btnNutricionDep, 5, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnComidaInternacional, 4, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnConserva, 3, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnDesayunoMer, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnAceites, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnLacteos, 0, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 17);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1147, 108);
+            this.tableLayoutPanel10.TabIndex = 2;
+            // 
+            // btnNutricionDep
+            // 
+            this.btnNutricionDep.Image = global::ProyectoCompra.Properties.Resources.icon_nutricion_deportiva;
+            this.btnNutricionDep.Location = new System.Drawing.Point(958, 3);
+            this.btnNutricionDep.Name = "btnNutricionDep";
+            this.btnNutricionDep.Size = new System.Drawing.Size(185, 101);
+            this.btnNutricionDep.TabIndex = 5;
+            this.btnNutricionDep.Text = "Nutrición deportiva";
+            this.btnNutricionDep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNutricionDep.UseVisualStyleBackColor = true;
+            this.btnNutricionDep.Click += new System.EventHandler(this.btnNutricionDep_Click);
+            // 
+            // btnComidaInternacional
+            // 
+            this.btnComidaInternacional.Image = global::ProyectoCompra.Properties.Resources.icon_comida_internacional;
+            this.btnComidaInternacional.Location = new System.Drawing.Point(767, 3);
+            this.btnComidaInternacional.Name = "btnComidaInternacional";
+            this.btnComidaInternacional.Size = new System.Drawing.Size(183, 101);
+            this.btnComidaInternacional.TabIndex = 4;
+            this.btnComidaInternacional.Text = "Comidas internacionales";
+            this.btnComidaInternacional.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnComidaInternacional.UseVisualStyleBackColor = true;
+            this.btnComidaInternacional.Click += new System.EventHandler(this.btnComidaInternacional_Click);
+            // 
+            // btnConserva
+            // 
+            this.btnConserva.Image = global::ProyectoCompra.Properties.Resources.icon_conservas;
+            this.btnConserva.Location = new System.Drawing.Point(576, 3);
+            this.btnConserva.Name = "btnConserva";
+            this.btnConserva.Size = new System.Drawing.Size(183, 101);
+            this.btnConserva.TabIndex = 3;
+            this.btnConserva.Text = "Conservas";
+            this.btnConserva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConserva.UseVisualStyleBackColor = true;
+            this.btnConserva.Click += new System.EventHandler(this.btnConserva_Click);
+            // 
+            // btnDesayunoMer
+            // 
+            this.btnDesayunoMer.Image = global::ProyectoCompra.Properties.Resources.icon_desayuno;
+            this.btnDesayunoMer.Location = new System.Drawing.Point(385, 3);
+            this.btnDesayunoMer.Name = "btnDesayunoMer";
+            this.btnDesayunoMer.Size = new System.Drawing.Size(183, 101);
+            this.btnDesayunoMer.TabIndex = 2;
+            this.btnDesayunoMer.Text = "Desayuno y merienda";
+            this.btnDesayunoMer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDesayunoMer.UseVisualStyleBackColor = true;
+            this.btnDesayunoMer.Click += new System.EventHandler(this.btnDesayunoMer_Click);
+            // 
+            // btnAceites
+            // 
+            this.btnAceites.Image = global::ProyectoCompra.Properties.Resources.icon_aceite;
+            this.btnAceites.Location = new System.Drawing.Point(194, 3);
+            this.btnAceites.Name = "btnAceites";
+            this.btnAceites.Size = new System.Drawing.Size(183, 101);
+            this.btnAceites.TabIndex = 1;
+            this.btnAceites.Text = "Aceites, vinagres y salsas";
+            this.btnAceites.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAceites.UseVisualStyleBackColor = true;
+            this.btnAceites.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btnLacteos
+            // 
+            this.btnLacteos.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
+            this.btnLacteos.Location = new System.Drawing.Point(3, 3);
+            this.btnLacteos.Name = "btnLacteos";
+            this.btnLacteos.Size = new System.Drawing.Size(183, 101);
+            this.btnLacteos.TabIndex = 0;
+            this.btnLacteos.Text = "Lacteos y huevos";
+            this.btnLacteos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLacteos.UseVisualStyleBackColor = true;
+            this.btnLacteos.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox2
             // 
@@ -191,6 +285,7 @@
             this.btnSushi.Text = "Sushi";
             this.btnSushi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSushi.UseVisualStyleBackColor = true;
+            this.btnSushi.Click += new System.EventHandler(this.btnSushi_Click);
             // 
             // btnPescados
             // 
@@ -202,6 +297,7 @@
             this.btnPescados.Text = "Pescados, mariscos y moluscos";
             this.btnPescados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPescados.UseVisualStyleBackColor = true;
+            this.btnPescados.Click += new System.EventHandler(this.btnPescados_Click);
             // 
             // btnCharcuteria
             // 
@@ -213,6 +309,7 @@
             this.btnCharcuteria.Text = "Charcutería";
             this.btnCharcuteria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCharcuteria.UseVisualStyleBackColor = true;
+            this.btnCharcuteria.Click += new System.EventHandler(this.btnCharcuteria_Click);
             // 
             // btnCarne
             // 
@@ -224,6 +321,7 @@
             this.btnCarne.Text = "Carne";
             this.btnCarne.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCarne.UseVisualStyleBackColor = true;
+            this.btnCarne.Click += new System.EventHandler(this.btnCarne_Click);
             // 
             // btnQuesos
             // 
@@ -235,6 +333,7 @@
             this.btnQuesos.Text = "Quesos";
             this.btnQuesos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQuesos.UseVisualStyleBackColor = true;
+            this.btnQuesos.Click += new System.EventHandler(this.btnQuesos_Click);
             // 
             // btnVerdurasHortalizas
             // 
@@ -246,6 +345,7 @@
             this.btnVerdurasHortalizas.Text = "Verduras y hortalizas";
             this.btnVerdurasHortalizas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVerdurasHortalizas.UseVisualStyleBackColor = true;
+            this.btnVerdurasHortalizas.Click += new System.EventHandler(this.btnVerdurasHortalizas_Click);
             // 
             // groupBox3
             // 
@@ -289,6 +389,7 @@
             this.btnPastas.Text = "Masas, bases, pasta fresca";
             this.btnPastas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPastas.UseVisualStyleBackColor = true;
+            this.btnPastas.Click += new System.EventHandler(this.btnPastas_Click);
             // 
             // btnPlatosListos
             // 
@@ -300,6 +401,7 @@
             this.btnPlatosListos.Text = "Platos calentar y listo";
             this.btnPlatosListos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPlatosListos.UseVisualStyleBackColor = true;
+            this.btnPlatosListos.Click += new System.EventHandler(this.btnPlatosListos_Click);
             // 
             // btnMantequillas
             // 
@@ -311,6 +413,7 @@
             this.btnMantequillas.Text = "Mantequillas, margarinas y nata";
             this.btnMantequillas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMantequillas.UseVisualStyleBackColor = true;
+            this.btnMantequillas.Click += new System.EventHandler(this.btnMantequillas_Click);
             // 
             // btnPasteles
             // 
@@ -322,6 +425,7 @@
             this.btnPasteles.Text = "Pasteles";
             this.btnPasteles.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPasteles.UseVisualStyleBackColor = true;
+            this.btnPasteles.Click += new System.EventHandler(this.btnPasteles_Click);
             // 
             // btnPostres
             // 
@@ -333,6 +437,7 @@
             this.btnPostres.Text = "Postres";
             this.btnPostres.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPostres.UseVisualStyleBackColor = true;
+            this.btnPostres.Click += new System.EventHandler(this.btnPostres_Click);
             // 
             // btnCongelados
             // 
@@ -344,6 +449,7 @@
             this.btnCongelados.Text = "Congelados";
             this.btnCongelados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCongelados.UseVisualStyleBackColor = true;
+            this.btnCongelados.Click += new System.EventHandler(this.btnCongelados_Click);
             // 
             // groupBox4
             // 
@@ -387,6 +493,7 @@
             this.btnSinAlcohol.Text = "Bebidas sin alcohol";
             this.btnSinAlcohol.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSinAlcohol.UseVisualStyleBackColor = true;
+            this.btnSinAlcohol.Click += new System.EventHandler(this.btnSinAlcohol_Click);
             // 
             // btnBebidaEcologica
             // 
@@ -398,6 +505,7 @@
             this.btnBebidaEcologica.Text = "Bebidas Ecológicas";
             this.btnBebidaEcologica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBebidaEcologica.UseVisualStyleBackColor = true;
+            this.btnBebidaEcologica.Click += new System.EventHandler(this.btnBebidaEcologica_Click);
             // 
             // btnCavaSidra
             // 
@@ -409,6 +517,7 @@
             this.btnCavaSidra.Text = "Champagne cavas y sidras";
             this.btnCavaSidra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCavaSidra.UseVisualStyleBackColor = true;
+            this.btnCavaSidra.Click += new System.EventHandler(this.btnCavaSidra_Click);
             // 
             // btnBebidaAlcohol
             // 
@@ -420,6 +529,7 @@
             this.btnBebidaAlcohol.Text = "Bebidas con alcohol";
             this.btnBebidaAlcohol.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBebidaAlcohol.UseVisualStyleBackColor = true;
+            this.btnBebidaAlcohol.Click += new System.EventHandler(this.btnBebidaAlcohol_Click);
             // 
             // btnAguaSoda
             // 
@@ -431,6 +541,7 @@
             this.btnAguaSoda.Text = "Aguda, soda y gaseosas";
             this.btnAguaSoda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAguaSoda.UseVisualStyleBackColor = true;
+            this.btnAguaSoda.Click += new System.EventHandler(this.btnAguaSoda_Click);
             // 
             // btnZumos
             // 
@@ -442,6 +553,7 @@
             this.btnZumos.Text = "Zumos de frutas";
             this.btnZumos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnZumos.UseVisualStyleBackColor = true;
+            this.btnZumos.Click += new System.EventHandler(this.btnZumos_Click);
             // 
             // groupBox5
             // 
@@ -485,6 +597,7 @@
             this.btnLimpiezaCalzado.Text = "Limpieza calzado";
             this.btnLimpiezaCalzado.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiezaCalzado.UseVisualStyleBackColor = true;
+            this.btnLimpiezaCalzado.Click += new System.EventHandler(this.btnLimpiezaCalzado_Click);
             // 
             // btnInsecticidas
             // 
@@ -496,6 +609,7 @@
             this.btnInsecticidas.Text = "Insecticidas";
             this.btnInsecticidas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInsecticidas.UseVisualStyleBackColor = true;
+            this.btnInsecticidas.Click += new System.EventHandler(this.btnInsecticidas_Click);
             // 
             // btnLejiasAmoniacos
             // 
@@ -507,6 +621,7 @@
             this.btnLejiasAmoniacos.Text = "Lejías y amoníacos ";
             this.btnLejiasAmoniacos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLejiasAmoniacos.UseVisualStyleBackColor = true;
+            this.btnLejiasAmoniacos.Click += new System.EventHandler(this.btnLejiasAmoniacos_Click);
             // 
             // btnLavavajillas
             // 
@@ -518,6 +633,7 @@
             this.btnLavavajillas.Text = "Lavavajillas";
             this.btnLavavajillas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLavavajillas.UseVisualStyleBackColor = true;
+            this.btnLavavajillas.Click += new System.EventHandler(this.btnLavavajillas_Click);
             // 
             // btnLimpiezaHogar
             // 
@@ -529,6 +645,7 @@
             this.btnLimpiezaHogar.Text = "Limpieza Hogar";
             this.btnLimpiezaHogar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiezaHogar.UseVisualStyleBackColor = true;
+            this.btnLimpiezaHogar.Click += new System.EventHandler(this.btnLimpiezaHogar_Click);
             // 
             // btnLavadoRopa
             // 
@@ -540,6 +657,7 @@
             this.btnLavadoRopa.Text = "Lavado de ropa";
             this.btnLavadoRopa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLavadoRopa.UseVisualStyleBackColor = true;
+            this.btnLavadoRopa.Click += new System.EventHandler(this.btnLavadoRopa_Click);
             // 
             // groupBox6
             // 
@@ -583,6 +701,7 @@
             this.btnLocionSolar.Text = "Loción solar";
             this.btnLocionSolar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLocionSolar.UseVisualStyleBackColor = true;
+            this.btnLocionSolar.Click += new System.EventHandler(this.btnLocionSolar_Click);
             // 
             // btnCuidadoCabello
             // 
@@ -594,6 +713,7 @@
             this.btnCuidadoCabello.Text = "Cuidado cabello";
             this.btnCuidadoCabello.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCuidadoCabello.UseVisualStyleBackColor = true;
+            this.btnCuidadoCabello.Click += new System.EventHandler(this.btnCuidadoCabello_Click);
             // 
             // btnCuidadoFacial
             // 
@@ -605,6 +725,7 @@
             this.btnCuidadoFacial.Text = "Cuidado facial";
             this.btnCuidadoFacial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCuidadoFacial.UseVisualStyleBackColor = true;
+            this.btnCuidadoFacial.Click += new System.EventHandler(this.btnCuidadoFacial_Click);
             // 
             // btnBotiquin
             // 
@@ -616,6 +737,7 @@
             this.btnBotiquin.Text = "Botiquín";
             this.btnBotiquin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBotiquin.UseVisualStyleBackColor = true;
+            this.btnBotiquin.Click += new System.EventHandler(this.btnBotiquin_Click);
             // 
             // btnBucal
             // 
@@ -627,6 +749,7 @@
             this.btnBucal.Text = "Higiene bucal";
             this.btnBucal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBucal.UseVisualStyleBackColor = true;
+            this.btnBucal.Click += new System.EventHandler(this.btnBucal_Click);
             // 
             // btnPerfumeria
             // 
@@ -638,6 +761,7 @@
             this.btnPerfumeria.Text = "Perfumería";
             this.btnPerfumeria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfumeria.UseVisualStyleBackColor = true;
+            this.btnPerfumeria.Click += new System.EventHandler(this.btnPerfumeria_Click);
             // 
             // groupBox7
             // 
@@ -681,6 +805,7 @@
             this.btnClimatizacion.Text = "Climatización";
             this.btnClimatizacion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClimatizacion.UseVisualStyleBackColor = true;
+            this.btnClimatizacion.Click += new System.EventHandler(this.btnClimatizacion_Click);
             // 
             // btnCafeteras
             // 
@@ -692,6 +817,7 @@
             this.btnCafeteras.Text = "Cafeteras";
             this.btnCafeteras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCafeteras.UseVisualStyleBackColor = true;
+            this.btnCafeteras.Click += new System.EventHandler(this.btnCafeteras_Click);
             // 
             // btnHornoPlaca
             // 
@@ -703,6 +829,7 @@
             this.btnHornoPlaca.Text = "Hornos, placas y campanas";
             this.btnHornoPlaca.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHornoPlaca.UseVisualStyleBackColor = true;
+            this.btnHornoPlaca.Click += new System.EventHandler(this.btnHornoPlaca_Click);
             // 
             // btnSecadora
             // 
@@ -714,6 +841,7 @@
             this.btnSecadora.Text = "Secadoras";
             this.btnSecadora.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSecadora.UseVisualStyleBackColor = true;
+            this.btnSecadora.Click += new System.EventHandler(this.btnSecadora_Click);
             // 
             // btnFrigorificos
             // 
@@ -725,6 +853,7 @@
             this.btnFrigorificos.Text = "Frigoríficos";
             this.btnFrigorificos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFrigorificos.UseVisualStyleBackColor = true;
+            this.btnFrigorificos.Click += new System.EventHandler(this.btnFrigorificos_Click);
             // 
             // btnLavadora
             // 
@@ -736,6 +865,7 @@
             this.btnLavadora.Text = "Lavadoras";
             this.btnLavadora.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLavadora.UseVisualStyleBackColor = true;
+            this.btnLavadora.Click += new System.EventHandler(this.btnLavadora_Click);
             // 
             // groupBox8
             // 
@@ -779,6 +909,7 @@
             this.btnAudio.Text = "Audio";
             this.btnAudio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAudio.UseVisualStyleBackColor = true;
+            this.btnAudio.Click += new System.EventHandler(this.btnAudio_Click);
             // 
             // btnTablets
             // 
@@ -790,6 +921,7 @@
             this.btnTablets.Text = "Tablets";
             this.btnTablets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTablets.UseVisualStyleBackColor = true;
+            this.btnTablets.Click += new System.EventHandler(this.btnTablets_Click);
             // 
             // btnInformatica
             // 
@@ -801,6 +933,7 @@
             this.btnInformatica.Text = "Informática";
             this.btnInformatica.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInformatica.UseVisualStyleBackColor = true;
+            this.btnInformatica.Click += new System.EventHandler(this.btnInformatica_Click);
             // 
             // btnFotografia
             // 
@@ -812,6 +945,7 @@
             this.btnFotografia.Text = "Fotografía";
             this.btnFotografia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFotografia.UseVisualStyleBackColor = true;
+            this.btnFotografia.Click += new System.EventHandler(this.btnFotografia_Click);
             // 
             // btnTelefonia
             // 
@@ -823,6 +957,7 @@
             this.btnTelefonia.Text = "Telefonía";
             this.btnTelefonia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTelefonia.UseVisualStyleBackColor = true;
+            this.btnTelefonia.Click += new System.EventHandler(this.btnTelefonia_Click);
             // 
             // btnTelevisores
             // 
@@ -834,6 +969,7 @@
             this.btnTelevisores.Text = "Televisores";
             this.btnTelevisores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTelevisores.UseVisualStyleBackColor = true;
+            this.btnTelevisores.Click += new System.EventHandler(this.btnTelevisores_Click);
             // 
             // groupBox9
             // 
@@ -876,6 +1012,7 @@
             this.btnTextilHogar.Text = "Textil hogar";
             this.btnTextilHogar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTextilHogar.UseVisualStyleBackColor = true;
+            this.btnTextilHogar.Click += new System.EventHandler(this.btnTextilHogar_Click);
             // 
             // btnCasaDecoracion
             // 
@@ -887,6 +1024,7 @@
             this.btnCasaDecoracion.Text = "Casa y decoración";
             this.btnCasaDecoracion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCasaDecoracion.UseVisualStyleBackColor = true;
+            this.btnCasaDecoracion.Click += new System.EventHandler(this.btnCasaDecoracion_Click);
             // 
             // btnMascotas
             // 
@@ -898,6 +1036,7 @@
             this.btnMascotas.Text = "Mascotas";
             this.btnMascotas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMascotas.UseVisualStyleBackColor = true;
+            this.btnMascotas.Click += new System.EventHandler(this.btnMascotas_Click);
             // 
             // btnBricolaje
             // 
@@ -909,6 +1048,7 @@
             this.btnBricolaje.Text = "Bricolaje";
             this.btnBricolaje.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBricolaje.UseVisualStyleBackColor = true;
+            this.btnBricolaje.Click += new System.EventHandler(this.btnBricolaje_Click);
             // 
             // btnJardin
             // 
@@ -920,6 +1060,7 @@
             this.btnJardin.Text = "Jardín y aire libre";
             this.btnJardin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnJardin.UseVisualStyleBackColor = true;
+            this.btnJardin.Click += new System.EventHandler(this.btnJardin_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -937,96 +1078,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1147, 108);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 6;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel10.Controls.Add(this.button1, 5, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button2, 4, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button3, 3, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button4, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button5, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button6, 0, 0);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 17);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1147, 108);
-            this.tableLayoutPanel10.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::ProyectoCompra.Properties.Resources.icon_nutricion_deportiva;
-            this.button1.Location = new System.Drawing.Point(958, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 101);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Nutrición deportiva";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::ProyectoCompra.Properties.Resources.icon_comida_internacional;
-            this.button2.Location = new System.Drawing.Point(767, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 101);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Comidas internacionales";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::ProyectoCompra.Properties.Resources.icon_conservas;
-            this.button3.Location = new System.Drawing.Point(576, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 101);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Conservas";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::ProyectoCompra.Properties.Resources.icon_desayuno;
-            this.button4.Location = new System.Drawing.Point(385, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(183, 101);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Desayuno y merienda";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::ProyectoCompra.Properties.Resources.icon_aceite;
-            this.button5.Location = new System.Drawing.Point(194, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(183, 101);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Aceites, vinagres y salsas";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Image = global::ProyectoCompra.Properties.Resources.icon_lacteos;
-            this.button6.Location = new System.Drawing.Point(3, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(183, 101);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Lacteos y huevos";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1042,6 +1093,7 @@
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.gbxAlimentacion.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1058,7 +1110,6 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1131,11 +1182,11 @@
         private System.Windows.Forms.Button btnJardin;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnNutricionDep;
+        private System.Windows.Forms.Button btnComidaInternacional;
+        private System.Windows.Forms.Button btnConserva;
+        private System.Windows.Forms.Button btnDesayunoMer;
+        private System.Windows.Forms.Button btnAceites;
+        public System.Windows.Forms.Button btnLacteos;
     }
 }
