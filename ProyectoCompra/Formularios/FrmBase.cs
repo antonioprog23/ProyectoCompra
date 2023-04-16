@@ -3,12 +3,6 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -16,18 +10,22 @@ namespace ProyectoCompra.Formularios
     public partial class FrmBase : Form
     {
         private Usuario usuarioRecuperado;
+        private Carrito carrito;
+        private List<Carrito> lista;
 
         public FrmBase()
         {
             InitializeComponent();
+            carrito = new Carrito();
         }
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
+            //USUARO 
             Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
             if (usuarioFichero != null)
             {
-                usuarioRecuperado = BDCliente.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());
+                usuarioRecuperado = BDUsuario.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());                
             }
 
             if (usuarioRecuperado == null)
@@ -60,6 +58,16 @@ namespace ProyectoCompra.Formularios
         {
             FrmCarrito frmCarrito = new FrmCarrito();
             frmCarrito.ShowDialog();
+        }
+
+        public Label GetLabelContador()
+        {
+            return this.lblContador;
+        }
+
+        private void lblContador_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

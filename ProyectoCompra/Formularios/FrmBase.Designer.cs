@@ -160,6 +160,7 @@
             this.lblContador.Size = new System.Drawing.Size(13, 13);
             this.lblContador.TabIndex = 6;
             this.lblContador.Text = "0";
+            this.lblContador.TextChanged += new System.EventHandler(this.lblContador_TextChanged);
             // 
             // btnBuscar
             // 
