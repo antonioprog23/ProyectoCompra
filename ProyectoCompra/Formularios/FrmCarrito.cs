@@ -1,4 +1,5 @@
-﻿using ProyectoCompra.Clases;
+﻿using ProyectoCompra.Base_datos;
+using ProyectoCompra.Clases;
 using ProyectoCompra.Controles;
 using ProyectoCompra.Ficheros;
 using System;
@@ -9,14 +10,16 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmCarrito : Form
     {
-        private Carrito carrito;
         private List<Carrito> productos;
+        private Usuario idUsuario;
+        private Carrito carrito;
 
         public FrmCarrito()
         {
             InitializeComponent();
             carrito = new Carrito();
-            productos = carrito.GetLista();
+            idUsuario = FicheroAuxiliar.leerFichero();
+            productos = carrito.consultarProductosCarrito(idUsuario.idUsuario);
         }
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
@@ -28,6 +31,10 @@ namespace ProyectoCompra.Formularios
         private void FrmCarrito_Load(object sender, EventArgs e)
         {
             cargarDatos();
+            if (productos.Count == 0)
+            {
+                this.Close();
+            }
         }
 
         private void cargarDatos()
@@ -39,19 +46,17 @@ namespace ProyectoCompra.Formularios
             {
                 CtrlProductoCarrito producto = new CtrlProductoCarrito();
                 Label id = (Label)producto.Controls.Find("lblIdMostrar", true)[0];
-                id.Text = productos[i].GetProducto().id_producto.ToString();
+                id.Text = productos[i].producto.id_producto.ToString();
                 Label nombre = (Label)producto.Controls.Find("lblNombreMostrar", true)[0];
-                nombre.Text = productos[i].GetProducto().nombre;
+                nombre.Text = productos[i].producto.nombre;
                 Label precio = (Label)producto.Controls.Find("lblPrecioMostrar", true)[0];
-                precio.Text = productos[i].GetProducto().precio.ToString();
+                precio.Text = productos[i].producto.precio.ToString();
                 NumericUpDown cantidad = (NumericUpDown)producto.Controls.Find("cantidad", true)[0];
-                cantidad.Text = productos[i].GetCantidad().ToString();
-                Label imagen = (Label)producto.Controls.Find("lblImage", true)[0];
-                imagen.Image = productos[i].GetImage();
+                cantidad.Text = productos[i].cantidad.ToString();
                 producto.botonBorrar.Click += new EventHandler(BototnBorrar_Click);
-                producto.botonBorrar.Name = productos[i].GetProducto().id_producto.ToString();
+                producto.botonBorrar.Name = productos[i].producto.id_producto.ToString();
                 producto.botonCantidad.Click += new EventHandler(BotonCantidad_Click);
-                producto.botonCantidad.Name = productos[i].GetProducto().id_producto.ToString();
+                producto.botonCantidad.Name = productos[i].producto.id_producto.ToString();
                 tbProductos.Controls.Add(producto);
             }
 
@@ -66,7 +71,7 @@ namespace ProyectoCompra.Formularios
             decimal subtTotal = 0;
             foreach (Carrito producto in productos)
             {
-                subtTotal += producto.GetProducto().precio * producto.GetCantidad();
+                subtTotal += producto.producto.precio * producto.cantidad;
             }
             return subtTotal;
         }
@@ -77,7 +82,7 @@ namespace ProyectoCompra.Formularios
             if (confirmarBorrado == DialogResult.Yes)
             {
                 Button button = sender as Button;
-                carrito.borrarProducto(new Producto(Convert.ToInt32(button.Name)));
+                carrito.vaciarCarrito(idUsuario.idUsuario, Convert.ToInt32(button.Name), false);
                 actualizarVentana();
             }
 
@@ -85,17 +90,9 @@ namespace ProyectoCompra.Formularios
 
         private void BotonCantidad_Click(object sender, EventArgs e)
         {
-            NumericUpDown cantidad = sender as NumericUpDown;
-            Carrito carrito = productos.Find(p => p.GetProducto().id_producto == Convert.ToInt32(cantidad.Name));
-            int index = productos.FindIndex(p => p.GetProducto().id_producto == Convert.ToInt32(cantidad.Name));
-            carrito.SetCantidad(Convert.ToInt32(cantidad.Value));
-            productos.RemoveAt(index);
-            productos.Insert(index, carrito);
-            FicheroCarrito.borrarFicheroAux();
-            foreach (Carrito c in productos)
-            {
-                FicheroCarrito.escribirFichero(c);
-            }
+            Producto producto = new Producto(Convert.ToInt32((sender as NumericUpDown).Name));
+            Carrito carrito = new Carrito(Convert.ToInt32((sender as NumericUpDown).Value), producto);
+            BDCarrito.insertarProductoCarrito(idUsuario, carrito, false);
             actualizarVentana();
         }
 
@@ -109,8 +106,11 @@ namespace ProyectoCompra.Formularios
 
         private void btnVaciarCarrito_Click(object sender, EventArgs e)
         {
-            carrito.vaciarCarrito();
-            actualizarVentana();
+            foreach (Carrito producto in productos)
+            {
+                carrito.vaciarCarrito(idUsuario.idUsuario, 0, true);
+            }
+            this.Close();
         }
     }
 }

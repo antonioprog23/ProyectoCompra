@@ -100,7 +100,6 @@
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
-    <Compile Include="Ficheros\FicheroCarrito.cs" />
     <Compile Include="Formularios\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -455,6 +454,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
+    <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
     <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
     <Content Include="Resources\1_1.jpeg" />
     <Content Include="Resources\1_10.jpg" />

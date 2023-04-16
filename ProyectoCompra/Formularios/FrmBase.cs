@@ -17,8 +17,6 @@ namespace ProyectoCompra.Formularios
         {
             InitializeComponent();
             carrito = new Carrito();
-            lista = carrito.GetLista();
-            lblContador.Text = lista.Count.ToString();
         }
 
         private void FrmBase_Load(object sender, EventArgs e)
@@ -27,7 +25,7 @@ namespace ProyectoCompra.Formularios
             Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
             if (usuarioFichero != null)
             {
-                usuarioRecuperado = BDUsuario.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());
+                usuarioRecuperado = BDUsuario.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());                
             }
 
             if (usuarioRecuperado == null)
@@ -69,7 +67,7 @@ namespace ProyectoCompra.Formularios
 
         private void lblContador_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

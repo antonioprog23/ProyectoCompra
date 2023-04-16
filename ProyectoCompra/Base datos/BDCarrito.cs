@@ -1,10 +1,6 @@
 ﻿using ProyectoCompra.Clases;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoCompra.Base_datos
 {
@@ -26,9 +22,10 @@ namespace ProyectoCompra.Base_datos
                         try
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@Id_Usuario", data[0]);
-                            cmd.Parameters.AddWithValue("@Id_Producto", (data[1] as Producto).id_producto);
-                            cmd.Parameters.AddWithValue("@Cantidad", data[2]);
+                            cmd.Parameters.AddWithValue("@Id_Usuario", (data[0] as Usuario).idUsuario);
+                            cmd.Parameters.AddWithValue("@Id_Producto", (data[1] as Carrito).producto.id_producto);
+                            cmd.Parameters.AddWithValue("@Cantidad", (data[1] as Carrito).cantidad);
+                            cmd.Parameters.AddWithValue("@Aumentar", data[2]);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             insertado = true;
@@ -44,7 +41,61 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
+        public static List<Carrito> consultarCarrito(int id)
+        {
+            List<Carrito> lista = new List<Carrito>();
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("ConsultarProductoCarrito", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Id_Usuario", id);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Producto producto = new Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDecimal(3), reader.GetString(4));
+                            int cantidad = reader.GetInt32(5);
+                            Carrito c = new Carrito(cantidad, producto);
+                            lista.Add(c);
+                        }
+                    }
+                }
+            }
+            return lista;
+        }
 
+        public static bool vaciarCarrito(int idUsuario, int idProducto, bool eliminarTodo)
+        {
+            bool eliminado = false;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("EliminarProductoCarrito", connection, transaction))
+                    {
+                        try
+                        {
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                            cmd.Parameters.AddWithValue("@Id_Producto", idProducto);
+                            cmd.Parameters.AddWithValue("@Vaciar_Todo", eliminarTodo);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            eliminado = true;
+                        }
+                        catch (SqlException)
+                        {
+                            eliminado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return eliminado;
+        }
 
     }
 }

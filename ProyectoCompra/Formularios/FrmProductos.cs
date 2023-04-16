@@ -64,7 +64,7 @@ namespace ProyectoCompra.Formularios
         {
             Button button = (Button)sender;
             producto = obtenerProducto(Convert.ToInt32(button.Name));
-            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(button.Image, producto);
+            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto,sender);
             frmDetalleProducto.ShowDialog();
         }
 

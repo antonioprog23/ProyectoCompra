@@ -1,46 +1,41 @@
-﻿using ProyectoCompra.Base_datos;
-using ProyectoCompra.Clases;
+﻿using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
 {
     internal partial class FrmDetalleProducto : Form
     {
-        private Image Image;
+        Carrito carrito;
         private Producto producto;
-        private FrmBase FrmBase;
         private List<Carrito> lista;
+        private Image imagen;
 
-        public FrmDetalleProducto(Image image, Producto producto)
+        public FrmDetalleProducto(Producto producto, object sender)
         {
             InitializeComponent();
-            this.Image = image;
             this.producto = producto;
-            FrmBase = new FrmBase();
-            lista = FicheroCarrito.leerFichero();
+            this.imagen = (sender as Button).Image;
+            carrito = new Carrito();
         }
 
         private void FrmDetalleProducto_Load(object sender, EventArgs e)
         {
-            lblImage.Image = Image;
             lblNombreMostrar.Text = producto.nombre;
             lblDescripcionMostrar.Text = producto.descripcion;
             lblPrecioMostrar.Text = producto.precio.ToString();
             lblFabricanteMostrar.Text = producto.fabricante.ToString();
+            lblImage.Image = imagen;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), Image);
-            //carrito.insertarProducto(producto);
             Usuario usuario = FicheroAuxiliar.leerFichero();
-            BDCarrito.insertarProductoCarrito(usuario.idUsuario,producto,3); 
+            Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), producto);
+            carrito.insertarProducto(usuario, carrito, true);
             Close();
         }
 
