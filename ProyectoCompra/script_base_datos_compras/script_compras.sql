@@ -46,15 +46,6 @@ CREATE TABLE detalle_usuario
 	fecha_ultima_modificacion DATETIME,
 	CONSTRAINT constraint_id_usuario_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario) ON DELETE CASCADE
 )
-
--- USUARIO LOGIN
-CREATE TABLE usuario_login
-(
-	id_usuario INT NOT NULL PRIMARY KEY,
-	fecha_ultimo_acceso DATETIME NOT NULL,
-	CONSTRAINT constraint_id_usuario_login_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario) ON DELETE CASCADE
-)
-
 -- USUARIO INVITADO
 
 CREATE TABLE usuario_invitado (
