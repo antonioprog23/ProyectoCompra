@@ -56,9 +56,8 @@ namespace ProyectoCompra.Base_datos
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
-                using (SqlCommand cmd = new SqlCommand("", connection))
+                using (SqlCommand cmd = new SqlCommand("ConsultarUsuario", connection))
                 {
-                    cmd.CommandText = "ConsultarUsuario";
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Usuario_name", datos[0]);
                     cmd.Parameters.AddWithValue("@Contrasenia", datos[1]);
@@ -144,9 +143,35 @@ namespace ProyectoCompra.Base_datos
             return actualizado;
         }
 
-
-
-
-
+        public static bool insertarDatosLogin(string userName)
+        {
+            bool insertado = true;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("InsertarDatosLogin", connection, transaction))
+                    {
+                        try
+                        {
+                            //cmd.CommandText = "InsertarDatos";
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            //USUARIO
+                            cmd.Parameters.AddWithValue("@Usuario_name", userName);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            insertado = true;
+                        }
+                        catch (SqlException)
+                        {
+                            insertado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return insertado;
+        }
     }
 }
