@@ -3,6 +3,7 @@ using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -35,7 +36,8 @@ namespace ProyectoCompra.Formularios
         {
             Usuario usuario = FicheroAuxiliar.leerFichero();
             Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), producto);
-            carrito.insertarProducto(usuario, carrito, true);
+
+            carrito.insertarProducto(usuario, carrito, true, imagen.ToString());
             Close();
         }
 

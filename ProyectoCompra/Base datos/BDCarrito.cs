@@ -1,6 +1,7 @@
 ﻿using ProyectoCompra.Clases;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace ProyectoCompra.Base_datos
 {
@@ -26,6 +27,7 @@ namespace ProyectoCompra.Base_datos
                             cmd.Parameters.AddWithValue("@Id_Producto", (data[1] as Carrito).producto.id_producto);
                             cmd.Parameters.AddWithValue("@Cantidad", (data[1] as Carrito).cantidad);
                             cmd.Parameters.AddWithValue("@Aumentar", data[2]);
+                            cmd.Parameters.AddWithValue("@Imagen", data[3]);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             insertado = true;
@@ -57,7 +59,8 @@ namespace ProyectoCompra.Base_datos
                         {
                             Producto producto = new Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDecimal(3), reader.GetString(4));
                             int cantidad = reader.GetInt32(5);
-                            Carrito c = new Carrito(cantidad, producto);
+                            string codigoImagen = reader.GetString(6);
+                            Carrito c = new Carrito(cantidad, producto, codigoImagen);
                             lista.Add(c);
                         }
                     }

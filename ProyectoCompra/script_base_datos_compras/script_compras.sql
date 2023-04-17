@@ -128,6 +128,7 @@ CREATE TABLE carrito
 	id_usuario INT,
 	id_producto INT,
 	cantidad INT NOT NULL,
+	imagen NVARCHAR(100) NOT NULL
 	CONSTRAINT constraint_carrito_pk PRIMARY KEY (id_usuario, id_producto),
 	CONSTRAINT constraint_usuario_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),
 	CONSTRAINT constraint_producto_fk FOREIGN KEY (id_producto) REFERENCES producto (id_producto)

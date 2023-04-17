@@ -64,13 +64,13 @@ namespace ProyectoCompra.Formularios
         {
             Button button = (Button)sender;
             producto = obtenerProducto(Convert.ToInt32(button.Name));
-            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto,sender);
+            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto, sender);
             frmDetalleProducto.ShowDialog();
         }
 
         private Image obtenerImagen(int contador)
         {
-            Image image = null;
+            Image image = null; 
             switch (subCategoria)
             {
                 case 1:

@@ -4,6 +4,7 @@ using ProyectoCompra.Controles;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -53,6 +54,8 @@ namespace ProyectoCompra.Formularios
                 precio.Text = productos[i].producto.precio.ToString();
                 NumericUpDown cantidad = (NumericUpDown)producto.Controls.Find("cantidad", true)[0];
                 cantidad.Text = productos[i].cantidad.ToString();
+                Label imagen = (Label)producto.Controls.Find("lblImage", true)[0];
+                imagen.Image = obtenerImagen(productos[i].codigoImagen);
                 producto.botonBorrar.Click += new EventHandler(BototnBorrar_Click);
                 producto.botonBorrar.Name = productos[i].producto.id_producto.ToString();
                 producto.botonCantidad.Click += new EventHandler(BotonCantidad_Click);
@@ -92,7 +95,7 @@ namespace ProyectoCompra.Formularios
         {
             Producto producto = new Producto(Convert.ToInt32((sender as NumericUpDown).Name));
             Carrito carrito = new Carrito(Convert.ToInt32((sender as NumericUpDown).Value), producto);
-            BDCarrito.insertarProductoCarrito(idUsuario, carrito, false);
+            BDCarrito.insertarProductoCarrito(idUsuario, carrito, false, "");
             actualizarVentana();
         }
 
@@ -111,6 +114,13 @@ namespace ProyectoCompra.Formularios
                 carrito.vaciarCarrito(idUsuario.idUsuario, 0, true);
             }
             this.Close();
+        }
+
+        private Image obtenerImagen(string codigoImagen)
+        {
+            Image imagen = null;
+
+            return imagen;
         }
     }
 }
