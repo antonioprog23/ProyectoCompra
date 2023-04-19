@@ -37,9 +37,13 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = FicheroAuxiliar.leerFichero();
             Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), producto);
 
-            carrito.insertarProducto(usuario, carrito, true, imagen.ToString());
+            carrito.insertarProducto(usuario, carrito, true, imagen.Tag);
             Close();
         }
 
+        private byte[] obtenerByteImagen(Image imagen)
+        {
+            return null;
+        }
     }
 }

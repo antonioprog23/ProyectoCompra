@@ -10,14 +10,14 @@ namespace ProyectoCompra.Clases
         public int cantidad { get; set; }
         public List<Carrito> lista;
         private BDCarrito BDCarrito;
-        public string codigoImagen { set; get; }
+        public string rutaImagen { set; get; }
         public Producto producto { set; get; }
 
-        public Carrito(int cantidad, Producto producto, string codigoImagen)
+        public Carrito(int cantidad, Producto producto, string rutaImagen)
         {
             this.cantidad = cantidad;
             this.producto = producto;
-            this.codigoImagen = codigoImagen;
+            this.rutaImagen = rutaImagen;
         }
 
         public Carrito(int cantidad, Producto producto)

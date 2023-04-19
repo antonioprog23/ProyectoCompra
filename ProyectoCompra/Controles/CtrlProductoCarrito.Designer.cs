@@ -57,14 +57,14 @@
             this.groupBox1.Controls.Add(this.lblImage);
             this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(339, 129);
+            this.groupBox1.Size = new System.Drawing.Size(450, 168);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // lblIdMostrar
             // 
             this.lblIdMostrar.AutoSize = true;
-            this.lblIdMostrar.Location = new System.Drawing.Point(167, 25);
+            this.lblIdMostrar.Location = new System.Drawing.Point(252, 43);
             this.lblIdMostrar.Name = "lblIdMostrar";
             this.lblIdMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblIdMostrar.TabIndex = 10;
@@ -72,7 +72,7 @@
             // lblIdProducto
             // 
             this.lblIdProducto.AutoSize = true;
-            this.lblIdProducto.Location = new System.Drawing.Point(112, 25);
+            this.lblIdProducto.Location = new System.Drawing.Point(199, 43);
             this.lblIdProducto.Name = "lblIdProducto";
             this.lblIdProducto.Size = new System.Drawing.Size(21, 13);
             this.lblIdProducto.TabIndex = 9;
@@ -80,7 +80,7 @@
             // 
             // cantidad
             // 
-            this.cantidad.Location = new System.Drawing.Point(170, 94);
+            this.cantidad.Location = new System.Drawing.Point(257, 112);
             this.cantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -99,7 +99,7 @@
             // lblPrecioMostrar
             // 
             this.lblPrecioMostrar.AutoSize = true;
-            this.lblPrecioMostrar.Location = new System.Drawing.Point(167, 72);
+            this.lblPrecioMostrar.Location = new System.Drawing.Point(251, 90);
             this.lblPrecioMostrar.Name = "lblPrecioMostrar";
             this.lblPrecioMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblPrecioMostrar.TabIndex = 6;
@@ -107,7 +107,7 @@
             // lblNombreMostrar
             // 
             this.lblNombreMostrar.AutoSize = true;
-            this.lblNombreMostrar.Location = new System.Drawing.Point(167, 50);
+            this.lblNombreMostrar.Location = new System.Drawing.Point(252, 68);
             this.lblNombreMostrar.Name = "lblNombreMostrar";
             this.lblNombreMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblNombreMostrar.TabIndex = 5;
@@ -115,7 +115,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(112, 96);
+            this.lblCantidad.Location = new System.Drawing.Point(199, 114);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(52, 13);
             this.lblCantidad.TabIndex = 4;
@@ -124,7 +124,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(112, 72);
+            this.lblPrecio.Location = new System.Drawing.Point(199, 90);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(40, 13);
             this.lblPrecio.TabIndex = 3;
@@ -133,7 +133,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(112, 50);
+            this.lblNombre.Location = new System.Drawing.Point(199, 68);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 2;
@@ -148,7 +148,7 @@
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Image = global::ProyectoCompra.Properties.Resources.icon_borrar;
-            this.btnBorrar.Location = new System.Drawing.Point(316, 14);
+            this.btnBorrar.Location = new System.Drawing.Point(427, 13);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(17, 15);
             this.btnBorrar.TabIndex = 1;
@@ -156,9 +156,9 @@
             // 
             // lblImage
             // 
-            this.lblImage.Location = new System.Drawing.Point(6, 15);
+            this.lblImage.Location = new System.Drawing.Point(6, 14);
             this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(100, 111);
+            this.lblImage.Size = new System.Drawing.Size(187, 151);
             this.lblImage.TabIndex = 0;
             // 
             // CtrlProductoCarrito
@@ -168,7 +168,7 @@
             this.AutoSize = true;
             this.Controls.Add(this.groupBox1);
             this.Name = "CtrlProductoCarrito";
-            this.Size = new System.Drawing.Size(345, 132);
+            this.Size = new System.Drawing.Size(456, 171);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();

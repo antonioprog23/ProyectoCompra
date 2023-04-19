@@ -2,6 +2,7 @@
 using ProyectoCompra.Clases;
 using ProyectoCompra.Controles;
 using ProyectoCompra.Ficheros;
+using ProyectoCompra.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -55,7 +56,7 @@ namespace ProyectoCompra.Formularios
                 NumericUpDown cantidad = (NumericUpDown)producto.Controls.Find("cantidad", true)[0];
                 cantidad.Text = productos[i].cantidad.ToString();
                 Label imagen = (Label)producto.Controls.Find("lblImage", true)[0];
-                imagen.Image = obtenerImagen(productos[i].codigoImagen);
+                imagen.Image = Imagen.obtenerImagenDB(productos[i].rutaImagen);
                 producto.botonBorrar.Click += new EventHandler(BototnBorrar_Click);
                 producto.botonBorrar.Name = productos[i].producto.id_producto.ToString();
                 producto.botonCantidad.Click += new EventHandler(BotonCantidad_Click);
@@ -114,13 +115,6 @@ namespace ProyectoCompra.Formularios
                 carrito.vaciarCarrito(idUsuario.idUsuario, 0, true);
             }
             this.Close();
-        }
-
-        private Image obtenerImagen(string codigoImagen)
-        {
-            Image imagen = null;
-
-            return imagen;
         }
     }
 }

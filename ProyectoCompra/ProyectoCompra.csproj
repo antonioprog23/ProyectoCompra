@@ -71,6 +71,7 @@
     <Compile Include="Base datos\BDUsuario.cs" />
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Imagen.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Usuario.cs" />

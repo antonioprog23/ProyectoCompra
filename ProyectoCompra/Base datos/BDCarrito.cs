@@ -59,8 +59,8 @@ namespace ProyectoCompra.Base_datos
                         {
                             Producto producto = new Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDecimal(3), reader.GetString(4));
                             int cantidad = reader.GetInt32(5);
-                            string codigoImagen = reader.GetString(6);
-                            Carrito c = new Carrito(cantidad, producto, codigoImagen);
+                            string rutaImagen = reader.GetString(6);
+                            Carrito c = new Carrito(cantidad, producto, rutaImagen);
                             lista.Add(c);
                         }
                     }
