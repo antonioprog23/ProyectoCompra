@@ -68,6 +68,9 @@ namespace ProyectoCompra.Clases
                 case "1":
                     imagen = AlimentacionS1.ResourceManager.GetObject(rutaImagen) as Image;
                     break;
+                case "2":
+                    imagen = AlimentacionS2.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
             }
             return imagen;
         }

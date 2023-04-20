@@ -131,6 +131,12 @@
     <Compile Include="Formularios\FrmProductos.Designer.cs">
       <DependentUpon>FrmProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmRecuperarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRecuperarContrasenia.Designer.cs">
+      <DependentUpon>FrmRecuperarContrasenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmUsuarioEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRecuperarContrasenia.resx">
+      <DependentUpon>FrmRecuperarContrasenia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuarioEdit.en.resx">
       <DependentUpon>FrmUsuarioEdit.cs</DependentUpon>
@@ -483,6 +492,27 @@
     <Content Include="Resources\1_7.png" />
     <Content Include="Resources\1_8.jpg" />
     <Content Include="Resources\1_9.jpg" />
+    <Content Include="Resources\2_1.jpg" />
+    <Content Include="Resources\2_10.jpg" />
+    <Content Include="Resources\2_11.jpeg" />
+    <Content Include="Resources\2_12.jpg" />
+    <Content Include="Resources\2_13.jpeg" />
+    <Content Include="Resources\2_14.png" />
+    <Content Include="Resources\2_15.jpg" />
+    <Content Include="Resources\2_16.jpg" />
+    <Content Include="Resources\2_17.jpg" />
+    <Content Include="Resources\2_18.jpg" />
+    <Content Include="Resources\2_19.jpg" />
+    <Content Include="Resources\2_2.jpeg" />
+    <Content Include="Resources\2_20.jpeg" />
+    <Content Include="Resources\2_21.jpeg" />
+    <Content Include="Resources\2_3.jpg" />
+    <Content Include="Resources\2_4.png" />
+    <Content Include="Resources\2_5.jpg" />
+    <Content Include="Resources\2_6.jpg" />
+    <Content Include="Resources\2_7.jpg" />
+    <Content Include="Resources\2_8.jpeg" />
+    <Content Include="Resources\2_9.png" />
     <None Include="Resources\icon_aniadir_carrito.png" />
     <None Include="Resources\icon_borrar.png" />
     <None Include="Resources\descarga.htm" />

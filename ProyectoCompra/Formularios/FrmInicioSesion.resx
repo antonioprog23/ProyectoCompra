@@ -118,17 +118,53 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnRecuperarContrasenia.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRecuperarContrasenia.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Nova Cond, 6.75pt, style=Bold</value>
+  </data>
+  <data name="btnRecuperarContrasenia.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRecuperarContrasenia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 189</value>
+  </data>
+  <data name="btnRecuperarContrasenia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnRecuperarContrasenia.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnRecuperarContrasenia.Text" xml:space="preserve">
+    <value>¿Has olvidado la contraseña?</value>
+  </data>
+  <data name="&gt;&gt;btnRecuperarContrasenia.Name" xml:space="preserve">
+    <value>btnRecuperarContrasenia</value>
+  </data>
+  <data name="&gt;&gt;btnRecuperarContrasenia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecuperarContrasenia.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnRecuperarContrasenia.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="contrasenia.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="contrasenia.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="contrasenia.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 124</value>
   </data>
   <data name="contrasenia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
+    <value>216, 28</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="contrasenia.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
@@ -142,39 +178,6 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;contrasenia.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="chxRecordar.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chxRecordar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Nova, 8.25pt</value>
-  </data>
-  <data name="chxRecordar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chxRecordar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 152</value>
-  </data>
-  <data name="chxRecordar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="chxRecordar.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="chxRecordar.Text" xml:space="preserve">
-    <value>Recuerdame</value>
-  </data>
-  <data name="&gt;&gt;chxRecordar.Name" xml:space="preserve">
-    <value>chxRecordar</value>
-  </data>
-  <data name="&gt;&gt;chxRecordar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chxRecordar.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;chxRecordar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="lblContrasenia.AutoSize" type="System.Boolean, mscorlib">
@@ -214,7 +217,7 @@
     <value>27, 83</value>
   </data>
   <data name="txtUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 21</value>
+    <value>216, 21</value>
   </data>
   <data name="txtUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -268,10 +271,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 173</value>
+    <value>27, 158</value>
   </data>
   <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 25</value>
+    <value>216, 25</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1071,13 +1074,13 @@
     <value>4</value>
   </data>
   <data name="tabRegistrarse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 23</value>
   </data>
   <data name="tabRegistrarse.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabRegistrarse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 404</value>
+    <value>432, 403</value>
   </data>
   <data name="tabRegistrarse.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1132,6 +1135,9 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Nova Cond, 8.25pt, style=Bold</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -3,6 +3,7 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Controles;
 using ProyectoCompra.Ficheros;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -29,7 +30,7 @@ namespace ProyectoCompra.Formularios
         {
             if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
             {
-                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia,"");
+                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia, "");
                 if (usuarioEncontrado == null)
                 {
                     MessageBox.Show("Usuario no encontrado.");
@@ -121,6 +122,22 @@ namespace ProyectoCompra.Formularios
                     txtEdad.Text = "";
                 }
             }
+        }
+
+        private void btnRecuperarContrasenia_Click(object sender, EventArgs e)
+        {
+            FrmRecuperarContrasenia frmRecuperarContrasenia = new FrmRecuperarContrasenia();
+            frmRecuperarContrasenia.ShowDialog();
+        }
+
+        private void btnRecuperarContrasenia_MouseEnter(object sender, EventArgs e)
+        {
+            btnRecuperarContrasenia.ForeColor = Color.Black;
+        }
+
+        private void btnRecuperarContrasenia_MouseLeave(object sender, EventArgs e)
+        {
+            btnRecuperarContrasenia.ForeColor = Color.DimGray;
         }
     }
 }

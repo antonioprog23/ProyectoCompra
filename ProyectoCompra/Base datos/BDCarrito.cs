@@ -1,7 +1,6 @@
 ﻿using ProyectoCompra.Clases;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Drawing;
 
 namespace ProyectoCompra.Base_datos
 {

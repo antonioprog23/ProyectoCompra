@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chxRecordar = new System.Windows.Forms.CheckBox();
+            this.btnRecuperarContrasenia = new System.Windows.Forms.Button();
             this.lblContrasenia = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -75,8 +75,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRecuperarContrasenia);
             this.groupBox1.Controls.Add(this.contrasenia);
-            this.groupBox1.Controls.Add(this.chxRecordar);
             this.groupBox1.Controls.Add(this.lblContrasenia);
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.lblUsuario);
@@ -85,11 +85,19 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // chxRecordar
+            // btnRecuperarContrasenia
             // 
-            resources.ApplyResources(this.chxRecordar, "chxRecordar");
-            this.chxRecordar.Name = "chxRecordar";
-            this.chxRecordar.UseVisualStyleBackColor = true;
+            this.btnRecuperarContrasenia.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRecuperarContrasenia.FlatAppearance.BorderSize = 0;
+            this.btnRecuperarContrasenia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnRecuperarContrasenia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnRecuperarContrasenia, "btnRecuperarContrasenia");
+            this.btnRecuperarContrasenia.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRecuperarContrasenia.Name = "btnRecuperarContrasenia";
+            this.btnRecuperarContrasenia.UseVisualStyleBackColor = true;
+            this.btnRecuperarContrasenia.Click += new System.EventHandler(this.btnRecuperarContrasenia_Click);
+            this.btnRecuperarContrasenia.MouseEnter += new System.EventHandler(this.btnRecuperarContrasenia_MouseEnter);
+            this.btnRecuperarContrasenia.MouseLeave += new System.EventHandler(this.btnRecuperarContrasenia_MouseLeave);
             // 
             // lblContrasenia
             // 
@@ -320,6 +328,7 @@
             // 
             resources.ApplyResources(this.contrasenia, "contrasenia");
             this.contrasenia.Name = "contrasenia";
+            this.contrasenia.TextBoxtxtContrasenia = "";
             // 
             // frmInicioSesion
             // 
@@ -351,7 +360,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.ComboBox cbxIdiomas;
-        private System.Windows.Forms.CheckBox chxRecordar;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabInicioSesion;
         private System.Windows.Forms.TabPage tabRegistrarse;
@@ -381,6 +389,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private Controles.ctrlContrasenia contrasenia;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnRecuperarContrasenia;
     }
 }
 
