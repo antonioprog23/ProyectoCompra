@@ -116,6 +116,7 @@ namespace ProyectoCompra.Clases
                     imagen = AlimentacionS9.ResourceManager.GetObject(rutaImagen) as Image;
                     break;
             }
+
             return imagen;
         }
 
