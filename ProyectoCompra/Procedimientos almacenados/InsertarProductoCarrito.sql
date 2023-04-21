@@ -7,7 +7,8 @@ CREATE PROCEDURE InsertarProductoCarrito
 	@Id_Usuario INT,
 	@Id_Producto INT,
 	@Cantidad INT,
-	@Aumentar BIT
+	@Aumentar BIT,
+	@Imagen NVARCHAR(MAX)
 AS
 BEGIN
 	IF EXISTS(SELECT 1 FROM carrito WHERE id_usuario = @Id_Usuario AND id_producto = @Id_Producto)
@@ -20,5 +21,5 @@ BEGIN
 				UPDATE carrito SET cantidad = @Cantidad WHERE id_usuario = @Id_Usuario AND id_producto = @Id_Producto
 		END
 	ELSE
-		INSERT INTO carrito (id_usuario,id_producto,cantidad) VALUES (@Id_usuario,@Id_producto,@Cantidad)
+		INSERT INTO carrito (id_usuario,id_producto,cantidad,imagen) VALUES (@Id_usuario,@Id_producto,@Cantidad,@Imagen)
 END

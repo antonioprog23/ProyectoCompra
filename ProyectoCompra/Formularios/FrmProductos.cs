@@ -52,7 +52,7 @@ namespace ProyectoCompra.Formularios
                         tableLayoutPanel1.Controls.Add(button, j, i);
                         button.Name = contador.ToString();
                         contador++;
-                        Image image = obtenerImagen(contador);
+                        Image image = Imagen.cargarImagen(contador, subCategoria);
                         button.Image = image;
                     }
 
@@ -64,36 +64,8 @@ namespace ProyectoCompra.Formularios
         {
             Button button = (Button)sender;
             producto = obtenerProducto(Convert.ToInt32(button.Name));
-            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto,sender);
+            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto, sender);
             frmDetalleProducto.ShowDialog();
-        }
-
-        private Image obtenerImagen(int contador)
-        {
-            Image image = null;
-            switch (subCategoria)
-            {
-                case 1:
-                    image = AlimentacionS1.ResourceManager.GetObject(string.Format("_1_{0}", contador)) as Image;
-                    break;
-                case 2:
-                    image = AlimentacionS2.ResourceManager.GetObject(string.Format("_2_{0}", contador)) as Image;
-                    break;
-                case 3:
-                    image = AlimentacionS1.ResourceManager.GetObject(string.Format("_3_{0}", contador)) as Image;
-                    break;
-                case 4:
-                    image = AlimentacionS1.ResourceManager.GetObject(string.Format("_4_{0}", contador)) as Image;
-                    break;
-                case 5:
-                    image = AlimentacionS1.ResourceManager.GetObject(string.Format("_5_{0}", contador)) as Image;
-                    break;
-                case 6:
-                    image = AlimentacionS1.ResourceManager.GetObject(string.Format("_6_{0}", contador)) as Image;
-                    break;
-            }
-
-            return image;
         }
 
         private Producto obtenerProducto(int contador)
