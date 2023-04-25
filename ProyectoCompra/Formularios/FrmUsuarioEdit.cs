@@ -34,16 +34,22 @@ namespace ProyectoCompra.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (!txtDireccion.Texto.Equals("") || !txtCorreo.Texto.Equals("") || !ctrlContrasenia.TextBoxtxtContrasenia.Equals("") || !txtRepContrasenia.Text.Equals(""))
+            if (!txtDireccion.Texto.Equals("") || !txtCorreo.Texto.Equals("") || (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals("")))
             {
-                MessageBox.Show("AQUI");
-                if (ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text) && (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals("")))
+                if (ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text))
                 {
                     if (BDUsuario.actualiarDatos(txtUsuario.Texto, "", "", ctrlContrasenia.TextBoxtxtContrasenia))
                     {
                         MessageBox.Show("Los DATOS se han actualizado correctamente.");
                         Application.Restart();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden.");
+                    ctrlContrasenia.TextBoxtxtContrasenia = "";
+                    txtRepContrasenia.Text = "";
+                    return;
                 }
                 if (BDUsuario.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ""))
                 {
@@ -64,8 +70,6 @@ namespace ProyectoCompra.Formularios
             txtEdad.Texto = usuarioModificar.cliente.edad.ToString();
             cbxSexo.Text = usuarioModificar.cliente.sexo;
             dateFNacimiento.Value = Convert.ToDateTime(usuarioModificar.cliente.fechaNacimiento);
-            //txtDireccion.Texto = usuarioModificar.cliente.direccion.ToString();
-            //txtCorreo.Texto = usuarioModificar.cliente.correo.ToString();
             txtUsuario.Texto = usuarioModificar.username.ToString();
         }
 
@@ -76,7 +80,6 @@ namespace ProyectoCompra.Formularios
             txtEdad.Enabled = false;
             cbxSexo.Enabled = false;
             dateFNacimiento.Enabled = false;
-            //txtDireccion.Enabled = false;
             txtUsuario.Enabled = false;
         }
 
