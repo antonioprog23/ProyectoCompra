@@ -173,6 +173,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlimentacionS1.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AlimentacionS10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS10.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS11.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AlimentacionS2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -270,6 +280,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>AlimentacionS1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS10.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS10.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS11.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS11.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\AlimentacionS2.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -531,6 +549,54 @@
     <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
     <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
     <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
+    <None Include="Resources\10_1.jpg" />
+    <None Include="Resources\10_2.jpg" />
+    <None Include="Resources\10_3.jpg" />
+    <None Include="Resources\10_4.jpg" />
+    <None Include="Resources\10_5.jpg" />
+    <None Include="Resources\10_6.jpg" />
+    <None Include="Resources\10_7.jpg" />
+    <None Include="Resources\10_8.jpg" />
+    <None Include="Resources\10_9.jpg" />
+    <None Include="Resources\10_10.jpg" />
+    <None Include="Resources\10_11.jpg" />
+    <None Include="Resources\10_15.jpg" />
+    <None Include="Resources\10_16.jpg" />
+    <None Include="Resources\10_17.jpg" />
+    <None Include="Resources\10_18.jpg" />
+    <None Include="Resources\10_19.jpg" />
+    <None Include="Resources\10_20.jpg" />
+    <None Include="Resources\10_12.jpg" />
+    <None Include="Resources\10_13.jpg" />
+    <None Include="Resources\10_14.jpg" />
+    <None Include="Resources\10_21.jpg" />
+    <None Include="Resources\10_22.jpg" />
+    <None Include="Resources\10_23.jpg" />
+    <None Include="Resources\10_24.jpeg" />
+    <None Include="Resources\11_5.jpg" />
+    <None Include="Resources\11_6.jpg" />
+    <None Include="Resources\11_7.jpg" />
+    <None Include="Resources\11_8.jpg" />
+    <None Include="Resources\11_9.jpg" />
+    <None Include="Resources\11_10.jpg" />
+    <None Include="Resources\11_1.jpg" />
+    <None Include="Resources\11_2.jpg" />
+    <None Include="Resources\11_3.jpg" />
+    <None Include="Resources\11_4.jpg" />
+    <None Include="Resources\11_15.jpg" />
+    <None Include="Resources\11_16.jpg" />
+    <None Include="Resources\11_17.jpg" />
+    <None Include="Resources\11_18.jpg" />
+    <None Include="Resources\11_19.jpg" />
+    <None Include="Resources\11_20.jpg" />
+    <None Include="Resources\11_11.jpg" />
+    <None Include="Resources\11_12.jpg" />
+    <None Include="Resources\11_13.jpg" />
+    <None Include="Resources\11_14.jpeg" />
+    <None Include="Resources\11_21.jpeg" />
+    <None Include="Resources\11_22.jpg" />
+    <None Include="Resources\11_23.jpg" />
+    <None Include="Resources\11_24.jpg" />
     <Content Include="Resources\1_1.jpeg" />
     <Content Include="Resources\1_10.jpg" />
     <Content Include="Resources\1_11.jpg" />
