@@ -193,6 +193,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlimentacionS13.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AlimentacionS14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS14.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS15.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AlimentacionS2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -306,6 +316,14 @@
     <EmbeddedResource Include="Properties\AlimentacionS13.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AlimentacionS13.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS14.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS14.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS15.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS15.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\AlimentacionS2.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -663,6 +681,40 @@
     <None Include="Resources\13_22.jpg" />
     <None Include="Resources\13_23.jpg" />
     <None Include="Resources\13_24.jpg" />
+    <None Include="Resources\14_1.jpg" />
+    <None Include="Resources\14_2.jpg" />
+    <None Include="Resources\14_3.png" />
+    <None Include="Resources\14_4.jpg" />
+    <None Include="Resources\14_5.jpeg" />
+    <None Include="Resources\14_6.jpeg" />
+    <None Include="Resources\14_7.jpg" />
+    <None Include="Resources\14_8.png" />
+    <None Include="Resources\14_9.jpg" />
+    <None Include="Resources\14_10.jpg" />
+    <None Include="Resources\14_13.jpeg" />
+    <None Include="Resources\14_18.jpg" />
+    <None Include="Resources\14_19.png" />
+    <None Include="Resources\14_20.jpg" />
+    <None Include="Resources\14_15.jpg" />
+    <None Include="Resources\14_16.jpg" />
+    <None Include="Resources\14_17.jpg" />
+    <None Include="Resources\14_11.jpg" />
+    <None Include="Resources\14_12.jpg" />
+    <Content Include="Resources\14_14.jpg" />
+    <None Include="Resources\14_22.jpeg" />
+    <None Include="Resources\14_23.jpg" />
+    <Content Include="Resources\14_21.jpg" />
+    <Content Include="Resources\14_24.jpg" />
+    <None Include="Resources\15_3.jpg" />
+    <None Include="Resources\15_2.jpg" />
+    <None Include="Resources\15_4.jpeg" />
+    <None Include="Resources\15_5.jpg" />
+    <None Include="Resources\15_6.jpg" />
+    <Content Include="Resources\15_1.jpeg" />
+    <Content Include="Resources\15_10.jpg" />
+    <Content Include="Resources\15_7.jpg" />
+    <Content Include="Resources\15_8.jpg" />
+    <Content Include="Resources\15_9.png" />
     <Content Include="Resources\1_1.jpeg" />
     <Content Include="Resources\1_10.jpg" />
     <Content Include="Resources\1_11.jpg" />
