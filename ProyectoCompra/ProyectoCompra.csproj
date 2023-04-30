@@ -82,6 +82,18 @@
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlHistorialPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlHistorialPedido.Designer.cs">
+      <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlOtrasOpciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlOtrasOpciones.Designer.cs">
+      <DependentUpon>CtrlOtrasOpciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlProductoCarrito.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +112,7 @@
     <Compile Include="Controles\CtrlTextoBox.Designer.cs">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enumerados\EOtrasOpciones.cs" />
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
     <Compile Include="Formularios\FrmBase.cs">
       <SubType>Form</SubType>
@@ -124,6 +137,18 @@
     </Compile>
     <Compile Include="Formularios\FrmDetalleProducto.Designer.cs">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmHistorialPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmHistorialPedidos.Designer.cs">
+      <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmOtrasOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmOtrasOpciones.Designer.cs">
+      <DependentUpon>FrmOtrasOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmProductos.cs">
       <SubType>Form</SubType>
@@ -247,6 +272,12 @@
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlHistorialPedido.resx">
+      <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlOtrasOpciones.resx">
+      <DependentUpon>CtrlOtrasOpciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlProductoCarrito.resx">
       <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmDetalleProducto.resx">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmHistorialPedidos.resx">
+      <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmOtrasOpciones.resx">
+      <DependentUpon>FrmOtrasOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -585,6 +622,13 @@
     <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
     <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
     <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
+    <None Include="Resources\icon_compra.png" />
+    <Content Include="Resources\icon_otras_opciones.png" />
+    <Content Include="Resources\op_0.png" />
+    <None Include="Resources\op_3.png" />
+    <None Include="Resources\op_2.png" />
+    <None Include="Resources\op_1.png" />
+    <None Include="Resources\icon_otras_opciones1.png" />
     <None Include="Resources\10_1.jpg" />
     <None Include="Resources\10_2.jpg" />
     <None Include="Resources\10_3.jpg" />

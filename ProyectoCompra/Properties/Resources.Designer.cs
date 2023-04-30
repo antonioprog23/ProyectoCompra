@@ -253,6 +253,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_compra {
+            get {
+                object obj = ResourceManager.GetObject("icon_compra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_configuracion {
             get {
                 object obj = ResourceManager.GetObject("icon_configuracion", resourceCulture);
@@ -503,6 +513,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_otras_opciones {
+            get {
+                object obj = ResourceManager.GetObject("icon_otras_opciones", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_pasta {
             get {
                 object obj = ResourceManager.GetObject("icon_pasta", resourceCulture);
@@ -686,6 +706,46 @@ namespace ProyectoCompra.Properties {
         internal static System.Drawing.Bitmap ocultar_contrasenia {
             get {
                 object obj = ResourceManager.GetObject("ocultar_contrasenia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap op_0 {
+            get {
+                object obj = ResourceManager.GetObject("op_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap op_1 {
+            get {
+                object obj = ResourceManager.GetObject("op_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap op_2 {
+            get {
+                object obj = ResourceManager.GetObject("op_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap op_3 {
+            get {
+                object obj = ResourceManager.GetObject("op_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

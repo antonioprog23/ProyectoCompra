@@ -1,7 +1,5 @@
 ﻿using ProyectoCompra.Properties;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Resources;
 
 namespace ProyectoCompra.Clases
 {
