@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnConfiguracion = new System.Windows.Forms.Button();
+            this.btnOtrasOpciones = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -71,22 +71,23 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnConfiguracion);
+            this.panel1.Controls.Add(this.btnOtrasOpciones);
             this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Location = new System.Drawing.Point(266, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(128, 111);
             this.panel1.TabIndex = 1;
             // 
-            // btnConfiguracion
+            // btnOtrasOpciones
             // 
-            this.btnConfiguracion.Image = global::ProyectoCompra.Properties.Resources.icon_configuracion;
-            this.btnConfiguracion.Location = new System.Drawing.Point(51, 3);
-            this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(37, 36);
-            this.btnConfiguracion.TabIndex = 1;
-            this.toolTip.SetToolTip(this.btnConfiguracion, "Configuración.");
-            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnOtrasOpciones.Image = global::ProyectoCompra.Properties.Resources.icon_otras_opciones;
+            this.btnOtrasOpciones.Location = new System.Drawing.Point(73, 4);
+            this.btnOtrasOpciones.Name = "btnOtrasOpciones";
+            this.btnOtrasOpciones.Size = new System.Drawing.Size(15, 36);
+            this.btnOtrasOpciones.TabIndex = 1;
+            this.toolTip.SetToolTip(this.btnOtrasOpciones, "Otras opciones.");
+            this.btnOtrasOpciones.UseVisualStyleBackColor = true;
+            this.btnOtrasOpciones.Click += new System.EventHandler(this.btnOtrasOpciones_Click);
             // 
             // btnCerrarSesion
             // 
@@ -437,7 +438,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnConfiguracion;
+        private System.Windows.Forms.Button btnOtrasOpciones;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;

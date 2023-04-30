@@ -1,7 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -40,26 +39,27 @@ namespace ProyectoCompra.Formularios
                 {
                     if (BDUsuario.actualiarDatos(txtUsuario.Texto, "", "", ctrlContrasenia.TextBoxtxtContrasenia))
                     {
-                        MessageBox.Show("Los DATOS se han actualizado correctamente.");
+                        MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Application.Restart();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Las contraseñas no coinciden.");
+                    MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ctrlContrasenia.TextBoxtxtContrasenia = "";
                     txtRepContrasenia.Text = "";
                     return;
                 }
                 if (BDUsuario.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ""))
                 {
-                    MessageBox.Show("Los datos se han actualizado correctamente.");
+                    MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Application.Restart();
                 }
             }
             else
             {
-                MessageBox.Show("Al menos rellena un campo de los posibles a modificar.");
+                MessageBox.Show("Al menos rellena un campo de los posibles a modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
