@@ -1,9 +1,7 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
-using ProyectoCompra.Properties;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using Image = System.Drawing.Image;

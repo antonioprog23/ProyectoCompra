@@ -55,6 +55,12 @@ namespace ProyectoCompra.Formularios
         {
             Close();
         }
+
+        private void btnOtrasOpciones_Click(object sender, EventArgs e)
+        {
+            FrmOtrasOpciones frmOtrasOpciones = new FrmOtrasOpciones();
+            frmOtrasOpciones.ShowDialog();
+        }
     }
 }
 
