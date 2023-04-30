@@ -124,8 +124,50 @@
   <data name="_15_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15_10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_15_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_13.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_17.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_18.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_15_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_21.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_23.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_24.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_15_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
