@@ -75,7 +75,8 @@ namespace ProyectoCompra.Controles
 
                     break;
                 case "op_3": //DARSE DE BAJA
-
+                    FrmBajaUsuario frmBajaUsuario = new FrmBajaUsuario();
+                    frmBajaUsuario.ShowDialog();
                     break;
             }
         }

@@ -28,14 +28,14 @@ CREATE TABLE cliente
 )
 
 -- USUARIO
-CREATE TABLE usuario
+CREATE TABLE asdasdasds
 (
 	id_usuario int PRIMARY KEY,
 	id_cliente int NOT NULL,
 	usuario_name NVARCHAR(50) NOT NULL,
 	contrasenia NVARCHAR(50) NOT NULL,
-	correo_electronico NVARCHAR(50) NOT NULL
-	CONSTRAINT constraint_id_cliente_fk FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente) ON DELETE CASCADE
+	correo_electronico NVARCHAR(50) UNIQUE NOT NULL,
+	CONSTRAINT A FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente) ON DELETE CASCADE
 )
 
 -- DETALLE USUARIO
@@ -130,7 +130,7 @@ CREATE TABLE carrito
 	cantidad INT NOT NULL,
 	imagen NVARCHAR(100) NOT NULL
 	CONSTRAINT constraint_carrito_pk PRIMARY KEY (id_usuario, id_producto),
-	CONSTRAINT constraint_usuario_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),
+	CONSTRAINT constraint_usuario_fk FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario) ON DELETE CASCADE,
 	CONSTRAINT constraint_producto_fk FOREIGN KEY (id_producto) REFERENCES producto (id_producto)
 )
 

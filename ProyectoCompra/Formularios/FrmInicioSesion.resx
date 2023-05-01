@@ -1136,9 +1136,6 @@
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Nova Cond, 8.25pt, style=Bold</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

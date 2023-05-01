@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRecuperarContrasenia = new System.Windows.Forms.Button();
+            this.contrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.lblContrasenia = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnAlerta = new System.Windows.Forms.Button();
-            this.contrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.groupBox1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabInicioSesion.SuspendLayout();
@@ -98,6 +98,12 @@
             this.btnRecuperarContrasenia.Click += new System.EventHandler(this.btnRecuperarContrasenia_Click);
             this.btnRecuperarContrasenia.MouseEnter += new System.EventHandler(this.btnRecuperarContrasenia_MouseEnter);
             this.btnRecuperarContrasenia.MouseLeave += new System.EventHandler(this.btnRecuperarContrasenia_MouseLeave);
+            // 
+            // contrasenia
+            // 
+            resources.ApplyResources(this.contrasenia, "contrasenia");
+            this.contrasenia.Name = "contrasenia";
+            this.contrasenia.TextBoxtxtContrasenia = "";
             // 
             // lblContrasenia
             // 
@@ -273,6 +279,7 @@
             // 
             resources.ApplyResources(this.txtEdad, "txtEdad");
             this.txtEdad.Name = "txtEdad";
+            this.txtEdad.ReadOnly = true;
             this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged_1);
             // 
             // lblEdad
@@ -284,6 +291,7 @@
             // 
             resources.ApplyResources(this.dateFNacimiento, "dateFNacimiento");
             this.dateFNacimiento.Name = "dateFNacimiento";
+            this.dateFNacimiento.ValueChanged += new System.EventHandler(this.dateFNacimiento_ValueChanged);
             // 
             // lblFNacimiento
             // 
@@ -323,12 +331,6 @@
             this.btnAlerta.UseVisualStyleBackColor = true;
             this.btnAlerta.MouseEnter += new System.EventHandler(this.btnAlerta_MouseEnter);
             this.btnAlerta.MouseLeave += new System.EventHandler(this.btnAlerta_MouseLeave);
-            // 
-            // contrasenia
-            // 
-            resources.ApplyResources(this.contrasenia, "contrasenia");
-            this.contrasenia.Name = "contrasenia";
-            this.contrasenia.TextBoxtxtContrasenia = "";
             // 
             // frmInicioSesion
             // 

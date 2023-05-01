@@ -65,6 +65,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmHistorialPedidos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Historial pedidos";
             this.Load += new System.EventHandler(this.FrmHistorialPedidos_Load);
             this.flowLayoutPanel1.ResumeLayout(false);

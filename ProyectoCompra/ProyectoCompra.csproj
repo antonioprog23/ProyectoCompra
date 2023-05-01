@@ -72,6 +72,7 @@
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Imagen.cs" />
+    <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Usuario.cs" />
@@ -114,6 +115,12 @@
     </Compile>
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
     <Compile Include="Ficheros\FicheroAuxiliar.cs" />
+    <Compile Include="Formularios\FrmBajaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBajaUsuario.Designer.cs">
+      <DependentUpon>FrmBajaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +198,12 @@
     </Compile>
     <Compile Include="Formularios\FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmVerificarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmVerificarCuenta.Designer.cs">
+      <DependentUpon>FrmVerificarCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AlimentacionS1.Designer.cs">
@@ -287,6 +300,9 @@
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBajaUsuario.resx">
+      <DependentUpon>FrmBajaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmVerificarCuenta.resx">
+      <DependentUpon>FrmVerificarCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\AlimentacionS1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -620,6 +639,7 @@
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
     <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
+    <Content Include="Procedimientos almacenados\DarBajaUsuario.sql" />
     <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
     <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
     <None Include="Resources\icon_compra.png" />
@@ -637,6 +657,7 @@
     <None Include="Resources\15_22.jpg" />
     <None Include="Resources\15_23.jpeg" />
     <None Include="Resources\15_24.jpeg" />
+    <None Include="Resources\icon_ayuda.png" />
     <Content Include="Resources\icon_otras_opciones.png" />
     <Content Include="Resources\op_0.png" />
     <None Include="Resources\op_3.png" />

@@ -1,6 +1,5 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
-using ProyectoCompra.Controles;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Drawing;
@@ -54,13 +53,9 @@ namespace ProyectoCompra.Formularios
                 int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text);
                 if (codigoUsuarioConNombreUsado == -1)
                 {
-                    if ((BDUsuario.insertarDatos(cliente, usuario)))
-                    {
-                        MessageBox.Show("Usuario creado.");
-                        this.Close();
-                        frmInicioSesion frmInicioSesion = new frmInicioSesion();
-                        frmInicioSesion.ShowDialog();
-                    }
+                    string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text);
+                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(cliente, usuario, codigoVerificacion, txtCorreo.Text);
+                    frmVerificarCuenta.Show();
                 }
                 else
                 {
@@ -95,6 +90,8 @@ namespace ProyectoCompra.Formularios
                 else
                 {
                     MessageBox.Show("¡Las contraseñas no coinciden!");
+                    txtContrasena.Clear();
+                    txtRepContrasenia.Clear();
                 }
             }
             return usuario;
@@ -140,6 +137,12 @@ namespace ProyectoCompra.Formularios
         private void btnRecuperarContrasenia_MouseLeave(object sender, EventArgs e)
         {
             btnRecuperarContrasenia.ForeColor = Color.DimGray;
+        }
+
+        private void dateFNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaNacimiento = dateFNacimiento.Value;
+            txtEdad.Text = ((int)((DateTime.Now - fechaNacimiento).TotalDays / 365.25)).ToString();
         }
     }
 }

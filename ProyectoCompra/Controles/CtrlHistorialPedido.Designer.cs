@@ -91,6 +91,7 @@
             this.btnMasDetalles.TabIndex = 5;
             this.btnMasDetalles.Text = "Más detalles";
             this.btnMasDetalles.UseVisualStyleBackColor = true;
+            this.btnMasDetalles.Click += new System.EventHandler(this.btnMasDetalles_Click);
             // 
             // lblNumeroPedido
             // 

@@ -103,6 +103,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_ayuda {
+            get {
+                object obj = ResourceManager.GetObject("icon_ayuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_bebida_alcohol {
             get {
                 object obj = ResourceManager.GetObject("icon_bebida_alcohol", resourceCulture);

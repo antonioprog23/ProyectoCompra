@@ -2,6 +2,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProyectoCompra.Base_datos
 {
@@ -172,6 +173,39 @@ namespace ProyectoCompra.Base_datos
                 }
             }
             return insertado;
+        }
+
+        public static bool darBajaUsuario(string userName, string contrasenia, string correoElectronico)
+        {
+            bool eliminado = true;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("DarBajaUsuario", connection, transaction))
+                    {
+                        try
+                        {
+                            //cmd.CommandText = "InsertarDatos";
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            //USUARIO
+                            cmd.Parameters.AddWithValue("@Usuario_name", userName);
+                            cmd.Parameters.AddWithValue("@Contrasenia", contrasenia);
+                            cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            eliminado = true;
+                        }
+                        catch (SqlException)
+                        {
+                            eliminado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return eliminado;
         }
     }
 }
