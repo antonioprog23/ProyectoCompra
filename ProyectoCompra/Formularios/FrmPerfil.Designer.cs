@@ -43,7 +43,6 @@
             this.lblMostrarId = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ctrlMostrarContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.lblMostrarUsuario = new System.Windows.Forms.Label();
             this.lblMostrarCorreo = new System.Windows.Forms.Label();
             this.lblContrasenia = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ctrlMostrarContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,6 +80,12 @@
             // 
             // btnOtrasOpciones
             // 
+            this.btnOtrasOpciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOtrasOpciones.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnOtrasOpciones.FlatAppearance.BorderSize = 0;
+            this.btnOtrasOpciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnOtrasOpciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnOtrasOpciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOtrasOpciones.Image = global::ProyectoCompra.Properties.Resources.icon_otras_opciones;
             this.btnOtrasOpciones.Location = new System.Drawing.Point(73, 4);
             this.btnOtrasOpciones.Name = "btnOtrasOpciones";
@@ -92,6 +98,12 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.Location = new System.Drawing.Point(94, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -205,16 +217,6 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos usuario";
-            // 
-            // ctrlMostrarContrasenia
-            // 
-            this.ctrlMostrarContrasenia.AutoSize = true;
-            this.ctrlMostrarContrasenia.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlMostrarContrasenia.Location = new System.Drawing.Point(153, 88);
-            this.ctrlMostrarContrasenia.Name = "ctrlMostrarContrasenia";
-            this.ctrlMostrarContrasenia.Size = new System.Drawing.Size(209, 28);
-            this.ctrlMostrarContrasenia.TabIndex = 22;
-            this.ctrlMostrarContrasenia.TextBoxtxtContrasenia = "";
             // 
             // lblMostrarUsuario
             // 
@@ -406,6 +408,16 @@
             this.lblNombre.Size = new System.Drawing.Size(48, 14);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
+            // 
+            // ctrlMostrarContrasenia
+            // 
+            this.ctrlMostrarContrasenia.AutoSize = true;
+            this.ctrlMostrarContrasenia.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlMostrarContrasenia.Location = new System.Drawing.Point(153, 88);
+            this.ctrlMostrarContrasenia.Name = "ctrlMostrarContrasenia";
+            this.ctrlMostrarContrasenia.Size = new System.Drawing.Size(209, 28);
+            this.ctrlMostrarContrasenia.TabIndex = 22;
+            this.ctrlMostrarContrasenia.TextBoxtxtContrasenia = "";
             // 
             // FrmPerfil
             // 

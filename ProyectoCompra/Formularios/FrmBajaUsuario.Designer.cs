@@ -213,6 +213,7 @@
             // 
             // btnAyuda
             // 
+            this.btnAyuda.BackColor = System.Drawing.Color.White;
             this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAyuda.FlatAppearance.BorderSize = 0;
             this.btnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -224,7 +225,7 @@
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(272, 31);
             this.btnAyuda.TabIndex = 5;
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.MouseEnter += new System.EventHandler(this.btnAyuda_MouseEnter);
             this.btnAyuda.MouseLeave += new System.EventHandler(this.btnAyuda_MouseLeave);
             // 

@@ -31,10 +31,9 @@ namespace ProyectoCompra.Controles
                         Button button = new Button();
                         button.Width = 145;
                         button.Height = 145;
+                        button.FlatStyle = FlatStyle.Flat;
                         button.FlatAppearance.BorderSize = 0;
                         button.FlatAppearance.BorderColor = Color.White;
-                        button.FlatAppearance.MouseOverBackColor = Color.White;
-                        button.FlatAppearance.MouseDownBackColor = Color.White;
                         button.Name = "op_" + contador.ToString();
                         button.Image = Resources.ResourceManager.GetObject(string.Format("op_{0}", contador)) as Image;
                         button.TextAlign = ContentAlignment.BottomCenter;
