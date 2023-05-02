@@ -89,7 +89,7 @@ namespace ProyectoCompra.Base_datos
             return usuarioCompleto;
         }
 
-        public static int consultarUsuarioName(string usuarioName)
+        public static int consultarUsuarioName(string usuarioName, string correoElectronico)
         {
             int idUsuario = -1;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
@@ -99,6 +99,7 @@ namespace ProyectoCompra.Base_datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Usuario_name", usuarioName);
+                    cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())

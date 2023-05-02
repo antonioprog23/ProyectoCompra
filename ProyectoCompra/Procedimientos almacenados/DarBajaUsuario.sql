@@ -17,6 +17,6 @@ BEGIN
 		END
 	ELSE
 		DELETE FROM cliente
-			WHERE id_cliente = (SELECT id_cliente FROM usuario
-								WHERE correo_electronico = @Correo_Electronico)
+		WHERE id_cliente = (SELECT id_cliente FROM usuario
+							WHERE correo_electronico = @Correo_Electronico)
 END

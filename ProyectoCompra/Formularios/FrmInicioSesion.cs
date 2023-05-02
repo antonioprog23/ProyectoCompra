@@ -50,7 +50,7 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = crearUsuario();
             if (cliente != null && usuario != null)
             {
-                int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text);
+                int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text, "");
                 if (codigoUsuarioConNombreUsado == -1)
                 {
                     string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text);

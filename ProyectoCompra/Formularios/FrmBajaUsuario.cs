@@ -1,4 +1,5 @@
 ﻿using ProyectoCompra.Base_datos;
+using ProyectoCompra.Clases;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,6 +8,8 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmBajaUsuario : Form
     {
+        private string codigo;
+
         public FrmBajaUsuario()
         {
             InitializeComponent();
@@ -34,8 +37,11 @@ namespace ProyectoCompra.Formularios
                 {
                     txtCorreoElectronico.Clear();
                 }
-                if (!txtCodigo.Text.Equals(""))
+                if (!txtCodigo.Text.Equals("") || txtCodigo.Text.Equals(""))
                 {
+                    codigo = "";
+                    txtCodigo.Enabled = false;
+                    lblCodigo.ForeColor = Color.Gray;
                     txtCodigo.Clear();
                 }
             }
@@ -107,7 +113,7 @@ namespace ProyectoCompra.Formularios
                 }
                 else
                 {
-                    if (BDUsuario.consultarUsuarioName(txtUsuario.Text) != -1)
+                    if (BDUsuario.consultarUsuarioName(txtUsuario.Text, "") != -1)
                     {
                         if (BDUsuario.darBajaUsuario(txtUsuario.Text, txtContrasenia.Text, ""))
                         {
@@ -138,21 +144,36 @@ namespace ProyectoCompra.Formularios
             }
             else
             {
-
+                if (BDUsuario.darBajaUsuario("", "", txtCorreoElectronico.Text))
+                {
+                    MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Restart();
+                }
             }
         }
 
-        private void txtCorreoElectronico_TextChanged(object sender, EventArgs e)
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
             if (txtCorreoElectronico.Text.Equals(""))
             {
-                txtCodigo.Enabled = false;
-                lblCodigo.ForeColor = Color.Gray;
+                MessageBox.Show("Los datos son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                txtCodigo.Enabled = true;
-                lblCodigo.ForeColor = Color.Gray;
+                if (BDUsuario.consultarUsuarioName("", txtCorreoElectronico.Text) != -1)
+                {
+                    codigo = Mensaje.enviarMensajeUnDestinatario(txtCorreoElectronico.Text);
+                    if (!codigo.Equals(""))
+                    {
+                        MessageBox.Show("Compruebe su correo electrónico. Tendrá un código, por favor, introduzcalo en su campo correspondiente.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtCodigo.Enabled = true;
+                        lblCodigo.ForeColor = Color.Black;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un problema. Por favor, verifique los datos introducidos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

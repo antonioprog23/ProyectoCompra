@@ -40,10 +40,12 @@
             this.rbnUsuario = new System.Windows.Forms.RadioButton();
             this.rbnCorreoElectronico = new System.Windows.Forms.RadioButton();
             this.gbxCorreoElectronico = new System.Windows.Forms.GroupBox();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
+            this.btnReenviarCodigo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.gbxUsuario.SuspendLayout();
@@ -60,7 +62,7 @@
             this.gbxUsuario.Controls.Add(this.txtUsuario);
             this.gbxUsuario.Location = new System.Drawing.Point(12, 35);
             this.gbxUsuario.Name = "gbxUsuario";
-            this.gbxUsuario.Size = new System.Drawing.Size(272, 180);
+            this.gbxUsuario.Size = new System.Drawing.Size(272, 179);
             this.gbxUsuario.TabIndex = 0;
             this.gbxUsuario.TabStop = false;
             this.gbxUsuario.Text = "Datos usuario";
@@ -123,7 +125,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(406, 221);
+            this.btnAceptar.Location = new System.Drawing.Point(406, 220);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 1;
@@ -157,17 +159,29 @@
             // 
             // gbxCorreoElectronico
             // 
+            this.gbxCorreoElectronico.Controls.Add(this.btnEnviar);
             this.gbxCorreoElectronico.Controls.Add(this.lblCodigo);
             this.gbxCorreoElectronico.Controls.Add(this.txtCodigo);
             this.gbxCorreoElectronico.Controls.Add(this.label1);
             this.gbxCorreoElectronico.Controls.Add(this.txtCorreoElectronico);
+            this.gbxCorreoElectronico.Controls.Add(this.btnReenviarCodigo);
             this.gbxCorreoElectronico.Enabled = false;
             this.gbxCorreoElectronico.Location = new System.Drawing.Point(290, 35);
             this.gbxCorreoElectronico.Name = "gbxCorreoElectronico";
-            this.gbxCorreoElectronico.Size = new System.Drawing.Size(272, 180);
+            this.gbxCorreoElectronico.Size = new System.Drawing.Size(272, 179);
             this.gbxCorreoElectronico.TabIndex = 3;
             this.gbxCorreoElectronico.TabStop = false;
             this.gbxCorreoElectronico.Text = "Datos usuario";
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Location = new System.Drawing.Point(182, 150);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(84, 23);
+            this.btnEnviar.TabIndex = 6;
+            this.btnEnviar.Text = "Enviar código";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // lblCodigo
             // 
@@ -204,11 +218,19 @@
             this.txtCorreoElectronico.Size = new System.Drawing.Size(209, 20);
             this.txtCorreoElectronico.TabIndex = 2;
             this.txtCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCorreoElectronico.TextChanged += new System.EventHandler(this.txtCorreoElectronico_TextChanged);
+            // 
+            // btnReenviarCodigo
+            // 
+            this.btnReenviarCodigo.Location = new System.Drawing.Point(165, 150);
+            this.btnReenviarCodigo.Name = "btnReenviarCodigo";
+            this.btnReenviarCodigo.Size = new System.Drawing.Size(101, 23);
+            this.btnReenviarCodigo.TabIndex = 7;
+            this.btnReenviarCodigo.Text = "Reenviar código";
+            this.btnReenviarCodigo.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(487, 221);
+            this.btnCancelar.Location = new System.Drawing.Point(487, 220);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 6;
@@ -226,7 +248,7 @@
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
             this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.Location = new System.Drawing.Point(12, 217);
+            this.btnAyuda.Location = new System.Drawing.Point(12, 226);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(272, 31);
             this.btnAyuda.TabIndex = 5;
@@ -239,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(575, 253);
+            this.ClientSize = new System.Drawing.Size(575, 256);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.rbnCorreoElectronico);
@@ -279,5 +301,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.Button btnReenviarCodigo;
     }
 }
