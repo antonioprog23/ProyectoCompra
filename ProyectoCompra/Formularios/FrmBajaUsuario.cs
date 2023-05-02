@@ -107,14 +107,24 @@ namespace ProyectoCompra.Formularios
                 }
                 else
                 {
-                    if (BDUsuario.darBajaUsuario(txtUsuario.Text, txtContrasenia.Text, ""))
+                    if (BDUsuario.consultarUsuarioName(txtUsuario.Text) != -1)
                     {
-                        MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Application.Restart();
+                        if (BDUsuario.darBajaUsuario(txtUsuario.Text, txtContrasenia.Text, ""))
+                        {
+                            MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Application.Restart();
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERROR");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("ERROR");
+                        MessageBox.Show("No existe ese usuario en el sistema.\nPor favor, vuelva a intentarlo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtUsuario.Clear();
+                        txtContrasenia.Clear();
+                        txtRepContrasenia.Clear();
                     }
                 }
             }

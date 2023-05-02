@@ -82,6 +82,7 @@
             this.txtRepContrasenia.Name = "txtRepContrasenia";
             this.txtRepContrasenia.Size = new System.Drawing.Size(209, 20);
             this.txtRepContrasenia.TabIndex = 4;
+            this.txtRepContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRepContrasenia.UseSystemPasswordChar = true;
             // 
             // lblContrasenia
@@ -99,6 +100,7 @@
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(209, 20);
             this.txtContrasenia.TabIndex = 2;
+            this.txtContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContrasenia.UseSystemPasswordChar = true;
             this.txtContrasenia.TextChanged += new System.EventHandler(this.txtContrasenia_TextChanged);
             // 
@@ -117,6 +119,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(209, 20);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAceptar
             // 
@@ -183,6 +186,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(209, 20);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -199,6 +203,7 @@
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(209, 20);
             this.txtCorreoElectronico.TabIndex = 2;
+            this.txtCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCorreoElectronico.TextChanged += new System.EventHandler(this.txtCorreoElectronico_TextChanged);
             // 
             // btnCancelar
