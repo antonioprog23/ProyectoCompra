@@ -41,7 +41,7 @@ namespace ProyectoCompra.Formularios
                 {
                     codigo = "";
                     txtCodigo.Enabled = false;
-                    lblCodigo.ForeColor = Color.Gray;
+                    lblCodigo.Enabled = false;
                     txtCodigo.Clear();
                 }
             }
@@ -102,78 +102,110 @@ namespace ProyectoCompra.Formularios
             if (txtUsuario.Text.Equals("") || txtContrasenia.Text.Equals("") || txtRepContrasenia.Text.Equals(""))
             {
                 MessageBox.Show("Los datos son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+            if (!txtContrasenia.Text.Equals(txtRepContrasenia.Text.Trim()))
             {
-                if (!txtContrasenia.Text.Equals(txtRepContrasenia.Text))
+                MessageBox.Show("Las contraseñas no coinciden", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtContrasenia.Clear();
+                txtRepContrasenia.Clear();
+                return;
+            }
+            if (BDUsuario.consultarUsuarioName(txtUsuario.Text.Trim()) == 0)
+            {
+                MessageBox.Show("No existe ese usuario en el sistema.\nPor favor, vuelva a intentarlo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsuario.Clear();
+                txtContrasenia.Clear();
+                txtRepContrasenia.Clear();
+                return;
+            }
+
+            var resultado = MessageBox.Show("¿Estás seguro de darte de baja?", "Baja del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                if (BDUsuario.darBajaUsuarioPorUsuario(txtUsuario.Text.Trim(), txtContrasenia.Text.Trim()))
                 {
-                    MessageBox.Show("Las contraseñas no coinciden", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtContrasenia.Clear();
-                    txtRepContrasenia.Clear();
+                    MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Restart();
                 }
                 else
                 {
-                    if (BDUsuario.consultarUsuarioName(txtUsuario.Text, "") != -1)
-                    {
-                        if (BDUsuario.darBajaUsuario(txtUsuario.Text, txtContrasenia.Text, ""))
-                        {
-                            MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Application.Restart();
-                        }
-                        else
-                        {
-                            MessageBox.Show("ERROR");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe ese usuario en el sistema.\nPor favor, vuelva a intentarlo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtUsuario.Clear();
-                        txtContrasenia.Clear();
-                        txtRepContrasenia.Clear();
-                    }
+                    MessageBox.Show("ERROR");
                 }
             }
+            else
+            {
+                txtUsuario.Clear();
+                txtContrasenia.Clear();
+                txtRepContrasenia.Clear();
+            }
         }
+
 
         private void configurarBajaConCorreoElectronico()
         {
             if (txtCorreoElectronico.Text.Equals("") || txtCodigo.Text.Equals(""))
             {
                 MessageBox.Show("Los datos son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            if (!txtCodigo.Text.Trim().Equals(codigo))
             {
-                if (BDUsuario.darBajaUsuario("", "", txtCorreoElectronico.Text))
+                MessageBox.Show("El código no coincide, por favor, inténtelo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var resultado = MessageBox.Show("¿Estás seguro de darte de baja?", "Baja del sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                if (BDUsuario.darBajaUsuarioPorCorreoElectronico(txtCorreoElectronico.Text.Trim()))
                 {
                     MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Application.Restart();
                 }
             }
+            else
+            {
+                txtCorreoElectronico.Clear();
+                txtCodigo.Clear();
+                txtCodigo.Enabled = false;
+                lblCodigo.Enabled = false;
+                btnEnviar.Visible = true;
+                btnReenviarCodigo.Visible = false;
+            }
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+            if (BDUsuario.consultarUsuarioCorreoElectronico(txtCorreoElectronico.Text.Trim()) == 0)
+            {
+                MessageBox.Show("No existe ningún usuario con el correo proporcionado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            codigo = Mensaje.enviarMensajeUnDestinatario(txtCorreoElectronico.Text.Trim());
+            if (!codigo.Equals("-1"))
+            {
+                txtCodigo.Enabled = true;
+                lblCodigo.Enabled = true;
+                btnEnviar.Visible = false;
+                btnReenviarCodigo.Visible = true;
+            }
+        }
+
+        private void btnReenviarCodigo_Click(object sender, EventArgs e)
+        {
+            codigo = Mensaje.enviarMensajeUnDestinatario(txtCorreoElectronico.Text.Trim());
+            txtCodigo.Enabled = true;
+            lblCodigo.Enabled = true;
+        }
+
+        private void txtCorreoElectronico_TextChanged(object sender, EventArgs e)
+        {
             if (txtCorreoElectronico.Text.Equals(""))
             {
-                MessageBox.Show("Los datos son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (BDUsuario.consultarUsuarioName("", txtCorreoElectronico.Text) != -1)
-                {
-                    codigo = Mensaje.enviarMensajeUnDestinatario(txtCorreoElectronico.Text);
-                    if (!codigo.Equals(""))
-                    {
-                        MessageBox.Show("Compruebe su correo electrónico. Tendrá un código, por favor, introduzcalo en su campo correspondiente.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtCodigo.Enabled = true;
-                        lblCodigo.ForeColor = Color.Black;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un problema. Por favor, verifique los datos introducidos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                txtCodigo.Enabled = false;
+                lblCodigo.Enabled = false;
             }
         }
     }

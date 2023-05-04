@@ -17,19 +17,13 @@ namespace ProyectoCompra.Formularios
 
         #region Eventos
 
-        private void btnCrearNuevoUsuario_Click(object sender, EventArgs e)
-        {
-            FrmUsuarioEdit frmCrearUsuario = new FrmUsuarioEdit();
-            frmCrearUsuario.ShowDialog();
-        }
-
         #endregion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
             {
-                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia, "");
+                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text.Trim(), contrasenia.TextBoxtxtContrasenia.Trim(), "");
                 if (usuarioEncontrado == null)
                 {
                     MessageBox.Show("Usuario no encontrado.");
@@ -50,16 +44,30 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = crearUsuario();
             if (cliente != null && usuario != null)
             {
-                int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text, "");
-                if (codigoUsuarioConNombreUsado == -1)
+                int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text.Trim());
+                if (codigoUsuarioConNombreUsado != 0)
                 {
-                    string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text);
-                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(cliente, usuario, codigoVerificacion, txtCorreo.Text);
-                    frmVerificarCuenta.Show();
+                    textUsuario.Clear();
+                    MessageBox.Show("El nombre de usuario ya existe.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int codigoUsuarioConCorreoUsado = BDUsuario.consultarUsuarioCorreoElectronico(txtCorreo.Text.Trim());
+                if (codigoUsuarioConCorreoUsado != 0)
+                {
+                    txtCorreo.Clear();
+                    MessageBox.Show("El correo proporcionado ya está en uso.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text.Trim());
+                if (!codigoVerificacion.Equals("-1"))
+                {
+                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(cliente, usuario, codigoVerificacion, txtCorreo.Text.Trim());
+                    frmVerificarCuenta.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("¡El nombre de usuario ya existe!");
+                    txtCorreo.Clear();
                 }
             }
             else
@@ -73,7 +81,7 @@ namespace ProyectoCompra.Formularios
             Cliente cliente = null;
             if (!txtNombre.Text.Equals("") && !txtApellido.Text.Equals("") && !txtEdad.Text.Equals("") && !dateFNacimiento.Value.Equals("") && !txtDireccion.Text.Equals("") && !txtCorreo.Text.Equals(""))
             {
-                cliente = new Cliente(txtNombre.Text, txtApellido.Text, int.Parse(txtEdad.Text), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtDireccion.Text, txtCorreo.Text);
+                cliente = new Cliente(txtNombre.Text.Trim(), txtApellido.Text.Trim(), int.Parse(txtEdad.Text.Trim()), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtDireccion.Text.Trim(), txtCorreo.Text.Trim());
             }
             return cliente;
         }
@@ -85,7 +93,7 @@ namespace ProyectoCompra.Formularios
             {
                 if (txtContrasena.Text.Equals(txtRepContrasenia.Text))
                 {
-                    usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
+                    usuario = new Usuario(textUsuario.Text.Trim(), txtContrasena.Text.Trim());
                 }
                 else
                 {

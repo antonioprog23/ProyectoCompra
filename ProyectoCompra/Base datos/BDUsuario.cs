@@ -9,7 +9,7 @@ namespace ProyectoCompra.Base_datos
     internal class BDUsuario
     {
         //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=Compras;Integrated Security=True;";
+        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
         public static bool insertarDatos(Cliente cliente, Usuario usuario)
         {
             bool insertado = true;
@@ -89,9 +89,10 @@ namespace ProyectoCompra.Base_datos
             return usuarioCompleto;
         }
 
-        public static int consultarUsuarioName(string usuarioName, string correoElectronico)
+        public static int consultarUsuarioName(string usuarioName)
         {
-            int idUsuario = -1;
+            //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
+            int idUsuario = 0;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
@@ -99,6 +100,29 @@ namespace ProyectoCompra.Base_datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Usuario_name", usuarioName);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            idUsuario = reader.GetInt32(0);
+                        }
+                    }
+
+                }
+            }
+            return idUsuario;
+        }
+
+        public static int consultarUsuarioCorreoElectronico(string correoElectronico)
+        {
+            //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
+            int idUsuario = 0;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("ConsultarUsuarioCorreoElectronico", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -176,7 +200,7 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
-        public static bool darBajaUsuario(string userName, string contrasenia, string correoElectronico)
+        public static bool darBajaUsuarioPorUsuario(string userName, string contrasenia)
         {
             bool eliminado = true;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
@@ -184,21 +208,47 @@ namespace ProyectoCompra.Base_datos
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    using (SqlCommand cmd = new SqlCommand("DarBajaUsuario", connection, transaction))
+                    using (SqlCommand cmd = new SqlCommand("DarBajaUsuarioPorUsuario", connection, transaction))
                     {
                         try
                         {
-                            //cmd.CommandText = "InsertarDatos";
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            //USUARIO
                             cmd.Parameters.AddWithValue("@Usuario_name", userName);
                             cmd.Parameters.AddWithValue("@Contrasenia", contrasenia);
-                            cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             eliminado = true;
                         }
                         catch (SqlException)
+                        {
+                            eliminado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return eliminado;
+        }
+
+        public static bool darBajaUsuarioPorCorreoElectronico(string correoElectronico)
+        {
+            bool eliminado = true;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("DarBajaUsuarioPorCorreoElectronico", connection, transaction))
+                    {
+                        try
+                        {
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            eliminado = true;
+                        }
+                        catch (SqlException E)
                         {
                             eliminado = false;
                             transaction.Rollback();

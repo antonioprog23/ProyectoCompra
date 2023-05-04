@@ -1,4 +1,4 @@
-USE Compras
+USE EasyShop
 IF OBJECT_ID ('InsertarDatos','P') IS NOT NULL
 	DROP PROCEDURE InsertarDatos;
 	PRINT 'Procedimiento almacenado borrado.'

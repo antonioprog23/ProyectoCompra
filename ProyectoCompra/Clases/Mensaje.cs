@@ -2,6 +2,7 @@
 using System;
 using System.Net;
 using System.Net.Mail;
+using System.Windows.Forms;
 
 namespace ProyectoCompra.Clases
 {
@@ -14,16 +15,36 @@ namespace ProyectoCompra.Clases
         public static string enviarMensajeUnDestinatario(string destinatario)
         {
             string codigoVerificacion = obtenerCodigoVerificacion();
+            bool correoValido = true;
             if (!codigoVerificacion.Equals(""))
             {
-                MailMessage mensaje = new MailMessage(REMITENTE, destinatario);
-                mensaje.Subject = "´Código de verificación.";
-                mensaje.Body = $"Tu código de verificación es: {obtenerCodigoVerificacion()}";
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
-                smtpClient.EnableSsl = true;
-                smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential(REMITENTE, CONTRASENIA_DE_APLICACION);
-                smtpClient.Send(mensaje);
+                try
+                {
+                    MailMessage mensaje = new MailMessage(REMITENTE, destinatario);
+                    mensaje.Subject = "´Código de verificación.";
+                    mensaje.Body = $"Tu código de verificación es: {codigoVerificacion}";
+                    if (correoValido)
+                    {
+                        SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
+                        smtpClient.EnableSsl = true;
+                        smtpClient.UseDefaultCredentials = false;
+                        smtpClient.Credentials = new NetworkCredential(REMITENTE, CONTRASENIA_DE_APLICACION);
+                        smtpClient.Send(mensaje);
+                        MessageBox.Show("Se ha enviado un código de verificación a su correo. Por favor, introduzcalo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (ArgumentException)
+                {
+                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Correo electrónico error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    correoValido = false;
+                    codigoVerificacion = "-1";
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Correo electrónico error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    correoValido = false;
+                    codigoVerificacion = "-1";
+                }
             }
             return codigoVerificacion;
         }

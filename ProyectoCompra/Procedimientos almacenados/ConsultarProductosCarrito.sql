@@ -1,4 +1,4 @@
-USE Compras
+USE EasyShop
 IF OBJECT_ID ('ConsultarProductoCarrito','P') IS NOT NULL
 	DROP PROCEDURE ConsultarProductoCarrito
 	PRINT 'Procedimiento almacenado borrado.'

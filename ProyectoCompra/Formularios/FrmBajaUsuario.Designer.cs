@@ -186,7 +186,8 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.ForeColor = System.Drawing.Color.Gray;
+            this.lblCodigo.Enabled = false;
+            this.lblCodigo.ForeColor = System.Drawing.Color.Black;
             this.lblCodigo.Location = new System.Drawing.Point(30, 76);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(50, 13);
@@ -218,6 +219,7 @@
             this.txtCorreoElectronico.Size = new System.Drawing.Size(209, 20);
             this.txtCorreoElectronico.TabIndex = 2;
             this.txtCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCorreoElectronico.TextChanged += new System.EventHandler(this.txtCorreoElectronico_TextChanged);
             // 
             // btnReenviarCodigo
             // 
@@ -227,6 +229,8 @@
             this.btnReenviarCodigo.TabIndex = 7;
             this.btnReenviarCodigo.Text = "Reenviar código";
             this.btnReenviarCodigo.UseVisualStyleBackColor = true;
+            this.btnReenviarCodigo.Visible = false;
+            this.btnReenviarCodigo.Click += new System.EventHandler(this.btnReenviarCodigo_Click);
             // 
             // btnCancelar
             // 

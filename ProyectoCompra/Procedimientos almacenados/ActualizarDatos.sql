@@ -1,3 +1,4 @@
+Use EasyShop
 IF OBJECT_ID ('ActualizarDatos','P') IS NOT NULL
 	DROP PROCEDURE ActualizarDatos;
 	PRINT 'Procedimiento almacenado borrado.'

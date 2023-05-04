@@ -28,13 +28,13 @@ CREATE TABLE cliente
 )
 
 -- USUARIO
-CREATE TABLE asdasdasds
+CREATE TABLE usuario
 (
 	id_usuario int PRIMARY KEY,
 	id_cliente int NOT NULL,
 	usuario_name NVARCHAR(50) NOT NULL,
 	contrasenia NVARCHAR(50) NOT NULL,
-	correo_electronico NVARCHAR(50) UNIQUE NOT NULL,
+	correo_electronico NVARCHAR(50) NOT NULL,
 	CONSTRAINT A FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente) ON DELETE CASCADE
 )
 

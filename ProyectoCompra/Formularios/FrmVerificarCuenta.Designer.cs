@@ -31,7 +31,7 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.gbx = new System.Windows.Forms.GroupBox();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.ctrlTextoCodigo = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtCodigoVerificacion = new System.Windows.Forms.TextBox();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             // 
             // gbx
             // 
-            this.gbx.Controls.Add(this.ctrlTextoCodigo);
+            this.gbx.Controls.Add(this.txtCodigoVerificacion);
             this.gbx.Controls.Add(this.lblCodigo);
             this.gbx.Location = new System.Drawing.Point(12, 12);
             this.gbx.Name = "gbx";
@@ -64,15 +64,12 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // ctrlTextoCodigo
+            // txtCodigoVerificacion
             // 
-            this.ctrlTextoCodigo.AutoSize = true;
-            this.ctrlTextoCodigo.IsNumerico = true;
-            this.ctrlTextoCodigo.Location = new System.Drawing.Point(121, 19);
-            this.ctrlTextoCodigo.Name = "ctrlTextoCodigo";
-            this.ctrlTextoCodigo.Size = new System.Drawing.Size(151, 20);
-            this.ctrlTextoCodigo.TabIndex = 2;
-            this.ctrlTextoCodigo.Texto = "";
+            this.txtCodigoVerificacion.Location = new System.Drawing.Point(121, 20);
+            this.txtCodigoVerificacion.Name = "txtCodigoVerificacion";
+            this.txtCodigoVerificacion.Size = new System.Drawing.Size(152, 20);
+            this.txtCodigoVerificacion.TabIndex = 2;
             // 
             // FrmVerificarCuenta
             // 
@@ -82,7 +79,7 @@
             this.ClientSize = new System.Drawing.Size(315, 111);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.gbx);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmVerificarCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Verificar cuenta";
@@ -95,7 +92,7 @@
         #endregion
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.GroupBox gbx;
-        private Controles.CtrlTextoBox ctrlTextoCodigo;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox txtCodigoVerificacion;
     }
 }

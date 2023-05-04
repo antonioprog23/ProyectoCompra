@@ -639,6 +639,7 @@
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
     <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
+    <Content Include="Procedimientos almacenados\DarBajaUsuarioPorCorreoElectronico.sql" />
     <Content Include="Procedimientos almacenados\DarBajaUsuario.sql" />
     <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
     <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />

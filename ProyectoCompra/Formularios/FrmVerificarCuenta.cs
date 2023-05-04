@@ -23,7 +23,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (ctrlTextoCodigo.Texto.Equals(codigoVerificacion))
+            if (txtCodigoVerificacion.Text.Equals(codigoVerificacion))
             {
                 if ((BDUsuario.insertarDatos(cliente, usuario)))
                 {
@@ -36,8 +36,9 @@ namespace ProyectoCompra.Formularios
             else
             {
                 var resultado = MessageBox.Show("El código no coincide.\n¿Deseas volver a recibir el código?", "Error.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resultado is DialogResult.OK)
+                if (resultado is DialogResult.Yes)
                 {
+                    txtCodigoVerificacion.Clear();
                     this.codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(correoElectronico);
                 }
             }
