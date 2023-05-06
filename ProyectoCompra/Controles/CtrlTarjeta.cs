@@ -1,10 +1,16 @@
-﻿using System;
+﻿using ProyectoCompra.Base_datos;
+using ProyectoCompra.Clases;
+using ProyectoCompra.Ficheros;
+using System;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
 {
     public partial class CtrlTarjeta : UserControl
     {
+        private TarjetaCredit tarjetaCredit;
+        private Usuario usuario;
+
         public CtrlTarjeta()
         {
             InitializeComponent();
@@ -21,9 +27,19 @@ namespace ProyectoCompra.Controles
             btnAceptar.Visible = true;
             btnCancelar.Visible = true;
             btnEditar.Visible = false;
+            if (tarjetaCredit != null)
+            {
+                btnEliminar.Visible = true;
+            }
         }
         private void cargarControles()
         {
+            ctrlTxtTitular.IsReadOnly = false;
+            ctrlTxtNTarjeta.IsReadOnly = false;
+            ctrlTxtMesVen.IsReadOnly = false;
+            ctrlAnioVen.IsReadOnly = false;
+            ctrlCVV.IsReadOnly = false;
+
             ctrlTxtTitular.Texto = "";
             ctrlTxtNTarjeta.Texto = "";
             ctrlTxtMesVen.Texto = "";
@@ -44,6 +60,34 @@ namespace ProyectoCompra.Controles
                 MessageBox.Show("Los campos son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CtrlTarjeta_Load(object sender, EventArgs e)
+        {
+            cargarDatosTarjetaCredito();
+        }
+
+        private void cargarDatosTarjetaCredito()
+        {
+            usuario = FicheroAuxiliar.leerFichero();
+            tarjetaCredit = BDUsuario.consultarTarjetaCredito(usuario.idUsuario);
+
+            if (tarjetaCredit == null)
+            {
+                MessageBox.Show("Aún no tienes una tarjeta agregada. Si deseas agregar una tarjeta, elige la opción 'Editar'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            ctrlTxtTitular.Texto = tarjetaCredit.titular;
+            ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+            ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+            ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+            ctrlCVV.Texto = tarjetaCredit.cvv;
         }
     }
 }

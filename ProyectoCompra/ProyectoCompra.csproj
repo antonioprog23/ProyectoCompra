@@ -75,6 +75,7 @@
     <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\TarjetaCredit.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
     <Compile Include="Controles\CtrlContraseña.cs">

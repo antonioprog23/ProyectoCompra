@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.gbxTarjeta = new System.Windows.Forms.GroupBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.lblMesVen = new System.Windows.Forms.Label();
             this.lblAnioVen = new System.Windows.Forms.Label();
             this.lblCVV = new System.Windows.Forms.Label();
             this.lblNTarjeta = new System.Windows.Forms.Label();
             this.lblTitular = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.ctrlCVV = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlAnioVen = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlTxtMesVen = new ProyectoCompra.Controles.CtrlTextoBox();
@@ -47,6 +48,7 @@
             // 
             // gbxTarjeta
             // 
+            this.gbxTarjeta.Controls.Add(this.btnEliminar);
             this.gbxTarjeta.Controls.Add(this.btnAceptar);
             this.gbxTarjeta.Controls.Add(this.btnEditar);
             this.gbxTarjeta.Controls.Add(this.ctrlCVV);
@@ -66,6 +68,27 @@
             this.gbxTarjeta.TabIndex = 0;
             this.gbxTarjeta.TabStop = false;
             this.gbxTarjeta.Text = "Tarjeta";
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(152, 160);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 15;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(233, 160);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 14;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // lblMesVen
             // 
@@ -112,27 +135,6 @@
             this.lblTitular.TabIndex = 2;
             this.lblTitular.Text = "Titular:";
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(233, 160);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 14;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(152, 160);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 15;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Visible = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(233, 160);
@@ -142,6 +144,17 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(71, 160);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Visible = false;
             // 
             // ctrlCVV
             // 
@@ -179,7 +192,6 @@
             // ctrlTxtTitular
             // 
             this.ctrlTxtTitular.AutoSize = true;
-            this.ctrlTxtTitular.IsNumerico = true;
             this.ctrlTxtTitular.IsReadOnly = true;
             this.ctrlTxtTitular.Location = new System.Drawing.Point(23, 47);
             this.ctrlTxtTitular.Name = "ctrlTxtTitular";
@@ -206,6 +218,7 @@
             this.Controls.Add(this.gbxTarjeta);
             this.Name = "CtrlTarjeta";
             this.Size = new System.Drawing.Size(338, 200);
+            this.Load += new System.EventHandler(this.CtrlTarjeta_Load);
             this.gbxTarjeta.ResumeLayout(false);
             this.gbxTarjeta.PerformLayout();
             this.ResumeLayout(false);
@@ -228,5 +241,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

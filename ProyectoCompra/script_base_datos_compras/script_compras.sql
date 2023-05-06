@@ -38,6 +38,19 @@ CREATE TABLE usuario
 	CONSTRAINT A FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente) ON DELETE CASCADE
 )
 
+-- TARJETA DE CREDITO
+CREATE TABLE Tarjeta_Credito
+(
+	id_usuario INT,
+	titular NVARCHAR(100),
+	numero_tarjeta NVARCHAR(16),
+	mes_vencimiento TINYINT,
+	anio_vencimiento SMALLINT,
+	cvv SMALLINT,
+	CONSTRAINT constraint_id_usuario_tarjeta_pk PRIMARY KEY (id_usuario),
+	CONSTRAINT constraint_id_usuario_tarjeta_fk FOREIGN KEY (id_usuario) REFERENCES usuario ON DELETE CASCADE
+)
+
 -- DETALLE USUARIO
 CREATE TABLE detalle_usuario
 (

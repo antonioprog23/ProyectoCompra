@@ -258,5 +258,28 @@ namespace ProyectoCompra.Base_datos
             }
             return eliminado;
         }
+
+        public static TarjetaCredit consultarTarjetaCredito(int idUsuario)
+        {
+            TarjetaCredit tarjetaCredit = null;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("ConsultarTarjetaCredito", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            tarjetaCredit = new TarjetaCredit(idUsuario, reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                        }
+                    }
+
+                }
+            }
+            return tarjetaCredit;
+        }
     }
 }
