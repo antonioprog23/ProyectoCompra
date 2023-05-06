@@ -3,6 +3,7 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -25,7 +26,7 @@ namespace ProyectoCompra.Formularios
             Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
             if (usuarioFichero != null)
             {
-                usuarioRecuperado = BDUsuario.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());                
+                usuarioRecuperado = BDUsuario.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());
             }
 
             if (usuarioRecuperado == null)
@@ -38,7 +39,6 @@ namespace ProyectoCompra.Formularios
                 btnIdentificarse.Visible = false;
                 btnPerfil.Visible = true;
                 lblSaludo.Visible = true;
-                lblSaludo.Text += string.Format("{0}.", usuarioRecuperado.cliente.nombre.ToString());
             }
         }
 
@@ -54,12 +54,6 @@ namespace ProyectoCompra.Formularios
             frmPerfil.ShowDialog();
         }
 
-        private void button37_Click(object sender, EventArgs e)
-        {
-            FrmCarrito frmCarrito = new FrmCarrito();
-            frmCarrito.ShowDialog();
-        }
-
         public Label GetLabelContador()
         {
             return this.lblContador;
@@ -68,6 +62,42 @@ namespace ProyectoCompra.Formularios
         private void lblContador_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+            FrmCarrito frmCarrito = new FrmCarrito();
+            frmCarrito.ShowDialog();
+        }
+
+        private void btnPerfil_MouseEnter(object sender, EventArgs e)
+        {
+            btnPerfil.Font = new Font(btnPerfil.Font, FontStyle.Underline);
+        }
+
+        private void btnPerfil_MouseLeave(object sender, EventArgs e)
+        {
+            btnPerfil.Font = new Font(btnPerfil.Font, FontStyle.Regular);
+        }
+
+        private void btnIdentificarse_MouseLeave(object sender, EventArgs e)
+        {
+            btnIdentificarse.Font = new Font(btnIdentificarse.Font, FontStyle.Regular);
+        }
+
+        private void btnIdentificarse_MouseEnter(object sender, EventArgs e)
+        {
+            btnIdentificarse.Font = new Font(btnIdentificarse.Font, FontStyle.Underline);
+        }
+
+        private void btnCarrito_MouseLeave(object sender, EventArgs e)
+        {
+            btnCarrito.Font = new Font(btnCarrito.Font, FontStyle.Regular);
+        }
+
+        private void btnCarrito_MouseEnter(object sender, EventArgs e)
+        {
+            btnCarrito.Font = new Font(btnCarrito.Font, FontStyle.Underline);
         }
     }
 }

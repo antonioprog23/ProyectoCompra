@@ -83,6 +83,12 @@
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlEfectivo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlEfectivo.Designer.cs">
+      <DependentUpon>CtrlEfectivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlHistorialPedido.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="Controles\CtrlProductosMostrar.Designer.cs">
       <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlTarjeta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlTarjeta.Designer.cs">
+      <DependentUpon>CtrlTarjeta.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\CtrlTextoBox.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +168,12 @@
     </Compile>
     <Compile Include="Formularios\FrmOtrasOpciones.Designer.cs">
       <DependentUpon>FrmOtrasOpciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPagos.Designer.cs">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmProductos.cs">
       <SubType>Form</SubType>
@@ -285,6 +303,9 @@
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlEfectivo.resx">
+      <DependentUpon>CtrlEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlHistorialPedido.resx">
       <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlProductosMostrar.resx">
       <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlTarjeta.resx">
+      <DependentUpon>CtrlTarjeta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
@@ -320,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmOtrasOpciones.resx">
       <DependentUpon>FrmOtrasOpciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPagos.resx">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -659,6 +686,8 @@
     <None Include="Resources\15_23.jpeg" />
     <None Include="Resources\15_24.jpeg" />
     <None Include="Resources\icon_ayuda.png" />
+    <None Include="Resources\icon_credit_card.png" />
+    <None Include="Resources\icon_credit_card1.png" />
     <Content Include="Resources\icon_otras_opciones.png" />
     <Content Include="Resources\op_0.png" />
     <None Include="Resources\op_3.png" />

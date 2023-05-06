@@ -115,22 +115,6 @@ namespace ProyectoCompra.Formularios
             lblAlerta.Visible = false;
         }
 
-        private void txtEdad_TextChanged_1(object sender, EventArgs e)
-        {
-            int numero = 0;
-            if (txtEdad.Text.Length > 0)
-            {
-                if (int.TryParse(txtEdad.Text, out numero))
-                {
-                    txtEdad.Text = Convert.ToString(numero);
-                }
-                else
-                {
-                    txtEdad.Text = "";
-                }
-            }
-        }
-
         private void btnRecuperarContrasenia_Click(object sender, EventArgs e)
         {
             FrmRecuperarContrasenia frmRecuperarContrasenia = new FrmRecuperarContrasenia();

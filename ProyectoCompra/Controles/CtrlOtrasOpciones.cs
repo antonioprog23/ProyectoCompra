@@ -64,7 +64,8 @@ namespace ProyectoCompra.Controles
             switch (boton.Name)
             {
                 case "op_0": //METODO DE PAGO
-
+                    FrmPagos frmPagos = new FrmPagos();
+                    frmPagos.ShowDialog();
                     break;
                 case "op_1": //PEDIDOS
                     FrmHistorialPedidos frmHistorialPedidos = new FrmHistorialPedidos();

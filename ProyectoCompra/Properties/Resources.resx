@@ -121,6 +121,9 @@
   <data name="ocultar_contrasenia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\ocultar_contrasenia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_desayuno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_desayuno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_cerrar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_cerrar_sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +139,8 @@
   <data name="icon_cuidado_cabello" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_cuidado_cabello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_desayuno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_desayuno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_queso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_queso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_jardin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_jardin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +148,14 @@
   <data name="icon_sin_alcohol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_sin_alcohol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_compra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_compra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_informatica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_informatica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_cuidado_facial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_cuidado_facial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_higiene_bucal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_higiene_bucal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_secadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_secadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,9 +256,6 @@
   <data name="icon_tablets" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_tablets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_queso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_queso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_bebida_ecologica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_bebida_ecologica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -267,6 +267,9 @@
   </data>
   <data name="icon_postres" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_postres.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_botiquin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_botiquin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_horno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_horno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,6 +286,9 @@
   <data name="icon_locion_solar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_locion_solar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon_ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_mantequilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_mantequilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -298,9 +304,6 @@
   <data name="icon_lavavajillas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_lavavajillas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_nutricion_deportiva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_nutricion_deportiva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_climatizacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_climatizacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -313,19 +316,16 @@
   <data name="op_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\op_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_botiquin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_botiquin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_compra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_compra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_bebida_alcohol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_bebida_alcohol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_higiene_bucal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_higiene_bucal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_nutricion_deportiva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_nutricion_deportiva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\icon_ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

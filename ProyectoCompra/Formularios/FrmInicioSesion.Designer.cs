@@ -280,7 +280,6 @@
             resources.ApplyResources(this.txtEdad, "txtEdad");
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.ReadOnly = true;
-            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged_1);
             // 
             // lblEdad
             // 

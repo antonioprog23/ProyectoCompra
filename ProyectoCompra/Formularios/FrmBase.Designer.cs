@@ -32,13 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSaludo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPerfil = new System.Windows.Forms.Button();
-            this.btnIdentificarse = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblContador = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnCarrito = new System.Windows.Forms.Button();
             this.mnAlimentacion = new System.Windows.Forms.MenuStrip();
             this.alimentacion = new System.Windows.Forms.ToolStripMenuItem();
             this.lacteosmn = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,124 +67,58 @@
             this.electrodomesticos = new System.Windows.Forms.ToolStripMenuItem();
             this.tecnologia = new System.Windows.Forms.ToolStripMenuItem();
             this.hogar = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblContador = new System.Windows.Forms.Label();
             this.btnLogoMain = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnCarrito = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnIdentificarse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.mnAlimentacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblSaludo);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.btnLogoMain);
             this.panel1.Controls.Add(this.mnAlimentacion);
-            this.panel1.Location = new System.Drawing.Point(104, 9);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(12, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1085, 104);
+            this.panel1.Size = new System.Drawing.Size(1178, 100);
             this.panel1.TabIndex = 4;
             // 
             // lblSaludo
             // 
-            this.lblSaludo.AutoSize = true;
-            this.lblSaludo.Font = new System.Drawing.Font("Arial Nova Cond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaludo.Location = new System.Drawing.Point(6, 4);
+            this.lblSaludo.Font = new System.Drawing.Font("Arial Nova Cond", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaludo.Location = new System.Drawing.Point(3, 6);
             this.lblSaludo.Name = "lblSaludo";
-            this.lblSaludo.Size = new System.Drawing.Size(63, 26);
+            this.lblSaludo.Size = new System.Drawing.Size(206, 58);
             this.lblSaludo.TabIndex = 5;
-            this.lblSaludo.Text = "Hola, ";
+            this.lblSaludo.Text = "Easy Shop";
+            this.lblSaludo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSaludo.Visible = false;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnPerfil);
+            this.panel2.Controls.Add(this.lblContador);
+            this.panel2.Controls.Add(this.lblSaludo);
+            this.panel2.Controls.Add(this.btnCarrito);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.btnIdentificarse);
-            this.panel2.Location = new System.Drawing.Point(234, 2);
+            this.panel2.Location = new System.Drawing.Point(95, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(849, 28);
+            this.panel2.Size = new System.Drawing.Size(1080, 70);
             this.panel2.TabIndex = 8;
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(792, 1);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(53, 27);
-            this.btnPerfil.TabIndex = 4;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // btnIdentificarse
-            // 
-            this.btnIdentificarse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnIdentificarse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIdentificarse.Location = new System.Drawing.Point(770, 1);
-            this.btnIdentificarse.Name = "btnIdentificarse";
-            this.btnIdentificarse.Size = new System.Drawing.Size(75, 27);
-            this.btnIdentificarse.TabIndex = 3;
-            this.btnIdentificarse.Text = "Identificarse";
-            this.btnIdentificarse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIdentificarse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIdentificarse.UseVisualStyleBackColor = true;
-            this.btnIdentificarse.Click += new System.EventHandler(this.btnIdentificarse_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.Controls.Add(this.lblContador);
-            this.panel3.Controls.Add(this.btnBuscar);
-            this.panel3.Controls.Add(this.txtBuscar);
-            this.panel3.Controls.Add(this.btnCarrito);
-            this.panel3.Location = new System.Drawing.Point(0, 32);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1083, 41);
-            this.panel3.TabIndex = 7;
-            // 
-            // lblContador
-            // 
-            this.lblContador.AutoSize = true;
-            this.lblContador.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblContador.Location = new System.Drawing.Point(1046, 15);
-            this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(13, 13);
-            this.lblContador.TabIndex = 6;
-            this.lblContador.Text = "0";
-            this.lblContador.TextChanged += new System.EventHandler(this.lblContador_TextChanged);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(334, 10);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 22);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(3, 11);
+            this.txtBuscar.Location = new System.Drawing.Point(275, 29);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(325, 20);
             this.txtBuscar.TabIndex = 4;
-            // 
-            // btnCarrito
-            // 
-            this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCarrito.FlatAppearance.BorderSize = 0;
-            this.btnCarrito.Image = global::ProyectoCompra.Properties.Resources.icon_carrito;
-            this.btnCarrito.Location = new System.Drawing.Point(983, 2);
-            this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(96, 36);
-            this.btnCarrito.TabIndex = 3;
-            this.btnCarrito.UseMnemonic = false;
-            this.btnCarrito.UseVisualStyleBackColor = false;
-            this.btnCarrito.Click += new System.EventHandler(this.button37_Click);
             // 
             // mnAlimentacion
             // 
@@ -212,13 +140,13 @@
             this.tecnologia,
             this.hogar});
             this.mnAlimentacion.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.mnAlimentacion.Location = new System.Drawing.Point(0, 80);
+            this.mnAlimentacion.Location = new System.Drawing.Point(0, 76);
             this.mnAlimentacion.Name = "mnAlimentacion";
             this.mnAlimentacion.Padding = new System.Windows.Forms.Padding(0);
             this.mnAlimentacion.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnAlimentacion.Size = new System.Drawing.Size(1085, 24);
+            this.mnAlimentacion.Size = new System.Drawing.Size(1178, 24);
             this.mnAlimentacion.Stretch = false;
-            this.mnAlimentacion.TabIndex = 0;
+            this.mnAlimentacion.TabIndex = 9;
             this.mnAlimentacion.Text = "Alimentación";
             // 
             // alimentacion
@@ -448,22 +376,113 @@
             this.hogar.Size = new System.Drawing.Size(54, 24);
             this.hogar.Text = "Hogar";
             // 
+            // lblContador
+            // 
+            this.lblContador.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblContador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContador.Location = new System.Drawing.Point(1059, 32);
+            this.lblContador.Name = "lblContador";
+            this.lblContador.Size = new System.Drawing.Size(11, 11);
+            this.lblContador.TabIndex = 8;
+            this.lblContador.Text = "0";
+            // 
             // btnLogoMain
             // 
             this.btnLogoMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLogoMain.Image = global::ProyectoCompra.Properties.Resources.icon_logo;
-            this.btnLogoMain.Location = new System.Drawing.Point(12, 12);
+            this.btnLogoMain.Location = new System.Drawing.Point(3, 7);
             this.btnLogoMain.Name = "btnLogoMain";
-            this.btnLogoMain.Size = new System.Drawing.Size(86, 101);
+            this.btnLogoMain.Size = new System.Drawing.Size(86, 66);
             this.btnLogoMain.TabIndex = 5;
             this.btnLogoMain.UseVisualStyleBackColor = true;
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Image = global::ProyectoCompra.Properties.Resources.icon_perfil;
+            this.btnPerfil.Location = new System.Drawing.Point(983, 9);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(41, 58);
+            this.btnPerfil.TabIndex = 4;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            this.btnPerfil.MouseEnter += new System.EventHandler(this.btnPerfil_MouseEnter);
+            this.btnPerfil.MouseLeave += new System.EventHandler(this.btnPerfil_MouseLeave);
+            // 
+            // btnCarrito
+            // 
+            this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCarrito.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCarrito.FlatAppearance.BorderSize = 0;
+            this.btnCarrito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarrito.Image = global::ProyectoCompra.Properties.Resources.icon_carrito;
+            this.btnCarrito.Location = new System.Drawing.Point(1013, 1);
+            this.btnCarrito.Name = "btnCarrito";
+            this.btnCarrito.Size = new System.Drawing.Size(59, 63);
+            this.btnCarrito.TabIndex = 7;
+            this.btnCarrito.Text = "Carrito";
+            this.btnCarrito.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCarrito.UseMnemonic = false;
+            this.btnCarrito.UseVisualStyleBackColor = false;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
+            this.btnCarrito.MouseEnter += new System.EventHandler(this.btnCarrito_MouseEnter);
+            this.btnCarrito.MouseLeave += new System.EventHandler(this.btnCarrito_MouseLeave);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(606, 28);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(29, 22);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // btnIdentificarse
+            // 
+            this.btnIdentificarse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnIdentificarse.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnIdentificarse.FlatAppearance.BorderSize = 0;
+            this.btnIdentificarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnIdentificarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnIdentificarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIdentificarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIdentificarse.Image = global::ProyectoCompra.Properties.Resources.icon_perfil;
+            this.btnIdentificarse.Location = new System.Drawing.Point(958, 9);
+            this.btnIdentificarse.Name = "btnIdentificarse";
+            this.btnIdentificarse.Size = new System.Drawing.Size(65, 58);
+            this.btnIdentificarse.TabIndex = 3;
+            this.btnIdentificarse.Text = "Mi cuenta";
+            this.btnIdentificarse.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnIdentificarse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnIdentificarse.UseVisualStyleBackColor = true;
+            this.btnIdentificarse.Click += new System.EventHandler(this.btnIdentificarse_Click);
+            this.btnIdentificarse.MouseEnter += new System.EventHandler(this.btnIdentificarse_MouseEnter);
+            this.btnIdentificarse.MouseLeave += new System.EventHandler(this.btnIdentificarse_MouseLeave);
             // 
             // FrmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 119);
-            this.Controls.Add(this.btnLogoMain);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1191, 103);
             this.Controls.Add(this.panel1);
             this.Name = "FrmBase";
             this.Text = "FrmBase";
@@ -471,8 +490,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel2.PerformLayout();
             this.mnAlimentacion.ResumeLayout(false);
             this.mnAlimentacion.PerformLayout();
             this.ResumeLayout(false);
@@ -487,11 +505,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnIdentificarse;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblContador;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnCarrito;
         private System.Windows.Forms.MenuStrip mnAlimentacion;
         private System.Windows.Forms.ToolStripMenuItem alimentacion;
         private System.Windows.Forms.ToolStripMenuItem lacteosmn;
@@ -526,5 +541,7 @@
         private System.Windows.Forms.ToolStripMenuItem electrodomesticos;
         private System.Windows.Forms.ToolStripMenuItem tecnologia;
         private System.Windows.Forms.ToolStripMenuItem hogar;
+        private System.Windows.Forms.Label lblContador;
+        private System.Windows.Forms.Button btnCarrito;
     }
 }
