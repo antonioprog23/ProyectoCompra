@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCompra.Controles;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace ProyectoCompra.Formularios
         public FrmDireccion()
         {
             InitializeComponent();
+        }
+
+        private void btnAniadirDireccion_Click(object sender, EventArgs e)
+        {
+            CtrlDireccion ctrlDireccion = new CtrlDireccion();
+            ctrlDireccion.Location = new Point(330, 12);
+            ctrlDireccion.groupBox = "Dirección (alternativo)";
+            this.Controls.Add(ctrlDireccion);
+            this.Size = new Size(668,331);
         }
     }
 }
