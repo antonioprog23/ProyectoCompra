@@ -32,6 +32,16 @@ namespace ProyectoCompra.Clases
             this.direccion = direccion;
             this.correo = correo;
         }
+
+        public Persona(string nombre, string apellido, int edad, string fechaNacimiento, string sexo, string correo)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.edad = edad;
+            this.fechaNacimiento = fechaNacimiento;
+            this.sexo = sexo;
+            this.correo = correo;
+        }
         #endregion
 
         #region Métodos

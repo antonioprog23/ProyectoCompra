@@ -683,6 +683,26 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_tipo_tarjeta {
+            get {
+                object obj = ResourceManager.GetObject("icon_tipo_tarjeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tipo_tarjeta1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_tipo_tarjeta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_verduras {
             get {
                 object obj = ResourceManager.GetObject("icon_verduras", resourceCulture);

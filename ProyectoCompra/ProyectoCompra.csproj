@@ -84,6 +84,12 @@
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlDireccion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlDireccion.Designer.cs">
+      <DependentUpon>CtrlDireccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlEfectivo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="Formularios\FrmDetalleProducto.Designer.cs">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmDireccion.Designer.cs">
+      <DependentUpon>FrmDireccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmHistorialPedidos.cs">
       <SubType>Form</SubType>
@@ -304,6 +316,9 @@
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlDireccion.resx">
+      <DependentUpon>CtrlDireccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlEfectivo.resx">
       <DependentUpon>CtrlEfectivo.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmDetalleProducto.resx">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmDireccion.resx">
+      <DependentUpon>FrmDireccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmHistorialPedidos.resx">
       <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
@@ -688,8 +706,8 @@
     <None Include="Resources\15_24.jpeg" />
     <None Include="Resources\icon_ayuda.png" />
     <None Include="Resources\icon_credit_card.png" />
-    <None Include="Resources\icon_credit_card1.png" />
     <Content Include="Resources\icon_otras_opciones.png" />
+    <Content Include="Resources\icon_tipo_tarjeta.png" />
     <Content Include="Resources\op_0.png" />
     <None Include="Resources\op_3.png" />
     <None Include="Resources\op_2.png" />

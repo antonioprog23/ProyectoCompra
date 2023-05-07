@@ -30,7 +30,6 @@ namespace ProyectoCompra.Base_datos
                             cmd.Parameters.AddWithValue("@Edad", cliente.edad);
                             cmd.Parameters.AddWithValue("@Fecha_Nacimiento", cliente.fechaNacimiento);
                             cmd.Parameters.AddWithValue("@Sexo", cliente.sexo);
-                            cmd.Parameters.AddWithValue("@Direccion", cliente.direccion);
                             cmd.Parameters.AddWithValue("@CorreoElectronico", cliente.correo);
                             //USUARIO
                             cmd.Parameters.AddWithValue("@Usuario_name", usuario.username);

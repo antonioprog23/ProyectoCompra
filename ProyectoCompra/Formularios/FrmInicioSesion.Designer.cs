@@ -52,8 +52,6 @@
             this.textUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
@@ -235,8 +233,6 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.txtDireccion);
-            this.groupBox3.Controls.Add(this.lblDireccion);
             this.groupBox3.Controls.Add(this.cbxSexo);
             this.groupBox3.Controls.Add(this.lblSexo);
             this.groupBox3.Controls.Add(this.txtEdad);
@@ -250,16 +246,6 @@
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
-            // 
-            // txtDireccion
-            // 
-            resources.ApplyResources(this.txtDireccion, "txtDireccion");
-            this.txtDireccion.Name = "txtDireccion";
-            // 
-            // lblDireccion
-            // 
-            resources.ApplyResources(this.lblDireccion, "lblDireccion");
-            this.lblDireccion.Name = "lblDireccion";
             // 
             // cbxSexo
             // 
@@ -376,8 +362,6 @@
         private System.Windows.Forms.TextBox textUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.ComboBox cbxSexo;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.TextBox txtEdad;

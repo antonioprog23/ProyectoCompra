@@ -23,17 +23,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoVerificacion.Text.Equals(codigoVerificacion))
-            {
-                if ((BDUsuario.insertarDatos(cliente, usuario)))
-                {
-                    MessageBox.Show("Usuario creado.", "Información.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                    frmInicioSesion frmInicioSesion = new frmInicioSesion();
-                    frmInicioSesion.ShowDialog();
-                }
-            }
-            else
+            if (!txtCodigoVerificacion.Text.Equals(codigoVerificacion))
             {
                 var resultado = MessageBox.Show("El código no coincide.\n¿Deseas volver a recibir el código?", "Error.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado is DialogResult.Yes)
@@ -41,6 +31,14 @@ namespace ProyectoCompra.Formularios
                     txtCodigoVerificacion.Clear();
                     this.codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(correoElectronico);
                 }
+                return;
+            }
+            if ((BDUsuario.insertarDatos(cliente, usuario)))
+            {
+                MessageBox.Show("Usuario creado.", "Información.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                frmInicioSesion frmInicioSesion = new frmInicioSesion();
+                frmInicioSesion.ShowDialog();
             }
         }
     }

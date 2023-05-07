@@ -44,44 +44,44 @@ namespace ProyectoCompra.Formularios
             Usuario usuario = crearUsuario();
             if (cliente != null && usuario != null)
             {
-                int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text.Trim());
-                if (codigoUsuarioConNombreUsado != 0)
-                {
-                    textUsuario.Clear();
-                    MessageBox.Show("El nombre de usuario ya existe.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                lblAlerta.Visible = true;
+                return;
+            }
 
-                int codigoUsuarioConCorreoUsado = BDUsuario.consultarUsuarioCorreoElectronico(txtCorreo.Text.Trim());
-                if (codigoUsuarioConCorreoUsado != 0)
-                {
-                    txtCorreo.Clear();
-                    MessageBox.Show("El correo proporcionado ya está en uso.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text.Trim());
-                if (!codigoVerificacion.Equals("-1"))
-                {
-                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(cliente, usuario, codigoVerificacion, txtCorreo.Text.Trim());
-                    frmVerificarCuenta.ShowDialog();
-                }
-                else
-                {
-                    txtCorreo.Clear();
-                }
+            int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text.Trim());
+            if (codigoUsuarioConNombreUsado != 0)
+            {
+                textUsuario.Clear();
+                MessageBox.Show("El nombre de usuario ya existe.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int codigoUsuarioConCorreoUsado = BDUsuario.consultarUsuarioCorreoElectronico(txtCorreo.Text.Trim());
+            if (codigoUsuarioConCorreoUsado != 0)
+            {
+                txtCorreo.Clear();
+                MessageBox.Show("El correo proporcionado ya está en uso.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text.Trim());
+            if (!codigoVerificacion.Equals("-1"))
+            {
+                FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(cliente, usuario, codigoVerificacion, txtCorreo.Text.Trim());
+                frmVerificarCuenta.ShowDialog();
             }
             else
             {
-                lblAlerta.Visible = true;
+                txtCorreo.Clear();
             }
         }
 
         private Cliente crearCliente()
         {
             Cliente cliente = null;
-            if (!txtNombre.Text.Equals("") && !txtApellido.Text.Equals("") && !txtEdad.Text.Equals("") && !dateFNacimiento.Value.Equals("") && !txtDireccion.Text.Equals("") && !txtCorreo.Text.Equals(""))
+            if (!txtNombre.Text.Equals("") && !txtApellido.Text.Equals("") && !txtEdad.Text.Equals("") && !dateFNacimiento.Value.Equals("") && !txtCorreo.Text.Equals(""))
             {
-                cliente = new Cliente(txtNombre.Text.Trim(), txtApellido.Text.Trim(), int.Parse(txtEdad.Text.Trim()), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtDireccion.Text.Trim(), txtCorreo.Text.Trim());
+                cliente = new Cliente(txtNombre.Text.Trim(), txtApellido.Text.Trim(), int.Parse(txtEdad.Text.Trim()), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtCorreo.Text.Trim());
             }
             return cliente;
         }
