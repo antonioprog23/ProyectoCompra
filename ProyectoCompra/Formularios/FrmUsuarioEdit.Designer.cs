@@ -32,10 +32,8 @@
             this.gbxCliente = new System.Windows.Forms.GroupBox();
             this.txtEdad = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlTextoBox10 = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtDireccion = new ProyectoCompra.Controles.CtrlTextoBox();
             this.txtNombre = new ProyectoCompra.Controles.CtrlTextoBox();
             this.txtApellido = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
@@ -62,10 +60,8 @@
             // 
             this.gbxCliente.Controls.Add(this.txtEdad);
             this.gbxCliente.Controls.Add(this.ctrlTextoBox10);
-            this.gbxCliente.Controls.Add(this.txtDireccion);
             this.gbxCliente.Controls.Add(this.txtNombre);
             this.gbxCliente.Controls.Add(this.txtApellido);
-            this.gbxCliente.Controls.Add(this.lblDireccion);
             this.gbxCliente.Controls.Add(this.cbxSexo);
             this.gbxCliente.Controls.Add(this.lblSexo);
             this.gbxCliente.Controls.Add(this.lblEdad);
@@ -87,35 +83,20 @@
             // ctrlTextoBox10
             // 
             resources.ApplyResources(this.ctrlTextoBox10, "ctrlTextoBox10");
-            this.ctrlTextoBox10.IsNumerico = false;
             this.ctrlTextoBox10.Name = "ctrlTextoBox10";
             this.ctrlTextoBox10.Texto = "";
-            // 
-            // txtDireccion
-            // 
-            resources.ApplyResources(this.txtDireccion, "txtDireccion");
-            this.txtDireccion.IsNumerico = false;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Texto = "";
             // 
             // txtNombre
             // 
             resources.ApplyResources(this.txtNombre, "txtNombre");
-            this.txtNombre.IsNumerico = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Texto = "";
             // 
             // txtApellido
             // 
             resources.ApplyResources(this.txtApellido, "txtApellido");
-            this.txtApellido.IsNumerico = false;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Texto = "";
-            // 
-            // lblDireccion
-            // 
-            resources.ApplyResources(this.lblDireccion, "lblDireccion");
-            this.lblDireccion.Name = "lblDireccion";
             // 
             // cbxSexo
             // 
@@ -190,14 +171,12 @@
             // txtCorreo
             // 
             resources.ApplyResources(this.txtCorreo, "txtCorreo");
-            this.txtCorreo.IsNumerico = false;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Texto = "";
             // 
             // txtUsuario
             // 
             resources.ApplyResources(this.txtUsuario, "txtUsuario");
-            this.txtUsuario.IsNumerico = false;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Texto = "";
             // 
@@ -258,7 +237,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DateTimePicker dateFNacimiento;
         private System.Windows.Forms.Label lblRepContrasenia;
-        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.ComboBox cbxSexo;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblEdad;
@@ -269,7 +247,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private Controles.CtrlTextoBox ctrlTextoBox10;
-        private Controles.CtrlTextoBox txtDireccion;
         private Controles.CtrlTextoBox txtNombre;
         private Controles.CtrlTextoBox txtApellido;
         private Controles.ctrlContrasenia ctrlContrasenia;

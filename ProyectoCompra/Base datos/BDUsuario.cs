@@ -77,9 +77,8 @@ namespace ProyectoCompra.Base_datos
                             int edad = reader.GetInt32(8);
                             DateTime fechaNacimiento = reader.GetDateTime(9);
                             string sexo = reader.GetString(10);
-                            string direccion = reader.GetString(11);
-                            string correo = reader.GetString(12);
-                            cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, direccion, correo);
+                            string correo = reader.GetString(11);
+                            cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, correo);
                             usuarioCompleto = new Usuario(idUsuario, cliente, usuarioName, contrasenia, Convert.ToString(fechaAlta), Convert.ToString(fechaUltimaModificacion));
                         }
                     }

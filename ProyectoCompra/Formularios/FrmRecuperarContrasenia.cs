@@ -16,5 +16,6 @@ namespace ProyectoCompra.Formularios
         {
             InitializeComponent();
         }
+
     }
 }

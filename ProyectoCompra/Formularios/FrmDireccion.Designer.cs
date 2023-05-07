@@ -28,22 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlDireccion1 = new ProyectoCompra.Controles.CtrlDireccion();
             this.btnAniadirDireccion = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.ctrlDireccion1 = new ProyectoCompra.Controles.CtrlDireccion();
             this.SuspendLayout();
-            // 
-            // ctrlDireccion1
-            // 
-            this.ctrlDireccion1.AutoSize = true;
-            this.ctrlDireccion1.groupBox = "Dirección (predeterminado)";
-            this.ctrlDireccion1.Location = new System.Drawing.Point(12, 12);
-            this.ctrlDireccion1.Name = "ctrlDireccion1";
-            this.ctrlDireccion1.Size = new System.Drawing.Size(312, 245);
-            this.ctrlDireccion1.TabIndex = 0;
             // 
             // btnAniadirDireccion
             // 
-            this.btnAniadirDireccion.Location = new System.Drawing.Point(249, 257);
+            this.btnAniadirDireccion.Location = new System.Drawing.Point(247, 286);
             this.btnAniadirDireccion.Name = "btnAniadirDireccion";
             this.btnAniadirDireccion.Size = new System.Drawing.Size(75, 23);
             this.btnAniadirDireccion.TabIndex = 1;
@@ -51,14 +44,46 @@
             this.btnAniadirDireccion.UseVisualStyleBackColor = true;
             this.btnAniadirDireccion.Click += new System.EventHandler(this.btnAniadirDireccion_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(247, 287);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(166, 287);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 4;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
+            // 
+            // ctrlDireccion1
+            // 
+            this.ctrlDireccion1.AutoSize = true;
+            this.ctrlDireccion1.groupBox = "Dirección (predeterminado)";
+            this.ctrlDireccion1.Location = new System.Drawing.Point(12, 11);
+            this.ctrlDireccion1.Name = "ctrlDireccion1";
+            this.ctrlDireccion1.Size = new System.Drawing.Size(312, 269);
+            this.ctrlDireccion1.TabIndex = 0;
+            // 
             // FrmDireccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(334, 292);
+            this.ClientSize = new System.Drawing.Size(334, 322);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnAniadirDireccion);
             this.Controls.Add(this.ctrlDireccion1);
+            this.Controls.Add(this.btnCancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmDireccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -72,5 +97,7 @@
 
         private Controles.CtrlDireccion ctrlDireccion1;
         private System.Windows.Forms.Button btnAniadirDireccion;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAceptar;
     }
 }

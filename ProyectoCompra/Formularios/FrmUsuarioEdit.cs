@@ -33,7 +33,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (!txtDireccion.Texto.Equals("") || !txtCorreo.Texto.Equals("") || (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals("")))
+            if (!txtCorreo.Texto.Equals("") || (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals("")))
             {
                 if (ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text))
                 {
@@ -50,7 +50,7 @@ namespace ProyectoCompra.Formularios
                     txtRepContrasenia.Text = "";
                     return;
                 }
-                if (BDUsuario.actualiarDatos(txtUsuario.Texto, txtDireccion.Texto, txtCorreo.Texto, ""))
+                if (BDUsuario.actualiarDatos(txtUsuario.Texto,txtCorreo.Texto, ""))
                 {
                     MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Application.Restart();

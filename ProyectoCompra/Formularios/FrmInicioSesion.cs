@@ -3,6 +3,7 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -42,12 +43,19 @@ namespace ProyectoCompra.Formularios
         {
             Cliente cliente = crearCliente();
             Usuario usuario = crearUsuario();
-            if (cliente != null && usuario != null)
+            if (cliente == null || usuario == null)
             {
                 lblAlerta.Visible = true;
                 return;
             }
-
+            if (Regex.IsMatch(txtCorreo.Text, "^[a-zA-Z0-9]$"))
+            {
+                MessageBox.Show("El correo proporcionado no tiene formato de correo electrónico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cliente = null;
+                usuario = null;
+                txtCorreo.Clear();
+                return;
+            }
             int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text.Trim());
             if (codigoUsuarioConNombreUsado != 0)
             {
@@ -79,9 +87,9 @@ namespace ProyectoCompra.Formularios
         private Cliente crearCliente()
         {
             Cliente cliente = null;
-            if (!txtNombre.Text.Equals("") && !txtApellido.Text.Equals("") && !txtEdad.Text.Equals("") && !dateFNacimiento.Value.Equals("") && !txtCorreo.Text.Equals(""))
+            if (!txtNombre.Texto.Equals("") && !txtApellido.Texto.Equals("") && !txtEdad.Text.Equals("") && !dateFNacimiento.Value.Equals("") && !txtCorreo.Text.Equals(""))
             {
-                cliente = new Cliente(txtNombre.Text.Trim(), txtApellido.Text.Trim(), int.Parse(txtEdad.Text.Trim()), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtCorreo.Text.Trim());
+                cliente = new Cliente(txtNombre.Texto.Trim(), txtApellido.Texto.Trim(), int.Parse(txtEdad.Text.Trim()), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtCorreo.Text.Trim());
             }
             return cliente;
         }

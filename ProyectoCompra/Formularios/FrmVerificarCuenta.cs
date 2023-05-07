@@ -33,6 +33,7 @@ namespace ProyectoCompra.Formularios
                 }
                 return;
             }
+
             if ((BDUsuario.insertarDatos(cliente, usuario)))
             {
                 MessageBox.Show("Usuario creado.", "Información.", MessageBoxButtons.OK, MessageBoxIcon.Information);

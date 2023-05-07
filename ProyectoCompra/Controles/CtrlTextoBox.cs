@@ -15,19 +15,17 @@ namespace ProyectoCompra.Controles
             InitializeComponent();
         }
 
-        public string Texto { get { return textBox.Text; } set { textBox.Text = value; } }
-
         private void textBox_TextChanged_1(object sender, EventArgs e)
         {
-            if (isNumerico && !IsReadOnly)
+            if (isNumerico && !isReadOnly)
             {
                 Regex regex = new Regex("[^0-9]");
                 textBox.Text = regex.Replace(textBox.Text, "");
                 textBox.Select(textBox.Text.Length, 0);
             }
-            if (!isNumerico && !IsReadOnly)
+            if (!isNumerico && !isReadOnly)
             {
-                Regex regex = new Regex("[^a-zA-Z]");
+                Regex regex = new Regex("[^a-zA-Z ]");
                 textBox.Text = regex.Replace(textBox.Text, "");
                 textBox.Select(textBox.Text.Length, 0);
             }
@@ -37,6 +35,20 @@ namespace ProyectoCompra.Controles
             }
         }
 
+        //METODOS PUBLICOS
+        public void VaciarTextBox()
+        {
+            this.textBox.Clear();
+        }
+
+        public bool validaCorreoElectronico()
+        {
+            return Regex.IsMatch(textBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+        }
+
+        public string Texto { get { return textBox.Text; } set { textBox.Text = value; } }
+
+        //PROPIEDADES
         [Category("Personalizado")]
         [DisplayName("Es numérico")]
         [Description("Indica si el control solo permite ingresar valores numéricos.")]
@@ -45,7 +57,7 @@ namespace ProyectoCompra.Controles
 
         [Category("Personalizado")]
         [DisplayName("IsReadOnly")]
-        [Description("Indica si el control solo permite ingresar valores numéricos.")]
+        [Description("Indica si el control es solo de lectura.")]
         [DefaultValue(false)]
         public bool IsReadOnly { get => isReadOnly; set => isReadOnly = value; }
     }

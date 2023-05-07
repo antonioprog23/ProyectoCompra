@@ -4,7 +4,6 @@ IF OBJECT_ID ('ActualizarDatos','P') IS NOT NULL
 	PRINT 'Procedimiento almacenado borrado.'
 GO
 CREATE PROCEDURE ActualizarDatos
-@Direccion NVARCHAR(50),
 @Usuario_Name NVARCHAR(30),
 @Contrasenia NVARCHAR(30),
 @Correo_Electronico NVARCHAR(50)
@@ -24,14 +23,5 @@ BEGIN
 								ELSE correo_electronico
 						 END
 	WHERE usuario_name = @Usuario_Name
-							
-	UPDATE cliente
-	SET direccion = CASE
-							WHEN @Direccion IS NOT NULL AND @Direccion != ''
-								THEN @Direccion
-							ELSE direccion
-					END
-	WHERE id_cliente = (SELECT id_cliente
-										 FROM usuario 
-													WHERE usuario_name = @Usuario_Name)
+
 END

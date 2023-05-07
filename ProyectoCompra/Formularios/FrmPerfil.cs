@@ -34,7 +34,6 @@ namespace ProyectoCompra.Formularios
                 lblMostrarFNacimiento.Text = usuarioRecuperado.cliente.fechaNacimiento.ToUpper();
                 lblMostrarSexo.Text = usuarioRecuperado.cliente.sexo.ToString().ToUpper();
                 lblMostrarCorreo.Text = usuarioRecuperado.cliente.correo.ToString().ToUpper();
-                lblMostrarDireccion.Text = usuarioRecuperado.cliente.direccion.ToString().ToUpper();
                 lblMostrarUltimaModificacion.Text = usuarioRecuperado.fechaUltimaModificacion.ToString().ToUpper();
             }
         }

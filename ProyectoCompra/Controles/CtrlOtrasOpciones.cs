@@ -72,7 +72,8 @@ namespace ProyectoCompra.Controles
                     frmHistorialPedidos.ShowDialog();
                     break;
                 case "op_2": //DIRECCIONES
-
+                    FrmDireccion frmDireccion = new FrmDireccion();
+                    frmDireccion.ShowDialog();
                     break;
                 case "op_3": //DARSE DE BAJA
                     FrmBajaUsuario frmBajaUsuario = new FrmBajaUsuario();

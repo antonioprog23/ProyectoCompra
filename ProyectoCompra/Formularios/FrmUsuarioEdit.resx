@@ -167,30 +167,6 @@
   <data name="&gt;&gt;ctrlTextoBox10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="txtDireccion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtDireccion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 145</value>
-  </data>
-  <data name="txtDireccion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 21</value>
-  </data>
-  <data name="txtDireccion.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.Name" xml:space="preserve">
-    <value>txtDireccion</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;txtDireccion.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="txtNombre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -213,7 +189,7 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;txtNombre.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="txtApellido.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -237,38 +213,7 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;txtApellido.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblDireccion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblDireccion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblDireccion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 145</value>
-  </data>
-  <data name="lblDireccion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 14</value>
-  </data>
-  <data name="lblDireccion.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="lblDireccion.Text" xml:space="preserve">
-    <value>Dirección:</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.Name" xml:space="preserve">
-    <value>lblDireccion</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.Parent" xml:space="preserve">
-    <value>gbxCliente</value>
-  </data>
-  <data name="&gt;&gt;lblDireccion.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="cbxSexo.Items" xml:space="preserve">
     <value>Masculino</value>
@@ -295,11 +240,12 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;cbxSexo.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="lblSexo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblSexo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -325,7 +271,7 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;lblSexo.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="lblEdad.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -355,7 +301,7 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;lblEdad.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="dateFNacimiento.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 85</value>
@@ -376,7 +322,7 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;dateFNacimiento.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="lblFNacimiento.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -406,7 +352,7 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;lblFNacimiento.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="lblApellido.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -436,7 +382,7 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;lblApellido.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="lblNombre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -466,13 +412,13 @@
     <value>gbxCliente</value>
   </data>
   <data name="&gt;&gt;lblNombre.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="gbxCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 13</value>
   </data>
   <data name="gbxCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 191</value>
+    <value>420, 161</value>
   </data>
   <data name="gbxCliente.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -709,7 +655,7 @@
     <value>7</value>
   </data>
   <data name="gbxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 210</value>
+    <value>12, 180</value>
   </data>
   <data name="gbxUsuario.Size" type="System.Drawing.Size, System.Drawing">
     <value>421, 163</value>
@@ -736,7 +682,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 379</value>
+    <value>357, 349</value>
   </data>
   <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 25</value>
@@ -763,7 +709,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnEditar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 379</value>
+    <value>276, 349</value>
   </data>
   <data name="btnEditar.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 25</value>
@@ -793,7 +739,7 @@
     <value>6, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>445, 412</value>
+    <value>445, 389</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Nova Cond, 8.25pt, style=Bold</value>
