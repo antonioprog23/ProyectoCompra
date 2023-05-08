@@ -33,33 +33,51 @@ namespace ProyectoCompra.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (!txtCorreo.Texto.Equals("") || (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals("")))
+            if (txtCorreo.Text.Equals("") && (ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && txtRepContrasenia.Text.Equals("")))
             {
-                if (ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text))
-                {
-                    if (BDUsuario.actualiarDatos(txtUsuario.Texto, "", "", ctrlContrasenia.TextBoxtxtContrasenia))
-                    {
-                        MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        Application.Restart();
-                    }
-                }
-                else
+                MessageBox.Show("Al menos rellena un campo de los posibles a modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            actualizarContrasenia();
+            actualizarCorreoElectronico();
+
+        }
+
+        private void actualizarContrasenia()
+        {
+            if (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals(""))
+            {
+                if (!ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text))
                 {
                     MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ctrlContrasenia.TextBoxtxtContrasenia = "";
                     txtRepContrasenia.Text = "";
                     return;
                 }
-                if (BDUsuario.actualiarDatos(txtUsuario.Texto,txtCorreo.Texto, ""))
+                string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(usuarioModificar.cliente.correo);
+                if (!codigoVerificacion.Equals("-1"))
                 {
-                    MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    Application.Restart();
+                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(codigoVerificacion, ctrlContrasenia.TextBoxtxtContrasenia, true, "Contrasenia", txtUsuario.Text);
+                    frmVerificarCuenta.ShowDialog();
                 }
             }
-            else
-            {
-                MessageBox.Show("Al menos rellena un campo de los posibles a modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
+        private void actualizarCorreoElectronico()
+        {
+            if (!txtCorreo.Text.Equals(""))
+            {
+                if (BDUsuario.consultarUsuarioCorreoElectronico(txtCorreo.Text) != 0)
+                {
+                    MessageBox.Show("El correo electrónico proporcionado está en uso.");
+                    return;
+                }
+                string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text);
+                if (!codigoVerificacion.Equals("-1"))
+                {
+                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(codigoVerificacion, txtCorreo.Text, true, "Correo Electronico", txtUsuario.Text);
+                    frmVerificarCuenta.ShowDialog();
+                }
             }
         }
 
@@ -70,7 +88,7 @@ namespace ProyectoCompra.Formularios
             txtEdad.Texto = usuarioModificar.cliente.edad.ToString();
             cbxSexo.Text = usuarioModificar.cliente.sexo;
             dateFNacimiento.Value = Convert.ToDateTime(usuarioModificar.cliente.fechaNacimiento);
-            txtUsuario.Texto = usuarioModificar.username.ToString();
+            txtUsuario.Text = usuarioModificar.username.ToString();
         }
 
         private void deshabilitarDatosCliente()
@@ -84,5 +102,6 @@ namespace ProyectoCompra.Formularios
         }
 
         #endregion
+
     }
 }

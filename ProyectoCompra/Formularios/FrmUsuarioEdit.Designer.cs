@@ -43,10 +43,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRepContrasenia = new System.Windows.Forms.Label();
             this.gbxUsuario = new System.Windows.Forms.GroupBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtRepContrasenia = new System.Windows.Forms.TextBox();
             this.ctrlContrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
-            this.txtCorreo = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.txtUsuario = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblContrase = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -144,10 +144,10 @@
             // 
             // gbxUsuario
             // 
+            this.gbxUsuario.Controls.Add(this.txtUsuario);
+            this.gbxUsuario.Controls.Add(this.txtCorreo);
             this.gbxUsuario.Controls.Add(this.txtRepContrasenia);
             this.gbxUsuario.Controls.Add(this.ctrlContrasenia);
-            this.gbxUsuario.Controls.Add(this.txtCorreo);
-            this.gbxUsuario.Controls.Add(this.txtUsuario);
             this.gbxUsuario.Controls.Add(this.lblRepContrasenia);
             this.gbxUsuario.Controls.Add(this.lblContrase);
             this.gbxUsuario.Controls.Add(this.lblCorreo);
@@ -155,6 +155,16 @@
             resources.ApplyResources(this.gbxUsuario, "gbxUsuario");
             this.gbxUsuario.Name = "gbxUsuario";
             this.gbxUsuario.TabStop = false;
+            // 
+            // txtUsuario
+            // 
+            resources.ApplyResources(this.txtUsuario, "txtUsuario");
+            this.txtUsuario.Name = "txtUsuario";
+            // 
+            // txtCorreo
+            // 
+            resources.ApplyResources(this.txtCorreo, "txtCorreo");
+            this.txtCorreo.Name = "txtCorreo";
             // 
             // txtRepContrasenia
             // 
@@ -167,18 +177,6 @@
             resources.ApplyResources(this.ctrlContrasenia, "ctrlContrasenia");
             this.ctrlContrasenia.Name = "ctrlContrasenia";
             this.ctrlContrasenia.TextBoxtxtContrasenia = "";
-            // 
-            // txtCorreo
-            // 
-            resources.ApplyResources(this.txtCorreo, "txtCorreo");
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Texto = "";
-            // 
-            // txtUsuario
-            // 
-            resources.ApplyResources(this.txtUsuario, "txtUsuario");
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Texto = "";
             // 
             // lblContrase
             // 
@@ -250,9 +248,9 @@
         private Controles.CtrlTextoBox txtNombre;
         private Controles.CtrlTextoBox txtApellido;
         private Controles.ctrlContrasenia ctrlContrasenia;
-        private Controles.CtrlTextoBox txtCorreo;
-        private Controles.CtrlTextoBox txtUsuario;
         private Controles.CtrlTextoBox txtEdad;
         private System.Windows.Forms.TextBox txtRepContrasenia;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtUsuario;
     }
 }

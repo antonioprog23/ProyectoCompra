@@ -468,6 +468,51 @@
   <data name="&gt;&gt;lblRepContrasenia.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="txtUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 30</value>
+  </data>
+  <data name="txtUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 21</value>
+  </data>
+  <data name="txtUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;txtUsuario.Name" xml:space="preserve">
+    <value>txtUsuario</value>
+  </data>
+  <data name="&gt;&gt;txtUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtUsuario.Parent" xml:space="preserve">
+    <value>gbxUsuario</value>
+  </data>
+  <data name="&gt;&gt;txtUsuario.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtCorreo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 59</value>
+  </data>
+  <data name="txtCorreo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 21</value>
+  </data>
+  <data name="txtCorreo.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="txtCorreo.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;txtCorreo.Name" xml:space="preserve">
+    <value>txtCorreo</value>
+  </data>
+  <data name="&gt;&gt;txtCorreo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtCorreo.Parent" xml:space="preserve">
+    <value>gbxUsuario</value>
+  </data>
+  <data name="&gt;&gt;txtCorreo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="txtRepContrasenia.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 117</value>
   </data>
@@ -490,7 +535,7 @@
     <value>gbxUsuario</value>
   </data>
   <data name="&gt;&gt;txtRepContrasenia.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="ctrlContrasenia.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -514,54 +559,6 @@
     <value>gbxUsuario</value>
   </data>
   <data name="&gt;&gt;ctrlContrasenia.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtCorreo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 59</value>
-  </data>
-  <data name="txtCorreo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 23</value>
-  </data>
-  <data name="txtCorreo.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;txtCorreo.Name" xml:space="preserve">
-    <value>txtCorreo</value>
-  </data>
-  <data name="&gt;&gt;txtCorreo.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtCorreo.Parent" xml:space="preserve">
-    <value>gbxUsuario</value>
-  </data>
-  <data name="&gt;&gt;txtCorreo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txtUsuario.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 30</value>
-  </data>
-  <data name="txtUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 23</value>
-  </data>
-  <data name="txtUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;txtUsuario.Name" xml:space="preserve">
-    <value>txtUsuario</value>
-  </data>
-  <data name="&gt;&gt;txtUsuario.Type" xml:space="preserve">
-    <value>ProyectoCompra.Controles.CtrlTextoBox, ProyectoCompra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtUsuario.Parent" xml:space="preserve">
-    <value>gbxUsuario</value>
-  </data>
-  <data name="&gt;&gt;txtUsuario.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="lblContrase.AutoSize" type="System.Boolean, mscorlib">

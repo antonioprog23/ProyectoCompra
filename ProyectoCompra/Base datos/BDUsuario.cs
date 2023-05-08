@@ -148,10 +148,9 @@ namespace ProyectoCompra.Base_datos
                         try
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@Usuario_name", datos[0]);
-                            cmd.Parameters.AddWithValue("@Direccion", datos[1]);
+                            cmd.Parameters.AddWithValue("@Usuario_Name", datos[0]);
+                            cmd.Parameters.AddWithValue("@Contrasenia", datos[1]);
                             cmd.Parameters.AddWithValue("@Correo_Electronico", datos[2]);
-                            cmd.Parameters.AddWithValue("@Contrasenia", datos[3]);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             actualizado = true;
