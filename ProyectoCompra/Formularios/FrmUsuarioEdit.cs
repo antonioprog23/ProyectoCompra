@@ -54,7 +54,7 @@ namespace ProyectoCompra.Formularios
                     txtRepContrasenia.Text = "";
                     return;
                 }
-                string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(usuarioModificar.cliente.correo);
+                string codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(usuarioModificar.cliente.correo);
                 if (!codigoVerificacion.Equals("-1"))
                 {
                     FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(codigoVerificacion, ctrlContrasenia.TextBoxtxtContrasenia, true, "Contrasenia", txtUsuario.Text);
@@ -72,7 +72,7 @@ namespace ProyectoCompra.Formularios
                     MessageBox.Show("El correo electrónico proporcionado está en uso.");
                     return;
                 }
-                string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text);
+                string codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(txtCorreo.Text);
                 if (!codigoVerificacion.Equals("-1"))
                 {
                     FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(codigoVerificacion, txtCorreo.Text, true, "Correo Electronico", txtUsuario.Text);

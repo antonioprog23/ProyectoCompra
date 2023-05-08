@@ -183,7 +183,7 @@ namespace ProyectoCompra.Formularios
                 MessageBox.Show("No existe ningún usuario con el correo proporcionado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            codigo = Mensaje.enviarMensajeUnDestinatario(txtCorreoElectronico.Text.Trim());
+            codigo = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(txtCorreoElectronico.Text.Trim());
             if (!codigo.Equals("-1"))
             {
                 txtCodigo.Enabled = true;
@@ -195,7 +195,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnReenviarCodigo_Click(object sender, EventArgs e)
         {
-            codigo = Mensaje.enviarMensajeUnDestinatario(txtCorreoElectronico.Text.Trim());
+            codigo = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(txtCorreoElectronico.Text.Trim());
             txtCodigo.Enabled = true;
             lblCodigo.Enabled = true;
         }

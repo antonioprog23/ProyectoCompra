@@ -44,7 +44,7 @@ namespace ProyectoCompra.Formularios
                 if (resultado is DialogResult.Yes)
                 {
                     txtCodigoVerificacion.Clear();
-                    this.codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(correoElectronico);
+                    this.codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(correoElectronico);
                 }
                 return;
             }

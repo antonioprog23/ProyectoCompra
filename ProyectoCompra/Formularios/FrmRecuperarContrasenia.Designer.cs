@@ -30,7 +30,7 @@
         {
             this.lblCorreoElectronico = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.ctrlTextoBox1 = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCorreoElectronico
@@ -39,9 +39,9 @@
             this.lblCorreoElectronico.Location = new System.Drawing.Point(19, 19);
             this.lblCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(99, 14);
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(107, 14);
             this.lblCorreoElectronico.TabIndex = 2;
-            this.lblCorreoElectronico.Text = "Correo electrónico:";
+            this.lblCorreoElectronico.Text = "* Correo electrónico:";
             // 
             // btnEnviar
             // 
@@ -53,15 +53,16 @@
             this.btnEnviar.TabIndex = 6;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
-            // ctrlTextoBox1
+            // txtCorreo
             // 
-            this.ctrlTextoBox1.AutoSize = true;
-            this.ctrlTextoBox1.Location = new System.Drawing.Point(22, 36);
-            this.ctrlTextoBox1.Name = "ctrlTextoBox1";
-            this.ctrlTextoBox1.Size = new System.Drawing.Size(260, 21);
-            this.ctrlTextoBox1.TabIndex = 7;
-            this.ctrlTextoBox1.Texto = "";
+            this.txtCorreo.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(22, 36);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(260, 21);
+            this.txtCorreo.TabIndex = 7;
+            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmRecuperarContrasenia
             // 
@@ -69,7 +70,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(305, 107);
-            this.Controls.Add(this.ctrlTextoBox1);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lblCorreoElectronico);
             this.Font = new System.Drawing.Font("Arial Nova Cond", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +87,6 @@
         #endregion
         private System.Windows.Forms.Label lblCorreoElectronico;
         private System.Windows.Forms.Button btnEnviar;
-        private Controles.CtrlTextoBox ctrlTextoBox1;
+        private System.Windows.Forms.TextBox txtCorreo;
     }
 }

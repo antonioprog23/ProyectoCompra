@@ -72,7 +72,7 @@ namespace ProyectoCompra.Formularios
                 return;
             }
 
-            string codigoVerificacion = Mensaje.enviarMensajeUnDestinatario(txtCorreo.Text.Trim());
+            string codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(txtCorreo.Text.Trim());
             if (!codigoVerificacion.Equals("-1"))
             {
                 FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(cliente, usuario, codigoVerificacion, txtCorreo.Text.Trim());
