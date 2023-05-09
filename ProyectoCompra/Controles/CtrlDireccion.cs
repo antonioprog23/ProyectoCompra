@@ -18,6 +18,7 @@ namespace ProyectoCompra.Controles
         private void CtrlDireccion_Load(object sender, EventArgs e)
         {
             recuperarDireccion();
+            cargarControlesText(true, true, false, false, true, true, true);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

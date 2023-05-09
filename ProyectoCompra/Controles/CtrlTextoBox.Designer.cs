@@ -39,7 +39,7 @@
             this.textBox.Size = new System.Drawing.Size(204, 20);
             this.textBox.TabIndex = 0;
             this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged_1);
+            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // CtrlTextoBox
             // 
