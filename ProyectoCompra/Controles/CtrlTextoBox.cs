@@ -31,7 +31,12 @@ namespace ProyectoCompra.Controles
             }
             if (isReadOnly)
             {
-                if (textBox.Text.Length != 0) { textBox.Clear(); }
+                textBox.ReadOnly = true;
+            }
+            else
+            {
+                textBox.ReadOnly = false;
+                setReadOnly(false);
             }
         }
 
@@ -39,6 +44,16 @@ namespace ProyectoCompra.Controles
         public void VaciarTextBox()
         {
             this.textBox.Clear();
+        }
+
+        public bool isVacio()
+        {
+            return textBox.Text.Equals("");
+        }
+
+        public void setReadOnly(bool valor)
+        {
+            this.textBox.ReadOnly = valor;
         }
 
         public bool validaCorreoElectronico()

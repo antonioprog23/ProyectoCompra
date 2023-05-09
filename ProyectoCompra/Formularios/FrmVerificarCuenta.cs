@@ -79,8 +79,8 @@ namespace ProyectoCompra.Formularios
                         }
                         break;
                 }
-                return;
             }
+            return;
         }
     }
 }

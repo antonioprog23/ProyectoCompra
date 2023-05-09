@@ -27,19 +27,16 @@ namespace ProyectoCompra.Formularios
             this.Controls.Add(ctrlDireccion);
             this.Size = new Size(668, 361);
 
-            btnAceptar.Location = new Point(484, 286);
+            btnCancelar.Visible = true;
             btnCancelar.Location = new Point(565, 286);
             btnAniadirDireccion.Visible = false;
-            btnAceptar.Visible = true;
-            btnCancelar.Visible = true;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.Controls.Remove(ctrlDireccion);
             this.Size = new Size(350, 361);
             btnAniadirDireccion.Visible = true;
-            btnAceptar.Visible = false;
             btnCancelar.Visible = false;
         }
     }

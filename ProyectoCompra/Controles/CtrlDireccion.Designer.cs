@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gbxDireccionDefecto = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblCP = new System.Windows.Forms.Label();
@@ -39,19 +41,20 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblNomDireccion = new System.Windows.Forms.Label();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtNomDireccion = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.ctrlTxtTelefono = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlTxtCP = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlTxtCiudad = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.ctrlTextoBox1 = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.ctrlTxtNomDireccion = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.Aceptar = new System.Windows.Forms.Button();
             this.gbxDireccionDefecto.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxDireccionDefecto
             // 
-            this.gbxDireccionDefecto.Controls.Add(this.Aceptar);
+            this.gbxDireccionDefecto.Controls.Add(this.txtDireccion);
+            this.gbxDireccionDefecto.Controls.Add(this.txtNomDireccion);
+            this.gbxDireccionDefecto.Controls.Add(this.btnCancelar);
             this.gbxDireccionDefecto.Controls.Add(this.btnEditar);
             this.gbxDireccionDefecto.Controls.Add(this.btnBorrar);
             this.gbxDireccionDefecto.Controls.Add(this.ctrlTxtTelefono);
@@ -64,16 +67,36 @@
             this.gbxDireccionDefecto.Controls.Add(this.lblProvincia);
             this.gbxDireccionDefecto.Controls.Add(this.cbxPais);
             this.gbxDireccionDefecto.Controls.Add(this.lblDireccion);
-            this.gbxDireccionDefecto.Controls.Add(this.ctrlTextoBox1);
             this.gbxDireccionDefecto.Controls.Add(this.lblPais);
-            this.gbxDireccionDefecto.Controls.Add(this.ctrlTxtNomDireccion);
             this.gbxDireccionDefecto.Controls.Add(this.lblNomDireccion);
+            this.gbxDireccionDefecto.Controls.Add(this.btnAceptar);
             this.gbxDireccionDefecto.Location = new System.Drawing.Point(0, 0);
             this.gbxDireccionDefecto.Name = "gbxDireccionDefecto";
             this.gbxDireccionDefecto.Size = new System.Drawing.Size(309, 266);
             this.gbxDireccionDefecto.TabIndex = 1;
             this.gbxDireccionDefecto.TabStop = false;
             this.gbxDireccionDefecto.Text = "Dirección (predeterminado)";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(212, 229);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(212, 229);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 15;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
@@ -119,7 +142,59 @@
             // 
             // cbxProvincia
             // 
+            this.cbxProvincia.Enabled = false;
             this.cbxProvincia.FormattingEnabled = true;
+            this.cbxProvincia.Items.AddRange(new object[] {
+            "Álava",
+            "Albacete",
+            "Alicante",
+            "Almería",
+            "Asturias",
+            "Ávila ",
+            "Badajoz",
+            "Barcelona",
+            "Burgos",
+            "Cáceres",
+            "Cádiz",
+            "Cantabria",
+            "Castellón",
+            "Ciudad Real",
+            "Córdoba",
+            "Cuenca",
+            "Gerona",
+            "Granada",
+            "Guadalajara",
+            "Guipúzcoa",
+            "Huelva",
+            "Huesca",
+            "Islas Baleares",
+            "Jaén",
+            "La Coruña",
+            "La Rioja",
+            "Las Palmas",
+            "León - Castilla y León",
+            "Lérida",
+            "Lugo",
+            "Madrid",
+            "Málaga",
+            "Murcia",
+            "Navarra",
+            "Orense",
+            "Palencia",
+            "Pontevedra",
+            "Salamanca",
+            "Santa Cruz de Tenerife",
+            "Segovia",
+            "Sevilla",
+            "Soria",
+            "Tarragona",
+            "Teruel",
+            "Toledo",
+            "Valencia",
+            "Valladolid",
+            "Vizcaya",
+            "Zamora",
+            "Zaragoza"});
             this.cbxProvincia.Location = new System.Drawing.Point(156, 123);
             this.cbxProvincia.Name = "cbxProvincia";
             this.cbxProvincia.Size = new System.Drawing.Size(131, 21);
@@ -136,7 +211,10 @@
             // 
             // cbxPais
             // 
+            this.cbxPais.Enabled = false;
             this.cbxPais.FormattingEnabled = true;
+            this.cbxPais.Items.AddRange(new object[] {
+            "España"});
             this.cbxPais.Location = new System.Drawing.Point(19, 123);
             this.cbxPais.Name = "cbxPais";
             this.cbxPais.Size = new System.Drawing.Size(131, 21);
@@ -169,9 +247,40 @@
             this.lblNomDireccion.TabIndex = 0;
             this.lblNomDireccion.Text = "Nombre dirección:";
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(132, 229);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 16;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // txtNomDireccion
+            // 
+            this.txtNomDireccion.Location = new System.Drawing.Point(19, 45);
+            this.txtNomDireccion.Name = "txtNomDireccion";
+            this.txtNomDireccion.ReadOnly = true;
+            this.txtNomDireccion.Size = new System.Drawing.Size(268, 20);
+            this.txtNomDireccion.TabIndex = 18;
+            this.txtNomDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(19, 84);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.ReadOnly = true;
+            this.txtDireccion.Size = new System.Drawing.Size(268, 20);
+            this.txtDireccion.TabIndex = 19;
+            this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ctrlTxtTelefono
             // 
             this.ctrlTxtTelefono.AutoSize = true;
+            this.ctrlTxtTelefono.IsNumerico = true;
+            this.ctrlTxtTelefono.IsReadOnly = true;
             this.ctrlTxtTelefono.Location = new System.Drawing.Point(19, 203);
             this.ctrlTxtTelefono.Name = "ctrlTxtTelefono";
             this.ctrlTxtTelefono.Size = new System.Drawing.Size(268, 20);
@@ -181,6 +290,8 @@
             // ctrlTxtCP
             // 
             this.ctrlTxtCP.AutoSize = true;
+            this.ctrlTxtCP.IsNumerico = true;
+            this.ctrlTxtCP.IsReadOnly = true;
             this.ctrlTxtCP.Location = new System.Drawing.Point(156, 163);
             this.ctrlTxtCP.Name = "ctrlTxtCP";
             this.ctrlTxtCP.Size = new System.Drawing.Size(131, 20);
@@ -190,47 +301,12 @@
             // ctrlTxtCiudad
             // 
             this.ctrlTxtCiudad.AutoSize = true;
+            this.ctrlTxtCiudad.IsReadOnly = true;
             this.ctrlTxtCiudad.Location = new System.Drawing.Point(19, 163);
             this.ctrlTxtCiudad.Name = "ctrlTxtCiudad";
             this.ctrlTxtCiudad.Size = new System.Drawing.Size(131, 20);
             this.ctrlTxtCiudad.TabIndex = 9;
             this.ctrlTxtCiudad.Texto = "";
-            // 
-            // ctrlTextoBox1
-            // 
-            this.ctrlTextoBox1.AutoSize = true;
-            this.ctrlTextoBox1.Location = new System.Drawing.Point(19, 84);
-            this.ctrlTextoBox1.Name = "ctrlTextoBox1";
-            this.ctrlTextoBox1.Size = new System.Drawing.Size(268, 20);
-            this.ctrlTextoBox1.TabIndex = 3;
-            this.ctrlTextoBox1.Texto = "";
-            // 
-            // ctrlTxtNomDireccion
-            // 
-            this.ctrlTxtNomDireccion.AutoSize = true;
-            this.ctrlTxtNomDireccion.Location = new System.Drawing.Point(19, 44);
-            this.ctrlTxtNomDireccion.Name = "ctrlTxtNomDireccion";
-            this.ctrlTxtNomDireccion.Size = new System.Drawing.Size(268, 20);
-            this.ctrlTxtNomDireccion.TabIndex = 1;
-            this.ctrlTxtNomDireccion.Texto = "";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(212, 229);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 15;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // Aceptar
-            // 
-            this.Aceptar.Location = new System.Drawing.Point(212, 229);
-            this.Aceptar.Name = "Aceptar";
-            this.Aceptar.Size = new System.Drawing.Size(75, 23);
-            this.Aceptar.TabIndex = 16;
-            this.Aceptar.Text = "Aceptar";
-            this.Aceptar.UseVisualStyleBackColor = true;
             // 
             // CtrlDireccion
             // 
@@ -240,6 +316,7 @@
             this.Controls.Add(this.gbxDireccionDefecto);
             this.Name = "CtrlDireccion";
             this.Size = new System.Drawing.Size(312, 269);
+            this.Load += new System.EventHandler(this.CtrlDireccion_Load);
             this.gbxDireccionDefecto.ResumeLayout(false);
             this.gbxDireccionDefecto.PerformLayout();
             this.ResumeLayout(false);
@@ -259,12 +336,13 @@
         private System.Windows.Forms.Label lblProvincia;
         private System.Windows.Forms.ComboBox cbxPais;
         private System.Windows.Forms.Label lblDireccion;
-        private CtrlTextoBox ctrlTextoBox1;
         private System.Windows.Forms.Label lblPais;
-        private CtrlTextoBox ctrlTxtNomDireccion;
         private System.Windows.Forms.Label lblNomDireccion;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button Aceptar;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtNomDireccion;
     }
 }

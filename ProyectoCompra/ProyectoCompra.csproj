@@ -67,10 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base datos\BDCarrito.cs" />
+    <Compile Include="Base datos\BDDireccion.cs" />
     <Compile Include="Base datos\BDProducto.cs" />
     <Compile Include="Base datos\BDUsuario.cs" />
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Direccion.cs" />
     <Compile Include="Clases\Imagen.cs" />
     <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\Persona.cs" />

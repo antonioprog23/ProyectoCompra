@@ -30,8 +30,8 @@
         {
             this.lblCodigo = new System.Windows.Forms.Label();
             this.gbx = new System.Windows.Forms.GroupBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.txtCodigoVerificacion = new System.Windows.Forms.TextBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,14 @@
             this.gbx.TabIndex = 2;
             this.gbx.TabStop = false;
             // 
+            // txtCodigoVerificacion
+            // 
+            this.txtCodigoVerificacion.Location = new System.Drawing.Point(121, 20);
+            this.txtCodigoVerificacion.Name = "txtCodigoVerificacion";
+            this.txtCodigoVerificacion.Size = new System.Drawing.Size(152, 20);
+            this.txtCodigoVerificacion.TabIndex = 2;
+            this.txtCodigoVerificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(228, 73);
@@ -63,13 +71,6 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // txtCodigoVerificacion
-            // 
-            this.txtCodigoVerificacion.Location = new System.Drawing.Point(121, 20);
-            this.txtCodigoVerificacion.Name = "txtCodigoVerificacion";
-            this.txtCodigoVerificacion.Size = new System.Drawing.Size(152, 20);
-            this.txtCodigoVerificacion.TabIndex = 2;
             // 
             // FrmVerificarCuenta
             // 

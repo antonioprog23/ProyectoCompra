@@ -1,4 +1,5 @@
 ﻿using ProyectoCompra.Clases;
+using ProyectoCompra.Controles;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
