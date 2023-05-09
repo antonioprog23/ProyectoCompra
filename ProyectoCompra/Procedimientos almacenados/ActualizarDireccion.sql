@@ -4,6 +4,7 @@ IF OBJECT_ID ('ActualizarDireccion','P') IS NOT NULL
 	PRINT 'Procedimiento almacenado borrado.'
 GO
 CREATE PROCEDURE ActualizarDireccion
+@Id_Direccion INT,
 @Id_Usuario INT,
 @Nombre_Direccion NVARCHAR(150),
 @Direccion NVARCHAR(150),
@@ -15,20 +16,10 @@ CREATE PROCEDURE ActualizarDireccion
 AS
 BEGIN
 	SET NOCOUNT ON
-
-	DECLARE @Id_Cliente INT 
-	SET @Id_Cliente = (SELECT Id_Cliente FROM Usuario
-					   WHERE Id_Usuario = @Id_Usuario)
-
 	IF EXISTS (SELECT 1 FROM Direccion
-				WHERE Nombre_Direccion = @Nombre_Direccion AND 
-					  Direccion = @Direccion AND 
-					  Pais = @Pais AND
-					  Provincia = @Provincia AND
-					  Ciudad = @Ciudad AND
-					  Codigo_Postal = @Codigo_Postal AND
-					  Telefono = @Telefono AND
-					  Id_Cliente = @Id_Cliente)
+				WHERE Id_Direccion = @Id_Direccion AND
+				Id_Cliente = (SELECT Id_Cliente FROM Usuario
+							  WHERE Id_Usuario = @Id_Usuario))
 		BEGIN
 			UPDATE Direccion SET Nombre_Direccion = @Nombre_Direccion,
 								 Direccion = @Direccion,
@@ -37,12 +28,18 @@ BEGIN
 								 Ciudad = @Ciudad,
 								 Codigo_Postal = @Codigo_Postal,
 								 Telefono = @Telefono
-			WHERE Id_Cliente = @Id_Cliente
+			WHERE Id_Direccion = @Id_Direccion AND
+			Id_Cliente = (SELECT Id_Cliente FROM Usuario
+							  WHERE Id_Usuario = @Id_Usuario)
+							  return
 		END
 	ELSE
-		DECLARE @Id_Direccion INT
-		SET @Id_Direccion = (SELECT COALESCE(MAX(Id_Direccion + 1),1) FROM Direccion)
+		DECLARE @Id_Direccion_New INT
+		SET @Id_Direccion_New = (SELECT COALESCE(MAX(Id_Direccion + 1),1) FROM Direccion)
 
+		DECLARE @Id_Cliente INT 
+		SET @Id_Cliente = (SELECT Id_Cliente FROM Usuario
+						   WHERE Id_Usuario = @Id_Usuario)
 		INSERT INTO Direccion 
-		VALUES (@Id_Direccion,@Id_Cliente,@Nombre_Direccion,@Direccion,@Pais,@Provincia,@Ciudad,@Codigo_Postal,@Telefono)
+		VALUES (@Id_Direccion_New,@Id_Cliente,@Nombre_Direccion,@Direccion,@Pais,@Provincia,@Ciudad,@Codigo_Postal,@Telefono)
 END

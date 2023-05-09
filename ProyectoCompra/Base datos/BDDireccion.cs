@@ -13,9 +13,9 @@ namespace ProyectoCompra.Base_datos
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
-        public static Direccion consusltarDireccion(int idUsuario)
+        public static List<Direccion> consusltarDireccion(int idUsuario)
         {
-            Direccion direccion = null;
+            List<Direccion> direcciones = new List<Direccion>();
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
@@ -27,12 +27,13 @@ namespace ProyectoCompra.Base_datos
                     {
                         while (reader.Read())
                         {
-                            direccion = new Direccion(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8));
+                            Direccion direccion = new Direccion(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8));
+                            direcciones.Add(direccion);
                         }
                     }
                 }
             }
-            return direccion;
+            return direcciones;
         }
 
         public static bool actualizarDireccion(Direccion direccion, int idUsuario)
@@ -48,6 +49,7 @@ namespace ProyectoCompra.Base_datos
                         try
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@Id_Direccion", direccion.idDireccion);
                             cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
                             cmd.Parameters.AddWithValue("@Nombre_Direccion", direccion.nombre);
                             cmd.Parameters.AddWithValue("@Direccion", direccion.direccion);

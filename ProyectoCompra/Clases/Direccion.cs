@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCompra.Clases
 {
-    internal class Direccion
+    public class Direccion
     {
         public int idDireccion { get; set; }
         public int idCliente { get; set; }

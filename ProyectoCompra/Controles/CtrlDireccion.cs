@@ -8,6 +8,8 @@ namespace ProyectoCompra.Controles
 {
     public partial class CtrlDireccion : UserControl
     {
+        public Direccion direccion { get; set; }
+        public bool agregarDireccion { get; set; }
         public string groupBox { get => gbxDireccionDefecto.Text; set { gbxDireccionDefecto.Text = value; } }
 
         public CtrlDireccion()
@@ -15,17 +17,22 @@ namespace ProyectoCompra.Controles
             InitializeComponent();
         }
 
+        public CtrlDireccion(Direccion direccion)
+        {
+            InitializeComponent();
+            this.direccion = direccion;
+        }
+
+        public CtrlDireccion(bool agregarDireccion)
+        {
+            InitializeComponent();
+            this.agregarDireccion = agregarDireccion;
+        }
+
         private void CtrlDireccion_Load(object sender, EventArgs e)
         {
             recuperarDireccion();
             cargarControlesText(true, true, false, false, true, true, true);
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            cargarControlesText(false, false, true, true, false, false, false);
-            cargarLabelObligatorio(true);
-            cargarBotones(true, true, false);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -81,7 +88,6 @@ namespace ProyectoCompra.Controles
 
         private void recuperarDireccion()
         {
-            Direccion direccion = BDDireccion.consusltarDireccion(FicheroAuxiliar.leerFichero().idUsuario);
             if (direccion != null)
             {
                 txtNomDireccion.Text = direccion.nombre;
@@ -102,11 +108,42 @@ namespace ProyectoCompra.Controles
                 MessageBox.Show("Los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Direccion direccion = new Direccion(txtNomDireccion.Text, txtDireccion.Text, cbxPais.SelectedItem.ToString(), cbxProvincia.SelectedItem.ToString(), ctrlTxtCiudad.Texto, ctrlTxtCP.Texto, ctrlTxtTelefono.Texto);
-            if (BDDireccion.actualizarDireccion(direccion, FicheroAuxiliar.leerFichero().idUsuario))
+            if (direccion != null)
             {
-                MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                direccion.nombre = txtNomDireccion.Text;
+                direccion.direccion = txtDireccion.Text;
+                direccion.pais = cbxPais.SelectedItem.ToString();
+                direccion.provincia = cbxProvincia.SelectedItem.ToString();
+                direccion.ciudad = ctrlTxtCiudad.Texto;
+                direccion.codigoPostal = ctrlTxtCP.Texto;
+                direccion.telefono = ctrlTxtTelefono.Texto;
+                if (BDDireccion.actualizarDireccion(direccion, FicheroAuxiliar.leerFichero().idUsuario))
+                {
+                    MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarBotones(false,false,true);
+                    cargarControlesText(true, true, false, false, true, true, true);
+                }
             }
+            if (agregarDireccion)
+            {
+                Direccion direccion = new Direccion(txtNomDireccion.Text, txtDireccion.Text, cbxPais.SelectedItem.ToString(), cbxProvincia.SelectedItem.ToString(), ctrlTxtCiudad.Texto, ctrlTxtCP.Texto, ctrlTxtTelefono.Texto);
+                if (direccion != null)
+                {
+                    if (BDDireccion.actualizarDireccion(direccion, FicheroAuxiliar.leerFichero().idUsuario))
+                    {
+                        MessageBox.Show("Se ha agregado una nueva dirección.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cargarBotones(false, false, true);
+                        cargarControlesText(true, true, false, false, true, true, true);
+                    }
+                }
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            cargarControlesText(false, false, true, true, false, false, false);
+            cargarLabelObligatorio(true);
+            cargarBotones(true, true, false);
         }
     }
 }

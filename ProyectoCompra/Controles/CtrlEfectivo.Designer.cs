@@ -31,10 +31,8 @@
             this.gbxEfectivo = new System.Windows.Forms.GroupBox();
             this.lblDireccion2 = new System.Windows.Forms.Label();
             this.txtDireccion2 = new System.Windows.Forms.TextBox();
-            this.btnAgregarDireccion = new System.Windows.Forms.Button();
             this.lblDireccion1 = new System.Windows.Forms.Label();
             this.txtDireccion1 = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.gbxEfectivo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,13 +41,11 @@
             this.gbxEfectivo.AutoSize = true;
             this.gbxEfectivo.Controls.Add(this.lblDireccion2);
             this.gbxEfectivo.Controls.Add(this.txtDireccion2);
-            this.gbxEfectivo.Controls.Add(this.btnAgregarDireccion);
             this.gbxEfectivo.Controls.Add(this.lblDireccion1);
             this.gbxEfectivo.Controls.Add(this.txtDireccion1);
-            this.gbxEfectivo.Controls.Add(this.btnAceptar);
             this.gbxEfectivo.Location = new System.Drawing.Point(0, 0);
             this.gbxEfectivo.Name = "gbxEfectivo";
-            this.gbxEfectivo.Size = new System.Drawing.Size(335, 122);
+            this.gbxEfectivo.Size = new System.Drawing.Size(335, 98);
             this.gbxEfectivo.TabIndex = 2;
             this.gbxEfectivo.TabStop = false;
             this.gbxEfectivo.Text = "Efectivo";
@@ -73,16 +69,6 @@
             this.txtDireccion2.TabIndex = 3;
             this.txtDireccion2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnAgregarDireccion
-            // 
-            this.btnAgregarDireccion.Location = new System.Drawing.Point(240, 80);
-            this.btnAgregarDireccion.Name = "btnAgregarDireccion";
-            this.btnAgregarDireccion.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarDireccion.TabIndex = 2;
-            this.btnAgregarDireccion.Text = "Añadir";
-            this.btnAgregarDireccion.UseVisualStyleBackColor = true;
-            this.btnAgregarDireccion.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
-            // 
             // lblDireccion1
             // 
             this.lblDireccion1.AutoSize = true;
@@ -101,16 +87,6 @@
             this.txtDireccion1.TabIndex = 0;
             this.txtDireccion1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Enabled = false;
-            this.btnAceptar.Location = new System.Drawing.Point(240, 80);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 5;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
             // CtrlEfectivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,7 +95,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gbxEfectivo);
             this.Name = "CtrlEfectivo";
-            this.Size = new System.Drawing.Size(338, 125);
+            this.Size = new System.Drawing.Size(338, 101);
             this.Load += new System.EventHandler(this.CtrlEfectivo_Load);
             this.gbxEfectivo.ResumeLayout(false);
             this.gbxEfectivo.PerformLayout();
@@ -133,9 +109,7 @@
         private System.Windows.Forms.GroupBox gbxEfectivo;
         private System.Windows.Forms.Label lblDireccion2;
         private System.Windows.Forms.TextBox txtDireccion2;
-        private System.Windows.Forms.Button btnAgregarDireccion;
         private System.Windows.Forms.Label lblDireccion1;
         private System.Windows.Forms.TextBox txtDireccion1;
-        private System.Windows.Forms.Button btnAceptar;
     }
 }
