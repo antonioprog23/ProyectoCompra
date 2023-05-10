@@ -57,9 +57,9 @@ CREATE TABLE Tarjeta_Credito
 	Id_Usuario INT,
 	Titular NVARCHAR(100),
 	Numero_Tarjeta NVARCHAR(16),
-	Mes_Vencimiento TINYINT,
-	Anio_Vencimiento SMALLINT,
-	CVV SMALLINT,
+	Mes_Vencimiento NVARCHAR(4),
+	Anio_Vencimiento NVARCHAR(4),
+	CVV NVARCHAR(3),
 	CONSTRAINT constraint_id_usuario_tarjeta_pk PRIMARY KEY (Id_Usuario),
 	CONSTRAINT constraint_id_usuario_tarjeta_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario) ON DELETE CASCADE
 )

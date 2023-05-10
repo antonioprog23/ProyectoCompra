@@ -22,15 +22,64 @@ namespace ProyectoCompra.Controles
             cargarControles();
         }
 
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (ctrlTxtTitular.Texto.Equals("") || ctrlTxtNTarjeta.Texto.Equals("") || ctrlTxtMesVen.Texto.Equals("") || ctrlAnioVen.Texto.Equals("") || ctrlCVV.Texto.Equals(""))
+            {
+                MessageBox.Show("Los campos son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            TarjetaCredit tarjetaCredit = crearTarjetaCredito();
+            if (tarjetaCredit != null)
+            {
+                if (BDTarjetaCredito.actualizarTarjetaCredito(tarjetaCredit))
+                {
+                    btnAceptar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    MessageBox.Show("Se han actualizado los datos. Vuelva a abrir la ventana para actualizar los cambios.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CtrlTarjeta_Load(object sender, EventArgs e)
+        {
+            cargarDatosTarjetaCredito();
+        }
+
+        private void cargarDatosTarjetaCredito()
+        {
+            usuario = FicheroAuxiliar.leerFichero();
+            tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(usuario.idUsuario);
+
+            if (tarjetaCredit == null)
+            {
+                MessageBox.Show("Aún no tienes una tarjeta agregada. Si deseas agregar una tarjeta, elige la opción 'Editar'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            ctrlTxtTitular.Texto = tarjetaCredit.titular;
+            ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+            ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+            ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+            ctrlCVV.Texto = tarjetaCredit.cvv;
+            btnEliminar.Visible = true;
+        }
+
+        private TarjetaCredit crearTarjetaCredito()
+        {
+            int idUsuariao = FicheroAuxiliar.leerFichero().idUsuario;
+            return new TarjetaCredit(idUsuariao, ctrlTxtTitular.Texto, ctrlTxtNTarjeta.Texto, ctrlTxtMesVen.Texto, ctrlAnioVen.Texto, ctrlCVV.Texto);
+        }
         private void cargarBotones()
         {
             btnAceptar.Visible = true;
             btnCancelar.Visible = true;
             btnEditar.Visible = false;
-            if (tarjetaCredit != null)
-            {
-                btnEliminar.Visible = true;
-            }
         }
         private void cargarControles()
         {
@@ -53,41 +102,16 @@ namespace ProyectoCompra.Controles
             lblCVV.Text = string.Format("* {0}", lblCVV.Text);
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (ctrlTxtTitular.Texto.Equals("") || ctrlTxtNTarjeta.Texto.Equals("") || ctrlTxtMesVen.Texto.Equals("") || ctrlAnioVen.Texto.Equals("") || ctrlCVV.Texto.Equals(""))
+            if (BDTarjetaCredito.eliminarTarjetaCredito(FicheroAuxiliar.leerFichero().idUsuario))
             {
-                MessageBox.Show("Los campos son obligatorios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnAceptar.Enabled = false;
+                btnCancelar.Enabled = false;
+                MessageBox.Show("Se han actualizado los datos. Vuelva abrir la ventana para actualizar los datos.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CtrlTarjeta_Load(object sender, EventArgs e)
-        {
-            cargarDatosTarjetaCredito();
-        }
-
-        private void cargarDatosTarjetaCredito()
-        {
-            usuario = FicheroAuxiliar.leerFichero();
-            tarjetaCredit = BDUsuario.consultarTarjetaCredito(usuario.idUsuario);
-
-            if (tarjetaCredit == null)
-            {
-                MessageBox.Show("Aún no tienes una tarjeta agregada. Si deseas agregar una tarjeta, elige la opción 'Editar'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            ctrlTxtTitular.Texto = tarjetaCredit.titular;
-            ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
-            ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
-            ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
-            ctrlCVV.Texto = tarjetaCredit.cvv;
         }
     }
 }
