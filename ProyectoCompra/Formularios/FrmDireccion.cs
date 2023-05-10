@@ -37,6 +37,7 @@ namespace ProyectoCompra.Formularios
                 {
                     ctrlDireccion = new CtrlDireccion();
                     ctrlDireccion.Location = new Point(330, 12);
+                    ctrlDireccion.setBotonBorrarDireccion(true);
                     ctrlDireccion.groupBox = "Dirección (alternativo)";
                     ctrlDireccion.direccion = direcciones[1];
                     this.Controls.Add(ctrlDireccion);
@@ -53,6 +54,7 @@ namespace ProyectoCompra.Formularios
         {
             ctrlDireccion = new CtrlDireccion(true);
             ctrlDireccion.Location = new Point(330, 12);
+
             ctrlDireccion.groupBox = "Dirección (alternativo)";
             this.Controls.Add(ctrlDireccion);
             this.Size = new Size(668, 361);

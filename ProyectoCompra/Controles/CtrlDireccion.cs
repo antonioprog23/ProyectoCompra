@@ -120,7 +120,7 @@ namespace ProyectoCompra.Controles
                 if (BDDireccion.actualizarDireccion(direccion, FicheroAuxiliar.leerFichero().idUsuario))
                 {
                     MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cargarBotones(false,false,true);
+                    cargarBotones(false, false, true);
                     cargarControlesText(true, true, false, false, true, true, true);
                 }
             }
@@ -131,7 +131,7 @@ namespace ProyectoCompra.Controles
                 {
                     if (BDDireccion.actualizarDireccion(direccion, FicheroAuxiliar.leerFichero().idUsuario))
                     {
-                        MessageBox.Show("Se ha agregado una nueva dirección.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Se ha agregado una nueva dirección.Vuelva abrir la ventana para actualizar los cambios.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cargarBotones(false, false, true);
                         cargarControlesText(true, true, false, false, true, true, true);
                     }
@@ -144,6 +144,21 @@ namespace ProyectoCompra.Controles
             cargarControlesText(false, false, true, true, false, false, false);
             cargarLabelObligatorio(true);
             cargarBotones(true, true, false);
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (BDDireccion.eliminarDireccion(direccion))
+            {
+                MessageBox.Show("Se ha eliminado una dirección.Vuelva abrir la ventana para actualizar los cambios.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cargarBotones(false, false, false);
+                cargarControlesText(true, true, false, false, true, true, true);
+            }
+        }
+
+        public void setBotonBorrarDireccion(bool visible)
+        {
+            this.btnBorrar.Visible = visible;
         }
     }
 }

@@ -34,11 +34,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.ctrlTxtTelefono = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.ctrlTxtCP = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblCP = new System.Windows.Forms.Label();
-            this.ctrlTxtCiudad = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.cbxProvincia = new System.Windows.Forms.ComboBox();
             this.lblProvincia = new System.Windows.Forms.Label();
@@ -47,6 +44,9 @@
             this.lblPais = new System.Windows.Forms.Label();
             this.lblNomDireccion = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.ctrlTxtTelefono = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtCP = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtCiudad = new ProyectoCompra.Controles.CtrlTextoBox();
             this.gbxDireccionDefecto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,16 +130,8 @@
             this.btnBorrar.Size = new System.Drawing.Size(17, 15);
             this.btnBorrar.TabIndex = 14;
             this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // ctrlTxtTelefono
-            // 
-            this.ctrlTxtTelefono.AutoSize = true;
-            this.ctrlTxtTelefono.IsNumerico = true;
-            this.ctrlTxtTelefono.Location = new System.Drawing.Point(19, 203);
-            this.ctrlTxtTelefono.Name = "ctrlTxtTelefono";
-            this.ctrlTxtTelefono.Size = new System.Drawing.Size(268, 20);
-            this.ctrlTxtTelefono.TabIndex = 13;
-            this.ctrlTxtTelefono.Texto = "";
+            this.btnBorrar.Visible = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // lblTelefono
             // 
@@ -150,16 +142,6 @@
             this.lblTelefono.TabIndex = 12;
             this.lblTelefono.Text = "Teléfono:";
             // 
-            // ctrlTxtCP
-            // 
-            this.ctrlTxtCP.AutoSize = true;
-            this.ctrlTxtCP.IsNumerico = true;
-            this.ctrlTxtCP.Location = new System.Drawing.Point(156, 163);
-            this.ctrlTxtCP.Name = "ctrlTxtCP";
-            this.ctrlTxtCP.Size = new System.Drawing.Size(131, 20);
-            this.ctrlTxtCP.TabIndex = 11;
-            this.ctrlTxtCP.Texto = "";
-            // 
             // lblCP
             // 
             this.lblCP.AutoSize = true;
@@ -168,15 +150,6 @@
             this.lblCP.Size = new System.Drawing.Size(74, 13);
             this.lblCP.TabIndex = 10;
             this.lblCP.Text = "Código postal:";
-            // 
-            // ctrlTxtCiudad
-            // 
-            this.ctrlTxtCiudad.AutoSize = true;
-            this.ctrlTxtCiudad.Location = new System.Drawing.Point(19, 163);
-            this.ctrlTxtCiudad.Name = "ctrlTxtCiudad";
-            this.ctrlTxtCiudad.Size = new System.Drawing.Size(131, 20);
-            this.ctrlTxtCiudad.TabIndex = 9;
-            this.ctrlTxtCiudad.Texto = "";
             // 
             // lblCiudad
             // 
@@ -304,6 +277,35 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Visible = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // ctrlTxtTelefono
+            // 
+            this.ctrlTxtTelefono.AutoSize = true;
+            this.ctrlTxtTelefono.IsNumerico = true;
+            this.ctrlTxtTelefono.Location = new System.Drawing.Point(19, 203);
+            this.ctrlTxtTelefono.Name = "ctrlTxtTelefono";
+            this.ctrlTxtTelefono.Size = new System.Drawing.Size(268, 20);
+            this.ctrlTxtTelefono.TabIndex = 13;
+            this.ctrlTxtTelefono.Texto = "";
+            // 
+            // ctrlTxtCP
+            // 
+            this.ctrlTxtCP.AutoSize = true;
+            this.ctrlTxtCP.IsNumerico = true;
+            this.ctrlTxtCP.Location = new System.Drawing.Point(156, 163);
+            this.ctrlTxtCP.Name = "ctrlTxtCP";
+            this.ctrlTxtCP.Size = new System.Drawing.Size(131, 20);
+            this.ctrlTxtCP.TabIndex = 11;
+            this.ctrlTxtCP.Texto = "";
+            // 
+            // ctrlTxtCiudad
+            // 
+            this.ctrlTxtCiudad.AutoSize = true;
+            this.ctrlTxtCiudad.Location = new System.Drawing.Point(19, 163);
+            this.ctrlTxtCiudad.Name = "ctrlTxtCiudad";
+            this.ctrlTxtCiudad.Size = new System.Drawing.Size(131, 20);
+            this.ctrlTxtCiudad.TabIndex = 9;
+            this.ctrlTxtCiudad.Texto = "";
             // 
             // CtrlDireccion
             // 

@@ -72,5 +72,34 @@ namespace ProyectoCompra.Base_datos
             }
             return actualizado;
         }
+
+        public static bool eliminarDireccion(Direccion direccion)
+        {
+            bool eliminado = false;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("EliminarDireccion", connection, transaction))
+                    {
+                        try
+                        {
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@Id_Direccion", direccion.idDireccion);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            eliminado = true;
+                        }
+                        catch (SqlException)
+                        {
+                            eliminado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return eliminado;
+        }
     }
 }
