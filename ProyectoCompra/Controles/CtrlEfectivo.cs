@@ -34,6 +34,8 @@ namespace ProyectoCompra.Controles
                     if (direccion2 != null)
                     {
                         txtDireccion2.Text = direccion2.direccion;
+                        txtDireccion2.Enabled = true;
+                        lblDireccion2.Enabled = true;
                     }
                 }
             }

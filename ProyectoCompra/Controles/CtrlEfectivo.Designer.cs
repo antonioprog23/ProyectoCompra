@@ -65,6 +65,7 @@
             this.txtDireccion2.Enabled = false;
             this.txtDireccion2.Location = new System.Drawing.Point(133, 54);
             this.txtDireccion2.Name = "txtDireccion2";
+            this.txtDireccion2.ReadOnly = true;
             this.txtDireccion2.Size = new System.Drawing.Size(182, 20);
             this.txtDireccion2.TabIndex = 3;
             this.txtDireccion2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
