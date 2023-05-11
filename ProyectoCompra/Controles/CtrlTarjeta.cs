@@ -18,8 +18,8 @@ namespace ProyectoCompra.Controles
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            cargarBotones();
-            cargarControles();
+            cargarBotones(true, true, false);
+            cargarControles(true, false);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -43,7 +43,9 @@ namespace ProyectoCompra.Controles
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            cargarControles(false, true);
+            cargarDatosTarjetaCredito();
+            cargarBotones(false, false, true);
         }
 
         private void CtrlTarjeta_Load(object sender, EventArgs e)
@@ -56,18 +58,23 @@ namespace ProyectoCompra.Controles
             usuario = FicheroAuxiliar.leerFichero();
             tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(usuario.idUsuario);
 
-            if (tarjetaCredit == null)
+            if (tarjetaCredit != null)
             {
-                MessageBox.Show("Aún no tienes una tarjeta agregada. Si deseas agregar una tarjeta, elige la opción 'Editar'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                ctrlTxtTitular.Texto = tarjetaCredit.titular;
+                ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                ctrlCVV.Texto = tarjetaCredit.cvv;
+                btnEliminar.Visible = true;
             }
-
-            ctrlTxtTitular.Texto = tarjetaCredit.titular;
-            ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
-            ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
-            ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
-            ctrlCVV.Texto = tarjetaCredit.cvv;
-            btnEliminar.Visible = true;
+            else
+            {
+                ctrlTxtTitular.Texto = "";
+                ctrlTxtNTarjeta.Texto = "";
+                ctrlTxtMesVen.Texto = "";
+                ctrlAnioVen.Texto = "";
+                ctrlCVV.Texto = "";
+            }
         }
 
         private TarjetaCredit crearTarjetaCredito()
@@ -75,31 +82,56 @@ namespace ProyectoCompra.Controles
             int idUsuariao = FicheroAuxiliar.leerFichero().idUsuario;
             return new TarjetaCredit(idUsuariao, ctrlTxtTitular.Texto, ctrlTxtNTarjeta.Texto, ctrlTxtMesVen.Texto, ctrlAnioVen.Texto, ctrlCVV.Texto);
         }
-        private void cargarBotones()
+        private void cargarBotones(bool aceptar, bool cancelar, bool editar)
         {
-            btnAceptar.Visible = true;
-            btnCancelar.Visible = true;
-            btnEditar.Visible = false;
+            btnAceptar.Visible = aceptar;
+            btnCancelar.Visible = cancelar;
+            btnEditar.Visible = editar;
+            if (tarjetaCredit == null)
+            {
+                btnEliminar.Visible = false;
+            }
+            else
+            {
+                btnEliminar.Visible = true;
+            }
         }
-        private void cargarControles()
+        private void cargarControles(bool editar, bool cancelar)
         {
-            ctrlTxtTitular.IsReadOnly = false;
-            ctrlTxtNTarjeta.IsReadOnly = false;
-            ctrlTxtMesVen.IsReadOnly = false;
-            ctrlAnioVen.IsReadOnly = false;
-            ctrlCVV.IsReadOnly = false;
+            if (editar)
+            {
+                ctrlTxtTitular.IsReadOnly = false;
+                ctrlTxtNTarjeta.IsReadOnly = false;
+                ctrlTxtMesVen.IsReadOnly = false;
+                ctrlAnioVen.IsReadOnly = false;
+                ctrlCVV.IsReadOnly = false;
 
-            ctrlTxtTitular.Texto = "";
-            ctrlTxtNTarjeta.Texto = "";
-            ctrlTxtMesVen.Texto = "";
-            ctrlAnioVen.Texto = "";
-            ctrlCVV.Texto = "";
+                ctrlTxtTitular.Texto = "";
+                ctrlTxtNTarjeta.Texto = "";
+                ctrlTxtMesVen.Texto = "";
+                ctrlAnioVen.Texto = "";
+                ctrlCVV.Texto = "";
 
-            lblTitular.Text = string.Format("* {0}", lblTitular.Text);
-            lblNTarjeta.Text = string.Format("* {0}", lblNTarjeta.Text);
-            lblMesVen.Text = string.Format("* {0}", lblMesVen.Text);
-            lblAnioVen.Text = string.Format("* {0}", lblAnioVen.Text);
-            lblCVV.Text = string.Format("* {0}", lblCVV.Text);
+                lblTitular.Text = string.Format("* {0}", lblTitular.Text);
+                lblNTarjeta.Text = string.Format("* {0}", lblNTarjeta.Text);
+                lblMesVen.Text = string.Format("* {0}", lblMesVen.Text);
+                lblAnioVen.Text = string.Format("* {0}", lblAnioVen.Text);
+                lblCVV.Text = string.Format("* {0}", lblCVV.Text);
+            }
+            if (cancelar)
+            {
+                ctrlTxtTitular.IsReadOnly = true;
+                ctrlTxtNTarjeta.IsReadOnly = true;
+                ctrlTxtMesVen.IsReadOnly = true;
+                ctrlAnioVen.IsReadOnly = true;
+                ctrlCVV.IsReadOnly = true;
+
+                lblTitular.Text = string.Format("Titular:", lblTitular.Text);
+                lblNTarjeta.Text = string.Format("NºTarjeta:", lblNTarjeta.Text);
+                lblMesVen.Text = string.Format("Mes vencimiento:", lblMesVen.Text);
+                lblAnioVen.Text = string.Format("Año vencimiento:", lblAnioVen.Text);
+                lblCVV.Text = string.Format("CVV:", lblCVV.Text);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

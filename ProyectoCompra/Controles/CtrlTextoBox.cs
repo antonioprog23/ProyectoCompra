@@ -28,18 +28,6 @@ namespace ProyectoCompra.Controles
             set
             {
                 isNumerico = value;
-                if (isNumerico)
-                {
-                    Regex regex = new Regex("[^0-9]");
-                    textBox.Text = regex.Replace(textBox.Text, "");
-                    textBox.Select(textBox.Text.Length, 0);
-                }
-                else
-                {
-                    Regex regex = new Regex("[^a-zA-Z ]");
-                    textBox.Text = regex.Replace(textBox.Text, "");
-                    textBox.Select(textBox.Text.Length, 0);
-                }
             }
         }
 
@@ -52,31 +40,31 @@ namespace ProyectoCompra.Controles
             get => isReadOnly;
             set
             {
-                textBox.ReadOnly = value;
+                isReadOnly = value;
+                if (isReadOnly)
+                {
+                    textBox.ReadOnly = true;
+                }
+                else
+                {
+                    textBox.ReadOnly = false;
+                }
             }
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            if (isNumerico && !isReadOnly)
+            if (isNumerico)
             {
                 Regex regex = new Regex("[^0-9]");
                 textBox.Text = regex.Replace(textBox.Text, "");
                 textBox.Select(textBox.Text.Length, 0);
             }
-            if (!isNumerico && !isReadOnly)
+            else
             {
                 Regex regex = new Regex("[^a-zA-Z ]");
                 textBox.Text = regex.Replace(textBox.Text, "");
                 textBox.Select(textBox.Text.Length, 0);
-            }
-            if (isReadOnly)
-            {
-                textBox.ReadOnly = true;
-            }
-            else
-            {
-                textBox.ReadOnly = false;
             }
         }
     }

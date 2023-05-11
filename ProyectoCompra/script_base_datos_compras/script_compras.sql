@@ -108,6 +108,19 @@ CREATE TABLE Producto
 	CONSTRAINT constraint_id_subcategoria_fk FOREIGN KEY (Id_Subcategoria) REFERENCES Subcategoria (Id_Subcategoria)
 )
 
+-- PRODUCTO_IMAGEN
+CREATE TABLE Producto_Imagen
+(
+	Id_Producto INT,
+	Id_Categoria INT,
+	Id_Subcategoria INT,
+	Codigo_Imagen NVARCHAR(30),
+	CONSTRAINT constraint_id_producto_img_pk PRIMARY KEY (Id_Producto),
+	CONSTRAINT constraint_id_producto_img_fk FOREIGN KEY (Id_Producto) REFERENCES Producto (Id_Producto),
+	CONSTRAINT constraint_id_categoria_img_fk FOREIGN KEY (Id_Categoria) REFERENCES Categoria (Id_Categoria),
+	CONSTRAINT constraint_id_subcategoria_img_fk FOREIGN KEY (Id_Subcategoria) REFERENCES Subcategoria (Id_Subcategoria),
+)
+
 -- ESTADO
 CREATE TABLE Estado_Pedido
 (

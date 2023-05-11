@@ -30,7 +30,6 @@
         {
             this.gbxTarjeta = new System.Windows.Forms.GroupBox();
             this.lblIconTarjetas = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblMesVen = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.lblNTarjeta = new System.Windows.Forms.Label();
             this.lblTitular = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.ctrlCVV = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlAnioVen = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlTxtMesVen = new ProyectoCompra.Controles.CtrlTextoBox();
@@ -78,17 +78,6 @@
             this.lblIconTarjetas.Name = "lblIconTarjetas";
             this.lblIconTarjetas.Size = new System.Drawing.Size(111, 38);
             this.lblIconTarjetas.TabIndex = 18;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(155, 168);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Visible = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAceptar
             // 
@@ -167,10 +156,22 @@
             this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(155, 168);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // ctrlCVV
             // 
             this.ctrlCVV.AutoSize = true;
             this.ctrlCVV.IsNumerico = true;
+            this.ctrlCVV.IsReadOnly = true;
             this.ctrlCVV.Location = new System.Drawing.Point(257, 133);
             this.ctrlCVV.Name = "ctrlCVV";
             this.ctrlCVV.Size = new System.Drawing.Size(54, 20);
@@ -181,6 +182,7 @@
             // 
             this.ctrlAnioVen.AutoSize = true;
             this.ctrlAnioVen.IsNumerico = true;
+            this.ctrlAnioVen.IsReadOnly = true;
             this.ctrlAnioVen.Location = new System.Drawing.Point(141, 133);
             this.ctrlAnioVen.Name = "ctrlAnioVen";
             this.ctrlAnioVen.Size = new System.Drawing.Size(86, 20);
@@ -191,6 +193,7 @@
             // 
             this.ctrlTxtMesVen.AutoSize = true;
             this.ctrlTxtMesVen.IsNumerico = true;
+            this.ctrlTxtMesVen.IsReadOnly = true;
             this.ctrlTxtMesVen.Location = new System.Drawing.Point(26, 133);
             this.ctrlTxtMesVen.Name = "ctrlTxtMesVen";
             this.ctrlTxtMesVen.Size = new System.Drawing.Size(87, 20);
@@ -200,6 +203,7 @@
             // ctrlTxtTitular
             // 
             this.ctrlTxtTitular.AutoSize = true;
+            this.ctrlTxtTitular.IsReadOnly = true;
             this.ctrlTxtTitular.Location = new System.Drawing.Point(26, 55);
             this.ctrlTxtTitular.Name = "ctrlTxtTitular";
             this.ctrlTxtTitular.Size = new System.Drawing.Size(285, 20);
@@ -210,6 +214,7 @@
             // 
             this.ctrlTxtNTarjeta.AutoSize = true;
             this.ctrlTxtNTarjeta.IsNumerico = true;
+            this.ctrlTxtNTarjeta.IsReadOnly = true;
             this.ctrlTxtNTarjeta.Location = new System.Drawing.Point(26, 94);
             this.ctrlTxtNTarjeta.Name = "ctrlTxtNTarjeta";
             this.ctrlTxtNTarjeta.Size = new System.Drawing.Size(285, 20);
@@ -221,6 +226,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gbxTarjeta);
             this.Name = "CtrlTarjeta";
             this.Size = new System.Drawing.Size(338, 210);

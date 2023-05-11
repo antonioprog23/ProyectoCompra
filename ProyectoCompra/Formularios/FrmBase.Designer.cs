@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblSaludo = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnLogoMain = new System.Windows.Forms.Button();
             this.mnAlimentacion = new System.Windows.Forms.MenuStrip();
             this.alimentacion = new System.Windows.Forms.ToolStripMenuItem();
             this.lacteosmn = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,15 +65,17 @@
             this.electrodomesticos = new System.Windows.Forms.ToolStripMenuItem();
             this.tecnologia = new System.Windows.Forms.ToolStripMenuItem();
             this.hogar = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblContador = new System.Windows.Forms.Label();
-            this.btnLogoMain = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnPerfil = new System.Windows.Forms.Button();
+            this.lblContador = new System.Windows.Forms.Label();
+            this.lblSaludo = new System.Windows.Forms.Label();
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnIdentificarse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.mnAlimentacion.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,37 +88,15 @@
             this.panel1.Size = new System.Drawing.Size(1178, 100);
             this.panel1.TabIndex = 4;
             // 
-            // lblSaludo
+            // btnLogoMain
             // 
-            this.lblSaludo.Font = new System.Drawing.Font("Arial Nova Cond", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaludo.Location = new System.Drawing.Point(3, 6);
-            this.lblSaludo.Name = "lblSaludo";
-            this.lblSaludo.Size = new System.Drawing.Size(206, 58);
-            this.lblSaludo.TabIndex = 5;
-            this.lblSaludo.Text = "Easy Shop";
-            this.lblSaludo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSaludo.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnPerfil);
-            this.panel2.Controls.Add(this.lblContador);
-            this.panel2.Controls.Add(this.lblSaludo);
-            this.panel2.Controls.Add(this.btnCarrito);
-            this.panel2.Controls.Add(this.btnBuscar);
-            this.panel2.Controls.Add(this.txtBuscar);
-            this.panel2.Controls.Add(this.btnIdentificarse);
-            this.panel2.Location = new System.Drawing.Point(95, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 70);
-            this.panel2.TabIndex = 8;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(275, 29);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(325, 20);
-            this.txtBuscar.TabIndex = 4;
+            this.btnLogoMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLogoMain.Image = global::ProyectoCompra.Properties.Resources.icon_logo;
+            this.btnLogoMain.Location = new System.Drawing.Point(3, 7);
+            this.btnLogoMain.Name = "btnLogoMain";
+            this.btnLogoMain.Size = new System.Drawing.Size(86, 66);
+            this.btnLogoMain.TabIndex = 5;
+            this.btnLogoMain.UseVisualStyleBackColor = true;
             // 
             // mnAlimentacion
             // 
@@ -376,30 +354,24 @@
             this.hogar.Size = new System.Drawing.Size(54, 24);
             this.hogar.Text = "Hogar";
             // 
-            // lblContador
+            // panel2
             // 
-            this.lblContador.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblContador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContador.Location = new System.Drawing.Point(1059, 32);
-            this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(11, 11);
-            this.lblContador.TabIndex = 8;
-            this.lblContador.Text = "0";
-            // 
-            // btnLogoMain
-            // 
-            this.btnLogoMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLogoMain.Image = global::ProyectoCompra.Properties.Resources.icon_logo;
-            this.btnLogoMain.Location = new System.Drawing.Point(3, 7);
-            this.btnLogoMain.Name = "btnLogoMain";
-            this.btnLogoMain.Size = new System.Drawing.Size(86, 66);
-            this.btnLogoMain.TabIndex = 5;
-            this.btnLogoMain.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.btnPerfil);
+            this.panel2.Controls.Add(this.lblContador);
+            this.panel2.Controls.Add(this.lblSaludo);
+            this.panel2.Controls.Add(this.btnCarrito);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.txtBuscar);
+            this.panel2.Controls.Add(this.btnIdentificarse);
+            this.panel2.Location = new System.Drawing.Point(95, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1080, 70);
+            this.panel2.TabIndex = 8;
             // 
             // btnPerfil
             // 
             this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnPerfil.FlatAppearance.BorderSize = 0;
             this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -419,9 +391,32 @@
             this.btnPerfil.MouseEnter += new System.EventHandler(this.btnPerfil_MouseEnter);
             this.btnPerfil.MouseLeave += new System.EventHandler(this.btnPerfil_MouseLeave);
             // 
+            // lblContador
+            // 
+            this.lblContador.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblContador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContador.Location = new System.Drawing.Point(1059, 32);
+            this.lblContador.Name = "lblContador";
+            this.lblContador.Size = new System.Drawing.Size(11, 11);
+            this.lblContador.TabIndex = 8;
+            this.lblContador.Text = "0";
+            // 
+            // lblSaludo
+            // 
+            this.lblSaludo.Font = new System.Drawing.Font("Arial Nova Cond", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaludo.Location = new System.Drawing.Point(3, 6);
+            this.lblSaludo.Name = "lblSaludo";
+            this.lblSaludo.Size = new System.Drawing.Size(206, 58);
+            this.lblSaludo.TabIndex = 5;
+            this.lblSaludo.Text = "Easy Shop";
+            this.lblSaludo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSaludo.Visible = false;
+            // 
             // btnCarrito
             // 
             this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCarrito.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCarrito.FlatAppearance.BorderSize = 0;
             this.btnCarrito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -455,9 +450,17 @@
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(275, 29);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(325, 20);
+            this.txtBuscar.TabIndex = 4;
+            // 
             // btnIdentificarse
             // 
             this.btnIdentificarse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnIdentificarse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIdentificarse.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnIdentificarse.FlatAppearance.BorderSize = 0;
             this.btnIdentificarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -489,10 +492,10 @@
             this.Load += new System.EventHandler(this.FrmBase_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.mnAlimentacion.ResumeLayout(false);
             this.mnAlimentacion.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
