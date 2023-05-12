@@ -105,6 +105,12 @@
     <Compile Include="Controles\CtrlHistorialPedido.Designer.cs">
       <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlMasInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlMasInformacion.Designer.cs">
+      <DependentUpon>CtrlMasInformacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlOtrasOpciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,11 +123,23 @@
     <Compile Include="Controles\CtrlProductoCarrito.Designer.cs">
       <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlProductoHistorial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlProductoHistorial.Designer.cs">
+      <DependentUpon>CtrlProductoHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlProductosMostrar.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controles\CtrlProductosMostrar.Designer.cs">
       <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlResumenPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlResumenPedido.Designer.cs">
+      <DependentUpon>CtrlResumenPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\CtrlTarjeta.cs">
       <SubType>UserControl</SubType>
@@ -178,6 +196,12 @@
     </Compile>
     <Compile Include="Formularios\FrmHistorialPedidos.Designer.cs">
       <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmMasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMasDetalles.Designer.cs">
+      <DependentUpon>FrmMasDetalles.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmOtrasOpciones.cs">
       <SubType>Form</SubType>
@@ -328,14 +352,23 @@
     <EmbeddedResource Include="Controles\CtrlHistorialPedido.resx">
       <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlMasInformacion.resx">
+      <DependentUpon>CtrlMasInformacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlOtrasOpciones.resx">
       <DependentUpon>CtrlOtrasOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlProductoCarrito.resx">
       <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlProductoHistorial.resx">
+      <DependentUpon>CtrlProductoHistorial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlProductosMostrar.resx">
       <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlResumenPedido.resx">
+      <DependentUpon>CtrlResumenPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlTarjeta.resx">
       <DependentUpon>CtrlTarjeta.cs</DependentUpon>
@@ -363,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmHistorialPedidos.resx">
       <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMasDetalles.resx">
+      <DependentUpon>FrmMasDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmOtrasOpciones.resx">
       <DependentUpon>FrmOtrasOpciones.cs</DependentUpon>
@@ -709,6 +745,7 @@
     <None Include="Resources\15_24.jpeg" />
     <None Include="Resources\icon_ayuda.png" />
     <None Include="Resources\icon_credit_card.png" />
+    <None Include="Resources\icon_compra_realizada.png" />
     <Content Include="Resources\icon_otras_opciones.png" />
     <Content Include="Resources\icon_tipo_tarjeta.png" />
     <Content Include="Resources\op_0.png" />

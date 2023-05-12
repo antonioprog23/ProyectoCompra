@@ -26,7 +26,6 @@ namespace ProyectoCompra.Base_datos
                             cmd.Parameters.AddWithValue("@Id_Producto", (data[1] as Carrito).producto.id_producto);
                             cmd.Parameters.AddWithValue("@Cantidad", (data[1] as Carrito).cantidad);
                             cmd.Parameters.AddWithValue("@Aumentar", data[2]);
-                            cmd.Parameters.AddWithValue("@Imagen", data[3]);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             insertado = true;

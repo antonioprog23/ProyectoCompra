@@ -35,7 +35,13 @@ namespace ProyectoCompra.Formularios
             cargarDatos();
             if (productos.Count == 0)
             {
-                this.Close();
+                lblCarritoVacio.Visible = true;
+            }
+            else
+            {
+                lblCarritoVacio.Visible = false;
+                btnConfirmarCompra.Visible = true;
+                btnVaciarCarrito.Visible = true;
             }
         }
 

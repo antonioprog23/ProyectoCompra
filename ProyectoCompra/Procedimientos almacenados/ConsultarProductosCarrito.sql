@@ -7,7 +7,8 @@ CREATE PROCEDURE ConsultarProductoCarrito
 	@Id_Usuario INT
 AS
 BEGIN
-	SELECT p.id_producto,p.nombre,p.descripcion,p.precio,p.fabricante,c.cantidad,c.imagen FROM carrito c
+	SELECT p.id_producto,p.nombre,p.descripcion,p.precio,p.fabricante,c.cantidad,i.Codigo_Imagen FROM carrito c
 	INNER JOIN producto p ON (c.id_producto = p.id_producto)
+	INNER JOIN Imagen i ON (i.Id_Producto = c.Id_Producto)
 	WHERE c.id_usuario = @Id_Usuario
 END

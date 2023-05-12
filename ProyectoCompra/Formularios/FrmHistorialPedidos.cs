@@ -18,7 +18,7 @@ namespace ProyectoCompra.Formularios
                 for (int j = 0; j < tbPedidosLista.ColumnCount; j++)
                 {
                     CtrlHistorialPedido ctrlHistorialPedido = new CtrlHistorialPedido();
-                    tbPedidosLista.Controls.Add(ctrlHistorialPedido);
+                   tbPedidosLista.Controls.Add(ctrlHistorialPedido);
                 }
             }
         }
