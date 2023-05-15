@@ -2,6 +2,7 @@
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -34,16 +35,19 @@ namespace ProyectoCompra.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = FicheroAuxiliar.leerFichero();
-            Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), producto);
-
-            carrito.insertarProducto(usuario, carrito, true, imagen.Tag);
+            int idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idUsuario == 0)
+            {
+                CarritoProvisional carritoProvisional = new CarritoProvisional(producto, Convert.ToInt32(dwCantidad.Value), imagen.Tag.ToString());
+                carritoProvisional.insertarProducto(carritoProvisional);
+            }
+            else
+            {
+                Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), producto);
+                Usuario usuario = new Usuario(idUsuario);
+                carrito.insertarProducto(usuario, carrito, true, imagen.Tag);
+            }
             Close();
-        }
-
-        private byte[] obtenerByteImagen(Image imagen)
-        {
-            return null;
         }
     }
 }

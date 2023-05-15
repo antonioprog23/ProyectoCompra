@@ -3,6 +3,7 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -20,24 +21,38 @@ namespace ProyectoCompra.Controles
 
         private void CtrlEfectivo_Load(object sender, EventArgs e)
         {
-            direcciones = BDDireccion.consusltarDireccion(FicheroAuxiliar.leerFichero().idUsuario);
-            if (direcciones.Count != 0)
+            try
             {
-                direccion1 = direcciones[0];
-                if (direccion1 != null)
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                KeyValueConfigurationElement element = config.AppSettings.Settings["idUsuario"];
+
+                if (element != null)
                 {
-                    txtDireccion1.Text = direccion1.direccion;
-                }
-                if (direcciones.Count == 2)
-                {
-                    direccion2 = direcciones[1];
-                    if (direccion2 != null)
+                    direcciones = BDDireccion.consusltarDireccion(Convert.ToInt32(element.Value));
+
+                    if (direcciones.Count != 0)
                     {
-                        txtDireccion2.Text = direccion2.direccion;
-                        txtDireccion2.Enabled = true;
-                        lblDireccion2.Enabled = true;
+                        direccion1 = direcciones[0];
+                        if (direccion1 != null)
+                        {
+                            txtDireccion1.Text = direccion1.direccion;
+                        }
+                        if (direcciones.Count == 2)
+                        {
+                            direccion2 = direcciones[1];
+                            if (direccion2 != null)
+                            {
+                                txtDireccion2.Text = direccion2.direccion;
+                                txtDireccion2.Enabled = true;
+                                lblDireccion2.Enabled = true;
+                            }
+                        }
                     }
                 }
+            }
+            catch (ConfigurationErrorsException ex)
+            {
+                throw ex;
             }
         }
 

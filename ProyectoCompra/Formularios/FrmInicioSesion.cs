@@ -1,6 +1,5 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
 using System;
 using System.Drawing;
 using System.Text.RegularExpressions;
@@ -11,6 +10,7 @@ namespace ProyectoCompra.Formularios
     public partial class frmInicioSesion : Form
     {
         private Usuario usuarioEncontrado;
+
         public frmInicioSesion()
         {
             InitializeComponent();
@@ -32,8 +32,7 @@ namespace ProyectoCompra.Formularios
                 else
                 {
                     MessageBox.Show("Bienvenido");
-                    Usuario usuarioFichero = new Usuario(usuarioEncontrado.idUsuario);
-                    FicheroAuxiliar.escribirFichero(usuarioFichero);
+                    ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
                     Application.Restart();
                 }
             }

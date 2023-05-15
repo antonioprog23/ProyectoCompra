@@ -45,13 +45,28 @@ namespace ProyectoCompra.Clases
             this.id_producto = id_producto;
         }
 
+        public Producto(string linea)
+        {
+            string[] data = linea.Split(';');
+            this.id_producto = Convert.ToInt32(data[0]);
+            this.id_categoria = Convert.ToInt32(data[1]);
+            this.nombre = data[2];
+            this.descripcion = data[3];
+            this.precio = Convert.ToDecimal(data[4]);
+            this.fabricante = data[5];
+        }
+
         #endregion
 
-        #region
-
+        #region Métodos
         public override string ToString()
         {
             return $"Producto [Id: {this.id_producto}, Categoría: {this.id_categoria}, Nombre: {this.nombre}, Descripción: {this.descripcion}, Precio: {this.precio}, Fabricante: {this.fabricante}]";
+        }
+
+        public string ToStringWithSeparator()
+        {
+            return $"{this.id_producto};{this.id_categoria};{this.nombre};{this.descripcion};{this.precio};{this.fabricante}";
         }
 
         #endregion

@@ -1,20 +1,21 @@
 ﻿using ProyectoCompra.Clases;
+using System.Collections.Generic;
 using System.IO;
 
 namespace ProyectoCompra.Ficheros
 {
-    internal class FicheroAuxiliar
+    internal class FicheroCarrito
     {
         //CONSTANTE
-        private const string FICHERO = "..\\..\\Ficheros\\datosProvisionales.text";
+        private const string FICHERO = "..\\..\\Ficheros\\carritoProvisional.text";
 
-        public static void escribirFichero(Usuario usuario)
+        public static void escribirFichero(CarritoProvisional carrito)
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(FICHERO))
+                using (StreamWriter sw = new StreamWriter(FICHERO, true))
                 {
-                    sw.WriteLine(usuario.toStringConSeparador());
+                    sw.WriteLine(carrito.toStringConSeparador());
                     File.SetAttributes(FICHERO, FileAttributes.Encrypted);
                     File.SetAttributes(FICHERO, FileAttributes.Normal);
                 }
@@ -29,9 +30,9 @@ namespace ProyectoCompra.Ficheros
             }
         }
 
-        public static Usuario leerFichero()
+        public static List<CarritoProvisional> leerFichero()
         {
-            Usuario usuario = null;
+            List<CarritoProvisional> carritoProvisional = new List<CarritoProvisional>();
             try
             {
                 if (File.Exists(FICHERO))
@@ -39,9 +40,11 @@ namespace ProyectoCompra.Ficheros
                     using (StreamReader sr = new StreamReader(FICHERO))
                     {
                         string linea = sr.ReadLine();
-                        if (linea != null)
+                        while (linea != null)
                         {
-                            usuario = new Usuario(linea);
+                            CarritoProvisional producto = new CarritoProvisional(linea);
+                            carritoProvisional.Add(producto);
+                            linea = sr.ReadLine();
                         }
                     }
                 }
@@ -59,7 +62,7 @@ namespace ProyectoCompra.Ficheros
 
             }
 
-            return usuario;
+            return carritoProvisional;
         }
 
         public static bool borrarFicheroAux()

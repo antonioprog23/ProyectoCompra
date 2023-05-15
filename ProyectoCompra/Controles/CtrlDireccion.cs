@@ -2,6 +2,7 @@
 using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -117,7 +118,7 @@ namespace ProyectoCompra.Controles
                 direccion.ciudad = ctrlTxtCiudad.Texto;
                 direccion.codigoPostal = ctrlTxtCP.Texto;
                 direccion.telefono = ctrlTxtTelefono.Texto;
-                if (BDDireccion.actualizarDireccion(direccion, FicheroAuxiliar.leerFichero().idUsuario))
+                if (BDDireccion.actualizarDireccion(direccion, obtenerIdUsuario()))
                 {
                     MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarBotones(false, false, true);
@@ -129,7 +130,7 @@ namespace ProyectoCompra.Controles
                 Direccion direccion = new Direccion(txtNomDireccion.Text, txtDireccion.Text, cbxPais.SelectedItem.ToString(), cbxProvincia.SelectedItem.ToString(), ctrlTxtCiudad.Texto, ctrlTxtCP.Texto, ctrlTxtTelefono.Texto);
                 if (direccion != null)
                 {
-                    if (BDDireccion.actualizarDireccion(direccion, FicheroAuxiliar.leerFichero().idUsuario))
+                    if (BDDireccion.actualizarDireccion(direccion, obtenerIdUsuario()))
                     {
                         MessageBox.Show("Se ha agregado una nueva dirección.Vuelva abrir la ventana para actualizar los cambios.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cargarBotones(false, false, true);
@@ -137,6 +138,25 @@ namespace ProyectoCompra.Controles
                     }
                 }
             }
+        }
+
+        private int obtenerIdUsuario()
+        {
+            int idUsuario = 0;
+            try
+            {
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                KeyValueConfigurationElement element = config.AppSettings.Settings["idUsuario"];
+                if (element != null)
+                {
+                    idUsuario = Convert.ToInt32(element.Value);
+                }
+            }
+            catch (ConfigurationErrorsException ex)
+            {
+                throw ex;
+            }
+            return idUsuario;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

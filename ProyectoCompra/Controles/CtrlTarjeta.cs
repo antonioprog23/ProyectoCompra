@@ -1,6 +1,5 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
 using System;
 using System.Windows.Forms;
 
@@ -9,7 +8,6 @@ namespace ProyectoCompra.Controles
     public partial class CtrlTarjeta : UserControl
     {
         private TarjetaCredit tarjetaCredit;
-        private Usuario usuario;
 
         public CtrlTarjeta()
         {
@@ -55,33 +53,42 @@ namespace ProyectoCompra.Controles
 
         private void cargarDatosTarjetaCredito()
         {
-            usuario = FicheroAuxiliar.leerFichero();
-            tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(usuario.idUsuario);
+            int idReferenciaUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idReferenciaUsuario != 0)
+            {
+                tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(Convert.ToInt32(idReferenciaUsuario));
 
-            if (tarjetaCredit != null)
-            {
-                ctrlTxtTitular.Texto = tarjetaCredit.titular;
-                ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
-                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
-                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
-                ctrlCVV.Texto = tarjetaCredit.cvv;
-                btnEliminar.Visible = true;
-            }
-            else
-            {
-                ctrlTxtTitular.Texto = "";
-                ctrlTxtNTarjeta.Texto = "";
-                ctrlTxtMesVen.Texto = "";
-                ctrlAnioVen.Texto = "";
-                ctrlCVV.Texto = "";
+                if (tarjetaCredit != null)
+                {
+                    ctrlTxtTitular.Texto = tarjetaCredit.titular;
+                    ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                    ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                    ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                    ctrlCVV.Texto = tarjetaCredit.cvv;
+                    btnEliminar.Visible = true;
+                }
+                else
+                {
+                    ctrlTxtTitular.Texto = "";
+                    ctrlTxtNTarjeta.Texto = "";
+                    ctrlTxtMesVen.Texto = "";
+                    ctrlAnioVen.Texto = "";
+                    ctrlCVV.Texto = "";
+                }
             }
         }
 
         private TarjetaCredit crearTarjetaCredito()
         {
-            int idUsuariao = FicheroAuxiliar.leerFichero().idUsuario;
-            return new TarjetaCredit(idUsuariao, ctrlTxtTitular.Texto, ctrlTxtNTarjeta.Texto, ctrlTxtMesVen.Texto, ctrlAnioVen.Texto, ctrlCVV.Texto);
+            TarjetaCredit tarjetaCredit = null;
+            int idReferenciaUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idReferenciaUsuario != null)
+            {
+                tarjetaCredit = new TarjetaCredit(idReferenciaUsuario, ctrlTxtTitular.Texto, ctrlTxtNTarjeta.Texto, ctrlTxtMesVen.Texto, ctrlAnioVen.Texto, ctrlCVV.Texto);
+            }
+            return tarjetaCredit;
         }
+
         private void cargarBotones(bool aceptar, bool cancelar, bool editar)
         {
             btnAceptar.Visible = aceptar;
@@ -136,13 +143,17 @@ namespace ProyectoCompra.Controles
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (BDTarjetaCredito.eliminarTarjetaCredito(FicheroAuxiliar.leerFichero().idUsuario))
+            int idReferenciaUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idReferenciaUsuario != 0)
             {
-                btnEliminar.Enabled = false;
-                btnEditar.Enabled = false;
-                btnAceptar.Enabled = false;
-                btnCancelar.Enabled = false;
-                MessageBox.Show("Se han actualizado los datos. Vuelva abrir la ventana para actualizar los datos.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (BDTarjetaCredito.eliminarTarjetaCredito(idReferenciaUsuario))
+                {
+                    btnEliminar.Enabled = false;
+                    btnEditar.Enabled = false;
+                    btnAceptar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    MessageBox.Show("Se han actualizado los datos. Vuelva abrir la ventana para actualizar los datos.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

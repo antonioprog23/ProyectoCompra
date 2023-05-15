@@ -1,9 +1,12 @@
-﻿using System;
+﻿using ProyectoCompra.Clases;
+using System;
 
 namespace ProyectoCompra.Formularios
 {
     public partial class FrmMain : FrmBase
     {
+        public Usuario usuarioEncontrado { get; set; }
+
         public FrmMain()
         {
             InitializeComponent();

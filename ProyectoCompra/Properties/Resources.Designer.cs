@@ -203,6 +203,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_casa {
+            get {
+                object obj = ResourceManager.GetObject("icon_casa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_casa_decoracion {
             get {
                 object obj = ResourceManager.GetObject("icon_casa_decoracion", resourceCulture);
@@ -686,6 +696,16 @@ namespace ProyectoCompra.Properties {
         internal static System.Drawing.Bitmap icon_textil_hogar {
             get {
                 object obj = ResourceManager.GetObject("icon_textil_hogar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tienda2 {
+            get {
+                object obj = ResourceManager.GetObject("icon_tienda2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

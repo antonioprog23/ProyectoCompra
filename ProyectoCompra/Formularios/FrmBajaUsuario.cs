@@ -126,6 +126,7 @@ namespace ProyectoCompra.Formularios
                 if (BDUsuario.darBajaUsuarioPorUsuario(txtUsuario.Text.Trim(), txtContrasenia.Text.Trim()))
                 {
                     MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ConfigSesion.borrarReferenciaIdUsuario();
                     Application.Restart();
                 }
                 else
@@ -162,6 +163,7 @@ namespace ProyectoCompra.Formularios
                 if (BDUsuario.darBajaUsuarioPorCorreoElectronico(txtCorreoElectronico.Text.Trim()))
                 {
                     MessageBox.Show("Has sido dado de baja exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ConfigSesion.borrarReferenciaIdUsuario();
                     Application.Restart();
                 }
             }

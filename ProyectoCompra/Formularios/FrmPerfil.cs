@@ -1,6 +1,4 @@
-﻿using ProyectoCompra.Base_datos;
-using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
+﻿using ProyectoCompra.Clases;
 using System;
 using System.Windows.Forms;
 
@@ -40,7 +38,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            FicheroAuxiliar.borrarFicheroAux();
+            ConfigSesion.borrarReferenciaIdUsuario();
             Application.Restart();
         }
 

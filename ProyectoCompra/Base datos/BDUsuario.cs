@@ -217,8 +217,9 @@ namespace ProyectoCompra.Base_datos
                             transaction.Commit();
                             eliminado = true;
                         }
-                        catch (SqlException)
+                        catch (SqlException e)
                         {
+                            MessageBox.Show(e.Message);
                             eliminado = false;
                             transaction.Rollback();
                         }

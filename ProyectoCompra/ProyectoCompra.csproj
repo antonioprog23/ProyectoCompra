@@ -54,6 +54,7 @@
       <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,6 +74,7 @@
     <Compile Include="Base datos\BDUsuario.cs" />
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\ConfigSesion.cs" />
     <Compile Include="Clases\Direccion.cs" />
     <Compile Include="Clases\Imagen.cs" />
     <Compile Include="Clases\Mensaje.cs" />
@@ -154,7 +156,14 @@
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
-    <Compile Include="Ficheros\FicheroAuxiliar.cs" />
+    <Compile Include="Clases\CarritoProvisional.cs" />
+    <Compile Include="Ficheros\FicheroCarrito.cs" />
+    <Compile Include="Formularios\FrmAccesoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmAccesoPago.Designer.cs">
+      <DependentUpon>FrmAccesoPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmBajaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +385,9 @@
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmAccesoPago.resx">
+      <DependentUpon>FrmAccesoPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBajaUsuario.resx">
       <DependentUpon>FrmBajaUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -503,7 +515,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Ficheros\datosProvisionales.text" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -746,7 +757,9 @@
     <None Include="Resources\icon_ayuda.png" />
     <None Include="Resources\icon_credit_card.png" />
     <None Include="Resources\icon_compra_realizada.png" />
+    <None Include="Resources\icon_casa.png" />
     <Content Include="Resources\icon_otras_opciones.png" />
+    <None Include="Resources\icon_tienda2.png" />
     <Content Include="Resources\icon_tipo_tarjeta.png" />
     <Content Include="Resources\op_0.png" />
     <None Include="Resources\op_3.png" />

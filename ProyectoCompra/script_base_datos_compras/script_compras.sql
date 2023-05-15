@@ -18,11 +18,11 @@ USE EasyShop
 CREATE TABLE Cliente
 (
 	Id_Cliente int PRIMARY KEY,
-	Nombre NVARCHAR(50) NOT NULL,
-	Apellido NVARCHAR(50) NOT NULL,
-	Edad INT NOT NULL,
-	Fecha_Nacimiento DATE NOT NULL,
-	Sexo NVARCHAR(15) NOT NULL,
+	Nombre NVARCHAR(50),
+	Apellido NVARCHAR(50),
+	Edad INT,
+	Fecha_Nacimiento DATE,
+	Sexo NVARCHAR(15),
 )
 
 -- DIRECCION
@@ -37,7 +37,7 @@ CREATE TABLE Direccion
 	Ciudad NVARCHAR(150),
 	Codigo_Postal NVARCHAR(5),
 	Telefono NVARCHAR(9),
-	CONSTRAINT constraint_id_cliente_direccion_fk FOREIGN KEY (Id_Cliente) REFERENCES Cliente (Id_Cliente)
+	CONSTRAINT constraint_id_cliente_direccion_fk FOREIGN KEY (Id_Cliente) REFERENCES Cliente (Id_Cliente) ON DELETE CASCADE
 )
 
 -- USUARIO
@@ -45,9 +45,9 @@ CREATE TABLE Usuario
 (
 	Id_Usuario INT PRIMARY KEY,
 	Id_Cliente INT NOT NULL,
-	Usuario_Name NVARCHAR(50) NOT NULL,
-	Contrasenia NVARCHAR(50) NOT NULL,
-	Correo_Electronico NVARCHAR(50) NOT NULL,
+	Usuario_Name NVARCHAR(50),
+	Contrasenia NVARCHAR(50),
+	Correo_Electronico NVARCHAR(50),
 	CONSTRAINT constraint_cliente_fk FOREIGN KEY (Id_Cliente) REFERENCES Cliente (Id_Cliente) ON DELETE CASCADE
 )
 
@@ -71,13 +71,6 @@ CREATE TABLE Detalle_Usuario
 	Fecha_Alta DATETIME NOT NULL,
 	Fecha_Ultima_Modificacion DATETIME,
 	CONSTRAINT constraint_id_usuario_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario) ON DELETE CASCADE
-)
--- USUARIO INVITADO
-
-CREATE TABLE Usuario_Invitado (
-    Id_Usuario INT NOT NULL PRIMARY KEY,
-    Fecha_Expiracion DATETIME,
-    CONSTRAINT constraint_id_usuario_invitado_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario(Id_Usuario) ON DELETE CASCADE
 )
 
 -- CATEGORIA
@@ -113,7 +106,7 @@ Use EasyShop
 CREATE TABLE Imagen
 (
 	Id_Producto INT,
-	Codigo_Imagen NVARCHAR(30)
+	Codigo_Imagen NVARCHAR(30) NOT NULL,
 	CONSTRAINT constraint_id_producto_pk PRIMARY KEY (Id_Producto),
 	CONSTRAINT constraint_id_producto_img_fk FOREIGN KEY (Id_Producto) REFERENCES Producto (Id_Producto) ON DELETE CASCADE
 )
@@ -122,7 +115,7 @@ CREATE TABLE Imagen
 CREATE TABLE Estado_Pedido
 (
 	Id_Estado_Pedido INT IDENTITY PRIMARY KEY,
-	Descripcion NVARCHAR(50)
+	Descripcion NVARCHAR(50) NOT NULL
 )
 
 -- PEDIDO

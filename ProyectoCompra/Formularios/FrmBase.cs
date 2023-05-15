@@ -3,6 +3,7 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmBase : Form
     {
-        private Usuario usuarioRecuperado;
+        public Usuario usuarioRecuperado;
         private Carrito carrito;
         private List<Carrito> lista;
 
@@ -22,23 +23,29 @@ namespace ProyectoCompra.Formularios
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
-            //USUARO 
-            Usuario usuarioFichero = FicheroAuxiliar.leerFichero();
-            if (usuarioFichero != null)
+            //USUARO
+            try
             {
-                usuarioRecuperado = BDUsuario.obtenerDatos("", "", usuarioFichero.idUsuario.ToString());
+                int idReferenciaUsuariao = ConfigSesion.obtenerReferenciaIdUsuario();
+                if (idReferenciaUsuariao != 0)
+                {
+                    usuarioRecuperado = BDUsuario.obtenerDatos("", "", idReferenciaUsuariao.ToString());
+                }
+                if (usuarioRecuperado == null)
+                {
+                    btnIdentificarse.Visible = true;
+                    btnPerfil.Visible = false;
+                }
+                else
+                {
+                    btnIdentificarse.Visible = false;
+                    btnPerfil.Visible = true;
+                    lblSaludo.Visible = true;
+                }
             }
-
-            if (usuarioRecuperado == null)
+            catch (ConfigurationErrorsException ex)
             {
-                btnIdentificarse.Visible = true;
-                btnPerfil.Visible = false;
-            }
-            else
-            {
-                btnIdentificarse.Visible = false;
-                btnPerfil.Visible = true;
-                lblSaludo.Visible = true;
+                throw ex;
             }
         }
 

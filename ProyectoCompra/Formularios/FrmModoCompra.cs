@@ -16,5 +16,17 @@ namespace ProyectoCompra.Formularios
         {
             InitializeComponent();
         }
+
+        private void btnInvitado_Click(object sender, EventArgs e)
+        {
+            FrmAccesoPago frmAccesoPago = new FrmAccesoPago();
+            frmAccesoPago.ShowDialog();
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            frmInicioSesion frmInicioSesion = new frmInicioSesion();
+            frmInicioSesion.ShowDialog();
+        }
     }
 }
