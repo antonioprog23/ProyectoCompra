@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ProyectoCompra.Clases
 {
-    internal class CarritoProvisional
+    public class CarritoProvisional
     {
         public int cantidad { get; set; }
         public string rutaImagen { get; set; }
@@ -107,6 +107,17 @@ namespace ProyectoCompra.Clases
         public static List<CarritoProvisional> consultarCarritoProvisional()
         {
             return FicheroCarrito.leerFichero();
+        }
+
+        public decimal calcularSubTotal(List<CarritoProvisional> productos)
+        {
+            decimal subtTotal = 0;
+
+            foreach (CarritoProvisional producto in productos)
+            {
+                subtTotal += producto.producto.precio * producto.cantidad;
+            }
+            return subtTotal;
         }
 
         public string toStringConSeparador()

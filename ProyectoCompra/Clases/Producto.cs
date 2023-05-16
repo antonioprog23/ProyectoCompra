@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCompra.Clases
 {
-    internal class Producto
+    public class Producto
     {
         #region Atributos
 

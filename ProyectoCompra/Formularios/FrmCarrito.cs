@@ -14,6 +14,7 @@ namespace ProyectoCompra.Formularios
         private List<CarritoProvisional> productosProvisionales;
         private int idUsuario;
         private Carrito carrito;
+        private Carrito carritoListo;
         private CarritoProvisional carritoProvisional;
 
         public FrmCarrito()
@@ -35,21 +36,26 @@ namespace ProyectoCompra.Formularios
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
             int idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
-            if (idUsuario != 0)
-            {
-                FrmAccesoPago frmAccesoPago = new FrmAccesoPago();
-                frmAccesoPago.ShowDialog();
-            }
-            else
+            if (idUsuario == 0)
             {
                 FrmModoCompra frmModoCompra = new FrmModoCompra();
                 frmModoCompra.ShowDialog();
+            }
+            else
+            {
+                FrmAccesoPago frmAccesoPago = new FrmAccesoPago(carritoListo);
+                frmAccesoPago.ShowDialog();
             }
         }
 
         private void FrmCarrito_Load(object sender, EventArgs e)
         {
             cargarDatos();
+            configuracionInicial();
+        }
+
+        private void configuracionInicial()
+        {
             if (idUsuario == 0)
             {
                 if (productosProvisionales.Count == 0)
@@ -86,13 +92,13 @@ namespace ProyectoCompra.Formularios
             else
             {
                 cargarCarrito();
+                //SUBTOTAL
+                lblSubTotal.Text = calcularSubTotal().ToString("N2");
+                //TOTAL
+                lblTotal.Text = (Convert.ToDecimal(lblSubTotal.Text) * ((Convert.ToDecimal(lblIVA.Text) / 100) + 1)).ToString("N2");
+                carritoListo = new Carrito(Convert.ToInt32(lblContador.Text), productos, lblIVA.Text, Decimal.Parse(lblTotal.Text));
             }
 
-
-            //SUBTOTAL
-            lblSubTotal.Text = calcularSubTotal().ToString("N2");
-            //TOTAL
-            lblTotal.Text = (Convert.ToDecimal(lblSubTotal.Text) * ((Convert.ToDecimal(lblIVA.Text) / 100) + 1)).ToString("N2");
         }
 
         private void cargarCarritoProvisional()
@@ -156,17 +162,11 @@ namespace ProyectoCompra.Formularios
             decimal subtTotal = 0;
             if (idUsuario == 0)
             {
-                foreach (CarritoProvisional producto in productosProvisionales)
-                {
-                    subtTotal += producto.producto.precio * producto.cantidad;
-                }
+                subtTotal = carritoProvisional.calcularSubTotal(productosProvisionales);
             }
             else
             {
-                foreach (Carrito producto in productos)
-                {
-                    subtTotal += producto.producto.precio * producto.cantidad;
-                }
+                subtTotal = carrito.calcularSubTotal(productos);
             }
             return subtTotal;
         }
@@ -181,7 +181,7 @@ namespace ProyectoCompra.Formularios
                 {
                     carrito.vaciarCarrito(idUsuario, Convert.ToInt32(button.Name), false);
                     this.Refresh();
-                    //actualizarVentana();
+                    actualizarVentana();
                 }
                 return;
             }
@@ -192,7 +192,7 @@ namespace ProyectoCompra.Formularios
                 {
                     CarritoProvisional.eliminarProducto(Convert.ToInt32(button.Name.ToString()));
 
-                    //actualizarVentana();
+                    actualizarVentana();
                 }
                 return;
             }
