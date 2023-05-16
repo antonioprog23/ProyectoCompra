@@ -101,6 +101,12 @@
     <Compile Include="Controles\CtrlEfectivo.Designer.cs">
       <DependentUpon>CtrlEfectivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlEnvio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlEnvio.Designer.cs">
+      <DependentUpon>CtrlEnvio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlHistorialPedido.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlEfectivo.resx">
       <DependentUpon>CtrlEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlEnvio.resx">
+      <DependentUpon>CtrlEnvio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlHistorialPedido.resx">
       <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
