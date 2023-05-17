@@ -11,7 +11,7 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmDireccion : Form
     {
-        private List<Direccion> direcciones;
+        public List<Direccion> direcciones { get; set; }
         private CtrlDireccion ctrlDireccion;
         public bool isEleccion { get; set; }
 
@@ -131,6 +131,17 @@ namespace ProyectoCompra.Formularios
             if (direcciones.Count != 0)
             {
                 this.Close();
+            }
+        }
+
+        private void FrmDireccion_Shown(object sender, EventArgs e)
+        {
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            KeyValueConfigurationElement element = configuration.AppSettings.Settings["idUsuario"];
+            if (element != null)
+            {
+                direcciones = BDDireccion.consusltarDireccion(Convert.ToInt32(element.Value));
+
             }
         }
     }

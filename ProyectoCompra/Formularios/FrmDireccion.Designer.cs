@@ -92,6 +92,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Direcciones";
             this.Load += new System.EventHandler(this.FrmDireccion_Load);
+            this.Shown += new System.EventHandler(this.FrmDireccion_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

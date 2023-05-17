@@ -1,6 +1,7 @@
 ﻿using ProyectoCompra.Clases;
 using ProyectoCompra.Controles;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -9,8 +10,7 @@ namespace ProyectoCompra.Formularios
     {
         private Carrito carritoListo;
         private CarritoProvisional carritoProvisionalListo;
-        public Button btnOcultarDetalles;
-        public Button btnMostrarDetalles;
+        private RadioButton rbtnCasa;
 
         public FrmAccesoPago()
         {
@@ -33,6 +33,8 @@ namespace ProyectoCompra.Formularios
 
         private void FrmAccesoPago_Load(object sender, EventArgs e)
         {
+            this.rbtnCasa = ctrlEnvio1.Controls.Find("rbtnCasa", true)[0] as RadioButton;
+            rbtnCasa.Click += rbtnCasa_Click;
             this.ctrlEnvio1.formModificar = this;
             this.ctrlEnvio1.groupBoxModificar = gbxResumen;
             this.ctrlEnvio1.botonModificar = btnContinuar;
@@ -43,6 +45,24 @@ namespace ProyectoCompra.Formularios
         private void btnContinuar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rbtnCasa_Click(object sender, EventArgs e)
+        {
+            FrmDireccion frmDireccion = new FrmDireccion(true);
+            frmDireccion.ShowDialog();
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+            {
+
+            }
+            else
+            {
+                List<Direccion> direcciones = frmDireccion.direcciones;
+                if (direcciones.Count > 0)
+                {
+                    this.btnContinuar.Enabled = true;
+                }
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using ProyectoCompra.Clases;
 using ProyectoCompra.Formularios;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -146,10 +147,5 @@ namespace ProyectoCompra.Controles
             this.flProductos.Visible = false;
         }
 
-        private void rbtnCasa_Click(object sender, EventArgs e)
-        {
-            FrmDireccion frmDireccion = new FrmDireccion(true);
-            frmDireccion.ShowDialog();
-        }
     }
 }

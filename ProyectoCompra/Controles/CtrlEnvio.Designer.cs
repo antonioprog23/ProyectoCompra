@@ -92,7 +92,6 @@
             this.rbtnCasa.Text = "Envío a domicilio\r\nEntrega en 24/48h hábiles\r\n\r\n";
             this.rbtnCasa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbtnCasa.UseVisualStyleBackColor = true;
-            this.rbtnCasa.Click += new System.EventHandler(this.rbtnCasa_Click);
             // 
             // rbbtnTienda
             // 
