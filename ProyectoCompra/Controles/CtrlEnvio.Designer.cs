@@ -92,9 +92,11 @@
             this.rbtnCasa.Text = "Envío a domicilio\r\nEntrega en 24/48h hábiles\r\n\r\n";
             this.rbtnCasa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbtnCasa.UseVisualStyleBackColor = true;
+            this.rbtnCasa.Click += new System.EventHandler(this.rbtnCasa_Click);
             // 
             // rbbtnTienda
             // 
+            this.rbbtnTienda.Enabled = false;
             this.rbbtnTienda.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbbtnTienda.Image = global::ProyectoCompra.Properties.Resources.icon_tienda2;
             this.rbbtnTienda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -194,9 +196,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.gbxOpcion);
             this.Name = "CtrlEnvio";
-            this.Size = new System.Drawing.Size(509, 476);
+            this.Size = new System.Drawing.Size(509, 475);
             this.Load += new System.EventHandler(this.CtrlEnvio_Load);
             this.gbxOpcion.ResumeLayout(false);
             this.gbxOpcion.PerformLayout();

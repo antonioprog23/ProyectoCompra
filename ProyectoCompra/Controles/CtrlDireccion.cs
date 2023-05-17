@@ -1,6 +1,7 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
+using ProyectoCompra.Formularios;
 using System;
 using System.Configuration;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace ProyectoCompra.Controles
         public Direccion direccion { get; set; }
         public bool agregarDireccion { get; set; }
         public string groupBox { get => gbxDireccionDefecto.Text; set { gbxDireccionDefecto.Text = value; } }
+        private FrmDireccion frmDireccion;
 
         public CtrlDireccion()
         {
@@ -24,7 +26,7 @@ namespace ProyectoCompra.Controles
             this.direccion = direccion;
         }
 
-        public CtrlDireccion(bool agregarDireccion)
+        public CtrlDireccion(bool agregarDireccion, bool isEleccion)
         {
             InitializeComponent();
             this.agregarDireccion = agregarDireccion;
@@ -38,7 +40,6 @@ namespace ProyectoCompra.Controles
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            cargarLabelObligatorio(false);
             cargarBotones(false, false, true);
             cargarControlesText(true, true, false, false, true, true, true);
         }
@@ -59,32 +60,6 @@ namespace ProyectoCompra.Controles
             ctrlTxtCiudad.IsReadOnly = ciudad;
             ctrlTxtCP.IsReadOnly = cp;
             ctrlTxtTelefono.IsReadOnly = telefono;
-        }
-
-        private void cargarLabelObligatorio(bool obligatorio)
-        {
-            /*
-            if (obligatorio)
-            {
-                lblNomDireccion.Text = string.Format("* {0}", lblNomDireccion.Text);
-                lblDireccion.Text = string.Format("* {0}", lblDireccion.Text);
-                lblPais.Text = string.Format("* {0}", lblPais.Text);
-                lblProvincia.Text = string.Format("* {0}", lblProvincia.Text);
-                lblCiudad.Text = string.Format("* {0}", lblCiudad.Text);
-                lblCP.Text = string.Format("* {0}", lblCP.Text);
-                lblTelefono.Text = string.Format("* {0}", lblTelefono.Text);
-            }
-            else
-            {
-                lblNomDireccion.Text = string.Format("{0}", lblNomDireccion.Text);
-                lblDireccion.Text = string.Format("{0}", lblDireccion.Text);
-                lblPais.Text = string.Format("{0}", lblPais.Text);
-                lblProvincia.Text = string.Format("{0}", lblProvincia.Text);
-                lblCiudad.Text = string.Format("{0}", lblCiudad.Text);
-                lblCP.Text = string.Format("{0}", lblCP.Text);
-                lblTelefono.Text = string.Format("{0}", lblTelefono.Text);
-            }
-            */
         }
 
         private void recuperarDireccion()
@@ -132,7 +107,6 @@ namespace ProyectoCompra.Controles
                 {
                     if (BDDireccion.actualizarDireccion(direccion, obtenerIdUsuario()))
                     {
-                        MessageBox.Show("Se ha agregado una nueva dirección.Vuelva abrir la ventana para actualizar los cambios.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cargarBotones(false, false, true);
                         cargarControlesText(true, true, false, false, true, true, true);
                     }
@@ -162,7 +136,6 @@ namespace ProyectoCompra.Controles
         private void btnEditar_Click(object sender, EventArgs e)
         {
             cargarControlesText(false, false, true, true, false, false, false);
-            cargarLabelObligatorio(true);
             cargarBotones(true, true, false);
         }
 

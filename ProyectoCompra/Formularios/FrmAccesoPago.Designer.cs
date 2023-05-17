@@ -60,12 +60,14 @@
             // 
             // btnContinuar
             // 
+            this.btnContinuar.Enabled = false;
             this.btnContinuar.Location = new System.Drawing.Point(10, 259);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(259, 23);
             this.btnContinuar.TabIndex = 9;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // lblTotal
             // 
@@ -140,9 +142,11 @@
             // 
             this.ctrlEnvio1.AutoSize = true;
             this.ctrlEnvio1.botonModificar = null;
+            this.ctrlEnvio1.carritoListo = null;
+            this.ctrlEnvio1.carritoProvisionalListo = null;
             this.ctrlEnvio1.formModificar = null;
             this.ctrlEnvio1.groupBoxModificar = null;
-            this.ctrlEnvio1.Location = new System.Drawing.Point(11, 8);
+            this.ctrlEnvio1.Location = new System.Drawing.Point(12, 8);
             this.ctrlEnvio1.Name = "ctrlEnvio1";
             this.ctrlEnvio1.Size = new System.Drawing.Size(509, 295);
             this.ctrlEnvio1.TabIndex = 3;

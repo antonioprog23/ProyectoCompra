@@ -30,12 +30,13 @@
         {
             this.btnAniadirDireccion = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.ctrlDireccionMostrar = new ProyectoCompra.Controles.CtrlDireccion();
             this.SuspendLayout();
             // 
             // btnAniadirDireccion
             // 
-            this.btnAniadirDireccion.Location = new System.Drawing.Point(247, 286);
+            this.btnAniadirDireccion.Location = new System.Drawing.Point(247, 287);
             this.btnAniadirDireccion.Name = "btnAniadirDireccion";
             this.btnAniadirDireccion.Size = new System.Drawing.Size(75, 23);
             this.btnAniadirDireccion.TabIndex = 1;
@@ -54,8 +55,20 @@
             this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(166, 287);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // ctrlDireccionMostrar
             // 
+            this.ctrlDireccionMostrar.agregarDireccion = false;
             this.ctrlDireccionMostrar.AutoSize = true;
             this.ctrlDireccionMostrar.direccion = null;
             this.ctrlDireccionMostrar.groupBox = "Dirección (predeterminado)";
@@ -70,6 +83,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(334, 322);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnAniadirDireccion);
             this.Controls.Add(this.ctrlDireccionMostrar);
             this.Controls.Add(this.btnCancelar);
@@ -77,6 +91,7 @@
             this.Name = "FrmDireccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Direcciones";
+            this.Load += new System.EventHandler(this.FrmDireccion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +101,7 @@
 
         private Controles.CtrlDireccion ctrlDireccionMostrar;
         private System.Windows.Forms.Button btnAniadirDireccion;
-        private System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Button btnAceptar;
+        public System.Windows.Forms.Button btnCancelar;
     }
 }

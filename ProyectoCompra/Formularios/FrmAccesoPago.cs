@@ -39,5 +39,10 @@ namespace ProyectoCompra.Formularios
             lblPTotal.Text = carritoListo.total.ToString();
             lblTotal.Text = (decimal.Parse(lblPTotal.Text) + (decimal.Parse(lblGastosEnvio.Text))).ToString();
         }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
