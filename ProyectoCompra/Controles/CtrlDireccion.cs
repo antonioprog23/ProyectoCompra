@@ -3,7 +3,6 @@ using ProyectoCompra.Clases;
 using ProyectoCompra.Ficheros;
 using ProyectoCompra.Formularios;
 using System;
-using System.Configuration;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -14,7 +13,6 @@ namespace ProyectoCompra.Controles
         public bool agregarDireccion { get; set; }
         public string groupBox { get => gbxDireccionDefecto.Text; set { gbxDireccionDefecto.Text = value; } }
         private FrmDireccion frmDireccion;
-
         public CtrlDireccion()
         {
             InitializeComponent();
@@ -84,6 +82,38 @@ namespace ProyectoCompra.Controles
                 MessageBox.Show("Los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            //SE ACTUALIZA LA DIRECCION Q ESTA GUARDADA EN BD
+            actualizarDireccion();
+            // SE AGREGA POR PRIMERA VEZ EN LA BD
+            insertarDireccion();
+        }
+
+        private void insertarDireccion()
+        {
+            if (agregarDireccion)
+            {
+                Direccion direccion = new Direccion(txtNomDireccion.Text, txtDireccion.Text, cbxPais.SelectedItem.ToString(), cbxProvincia.SelectedItem.ToString(), ctrlTxtCiudad.Texto, ctrlTxtCP.Texto, ctrlTxtTelefono.Texto);
+                if (direccion != null)
+                {
+                    if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+                    {
+                        FicheroDireccion.escribirFichero(direccion);
+                    }
+                    else
+                    {
+                        if (BDDireccion.actualizarDireccion(direccion, ConfigSesion.obtenerReferenciaIdUsuario()))
+                        {
+                            MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            cargarBotones(false, false, true);
+                            cargarControlesText(true, true, false, false, true, true, true);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void actualizarDireccion()
+        {
             if (direccion != null)
             {
                 direccion.nombre = txtNomDireccion.Text;
@@ -93,45 +123,13 @@ namespace ProyectoCompra.Controles
                 direccion.ciudad = ctrlTxtCiudad.Texto;
                 direccion.codigoPostal = ctrlTxtCP.Texto;
                 direccion.telefono = ctrlTxtTelefono.Texto;
-                if (BDDireccion.actualizarDireccion(direccion, obtenerIdUsuario()))
+                if (BDDireccion.actualizarDireccion(direccion, ConfigSesion.obtenerReferenciaIdUsuario()))
                 {
                     MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarBotones(false, false, true);
                     cargarControlesText(true, true, false, false, true, true, true);
                 }
             }
-            if (agregarDireccion)
-            {
-                Direccion direccion = new Direccion(txtNomDireccion.Text, txtDireccion.Text, cbxPais.SelectedItem.ToString(), cbxProvincia.SelectedItem.ToString(), ctrlTxtCiudad.Texto, ctrlTxtCP.Texto, ctrlTxtTelefono.Texto);
-                if (direccion != null)
-                {
-                    if (BDDireccion.actualizarDireccion(direccion, obtenerIdUsuario()))
-                    {
-                        MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        cargarBotones(false, false, true);
-                        cargarControlesText(true, true, false, false, true, true, true);
-                    }
-                }
-            }
-        }
-
-        private int obtenerIdUsuario()
-        {
-            int idUsuario = 0;
-            try
-            {
-                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                KeyValueConfigurationElement element = config.AppSettings.Settings["idUsuario"];
-                if (element != null)
-                {
-                    idUsuario = Convert.ToInt32(element.Value);
-                }
-            }
-            catch (ConfigurationErrorsException ex)
-            {
-                throw ex;
-            }
-            return idUsuario;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

@@ -1,6 +1,7 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
 using ProyectoCompra.Controles;
+using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,6 +15,7 @@ namespace ProyectoCompra.Formularios
         public List<Direccion> direcciones { get; set; }
         private CtrlDireccion ctrlDireccion;
         public bool isEleccion { get; set; }
+        private int idUsuario;
 
         public FrmDireccion()
         {
@@ -29,6 +31,42 @@ namespace ProyectoCompra.Formularios
         }
 
         private void FrmDireccion_Load(object sender, EventArgs e)
+        {
+            idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idUsuario == 0)
+            {
+                configurarInvitado();
+            }
+            else
+            {
+                configurarUsuario();
+            }
+        }
+
+        private void configurarUsuario()
+        {
+            if (direcciones.Count == 0)
+            {
+                btnAniadirDireccion.Visible = false;
+                ctrlDireccionMostrar.agregarDireccion = true;
+            }
+            if (direcciones.Count == 0)
+            {
+                btnAniadirDireccion.Visible = false;
+                ctrlDireccionMostrar.agregarDireccion = true;
+            }
+            if (direcciones.Count >= 1 && isEleccion)
+            {
+                btnAceptar.Visible = true;
+                this.Size = new Size(668, 361);
+                if (direcciones.Count == 1)
+                {
+                    this.Size = new Size(350, 361);
+                }
+            }
+        }
+
+        private void configurarInvitado()
         {
             if (direcciones.Count == 0)
             {
@@ -53,50 +91,88 @@ namespace ProyectoCompra.Formularios
 
         private void cargarDirecciones()
         {
-            try
+            idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idUsuario == 0)
             {
-                Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                KeyValueConfigurationElement element = configuration.AppSettings.Settings["idUsuario"];
-                if (element != null)
-                {
-                    direcciones = BDDireccion.consusltarDireccion(Convert.ToInt32(element.Value));
-                    if (direcciones.Count != 0)
-                    {
-                        if (direcciones[0] != null)
-                        {
-                            ctrlDireccionMostrar.direccion = direcciones[0];
-                        }
-                        if (direcciones.Count == 2)
-                        {
-                            ctrlDireccion = new CtrlDireccion();
-                            ctrlDireccion.Location = new Point(330, 12);
-                            ctrlDireccion.setBotonBorrarDireccion(true);
-                            ctrlDireccion.groupBox = "Dirección (alternativo)";
-                            ctrlDireccion.direccion = direcciones[1];
-                            this.Controls.Add(ctrlDireccion);
-                            this.Size = new Size(668, 335);
+                obtenerDireccionInvitado();
+            }
+            else
+            {
+                obtenerDireccionInvitado();
+            }
+        }
 
-                            btnCancelar.Visible = false;
-                            btnCancelar.Location = new Point(565, 286);
-                            btnAniadirDireccion.Visible = false;
-                            Button botonEliminar = null;
-                            botonEliminar = (Button)ctrlDireccion.Controls.Find("btnBorrar", true)[0];
-                            if (isEleccion)
-                            {
-                                btnAceptar.Location = new Point(567, 286);
-                                botonEliminar.Visible = false;
-                            }
-                            else
-                            {
-                                botonEliminar.Visible = true;
-                            }
-                        }
+        private void obtenerDireccionUsuario()
+        {
+            direcciones = BDDireccion.consusltarDireccion(idUsuario);
+            if (direcciones.Count != 0)
+            {
+                if (direcciones[0] != null)
+                {
+                    ctrlDireccionMostrar.direccion = direcciones[0];
+                }
+                if (direcciones.Count == 2)
+                {
+                    ctrlDireccion = new CtrlDireccion();
+                    ctrlDireccion.Location = new Point(330, 12);
+                    ctrlDireccion.setBotonBorrarDireccion(true);
+                    ctrlDireccion.groupBox = "Dirección (alternativo)";
+                    ctrlDireccion.direccion = direcciones[1];
+                    this.Controls.Add(ctrlDireccion);
+                    this.Size = new Size(668, 335);
+
+                    btnCancelar.Visible = false;
+                    btnCancelar.Location = new Point(565, 286);
+                    btnAniadirDireccion.Visible = false;
+                    Button botonEliminar = null;
+                    botonEliminar = (Button)ctrlDireccion.Controls.Find("btnBorrar", true)[0];
+                    if (isEleccion)
+                    {
+                        btnAceptar.Location = new Point(567, 286);
+                        botonEliminar.Visible = false;
+                    }
+                    else
+                    {
+                        botonEliminar.Visible = true;
                     }
                 }
             }
-            catch (ConfigurationErrorsException ex)
+        }
+
+        private void obtenerDireccionInvitado()
+        {
+            direcciones = FicheroDireccion.leerFichero();
+            if (direcciones.Count != 0)
             {
-                throw ex;
+                if (direcciones[0] != null)
+                {
+                    ctrlDireccionMostrar.direccion = direcciones[0];
+                }
+                if (direcciones.Count == 2)
+                {
+                    ctrlDireccion = new CtrlDireccion();
+                    ctrlDireccion.Location = new Point(330, 12);
+                    ctrlDireccion.setBotonBorrarDireccion(true);
+                    ctrlDireccion.groupBox = "Dirección (alternativo)";
+                    ctrlDireccion.direccion = direcciones[1];
+                    this.Controls.Add(ctrlDireccion);
+                    this.Size = new Size(668, 335);
+
+                    btnCancelar.Visible = false;
+                    btnCancelar.Location = new Point(565, 286);
+                    btnAniadirDireccion.Visible = false;
+                    Button botonEliminar = null;
+                    botonEliminar = (Button)ctrlDireccion.Controls.Find("btnBorrar", true)[0];
+                    if (isEleccion)
+                    {
+                        btnAceptar.Location = new Point(567, 286);
+                        botonEliminar.Visible = false;
+                    }
+                    else
+                    {
+                        botonEliminar.Visible = true;
+                    }
+                }
             }
         }
 
@@ -136,11 +212,10 @@ namespace ProyectoCompra.Formularios
 
         private void FrmDireccion_Shown(object sender, EventArgs e)
         {
-            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            KeyValueConfigurationElement element = configuration.AppSettings.Settings["idUsuario"];
-            if (element != null)
+            idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idUsuario != 0)
             {
-                direcciones = BDDireccion.consusltarDireccion(Convert.ToInt32(element.Value));
+                direcciones = BDDireccion.consusltarDireccion(idUsuario);
 
             }
         }

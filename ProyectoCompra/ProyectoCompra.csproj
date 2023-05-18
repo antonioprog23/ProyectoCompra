@@ -164,6 +164,7 @@
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
     <Compile Include="Clases\CarritoProvisional.cs" />
     <Compile Include="Ficheros\FicheroCarrito.cs" />
+    <Compile Include="Ficheros\FicheroDireccion.cs" />
     <Compile Include="Formularios\FrmAccesoPago.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -41,5 +41,22 @@ namespace ProyectoCompra.Clases
             this.codigoPostal = codigoPostal;
             this.telefono = telefono;
         }
+
+        public Direccion(string linea)
+        {
+            string[] data = linea.Split(';');
+            this.nombre = data[0];
+            this.direccion = data[1];
+            this.pais = data[2];
+            this.provincia = data[3];
+            this.ciudad = data[4];
+            this.codigoPostal = data[5];
+            this.telefono = data[6];
+        }
+
+        public string toStringWithSeparator()
+        {
+            return $"{this.nombre};{this.direccion};{this.pais};{this.provincia};{this.ciudad};{this.codigoPostal};{this.telefono}";
+        }
     }
 }

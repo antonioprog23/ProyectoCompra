@@ -1,5 +1,7 @@
-﻿using ProyectoCompra.Clases;
+﻿using ProyectoCompra.Base_datos;
+using ProyectoCompra.Clases;
 using ProyectoCompra.Controles;
+using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -11,6 +13,7 @@ namespace ProyectoCompra.Formularios
         private Carrito carritoListo;
         private CarritoProvisional carritoProvisionalListo;
         private RadioButton rbtnCasa;
+        private List<Direccion> direcciones;
 
         public FrmAccesoPago()
         {
@@ -66,11 +69,15 @@ namespace ProyectoCompra.Formularios
             frmDireccion.ShowDialog();
             if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-
+                direcciones = FicheroDireccion.leerFichero();
+                if (direcciones.Count > 0)
+                {
+                    this.btnContinuar.Enabled = true;
+                }
             }
             else
             {
-                List<Direccion> direcciones = frmDireccion.direcciones;
+                direcciones = BDDireccion.consusltarDireccion(ConfigSesion.obtenerReferenciaIdUsuario());
                 if (direcciones.Count > 0)
                 {
                     this.btnContinuar.Enabled = true;
