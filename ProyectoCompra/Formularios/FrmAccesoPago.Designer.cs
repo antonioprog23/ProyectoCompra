@@ -51,9 +51,9 @@
             this.gbxResumen.Controls.Add(this.lblPTotal);
             this.gbxResumen.Controls.Add(this.label1);
             this.gbxResumen.Controls.Add(this.lblTitle);
-            this.gbxResumen.Location = new System.Drawing.Point(526, 12);
+            this.gbxResumen.Location = new System.Drawing.Point(526, 18);
             this.gbxResumen.Name = "gbxResumen";
-            this.gbxResumen.Size = new System.Drawing.Size(275, 288);
+            this.gbxResumen.Size = new System.Drawing.Size(275, 504);
             this.gbxResumen.TabIndex = 2;
             this.gbxResumen.TabStop = false;
             this.gbxResumen.Text = "Resumen del pedido";
@@ -61,7 +61,7 @@
             // btnContinuar
             // 
             this.btnContinuar.Enabled = false;
-            this.btnContinuar.Location = new System.Drawing.Point(10, 259);
+            this.btnContinuar.Location = new System.Drawing.Point(10, 475);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(259, 23);
             this.btnContinuar.TabIndex = 9;
@@ -146,17 +146,18 @@
             this.ctrlEnvio1.carritoProvisionalListo = null;
             this.ctrlEnvio1.formModificar = null;
             this.ctrlEnvio1.groupBoxModificar = null;
-            this.ctrlEnvio1.Location = new System.Drawing.Point(12, 8);
+            this.ctrlEnvio1.Location = new System.Drawing.Point(12, 12);
             this.ctrlEnvio1.Name = "ctrlEnvio1";
-            this.ctrlEnvio1.Size = new System.Drawing.Size(509, 295);
+            this.ctrlEnvio1.Size = new System.Drawing.Size(509, 513);
             this.ctrlEnvio1.TabIndex = 3;
+            this.ctrlEnvio1.Load += new System.EventHandler(this.ctrlEnvio1_Load);
             // 
             // FrmAccesoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 318);
+            this.ClientSize = new System.Drawing.Size(813, 534);
             this.Controls.Add(this.ctrlEnvio1);
             this.Controls.Add(this.gbxResumen);
             this.Font = new System.Drawing.Font("Arial Nova Cond", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

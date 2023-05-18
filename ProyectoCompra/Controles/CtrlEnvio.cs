@@ -42,7 +42,6 @@ namespace ProyectoCompra.Controles
 
         private void CtrlEnvio_Load(object sender, EventArgs e)
         {
-            configuracionInicial();
             cargarProductosCarrito();
             cargarProductosCarritoProvisional();
         }
@@ -113,24 +112,8 @@ namespace ProyectoCompra.Controles
             }
         }
 
-        private void configuracionInicial()
-        {
-            this.Size = new System.Drawing.Size(509, 295);
-            this.gbxOpcion.Size = new System.Drawing.Size(503, 289);
-            this.panelDetalles.Size = new System.Drawing.Size(477, 58);
-            this.flProductos.Size = new System.Drawing.Size(471, 10);
-        }
-
         private void btnDetalles_Click(object sender, EventArgs e)
         {
-            this.formModificar.Size = new System.Drawing.Size(829, 543);
-            this.groupBoxModificar.Size = new System.Drawing.Size(275, 472);
-            this.botonModificar.Location = new System.Drawing.Point(10, 443);
-
-            this.Size = new System.Drawing.Size(509, 478);
-            this.gbxOpcion.Size = new System.Drawing.Size(503, 472);
-            this.panelDetalles.Size = new System.Drawing.Size(477, 229);
-            this.flProductos.Size = new System.Drawing.Size(471, 187);
             this.flProductos.Visible = true;
             this.btnDetalles.Visible = false;
             this.btnOcultarDetalles.Visible = true;
@@ -138,10 +121,6 @@ namespace ProyectoCompra.Controles
 
         private void btnOcultarDetalles_Click(object sender, EventArgs e)
         {
-            configuracionInicial();
-            this.formModificar.Size = new System.Drawing.Size(829, 357);
-            this.groupBoxModificar.Size = new System.Drawing.Size(275, 288);
-            this.botonModificar.Location = new System.Drawing.Point(10, 259);
             this.btnDetalles.Visible = true;
             this.btnOcultarDetalles.Visible = false;
             this.flProductos.Visible = false;

@@ -84,5 +84,10 @@ namespace ProyectoCompra.Formularios
                 }
             }
         }
+
+        private void ctrlEnvio1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
