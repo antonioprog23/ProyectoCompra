@@ -33,13 +33,26 @@ namespace ProyectoCompra.Formularios
 
         private void FrmAccesoPago_Load(object sender, EventArgs e)
         {
-            this.rbtnCasa = ctrlEnvio1.Controls.Find("rbtnCasa", true)[0] as RadioButton;
-            rbtnCasa.Click += rbtnCasa_Click;
-            this.ctrlEnvio1.formModificar = this;
-            this.ctrlEnvio1.groupBoxModificar = gbxResumen;
-            this.ctrlEnvio1.botonModificar = btnContinuar;
-            lblPTotal.Text = carritoListo.total.ToString();
-            lblTotal.Text = (decimal.Parse(lblPTotal.Text) + (decimal.Parse(lblGastosEnvio.Text))).ToString();
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+            {
+                this.rbtnCasa = ctrlEnvio1.Controls.Find("rbtnCasa", true)[0] as RadioButton;
+                rbtnCasa.Click += rbtnCasa_Click;
+                this.ctrlEnvio1.formModificar = this;
+                this.ctrlEnvio1.groupBoxModificar = gbxResumen;
+                this.ctrlEnvio1.botonModificar = btnContinuar;
+                lblPTotal.Text = carritoProvisionalListo.total.ToString();
+                lblTotal.Text = (decimal.Parse(lblPTotal.Text) + (decimal.Parse(lblGastosEnvio.Text))).ToString();
+            }
+            else
+            {
+                this.rbtnCasa = ctrlEnvio1.Controls.Find("rbtnCasa", true)[0] as RadioButton;
+                rbtnCasa.Click += rbtnCasa_Click;
+                this.ctrlEnvio1.formModificar = this;
+                this.ctrlEnvio1.groupBoxModificar = gbxResumen;
+                this.ctrlEnvio1.botonModificar = btnContinuar;
+                lblPTotal.Text = carritoListo.total.ToString();
+                lblTotal.Text = (decimal.Parse(lblPTotal.Text) + (decimal.Parse(lblGastosEnvio.Text))).ToString();
+            }
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)

@@ -9,6 +9,9 @@ namespace ProyectoCompra.Clases
         public int cantidad { get; set; }
         public string rutaImagen { get; set; }
         public Producto producto { get; set; }
+        public decimal total { get; set; }
+        public string iva { get; set; }
+        public List<CarritoProvisional> lista;
 
         public CarritoProvisional(Producto producto, int cantidad, string rutaImagen)
         {
@@ -19,6 +22,14 @@ namespace ProyectoCompra.Clases
 
         public CarritoProvisional()
         {
+        }
+
+        public CarritoProvisional(int cantidad, List<CarritoProvisional> lista, string iva, decimal total)
+        {
+            this.cantidad = cantidad;
+            this.lista = lista;
+            this.iva = iva;
+            this.total = total;
         }
 
         public CarritoProvisional(string linea)

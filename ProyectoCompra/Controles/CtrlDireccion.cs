@@ -107,6 +107,7 @@ namespace ProyectoCompra.Controles
                 {
                     if (BDDireccion.actualizarDireccion(direccion, obtenerIdUsuario()))
                     {
+                        MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cargarBotones(false, false, true);
                         cargarControlesText(true, true, false, false, true, true, true);
                     }

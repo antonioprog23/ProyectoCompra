@@ -44,7 +44,7 @@ namespace ProyectoCompra.Controles
         {
             configuracionInicial();
             cargarProductosCarrito();
-            //cargarProductosCarritoProvisional();
+            cargarProductosCarritoProvisional();
         }
 
         private void cargarProductosCarrito()
@@ -86,25 +86,25 @@ namespace ProyectoCompra.Controles
         {
             if (carritoProvisionalListo != null)
             {
-                tlProductos.RowCount = carritoListo.lista.Count;
+                tlProductos.RowCount = carritoProvisionalListo.lista.Count;
                 for (int i = 0; i < tlProductos.RowCount; i++)
                 {
                     CtrlProductoCarrito producto = new CtrlProductoCarrito();
                     Label id = (Label)producto.Controls.Find("lblIdMostrar", true)[0];
-                    id.Text = carritoListo.lista[i].producto.id_producto.ToString();
+                    id.Text = carritoProvisionalListo.lista[i].producto.id_producto.ToString();
 
                     Label nombre = (Label)producto.Controls.Find("lblNombreMostrar", true)[0];
-                    nombre.Text = carritoListo.lista[i].producto.nombre;
+                    nombre.Text = carritoProvisionalListo.lista[i].producto.nombre;
 
                     Label precio = (Label)producto.Controls.Find("lblPrecioMostrar", true)[0];
-                    precio.Text = carritoListo.lista[i].producto.precio.ToString();
+                    precio.Text = carritoProvisionalListo.lista[i].producto.precio.ToString();
 
                     NumericUpDown cantidad = (NumericUpDown)producto.Controls.Find("cantidad", true)[0];
-                    cantidad.Text = carritoListo.lista[i].cantidad.ToString();
+                    cantidad.Text = carritoProvisionalListo.lista[i].cantidad.ToString();
                     cantidad.Enabled = false;
 
                     Label imagen = (Label)producto.Controls.Find("lblImage", true)[0];
-                    imagen.Image = Imagen.obtenerImagenDB(carritoListo.lista[i].rutaImagen);
+                    imagen.Image = Imagen.obtenerImagenDB(carritoProvisionalListo.lista[i].rutaImagen);
 
                     producto.botonBorrar.Visible = false;
 

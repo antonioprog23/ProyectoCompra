@@ -12,10 +12,14 @@ namespace ProyectoCompra.Formularios
     {
         private List<Carrito> productos;
         private List<CarritoProvisional> productosProvisionales;
+
         private int idUsuario;
+
         private Carrito carrito;
         private Carrito carritoListo;
+
         private CarritoProvisional carritoProvisional;
+        private CarritoProvisional carritoProvisionalListo;
 
         public FrmCarrito()
         {
@@ -38,7 +42,7 @@ namespace ProyectoCompra.Formularios
             int idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
             if (idUsuario == 0)
             {
-                FrmModoCompra frmModoCompra = new FrmModoCompra();
+                FrmModoCompra frmModoCompra = new FrmModoCompra(carritoProvisionalListo);
                 frmModoCompra.ShowDialog();
             }
             else
@@ -88,6 +92,11 @@ namespace ProyectoCompra.Formularios
             if (idUsuario == 0)
             {
                 cargarCarritoProvisional();
+                //SUBTOTAL
+                lblSubTotal.Text = calcularSubTotal().ToString("N2");
+                //TOTAL
+                lblTotal.Text = (Convert.ToDecimal(lblSubTotal.Text) * ((Convert.ToDecimal(lblIVA.Text) / 100) + 1)).ToString("N2");
+                carritoProvisionalListo = new CarritoProvisional(Convert.ToInt32(lblContador.Text), productosProvisionales, lblIVA.Text, Decimal.Parse(lblTotal.Text));
             }
             else
             {
