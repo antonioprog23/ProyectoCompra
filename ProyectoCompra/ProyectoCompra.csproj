@@ -768,6 +768,7 @@
     <None Include="Resources\icon_credit_card.png" />
     <None Include="Resources\icon_compra_realizada.png" />
     <None Include="Resources\icon_casa.png" />
+    <None Include="Resources\icon_efectivo.png" />
     <Content Include="Resources\icon_otras_opciones.png" />
     <None Include="Resources\icon_tienda2.png" />
     <Content Include="Resources\icon_tipo_tarjeta.png" />

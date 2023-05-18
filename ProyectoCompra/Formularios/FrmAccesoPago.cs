@@ -12,8 +12,6 @@ namespace ProyectoCompra.Formularios
     {
         private Carrito carritoListo;
         private CarritoProvisional carritoProvisionalListo;
-        private RadioButton rbtnCasa;
-        private List<Direccion> direcciones;
 
         public FrmAccesoPago()
         {
@@ -38,21 +36,11 @@ namespace ProyectoCompra.Formularios
         {
             if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-                this.rbtnCasa = ctrlEnvio1.Controls.Find("rbtnCasa", true)[0] as RadioButton;
-                rbtnCasa.Click += rbtnCasa_Click;
-                this.ctrlEnvio1.formModificar = this;
-                this.ctrlEnvio1.groupBoxModificar = gbxResumen;
-                this.ctrlEnvio1.botonModificar = btnContinuar;
                 lblPTotal.Text = carritoProvisionalListo.total.ToString();
                 lblTotal.Text = (decimal.Parse(lblPTotal.Text) + (decimal.Parse(lblGastosEnvio.Text))).ToString();
             }
             else
             {
-                this.rbtnCasa = ctrlEnvio1.Controls.Find("rbtnCasa", true)[0] as RadioButton;
-                rbtnCasa.Click += rbtnCasa_Click;
-                this.ctrlEnvio1.formModificar = this;
-                this.ctrlEnvio1.groupBoxModificar = gbxResumen;
-                this.ctrlEnvio1.botonModificar = btnContinuar;
                 lblPTotal.Text = carritoListo.total.ToString();
                 lblTotal.Text = (decimal.Parse(lblPTotal.Text) + (decimal.Parse(lblGastosEnvio.Text))).ToString();
             }
@@ -63,31 +51,5 @@ namespace ProyectoCompra.Formularios
 
         }
 
-        private void rbtnCasa_Click(object sender, EventArgs e)
-        {
-            FrmDireccion frmDireccion = new FrmDireccion(true);
-            frmDireccion.ShowDialog();
-            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
-            {
-                direcciones = FicheroDireccion.leerFichero();
-                if (direcciones.Count > 0)
-                {
-                    this.btnContinuar.Enabled = true;
-                }
-            }
-            else
-            {
-                direcciones = BDDireccion.consusltarDireccion(ConfigSesion.obtenerReferenciaIdUsuario());
-                if (direcciones.Count > 0)
-                {
-                    this.btnContinuar.Enabled = true;
-                }
-            }
-        }
-
-        private void ctrlEnvio1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

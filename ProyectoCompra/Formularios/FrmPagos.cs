@@ -6,9 +6,17 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmPagos : Form
     {
+        private bool isTarjeta;
+
         public FrmPagos()
         {
             InitializeComponent();
+        }
+
+        public FrmPagos(bool isTarjeta)
+        {
+            InitializeComponent();
+            this.isTarjeta = isTarjeta;
         }
 
         private void rbnTarjeta_CheckedChanged(object sender, EventArgs e)
@@ -32,6 +40,16 @@ namespace ProyectoCompra.Formularios
         {
             this.Height = 238;
             this.Width = 375;
+
+            //AL MOMENTO DE REALIZAR EL PAGO, AL SER EN TARJETA, SE PONEN ESTAS MODIFICACIONES
+            if (isTarjeta)
+            {
+                gbxFormaPago.Visible = false;
+                ctrlTarjeta1.Visible = true;
+                this.ctrlTarjeta1.Location = new Point(12, 12);
+                this.Height = 273;
+                this.Width = 375;
+            }
         }
     }
 }

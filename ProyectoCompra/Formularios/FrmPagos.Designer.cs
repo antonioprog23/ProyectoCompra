@@ -74,9 +74,10 @@
             // ctrlTarjeta1
             // 
             this.ctrlTarjeta1.AutoSize = true;
+            this.ctrlTarjeta1.BackColor = System.Drawing.Color.White;
             this.ctrlTarjeta1.Location = new System.Drawing.Point(12, 189);
             this.ctrlTarjeta1.Name = "ctrlTarjeta1";
-            this.ctrlTarjeta1.Size = new System.Drawing.Size(341, 200);
+            this.ctrlTarjeta1.Size = new System.Drawing.Size(341, 210);
             this.ctrlTarjeta1.TabIndex = 2;
             this.ctrlTarjeta1.Visible = false;
             // 

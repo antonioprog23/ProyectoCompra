@@ -141,16 +141,12 @@
             // ctrlEnvio1
             // 
             this.ctrlEnvio1.AutoSize = true;
-            this.ctrlEnvio1.botonModificar = null;
             this.ctrlEnvio1.carritoListo = null;
             this.ctrlEnvio1.carritoProvisionalListo = null;
-            this.ctrlEnvio1.formModificar = null;
-            this.ctrlEnvio1.groupBoxModificar = null;
             this.ctrlEnvio1.Location = new System.Drawing.Point(12, 12);
             this.ctrlEnvio1.Name = "ctrlEnvio1";
             this.ctrlEnvio1.Size = new System.Drawing.Size(509, 513);
             this.ctrlEnvio1.TabIndex = 3;
-            this.ctrlEnvio1.Load += new System.EventHandler(this.ctrlEnvio1_Load);
             // 
             // FrmAccesoPago
             // 

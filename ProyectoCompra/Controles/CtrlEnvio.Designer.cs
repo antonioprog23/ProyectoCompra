@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rbbtnTienda = new System.Windows.Forms.RadioButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gbxRecoger = new System.Windows.Forms.GroupBox();
             this.panelDetalles = new System.Windows.Forms.Panel();
@@ -40,18 +39,23 @@
             this.tcAccesoPago = new System.Windows.Forms.TabControl();
             this.tpDetalle = new System.Windows.Forms.TabPage();
             this.tpDireccion = new System.Windows.Forms.TabPage();
-            this.tpPago = new System.Windows.Forms.TabPage();
-            this.rbtnCasa = new System.Windows.Forms.RadioButton();
-            this.lblEnvio = new System.Windows.Forms.Label();
             this.gbxDomicilio = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTelefono2 = new System.Windows.Forms.Label();
+            this.lblLocalidad2 = new System.Windows.Forms.Label();
+            this.lblDireccion2 = new System.Windows.Forms.Label();
+            this.lblNombre2 = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblLocalidad = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.lblEnvio = new System.Windows.Forms.Label();
+            this.tpPago = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbtnCasa = new System.Windows.Forms.RadioButton();
+            this.rbbtnTienda = new System.Windows.Forms.RadioButton();
+            this.rbnTarjeta = new System.Windows.Forms.RadioButton();
+            this.rbnEfectivo = new System.Windows.Forms.RadioButton();
             this.gbxRecoger.SuspendLayout();
             this.panelDetalles.SuspendLayout();
             this.flProductos.SuspendLayout();
@@ -59,21 +63,10 @@
             this.tpDetalle.SuspendLayout();
             this.tpDireccion.SuspendLayout();
             this.gbxDomicilio.SuspendLayout();
+            this.tpPago.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rbbtnTienda
-            // 
-            this.rbbtnTienda.Enabled = false;
-            this.rbbtnTienda.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbbtnTienda.Image = global::ProyectoCompra.Properties.Resources.icon_tienda2;
-            this.rbbtnTienda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rbbtnTienda.Location = new System.Drawing.Point(6, 9);
-            this.rbbtnTienda.Name = "rbbtnTienda";
-            this.rbbtnTienda.Size = new System.Drawing.Size(421, 42);
-            this.rbbtnTienda.TabIndex = 2;
-            this.rbbtnTienda.Text = "Recoger en tienda\r\nLlegará a tu tienda en 24/48h hábiles\r\n";
-            this.rbbtnTienda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbbtnTienda.UseVisualStyleBackColor = true;
             // 
             // lblTitulo
             // 
@@ -102,7 +95,7 @@
             this.panelDetalles.Controls.Add(this.btnOcultarDetalles);
             this.panelDetalles.Location = new System.Drawing.Point(0, 0);
             this.panelDetalles.Name = "panelDetalles";
-            this.panelDetalles.Size = new System.Drawing.Size(477, 437);
+            this.panelDetalles.Size = new System.Drawing.Size(488, 437);
             this.panelDetalles.TabIndex = 7;
             // 
             // flProductos
@@ -111,7 +104,7 @@
             this.flProductos.Controls.Add(this.tlProductos);
             this.flProductos.Location = new System.Drawing.Point(3, 42);
             this.flProductos.Name = "flProductos";
-            this.flProductos.Size = new System.Drawing.Size(471, 392);
+            this.flProductos.Size = new System.Drawing.Size(482, 392);
             this.flProductos.TabIndex = 6;
             this.flProductos.Visible = false;
             // 
@@ -195,48 +188,15 @@
             this.tpDireccion.Text = "Dirección";
             this.tpDireccion.UseVisualStyleBackColor = true;
             // 
-            // tpPago
-            // 
-            this.tpPago.Location = new System.Drawing.Point(4, 22);
-            this.tpPago.Name = "tpPago";
-            this.tpPago.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPago.Size = new System.Drawing.Size(488, 440);
-            this.tpPago.TabIndex = 2;
-            this.tpPago.Text = "Pago";
-            this.tpPago.UseVisualStyleBackColor = true;
-            // 
-            // rbtnCasa
-            // 
-            this.rbtnCasa.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCasa.Image = global::ProyectoCompra.Properties.Resources.icon_casa;
-            this.rbtnCasa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rbtnCasa.Location = new System.Drawing.Point(6, 13);
-            this.rbtnCasa.Name = "rbtnCasa";
-            this.rbtnCasa.Size = new System.Drawing.Size(354, 38);
-            this.rbtnCasa.TabIndex = 1;
-            this.rbtnCasa.Text = "Envío a domicilio\r\nEntrega en 24/48h hábiles\r\n\r\n";
-            this.rbtnCasa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnCasa.UseVisualStyleBackColor = true;
-            // 
-            // lblEnvio
-            // 
-            this.lblEnvio.AutoSize = true;
-            this.lblEnvio.Font = new System.Drawing.Font("Arial Nova", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnvio.Location = new System.Drawing.Point(363, 21);
-            this.lblEnvio.Name = "lblEnvio";
-            this.lblEnvio.Size = new System.Drawing.Size(64, 23);
-            this.lblEnvio.TabIndex = 2;
-            this.lblEnvio.Text = "3.99 €";
-            // 
             // gbxDomicilio
             // 
-            this.gbxDomicilio.Controls.Add(this.label1);
-            this.gbxDomicilio.Controls.Add(this.label3);
-            this.gbxDomicilio.Controls.Add(this.label4);
-            this.gbxDomicilio.Controls.Add(this.label5);
+            this.gbxDomicilio.Controls.Add(this.lblTelefono2);
+            this.gbxDomicilio.Controls.Add(this.lblLocalidad2);
+            this.gbxDomicilio.Controls.Add(this.lblDireccion2);
+            this.gbxDomicilio.Controls.Add(this.lblNombre2);
             this.gbxDomicilio.Controls.Add(this.lblTelefono);
             this.gbxDomicilio.Controls.Add(this.lblLocalidad);
-            this.gbxDomicilio.Controls.Add(this.label2);
+            this.gbxDomicilio.Controls.Add(this.lblDireccion);
             this.gbxDomicilio.Controls.Add(this.lblNombre);
             this.gbxDomicilio.Controls.Add(this.lblEnvio);
             this.gbxDomicilio.Controls.Add(this.rbtnCasa);
@@ -246,41 +206,45 @@
             this.gbxDomicilio.TabIndex = 3;
             this.gbxDomicilio.TabStop = false;
             // 
-            // label1
+            // lblTelefono2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(251, 148);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Teléfono";
+            this.lblTelefono2.AutoSize = true;
+            this.lblTelefono2.Location = new System.Drawing.Point(251, 148);
+            this.lblTelefono2.Name = "lblTelefono2";
+            this.lblTelefono2.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono2.TabIndex = 15;
+            this.lblTelefono2.Text = "Teléfono";
+            this.lblTelefono2.Visible = false;
             // 
-            // label3
+            // lblLocalidad2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(251, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Localidad";
+            this.lblLocalidad2.AutoSize = true;
+            this.lblLocalidad2.Location = new System.Drawing.Point(251, 126);
+            this.lblLocalidad2.Name = "lblLocalidad2";
+            this.lblLocalidad2.Size = new System.Drawing.Size(53, 13);
+            this.lblLocalidad2.TabIndex = 14;
+            this.lblLocalidad2.Text = "Localidad";
+            this.lblLocalidad2.Visible = false;
             // 
-            // label4
+            // lblDireccion2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(251, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Direccion completa";
+            this.lblDireccion2.AutoSize = true;
+            this.lblDireccion2.Location = new System.Drawing.Point(251, 103);
+            this.lblDireccion2.Name = "lblDireccion2";
+            this.lblDireccion2.Size = new System.Drawing.Size(98, 13);
+            this.lblDireccion2.TabIndex = 13;
+            this.lblDireccion2.Text = "Direccion completa";
+            this.lblDireccion2.Visible = false;
             // 
-            // label5
+            // lblNombre2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(251, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Nombre completo";
+            this.lblNombre2.AutoSize = true;
+            this.lblNombre2.Location = new System.Drawing.Point(251, 80);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(90, 13);
+            this.lblNombre2.TabIndex = 12;
+            this.lblNombre2.Text = "Nombre completo";
+            this.lblNombre2.Visible = false;
             // 
             // lblTelefono
             // 
@@ -300,14 +264,14 @@
             this.lblLocalidad.TabIndex = 10;
             this.lblLocalidad.Text = "Localidad";
             // 
-            // label2
+            // lblDireccion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Direccion completa";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(16, 103);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(98, 13);
+            this.lblDireccion.TabIndex = 9;
+            this.lblDireccion.Text = "Direccion completa";
             // 
             // lblNombre
             // 
@@ -317,6 +281,99 @@
             this.lblNombre.Size = new System.Drawing.Size(90, 13);
             this.lblNombre.TabIndex = 8;
             this.lblNombre.Text = "Nombre completo";
+            // 
+            // lblEnvio
+            // 
+            this.lblEnvio.AutoSize = true;
+            this.lblEnvio.Font = new System.Drawing.Font("Arial Nova", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnvio.Location = new System.Drawing.Point(363, 21);
+            this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.Size = new System.Drawing.Size(64, 23);
+            this.lblEnvio.TabIndex = 2;
+            this.lblEnvio.Text = "3.99 €";
+            // 
+            // tpPago
+            // 
+            this.tpPago.Controls.Add(this.groupBox2);
+            this.tpPago.Controls.Add(this.groupBox1);
+            this.tpPago.Location = new System.Drawing.Point(4, 22);
+            this.tpPago.Name = "tpPago";
+            this.tpPago.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPago.Size = new System.Drawing.Size(488, 440);
+            this.tpPago.TabIndex = 2;
+            this.tpPago.Text = "Pago";
+            this.tpPago.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbnEfectivo);
+            this.groupBox1.Location = new System.Drawing.Point(28, 51);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(433, 57);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbnTarjeta);
+            this.groupBox2.Location = new System.Drawing.Point(28, 114);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(433, 57);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            // 
+            // rbtnCasa
+            // 
+            this.rbtnCasa.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnCasa.Image = global::ProyectoCompra.Properties.Resources.icon_casa;
+            this.rbtnCasa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rbtnCasa.Location = new System.Drawing.Point(6, 9);
+            this.rbtnCasa.Name = "rbtnCasa";
+            this.rbtnCasa.Size = new System.Drawing.Size(351, 42);
+            this.rbtnCasa.TabIndex = 1;
+            this.rbtnCasa.Text = "Envío a domicilio\r\nEntrega en 24/48h hábiles\r\n\r\n";
+            this.rbtnCasa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnCasa.UseVisualStyleBackColor = true;
+            this.rbtnCasa.Click += new System.EventHandler(this.rbtnCasa_Click);
+            // 
+            // rbbtnTienda
+            // 
+            this.rbbtnTienda.Enabled = false;
+            this.rbbtnTienda.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbbtnTienda.Image = global::ProyectoCompra.Properties.Resources.icon_tienda2;
+            this.rbbtnTienda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rbbtnTienda.Location = new System.Drawing.Point(6, 9);
+            this.rbbtnTienda.Name = "rbbtnTienda";
+            this.rbbtnTienda.Size = new System.Drawing.Size(421, 42);
+            this.rbbtnTienda.TabIndex = 2;
+            this.rbbtnTienda.Text = "Recoger en tienda\r\nLlegará a tu tienda en 24/48h hábiles\r\n";
+            this.rbbtnTienda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbbtnTienda.UseVisualStyleBackColor = true;
+            // 
+            // rbnTarjeta
+            // 
+            this.rbnTarjeta.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnTarjeta.Image = global::ProyectoCompra.Properties.Resources.icon_tipo_tarjeta;
+            this.rbnTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rbnTarjeta.Location = new System.Drawing.Point(6, 8);
+            this.rbnTarjeta.Name = "rbnTarjeta";
+            this.rbnTarjeta.Size = new System.Drawing.Size(421, 42);
+            this.rbnTarjeta.TabIndex = 1;
+            this.rbnTarjeta.Text = "Tarjeta bancaria";
+            this.rbnTarjeta.UseVisualStyleBackColor = true;
+            this.rbnTarjeta.Click += new System.EventHandler(this.rbnTarjeta_Click);
+            // 
+            // rbnEfectivo
+            // 
+            this.rbnEfectivo.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnEfectivo.Image = global::ProyectoCompra.Properties.Resources.icon_efectivo;
+            this.rbnEfectivo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rbnEfectivo.Location = new System.Drawing.Point(6, 9);
+            this.rbnEfectivo.Name = "rbnEfectivo";
+            this.rbnEfectivo.Size = new System.Drawing.Size(421, 42);
+            this.rbnEfectivo.TabIndex = 2;
+            this.rbnEfectivo.Text = "Efectivo";
+            this.rbnEfectivo.UseVisualStyleBackColor = true;
             // 
             // CtrlEnvio
             // 
@@ -338,6 +395,9 @@
             this.tpDireccion.PerformLayout();
             this.gbxDomicilio.ResumeLayout(false);
             this.gbxDomicilio.PerformLayout();
+            this.tpPago.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -356,16 +416,20 @@
         private System.Windows.Forms.TabPage tpDetalle;
         private System.Windows.Forms.TabPage tpDireccion;
         private System.Windows.Forms.TabPage tpPago;
-        private System.Windows.Forms.GroupBox gbxDomicilio;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTelefono2;
+        private System.Windows.Forms.Label lblLocalidad2;
+        private System.Windows.Forms.Label lblDireccion2;
+        private System.Windows.Forms.Label lblNombre2;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblLocalidad;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblEnvio;
         private System.Windows.Forms.RadioButton rbtnCasa;
+        public System.Windows.Forms.GroupBox gbxDomicilio;
+        public System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbnTarjeta;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbnEfectivo;
     }
 }

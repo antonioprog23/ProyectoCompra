@@ -1,4 +1,6 @@
-﻿using ProyectoCompra.Clases;
+﻿using ProyectoCompra.Base_datos;
+using ProyectoCompra.Clases;
+using ProyectoCompra.Ficheros;
 using ProyectoCompra.Formularios;
 using System;
 using System.Collections.Generic;
@@ -10,21 +12,12 @@ namespace ProyectoCompra.Controles
     {
         public Carrito carritoListo { get; set; }
         public CarritoProvisional carritoProvisionalListo { get; set; }
-        public Form formModificar { get; set; }
-        public GroupBox groupBoxModificar { get; set; }
-        public Button botonModificar { get; set; }
+
+        private List<Direccion> direcciones;
 
         public CtrlEnvio()
         {
             InitializeComponent();
-        }
-
-        public CtrlEnvio(Form formModificar, GroupBox groupBoxModificar, Button botonModificar)
-        {
-            InitializeComponent();
-            this.formModificar = formModificar;
-            this.groupBoxModificar = groupBoxModificar;
-            this.botonModificar = botonModificar;
         }
 
         public CtrlEnvio(Carrito carritoListo)
@@ -42,6 +35,7 @@ namespace ProyectoCompra.Controles
 
         private void CtrlEnvio_Load(object sender, EventArgs e)
         {
+            this.gbxDomicilio.Size = new System.Drawing.Size(433, 57);
             cargarProductosCarrito();
             cargarProductosCarritoProvisional();
         }
@@ -109,6 +103,7 @@ namespace ProyectoCompra.Controles
 
                     tlProductos.Controls.Add(producto);
                 }
+                this.lblResumenProductos.Text = string.Format("{0} ({1})", lblResumenProductos.Text, carritoProvisionalListo.lista.Count);
             }
         }
 
@@ -126,5 +121,51 @@ namespace ProyectoCompra.Controles
             this.flProductos.Visible = false;
         }
 
+        private void rbtnCasa_Click(object sender, EventArgs e)
+        {
+            FrmDireccion frmDireccion = new FrmDireccion(true);
+            frmDireccion.ShowDialog();
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+            {
+                direcciones = FicheroDireccion.leerFichero();
+                if (direcciones.Count > 0)
+                {
+                    gbxDomicilio.Size = new System.Drawing.Size(433, 303);
+                    if (direcciones.Count == 1)
+                    {
+                        lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                        lblDireccion.Text = direcciones[0].direccion;
+                        lblLocalidad.Text = direcciones[0].codigoPostal;
+                        lblTelefono.Text = direcciones[0].telefono;
+                    }
+                    if (direcciones.Count == 2)
+                    {
+                        lblNombre2.Text = "Anthony Mauricio Ibarra Valencia";
+                        lblDireccion2.Text = direcciones[1].direccion;
+                        lblLocalidad2.Text = direcciones[1].codigoPostal;
+                        lblTelefono2.Text = direcciones[1].telefono;
+
+                        lblNombre2.Visible = true;
+                        lblDireccion2.Visible = true;
+                        lblLocalidad2.Visible = true;
+                        lblTelefono2.Visible = true;
+                    }
+                }
+            }
+            else
+            {
+                direcciones = BDDireccion.consusltarDireccion(ConfigSesion.obtenerReferenciaIdUsuario());
+                if (direcciones.Count > 0)
+                {
+                    gbxDomicilio.Size = new System.Drawing.Size(433, 303);
+                }
+            }
+        }
+
+        private void rbnTarjeta_Click(object sender, EventArgs e)
+        {
+            FrmPagos frmPagos = new FrmPagos(true);
+            frmPagos.ShowDialog();
+        }
     }
 }
