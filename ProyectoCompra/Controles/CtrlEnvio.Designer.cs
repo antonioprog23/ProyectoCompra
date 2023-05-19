@@ -30,6 +30,7 @@
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gbxRecoger = new System.Windows.Forms.GroupBox();
+            this.rbbtnTienda = new System.Windows.Forms.RadioButton();
             this.panelDetalles = new System.Windows.Forms.Panel();
             this.flProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.tlProductos = new System.Windows.Forms.TableLayoutPanel();
@@ -49,13 +50,29 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblEnvio = new System.Windows.Forms.Label();
-            this.tpPago = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbtnCasa = new System.Windows.Forms.RadioButton();
-            this.rbbtnTienda = new System.Windows.Forms.RadioButton();
+            this.tpPago = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.gbxTarjeta = new System.Windows.Forms.GroupBox();
+            this.lblMesVen = new System.Windows.Forms.Label();
+            this.lblAnioVen = new System.Windows.Forms.Label();
+            this.lblCVV = new System.Windows.Forms.Label();
+            this.lblNTarjeta = new System.Windows.Forms.Label();
+            this.lblTitular = new System.Windows.Forms.Label();
             this.rbnTarjeta = new System.Windows.Forms.RadioButton();
+            this.gbxEfectivo = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.rbnEfectivo = new System.Windows.Forms.RadioButton();
+            this.ctrlCVV = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlAnioVen = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtMesVen = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtTitular = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtNTarjeta = new ProyectoCompra.Controles.CtrlTextoBox();
             this.gbxRecoger.SuspendLayout();
             this.panelDetalles.SuspendLayout();
             this.flProductos.SuspendLayout();
@@ -64,8 +81,8 @@
             this.tpDireccion.SuspendLayout();
             this.gbxDomicilio.SuspendLayout();
             this.tpPago.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbxTarjeta.SuspendLayout();
+            this.gbxEfectivo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -86,6 +103,20 @@
             this.gbxRecoger.Size = new System.Drawing.Size(433, 57);
             this.gbxRecoger.TabIndex = 4;
             this.gbxRecoger.TabStop = false;
+            // 
+            // rbbtnTienda
+            // 
+            this.rbbtnTienda.Enabled = false;
+            this.rbbtnTienda.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbbtnTienda.Image = global::ProyectoCompra.Properties.Resources.icon_tienda2;
+            this.rbbtnTienda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rbbtnTienda.Location = new System.Drawing.Point(6, 9);
+            this.rbbtnTienda.Name = "rbbtnTienda";
+            this.rbbtnTienda.Size = new System.Drawing.Size(421, 42);
+            this.rbbtnTienda.TabIndex = 2;
+            this.rbbtnTienda.Text = "Recoger en tienda\r\nLlegará a tu tienda en 24/48h hábiles\r\n";
+            this.rbbtnTienda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbbtnTienda.UseVisualStyleBackColor = true;
             // 
             // panelDetalles
             // 
@@ -202,7 +233,7 @@
             this.gbxDomicilio.Controls.Add(this.rbtnCasa);
             this.gbxDomicilio.Location = new System.Drawing.Point(28, 114);
             this.gbxDomicilio.Name = "gbxDomicilio";
-            this.gbxDomicilio.Size = new System.Drawing.Size(433, 303);
+            this.gbxDomicilio.Size = new System.Drawing.Size(433, 184);
             this.gbxDomicilio.TabIndex = 3;
             this.gbxDomicilio.TabStop = false;
             // 
@@ -254,6 +285,7 @@
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 11;
             this.lblTelefono.Text = "Teléfono";
+            this.lblTelefono.Visible = false;
             // 
             // lblLocalidad
             // 
@@ -263,6 +295,7 @@
             this.lblLocalidad.Size = new System.Drawing.Size(53, 13);
             this.lblLocalidad.TabIndex = 10;
             this.lblLocalidad.Text = "Localidad";
+            this.lblLocalidad.Visible = false;
             // 
             // lblDireccion
             // 
@@ -272,6 +305,7 @@
             this.lblDireccion.Size = new System.Drawing.Size(98, 13);
             this.lblDireccion.TabIndex = 9;
             this.lblDireccion.Text = "Direccion completa";
+            this.lblDireccion.Visible = false;
             // 
             // lblNombre
             // 
@@ -281,6 +315,7 @@
             this.lblNombre.Size = new System.Drawing.Size(90, 13);
             this.lblNombre.TabIndex = 8;
             this.lblNombre.Text = "Nombre completo";
+            this.lblNombre.Visible = false;
             // 
             // lblEnvio
             // 
@@ -291,36 +326,6 @@
             this.lblEnvio.Size = new System.Drawing.Size(64, 23);
             this.lblEnvio.TabIndex = 2;
             this.lblEnvio.Text = "3.99 €";
-            // 
-            // tpPago
-            // 
-            this.tpPago.Controls.Add(this.groupBox2);
-            this.tpPago.Controls.Add(this.groupBox1);
-            this.tpPago.Location = new System.Drawing.Point(4, 22);
-            this.tpPago.Name = "tpPago";
-            this.tpPago.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPago.Size = new System.Drawing.Size(488, 440);
-            this.tpPago.TabIndex = 2;
-            this.tpPago.Text = "Pago";
-            this.tpPago.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbnEfectivo);
-            this.groupBox1.Location = new System.Drawing.Point(28, 51);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 57);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rbnTarjeta);
-            this.groupBox2.Location = new System.Drawing.Point(28, 114);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(433, 57);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
             // 
             // rbtnCasa
             // 
@@ -336,19 +341,92 @@
             this.rbtnCasa.UseVisualStyleBackColor = true;
             this.rbtnCasa.Click += new System.EventHandler(this.rbtnCasa_Click);
             // 
-            // rbbtnTienda
+            // tpPago
             // 
-            this.rbbtnTienda.Enabled = false;
-            this.rbbtnTienda.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbbtnTienda.Image = global::ProyectoCompra.Properties.Resources.icon_tienda2;
-            this.rbbtnTienda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rbbtnTienda.Location = new System.Drawing.Point(6, 9);
-            this.rbbtnTienda.Name = "rbbtnTienda";
-            this.rbbtnTienda.Size = new System.Drawing.Size(421, 42);
-            this.rbbtnTienda.TabIndex = 2;
-            this.rbbtnTienda.Text = "Recoger en tienda\r\nLlegará a tu tienda en 24/48h hábiles\r\n";
-            this.rbbtnTienda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbbtnTienda.UseVisualStyleBackColor = true;
+            this.tpPago.Controls.Add(this.label9);
+            this.tpPago.Controls.Add(this.gbxTarjeta);
+            this.tpPago.Controls.Add(this.gbxEfectivo);
+            this.tpPago.Location = new System.Drawing.Point(4, 22);
+            this.tpPago.Name = "tpPago";
+            this.tpPago.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPago.Size = new System.Drawing.Size(488, 440);
+            this.tpPago.TabIndex = 2;
+            this.tpPago.Text = "Pago";
+            this.tpPago.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Nova Cond", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(25, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(237, 15);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Pedido 1 de 1: vendido y enviado por EasyShop";
+            // 
+            // gbxTarjeta
+            // 
+            this.gbxTarjeta.Controls.Add(this.ctrlCVV);
+            this.gbxTarjeta.Controls.Add(this.ctrlAnioVen);
+            this.gbxTarjeta.Controls.Add(this.lblMesVen);
+            this.gbxTarjeta.Controls.Add(this.lblAnioVen);
+            this.gbxTarjeta.Controls.Add(this.lblCVV);
+            this.gbxTarjeta.Controls.Add(this.ctrlTxtMesVen);
+            this.gbxTarjeta.Controls.Add(this.ctrlTxtTitular);
+            this.gbxTarjeta.Controls.Add(this.ctrlTxtNTarjeta);
+            this.gbxTarjeta.Controls.Add(this.lblNTarjeta);
+            this.gbxTarjeta.Controls.Add(this.lblTitular);
+            this.gbxTarjeta.Controls.Add(this.rbnTarjeta);
+            this.gbxTarjeta.Location = new System.Drawing.Point(28, 218);
+            this.gbxTarjeta.Name = "gbxTarjeta";
+            this.gbxTarjeta.Size = new System.Drawing.Size(433, 198);
+            this.gbxTarjeta.TabIndex = 7;
+            this.gbxTarjeta.TabStop = false;
+            // 
+            // lblMesVen
+            // 
+            this.lblMesVen.AutoSize = true;
+            this.lblMesVen.Location = new System.Drawing.Point(72, 138);
+            this.lblMesVen.Name = "lblMesVen";
+            this.lblMesVen.Size = new System.Drawing.Size(90, 13);
+            this.lblMesVen.TabIndex = 19;
+            this.lblMesVen.Text = "Mes vencimiento:";
+            // 
+            // lblAnioVen
+            // 
+            this.lblAnioVen.AutoSize = true;
+            this.lblAnioVen.Location = new System.Drawing.Point(187, 138);
+            this.lblAnioVen.Name = "lblAnioVen";
+            this.lblAnioVen.Size = new System.Drawing.Size(89, 13);
+            this.lblAnioVen.TabIndex = 20;
+            this.lblAnioVen.Text = "Año vencimiento:";
+            // 
+            // lblCVV
+            // 
+            this.lblCVV.AutoSize = true;
+            this.lblCVV.Location = new System.Drawing.Point(303, 138);
+            this.lblCVV.Name = "lblCVV";
+            this.lblCVV.Size = new System.Drawing.Size(31, 13);
+            this.lblCVV.TabIndex = 21;
+            this.lblCVV.Text = "CVV:";
+            // 
+            // lblNTarjeta
+            // 
+            this.lblNTarjeta.AutoSize = true;
+            this.lblNTarjeta.Location = new System.Drawing.Point(72, 99);
+            this.lblNTarjeta.Name = "lblNTarjeta";
+            this.lblNTarjeta.Size = new System.Drawing.Size(58, 13);
+            this.lblNTarjeta.TabIndex = 15;
+            this.lblNTarjeta.Text = "Nº Tarjeta:";
+            // 
+            // lblTitular
+            // 
+            this.lblTitular.AutoSize = true;
+            this.lblTitular.Location = new System.Drawing.Point(72, 60);
+            this.lblTitular.Name = "lblTitular";
+            this.lblTitular.Size = new System.Drawing.Size(39, 13);
+            this.lblTitular.TabIndex = 14;
+            this.lblTitular.Text = "Titular:";
             // 
             // rbnTarjeta
             // 
@@ -363,6 +441,81 @@
             this.rbnTarjeta.UseVisualStyleBackColor = true;
             this.rbnTarjeta.Click += new System.EventHandler(this.rbnTarjeta_Click);
             // 
+            // gbxEfectivo
+            // 
+            this.gbxEfectivo.Controls.Add(this.label1);
+            this.gbxEfectivo.Controls.Add(this.label2);
+            this.gbxEfectivo.Controls.Add(this.label3);
+            this.gbxEfectivo.Controls.Add(this.label5);
+            this.gbxEfectivo.Controls.Add(this.label6);
+            this.gbxEfectivo.Controls.Add(this.label7);
+            this.gbxEfectivo.Controls.Add(this.rbnEfectivo);
+            this.gbxEfectivo.Location = new System.Drawing.Point(28, 51);
+            this.gbxEfectivo.Name = "gbxEfectivo";
+            this.gbxEfectivo.Size = new System.Drawing.Size(433, 161);
+            this.gbxEfectivo.TabIndex = 6;
+            this.gbxEfectivo.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(253, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Teléfono";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(253, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Localidad";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(253, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Direccion completa";
+            this.label3.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Teléfono";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Localidad";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Direccion completa";
+            this.label7.Visible = false;
+            // 
             // rbnEfectivo
             // 
             this.rbnEfectivo.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,6 +527,61 @@
             this.rbnEfectivo.TabIndex = 2;
             this.rbnEfectivo.Text = "Efectivo";
             this.rbnEfectivo.UseVisualStyleBackColor = true;
+            this.rbnEfectivo.Click += new System.EventHandler(this.rbnEfectivo_Click);
+            // 
+            // ctrlCVV
+            // 
+            this.ctrlCVV.AutoSize = true;
+            this.ctrlCVV.IsNumerico = true;
+            this.ctrlCVV.IsReadOnly = true;
+            this.ctrlCVV.Location = new System.Drawing.Point(306, 154);
+            this.ctrlCVV.Name = "ctrlCVV";
+            this.ctrlCVV.Size = new System.Drawing.Size(54, 20);
+            this.ctrlCVV.TabIndex = 23;
+            this.ctrlCVV.Texto = "";
+            // 
+            // ctrlAnioVen
+            // 
+            this.ctrlAnioVen.AutoSize = true;
+            this.ctrlAnioVen.IsNumerico = true;
+            this.ctrlAnioVen.IsReadOnly = true;
+            this.ctrlAnioVen.Location = new System.Drawing.Point(190, 154);
+            this.ctrlAnioVen.Name = "ctrlAnioVen";
+            this.ctrlAnioVen.Size = new System.Drawing.Size(86, 20);
+            this.ctrlAnioVen.TabIndex = 22;
+            this.ctrlAnioVen.Texto = "";
+            // 
+            // ctrlTxtMesVen
+            // 
+            this.ctrlTxtMesVen.AutoSize = true;
+            this.ctrlTxtMesVen.IsNumerico = true;
+            this.ctrlTxtMesVen.IsReadOnly = true;
+            this.ctrlTxtMesVen.Location = new System.Drawing.Point(75, 154);
+            this.ctrlTxtMesVen.Name = "ctrlTxtMesVen";
+            this.ctrlTxtMesVen.Size = new System.Drawing.Size(87, 20);
+            this.ctrlTxtMesVen.TabIndex = 18;
+            this.ctrlTxtMesVen.Texto = "";
+            // 
+            // ctrlTxtTitular
+            // 
+            this.ctrlTxtTitular.AutoSize = true;
+            this.ctrlTxtTitular.IsReadOnly = true;
+            this.ctrlTxtTitular.Location = new System.Drawing.Point(75, 76);
+            this.ctrlTxtTitular.Name = "ctrlTxtTitular";
+            this.ctrlTxtTitular.Size = new System.Drawing.Size(285, 20);
+            this.ctrlTxtTitular.TabIndex = 17;
+            this.ctrlTxtTitular.Texto = "";
+            // 
+            // ctrlTxtNTarjeta
+            // 
+            this.ctrlTxtNTarjeta.AutoSize = true;
+            this.ctrlTxtNTarjeta.IsNumerico = true;
+            this.ctrlTxtNTarjeta.IsReadOnly = true;
+            this.ctrlTxtNTarjeta.Location = new System.Drawing.Point(75, 115);
+            this.ctrlTxtNTarjeta.Name = "ctrlTxtNTarjeta";
+            this.ctrlTxtNTarjeta.Size = new System.Drawing.Size(285, 20);
+            this.ctrlTxtNTarjeta.TabIndex = 16;
+            this.ctrlTxtNTarjeta.Texto = "";
             // 
             // CtrlEnvio
             // 
@@ -396,8 +604,11 @@
             this.gbxDomicilio.ResumeLayout(false);
             this.gbxDomicilio.PerformLayout();
             this.tpPago.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.tpPago.PerformLayout();
+            this.gbxTarjeta.ResumeLayout(false);
+            this.gbxTarjeta.PerformLayout();
+            this.gbxEfectivo.ResumeLayout(false);
+            this.gbxEfectivo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -427,9 +638,26 @@
         private System.Windows.Forms.Label lblEnvio;
         private System.Windows.Forms.RadioButton rbtnCasa;
         public System.Windows.Forms.GroupBox gbxDomicilio;
-        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.GroupBox gbxTarjeta;
         private System.Windows.Forms.RadioButton rbnTarjeta;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxEfectivo;
         private System.Windows.Forms.RadioButton rbnEfectivo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private CtrlTextoBox ctrlCVV;
+        private CtrlTextoBox ctrlAnioVen;
+        private System.Windows.Forms.Label lblMesVen;
+        private System.Windows.Forms.Label lblAnioVen;
+        private System.Windows.Forms.Label lblCVV;
+        private CtrlTextoBox ctrlTxtMesVen;
+        private CtrlTextoBox ctrlTxtTitular;
+        private CtrlTextoBox ctrlTxtNTarjeta;
+        private System.Windows.Forms.Label lblNTarjeta;
+        private System.Windows.Forms.Label lblTitular;
+        private System.Windows.Forms.Label label9;
     }
 }

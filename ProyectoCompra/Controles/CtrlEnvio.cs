@@ -18,19 +18,7 @@ namespace ProyectoCompra.Controles
         public CtrlEnvio()
         {
             InitializeComponent();
-        }
-
-        public CtrlEnvio(Carrito carritoListo)
-        {
-            InitializeComponent();
-            this.carritoListo = carritoListo;
-        }
-
-        public CtrlEnvio(CarritoProvisional carritoProvisionalListo)
-        {
-            InitializeComponent();
-            this.carritoProvisionalListo = carritoProvisionalListo;
-
+            configuracionInicial();
         }
 
         private void CtrlEnvio_Load(object sender, EventArgs e)
@@ -38,6 +26,15 @@ namespace ProyectoCompra.Controles
             this.gbxDomicilio.Size = new System.Drawing.Size(433, 57);
             cargarProductosCarrito();
             cargarProductosCarritoProvisional();
+        }
+
+        private void configuracionInicial()
+        {
+            //EFECTIVO
+            this.gbxEfectivo.Size = new System.Drawing.Size(433, 57);
+            //TARJETA
+            this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            this.gbxTarjeta.Location = new System.Drawing.Point(28, 114);
         }
 
         private void cargarProductosCarrito()
@@ -127,45 +124,127 @@ namespace ProyectoCompra.Controles
             frmDireccion.ShowDialog();
             if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-                direcciones = FicheroDireccion.leerFichero();
-                if (direcciones.Count > 0)
-                {
-                    gbxDomicilio.Size = new System.Drawing.Size(433, 303);
-                    if (direcciones.Count == 1)
-                    {
-                        lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
-                        lblDireccion.Text = direcciones[0].direccion;
-                        lblLocalidad.Text = direcciones[0].codigoPostal;
-                        lblTelefono.Text = direcciones[0].telefono;
-                    }
-                    if (direcciones.Count == 2)
-                    {
-                        lblNombre2.Text = "Anthony Mauricio Ibarra Valencia";
-                        lblDireccion2.Text = direcciones[1].direccion;
-                        lblLocalidad2.Text = direcciones[1].codigoPostal;
-                        lblTelefono2.Text = direcciones[1].telefono;
-
-                        lblNombre2.Visible = true;
-                        lblDireccion2.Visible = true;
-                        lblLocalidad2.Visible = true;
-                        lblTelefono2.Visible = true;
-                    }
-                }
+                direccionInvitado();
             }
             else
             {
-                direcciones = BDDireccion.consusltarDireccion(ConfigSesion.obtenerReferenciaIdUsuario());
-                if (direcciones.Count > 0)
-                {
-                    gbxDomicilio.Size = new System.Drawing.Size(433, 303);
-                }
+                direccionUsuario();
             }
         }
 
         private void rbnTarjeta_Click(object sender, EventArgs e)
         {
+            rbnEfectivo.Checked = false;
+            this.gbxEfectivo.Size = new System.Drawing.Size(433, 57);
+            this.gbxTarjeta.Location = new System.Drawing.Point(28, 114);
+
             FrmPagos frmPagos = new FrmPagos(true);
             frmPagos.ShowDialog();
+
+            this.gbxTarjeta.Size = new System.Drawing.Size(433, 208);
         }
+
+        private void rbnEfectivo_Click(object sender, EventArgs e)
+        {
+            rbnTarjeta.Checked = false;
+            this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            this.gbxTarjeta.Location = new System.Drawing.Point(28, 114);
+
+            this.gbxEfectivo.Size = new System.Drawing.Size(433, 161);
+            this.gbxTarjeta.Location = new System.Drawing.Point(28, 218);
+
+        }
+
+        private void direccionInvitado()
+        {
+            direcciones = FicheroDireccion.leerFichero();
+            if (direcciones.Count > 0)
+            {
+                gbxDomicilio.Size = new System.Drawing.Size(433, 303);
+                if (direcciones.Count == 1)
+                {
+                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblDireccion.Text = direcciones[0].direccion;
+                    lblLocalidad.Text = direcciones[0].codigoPostal;
+                    lblTelefono.Text = direcciones[0].telefono;
+
+                    lblNombre.Visible = true;
+                    lblDireccion.Visible = true;
+                    lblLocalidad.Visible = true;
+                    lblTelefono.Visible = true;
+                }
+                if (direcciones.Count == 2)
+                {
+                    //DIRECCION1
+                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblDireccion.Text = direcciones[0].direccion;
+                    lblLocalidad.Text = direcciones[0].codigoPostal;
+                    lblTelefono.Text = direcciones[0].telefono;
+
+                    lblNombre.Visible = true;
+                    lblDireccion.Visible = true;
+                    lblLocalidad.Visible = true;
+                    lblTelefono.Visible = true;
+
+                    //DIRECCION2 
+                    lblNombre2.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblDireccion2.Text = direcciones[1].direccion;
+                    lblLocalidad2.Text = direcciones[1].codigoPostal;
+                    lblTelefono2.Text = direcciones[1].telefono;
+
+                    lblNombre2.Visible = true;
+                    lblDireccion2.Visible = true;
+                    lblLocalidad2.Visible = true;
+                    lblTelefono2.Visible = true;
+                }
+            }
+        }
+
+        private void direccionUsuario()
+        {
+            direcciones = BDDireccion.consusltarDireccion(ConfigSesion.obtenerReferenciaIdUsuario());
+            if (direcciones.Count > 0)
+            {
+                gbxDomicilio.Size = new System.Drawing.Size(433, 184);
+                if (direcciones.Count == 1)
+                {
+                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblDireccion.Text = direcciones[0].direccion;
+                    lblLocalidad.Text = direcciones[0].codigoPostal;
+                    lblTelefono.Text = direcciones[0].telefono;
+
+                    lblNombre.Visible = true;
+                    lblDireccion.Visible = true;
+                    lblLocalidad.Visible = true;
+                    lblTelefono.Visible = true;
+                }
+                if (direcciones.Count == 2)
+                {
+                    //DIRECCION1
+                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblDireccion.Text = direcciones[0].direccion;
+                    lblLocalidad.Text = direcciones[0].codigoPostal;
+                    lblTelefono.Text = direcciones[0].telefono;
+
+                    lblNombre.Visible = true;
+                    lblDireccion.Visible = true;
+                    lblLocalidad.Visible = true;
+                    lblTelefono.Visible = true;
+
+                    //DIRECCION2
+                    lblNombre2.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblDireccion2.Text = direcciones[1].direccion;
+                    lblLocalidad2.Text = direcciones[1].codigoPostal;
+                    lblTelefono2.Text = direcciones[1].telefono;
+
+                    lblNombre2.Visible = true;
+                    lblDireccion2.Visible = true;
+                    lblLocalidad2.Visible = true;
+                    lblTelefono2.Visible = true;
+                }
+            }
+        }
+
+
     }
 }

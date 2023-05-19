@@ -30,19 +30,6 @@ namespace ProyectoCompra.Formularios
             cargarDirecciones();
         }
 
-        private void FrmDireccion_Load(object sender, EventArgs e)
-        {
-            idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
-            if (idUsuario == 0)
-            {
-                configurarInvitado();
-            }
-            else
-            {
-                configurarUsuario();
-            }
-        }
-
         private void configurarUsuario()
         {
             if (direcciones.Count == 0)
@@ -98,7 +85,7 @@ namespace ProyectoCompra.Formularios
             }
             else
             {
-                obtenerDireccionInvitado();
+                obtenerDireccionUsuario();
             }
         }
 
@@ -180,7 +167,7 @@ namespace ProyectoCompra.Formularios
         {
             this.btnAceptar.Location = new Point(486, 285);
 
-            ctrlDireccion = new CtrlDireccion(true, false);
+            ctrlDireccion = new CtrlDireccion(true);
             ctrlDireccion.Location = new Point(330, 12);
 
             ctrlDireccion.groupBox = "Dirección (alternativo)";
@@ -210,13 +197,16 @@ namespace ProyectoCompra.Formularios
             }
         }
 
-        private void FrmDireccion_Shown(object sender, EventArgs e)
+        private void FrmDireccion_Load_1(object sender, EventArgs e)
         {
             idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
-            if (idUsuario != 0)
+            if (idUsuario == 0)
             {
-                direcciones = BDDireccion.consusltarDireccion(idUsuario);
-
+                configurarInvitado();
+            }
+            else
+            {
+                configurarUsuario();
             }
         }
     }

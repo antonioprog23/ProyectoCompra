@@ -42,21 +42,37 @@ namespace ProyectoCompra.Clases
             this.telefono = telefono;
         }
 
+        //ESTE ES PARA USARLO EN EL FICHERO
+        public Direccion(int idDireccion, string nombre, string direccion, string pais, string provincia, string ciudad, string codigoPostal, string telefono)
+        {
+            this.idDireccion = idDireccion;
+            this.nombre = nombre;
+            this.direccion = direccion;
+            this.pais = pais;
+            this.provincia = provincia;
+            this.ciudad = ciudad;
+            this.codigoPostal = codigoPostal;
+            this.telefono = telefono;
+        }
+
+        //PARA LEER Y DESGLOSAR LA LINEA DEL FICHERO
         public Direccion(string linea)
         {
             string[] data = linea.Split(';');
-            this.nombre = data[0];
-            this.direccion = data[1];
-            this.pais = data[2];
-            this.provincia = data[3];
-            this.ciudad = data[4];
-            this.codigoPostal = data[5];
-            this.telefono = data[6];
+            this.idDireccion = Convert.ToInt32(data[0]);
+            this.nombre = data[1];
+            this.direccion = data[2];
+            this.pais = data[3];
+            this.provincia = data[4];
+            this.ciudad = data[5];
+            this.codigoPostal = data[6];
+            this.telefono = data[7];
         }
 
+        //PARA ESCRIBIR EN EL FICHERO
         public string toStringWithSeparator()
         {
-            return $"{this.nombre};{this.direccion};{this.pais};{this.provincia};{this.ciudad};{this.codigoPostal};{this.telefono}";
+            return $"{this.idDireccion};{this.nombre};{this.direccion};{this.pais};{this.provincia};{this.ciudad};{this.codigoPostal};{this.telefono}";
         }
     }
 }

@@ -18,13 +18,7 @@ namespace ProyectoCompra.Controles
             InitializeComponent();
         }
 
-        public CtrlDireccion(Direccion direccion)
-        {
-            InitializeComponent();
-            this.direccion = direccion;
-        }
-
-        public CtrlDireccion(bool agregarDireccion, bool isEleccion)
+        public CtrlDireccion(bool agregarDireccion)
         {
             InitializeComponent();
             this.agregarDireccion = agregarDireccion;
@@ -46,7 +40,7 @@ namespace ProyectoCompra.Controles
         {
             btnCancelar.Visible = cancelar;
             btnAceptar.Visible = aceptar;
-            btnEditar.Visible = editar;
+            btnEditar.Enabled = editar;
         }
 
         private void cargarControlesText(bool nombre, bool direccion, bool pais, bool provincia, bool ciudad, bool cp, bool telefono)
@@ -64,14 +58,28 @@ namespace ProyectoCompra.Controles
         {
             if (direccion != null)
             {
-                txtNomDireccion.Text = direccion.nombre;
-                txtDireccion.Text = direccion.direccion;
-                cbxPais.Text = direccion.pais;
-                cbxProvincia.Text = direccion.provincia;
+                if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+                {
+                    txtNomDireccion.Text = direccion.nombre;
+                    txtDireccion.Text = direccion.direccion;
+                    cbxPais.Text = direccion.pais;
+                    cbxProvincia.Text = direccion.provincia;
 
-                ctrlTxtCiudad.Texto = direccion.ciudad;
-                ctrlTxtCP.Texto = direccion.codigoPostal;
-                ctrlTxtTelefono.Texto = direccion.telefono;
+                    ctrlTxtCiudad.Texto = direccion.ciudad;
+                    ctrlTxtCP.Texto = direccion.codigoPostal;
+                    ctrlTxtTelefono.Texto = direccion.telefono;
+                }
+                else
+                {
+                    txtNomDireccion.Text = direccion.nombre;
+                    txtDireccion.Text = direccion.direccion;
+                    cbxPais.Text = direccion.pais;
+                    cbxProvincia.Text = direccion.provincia;
+
+                    ctrlTxtCiudad.Texto = direccion.ciudad;
+                    ctrlTxtCP.Texto = direccion.codigoPostal;
+                    ctrlTxtTelefono.Texto = direccion.telefono;
+                }
             }
         }
 
@@ -84,32 +92,6 @@ namespace ProyectoCompra.Controles
             }
             //SE ACTUALIZA LA DIRECCION Q ESTA GUARDADA EN BD
             actualizarDireccion();
-            // SE AGREGA POR PRIMERA VEZ EN LA BD
-            insertarDireccion();
-        }
-
-        private void insertarDireccion()
-        {
-            if (agregarDireccion)
-            {
-                Direccion direccion = new Direccion(txtNomDireccion.Text, txtDireccion.Text, cbxPais.SelectedItem.ToString(), cbxProvincia.SelectedItem.ToString(), ctrlTxtCiudad.Texto, ctrlTxtCP.Texto, ctrlTxtTelefono.Texto);
-                if (direccion != null)
-                {
-                    if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
-                    {
-                        FicheroDireccion.escribirFichero(direccion);
-                    }
-                    else
-                    {
-                        if (BDDireccion.actualizarDireccion(direccion, ConfigSesion.obtenerReferenciaIdUsuario()))
-                        {
-                            MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            cargarBotones(false, false, true);
-                            cargarControlesText(true, true, false, false, true, true, true);
-                        }
-                    }
-                }
-            }
         }
 
         private void actualizarDireccion()
@@ -123,11 +105,43 @@ namespace ProyectoCompra.Controles
                 direccion.ciudad = ctrlTxtCiudad.Texto;
                 direccion.codigoPostal = ctrlTxtCP.Texto;
                 direccion.telefono = ctrlTxtTelefono.Texto;
-                if (BDDireccion.actualizarDireccion(direccion, ConfigSesion.obtenerReferenciaIdUsuario()))
+                if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
                 {
-                    MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cargarBotones(false, false, true);
-                    cargarControlesText(true, true, false, false, true, true, true);
+                    FicheroDireccion.editarFichero(direccion.idDireccion, direccion);
+                }
+                else
+                {
+                    if (BDDireccion.actualizarDireccion(direccion, ConfigSesion.obtenerReferenciaIdUsuario()))
+                    {
+                        MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cargarBotones(false, false, false);
+                        cargarControlesText(true, true, false, false, true, true, true);
+                    }
+                }
+            }
+            else
+            {
+                Direccion direccion = new Direccion(txtNomDireccion.Text, txtDireccion.Text, cbxPais.SelectedItem.ToString(), cbxProvincia.SelectedItem.ToString(), ctrlTxtCiudad.Texto, ctrlTxtCP.Texto, ctrlTxtTelefono.Texto);
+                if (direccion != null)
+                {
+                    if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+                    {
+                        int idDireccionFichero = FicheroDireccion.obtenerIdDireccionMax();
+                        direccion.idDireccion = idDireccionFichero;
+                        FicheroDireccion.escribirFichero(direccion);
+                        MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cargarBotones(false, false, false);
+                        cargarControlesText(true, true, false, false, true, true, true);
+                    }
+                    else
+                    {
+                        if (BDDireccion.actualizarDireccion(direccion, ConfigSesion.obtenerReferenciaIdUsuario()))
+                        {
+                            MessageBox.Show("Los datos han sido actualizados.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            cargarBotones(false, false, false);
+                            cargarControlesText(true, true, false, false, true, true, true);
+                        }
+                    }
                 }
             }
         }

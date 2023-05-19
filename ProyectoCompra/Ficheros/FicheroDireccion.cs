@@ -1,11 +1,7 @@
 ﻿using ProyectoCompra.Clases;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProyectoCompra.Ficheros
 {
@@ -27,12 +23,11 @@ namespace ProyectoCompra.Ficheros
             }
             catch (DirectoryNotFoundException d)
             {
-                MessageBox.Show(d.Message);
+                throw d;
             }
             catch (IOException e)
             {
-                //throw e;
-                MessageBox.Show(e.Message);
+                throw e;
             }
         }
 
@@ -71,6 +66,33 @@ namespace ProyectoCompra.Ficheros
             return direcciones;
         }
 
+        public static bool editarFichero(int idDireccion, Direccion direccionNuevosDatos)
+        {
+            bool editado = false;
+            List<Direccion> direcciones = leerFichero();
+            if (direcciones.Count > 0 && direcciones != null)
+            {
+                Direccion direccionEditar = direcciones.Find(d => d.idDireccion == idDireccion);
+                if (direccionEditar != null)
+                {
+                    int index = direcciones.IndexOf(direccionEditar);
+                    direcciones[index].nombre = direccionNuevosDatos.nombre;
+                    direcciones[index].direccion = direccionNuevosDatos.direccion;
+                    direcciones[index].pais = direccionNuevosDatos.pais;
+                    direcciones[index].provincia = direccionNuevosDatos.provincia;
+                    direcciones[index].ciudad = direccionNuevosDatos.ciudad;
+                    direcciones[index].codigoPostal = direccionNuevosDatos.codigoPostal;
+                    direcciones[index].telefono = direccionNuevosDatos.telefono;
+                }
+                borrarFicheroAux();
+                foreach (Direccion direccion in direcciones)
+                {
+                    escribirFichero(direccion);
+                }
+            }
+            return editado;
+        }
+
         public static bool borrarFicheroAux()
         {
             bool eliminado = false;
@@ -91,6 +113,17 @@ namespace ProyectoCompra.Ficheros
                 }
             }
             return eliminado;
+        }
+
+        public static int obtenerIdDireccionMax()
+        {
+            int idDireccion = 0;
+            List<Direccion> direcciones = leerFichero();
+            if (direcciones.Count > 0 && direcciones != null)
+            {
+                idDireccion = direcciones.Max(d => d.idDireccion);
+            }
+            return idDireccion + 1;
         }
     }
 }

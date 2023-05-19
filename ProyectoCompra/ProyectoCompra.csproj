@@ -50,6 +50,30 @@
   <PropertyGroup />
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
@@ -161,10 +185,16 @@
     <Compile Include="Controles\CtrlTextoBox.Designer.cs">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="EasyShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EasyShopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
     <Compile Include="Clases\CarritoProvisional.cs" />
     <Compile Include="Ficheros\FicheroCarrito.cs" />
     <Compile Include="Ficheros\FicheroDireccion.cs" />
+    <Compile Include="Ficheros\FicheroTarjeta.cs" />
     <Compile Include="Formularios\FrmAccesoPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +236,12 @@
     </Compile>
     <Compile Include="Formularios\FrmDireccion.Designer.cs">
       <DependentUpon>FrmDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmHistorialPedidos.cs">
       <SubType>Form</SubType>
@@ -356,6 +392,7 @@
       <DependentUpon>AlimentacionS9.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +432,7 @@
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Factura.rdlc" />
     <EmbeddedResource Include="Formularios\FrmAccesoPago.resx">
       <DependentUpon>FrmAccesoPago.cs</DependentUpon>
     </EmbeddedResource>
@@ -415,6 +453,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmDireccion.resx">
       <DependentUpon>FrmDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmHistorialPedidos.resx">
       <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
@@ -525,6 +566,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="EasyShopDataSet.xsc">
+      <DependentUpon>EasyShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EasyShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EasyShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EasyShopDataSet.xss">
+      <DependentUpon>EasyShopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -749,6 +801,19 @@
     <Content Include="Procedimientos almacenados\DarBajaUsuario.sql" />
     <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
     <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\icon_compra.png" />
     <None Include="Resources\15_19.jpg" />
     <None Include="Resources\15_20.jpg" />

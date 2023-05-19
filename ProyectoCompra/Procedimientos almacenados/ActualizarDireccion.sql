@@ -19,7 +19,8 @@ BEGIN
 	IF EXISTS (SELECT 1 FROM Direccion
 				WHERE Id_Direccion = @Id_Direccion AND
 				Id_Cliente = (SELECT Id_Cliente FROM Usuario
-							  WHERE Id_Usuario = @Id_Usuario))
+							  WHERE Id_Usuario = @Id_Usuario AND
+							  Id_Direccion = @Id_Direccion))
 		BEGIN
 			UPDATE Direccion SET Nombre_Direccion = @Nombre_Direccion,
 								 Direccion = @Direccion,

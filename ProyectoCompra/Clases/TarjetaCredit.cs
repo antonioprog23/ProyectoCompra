@@ -25,9 +25,20 @@ namespace ProyectoCompra.Clases
             this.cvv = cvv;
         }
 
-        public override string ToString()
+        //PARA EL FICHERO
+        public TarjetaCredit(string linea)
         {
-            return $"Tarjeta Credito [ Usuario: {0}, Titular: {1}, NºTarjeta: {2}, Mes vencimiento: {3}, Año vencimiento: {4}, CVV: {5}]";
+            string[] data = linea.Split(';');
+            this.titular = data[0];
+            this.numerosTarjeta = data[1];
+            this.mesVencimiento = data[2];
+            this.anioVencimiento = data[3];
+            this.cvv = data[4];
+        }
+
+        public string ToStringWithSeparator()
+        {
+            return $"{this.titular};{this.numerosTarjeta};{this.mesVencimiento};{this.anioVencimiento};{this.cvv}";
         }
     }
 }
