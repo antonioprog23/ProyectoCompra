@@ -22,7 +22,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
+            if (!string.IsNullOrEmpty(txtUsuario.Text.Trim()) && !string.IsNullOrEmpty(contrasenia.TextBoxtxtContrasenia.Trim()))
             {
                 usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text.Trim(), contrasenia.TextBoxtxtContrasenia.Trim(), "");
                 if (usuarioEncontrado == null)

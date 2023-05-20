@@ -13,6 +13,8 @@ namespace ProyectoCompra.Controles
         public bool agregarDireccion { get; set; }
         public string groupBox { get => gbxDireccionDefecto.Text; set { gbxDireccionDefecto.Text = value; } }
         private FrmDireccion frmDireccion;
+        public bool isInvitado { get; set; }
+
         public CtrlDireccion()
         {
             InitializeComponent();
@@ -26,6 +28,10 @@ namespace ProyectoCompra.Controles
 
         private void CtrlDireccion_Load(object sender, EventArgs e)
         {
+            if (isInvitado)
+            {
+                lblNomDireccion.Text = "Nombre persona:";
+            }
             recuperarDireccion();
             cargarControlesText(true, true, false, false, true, true, true);
         }

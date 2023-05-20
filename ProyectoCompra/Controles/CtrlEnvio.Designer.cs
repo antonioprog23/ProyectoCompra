@@ -61,12 +61,6 @@
             this.lblTitular = new System.Windows.Forms.Label();
             this.rbnTarjeta = new System.Windows.Forms.RadioButton();
             this.gbxEfectivo = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.rbnEfectivo = new System.Windows.Forms.RadioButton();
             this.ctrlCVV = new ProyectoCompra.Controles.CtrlTextoBox();
             this.ctrlAnioVen = new ProyectoCompra.Controles.CtrlTextoBox();
@@ -377,7 +371,7 @@
             this.gbxTarjeta.Controls.Add(this.lblNTarjeta);
             this.gbxTarjeta.Controls.Add(this.lblTitular);
             this.gbxTarjeta.Controls.Add(this.rbnTarjeta);
-            this.gbxTarjeta.Location = new System.Drawing.Point(28, 218);
+            this.gbxTarjeta.Location = new System.Drawing.Point(28, 114);
             this.gbxTarjeta.Name = "gbxTarjeta";
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 198);
             this.gbxTarjeta.TabIndex = 7;
@@ -443,78 +437,12 @@
             // 
             // gbxEfectivo
             // 
-            this.gbxEfectivo.Controls.Add(this.label1);
-            this.gbxEfectivo.Controls.Add(this.label2);
-            this.gbxEfectivo.Controls.Add(this.label3);
-            this.gbxEfectivo.Controls.Add(this.label5);
-            this.gbxEfectivo.Controls.Add(this.label6);
-            this.gbxEfectivo.Controls.Add(this.label7);
             this.gbxEfectivo.Controls.Add(this.rbnEfectivo);
             this.gbxEfectivo.Location = new System.Drawing.Point(28, 51);
             this.gbxEfectivo.Name = "gbxEfectivo";
-            this.gbxEfectivo.Size = new System.Drawing.Size(433, 161);
+            this.gbxEfectivo.Size = new System.Drawing.Size(433, 57);
             this.gbxEfectivo.TabIndex = 6;
             this.gbxEfectivo.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(253, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Teléfono";
-            this.label1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Localidad";
-            this.label2.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(253, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Direccion completa";
-            this.label3.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Teléfono";
-            this.label5.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Localidad";
-            this.label6.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Direccion completa";
-            this.label7.Visible = false;
             // 
             // rbnEfectivo
             // 
@@ -608,7 +536,6 @@
             this.gbxTarjeta.ResumeLayout(false);
             this.gbxTarjeta.PerformLayout();
             this.gbxEfectivo.ResumeLayout(false);
-            this.gbxEfectivo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -642,12 +569,6 @@
         private System.Windows.Forms.RadioButton rbnTarjeta;
         private System.Windows.Forms.GroupBox gbxEfectivo;
         private System.Windows.Forms.RadioButton rbnEfectivo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private CtrlTextoBox ctrlCVV;
         private CtrlTextoBox ctrlAnioVen;
         private System.Windows.Forms.Label lblMesVen;

@@ -15,6 +15,7 @@ namespace ProyectoCompra.Formularios
         public List<Direccion> direcciones { get; set; }
         private CtrlDireccion ctrlDireccion;
         public bool isEleccion { get; set; }
+        public bool isInvitado { get; set; }
         private int idUsuario;
 
         public FrmDireccion()
@@ -23,10 +24,12 @@ namespace ProyectoCompra.Formularios
             cargarDirecciones();
         }
 
-        public FrmDireccion(bool isEleccion)
+        public FrmDireccion(bool isEleccion, bool isInvitado)
         {
             InitializeComponent();
             this.isEleccion = isEleccion;
+            this.isInvitado = isInvitado;
+            ctrlDireccionMostrar.isInvitado = isInvitado;
             cargarDirecciones();
         }
 
@@ -42,8 +45,9 @@ namespace ProyectoCompra.Formularios
                 btnAniadirDireccion.Visible = false;
                 ctrlDireccionMostrar.agregarDireccion = true;
             }
-            if (direcciones.Count >= 1 && isEleccion)
+            if (direcciones.Count > 0 && isEleccion)
             {
+                this.ControlBox = false;
                 btnAceptar.Visible = true;
                 this.Size = new Size(668, 361);
                 if (direcciones.Count == 1)
@@ -65,8 +69,9 @@ namespace ProyectoCompra.Formularios
                 btnAniadirDireccion.Visible = false;
                 ctrlDireccionMostrar.agregarDireccion = true;
             }
-            if (direcciones.Count >= 1 && isEleccion)
+            if (direcciones.Count > 0 && isEleccion)
             {
+                this.ControlBox = false;
                 btnAceptar.Visible = true;
                 this.Size = new Size(668, 361);
                 if (direcciones.Count == 1)
@@ -139,6 +144,7 @@ namespace ProyectoCompra.Formularios
                 {
                     ctrlDireccion = new CtrlDireccion();
                     ctrlDireccion.Location = new Point(330, 12);
+                    ctrlDireccion.isInvitado = isInvitado;
                     ctrlDireccion.setBotonBorrarDireccion(true);
                     ctrlDireccion.groupBox = "Dirección (alternativo)";
                     ctrlDireccion.direccion = direcciones[1];
@@ -169,7 +175,7 @@ namespace ProyectoCompra.Formularios
 
             ctrlDireccion = new CtrlDireccion(true);
             ctrlDireccion.Location = new Point(330, 12);
-
+            ctrlDireccion.isInvitado = isInvitado;
             ctrlDireccion.groupBox = "Dirección (alternativo)";
             this.Controls.Add(ctrlDireccion);
             this.Size = new Size(668, 361);
@@ -202,6 +208,7 @@ namespace ProyectoCompra.Formularios
             idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
             if (idUsuario == 0)
             {
+                ctrlDireccion.isInvitado = isInvitado;
                 configurarInvitado();
             }
             else

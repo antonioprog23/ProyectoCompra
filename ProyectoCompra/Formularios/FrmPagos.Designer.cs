@@ -31,6 +31,7 @@
             this.gbxFormaPago = new System.Windows.Forms.GroupBox();
             this.rbnTarjeta = new System.Windows.Forms.RadioButton();
             this.rbnEfectivo = new System.Windows.Forms.RadioButton();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.ctrlTarjeta1 = new ProyectoCompra.Controles.CtrlTarjeta();
             this.ctrlEfectivo1 = new ProyectoCompra.Controles.CtrlEfectivo();
             this.gbxFormaPago.SuspendLayout();
@@ -71,6 +72,17 @@
             this.rbnEfectivo.UseVisualStyleBackColor = true;
             this.rbnEfectivo.CheckedChanged += new System.EventHandler(this.rbnEfectivo_CheckedChanged);
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(272, 228);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // ctrlTarjeta1
             // 
             this.ctrlTarjeta1.AutoSize = true;
@@ -96,6 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(359, 401);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.ctrlTarjeta1);
             this.Controls.Add(this.ctrlEfectivo1);
             this.Controls.Add(this.gbxFormaPago);
@@ -118,5 +131,6 @@
         private System.Windows.Forms.RadioButton rbnEfectivo;
         private Controles.CtrlEfectivo ctrlEfectivo1;
         private Controles.CtrlTarjeta ctrlTarjeta1;
+        private System.Windows.Forms.Button btnAceptar;
     }
 }

@@ -14,28 +14,23 @@ namespace ProyectoCompra.Controles
         public CarritoProvisional carritoProvisionalListo { get; set; }
 
         private List<Direccion> direcciones;
+        private TarjetaCredit tarjetaCredit;
 
         public CtrlEnvio()
         {
             InitializeComponent();
-            configuracionInicial();
+            //TARJETA
+            this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
         }
 
         private void CtrlEnvio_Load(object sender, EventArgs e)
         {
+            //DIRECCION DE ENVIO
             this.gbxDomicilio.Size = new System.Drawing.Size(433, 57);
             cargarProductosCarrito();
             cargarProductosCarritoProvisional();
         }
 
-        private void configuracionInicial()
-        {
-            //EFECTIVO
-            this.gbxEfectivo.Size = new System.Drawing.Size(433, 57);
-            //TARJETA
-            this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
-            this.gbxTarjeta.Location = new System.Drawing.Point(28, 114);
-        }
 
         private void cargarProductosCarrito()
         {
@@ -120,14 +115,16 @@ namespace ProyectoCompra.Controles
 
         private void rbtnCasa_Click(object sender, EventArgs e)
         {
-            FrmDireccion frmDireccion = new FrmDireccion(true);
-            frmDireccion.ShowDialog();
             if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
+                FrmDireccion frmDireccion = new FrmDireccion(true, true);
+                frmDireccion.ShowDialog();
                 direccionInvitado();
             }
             else
             {
+                FrmDireccion frmDireccion = new FrmDireccion(true, false);
+                frmDireccion.ShowDialog();
                 direccionUsuario();
             }
         }
@@ -136,34 +133,39 @@ namespace ProyectoCompra.Controles
         {
             rbnEfectivo.Checked = false;
             this.gbxEfectivo.Size = new System.Drawing.Size(433, 57);
-            this.gbxTarjeta.Location = new System.Drawing.Point(28, 114);
 
             FrmPagos frmPagos = new FrmPagos(true);
             frmPagos.ShowDialog();
 
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 208);
+
+            tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(ConfigSesion.obtenerReferenciaIdUsuario());
+            if (tarjetaCredit != null)
+            {
+                ctrlTxtTitular.Texto = tarjetaCredit.titular;
+                ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+            }
+            else
+            {
+                this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            }
         }
 
         private void rbnEfectivo_Click(object sender, EventArgs e)
         {
             rbnTarjeta.Checked = false;
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
-            this.gbxTarjeta.Location = new System.Drawing.Point(28, 114);
-
-            this.gbxEfectivo.Size = new System.Drawing.Size(433, 161);
-            this.gbxTarjeta.Location = new System.Drawing.Point(28, 218);
-
         }
 
         private void direccionInvitado()
         {
             direcciones = FicheroDireccion.leerFichero();
-            if (direcciones.Count > 0)
+            if (direcciones.Count > 0 && direcciones != null)
             {
                 gbxDomicilio.Size = new System.Drawing.Size(433, 303);
                 if (direcciones.Count == 1)
                 {
-                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblNombre.Text = direcciones[0].nombre;
                     lblDireccion.Text = direcciones[0].direccion;
                     lblLocalidad.Text = direcciones[0].codigoPostal;
                     lblTelefono.Text = direcciones[0].telefono;
@@ -173,10 +175,10 @@ namespace ProyectoCompra.Controles
                     lblLocalidad.Visible = true;
                     lblTelefono.Visible = true;
                 }
-                if (direcciones.Count == 2)
+                else
                 {
                     //DIRECCION1
-                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblNombre.Text = direcciones[0].nombre;
                     lblDireccion.Text = direcciones[0].direccion;
                     lblLocalidad.Text = direcciones[0].codigoPostal;
                     lblTelefono.Text = direcciones[0].telefono;
@@ -187,7 +189,7 @@ namespace ProyectoCompra.Controles
                     lblTelefono.Visible = true;
 
                     //DIRECCION2 
-                    lblNombre2.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblNombre2.Text = direcciones[1].nombre;
                     lblDireccion2.Text = direcciones[1].direccion;
                     lblLocalidad2.Text = direcciones[1].codigoPostal;
                     lblTelefono2.Text = direcciones[1].telefono;
@@ -203,12 +205,13 @@ namespace ProyectoCompra.Controles
         private void direccionUsuario()
         {
             direcciones = BDDireccion.consusltarDireccion(ConfigSesion.obtenerReferenciaIdUsuario());
-            if (direcciones.Count > 0)
+            if (direcciones.Count > 0 && direcciones != null)
             {
+                Usuario datos = BDUsuario.obtenerDatos("", "", ConfigSesion.obtenerReferenciaIdUsuario().ToString());
                 gbxDomicilio.Size = new System.Drawing.Size(433, 184);
                 if (direcciones.Count == 1)
                 {
-                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblNombre.Text = datos.cliente.nombre;
                     lblDireccion.Text = direcciones[0].direccion;
                     lblLocalidad.Text = direcciones[0].codigoPostal;
                     lblTelefono.Text = direcciones[0].telefono;
@@ -218,10 +221,10 @@ namespace ProyectoCompra.Controles
                     lblLocalidad.Visible = true;
                     lblTelefono.Visible = true;
                 }
-                if (direcciones.Count == 2)
+                else
                 {
                     //DIRECCION1
-                    lblNombre.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblNombre.Text = datos.cliente.nombre;
                     lblDireccion.Text = direcciones[0].direccion;
                     lblLocalidad.Text = direcciones[0].codigoPostal;
                     lblTelefono.Text = direcciones[0].telefono;
@@ -232,7 +235,7 @@ namespace ProyectoCompra.Controles
                     lblTelefono.Visible = true;
 
                     //DIRECCION2
-                    lblNombre2.Text = "Anthony Mauricio Ibarra Valencia";
+                    lblNombre.Text = datos.cliente.nombre;
                     lblDireccion2.Text = direcciones[1].direccion;
                     lblLocalidad2.Text = direcciones[1].codigoPostal;
                     lblTelefono2.Text = direcciones[1].telefono;
