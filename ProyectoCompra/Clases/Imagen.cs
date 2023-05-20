@@ -3,8 +3,20 @@ using System.Drawing;
 
 namespace ProyectoCompra.Clases
 {
-    internal class Imagen
+    public class Imagen
     {
+        public string imagen { get; set; }
+
+        public Imagen(string imagen)
+        {
+            this.imagen = imagen;
+        }
+
+        public Imagen()
+        {
+
+        }
+
         public static Image cargarImagen(int contador, int subCategoria)
         {
             Image image = null;

@@ -7,7 +7,7 @@ namespace ProyectoCompra.Base_datos
     internal class BDProducto
     {
         //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=Compras;Integrated Security=True;";
+        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
         public static List<Producto> obtenerProductos(int subcategoria)
         {

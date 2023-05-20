@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRecuperarContrasenia = new System.Windows.Forms.Button();
+            this.contrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
             this.lblContrasenia = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -46,25 +47,22 @@
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.lblRepContrasenia = new System.Windows.Forms.Label();
             this.lblContrase = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.textUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtApellido = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.txtNombre = new ProyectoCompra.Controles.CtrlTextoBox();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
             this.dateFNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblFNacimiento = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnAlerta = new System.Windows.Forms.Button();
-            this.contrasenia = new ProyectoCompra.Controles.ctrlContrasenia();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabInicioSesion.SuspendLayout();
@@ -98,6 +96,12 @@
             this.btnRecuperarContrasenia.Click += new System.EventHandler(this.btnRecuperarContrasenia_Click);
             this.btnRecuperarContrasenia.MouseEnter += new System.EventHandler(this.btnRecuperarContrasenia_MouseEnter);
             this.btnRecuperarContrasenia.MouseLeave += new System.EventHandler(this.btnRecuperarContrasenia_MouseLeave);
+            // 
+            // contrasenia
+            // 
+            resources.ApplyResources(this.contrasenia, "contrasenia");
+            this.contrasenia.Name = "contrasenia";
+            this.contrasenia.TextBoxtxtContrasenia = "";
             // 
             // lblContrasenia
             // 
@@ -172,11 +176,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtCorreo);
             this.groupBox2.Controls.Add(this.txtRepContrasenia);
             this.groupBox2.Controls.Add(this.txtContrasena);
             this.groupBox2.Controls.Add(this.lblRepContrasenia);
             this.groupBox2.Controls.Add(this.lblContrase);
-            this.groupBox2.Controls.Add(this.txtCorreo);
             this.groupBox2.Controls.Add(this.lblCorreo);
             this.groupBox2.Controls.Add(this.textUsuario);
             this.groupBox2.Controls.Add(this.label1);
@@ -206,11 +210,6 @@
             resources.ApplyResources(this.lblContrase, "lblContrase");
             this.lblContrase.Name = "lblContrase";
             // 
-            // txtCorreo
-            // 
-            resources.ApplyResources(this.txtCorreo, "txtCorreo");
-            this.txtCorreo.Name = "txtCorreo";
-            // 
             // lblCorreo
             // 
             resources.ApplyResources(this.lblCorreo, "lblCorreo");
@@ -229,31 +228,31 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.txtDireccion);
-            this.groupBox3.Controls.Add(this.lblDireccion);
+            this.groupBox3.Controls.Add(this.txtApellido);
+            this.groupBox3.Controls.Add(this.txtNombre);
             this.groupBox3.Controls.Add(this.cbxSexo);
             this.groupBox3.Controls.Add(this.lblSexo);
             this.groupBox3.Controls.Add(this.txtEdad);
             this.groupBox3.Controls.Add(this.lblEdad);
             this.groupBox3.Controls.Add(this.dateFNacimiento);
             this.groupBox3.Controls.Add(this.lblFNacimiento);
-            this.groupBox3.Controls.Add(this.txtApellido);
             this.groupBox3.Controls.Add(this.lblApellido);
-            this.groupBox3.Controls.Add(this.txtNombre);
             this.groupBox3.Controls.Add(this.lblNombre);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
-            // txtDireccion
+            // txtApellido
             // 
-            resources.ApplyResources(this.txtDireccion, "txtDireccion");
-            this.txtDireccion.Name = "txtDireccion";
+            resources.ApplyResources(this.txtApellido, "txtApellido");
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Texto = "";
             // 
-            // lblDireccion
+            // txtNombre
             // 
-            resources.ApplyResources(this.lblDireccion, "lblDireccion");
-            this.lblDireccion.Name = "lblDireccion";
+            resources.ApplyResources(this.txtNombre, "txtNombre");
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Texto = "";
             // 
             // cbxSexo
             // 
@@ -273,7 +272,7 @@
             // 
             resources.ApplyResources(this.txtEdad, "txtEdad");
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged_1);
+            this.txtEdad.ReadOnly = true;
             // 
             // lblEdad
             // 
@@ -284,26 +283,17 @@
             // 
             resources.ApplyResources(this.dateFNacimiento, "dateFNacimiento");
             this.dateFNacimiento.Name = "dateFNacimiento";
+            this.dateFNacimiento.ValueChanged += new System.EventHandler(this.dateFNacimiento_ValueChanged);
             // 
             // lblFNacimiento
             // 
             resources.ApplyResources(this.lblFNacimiento, "lblFNacimiento");
             this.lblFNacimiento.Name = "lblFNacimiento";
             // 
-            // txtApellido
-            // 
-            resources.ApplyResources(this.txtApellido, "txtApellido");
-            this.txtApellido.Name = "txtApellido";
-            // 
             // lblApellido
             // 
             resources.ApplyResources(this.lblApellido, "lblApellido");
             this.lblApellido.Name = "lblApellido";
-            // 
-            // txtNombre
-            // 
-            resources.ApplyResources(this.txtNombre, "txtNombre");
-            this.txtNombre.Name = "txtNombre";
             // 
             // lblNombre
             // 
@@ -324,11 +314,10 @@
             this.btnAlerta.MouseEnter += new System.EventHandler(this.btnAlerta_MouseEnter);
             this.btnAlerta.MouseLeave += new System.EventHandler(this.btnAlerta_MouseLeave);
             // 
-            // contrasenia
+            // txtCorreo
             // 
-            resources.ApplyResources(this.contrasenia, "contrasenia");
-            this.contrasenia.Name = "contrasenia";
-            this.contrasenia.TextBoxtxtContrasenia = "";
+            resources.ApplyResources(this.txtCorreo, "txtCorreo");
+            this.txtCorreo.Name = "txtCorreo";
             // 
             // frmInicioSesion
             // 
@@ -370,26 +359,24 @@
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label lblRepContrasenia;
         private System.Windows.Forms.Label lblContrase;
-        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox textUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.ComboBox cbxSexo;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.DateTimePicker dateFNacimiento;
         private System.Windows.Forms.Label lblFNacimiento;
-        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnAceptar;
         private Controles.ctrlContrasenia contrasenia;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnRecuperarContrasenia;
+        private Controles.CtrlTextoBox txtApellido;
+        private Controles.CtrlTextoBox txtNombre;
+        private System.Windows.Forms.TextBox txtCorreo;
     }
 }
 

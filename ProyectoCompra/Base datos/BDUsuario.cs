@@ -1,14 +1,16 @@
 ﻿using ProyectoCompra.Clases;
+using ProyectoCompra.Controles;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProyectoCompra.Base_datos
 {
     internal class BDUsuario
     {
         //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=Compras;Integrated Security=True;";
+        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
         public static bool insertarDatos(Cliente cliente, Usuario usuario)
         {
             bool insertado = true;
@@ -29,7 +31,6 @@ namespace ProyectoCompra.Base_datos
                             cmd.Parameters.AddWithValue("@Edad", cliente.edad);
                             cmd.Parameters.AddWithValue("@Fecha_Nacimiento", cliente.fechaNacimiento);
                             cmd.Parameters.AddWithValue("@Sexo", cliente.sexo);
-                            cmd.Parameters.AddWithValue("@Direccion", cliente.direccion);
                             cmd.Parameters.AddWithValue("@CorreoElectronico", cliente.correo);
                             //USUARIO
                             cmd.Parameters.AddWithValue("@Usuario_name", usuario.username);
@@ -77,9 +78,8 @@ namespace ProyectoCompra.Base_datos
                             int edad = reader.GetInt32(8);
                             DateTime fechaNacimiento = reader.GetDateTime(9);
                             string sexo = reader.GetString(10);
-                            string direccion = reader.GetString(11);
-                            string correo = reader.GetString(12);
-                            cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, direccion, correo);
+                            string correo = reader.GetString(11);
+                            cliente = new Cliente(idCliente, nombre, apellido, edad, Convert.ToString(fechaNacimiento), sexo, correo);
                             usuarioCompleto = new Usuario(idUsuario, cliente, usuarioName, contrasenia, Convert.ToString(fechaAlta), Convert.ToString(fechaUltimaModificacion));
                         }
                     }
@@ -90,7 +90,8 @@ namespace ProyectoCompra.Base_datos
 
         public static int consultarUsuarioName(string usuarioName)
         {
-            int idUsuario = -1;
+            //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
+            int idUsuario = 0;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
@@ -98,6 +99,30 @@ namespace ProyectoCompra.Base_datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Usuario_name", usuarioName);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            idUsuario = reader.GetInt32(0);
+                        }
+                    }
+
+                }
+            }
+            return idUsuario;
+        }
+
+        public static int consultarUsuarioCorreoElectronico(string correoElectronico)
+        {
+            //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
+            int idUsuario = 0;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("ConsultarUsuarioCorreoElectronico", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -124,10 +149,9 @@ namespace ProyectoCompra.Base_datos
                         try
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@Usuario_name", datos[0]);
-                            cmd.Parameters.AddWithValue("@Direccion", datos[1]);
+                            cmd.Parameters.AddWithValue("@Usuario_Name", datos[0]);
+                            cmd.Parameters.AddWithValue("@Contrasenia", datos[1]);
                             cmd.Parameters.AddWithValue("@Correo_Electronico", datos[2]);
-                            cmd.Parameters.AddWithValue("@Contrasenia", datos[3]);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             actualizado = true;
@@ -173,5 +197,66 @@ namespace ProyectoCompra.Base_datos
             }
             return insertado;
         }
+
+        public static bool darBajaUsuarioPorUsuario(string userName, string contrasenia)
+        {
+            bool eliminado = true;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("DarBajaUsuarioPorUsuario", connection, transaction))
+                    {
+                        try
+                        {
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@Usuario_name", userName);
+                            cmd.Parameters.AddWithValue("@Contrasenia", contrasenia);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            eliminado = true;
+                        }
+                        catch (SqlException e)
+                        {
+                            MessageBox.Show(e.Message);
+                            eliminado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return eliminado;
+        }
+
+        public static bool darBajaUsuarioPorCorreoElectronico(string correoElectronico)
+        {
+            bool eliminado = true;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("DarBajaUsuarioPorCorreoElectronico", connection, transaction))
+                    {
+                        try
+                        {
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            eliminado = true;
+                        }
+                        catch (SqlException E)
+                        {
+                            eliminado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return eliminado;
+        }
+
     }
 }

@@ -1,9 +1,8 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
-using ProyectoCompra.Controles;
-using ProyectoCompra.Ficheros;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -11,6 +10,7 @@ namespace ProyectoCompra.Formularios
     public partial class frmInicioSesion : Form
     {
         private Usuario usuarioEncontrado;
+
         public frmInicioSesion()
         {
             InitializeComponent();
@@ -18,19 +18,13 @@ namespace ProyectoCompra.Formularios
 
         #region Eventos
 
-        private void btnCrearNuevoUsuario_Click(object sender, EventArgs e)
-        {
-            FrmUsuarioEdit frmCrearUsuario = new FrmUsuarioEdit();
-            frmCrearUsuario.ShowDialog();
-        }
-
         #endregion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!txtUsuario.Text.Equals("") && !contrasenia.TextBoxtxtContrasenia.Equals(""))
+            if (!string.IsNullOrEmpty(txtUsuario.Text.Trim()) && !string.IsNullOrEmpty(contrasenia.TextBoxtxtContrasenia.Trim()))
             {
-                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text, contrasenia.TextBoxtxtContrasenia, "");
+                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text.Trim(), contrasenia.TextBoxtxtContrasenia.Trim(), "");
                 if (usuarioEncontrado == null)
                 {
                     MessageBox.Show("Usuario no encontrado.");
@@ -38,8 +32,7 @@ namespace ProyectoCompra.Formularios
                 else
                 {
                     MessageBox.Show("Bienvenido");
-                    Usuario usuarioFichero = new Usuario(usuarioEncontrado.idUsuario);
-                    FicheroAuxiliar.escribirFichero(usuarioFichero);
+                    ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
                     Application.Restart();
                 }
             }
@@ -49,36 +42,53 @@ namespace ProyectoCompra.Formularios
         {
             Cliente cliente = crearCliente();
             Usuario usuario = crearUsuario();
-            if (cliente != null && usuario != null)
+            if (cliente == null || usuario == null)
             {
-                int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text);
-                if (codigoUsuarioConNombreUsado == -1)
-                {
-                    if ((BDUsuario.insertarDatos(cliente, usuario)))
-                    {
-                        MessageBox.Show("Usuario creado.");
-                        this.Close();
-                        frmInicioSesion frmInicioSesion = new frmInicioSesion();
-                        frmInicioSesion.ShowDialog();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("¡El nombre de usuario ya existe!");
-                }
+                lblAlerta.Visible = true;
+                return;
+            }
+            if (Regex.IsMatch(txtCorreo.Text, "^[a-zA-Z0-9]$"))
+            {
+                MessageBox.Show("El correo proporcionado no tiene formato de correo electrónico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cliente = null;
+                usuario = null;
+                txtCorreo.Clear();
+                return;
+            }
+            int codigoUsuarioConNombreUsado = BDUsuario.consultarUsuarioName(textUsuario.Text.Trim());
+            if (codigoUsuarioConNombreUsado != 0)
+            {
+                textUsuario.Clear();
+                MessageBox.Show("El nombre de usuario ya existe.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int codigoUsuarioConCorreoUsado = BDUsuario.consultarUsuarioCorreoElectronico(txtCorreo.Text.Trim());
+            if (codigoUsuarioConCorreoUsado != 0)
+            {
+                txtCorreo.Clear();
+                MessageBox.Show("El correo proporcionado ya está en uso.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(txtCorreo.Text.Trim());
+            if (!codigoVerificacion.Equals("-1"))
+            {
+                FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(cliente, usuario, codigoVerificacion, txtCorreo.Text.Trim());
+                frmVerificarCuenta.ShowDialog();
             }
             else
             {
-                lblAlerta.Visible = true;
+                txtCorreo.Clear();
             }
         }
 
         private Cliente crearCliente()
         {
             Cliente cliente = null;
-            if (!txtNombre.Text.Equals("") && !txtApellido.Text.Equals("") && !txtEdad.Text.Equals("") && !dateFNacimiento.Value.Equals("") && !txtDireccion.Text.Equals("") && !txtCorreo.Text.Equals(""))
+            if (!txtNombre.Texto.Equals("") && !txtApellido.Texto.Equals("") && !txtEdad.Text.Equals("") && !dateFNacimiento.Value.Equals("") && !txtCorreo.Text.Equals(""))
             {
-                cliente = new Cliente(txtNombre.Text, txtApellido.Text, int.Parse(txtEdad.Text), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtDireccion.Text, txtCorreo.Text);
+                cliente = new Cliente(txtNombre.Texto.Trim(), txtApellido.Texto.Trim(), int.Parse(txtEdad.Text.Trim()), dateFNacimiento.Value + "", cbxSexo.SelectedItem.ToString(), txtCorreo.Text.Trim());
             }
             return cliente;
         }
@@ -90,11 +100,13 @@ namespace ProyectoCompra.Formularios
             {
                 if (txtContrasena.Text.Equals(txtRepContrasenia.Text))
                 {
-                    usuario = new Usuario(textUsuario.Text, txtContrasena.Text);
+                    usuario = new Usuario(textUsuario.Text.Trim(), txtContrasena.Text.Trim());
                 }
                 else
                 {
                     MessageBox.Show("¡Las contraseñas no coinciden!");
+                    txtContrasena.Clear();
+                    txtRepContrasenia.Clear();
                 }
             }
             return usuario;
@@ -108,22 +120,6 @@ namespace ProyectoCompra.Formularios
         private void btnAlerta_MouseLeave(object sender, EventArgs e)
         {
             lblAlerta.Visible = false;
-        }
-
-        private void txtEdad_TextChanged_1(object sender, EventArgs e)
-        {
-            int numero = 0;
-            if (txtEdad.Text.Length > 0)
-            {
-                if (int.TryParse(txtEdad.Text, out numero))
-                {
-                    txtEdad.Text = Convert.ToString(numero);
-                }
-                else
-                {
-                    txtEdad.Text = "";
-                }
-            }
         }
 
         private void btnRecuperarContrasenia_Click(object sender, EventArgs e)
@@ -140,6 +136,12 @@ namespace ProyectoCompra.Formularios
         private void btnRecuperarContrasenia_MouseLeave(object sender, EventArgs e)
         {
             btnRecuperarContrasenia.ForeColor = Color.DimGray;
+        }
+
+        private void dateFNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaNacimiento = dateFNacimiento.Value;
+            txtEdad.Text = ((int)((DateTime.Now - fechaNacimiento).TotalDays / 365.25)).ToString();
         }
     }
 }

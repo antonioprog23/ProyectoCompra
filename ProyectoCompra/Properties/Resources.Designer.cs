@@ -103,6 +103,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_ayuda {
+            get {
+                object obj = ResourceManager.GetObject("icon_ayuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_bebida_alcohol {
             get {
                 object obj = ResourceManager.GetObject("icon_bebida_alcohol", resourceCulture);
@@ -193,6 +203,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_casa {
+            get {
+                object obj = ResourceManager.GetObject("icon_casa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_casa_decoracion {
             get {
                 object obj = ResourceManager.GetObject("icon_casa_decoracion", resourceCulture);
@@ -263,6 +283,16 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_compra_realizada {
+            get {
+                object obj = ResourceManager.GetObject("icon_compra_realizada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_configuracion {
             get {
                 object obj = ResourceManager.GetObject("icon_configuracion", resourceCulture);
@@ -316,6 +346,16 @@ namespace ProyectoCompra.Properties {
         internal static System.Drawing.Bitmap icon_desayuno {
             get {
                 object obj = ResourceManager.GetObject("icon_desayuno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_efectivo {
+            get {
+                object obj = ResourceManager.GetObject("icon_efectivo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -666,6 +706,36 @@ namespace ProyectoCompra.Properties {
         internal static System.Drawing.Bitmap icon_textil_hogar {
             get {
                 object obj = ResourceManager.GetObject("icon_textil_hogar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tienda2 {
+            get {
+                object obj = ResourceManager.GetObject("icon_tienda2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tipo_tarjeta {
+            get {
+                object obj = ResourceManager.GetObject("icon_tipo_tarjeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tipo_tarjeta1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_tipo_tarjeta1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

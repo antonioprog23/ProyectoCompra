@@ -50,13 +50,11 @@
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblMostrarDireccion = new System.Windows.Forms.Label();
             this.lblMostrarSexo = new System.Windows.Forms.Label();
             this.lblMostrarApellido = new System.Windows.Forms.Label();
             this.lblMostrarEdad = new System.Windows.Forms.Label();
             this.lblMostrarNombre = new System.Windows.Forms.Label();
             this.lblMostrarFNacimiento = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblFNacimiento = new System.Windows.Forms.Label();
@@ -80,6 +78,12 @@
             // 
             // btnOtrasOpciones
             // 
+            this.btnOtrasOpciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOtrasOpciones.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnOtrasOpciones.FlatAppearance.BorderSize = 0;
+            this.btnOtrasOpciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnOtrasOpciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnOtrasOpciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOtrasOpciones.Image = global::ProyectoCompra.Properties.Resources.icon_otras_opciones;
             this.btnOtrasOpciones.Location = new System.Drawing.Point(73, 4);
             this.btnOtrasOpciones.Name = "btnOtrasOpciones";
@@ -92,6 +96,12 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.Location = new System.Drawing.Point(94, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -103,7 +113,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(319, 475);
+            this.btnCancelar.Location = new System.Drawing.Point(319, 452);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 25);
             this.btnCancelar.TabIndex = 3;
@@ -113,7 +123,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(238, 475);
+            this.btnEditar.Location = new System.Drawing.Point(238, 452);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 25);
             this.btnEditar.TabIndex = 4;
@@ -199,7 +209,7 @@
             this.groupBox2.Controls.Add(this.lblContrasenia);
             this.groupBox2.Controls.Add(this.lblCorreo);
             this.groupBox2.Controls.Add(this.lblUsuario);
-            this.groupBox2.Location = new System.Drawing.Point(8, 334);
+            this.groupBox2.Location = new System.Drawing.Point(8, 311);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(386, 135);
             this.groupBox2.TabIndex = 8;
@@ -268,13 +278,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblMostrarDireccion);
             this.groupBox1.Controls.Add(this.lblMostrarSexo);
             this.groupBox1.Controls.Add(this.lblMostrarApellido);
             this.groupBox1.Controls.Add(this.lblMostrarEdad);
             this.groupBox1.Controls.Add(this.lblMostrarNombre);
             this.groupBox1.Controls.Add(this.lblMostrarFNacimiento);
-            this.groupBox1.Controls.Add(this.lblDireccion);
             this.groupBox1.Controls.Add(this.lblSexo);
             this.groupBox1.Controls.Add(this.lblEdad);
             this.groupBox1.Controls.Add(this.lblFNacimiento);
@@ -282,20 +290,10 @@
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Location = new System.Drawing.Point(8, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(386, 197);
+            this.groupBox1.Size = new System.Drawing.Size(386, 175);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos cliente";
-            // 
-            // lblMostrarDireccion
-            // 
-            this.lblMostrarDireccion.AutoSize = true;
-            this.lblMostrarDireccion.Font = new System.Drawing.Font("Arial Nova", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMostrarDireccion.Location = new System.Drawing.Point(150, 165);
-            this.lblMostrarDireccion.Name = "lblMostrarDireccion";
-            this.lblMostrarDireccion.Size = new System.Drawing.Size(35, 14);
-            this.lblMostrarDireccion.TabIndex = 17;
-            this.lblMostrarDireccion.Text = "label1";
             // 
             // lblMostrarSexo
             // 
@@ -346,16 +344,6 @@
             this.lblMostrarFNacimiento.Size = new System.Drawing.Size(35, 14);
             this.lblMostrarFNacimiento.TabIndex = 12;
             this.lblMostrarFNacimiento.Text = "label1";
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDireccion.Location = new System.Drawing.Point(28, 165);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(56, 14);
-            this.lblDireccion.TabIndex = 11;
-            this.lblDireccion.Text = "Dirección:";
             // 
             // lblSexo
             // 
@@ -412,7 +400,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(401, 508);
+            this.ClientSize = new System.Drawing.Size(401, 489);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
@@ -456,13 +444,11 @@
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblMostrarDireccion;
         private System.Windows.Forms.Label lblMostrarSexo;
         private System.Windows.Forms.Label lblMostrarApellido;
         private System.Windows.Forms.Label lblMostrarEdad;
         private System.Windows.Forms.Label lblMostrarNombre;
         private System.Windows.Forms.Label lblMostrarFNacimiento;
-        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblFNacimiento;

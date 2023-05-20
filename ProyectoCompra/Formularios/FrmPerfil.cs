@@ -1,6 +1,4 @@
-﻿using ProyectoCompra.Base_datos;
-using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
+﻿using ProyectoCompra.Clases;
 using System;
 using System.Windows.Forms;
 
@@ -34,14 +32,13 @@ namespace ProyectoCompra.Formularios
                 lblMostrarFNacimiento.Text = usuarioRecuperado.cliente.fechaNacimiento.ToUpper();
                 lblMostrarSexo.Text = usuarioRecuperado.cliente.sexo.ToString().ToUpper();
                 lblMostrarCorreo.Text = usuarioRecuperado.cliente.correo.ToString().ToUpper();
-                lblMostrarDireccion.Text = usuarioRecuperado.cliente.direccion.ToString().ToUpper();
                 lblMostrarUltimaModificacion.Text = usuarioRecuperado.fechaUltimaModificacion.ToString().ToUpper();
             }
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            FicheroAuxiliar.borrarFicheroAux();
+            ConfigSesion.borrarReferenciaIdUsuario();
             Application.Restart();
         }
 
