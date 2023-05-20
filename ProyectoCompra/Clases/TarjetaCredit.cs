@@ -25,6 +25,15 @@ namespace ProyectoCompra.Clases
             this.cvv = cvv;
         }
 
+        public TarjetaCredit(string titular, string numerosTarjeta, string mesVencimiento, string anioVencimiento, string cvv)
+        {
+            this.titular = titular;
+            this.numerosTarjeta = numerosTarjeta;
+            this.mesVencimiento = mesVencimiento;
+            this.anioVencimiento = anioVencimiento;
+            this.cvv = cvv;
+        }
+
         //PARA EL FICHERO
         public TarjetaCredit(string linea)
         {

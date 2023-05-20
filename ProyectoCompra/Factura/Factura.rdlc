@@ -28,7 +28,7 @@
           </Border>
         </Style>
       </Image>
-      <Textbox Name="Textbox1">
+      <Textbox Name="Empresa">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -42,7 +42,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>3.70099cm</Top>
         <Left>0.81703cm</Left>
         <Height>0.6cm</Height>
@@ -58,7 +57,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox2">
+      <Textbox Name="CorreoEmpresa">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -72,7 +71,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>7.58294cm</Top>
         <Left>0.81703cm</Left>
         <Height>0.6cm</Height>
@@ -88,7 +86,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox3">
+      <Textbox Name="Telefono">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -102,7 +100,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>6.80655cm</Top>
         <Left>0.81703cm</Left>
         <Height>0.6cm</Height>
@@ -118,7 +115,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox4">
+      <Textbox Name="CalleEmpresa">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -132,7 +129,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>5.25377cm</Top>
         <Left>0.81703cm</Left>
         <Height>0.6cm</Height>
@@ -148,7 +144,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox5">
+      <Textbox Name="IdentificadorEmpresa">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -162,7 +158,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>4.47738cm</Top>
         <Left>0.81703cm</Left>
         <Height>0.6cm</Height>
@@ -178,7 +173,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox7">
+      <Textbox Name="FacturaVenta">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -192,7 +187,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.94932cm</Top>
         <Left>20.59495cm</Left>
         <Height>0.6cm</Height>
@@ -208,7 +202,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox8">
+      <Textbox Name="lblFechaFactura">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -222,7 +216,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>1.72571cm</Top>
         <Left>18.07731cm</Left>
         <Height>0.6cm</Height>
@@ -268,7 +261,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox9">
+      <Textbox Name="CiudadEmpresa">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -282,7 +275,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>6.03016cm</Top>
         <Left>0.81703cm</Left>
         <Height>0.6cm</Height>
@@ -298,7 +290,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Nombre1">
+      <Textbox Name="NombrePersona">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -312,7 +304,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Nombre1</rd:DefaultName>
         <Top>4.47738cm</Top>
         <Left>18.07731cm</Left>
         <Height>0.6cm</Height>
@@ -328,7 +319,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Direccion">
+      <Textbox Name="IdentificadorPersona">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -342,7 +333,6 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Direccion</rd:DefaultName>
         <Top>5.25377cm</Top>
         <Left>18.07731cm</Left>
         <Height>0.6cm</Height>
@@ -358,7 +348,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Ciudad">
+      <Textbox Name="DireccionPersona">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -372,42 +362,11 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Ciudad</rd:DefaultName>
         <Top>6.03016cm</Top>
         <Left>18.07731cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>13</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Pais">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!Pais.Value, "Direccion")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Pais</rd:DefaultName>
-        <Top>6.03016cm</Top>
-        <Left>21.01828cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -437,7 +396,7 @@
         <Left>18.07731cm</Left>
         <Height>0.6cm</Height>
         <Width>5.44097cm</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -467,7 +426,7 @@
         <Left>18.07731cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -497,7 +456,7 @@
         <Left>0.81703cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>17</ZIndex>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -527,7 +486,7 @@
         <Left>9.69052cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>18</ZIndex>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -557,7 +516,7 @@
         <Left>12.36691cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>19</ZIndex>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

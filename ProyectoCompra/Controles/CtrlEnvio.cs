@@ -139,16 +139,65 @@ namespace ProyectoCompra.Controles
 
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 208);
 
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+            {
+                tarjetaInvitado();
+            }
+            else
+            {
+                tarjetaUsuario();
+            }
+        }
+
+        private void tarjetaUsuario()
+        {
             tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(ConfigSesion.obtenerReferenciaIdUsuario());
             if (tarjetaCredit != null)
             {
                 ctrlTxtTitular.Texto = tarjetaCredit.titular;
                 ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                ctrlCVV.Texto = tarjetaCredit.cvv;
+                configuracionTarjeta();
             }
             else
             {
                 this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
             }
+        }
+
+        private void tarjetaInvitado()
+        {
+            tarjetaCredit = FicheroTarjeta.leerFichero();
+            if (tarjetaCredit != null)
+            {
+                ctrlTxtTitular.Texto = tarjetaCredit.titular;
+                ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                ctrlCVV.Texto = tarjetaCredit.cvv;
+                configuracionTarjeta();
+            }
+            else
+            {
+                this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            }
+        }
+
+        private void configuracionTarjeta()
+        {
+            ctrlTxtTitular.Visible = true;
+            ctrlTxtNTarjeta.Visible = true;
+            ctrlTxtMesVen.Visible = true;
+            ctrlAnioVen.Visible = true;
+            ctrlCVV.Visible = true;
+
+            lblTitular.Visible = true;
+            lblNTarjeta.Visible = true;
+            lblMesVen.Visible = true;
+            lblAnioVen.Visible = true;
+            lblCVV.Visible = true;
         }
 
         private void rbnEfectivo_Click(object sender, EventArgs e)

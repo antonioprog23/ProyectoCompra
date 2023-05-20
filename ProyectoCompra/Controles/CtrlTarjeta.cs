@@ -1,5 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
+using ProyectoCompra.Ficheros;
 using System;
 using System.Windows.Forms;
 
@@ -17,7 +18,7 @@ namespace ProyectoCompra.Controles
         private void btnEditar_Click(object sender, EventArgs e)
         {
             cargarBotones(true, true, false);
-            cargarControles(true, false);
+            cargarControles(true, false, false);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -30,18 +31,30 @@ namespace ProyectoCompra.Controles
             TarjetaCredit tarjetaCredit = crearTarjetaCredito();
             if (tarjetaCredit != null)
             {
-                if (BDTarjetaCredito.actualizarTarjetaCredito(tarjetaCredit))
+                if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
                 {
+                    FicheroTarjeta.escribirFichero(tarjetaCredit);
                     btnAceptar.Enabled = false;
                     btnCancelar.Enabled = false;
-                    MessageBox.Show("Se han actualizado los datos. Vuelva a abrir la ventana para actualizar los cambios.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarControles(false, false, true);
+                    MessageBox.Show("Se han actualizado los datos.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (BDTarjetaCredito.actualizarTarjetaCredito(tarjetaCredit))
+                    {
+                        btnAceptar.Enabled = false;
+                        btnCancelar.Enabled = false;
+                        cargarControles(false, false, true);
+                        MessageBox.Show("Se han actualizado los datos.", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            cargarControles(false, true);
+            cargarControles(false, true, false);
             cargarDatosTarjetaCredito();
             cargarBotones(false, false, true);
         }
@@ -53,38 +66,72 @@ namespace ProyectoCompra.Controles
 
         private void cargarDatosTarjetaCredito()
         {
-            int idReferenciaUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
-            if (idReferenciaUsuario != 0)
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-                tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(Convert.ToInt32(idReferenciaUsuario));
+                obtenerTarjetaInvitado();
+            }
+            else
+            {
+                obtenerTarjetaUsuario();
+            }
+        }
 
-                if (tarjetaCredit != null)
-                {
-                    ctrlTxtTitular.Texto = tarjetaCredit.titular;
-                    ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
-                    ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
-                    ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
-                    ctrlCVV.Texto = tarjetaCredit.cvv;
-                    btnEliminar.Visible = true;
-                }
-                else
-                {
-                    ctrlTxtTitular.Texto = "";
-                    ctrlTxtNTarjeta.Texto = "";
-                    ctrlTxtMesVen.Texto = "";
-                    ctrlAnioVen.Texto = "";
-                    ctrlCVV.Texto = "";
-                }
+        private void obtenerTarjetaUsuario()
+        {
+            tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(ConfigSesion.obtenerReferenciaIdUsuario());
+
+            if (tarjetaCredit != null)
+            {
+                ctrlTxtTitular.Texto = tarjetaCredit.titular;
+                ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                ctrlCVV.Texto = tarjetaCredit.cvv;
+                btnEliminar.Visible = true;
+            }
+            else
+            {
+                ctrlTxtTitular.Texto = "";
+                ctrlTxtNTarjeta.Texto = "";
+                ctrlTxtMesVen.Texto = "";
+                ctrlAnioVen.Texto = "";
+                ctrlCVV.Texto = "";
+            }
+        }
+
+        private void obtenerTarjetaInvitado()
+        {
+            tarjetaCredit = FicheroTarjeta.leerFichero();
+
+            if (tarjetaCredit != null)
+            {
+                ctrlTxtTitular.Texto = tarjetaCredit.titular;
+                ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                ctrlCVV.Texto = tarjetaCredit.cvv;
+                btnEliminar.Visible = true;
+            }
+            else
+            {
+                ctrlTxtTitular.Texto = "";
+                ctrlTxtNTarjeta.Texto = "";
+                ctrlTxtMesVen.Texto = "";
+                ctrlAnioVen.Texto = "";
+                ctrlCVV.Texto = "";
             }
         }
 
         private TarjetaCredit crearTarjetaCredito()
         {
             TarjetaCredit tarjetaCredit = null;
-            int idReferenciaUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
-            if (idReferenciaUsuario != null)
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-                tarjetaCredit = new TarjetaCredit(idReferenciaUsuario, ctrlTxtTitular.Texto, ctrlTxtNTarjeta.Texto, ctrlTxtMesVen.Texto, ctrlAnioVen.Texto, ctrlCVV.Texto);
+                tarjetaCredit = new TarjetaCredit(ctrlTxtTitular.Texto, ctrlTxtNTarjeta.Texto, ctrlTxtMesVen.Texto, ctrlAnioVen.Texto, ctrlCVV.Texto);
+            }
+            else
+            {
+                tarjetaCredit = new TarjetaCredit(ConfigSesion.obtenerReferenciaIdUsuario(), ctrlTxtTitular.Texto, ctrlTxtNTarjeta.Texto, ctrlTxtMesVen.Texto, ctrlAnioVen.Texto, ctrlCVV.Texto);
             }
             return tarjetaCredit;
         }
@@ -103,7 +150,7 @@ namespace ProyectoCompra.Controles
                 btnEliminar.Visible = true;
             }
         }
-        private void cargarControles(bool editar, bool cancelar)
+        private void cargarControles(bool editar, bool cancelar, bool aceptar)
         {
             if (editar)
             {
@@ -138,6 +185,14 @@ namespace ProyectoCompra.Controles
                 lblMesVen.Text = string.Format("Mes vencimiento:", lblMesVen.Text);
                 lblAnioVen.Text = string.Format("Año vencimiento:", lblAnioVen.Text);
                 lblCVV.Text = string.Format("CVV:", lblCVV.Text);
+            }
+            if (aceptar)
+            {
+                ctrlTxtTitular.Enabled = false;
+                ctrlTxtNTarjeta.Enabled = false;
+                ctrlTxtMesVen.Enabled = false;
+                ctrlAnioVen.Enabled = false;
+                ctrlCVV.Enabled = false;
             }
         }
 
