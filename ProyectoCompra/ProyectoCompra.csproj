@@ -50,10 +50,35 @@
   <PropertyGroup />
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,13 +92,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base datos\BDCarrito.cs" />
+    <Compile Include="Base datos\BDDireccion.cs" />
     <Compile Include="Base datos\BDProducto.cs" />
+    <Compile Include="Base datos\BDTarjetaCredito.cs" />
     <Compile Include="Base datos\BDUsuario.cs" />
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\ConfigSesion.cs" />
+    <Compile Include="Clases\Direccion.cs" />
     <Compile Include="Clases\Imagen.cs" />
+    <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\TarjetaCredit.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
     <Compile Include="Controles\CtrlContraseña.cs">
@@ -82,11 +113,35 @@
     <Compile Include="Controles\CtrlContraseña.Designer.cs">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlDireccion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlDireccion.Designer.cs">
+      <DependentUpon>CtrlDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlEfectivo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlEfectivo.Designer.cs">
+      <DependentUpon>CtrlEfectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlEnvio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlEnvio.Designer.cs">
+      <DependentUpon>CtrlEnvio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlHistorialPedido.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controles\CtrlHistorialPedido.Designer.cs">
       <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlMasInformacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlMasInformacion.Designer.cs">
+      <DependentUpon>CtrlMasInformacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\CtrlOtrasOpciones.cs">
       <SubType>UserControl</SubType>
@@ -100,11 +155,29 @@
     <Compile Include="Controles\CtrlProductoCarrito.Designer.cs">
       <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\CtrlProductoHistorial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlProductoHistorial.Designer.cs">
+      <DependentUpon>CtrlProductoHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CtrlProductosMostrar.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controles\CtrlProductosMostrar.Designer.cs">
       <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlResumenPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlResumenPedido.Designer.cs">
+      <DependentUpon>CtrlResumenPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrlTarjeta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrlTarjeta.Designer.cs">
+      <DependentUpon>CtrlTarjeta.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\CtrlTextoBox.cs">
       <SubType>UserControl</SubType>
@@ -112,8 +185,28 @@
     <Compile Include="Controles\CtrlTextoBox.Designer.cs">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="EasyShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EasyShopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
-    <Compile Include="Ficheros\FicheroAuxiliar.cs" />
+    <Compile Include="Clases\CarritoProvisional.cs" />
+    <Compile Include="Ficheros\FicheroCarrito.cs" />
+    <Compile Include="Ficheros\FicheroDireccion.cs" />
+    <Compile Include="Ficheros\FicheroTarjeta.cs" />
+    <Compile Include="Formularios\FrmAccesoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmAccesoPago.Designer.cs">
+      <DependentUpon>FrmAccesoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmBajaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBajaUsuario.Designer.cs">
+      <DependentUpon>FrmBajaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,17 +231,41 @@
     <Compile Include="Formularios\FrmDetalleProducto.Designer.cs">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmDireccion.Designer.cs">
+      <DependentUpon>FrmDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmHistorialPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmHistorialPedidos.Designer.cs">
       <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmMasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMasDetalles.Designer.cs">
+      <DependentUpon>FrmMasDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmOtrasOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmOtrasOpciones.Designer.cs">
       <DependentUpon>FrmOtrasOpciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPagos.Designer.cs">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmProductos.cs">
       <SubType>Form</SubType>
@@ -191,6 +308,12 @@
     </Compile>
     <Compile Include="Formularios\FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmVerificarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmVerificarCuenta.Designer.cs">
+      <DependentUpon>FrmVerificarCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AlimentacionS1.Designer.cs">
@@ -269,11 +392,24 @@
       <DependentUpon>AlimentacionS9.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Controles\CtrlContraseña.resx">
       <DependentUpon>CtrlContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlDireccion.resx">
+      <DependentUpon>CtrlDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlEfectivo.resx">
+      <DependentUpon>CtrlEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlEnvio.resx">
+      <DependentUpon>CtrlEnvio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlHistorialPedido.resx">
       <DependentUpon>CtrlHistorialPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlMasInformacion.resx">
+      <DependentUpon>CtrlMasInformacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlOtrasOpciones.resx">
       <DependentUpon>CtrlOtrasOpciones.cs</DependentUpon>
@@ -281,11 +417,27 @@
     <EmbeddedResource Include="Controles\CtrlProductoCarrito.resx">
       <DependentUpon>CtrlProductoCarrito.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlProductoHistorial.resx">
+      <DependentUpon>CtrlProductoHistorial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlProductosMostrar.resx">
       <DependentUpon>CtrlProductosMostrar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlResumenPedido.resx">
+      <DependentUpon>CtrlResumenPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CtrlTarjeta.resx">
+      <DependentUpon>CtrlTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Factura.rdlc" />
+    <EmbeddedResource Include="Formularios\FrmAccesoPago.resx">
+      <DependentUpon>FrmAccesoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBajaUsuario.resx">
+      <DependentUpon>FrmBajaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
@@ -299,11 +451,23 @@
     <EmbeddedResource Include="Formularios\FrmDetalleProducto.resx">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmDireccion.resx">
+      <DependentUpon>FrmDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmHistorialPedidos.resx">
       <DependentUpon>FrmHistorialPedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMasDetalles.resx">
+      <DependentUpon>FrmMasDetalles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmOtrasOpciones.resx">
       <DependentUpon>FrmOtrasOpciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPagos.resx">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -332,6 +496,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmVerificarCuenta.resx">
+      <DependentUpon>FrmVerificarCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\AlimentacionS1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -399,7 +566,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Ficheros\datosProvisionales.text" />
+    <None Include="EasyShopDataSet.xsc">
+      <DependentUpon>EasyShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EasyShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EasyShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EasyShopDataSet.xss">
+      <DependentUpon>EasyShopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -620,10 +797,46 @@
   <ItemGroup>
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
     <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
+    <Content Include="Procedimientos almacenados\DarBajaUsuarioPorCorreoElectronico.sql" />
+    <Content Include="Procedimientos almacenados\DarBajaUsuario.sql" />
     <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
     <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\icon_compra.png" />
+    <None Include="Resources\15_19.jpg" />
+    <None Include="Resources\15_20.jpg" />
+    <None Include="Resources\15_11.jpg" />
+    <None Include="Resources\15_12.jpg" />
+    <None Include="Resources\15_13.jpeg" />
+    <None Include="Resources\15_14.jpg" />
+    <None Include="Resources\15_15.jpg" />
+    <None Include="Resources\15_16.jpg" />
+    <None Include="Resources\15_17.jpeg" />
+    <None Include="Resources\15_18.jpeg" />
+    <None Include="Resources\15_21.jpeg" />
+    <None Include="Resources\15_22.jpg" />
+    <None Include="Resources\15_23.jpeg" />
+    <None Include="Resources\15_24.jpeg" />
+    <None Include="Resources\icon_ayuda.png" />
+    <None Include="Resources\icon_credit_card.png" />
+    <None Include="Resources\icon_compra_realizada.png" />
+    <None Include="Resources\icon_casa.png" />
+    <None Include="Resources\icon_efectivo.png" />
     <Content Include="Resources\icon_otras_opciones.png" />
+    <None Include="Resources\icon_tienda2.png" />
+    <Content Include="Resources\icon_tipo_tarjeta.png" />
     <Content Include="Resources\op_0.png" />
     <None Include="Resources\op_3.png" />
     <None Include="Resources\op_2.png" />

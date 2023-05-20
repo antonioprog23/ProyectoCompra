@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProyectoCompra.Formularios;
+using System;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -15,6 +9,12 @@ namespace ProyectoCompra.Controles
         public CtrlHistorialPedido()
         {
             InitializeComponent();
+        }
+
+        private void btnMasDetalles_Click(object sender, EventArgs e)
+        {
+            FrmMasDetalles frmMasDetalles = new FrmMasDetalles();
+            frmMasDetalles.ShowDialog();
         }
     }
 }

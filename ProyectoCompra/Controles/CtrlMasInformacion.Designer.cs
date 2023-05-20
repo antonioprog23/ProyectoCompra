@@ -1,0 +1,232 @@
+﻿namespace ProyectoCompra.Controles
+{
+    partial class CtrlMasInformacion
+    {
+        /// <summary> 
+        /// Variable del diseñador necesaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Limpiar los recursos que se estén usando.
+        /// </summary>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código generado por el Diseñador de componentes
+
+        /// <summary> 
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblMetodoEnvio = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNomCliente = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblMetodoPago = new System.Windows.Forms.Label();
+            this.lblMPago = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.lblCP = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnDescargarFact = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lblMetodoEnvio
+            // 
+            this.lblMetodoEnvio.AutoSize = true;
+            this.lblMetodoEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMetodoEnvio.Location = new System.Drawing.Point(12, 10);
+            this.lblMetodoEnvio.Name = "lblMetodoEnvio";
+            this.lblMetodoEnvio.Size = new System.Drawing.Size(104, 13);
+            this.lblMetodoEnvio.TabIndex = 0;
+            this.lblMetodoEnvio.Text = "Método de envío";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Envío a domicilio";
+            // 
+            // lblNomCliente
+            // 
+            this.lblNomCliente.AutoSize = true;
+            this.lblNomCliente.Location = new System.Drawing.Point(12, 87);
+            this.lblNomCliente.Name = "lblNomCliente";
+            this.lblNomCliente.Size = new System.Drawing.Size(111, 13);
+            this.lblNomCliente.TabIndex = 3;
+            this.lblNomCliente.Text = "Nombre de la persona";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Dirección de envío";
+            // 
+            // lblMetodoPago
+            // 
+            this.lblMetodoPago.AutoSize = true;
+            this.lblMetodoPago.Location = new System.Drawing.Point(242, 32);
+            this.lblMetodoPago.Name = "lblMetodoPago";
+            this.lblMetodoPago.Size = new System.Drawing.Size(84, 13);
+            this.lblMetodoPago.TabIndex = 5;
+            this.lblMetodoPago.Text = "Tarjeta bancaria";
+            // 
+            // lblMPago
+            // 
+            this.lblMPago.AutoSize = true;
+            this.lblMPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMPago.Location = new System.Drawing.Point(242, 10);
+            this.lblMPago.Name = "lblMPago";
+            this.lblMPago.Size = new System.Drawing.Size(99, 13);
+            this.lblMPago.TabIndex = 4;
+            this.lblMPago.Text = "Método de pago";
+            // 
+            // lblCalle
+            // 
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(12, 109);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(76, 13);
+            this.lblCalle.TabIndex = 8;
+            this.lblCalle.Text = "Calle de envío";
+            // 
+            // lblCP
+            // 
+            this.lblCP.AutoSize = true;
+            this.lblCP.Location = new System.Drawing.Point(12, 131);
+            this.lblCP.Name = "lblCP";
+            this.lblCP.Size = new System.Drawing.Size(88, 13);
+            this.lblCP.TabIndex = 9;
+            this.lblCP.Text = "Zaragoza, 50000";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(12, 153);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(61, 13);
+            this.lblTelefono.TabIndex = 10;
+            this.lblTelefono.Text = "600000000";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(242, 153);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "600000000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(242, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Zaragoza, 50000";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(242, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Calle de envío";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(242, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Nombre de la persona";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(242, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Dirección de envío";
+            // 
+            // btnDescargarFact
+            // 
+            this.btnDescargarFact.Location = new System.Drawing.Point(360, 180);
+            this.btnDescargarFact.Name = "btnDescargarFact";
+            this.btnDescargarFact.Size = new System.Drawing.Size(113, 23);
+            this.btnDescargarFact.TabIndex = 16;
+            this.btnDescargarFact.Text = "Descargar factura";
+            this.btnDescargarFact.UseVisualStyleBackColor = true;
+            // 
+            // CtrlMasInformacion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.Controls.Add(this.btnDescargarFact);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.lblCP);
+            this.Controls.Add(this.lblCalle);
+            this.Controls.Add(this.lblMetodoPago);
+            this.Controls.Add(this.lblMPago);
+            this.Controls.Add(this.lblNomCliente);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblMetodoEnvio);
+            this.Name = "CtrlMasInformacion";
+            this.Size = new System.Drawing.Size(476, 211);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblMetodoEnvio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNomCliente;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMetodoPago;
+        private System.Windows.Forms.Label lblMPago;
+        private System.Windows.Forms.Label lblCalle;
+        private System.Windows.Forms.Label lblCP;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDescargarFact;
+    }
+}

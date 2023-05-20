@@ -3,18 +3,18 @@ using System.IO;
 
 namespace ProyectoCompra.Ficheros
 {
-    internal class FicheroAuxiliar
+    internal class FicheroTarjeta
     {
         //CONSTANTE
-        private const string FICHERO = "..\\..\\Ficheros\\datosProvisionales.text";
+        private const string FICHERO = "..\\..\\Ficheros\\FicheroTarjeta.text";
 
-        public static void escribirFichero(Usuario usuario)
+        public static void escribirFichero(TarjetaCredit tarjetaCredit)
         {
             try
             {
                 using (StreamWriter sw = new StreamWriter(FICHERO))
                 {
-                    sw.WriteLine(usuario.toStringConSeparador());
+                    sw.WriteLine(tarjetaCredit.ToStringWithSeparator());
                     File.SetAttributes(FICHERO, FileAttributes.Encrypted);
                     File.SetAttributes(FICHERO, FileAttributes.Normal);
                 }
@@ -29,9 +29,9 @@ namespace ProyectoCompra.Ficheros
             }
         }
 
-        public static Usuario leerFichero()
+        public static TarjetaCredit leerFichero()
         {
-            Usuario usuario = null;
+            TarjetaCredit tarjetaCredit = null;
             try
             {
                 if (File.Exists(FICHERO))
@@ -41,47 +41,25 @@ namespace ProyectoCompra.Ficheros
                         string linea = sr.ReadLine();
                         if (linea != null)
                         {
-                            usuario = new Usuario(linea);
+                            tarjetaCredit = new TarjetaCredit(linea);
                         }
                     }
                 }
             }
             catch (FileNotFoundException e)
             {
-
+                throw e;
             }
             catch (DirectoryNotFoundException d)
             {
-
+                throw d;
             }
             catch (IOException e)
             {
-
+                throw e;
             }
 
-            return usuario;
-        }
-
-        public static bool borrarFicheroAux()
-        {
-            bool eliminado = false;
-            if (File.Exists(FICHERO))
-            {
-                try
-                {
-                    File.Delete(FICHERO);
-                    eliminado = true;
-                }
-                catch (DirectoryNotFoundException)
-                {
-
-                }
-                catch (IOException)
-                {
-
-                }
-            }
-            return eliminado;
+            return tarjetaCredit;
         }
     }
 }

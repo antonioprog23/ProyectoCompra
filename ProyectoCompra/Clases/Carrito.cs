@@ -5,9 +5,11 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace ProyectoCompra.Clases
 {
-    internal class Carrito
+    public class Carrito
     {
         public int cantidad { get; set; }
+        public decimal total { get; set; }
+        public string iva { get; set; }
         public List<Carrito> lista;
         private BDCarrito BDCarrito;
         public string rutaImagen { set; get; }
@@ -24,6 +26,14 @@ namespace ProyectoCompra.Clases
         {
             this.cantidad = cantidad;
             this.producto = producto;
+        }
+
+        public Carrito(int cantidad, List<Carrito> lista, string iva, decimal total)
+        {
+            this.cantidad = cantidad;
+            this.lista = lista;
+            this.iva = iva;
+            this.total = total;
         }
 
         public Carrito() { }
@@ -49,5 +59,15 @@ namespace ProyectoCompra.Clases
             return isVacio;
         }
 
+        public decimal calcularSubTotal(List<Carrito> productos)
+        {
+            decimal subtTotal = 0;
+
+            foreach (Carrito producto in productos)
+            {
+                subtTotal += producto.producto.precio * producto.cantidad;
+            }
+            return subtTotal;
+        }
     }
 }

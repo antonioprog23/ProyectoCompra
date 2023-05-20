@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="mnAlimentacion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="mnAlimentacion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -128,17 +134,6 @@
         AUDRAQpVUOBg0wwyGKhmHVQ5JgBFByhUk1c9RtL4FawxMTn1HTAqS6BKsQNQdCQkJj8FBU5SZff/xMz8
         PyAbgeLFwRHRf90CwxZDlWIHoOgAKtaKj4+3SE5OFoIKM7j5hywwd/f/T9AAXMA9MAxiQEDobKgQaQCk
         0TMoPBzKJRcwMAAACHgATCO8OCcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="mnAlimentacion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="btnPerfil.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAGRJREFUKFNjIBfIAvF0KAaxcYL5QCwCxSA2TrAUiJmgGMTGCRyAeBUU24MEsAFO
-        IO4EYpCVINwBFcMAk4DYDMIEA3MgnghhIgAbEM+CMFEASAwkBwcsQCwIYaIAkBhIjljAwAAAocILS6hJ
-        D6MAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

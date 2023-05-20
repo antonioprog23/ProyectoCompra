@@ -20,12 +20,14 @@ namespace ProyectoCompra.Clases
         {
             this.id = id;
         }
-
-        public Cliente(string nombre, string apellido, int edad, string fechaNacimiento, string sexo, string direccion, string correo) : base(nombre, apellido, edad, fechaNacimiento, sexo, direccion, correo)
+        public Cliente(int id, string nombre, string apellido, int edad, string fechaNacimiento, string sexo, string correo) : base(nombre, apellido, edad, fechaNacimiento, sexo, correo)
+        {
+            this.id = id;
+        }
+        public Cliente(string nombre, string apellido, int edad, string fechaNacimiento, string sexo, string correo) : base(nombre, apellido, edad, fechaNacimiento, sexo, correo)
         {
 
         }
-
         #endregion
 
         #region Métodos

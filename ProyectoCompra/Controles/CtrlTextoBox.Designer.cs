@@ -39,11 +39,10 @@
             this.textBox.Size = new System.Drawing.Size(204, 20);
             this.textBox.TabIndex = 0;
             this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // CtrlTextoBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.textBox);
             this.Name = "CtrlTextoBox";

@@ -69,6 +69,7 @@
             this.btnInvitado.TabIndex = 1;
             this.btnInvitado.Text = "Invitado";
             this.btnInvitado.UseVisualStyleBackColor = true;
+            this.btnInvitado.Click += new System.EventHandler(this.btnInvitado_Click);
             // 
             // btnUsuario
             // 
@@ -78,6 +79,7 @@
             this.btnUsuario.TabIndex = 0;
             this.btnUsuario.Text = "Iniciar Sesión";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // FrmModoCompra
             // 
