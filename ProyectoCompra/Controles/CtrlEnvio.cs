@@ -13,14 +13,17 @@ namespace ProyectoCompra.Controles
         public Carrito carritoListo { get; set; }
         public CarritoProvisional carritoProvisionalListo { get; set; }
 
-        private List<Direccion> direcciones;
-        private TarjetaCredit tarjetaCredit;
+        public List<Direccion> direcciones { get; set; }
+        public TarjetaCredit tarjetaCredit { get; set; }
+        public bool isEfectivoElegida { get; set; }
+        public Button btnContinuar { get; set; }
 
-        public CtrlEnvio()
+        public CtrlEnvio(Button btnContinuar)
         {
             InitializeComponent();
             //TARJETA
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            this.btnContinuar = btnContinuar;
         }
 
         private void CtrlEnvio_Load(object sender, EventArgs e)
@@ -127,6 +130,7 @@ namespace ProyectoCompra.Controles
                 frmDireccion.ShowDialog();
                 direccionUsuario();
             }
+            comprobarBotonContinuar();
         }
 
         private void rbnTarjeta_Click(object sender, EventArgs e)
@@ -147,6 +151,7 @@ namespace ProyectoCompra.Controles
             {
                 tarjetaUsuario();
             }
+            comprobarBotonContinuar();
         }
 
         private void tarjetaUsuario()
@@ -204,6 +209,8 @@ namespace ProyectoCompra.Controles
         {
             rbnTarjeta.Checked = false;
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            this.isEfectivoElegida = true;
+            comprobarBotonContinuar();
         }
 
         private void direccionInvitado()
@@ -297,6 +304,12 @@ namespace ProyectoCompra.Controles
             }
         }
 
-
+        private void comprobarBotonContinuar()
+        {
+            if (((direcciones != null) && tarjetaCredit != null) || (((direcciones != null) && isEfectivoElegida)))
+            {
+                this.btnContinuar.Enabled = true;
+            }
+        }
     }
 }

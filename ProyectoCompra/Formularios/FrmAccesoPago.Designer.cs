@@ -37,7 +37,6 @@
             this.lblPTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.ctrlEnvio1 = new ProyectoCompra.Controles.CtrlEnvio();
             this.gbxResumen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +64,7 @@
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(259, 23);
             this.btnContinuar.TabIndex = 9;
-            this.btnContinuar.Text = "Continuar";
+            this.btnContinuar.Text = "Realizar pedido";
             this.btnContinuar.UseVisualStyleBackColor = true;
             this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
@@ -141,12 +140,16 @@
             // ctrlEnvio1
             // 
             this.ctrlEnvio1.AutoSize = true;
+            this.ctrlEnvio1.btnContinuar = this.btnContinuar;
             this.ctrlEnvio1.carritoListo = null;
             this.ctrlEnvio1.carritoProvisionalListo = null;
+            this.ctrlEnvio1.direcciones = null;
+            this.ctrlEnvio1.isEfectivoElegida = false;
             this.ctrlEnvio1.Location = new System.Drawing.Point(12, 12);
             this.ctrlEnvio1.Name = "ctrlEnvio1";
             this.ctrlEnvio1.Size = new System.Drawing.Size(509, 513);
             this.ctrlEnvio1.TabIndex = 3;
+            this.ctrlEnvio1.tarjetaCredit = null;
             // 
             // FrmAccesoPago
             // 
@@ -178,7 +181,7 @@
         private System.Windows.Forms.Label lblPTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnContinuar;
         private Controles.CtrlEnvio ctrlEnvio1;
+        public System.Windows.Forms.Button btnContinuar;
     }
 }

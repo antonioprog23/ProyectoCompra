@@ -23,6 +23,7 @@ namespace ProyectoCompra.Formularios
             InitializeComponent();
             this.carritoListo = carritoListo;
             this.ctrlEnvio1.carritoListo = carritoListo;
+            ctrlEnvio1.btnContinuar = this.btnContinuar;
         }
 
         public FrmAccesoPago(CarritoProvisional carritoProvisionalListo)
@@ -48,8 +49,8 @@ namespace ProyectoCompra.Formularios
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-
+            Pedido pedido = new Pedido(ConfigSesion.obtenerReferenciaIdUsuario());
+            BDPedido.actualizarPedido(pedido);
         }
-
     }
 }

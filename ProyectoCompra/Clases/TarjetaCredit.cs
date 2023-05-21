@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCompra.Clases
 {
-    internal class TarjetaCredit
+    public class TarjetaCredit
     {
         public int idUsusario { get; set; }
         public string titular { get; set; }

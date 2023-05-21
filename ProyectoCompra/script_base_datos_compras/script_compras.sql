@@ -122,23 +122,23 @@ CREATE TABLE Estado_Pedido
 CREATE TABLE Pedido
 (
 	Id_Pedido INT PRIMARY KEY,
-	Id_Cliente INT NOT NULL,
+	Id_Usuario INT NOT NULL,
 	Id_Estado_Pedido int NOT NULL,
 	Total DECIMAL(5,2) NOT NULL,
 	Fecha DATETIME NOT NULL,
-	CONSTRAINT constraint_id_cliente_pedido_fk FOREIGN KEY (Id_Cliente) REFERENCES cliente (Id_Cliente),
-	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES estado_pedido (Id_Estado_Pedido)
+	CONSTRAINT constraint_id_usuario_pedido_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario),
+	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES Estado_Pedido (Id_Estado_Pedido)
 )
 
 -- LINEA_PEDIDO
 CREATE TABLE Linea_Pedido
 (
-	Id_Linea_Pedido INT PRIMARY KEY,
+	Id_Linea_Pedido INT IDENTITY,
 	Id_Pedido INT NOT NULL,
 	Id_Producto INT NOT NULL,
 	Cantidad INT NOT NULL,
 	Subtotal DECIMAL(5,2) NOT NULL,
-	IVA DECIMAL(5,2) NOT NULL,
+	CONSTRAINT constraint_id_linea_pedido_pk PRIMARY KEY (Id_Linea_Pedido,Id_Pedido),
 	CONSTRAINT constraint_id_pedido_fk FOREIGN KEY (Id_Pedido) REFERENCES Pedido (Id_Pedido) ON DELETE CASCADE,
 	CONSTRAINT constraint_id_producto_fk FOREIGN KEY (Id_Producto) REFERENCES producto (Id_Producto)
 )
@@ -146,9 +146,20 @@ CREATE TABLE Linea_Pedido
 -- FACTURA
 CREATE TABLE Factura (
     Id_Factura INT PRIMARY KEY,
+	Id_Usuario INT NOT NULL,
     Id_Pedido INT NOT NULL,
-    Fecha_Factura DATETIME,
-    CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (Id_Pedido) REFERENCES pedido (Id_Pedido) ON DELETE CASCADE
+	Id_Estado_Factura INT NOT NULL,
+    Fecha_Factura DATETIME NOT NULL,
+	CONSTRAINT constraint_id_usuario_factura_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario) ON DELETE CASCADE,
+    CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (Id_Pedido) REFERENCES Pedido (Id_Pedido) ON DELETE CASCADE,
+    CONSTRAINT constraint_id_estado_factura_fk FOREIGN KEY (Id_Estado_Factura) REFERENCES Estado_Factura (Id_Estado_Factura) ON DELETE CASCADE
+)
+
+CREATE TABLE Estado_Factura
+(
+	Id_Estado_Factura INT IDENTITY PRIMARY KEY,
+	Descripcion NVARCHAR(50),
+	
 )
 
 -- CARRITO
@@ -163,6 +174,15 @@ CREATE TABLE Carrito
 )
 
 -- INSERT INTO
+
+-- ESTADO PEDIDO
+INSERT INTO Estado_Pedido (Descripcion) VALUES ('En proceso')
+INSERT INTO Estado_Pedido (Descripcion) VALUES ('De camino')
+INSERT INTO Estado_Pedido (Descripcion) VALUES ('Entregado')
+
+-- ESTADO_FACTURA
+INSERT INTO Estado_Factura VALUES ('Pendiente')
+INSERT INTO Estado_Factura VALUES ('Cobrado')
 
 -- CATEGORIA
 INSERT INTO Categoria (Descripcion) VALUES ('Alimentación')
