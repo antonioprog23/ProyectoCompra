@@ -18,6 +18,13 @@ namespace ProyectoCompra.Controles
         public bool isEfectivoElegida { get; set; }
         public Button btnContinuar { get; set; }
 
+        public CtrlEnvio()
+        {
+            InitializeComponent();
+            //TARJETA
+            this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+        }
+
         public CtrlEnvio(Button btnContinuar)
         {
             InitializeComponent();
@@ -310,6 +317,12 @@ namespace ProyectoCompra.Controles
             {
                 this.btnContinuar.Enabled = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmFactura frmFactura = new FrmFactura(ConfigSesion.obtenerReferenciaIdUsuario());
+            frmFactura.ShowDialog();
         }
     }
 }

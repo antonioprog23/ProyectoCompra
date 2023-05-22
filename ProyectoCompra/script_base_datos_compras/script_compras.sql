@@ -123,10 +123,11 @@ CREATE TABLE Pedido
 (
 	Id_Pedido INT PRIMARY KEY,
 	Id_Usuario INT NOT NULL,
+	Id_Direccion INT NOT NULL,
 	Id_Estado_Pedido int NOT NULL,
-	Total DECIMAL(5,2) NOT NULL,
 	Fecha DATETIME NOT NULL,
 	CONSTRAINT constraint_id_usuario_pedido_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario),
+	CONSTRAINT constraint_id_direccion_pedido_fk FOREIGN KEY (Id_Direccion) REFERENCES Direccion (Id_Direccion),
 	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES Estado_Pedido (Id_Estado_Pedido)
 )
 
@@ -147,7 +148,6 @@ CREATE TABLE Linea_Pedido
 CREATE TABLE Factura (
     Id_Factura INT PRIMARY KEY,
 	Id_Usuario INT NOT NULL,
-    Id_Pedido INT NOT NULL,
 	Id_Estado_Factura INT NOT NULL,
     Fecha_Factura DATETIME NOT NULL,
 	CONSTRAINT constraint_id_usuario_factura_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario) ON DELETE CASCADE,

@@ -10,19 +10,27 @@ CREATE PROCEDURE ActualizarPedido
 AS
 BEGIN
 	SET NOCOUNT ON
-
+	-- VARIABLES
 	DECLARE @Id_Pedido INT
-	DECLARE @Total DECIMAL(5,2)
+	DECLARE @Id_Factura INT
 
 	SET @Id_Pedido = (SELECT COALESCE(MAX(Id_Pedido+ 1),1) FROM Pedido)
-	SET @Total = (SELECT Subtotal * 1.03 FROM Linea_Pedido WHERE Id_Pedido = @Id_Pedido)
+	SET @Id_Factura = (SELECT COALESCE(MAX(Id_Factura+ 1),1) FROM Factura)
 
-	IF EXISTS (SELECT 1 FROM Pedido 
-				WHERE Id_Pedido = (SELECT MAX(Id_Pedido) FROM Pedido
-									WHERE Id_Usuario = @Id_Usuario))
-		BEGIN 
-			UPDATE Pedido SET Total = @Total WHERE Id_Pedido = (SELECT MAX(Id_Pedido) FROM Pedido WHERE Id_Usuario = @Id_Usuario)
-		END
-	ELSE
-		INSERT INTO Pedido VALUES (@Id_Pedido,@Id_Usuario,3,@Total,CONVERT(date, GETDATE()))
+	-- PEDIDO
+	INSERT INTO Pedido (Id_Pedido,Id_Usuario,Id_Direccion,Id_Estado_Pedido,Fecha) 
+	SELECT @Id_Pedido,@Id_Usuario,MAX(Id_Direccion),3,CONVERT(date, GETDATE()) FROM Direccion 
+	WHERE Id_Cliente = (SELECT Id_Cliente FROM Usuario WHERE Id_Usuario = @Id_Usuario)
+
+	-- LINEA PEDIDO
+	INSERT INTO Linea_Pedido (Id_Pedido,Id_Producto,Cantidad,Subtotal) 
+	SELECT @Id_Pedido,c.Id_Producto, c.Cantidad, (p.Precio * c.Cantidad) FROM Carrito c
+	INNER JOIN Producto p ON (c.Id_Producto = p.Id_Producto)
+	WHERE Id_Usuario = @Id_Usuario
+	
+	-- FACTURA
+	INSERT INTO Factura (Id_Factura,Id_Usuario,Id_Estado_Factura,Fecha_Factura) VALUES (@Id_Factura,@Id_Usuario,1,CONVERT(date,GETDATE()))
+	
+	-- POR ÚLTIMO, EL CARRITO DEL USUARIO SE VACIA
+	DELETE FROM Carrito WHERE Id_Usuario = @Id_Usuario
 END

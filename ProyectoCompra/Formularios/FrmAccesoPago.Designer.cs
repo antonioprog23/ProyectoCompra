@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ctrlEnvio1 = new ProyectoCompra.Controles.CtrlEnvio();
             this.gbxResumen = new System.Windows.Forms.GroupBox();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();

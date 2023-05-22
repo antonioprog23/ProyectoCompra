@@ -22,5 +22,11 @@ namespace ProyectoCompra.Clases
             this.cantidad = cantidad;
             this.subtotal = subtotal;
         }
+
+        public LineaPedido(Producto producto, int cantidad)
+        {
+            this.producto = producto;
+            this.cantidad = cantidad;
+        }
     }
 }

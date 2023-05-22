@@ -1,9 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
-using ProyectoCompra.Controles;
-using ProyectoCompra.Ficheros;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -49,8 +46,8 @@ namespace ProyectoCompra.Formularios
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            Pedido pedido = new Pedido(ConfigSesion.obtenerReferenciaIdUsuario());
-            BDPedido.actualizarPedido(pedido);
+            BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario());
+            Application.Restart();
         }
     }
 }

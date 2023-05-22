@@ -8,7 +8,7 @@ namespace ProyectoCompra.Base_datos
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
-        public static bool actualizarPedido(Pedido pedido)
+        public static bool actualizarPedido(int idUsuario)
         {
             bool actualizado = false;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
@@ -21,7 +21,7 @@ namespace ProyectoCompra.Base_datos
                         try
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@Id_Usuario", pedido.idUsuario);
+                            cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             actualizado = true;
