@@ -52,6 +52,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -90,6 +91,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -128,6 +130,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -166,6 +169,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -203,6 +207,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Snow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -233,6 +238,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Snow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -265,6 +271,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Snow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -297,6 +304,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Snow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -328,7 +336,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DSFactura</DataSetName>
-        <Top>0.76412cm</Top>
+        <Top>0.34079cm</Top>
         <Left>1.21391cm</Left>
         <Height>1.23969cm</Height>
         <Width>10.99743cm</Width>
@@ -353,7 +361,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox43</rd:DefaultName>
-        <Top>2.76669cm</Top>
+        <Top>2.34336cm</Top>
         <Left>6.54989cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -383,7 +391,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox43</rd:DefaultName>
-        <Top>3.5078cm</Top>
+        <Top>3.08447cm</Top>
         <Left>6.54989cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -413,7 +421,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox43</rd:DefaultName>
-        <Top>4.21364cm</Top>
+        <Top>3.79031cm</Top>
         <Left>6.54989cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -443,7 +451,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox47</rd:DefaultName>
-        <Top>4.91947cm</Top>
+        <Top>4.49614cm</Top>
         <Left>6.54989cm</Left>
         <Height>0.6cm</Height>
         <Width>3.08208cm</Width>
@@ -475,10 +483,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox43</rd:DefaultName>
-        <Top>2.76669cm</Top>
-        <Left>9.76426cm</Left>
+        <Top>2.34336cm</Top>
+        <Left>10.35619cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.90807cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -507,10 +515,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox43</rd:DefaultName>
-        <Top>3.5078cm</Top>
-        <Left>9.71134cm</Left>
+        <Top>3.08447cm</Top>
+        <Left>10.35619cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.85515cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -539,10 +547,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox43</rd:DefaultName>
-        <Top>4.2401cm</Top>
-        <Left>9.71134cm</Left>
+        <Top>3.81677cm</Top>
+        <Left>10.35619cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.85515cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -571,10 +579,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox47</rd:DefaultName>
-        <Top>4.91947cm</Top>
-        <Left>9.7378cm</Left>
+        <Top>4.49614cm</Top>
+        <Left>10.35619cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.52646cm</Width>
+        <Width>1.90807cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -587,7 +595,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.4375in</Height>
+    <Height>2.16667in</Height>
     <Style>
       <Border>
         <Style>None</Style>
@@ -597,7 +605,7 @@
   <Width>5.46725in</Width>
   <Page>
     <PageHeader>
-      <Height>6.64696cm</Height>
+      <Height>5.93258cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
