@@ -7,20 +7,15 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmMasDetalles : Form
     {
-        private Factura factura;
-
-        public FrmMasDetalles()
-        {
-            InitializeComponent();
-        }
+        public Factura factura { get; set; }
 
         public FrmMasDetalles(Factura factura)
         {
             InitializeComponent();
             this.factura = factura;
 
-            //this.ctrlMasInformacion1.factura = factura;
-            //this.ctrlResumenPedido1.factura = factura;
+            this.ctrlMasInformacion1.factura = this.factura;
+            this.ctrlResumenPedido1.factura = this.factura;
         }
 
         private void FrmMasDetalles_Load(object sender, System.EventArgs e)

@@ -7,20 +7,12 @@ namespace ProyectoCompra.Controles
 {
     public partial class CtrlHistorialPedido : UserControl
     {
-        private Factura factura;
+        public Factura factura { get; set; }
 
         public CtrlHistorialPedido()
         {
             InitializeComponent();
         }
-
-        public CtrlHistorialPedido(Factura factura)
-        {
-            InitializeComponent();
-            this.factura = factura;
-        }
-
-
 
         private void btnMasDetalles_Click(object sender, EventArgs e)
         {

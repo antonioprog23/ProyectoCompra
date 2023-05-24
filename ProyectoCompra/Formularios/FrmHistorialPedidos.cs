@@ -20,7 +20,8 @@ namespace ProyectoCompra.Formularios
             tbPedidosLista.RowCount = facturas.Count;
             for (int i = 0; i < tbPedidosLista.RowCount; i++)
             {
-                CtrlHistorialPedido ctrlHistorialPedido = new CtrlHistorialPedido(facturas[i]);
+                CtrlHistorialPedido ctrlHistorialPedido = new CtrlHistorialPedido();
+                ctrlHistorialPedido.factura = facturas[i];
                 tbPedidosLista.Controls.Add(ctrlHistorialPedido);
             }
         }

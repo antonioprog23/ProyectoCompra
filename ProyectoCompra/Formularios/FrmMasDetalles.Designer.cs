@@ -32,12 +32,12 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.flProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.tlProductos = new System.Windows.Forms.TableLayoutPanel();
+            this.ctrlHistorialPedido1 = new ProyectoCompra.Controles.CtrlHistorialPedido();
             this.tflDetalles = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ctrlResumenPedido1 = new ProyectoCompra.Controles.CtrlResumenPedido();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ctrlMasInformacion1 = new ProyectoCompra.Controles.CtrlMasInformacion();
-            this.ctrlHistorialPedido1 = new ProyectoCompra.Controles.CtrlHistorialPedido();
             this.flpProductos.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.flProductos.SuspendLayout();
@@ -88,6 +88,17 @@
             this.tlProductos.Size = new System.Drawing.Size(0, 0);
             this.tlProductos.TabIndex = 1;
             // 
+            // ctrlHistorialPedido1
+            // 
+            this.ctrlHistorialPedido1.AutoSize = true;
+            this.ctrlHistorialPedido1.BackColor = System.Drawing.Color.White;
+            this.ctrlHistorialPedido1.factura = null;
+            this.ctrlHistorialPedido1.Location = new System.Drawing.Point(9, 3);
+            this.ctrlHistorialPedido1.Name = "ctrlHistorialPedido1";
+            this.ctrlHistorialPedido1.Size = new System.Drawing.Size(439, 176);
+            this.ctrlHistorialPedido1.TabIndex = 2;
+            this.ctrlHistorialPedido1.Visible = false;
+            // 
             // tflDetalles
             // 
             this.tflDetalles.ColumnCount = 1;
@@ -113,6 +124,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resumen del pedido";
             // 
+            // ctrlResumenPedido1
+            // 
+            this.ctrlResumenPedido1.factura = null;
+            this.ctrlResumenPedido1.Location = new System.Drawing.Point(6, 13);
+            this.ctrlResumenPedido1.Name = "ctrlResumenPedido1";
+            this.ctrlResumenPedido1.Size = new System.Drawing.Size(478, 95);
+            this.ctrlResumenPedido1.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ctrlMasInformacion1);
@@ -123,14 +142,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Más información";
             // 
-            // ctrlResumenPedido1
-            // 
-            this.ctrlResumenPedido1.factura = null;
-            this.ctrlResumenPedido1.Location = new System.Drawing.Point(6, 13);
-            this.ctrlResumenPedido1.Name = "ctrlResumenPedido1";
-            this.ctrlResumenPedido1.Size = new System.Drawing.Size(478, 95);
-            this.ctrlResumenPedido1.TabIndex = 0;
-            // 
             // ctrlMasInformacion1
             // 
             this.ctrlMasInformacion1.AutoSize = true;
@@ -139,15 +150,6 @@
             this.ctrlMasInformacion1.Name = "ctrlMasInformacion1";
             this.ctrlMasInformacion1.Size = new System.Drawing.Size(476, 206);
             this.ctrlMasInformacion1.TabIndex = 0;
-            // 
-            // ctrlHistorialPedido1
-            // 
-            this.ctrlHistorialPedido1.AutoSize = true;
-            this.ctrlHistorialPedido1.BackColor = System.Drawing.Color.White;
-            this.ctrlHistorialPedido1.Location = new System.Drawing.Point(9, 3);
-            this.ctrlHistorialPedido1.Name = "ctrlHistorialPedido1";
-            this.ctrlHistorialPedido1.Size = new System.Drawing.Size(439, 176);
-            this.ctrlHistorialPedido1.TabIndex = 2;
             // 
             // FrmMasDetalles
             // 

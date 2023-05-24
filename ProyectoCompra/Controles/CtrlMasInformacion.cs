@@ -12,5 +12,25 @@ namespace ProyectoCompra.Controles
             InitializeComponent();
         }
 
+        private void CtrlMasInformacion_Load(object sender, System.EventArgs e)
+        {
+            if (factura != null)
+            {
+                cargarDatos();
+            }
+        }
+
+        private void cargarDatos()
+        {
+            lblNomCliente.Text = string.Format("{0} {1}", factura.pedido.usuario.cliente.nombre, factura.pedido.usuario.cliente.apellido);
+            lblCalle.Text = factura.pedido.direccion.direccion;
+            lblCP.Text = string.Format("{0}, {1}", factura.pedido.direccion.ciudad, factura.pedido.direccion.codigoPostal);
+            lblTelefono.Text = factura.pedido.direccion.telefono;
+
+            lblNomCliente2.Text = string.Format("{0} {1}", factura.pedido.usuario.cliente.nombre, factura.pedido.usuario.cliente.apellido);
+            lblCalle2.Text = factura.pedido.direccion.direccion;
+            lblCP2.Text = string.Format("{0}, {1}", factura.pedido.direccion.ciudad, factura.pedido.direccion.codigoPostal);
+            lblTelefono2.Text = factura.pedido.direccion.telefono;
+        }
     }
 }

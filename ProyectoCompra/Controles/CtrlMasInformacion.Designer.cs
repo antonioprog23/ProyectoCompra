@@ -37,10 +37,10 @@
             this.lblCalle = new System.Windows.Forms.Label();
             this.lblCP = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblTelefono2 = new System.Windows.Forms.Label();
+            this.lblCP2 = new System.Windows.Forms.Label();
+            this.lblCalle2 = new System.Windows.Forms.Label();
+            this.lblNomCliente2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDescargarFact = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -129,41 +129,41 @@
             this.lblTelefono.TabIndex = 10;
             this.lblTelefono.Text = "600000000";
             // 
-            // label1
+            // lblTelefono2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 153);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "600000000";
+            this.lblTelefono2.AutoSize = true;
+            this.lblTelefono2.Location = new System.Drawing.Point(242, 153);
+            this.lblTelefono2.Name = "lblTelefono2";
+            this.lblTelefono2.Size = new System.Drawing.Size(61, 13);
+            this.lblTelefono2.TabIndex = 15;
+            this.lblTelefono2.Text = "600000000";
             // 
-            // label4
+            // lblCP2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(242, 131);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Zaragoza, 50000";
+            this.lblCP2.AutoSize = true;
+            this.lblCP2.Location = new System.Drawing.Point(242, 131);
+            this.lblCP2.Name = "lblCP2";
+            this.lblCP2.Size = new System.Drawing.Size(88, 13);
+            this.lblCP2.TabIndex = 14;
+            this.lblCP2.Text = "Zaragoza, 50000";
             // 
-            // label5
+            // lblCalle2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Calle de envío";
+            this.lblCalle2.AutoSize = true;
+            this.lblCalle2.Location = new System.Drawing.Point(242, 109);
+            this.lblCalle2.Name = "lblCalle2";
+            this.lblCalle2.Size = new System.Drawing.Size(76, 13);
+            this.lblCalle2.TabIndex = 13;
+            this.lblCalle2.Text = "Calle de envío";
             // 
-            // label6
+            // lblNomCliente2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(242, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Nombre de la persona";
+            this.lblNomCliente2.AutoSize = true;
+            this.lblNomCliente2.Location = new System.Drawing.Point(242, 87);
+            this.lblNomCliente2.Name = "lblNomCliente2";
+            this.lblNomCliente2.Size = new System.Drawing.Size(111, 13);
+            this.lblNomCliente2.TabIndex = 12;
+            this.lblNomCliente2.Text = "Nombre de la persona";
             // 
             // label7
             // 
@@ -190,10 +190,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.btnDescargarFact);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTelefono2);
+            this.Controls.Add(this.lblCP2);
+            this.Controls.Add(this.lblCalle2);
+            this.Controls.Add(this.lblNomCliente2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblCP);
@@ -206,6 +206,7 @@
             this.Controls.Add(this.lblMetodoEnvio);
             this.Name = "CtrlMasInformacion";
             this.Size = new System.Drawing.Size(476, 211);
+            this.Load += new System.EventHandler(this.CtrlMasInformacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,10 +223,10 @@
         private System.Windows.Forms.Label lblCalle;
         private System.Windows.Forms.Label lblCP;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTelefono2;
+        private System.Windows.Forms.Label lblCP2;
+        private System.Windows.Forms.Label lblCalle2;
+        private System.Windows.Forms.Label lblNomCliente2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnDescargarFact;
     }

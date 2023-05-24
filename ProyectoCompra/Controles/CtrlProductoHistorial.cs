@@ -21,5 +21,12 @@ namespace ProyectoCompra.Controles
             lblNombreMostrar.Text = lineaPedido.producto.nombre.ToString();
             lblPrecioMostrar.Text = lineaPedido.producto.precio.ToString();
         }
+
+        private void btnAgregar_Click(object sender, System.EventArgs e)
+        {
+            Usuario usuario = new Usuario(ConfigSesion.obtenerReferenciaIdUsuario());
+            Carrito carrito = new Carrito(lineaPedido.cantidad, lineaPedido.producto);
+            carrito.insertarProducto(usuario, carrito, true, lineaPedido.producto.imagen);
+        }
     }
 }

@@ -34,5 +34,15 @@ namespace ProyectoCompra.Clases
             return productos;
         }
 
+        public decimal obtenerTotalPedido(int idPedido)
+        {
+            decimal total = 0;
+            List<LineaPedido> lineas = lineaPedidos.FindAll(p => p.idPedido == idPedido);
+            foreach (LineaPedido lineaPedido in lineas)
+            {
+                total += lineaPedido.producto.precio * lineaPedido.cantidad;
+            }
+            return total;
+        }
     }
 }
