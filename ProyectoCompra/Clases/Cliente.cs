@@ -28,6 +28,10 @@ namespace ProyectoCompra.Clases
         {
 
         }
+        public Cliente(string nombre, string apellido) : base(nombre, apellido)
+        {
+
+        }
         #endregion
 
         #region Métodos

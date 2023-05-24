@@ -101,6 +101,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ConfigSesion.cs" />
     <Compile Include="Clases\Direccion.cs" />
+    <Compile Include="Clases\Factura.cs" />
     <Compile Include="Clases\Imagen.cs" />
     <Compile Include="Clases\LineaPedido.cs" />
     <Compile Include="Clases\Mensaje.cs" />
@@ -190,7 +191,7 @@
     </Compile>
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
     <Compile Include="Clases\CarritoProvisional.cs" />
-    <Compile Include="Factura\DSFactura.Designer.cs">
+    <Compile Include="Reportes\DSFactura.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSFactura.xsd</DependentUpon>
@@ -435,7 +436,7 @@
     <EmbeddedResource Include="Controles\CtrlTextoBox.resx">
       <DependentUpon>CtrlTextoBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factura\InformeFactura.rdlc" />
+    <EmbeddedResource Include="Reportes\InformeFactura.rdlc" />
     <EmbeddedResource Include="Formularios\FrmAccesoPago.resx">
       <DependentUpon>FrmAccesoPago.cs</DependentUpon>
     </EmbeddedResource>
@@ -569,15 +570,15 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Factura\DSFactura.xsc">
+    <None Include="Reportes\DSFactura.xsc">
       <DependentUpon>DSFactura.xsd</DependentUpon>
     </None>
-    <None Include="Factura\DSFactura.xsd">
+    <None Include="Reportes\DSFactura.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DSFactura.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Factura\DSFactura.xss">
+    <None Include="Reportes\DSFactura.xss">
       <DependentUpon>DSFactura.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />

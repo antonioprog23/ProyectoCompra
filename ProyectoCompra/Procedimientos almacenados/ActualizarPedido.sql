@@ -19,7 +19,7 @@ BEGIN
 
 	-- PEDIDO
 	INSERT INTO Pedido (Id_Pedido,Id_Usuario,Id_Direccion,Id_Estado_Pedido,Fecha) 
-	SELECT @Id_Pedido,@Id_Usuario,MAX(Id_Direccion),3,CONVERT(date, GETDATE()) FROM Direccion 
+	SELECT @Id_Pedido,@Id_Usuario,MIN(Id_Direccion),3,CONVERT(date, GETDATE()) FROM Direccion 
 	WHERE Id_Cliente = (SELECT Id_Cliente FROM Usuario WHERE Id_Usuario = @Id_Usuario)
 
 	-- LINEA PEDIDO
@@ -29,7 +29,7 @@ BEGIN
 	WHERE Id_Usuario = @Id_Usuario
 	
 	-- FACTURA
-	INSERT INTO Factura (Id_Factura,Id_Usuario,Id_Estado_Factura,Fecha_Factura) VALUES (@Id_Factura,@Id_Usuario,1,CONVERT(date,GETDATE()))
+	INSERT INTO Factura (Id_Factura,Id_Pedido,Id_Estado_Factura,Fecha_Factura) VALUES (@Id_Factura,@Id_Pedido,1,CONVERT(date,GETDATE()))
 	
 	-- POR ÚLTIMO, EL CARRITO DEL USUARIO SE VACIA
 	DELETE FROM Carrito WHERE Id_Usuario = @Id_Usuario

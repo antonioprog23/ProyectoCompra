@@ -42,6 +42,12 @@ namespace ProyectoCompra.Clases
             this.sexo = sexo;
             this.correo = correo;
         }
+
+        public Persona(string nombre, string apellido)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
         #endregion
 
         #region Métodos

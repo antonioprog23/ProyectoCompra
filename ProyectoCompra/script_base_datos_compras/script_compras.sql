@@ -147,10 +147,9 @@ CREATE TABLE Linea_Pedido
 -- FACTURA
 CREATE TABLE Factura (
     Id_Factura INT PRIMARY KEY,
-	Id_Usuario INT NOT NULL,
+	Id_Pedido INT NOT NULL,
 	Id_Estado_Factura INT NOT NULL,
     Fecha_Factura DATETIME NOT NULL,
-	CONSTRAINT constraint_id_usuario_factura_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario) ON DELETE CASCADE,
     CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (Id_Pedido) REFERENCES Pedido (Id_Pedido) ON DELETE CASCADE,
     CONSTRAINT constraint_id_estado_factura_fk FOREIGN KEY (Id_Estado_Factura) REFERENCES Estado_Factura (Id_Estado_Factura) ON DELETE CASCADE
 )

@@ -28,6 +28,8 @@ namespace ProyectoCompra.Clases
             this.fechaUltimaModificacion = fechaUltimaModificacion;
         }
 
+        public Usuario(Cliente cliente) { this.cliente = cliente; }
+
         public Usuario(int idUsuario)
         {
             this.idUsuario = idUsuario;
@@ -47,7 +49,7 @@ namespace ProyectoCompra.Clases
 
         public string toStringConSeparador()
         {
-            return  string.Concat(idUsuario, Convert.ToString(SEPARADOR));
+            return string.Concat(idUsuario, Convert.ToString(SEPARADOR));
         }
     }
 }

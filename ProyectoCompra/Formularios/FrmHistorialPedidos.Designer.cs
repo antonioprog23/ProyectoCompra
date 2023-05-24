@@ -39,12 +39,13 @@
             this.flowLayoutPanel1.Controls.Add(this.tbPedidosLista);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(449, 186);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(469, 190);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // tbPedidosLista
             // 
             this.tbPedidosLista.AutoScroll = true;
+            this.tbPedidosLista.AutoSize = true;
             this.tbPedidosLista.ColumnCount = 1;
             this.tbPedidosLista.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbPedidosLista.Location = new System.Drawing.Point(3, 3);
@@ -57,7 +58,7 @@
             this.tbPedidosLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tbPedidosLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tbPedidosLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tbPedidosLista.Size = new System.Drawing.Size(442, 180);
+            this.tbPedidosLista.Size = new System.Drawing.Size(0, 0);
             this.tbPedidosLista.TabIndex = 0;
             // 
             // FrmHistorialPedidos
@@ -65,7 +66,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(449, 189);
+            this.ClientSize = new System.Drawing.Size(470, 195);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmHistorialPedidos";
@@ -73,6 +74,7 @@
             this.Text = "Historial pedidos";
             this.Load += new System.EventHandler(this.FrmHistorialPedidos_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

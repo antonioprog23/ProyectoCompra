@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ProyectoCompra.Factura {
+namespace ProyectoCompra.Reportes {
     
     
     /// <summary>
@@ -1551,7 +1551,7 @@ namespace ProyectoCompra.Factura {
         }
     }
 }
-namespace ProyectoCompra.Factura.DSFacturaTableAdapters {
+namespace ProyectoCompra.Reportes.DSFacturaTableAdapters {
     
     
     /// <summary>

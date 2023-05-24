@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.dSFactura = new ProyectoCompra.Factura.DSFactura();
+            this.dSFactura = new ProyectoCompra.Reportes.DSFactura();
             this.dSFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ConsultarFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultarFacturaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.consultarFacturaTableAdapter = new ProyectoCompra.Factura.DSFacturaTableAdapters.ConsultarFacturaTableAdapter();
+            this.consultarFacturaTableAdapter = new ProyectoCompra.Reportes.DSFacturaTableAdapters.ConsultarFacturaTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dSFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSFacturaBindingSource)).BeginInit();
@@ -97,11 +97,11 @@
         }
 
         #endregion
-        private Factura.DSFactura dSFactura;
+        private Reportes.DSFactura dSFactura;
         private System.Windows.Forms.BindingSource dSFacturaBindingSource;
         private System.Windows.Forms.BindingSource ConsultarFacturaBindingSource;
         private System.Windows.Forms.BindingSource consultarFacturaBindingSource1;
-        private Factura.DSFacturaTableAdapters.ConsultarFacturaTableAdapter consultarFacturaTableAdapter;
+        private Reportes.DSFacturaTableAdapters.ConsultarFacturaTableAdapter consultarFacturaTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
