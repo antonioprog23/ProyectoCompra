@@ -321,7 +321,7 @@ namespace ProyectoCompra.Controles
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmFactura frmFactura = new FrmFactura(ConfigSesion.obtenerReferenciaIdUsuario());
+            FrmFactura frmFactura = new FrmFactura(ConfigSesion.obtenerReferenciaIdUsuario(), 0);
             frmFactura.ShowDialog();
         }
     }

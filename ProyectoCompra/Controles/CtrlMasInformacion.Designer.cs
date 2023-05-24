@@ -183,6 +183,7 @@
             this.btnDescargarFact.TabIndex = 16;
             this.btnDescargarFact.Text = "Descargar factura";
             this.btnDescargarFact.UseVisualStyleBackColor = true;
+            this.btnDescargarFact.Click += new System.EventHandler(this.btnDescargarFact_Click);
             // 
             // CtrlMasInformacion
             // 

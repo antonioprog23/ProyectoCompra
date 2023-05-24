@@ -1,4 +1,5 @@
 ﻿using ProyectoCompra.Clases;
+using ProyectoCompra.Formularios;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -31,6 +32,12 @@ namespace ProyectoCompra.Controles
             lblCalle2.Text = factura.pedido.direccion.direccion;
             lblCP2.Text = string.Format("{0}, {1}", factura.pedido.direccion.ciudad, factura.pedido.direccion.codigoPostal);
             lblTelefono2.Text = factura.pedido.direccion.telefono;
+        }
+
+        private void btnDescargarFact_Click(object sender, System.EventArgs e)
+        {
+            FrmFactura factura = new FrmFactura(ConfigSesion.obtenerReferenciaIdUsuario(), this.factura.pedido.idPedido);
+            factura.ShowDialog();
         }
     }
 }

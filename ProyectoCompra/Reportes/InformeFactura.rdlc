@@ -6,10 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.89946cm</Width>
+              <Width>1.73764cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>8.24946cm</Width>
+              <Width>12.88705cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.13759cm</Width>
@@ -35,7 +35,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -65,7 +67,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -95,7 +99,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -125,7 +131,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox18</rd:DefaultName>
@@ -160,7 +168,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Cantidad</rd:DefaultName>
@@ -220,7 +230,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Precio</rd:DefaultName>
@@ -250,7 +262,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox19</rd:DefaultName>
@@ -293,7 +307,7 @@
         <Top>7.43162cm</Top>
         <Left>1.47849cm</Left>
         <Height>1.27938cm</Height>
-        <Width>13.85063cm</Width>
+        <Width>18.32639cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -503,7 +517,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
         <Top>2.64266cm</Top>
-        <Left>9.86271cm</Left>
+        <Left>15.90259cm</Left>
         <Height>0.6cm</Height>
         <Width>3.90229cm</Width>
         <ZIndex>7</ZIndex>
@@ -542,7 +556,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>3.41905cm</Top>
-        <Left>9.86271cm</Left>
+        <Left>15.90259cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>8</ZIndex>
@@ -572,7 +586,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
         <Top>4.19544cm</Top>
-        <Left>9.86271cm</Left>
+        <Left>15.90259cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>9</ZIndex>
@@ -602,7 +616,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
         <Top>4.97183cm</Top>
-        <Left>9.86271cm</Left>
+        <Left>15.90259cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>10</ZIndex>
@@ -620,7 +634,7 @@
         <Top>6.87599cm</Top>
         <Left>1.47849cm</Left>
         <Height>0cm</Height>
-        <Width>13.85063cm</Width>
+        <Width>18.48821cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -669,12 +683,14 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
         <Top>9.49537cm</Top>
-        <Left>13.765cm</Left>
+        <Left>18.40259cm</Left>
         <Height>0.6cm</Height>
         <Width>1.56411cm</Width>
         <ZIndex>13</ZIndex>
@@ -729,14 +745,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
         <Top>10.27176cm</Top>
-        <Left>13.765cm</Left>
+        <Left>18.40259cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.81208cm</Width>
+        <Width>1.56411cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -789,14 +807,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
         <Top>11.04814cm</Top>
-        <Left>13.765cm</Left>
+        <Left>18.40259cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.56411cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -857,14 +877,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
         <Top>11.82453cm</Top>
-        <Left>13.765cm</Left>
+        <Left>18.40259cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.56411cm</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
@@ -1035,7 +1057,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DSFactura</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\anton\source\repos\ProyectoCompra\ProyectoCompra\Factura\DSFactura.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\anton\source\repos\ProyectoCompra\ProyectoCompra\Reportes\DSFactura.xsd</rd:SchemaPath>
         <rd:TableName>ConsultarFactura</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

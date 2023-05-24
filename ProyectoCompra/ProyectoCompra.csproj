@@ -191,6 +191,9 @@
     </Compile>
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
     <Compile Include="Clases\CarritoProvisional.cs" />
+    <Compile Include="Reportes\DSFactura.cs">
+      <DependentUpon>DSFactura.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DSFactura.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -799,6 +802,7 @@
     <None Include="Resources\icon_textil_hogar.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Procedimientos almacenados\ConsultarPedido.sql" />
     <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
     <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
     <Content Include="Procedimientos almacenados\DarBajaUsuarioPorCorreoElectronico.sql" />

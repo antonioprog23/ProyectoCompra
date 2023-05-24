@@ -29,18 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ConsultarFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSFactura = new ProyectoCompra.Reportes.DSFactura();
             this.dSFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ConsultarFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultarFacturaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.consultarFacturaTableAdapter = new ProyectoCompra.Reportes.DSFacturaTableAdapters.ConsultarFacturaTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultarFacturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSFacturaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultarFacturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultarFacturaBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ConsultarFacturaBindingSource
+            // 
+            this.ConsultarFacturaBindingSource.DataMember = "ConsultarFactura";
+            this.ConsultarFacturaBindingSource.DataSource = this.dSFactura;
             // 
             // dSFactura
             // 
@@ -51,11 +56,6 @@
             // 
             this.dSFacturaBindingSource.DataSource = this.dSFactura;
             this.dSFacturaBindingSource.Position = 0;
-            // 
-            // ConsultarFacturaBindingSource
-            // 
-            this.ConsultarFacturaBindingSource.DataMember = "ConsultarFactura";
-            this.ConsultarFacturaBindingSource.DataSource = this.dSFactura;
             // 
             // consultarFacturaBindingSource1
             // 
@@ -69,10 +69,10 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DSFactura";
-            reportDataSource1.Value = this.ConsultarFacturaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoCompra.Factura.InformeFactura.rdlc";
+            reportDataSource2.Name = "DSFactura";
+            reportDataSource2.Value = this.ConsultarFacturaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoCompra.Reportes.InformeFactura.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -85,12 +85,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmFactura";
-            this.Text = "FrmFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Factura";
             this.Load += new System.EventHandler(this.FrmFactura_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultarFacturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSFacturaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultarFacturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultarFacturaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
