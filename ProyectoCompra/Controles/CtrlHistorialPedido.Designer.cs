@@ -39,6 +39,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnRealizado = new System.Windows.Forms.Button();
+            this.lblIDMostrar = new System.Windows.Forms.Label();
+            this.lblContadorProd = new System.Windows.Forms.Label();
+            this.lblFechaMostrar = new System.Windows.Forms.Label();
+            this.lblMPagoMostrar = new System.Windows.Forms.Label();
+            this.lblTotalMostrar = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +114,11 @@
             // 
             // groupBox
             // 
+            this.groupBox.Controls.Add(this.lblTotalMostrar);
+            this.groupBox.Controls.Add(this.lblMPagoMostrar);
+            this.groupBox.Controls.Add(this.lblFechaMostrar);
+            this.groupBox.Controls.Add(this.lblContadorProd);
+            this.groupBox.Controls.Add(this.lblIDMostrar);
             this.groupBox.Controls.Add(this.panel1);
             this.groupBox.Controls.Add(this.lblId);
             this.groupBox.Controls.Add(this.flowLayoutPanel1);
@@ -156,6 +166,51 @@
             this.btnRealizado.TabIndex = 6;
             this.btnRealizado.UseVisualStyleBackColor = true;
             // 
+            // lblIDMostrar
+            // 
+            this.lblIDMostrar.AutoSize = true;
+            this.lblIDMostrar.Location = new System.Drawing.Point(229, 67);
+            this.lblIDMostrar.Name = "lblIDMostrar";
+            this.lblIDMostrar.Size = new System.Drawing.Size(67, 13);
+            this.lblIDMostrar.TabIndex = 8;
+            this.lblIDMostrar.Text = "0000000000";
+            // 
+            // lblContadorProd
+            // 
+            this.lblContadorProd.AutoSize = true;
+            this.lblContadorProd.Location = new System.Drawing.Point(229, 109);
+            this.lblContadorProd.Name = "lblContadorProd";
+            this.lblContadorProd.Size = new System.Drawing.Size(13, 13);
+            this.lblContadorProd.TabIndex = 9;
+            this.lblContadorProd.Text = "0";
+            // 
+            // lblFechaMostrar
+            // 
+            this.lblFechaMostrar.AutoSize = true;
+            this.lblFechaMostrar.Location = new System.Drawing.Point(229, 87);
+            this.lblFechaMostrar.Name = "lblFechaMostrar";
+            this.lblFechaMostrar.Size = new System.Drawing.Size(79, 13);
+            this.lblFechaMostrar.TabIndex = 10;
+            this.lblFechaMostrar.Text = "DD/MM/YYYY";
+            // 
+            // lblMPagoMostrar
+            // 
+            this.lblMPagoMostrar.AutoSize = true;
+            this.lblMPagoMostrar.Location = new System.Drawing.Point(229, 131);
+            this.lblMPagoMostrar.Name = "lblMPagoMostrar";
+            this.lblMPagoMostrar.Size = new System.Drawing.Size(41, 13);
+            this.lblMPagoMostrar.TabIndex = 11;
+            this.lblMPagoMostrar.Text = "MPago";
+            // 
+            // lblTotalMostrar
+            // 
+            this.lblTotalMostrar.AutoSize = true;
+            this.lblTotalMostrar.Location = new System.Drawing.Point(229, 153);
+            this.lblTotalMostrar.Name = "lblTotalMostrar";
+            this.lblTotalMostrar.Size = new System.Drawing.Size(13, 13);
+            this.lblTotalMostrar.TabIndex = 12;
+            this.lblTotalMostrar.Text = "0";
+            // 
             // CtrlHistorialPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +220,7 @@
             this.Controls.Add(this.groupBox);
             this.Name = "CtrlHistorialPedido";
             this.Size = new System.Drawing.Size(439, 176);
+            this.Load += new System.EventHandler(this.CtrlHistorialPedido_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -186,5 +242,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnRealizado;
+        private System.Windows.Forms.Label lblTotalMostrar;
+        private System.Windows.Forms.Label lblMPagoMostrar;
+        private System.Windows.Forms.Label lblFechaMostrar;
+        private System.Windows.Forms.Label lblContadorProd;
+        private System.Windows.Forms.Label lblIDMostrar;
     }
 }

@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProyectoCompra.Clases;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
 {
     public partial class CtrlMasInformacion : UserControl
     {
+        public Factura factura { get; set; }
+
         public CtrlMasInformacion()
         {
             InitializeComponent();
         }
+
     }
 }

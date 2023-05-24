@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlProductoHistorial));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblIDMostrar = new System.Windows.Forms.Label();
             this.lblPrecioMostrar = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblIdProducto = new System.Windows.Forms.Label();
@@ -40,12 +39,17 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblImage = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblIDMostrar = new System.Windows.Forms.Label();
+            this.lblCantidadMostrar = new System.Windows.Forms.Label();
+            this.lblNombreMostrar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblIDMostrar);
+            this.groupBox1.Controls.Add(this.lblCantidadMostrar);
+            this.groupBox1.Controls.Add(this.lblNombreMostrar);
             this.groupBox1.Controls.Add(this.lblPrecioMostrar);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.lblIdProducto);
@@ -59,23 +63,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // lblIDMostrar
-            // 
-            this.lblIDMostrar.AutoSize = true;
-            this.lblIDMostrar.Location = new System.Drawing.Point(226, 45);
-            this.lblIDMostrar.Name = "lblIDMostrar";
-            this.lblIDMostrar.Size = new System.Drawing.Size(18, 13);
-            this.lblIDMostrar.TabIndex = 15;
-            this.lblIDMostrar.Text = "ID";
-            // 
             // lblPrecioMostrar
             // 
             this.lblPrecioMostrar.AutoSize = true;
-            this.lblPrecioMostrar.Location = new System.Drawing.Point(245, 112);
+            this.lblPrecioMostrar.Location = new System.Drawing.Point(258, 112);
             this.lblPrecioMostrar.Name = "lblPrecioMostrar";
-            this.lblPrecioMostrar.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecioMostrar.Size = new System.Drawing.Size(13, 13);
             this.lblPrecioMostrar.TabIndex = 14;
-            this.lblPrecioMostrar.Text = "Precio";
+            this.lblPrecioMostrar.Text = "0";
             // 
             // btnAgregar
             // 
@@ -137,6 +132,33 @@
             this.lblImage.Size = new System.Drawing.Size(187, 151);
             this.lblImage.TabIndex = 0;
             // 
+            // lblIDMostrar
+            // 
+            this.lblIDMostrar.AutoSize = true;
+            this.lblIDMostrar.Location = new System.Drawing.Point(258, 45);
+            this.lblIDMostrar.Name = "lblIDMostrar";
+            this.lblIDMostrar.Size = new System.Drawing.Size(13, 13);
+            this.lblIDMostrar.TabIndex = 18;
+            this.lblIDMostrar.Text = "0";
+            // 
+            // lblCantidadMostrar
+            // 
+            this.lblCantidadMostrar.AutoSize = true;
+            this.lblCantidadMostrar.Location = new System.Drawing.Point(258, 67);
+            this.lblCantidadMostrar.Name = "lblCantidadMostrar";
+            this.lblCantidadMostrar.Size = new System.Drawing.Size(13, 13);
+            this.lblCantidadMostrar.TabIndex = 17;
+            this.lblCantidadMostrar.Text = "0";
+            // 
+            // lblNombreMostrar
+            // 
+            this.lblNombreMostrar.AutoSize = true;
+            this.lblNombreMostrar.Location = new System.Drawing.Point(257, 90);
+            this.lblNombreMostrar.Name = "lblNombreMostrar";
+            this.lblNombreMostrar.Size = new System.Drawing.Size(49, 13);
+            this.lblNombreMostrar.TabIndex = 16;
+            this.lblNombreMostrar.Text = "XXXXXX";
+            // 
             // CtrlProductoHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +166,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CtrlProductoHistorial";
             this.Size = new System.Drawing.Size(433, 171);
+            this.Load += new System.EventHandler(this.CtrlProductoHistorial_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -158,9 +181,11 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.Label lblIDMostrar;
         private System.Windows.Forms.Label lblPrecioMostrar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblIDMostrar;
+        private System.Windows.Forms.Label lblCantidadMostrar;
+        private System.Windows.Forms.Label lblNombreMostrar;
     }
 }

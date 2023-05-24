@@ -58,7 +58,8 @@ namespace ProyectoCompra.Base_datos
                             Direccion direccion = new Direccion(reader["Nombre"].ToString(), reader["Direccion"].ToString(), reader["Pais"].ToString(), reader["Provincia"].ToString(), reader["Ciudad"].ToString(), reader["Codigo_Postal"].ToString(), reader["Telefono"].ToString());
                             Cliente cliente = new Cliente(reader["Nombre"].ToString(), reader["Apellido"].ToString());
                             Usuario usuario = new Usuario(cliente);
-                            Producto producto = new Producto(Convert.ToInt32(reader["Id_Producto"]), Convert.ToInt32(reader["Id_Subcategoria"]), reader["Nombre"].ToString(), reader["Descripcion"].ToString(), Convert.ToDecimal(reader["Precio"]), reader["Fabricante"].ToString());
+                            Imagen imagen = new Imagen(reader["Codigo_Imagen"].ToString());
+                            Producto producto = new Producto(Convert.ToInt32(reader["Id_Producto"]), Convert.ToInt32(reader["Id_Subcategoria"]), reader["Nombre_Producto"].ToString(), reader["Descripcion"].ToString(), Convert.ToDecimal(reader["Precio"]), reader["Fabricante"].ToString(), imagen);
                             LineaPedido linea = new LineaPedido(Convert.ToInt32(reader["Id_Linea_Pedido"]), Convert.ToInt32(reader["Id_Pedido"]), producto, Convert.ToInt32(reader["Cantidad"]), Convert.ToDecimal(reader["Subtotal"]));
                             lineasPedido.Add(linea);
                             Pedido pedido = new Pedido(Convert.ToInt32(reader["Id_Pedido"]), usuario, lineasPedido, direccion, Convert.ToInt32(reader["Id_Estado_Pedido"]), Convert.ToDateTime(reader["Fecha"]));

@@ -12,7 +12,7 @@ namespace ProyectoCompra.Clases
         public int idEstadoPedido { get; set; }
         public DateTime fecha { get; set; }
 
-        public Pedido(int idPedido, Usuario usuario,List<LineaPedido> lineaPedido,Direccion direccion, int idEstadoPedido, DateTime fecha)
+        public Pedido(int idPedido, Usuario usuario, List<LineaPedido> lineaPedido, Direccion direccion, int idEstadoPedido, DateTime fecha)
         {
             this.idPedido = idPedido;
             this.usuario = usuario;
@@ -22,36 +22,17 @@ namespace ProyectoCompra.Clases
             this.fecha = fecha;
         }
 
-        public Pedido(int idPedido, Usuario usuario, Direccion direccion, int idEstadoPedido, DateTime fecha)
+        public int obtenerCantidadTotalProductosPedido(int idPedido)
         {
-            this.idPedido = idPedido;
-            this.usuario = usuario;
-            this.direccion = direccion;
-            this.idEstadoPedido = idEstadoPedido;
-            this.fecha = fecha;
+            List<LineaPedido> productosPedido = lineaPedidos.FindAll(p => p.idPedido == idPedido);
+            return productosPedido.Count;
         }
 
-        public Pedido(int idPedido, int idUsuario, int idEstadoPedido, DateTime fecha)
+        public List<LineaPedido> obtenerProductosDelPedido(int idPedido)
         {
-            this.idPedido = idPedido;
-            this.usuario.idUsuario = idUsuario;
-            this.direccion = direccion;
-            this.idEstadoPedido = idEstadoPedido;
-            this.fecha = fecha;
+            List<LineaPedido> productos = lineaPedidos.FindAll(p => p.idPedido == idPedido);
+            return productos;
         }
-
-        public Pedido(int idUsuario, int idEstadoPedido, DateTime fecha)
-        {
-            this.usuario.idUsuario = idUsuario;
-            this.idEstadoPedido = idEstadoPedido;
-            this.fecha = fecha;
-        }
-
-        public Pedido(int idUsuario)
-        {
-            this.usuario.idUsuario = idUsuario;
-        }
-
 
     }
 }

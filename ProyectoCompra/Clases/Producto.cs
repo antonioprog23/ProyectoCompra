@@ -16,10 +16,21 @@ namespace ProyectoCompra.Clases
         public string descripcion { get; set; }
         public decimal precio { get; set; }
         public string fabricante { get; set; }
+        public Imagen imagen { get; set; }
 
         #endregion
 
         #region Constructor
+        public Producto(int id_producto, int id_subcategoria, string nombre, string descripcion, decimal precio, string fabricante, Imagen imagen)
+        {
+            this.id_producto = id_producto;
+            this.id_subcategoria = id_subcategoria;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.precio = precio;
+            this.fabricante = fabricante;
+            this.imagen = imagen;
+        }
 
         public Producto(int id_producto, int id_subcategoria, string nombre, string descripcion, decimal precio, string fabricante)
         {
