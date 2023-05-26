@@ -162,6 +162,27 @@ namespace ProyectoCompra.Clases
                         image.Tag = $"_20_{contador}".ToString();
                     }
                     break;
+                case 21:
+                    image = AlimentacionS21.ResourceManager.GetObject(string.Format("_21_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_21_{contador}".ToString();
+                    }
+                    break;
+                case 22:
+                    image = AlimentacionS22.ResourceManager.GetObject(string.Format("_22_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_22_{contador}".ToString();
+                    }
+                    break;
+                case 23:
+                    image = AlimentacionS23.ResourceManager.GetObject(string.Format("_23_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_23_{contador}".ToString();
+                    }
+                    break;
             }
 
             return image;
@@ -234,6 +255,15 @@ namespace ProyectoCompra.Clases
                     break;
                 case "20":
                     imagen = AlimentacionS20.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "21":
+                    imagen = AlimentacionS21.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "22":
+                    imagen = AlimentacionS22.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "23":
+                    imagen = AlimentacionS23.ResourceManager.GetObject(rutaImagen) as Image;
                     break;
             }
 

@@ -221,6 +221,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlimentacionS20.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AlimentacionS21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS21.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS22.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS23.resx</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DSFactura.cs">
       <DependentUpon>DSFactura.xsd</DependentUpon>
     </Compile>
@@ -488,6 +503,18 @@
     <EmbeddedResource Include="Properties\AlimentacionS20.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AlimentacionS20.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS21.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS21.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS22.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS22.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS23.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS23.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\InformeFactura.rdlc" />
     <EmbeddedResource Include="Formularios\FrmAccesoPago.resx">
@@ -979,6 +1006,64 @@
     <None Include="Resources\20_24.jpg" />
     <Content Include="Resources\20_21.jpg" />
     <Content Include="Resources\20_7.jpeg" />
+    <None Include="Resources\21_1.jpg" />
+    <None Include="Resources\21_5.jpg" />
+    <None Include="Resources\21_6.jpeg" />
+    <None Include="Resources\21_7.jpg" />
+    <None Include="Resources\21_8.jpg" />
+    <None Include="Resources\21_9.jpg" />
+    <None Include="Resources\21_10.jpg" />
+    <None Include="Resources\21_2.jpg" />
+    <None Include="Resources\21_3.jpg" />
+    <None Include="Resources\21_4.jpg" />
+    <None Include="Resources\21_17.jpg" />
+    <None Include="Resources\21_18.jpg" />
+    <None Include="Resources\21_20.jpeg" />
+    <None Include="Resources\21_11.jpg" />
+    <None Include="Resources\21_12.jpg" />
+    <None Include="Resources\21_13.jpeg" />
+    <None Include="Resources\21_14.jpg" />
+    <None Include="Resources\21_15.jpeg" />
+    <None Include="Resources\21_16.jpg" />
+    <Content Include="Resources\21_19.jpeg" />
+    <None Include="Resources\21_22.jpg" />
+    <None Include="Resources\21_23.jpg" />
+    <None Include="Resources\21_24.jpg" />
+    <None Include="Resources\21_21.jpeg" />
+    <None Include="Resources\22_5.jpg" />
+    <None Include="Resources\22_6.jpg" />
+    <None Include="Resources\22_9.jpg" />
+    <None Include="Resources\22_10.jpg" />
+    <None Include="Resources\22_2.jpeg" />
+    <None Include="Resources\22_3.jpeg" />
+    <None Include="Resources\22_1.jpg" />
+    <None Include="Resources\22_4.jpeg" />
+    <None Include="Resources\22_7.jpeg" />
+    <None Include="Resources\22_8.jpeg" />
+    <None Include="Resources\22_18.jpg" />
+    <None Include="Resources\22_20.jpeg" />
+    <None Include="Resources\22_11.jpg" />
+    <None Include="Resources\22_16.jpeg" />
+    <None Include="Resources\22_13.jpg" />
+    <None Include="Resources\22_14.jpeg" />
+    <None Include="Resources\22_17.jpg" />
+    <None Include="Resources\22_19.jpg" />
+    <Content Include="Resources\22_12.jpg" />
+    <Content Include="Resources\22_15.jpg" />
+    <None Include="Resources\22_22.jpg" />
+    <None Include="Resources\22_24.jpeg" />
+    <None Include="Resources\22_21.jpeg" />
+    <Content Include="Resources\22_23.jpg" />
+    <None Include="Resources\23_3.jpeg" />
+    <None Include="Resources\23_4.jpg" />
+    <None Include="Resources\23_5.png" />
+    <None Include="Resources\23_6.jpeg" />
+    <None Include="Resources\23_7.jpg" />
+    <None Include="Resources\23_8.jpg" />
+    <None Include="Resources\23_9.jpeg" />
+    <None Include="Resources\23_2.jpeg" />
+    <None Include="Resources\23_1.png" />
+    <Content Include="Resources\23_10.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
