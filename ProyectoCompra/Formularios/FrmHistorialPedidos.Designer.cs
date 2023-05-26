@@ -46,7 +46,6 @@
             // 
             // tbPedidosLista
             // 
-            this.tbPedidosLista.AutoScroll = true;
             this.tbPedidosLista.AutoSize = true;
             this.tbPedidosLista.ColumnCount = 1;
             this.tbPedidosLista.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -67,6 +66,7 @@
             // 
             this.ctrlHistorialPedido1.AutoSize = true;
             this.ctrlHistorialPedido1.BackColor = System.Drawing.Color.White;
+            this.ctrlHistorialPedido1.factura = null;
             this.ctrlHistorialPedido1.Location = new System.Drawing.Point(9, 3);
             this.ctrlHistorialPedido1.Name = "ctrlHistorialPedido1";
             this.ctrlHistorialPedido1.Size = new System.Drawing.Size(439, 176);

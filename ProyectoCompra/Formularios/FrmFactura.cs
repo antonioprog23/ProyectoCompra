@@ -21,5 +21,7 @@ namespace ProyectoCompra.Formularios
             this.consultarFacturaTableAdapter.Fill(this.dSFactura.ConsultarFactura, this.idUsuario, this.idPedido);
             this.reportViewer1.RefreshReport();
         }
+
+
     }
 }

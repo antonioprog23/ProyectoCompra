@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.ctrlEnvio1 = new ProyectoCompra.Controles.CtrlEnvio();
-            this.gbxResumen = new System.Windows.Forms.GroupBox();
             this.btnContinuar = new System.Windows.Forms.Button();
+            this.gbxResumen = new System.Windows.Forms.GroupBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblTPagar = new System.Windows.Forms.Label();
             this.lblGastosEnvio = new System.Windows.Forms.Label();
@@ -40,6 +40,31 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.gbxResumen.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // ctrlEnvio1
+            // 
+            this.ctrlEnvio1.AutoSize = true;
+            this.ctrlEnvio1.btnContinuar = this.btnContinuar;
+            this.ctrlEnvio1.carritoListo = null;
+            this.ctrlEnvio1.carritoProvisionalListo = null;
+            this.ctrlEnvio1.direcciones = null;
+            this.ctrlEnvio1.isEfectivoElegida = false;
+            this.ctrlEnvio1.Location = new System.Drawing.Point(12, 12);
+            this.ctrlEnvio1.Name = "ctrlEnvio1";
+            this.ctrlEnvio1.Size = new System.Drawing.Size(509, 513);
+            this.ctrlEnvio1.TabIndex = 3;
+            this.ctrlEnvio1.tarjetaCredit = null;
+            // 
+            // btnContinuar
+            // 
+            this.btnContinuar.Enabled = false;
+            this.btnContinuar.Location = new System.Drawing.Point(10, 475);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(259, 23);
+            this.btnContinuar.TabIndex = 9;
+            this.btnContinuar.Text = "Realizar pedido";
+            this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // gbxResumen
             // 
@@ -57,17 +82,6 @@
             this.gbxResumen.TabIndex = 2;
             this.gbxResumen.TabStop = false;
             this.gbxResumen.Text = "Resumen del pedido";
-            // 
-            // btnContinuar
-            // 
-            this.btnContinuar.Enabled = false;
-            this.btnContinuar.Location = new System.Drawing.Point(10, 475);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(259, 23);
-            this.btnContinuar.TabIndex = 9;
-            this.btnContinuar.Text = "Realizar pedido";
-            this.btnContinuar.UseVisualStyleBackColor = true;
-            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // lblTotal
             // 
@@ -137,20 +151,6 @@
             this.lblTitle.Size = new System.Drawing.Size(125, 14);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Pedido 1 de 1: EasyShop";
-            // 
-            // ctrlEnvio1
-            // 
-            this.ctrlEnvio1.AutoSize = true;
-            this.ctrlEnvio1.btnContinuar = this.btnContinuar;
-            this.ctrlEnvio1.carritoListo = null;
-            this.ctrlEnvio1.carritoProvisionalListo = null;
-            this.ctrlEnvio1.direcciones = null;
-            this.ctrlEnvio1.isEfectivoElegida = false;
-            this.ctrlEnvio1.Location = new System.Drawing.Point(12, 12);
-            this.ctrlEnvio1.Name = "ctrlEnvio1";
-            this.ctrlEnvio1.Size = new System.Drawing.Size(509, 513);
-            this.ctrlEnvio1.TabIndex = 3;
-            this.ctrlEnvio1.tarjetaCredit = null;
             // 
             // FrmAccesoPago
             // 

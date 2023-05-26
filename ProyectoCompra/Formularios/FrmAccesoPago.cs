@@ -47,6 +47,11 @@ namespace ProyectoCompra.Formularios
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario());
+            bool enviarFactura = ctrlEnvio1.enviarFactura;
+            if (enviarFactura)
+            {
+                Mensaje.enviareReporte("antajac23@gmail.com");
+            }
             Application.Restart();
         }
     }

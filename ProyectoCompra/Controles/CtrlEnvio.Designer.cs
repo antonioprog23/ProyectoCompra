@@ -67,7 +67,7 @@
             this.rbnTarjeta = new System.Windows.Forms.RadioButton();
             this.gbxEfectivo = new System.Windows.Forms.GroupBox();
             this.rbnEfectivo = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cbxEnviarFactura = new System.Windows.Forms.CheckBox();
             this.gbxRecoger.SuspendLayout();
             this.panelDetalles.SuspendLayout();
             this.flProductos.SuspendLayout();
@@ -338,7 +338,7 @@
             // 
             // tpPago
             // 
-            this.tpPago.Controls.Add(this.button1);
+            this.tpPago.Controls.Add(this.cbxEnviarFactura);
             this.tpPago.Controls.Add(this.label9);
             this.tpPago.Controls.Add(this.gbxTarjeta);
             this.tpPago.Controls.Add(this.gbxEfectivo);
@@ -523,15 +523,18 @@
             this.rbnEfectivo.UseVisualStyleBackColor = true;
             this.rbnEfectivo.Click += new System.EventHandler(this.rbnEfectivo_Click);
             // 
-            // button1
+            // cbxEnviarFactura
             // 
-            this.button1.Location = new System.Drawing.Point(380, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cbxEnviarFactura.AutoSize = true;
+            this.cbxEnviarFactura.Checked = true;
+            this.cbxEnviarFactura.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxEnviarFactura.Location = new System.Drawing.Point(318, 417);
+            this.cbxEnviarFactura.Name = "cbxEnviarFactura";
+            this.cbxEnviarFactura.Size = new System.Drawing.Size(143, 17);
+            this.cbxEnviarFactura.TabIndex = 9;
+            this.cbxEnviarFactura.Text = "Enviar factura por correo";
+            this.cbxEnviarFactura.UseVisualStyleBackColor = true;
+            this.cbxEnviarFactura.CheckedChanged += new System.EventHandler(this.cbxEnviarFactura_CheckedChanged);
             // 
             // CtrlEnvio
             // 
@@ -602,6 +605,6 @@
         private System.Windows.Forms.Label lblNTarjeta;
         private System.Windows.Forms.Label lblTitular;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox cbxEnviarFactura;
     }
 }
