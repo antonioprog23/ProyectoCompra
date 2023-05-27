@@ -1,6 +1,7 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -46,13 +47,41 @@ namespace ProyectoCompra.Formularios
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario());
-            bool enviarFactura = ctrlEnvio1.enviarFactura;
-            if (enviarFactura)
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-                Mensaje.enviareReporte("antajac23@gmail.com");
+                configurarUsuarioInvitado();
             }
-            Application.Restart();
+            else
+            {
+                BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario());
+                bool enviarFactura = ctrlEnvio1.enviarFactura;
+                if (enviarFactura)
+                {
+                    // Mensaje.enviareReporte("antajac23@gmail.com");
+                }
+                Application.Restart();
+            }
+        }
+
+        private void configurarUsuarioInvitado()
+        {
+            if (ctrlEnvio1.frmDireccion != null)
+            {
+                List<Direccion> direcciones = ctrlEnvio1.frmDireccion.direcciones;
+                string nombre = direcciones[0].nombre;
+                Cliente cliente = new Cliente(nombre, "");
+                Usuario usuario = new Usuario("", "", 1);
+
+                string direccion = direcciones[0].direccion;
+                string pais = direcciones[0].pais;
+                string provincia = direcciones[0].provincia;
+                string ciudad = direcciones[0].ciudad;
+                string cp = direcciones[0].codigoPostal;
+                string telefono = direcciones[0].telefono;
+                Direccion direccionInvitado = new Direccion("Invitado", direccion, pais, provincia, ciudad, cp, telefono);
+
+                BDUsuario.insertarDatosInvitado(cliente, usuario, direccionInvitado);
+            }
         }
     }
 }

@@ -18,6 +18,7 @@ namespace ProyectoCompra.Controles
         public bool isEfectivoElegida { get; set; }
         public bool enviarFactura { get; set; }
         public Button btnContinuar { get; set; }
+        public FrmDireccion frmDireccion { get; set; }
 
         public CtrlEnvio()
         {
@@ -121,13 +122,13 @@ namespace ProyectoCompra.Controles
         {
             if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-                FrmDireccion frmDireccion = new FrmDireccion(true, true);
+                frmDireccion = new FrmDireccion(true, true);
                 frmDireccion.ShowDialog();
                 direccionInvitado();
             }
             else
             {
-                FrmDireccion frmDireccion = new FrmDireccion(true, false);
+                frmDireccion = new FrmDireccion(true, false);
                 frmDireccion.ShowDialog();
                 direccionUsuario();
             }

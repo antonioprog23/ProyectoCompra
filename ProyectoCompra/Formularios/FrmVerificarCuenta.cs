@@ -51,7 +51,7 @@ namespace ProyectoCompra.Formularios
 
             if ((BDUsuario.insertarDatos(cliente, usuario)))
             {
-                MessageBox.Show("Usuario creado.", "Información.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario creado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
                 frmInicioSesion frmInicioSesion = new frmInicioSesion();
                 frmInicioSesion.ShowDialog();

@@ -12,11 +12,6 @@ namespace ProyectoCompra.Clases
             this.imagen = imagen;
         }
 
-        public Imagen()
-        {
-
-        }
-
         public static Image cargarImagen(int contador, int subCategoria)
         {
             Image image = null;
@@ -266,7 +261,6 @@ namespace ProyectoCompra.Clases
                     imagen = AlimentacionS23.ResourceManager.GetObject(rutaImagen) as Image;
                     break;
             }
-
             return imagen;
         }
 
