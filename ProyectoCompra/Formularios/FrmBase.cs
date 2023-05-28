@@ -11,13 +11,10 @@ namespace ProyectoCompra.Formularios
     {
         public Usuario usuarioRecuperado;
         public List<Carrito> productos;
+        public Form formPadre { get; set; }
+        public Form formActual { get; set; }
 
         public FrmBase()
-        {
-            InitializeComponent();
-        }
-
-        public FrmBase(Form formPadre, Form formActual)
         {
             InitializeComponent();
         }
@@ -99,7 +96,153 @@ namespace ProyectoCompra.Formularios
 
         private void btnLogoMain_Click(object sender, EventArgs e)
         {
-
+            if (!(this.formPadre is FrmMain) && this.formPadre != null)
+            {
+                this.formPadre.Visible = true;
+                this.formActual.Close();
+            }
         }
+
+        private void lacteosmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(1, 1, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void aceitesVinagresYSalsasmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(1, 2, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void desayunomn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(1, 3, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void conservasmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(1, 4, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void comiadsInternacionalesmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(1, 5, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void nutriciónDeportivamn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(1, 6, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void frutasmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(2, 7, this);
+            frmProductos.ShowDialog();
+        }
+        private void quesosmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(2, 8, this);
+            frmProductos.ShowDialog();
+        }
+        private void mnsCarne_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(2, 9, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void charcuteriamn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(2, 10, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void pescadosMariscosYMoluscosmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(2, 11, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void sushimn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(2, 12, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void congeladosmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(3, 13, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void postresmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(3, 14, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void pastelesmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(3, 15, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void mantequillasmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(3, 16, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void platosmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(3, 17, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void masasmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(3, 18, this);
+            frmProductos.ShowDialog();
+        }
+        private void zumosmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(4, 19, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void sodamn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(4, 20, this);
+            frmProductos.ShowDialog();
+        }
+        private void bebidasConAlcoholmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(4, 21, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void champagnemn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(4, 22, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void bebidasEcologicasmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(4, 23, this);
+            frmProductos.ShowDialog();
+        }
+
+        private void bebidasSinAlcoholmn_Click(object sender, EventArgs e)
+        {
+            FrmProductos frmProductos = new FrmProductos(4, 24, this);
+            frmProductos.ShowDialog();
+        }
+
+
     }
 }

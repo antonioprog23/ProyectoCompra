@@ -41,21 +41,21 @@
             this.nutriciónDeportivamn = new System.Windows.Forms.ToolStripMenuItem();
             this.frescos = new System.Windows.Forms.ToolStripMenuItem();
             this.frutasmn = new System.Windows.Forms.ToolStripMenuItem();
-            this.carnesmn = new System.Windows.Forms.ToolStripMenuItem();
-            this.verdurasYHortalizasmn = new System.Windows.Forms.ToolStripMenuItem();
+            this.quesosmn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsCarne = new System.Windows.Forms.ToolStripMenuItem();
             this.charcuteriamn = new System.Windows.Forms.ToolStripMenuItem();
             this.pescadosMariscosYMoluscosmn = new System.Windows.Forms.ToolStripMenuItem();
             this.sushimn = new System.Windows.Forms.ToolStripMenuItem();
             this.friosYCongelados = new System.Windows.Forms.ToolStripMenuItem();
-            this.masasBasesYPastaFrescamn = new System.Windows.Forms.ToolStripMenuItem();
+            this.congeladosmn = new System.Windows.Forms.ToolStripMenuItem();
             this.postresmn = new System.Windows.Forms.ToolStripMenuItem();
             this.pastelesmn = new System.Windows.Forms.ToolStripMenuItem();
             this.mantequillasmn = new System.Windows.Forms.ToolStripMenuItem();
             this.platosmn = new System.Windows.Forms.ToolStripMenuItem();
             this.masasmn = new System.Windows.Forms.ToolStripMenuItem();
             this.bebidas = new System.Windows.Forms.ToolStripMenuItem();
-            this.aguaSodaYGaseosasmn = new System.Windows.Forms.ToolStripMenuItem();
-            this.zumosDeFrutasmn = new System.Windows.Forms.ToolStripMenuItem();
+            this.zumosmn = new System.Windows.Forms.ToolStripMenuItem();
+            this.sodamn = new System.Windows.Forms.ToolStripMenuItem();
             this.bebidasConAlcoholmn = new System.Windows.Forms.ToolStripMenuItem();
             this.champagnemn = new System.Windows.Forms.ToolStripMenuItem();
             this.bebidasEcologicasmn = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,43 +147,49 @@
             this.lacteosmn.Name = "lacteosmn";
             this.lacteosmn.Size = new System.Drawing.Size(283, 22);
             this.lacteosmn.Text = "Lácteos y huevos";
+            this.lacteosmn.Click += new System.EventHandler(this.lacteosmn_Click);
             // 
             // aceitesVinagresYSalsasmn
             // 
             this.aceitesVinagresYSalsasmn.Name = "aceitesVinagresYSalsasmn";
             this.aceitesVinagresYSalsasmn.Size = new System.Drawing.Size(283, 22);
             this.aceitesVinagresYSalsasmn.Text = "Aceites, vinagres y salsas especiales";
+            this.aceitesVinagresYSalsasmn.Click += new System.EventHandler(this.aceitesVinagresYSalsasmn_Click);
             // 
             // desayunomn
             // 
             this.desayunomn.Name = "desayunomn";
             this.desayunomn.Size = new System.Drawing.Size(283, 22);
             this.desayunomn.Text = "Desayuno y merienda";
+            this.desayunomn.Click += new System.EventHandler(this.desayunomn_Click);
             // 
             // conservasmn
             // 
             this.conservasmn.Name = "conservasmn";
             this.conservasmn.Size = new System.Drawing.Size(283, 22);
             this.conservasmn.Text = "Conservas";
+            this.conservasmn.Click += new System.EventHandler(this.conservasmn_Click);
             // 
             // comiadsInternacionalesmn
             // 
             this.comiadsInternacionalesmn.Name = "comiadsInternacionalesmn";
             this.comiadsInternacionalesmn.Size = new System.Drawing.Size(283, 22);
             this.comiadsInternacionalesmn.Text = "Comidas internacionales";
+            this.comiadsInternacionalesmn.Click += new System.EventHandler(this.comiadsInternacionalesmn_Click);
             // 
             // nutriciónDeportivamn
             // 
             this.nutriciónDeportivamn.Name = "nutriciónDeportivamn";
             this.nutriciónDeportivamn.Size = new System.Drawing.Size(283, 22);
             this.nutriciónDeportivamn.Text = "Nutrición deportiva";
+            this.nutriciónDeportivamn.Click += new System.EventHandler(this.nutriciónDeportivamn_Click);
             // 
             // frescos
             // 
             this.frescos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.frutasmn,
-            this.carnesmn,
-            this.verdurasYHortalizasmn,
+            this.quesosmn,
+            this.mnsCarne,
             this.charcuteriamn,
             this.pescadosMariscosYMoluscosmn,
             this.sushimn});
@@ -196,41 +202,47 @@
             this.frutasmn.Name = "frutasmn";
             this.frutasmn.Size = new System.Drawing.Size(254, 22);
             this.frutasmn.Text = "Verduras y hortalizas";
+            this.frutasmn.Click += new System.EventHandler(this.frutasmn_Click);
             // 
-            // carnesmn
+            // quesosmn
             // 
-            this.carnesmn.Name = "carnesmn";
-            this.carnesmn.Size = new System.Drawing.Size(254, 22);
-            this.carnesmn.Text = "Quesos";
+            this.quesosmn.Name = "quesosmn";
+            this.quesosmn.Size = new System.Drawing.Size(254, 22);
+            this.quesosmn.Text = "Quesos";
+            this.quesosmn.Click += new System.EventHandler(this.quesosmn_Click);
             // 
-            // verdurasYHortalizasmn
+            // mnsCarne
             // 
-            this.verdurasYHortalizasmn.Name = "verdurasYHortalizasmn";
-            this.verdurasYHortalizasmn.Size = new System.Drawing.Size(254, 22);
-            this.verdurasYHortalizasmn.Text = "Carne";
+            this.mnsCarne.Name = "mnsCarne";
+            this.mnsCarne.Size = new System.Drawing.Size(254, 22);
+            this.mnsCarne.Text = "Carne";
+            this.mnsCarne.Click += new System.EventHandler(this.mnsCarne_Click);
             // 
             // charcuteriamn
             // 
             this.charcuteriamn.Name = "charcuteriamn";
             this.charcuteriamn.Size = new System.Drawing.Size(254, 22);
             this.charcuteriamn.Text = "Charcutería";
+            this.charcuteriamn.Click += new System.EventHandler(this.charcuteriamn_Click);
             // 
             // pescadosMariscosYMoluscosmn
             // 
             this.pescadosMariscosYMoluscosmn.Name = "pescadosMariscosYMoluscosmn";
             this.pescadosMariscosYMoluscosmn.Size = new System.Drawing.Size(254, 22);
             this.pescadosMariscosYMoluscosmn.Text = "Pescados, mariscos y moluscos";
+            this.pescadosMariscosYMoluscosmn.Click += new System.EventHandler(this.pescadosMariscosYMoluscosmn_Click);
             // 
             // sushimn
             // 
             this.sushimn.Name = "sushimn";
             this.sushimn.Size = new System.Drawing.Size(254, 22);
             this.sushimn.Text = "Sushi";
+            this.sushimn.Click += new System.EventHandler(this.sushimn_Click);
             // 
             // friosYCongelados
             // 
             this.friosYCongelados.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masasBasesYPastaFrescamn,
+            this.congeladosmn,
             this.postresmn,
             this.pastelesmn,
             this.mantequillasmn,
@@ -240,47 +252,53 @@
             this.friosYCongelados.Size = new System.Drawing.Size(125, 24);
             this.friosYCongelados.Text = "Fríos y congelados";
             // 
-            // masasBasesYPastaFrescamn
+            // congeladosmn
             // 
-            this.masasBasesYPastaFrescamn.Name = "masasBasesYPastaFrescamn";
-            this.masasBasesYPastaFrescamn.Size = new System.Drawing.Size(248, 22);
-            this.masasBasesYPastaFrescamn.Text = "Congelados";
+            this.congeladosmn.Name = "congeladosmn";
+            this.congeladosmn.Size = new System.Drawing.Size(248, 22);
+            this.congeladosmn.Text = "Congelados";
+            this.congeladosmn.Click += new System.EventHandler(this.congeladosmn_Click);
             // 
             // postresmn
             // 
             this.postresmn.Name = "postresmn";
             this.postresmn.Size = new System.Drawing.Size(248, 22);
             this.postresmn.Text = "Postres";
+            this.postresmn.Click += new System.EventHandler(this.postresmn_Click);
             // 
             // pastelesmn
             // 
             this.pastelesmn.Name = "pastelesmn";
             this.pastelesmn.Size = new System.Drawing.Size(248, 22);
             this.pastelesmn.Text = "Pasteles";
+            this.pastelesmn.Click += new System.EventHandler(this.pastelesmn_Click);
             // 
             // mantequillasmn
             // 
             this.mantequillasmn.Name = "mantequillasmn";
             this.mantequillasmn.Size = new System.Drawing.Size(248, 22);
             this.mantequillasmn.Text = "Mantequillas, margarina y nata";
+            this.mantequillasmn.Click += new System.EventHandler(this.mantequillasmn_Click);
             // 
             // platosmn
             // 
             this.platosmn.Name = "platosmn";
             this.platosmn.Size = new System.Drawing.Size(248, 22);
             this.platosmn.Text = "Platos calentar y listo";
+            this.platosmn.Click += new System.EventHandler(this.platosmn_Click);
             // 
             // masasmn
             // 
             this.masasmn.Name = "masasmn";
             this.masasmn.Size = new System.Drawing.Size(248, 22);
             this.masasmn.Text = "Masas, bases, pasta fresca";
+            this.masasmn.Click += new System.EventHandler(this.masasmn_Click);
             // 
             // bebidas
             // 
             this.bebidas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aguaSodaYGaseosasmn,
-            this.zumosDeFrutasmn,
+            this.zumosmn,
+            this.sodamn,
             this.bebidasConAlcoholmn,
             this.champagnemn,
             this.bebidasEcologicasmn,
@@ -289,41 +307,47 @@
             this.bebidas.Size = new System.Drawing.Size(64, 24);
             this.bebidas.Text = "Bebidas";
             // 
-            // aguaSodaYGaseosasmn
+            // zumosmn
             // 
-            this.aguaSodaYGaseosasmn.Name = "aguaSodaYGaseosasmn";
-            this.aguaSodaYGaseosasmn.Size = new System.Drawing.Size(227, 22);
-            this.aguaSodaYGaseosasmn.Text = "Zumo de frutas";
+            this.zumosmn.Name = "zumosmn";
+            this.zumosmn.Size = new System.Drawing.Size(227, 22);
+            this.zumosmn.Text = "Zumo de frutas";
+            this.zumosmn.Click += new System.EventHandler(this.zumosmn_Click);
             // 
-            // zumosDeFrutasmn
+            // sodamn
             // 
-            this.zumosDeFrutasmn.Name = "zumosDeFrutasmn";
-            this.zumosDeFrutasmn.Size = new System.Drawing.Size(227, 22);
-            this.zumosDeFrutasmn.Text = "Agua, soda y gaseosas";
+            this.sodamn.Name = "sodamn";
+            this.sodamn.Size = new System.Drawing.Size(227, 22);
+            this.sodamn.Text = "Agua, soda y gaseosas";
+            this.sodamn.Click += new System.EventHandler(this.sodamn_Click);
             // 
             // bebidasConAlcoholmn
             // 
             this.bebidasConAlcoholmn.Name = "bebidasConAlcoholmn";
             this.bebidasConAlcoholmn.Size = new System.Drawing.Size(227, 22);
             this.bebidasConAlcoholmn.Text = "Bebidas con alcohol";
+            this.bebidasConAlcoholmn.Click += new System.EventHandler(this.bebidasConAlcoholmn_Click);
             // 
             // champagnemn
             // 
             this.champagnemn.Name = "champagnemn";
             this.champagnemn.Size = new System.Drawing.Size(227, 22);
             this.champagnemn.Text = "Champagne cavas y sidras";
+            this.champagnemn.Click += new System.EventHandler(this.champagnemn_Click);
             // 
             // bebidasEcologicasmn
             // 
             this.bebidasEcologicasmn.Name = "bebidasEcologicasmn";
             this.bebidasEcologicasmn.Size = new System.Drawing.Size(227, 22);
             this.bebidasEcologicasmn.Text = "Bebidas Ecológicas";
+            this.bebidasEcologicasmn.Click += new System.EventHandler(this.bebidasEcologicasmn_Click);
             // 
             // bebidasSinAlcoholmn
             // 
             this.bebidasSinAlcoholmn.Name = "bebidasSinAlcoholmn";
             this.bebidasSinAlcoholmn.Size = new System.Drawing.Size(227, 22);
             this.bebidasSinAlcoholmn.Text = "Bebidas sin alcohol";
+            this.bebidasSinAlcoholmn.Click += new System.EventHandler(this.bebidasSinAlcoholmn_Click);
             // 
             // drogueria
             // 
@@ -521,21 +545,21 @@
         private System.Windows.Forms.ToolStripMenuItem nutriciónDeportivamn;
         private System.Windows.Forms.ToolStripMenuItem frescos;
         private System.Windows.Forms.ToolStripMenuItem frutasmn;
-        private System.Windows.Forms.ToolStripMenuItem carnesmn;
-        private System.Windows.Forms.ToolStripMenuItem verdurasYHortalizasmn;
+        private System.Windows.Forms.ToolStripMenuItem quesosmn;
+        private System.Windows.Forms.ToolStripMenuItem mnsCarne;
         private System.Windows.Forms.ToolStripMenuItem charcuteriamn;
         private System.Windows.Forms.ToolStripMenuItem pescadosMariscosYMoluscosmn;
         private System.Windows.Forms.ToolStripMenuItem sushimn;
         private System.Windows.Forms.ToolStripMenuItem friosYCongelados;
-        private System.Windows.Forms.ToolStripMenuItem masasBasesYPastaFrescamn;
+        private System.Windows.Forms.ToolStripMenuItem congeladosmn;
         private System.Windows.Forms.ToolStripMenuItem postresmn;
         private System.Windows.Forms.ToolStripMenuItem pastelesmn;
         private System.Windows.Forms.ToolStripMenuItem mantequillasmn;
         private System.Windows.Forms.ToolStripMenuItem platosmn;
         private System.Windows.Forms.ToolStripMenuItem masasmn;
         private System.Windows.Forms.ToolStripMenuItem bebidas;
-        private System.Windows.Forms.ToolStripMenuItem aguaSodaYGaseosasmn;
-        private System.Windows.Forms.ToolStripMenuItem zumosDeFrutasmn;
+        private System.Windows.Forms.ToolStripMenuItem zumosmn;
+        private System.Windows.Forms.ToolStripMenuItem sodamn;
         private System.Windows.Forms.ToolStripMenuItem bebidasConAlcoholmn;
         private System.Windows.Forms.ToolStripMenuItem champagnemn;
         private System.Windows.Forms.ToolStripMenuItem bebidasEcologicasmn;

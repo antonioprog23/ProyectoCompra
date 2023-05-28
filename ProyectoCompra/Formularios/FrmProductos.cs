@@ -14,16 +14,24 @@ namespace ProyectoCompra.Formularios
         private Producto producto;
         private int categoria;
         private int subCategoria;
-        private FrmMain frmMain;
+        private Form form;
 
-        public FrmProductos(int categoria, int subcategoria, FrmMain frmMain)
+        public FrmProductos(int categoria, int subcategoria, Form form)
         {
             InitializeComponent();
             this.categoria = categoria;
             this.subCategoria = subcategoria;
-            this.frmMain = frmMain;
-            this.frmMain.Visible = false;
             lista = BDProducto.obtenerProductos(this.subCategoria);
+
+            this.form = form;
+            if (form is FrmMain)
+            {
+                this.form.Visible = false;
+            }
+            else
+            {
+                this.form.Visible = false;
+            }
         }
 
         private void FrmProductos_Load(object sender, EventArgs e)
@@ -111,7 +119,10 @@ namespace ProyectoCompra.Formularios
 
         private void FrmProductos_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.frmMain.Close();
+            if (this.form is FrmMain)
+            {
+                this.form.Close();
+            }
         }
     }
 }
