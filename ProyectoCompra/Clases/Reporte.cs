@@ -1,44 +1,48 @@
-﻿using Microsoft.Reporting.WebForms;
+﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
+using Microsoft.Reporting.WebForms;
+using ProyectoCompra.Reportes;
+using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Web;
 
 namespace ProyectoCompra.Clases
 {
     public class Reporte
     {
-        private const string RUTA_REPORTE = @"C:\Users\anton\source\repos\ProyectoCompra\ProyectoCompra\Reportes\InformeFactura.rdlc";
-        public const string RUTA_XSD = @"C:\Users\anton\source\repos\ProyectoCompra\ProyectoCompra\Reportes\DSFactura.xsd";
+        //CONSTANTES
+        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
+        private const string RUTA_REPORTE = "~/Reportes/InformeFactura.rdlc";
+        public const string RUTA_XSD = "~/Reportes/DSFactura.xsd";
 
-        public static byte[] obtenerReporte(int idUsuario)
+        public static void obtenerReporte(int idUsuario, int idPedido)
         {
-            // Crear el informe y exportarlo a un arreglo de bytes en formato PDF
-            using (ReportViewer reportViewer = new ReportViewer())
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
-                reportViewer.ProcessingMode = ProcessingMode.Local;
-                reportViewer.LocalReport.ReportPath = RUTA_REPORTE;
-                reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DSFactura", obtenerDataSet(idUsuario)));
-
-                // Renderizar el informe como PDF
-                byte[] reportBytes = reportViewer.LocalReport.Render("PDF");
-                return reportBytes;
-            }
-        }
-
-        public static DataSet obtenerDataSet(int idUsuario)
-        {
-            // Crear la conexión a la base de datos
-            using (SqlConnection conn = new SqlConnection("cadena de conexión"))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("ConsultarFactura", conn))
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("ConsultarFactura", connection))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                    command.Parameters.AddWithValue("@Id_Pedido", idPedido);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
-                        DataSet dataSet = new DataSet();
-                        adapter.Fill(dataSet);
-                        return dataSet;
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        ReportViewer reportViewer = new ReportViewer();
+                        reportViewer.ProcessingMode = ProcessingMode.Local;
+                        reportViewer.LocalReport.ReportPath = HttpContext.Current.Server.MapPath(RUTA_REPORTE);
+
+                        ReportDataSource reportDataSource = new ReportDataSource(HttpContext.Current.Server.MapPath(RUTA_XSD), dataTable);
+                        reportViewer.LocalReport.DataSources.Add(reportDataSource);
+
+                        byte[] pdfBytes = reportViewer.LocalReport.Render("PDF");
+                        string filePath = @"C:\\Descargas\\Factura.pdf";
+                        File.WriteAllBytes(filePath, pdfBytes);
+
                     }
                 }
             }

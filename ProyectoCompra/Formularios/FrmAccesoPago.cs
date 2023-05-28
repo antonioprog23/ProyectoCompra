@@ -58,6 +58,7 @@ namespace ProyectoCompra.Formularios
                 if (enviarFactura)
                 {
                     // Mensaje.enviareReporte("antajac23@gmail.com");
+                    Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 0);
                 }
                 Application.Restart();
             }
@@ -81,6 +82,7 @@ namespace ProyectoCompra.Formularios
                 Direccion direccionInvitado = new Direccion("Invitado", direccion, pais, provincia, ciudad, cp, telefono);
 
                 BDUsuario.insertarDatosInvitado(cliente, usuario, direccionInvitado);
+                Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 2);
             }
         }
     }
