@@ -6,11 +6,13 @@ GO
 	PRINT 'Procedimiento almacenado ConsultarPedido creado.'
 GO
 CREATE PROCEDURE ConsultarPedido
-	@Id_Usuario INT
+	@Id_Usuario INT,
+	@Fecha_Desde DATE = NULL,
+	@Fecha_Hasta DATE = NULL
 AS
 BEGIN
 	SET NOCOUNT ON
-	SELECT TOP 5 d.Nombre_Direccion,d.Direccion,d.Pais,d.Provincia,d.Ciudad,d.Codigo_Postal,d.Telefono,
+	SELECT d.Nombre_Direccion,d.Direccion,d.Pais,d.Provincia,d.Ciudad,d.Codigo_Postal,d.Telefono,
 	c.Nombre,c.Apellido,
 	i.Codigo_Imagen,
 	pro.Id_Producto,pro.Id_Subcategoria,pro.Nombre as 'Nombre_Producto',pro.Descripcion,pro.Precio,pro.Fabricante,
@@ -25,6 +27,8 @@ BEGIN
 	INNER JOIN Direccion d ON (d.Id_Cliente = c.Id_Cliente)
 	INNER JOIN Producto pro ON (pro.Id_Producto = lp.Id_Producto)
 	INNER JOIN Imagen i ON (i.Id_Producto = pro.Id_Producto)
-	WHERE p.Id_Usuario = @Id_Usuario
+	WHERE p.Id_Usuario = @Id_Usuario AND 
+	(@Fecha_Desde IS NULL OR p.Fecha >= @Fecha_Desde) AND 
+	(@Fecha_Hasta IS NULL OR p.Fecha <= @Fecha_Hasta)
 	ORDER BY p.Id_Pedido DESC
 END

@@ -51,6 +51,8 @@ namespace ProyectoCompra.Base_datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@Fecha_Desde", fechaDesde);
+                    cmd.Parameters.AddWithValue("@Fecha_Hasta", fechaHasta);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
