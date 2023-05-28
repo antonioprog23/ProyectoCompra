@@ -21,7 +21,10 @@ namespace ProyectoCompra.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            tbPedidosLista.Controls.Clear();
+            if (tbPedidosLista.Controls.Contains(ctrlHistorialPedido1))
+            {
+                tbPedidosLista.Controls.Clear();
+            }
             List<Factura> facturas = BDPedido.consultarFacturas(ConfigSesion.obtenerReferenciaIdUsuario(), dtDesde.Value, dtHasta.Value);
             tbPedidosLista.RowCount = facturas.Count;
             for (int i = 0; i < tbPedidosLista.RowCount; i++)

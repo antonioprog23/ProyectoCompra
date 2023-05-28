@@ -12,29 +12,22 @@ namespace ProyectoCompra.Formularios
     {
         private List<Carrito> productos;
         private List<CarritoProvisional> productosProvisionales;
-
-        private int idUsuario;
-
         private Carrito carrito;
         private Carrito carritoListo;
 
         private CarritoProvisional carritoProvisional;
         private CarritoProvisional carritoProvisionalListo;
+        private FrmBase frmBase;
 
         public FrmCarrito()
         {
             InitializeComponent();
-            idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
-            if (idUsuario == 0)
-            {
-                carritoProvisional = new CarritoProvisional();
-                productosProvisionales = CarritoProvisional.consultarCarritoProvisional();
-            }
-            else
-            {
-                carrito = new Carrito();
-                productos = carrito.consultarProductosCarrito(idUsuario);
-            }
+        }
+
+        public FrmCarrito(FrmBase frmBase)
+        {
+            InitializeComponent();
+            this.frmBase = frmBase;
         }
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
@@ -54,14 +47,17 @@ namespace ProyectoCompra.Formularios
 
         private void FrmCarrito_Load(object sender, EventArgs e)
         {
-            cargarDatos();
             configuracionInicial();
+            cargarDatos();
         }
 
         private void configuracionInicial()
         {
-            if (idUsuario == 0)
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
+                carritoProvisional = new CarritoProvisional();
+                productosProvisionales = CarritoProvisional.consultarCarritoProvisional();
+
                 if (productosProvisionales.Count == 0)
                 {
                     configurarBotones(true, false, false);
@@ -71,6 +67,8 @@ namespace ProyectoCompra.Formularios
             }
             else
             {
+                carrito = new Carrito();
+                productos = carrito.consultarProductosCarrito(ConfigSesion.obtenerReferenciaIdUsuario());
                 if (productos.Count == 0)
                 {
                     configurarBotones(true, false, false);
@@ -89,7 +87,7 @@ namespace ProyectoCompra.Formularios
 
         private void cargarDatos()
         {
-            if (idUsuario == 0)
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
                 cargarCarritoProvisional();
                 //SUBTOTAL
@@ -169,7 +167,7 @@ namespace ProyectoCompra.Formularios
         private decimal calcularSubTotal()
         {
             decimal subtTotal = 0;
-            if (idUsuario == 0)
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
                 subtTotal = carritoProvisional.calcularSubTotal(productosProvisionales);
             }
@@ -188,10 +186,10 @@ namespace ProyectoCompra.Formularios
             {
                 if (confirmarBorrado == DialogResult.Yes)
                 {
-                    carrito.vaciarCarrito(idUsuario, Convert.ToInt32(button.Name), false);
-                    this.Refresh();
+                    carrito.vaciarCarrito(ConfigSesion.obtenerReferenciaIdUsuario(), Convert.ToInt32(button.Name), false);
                     actualizarVentana();
                 }
+                this.frmBase.aumentarContador();
                 return;
             }
 
@@ -203,24 +201,22 @@ namespace ProyectoCompra.Formularios
 
                     actualizarVentana();
                 }
+                this.frmBase.aumentarContador();
                 return;
             }
-
         }
 
         private void BotonCantidad_Click(object sender, EventArgs e)
         {
             Producto producto = new Producto(Convert.ToInt32((sender as NumericUpDown).Name));
-            if (idUsuario == 0)
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-
-
                 CarritoProvisional.editarCantidadProducto(producto.id_producto, Convert.ToInt32((sender as NumericUpDown).Value));
             }
             else
             {
                 Carrito carrito = new Carrito(Convert.ToInt32((sender as NumericUpDown).Value), producto);
-                Usuario usuario = new Usuario(idUsuario);
+                Usuario usuario = new Usuario(ConfigSesion.obtenerReferenciaIdUsuario());
                 BDCarrito.insertarProductoCarrito(usuario, carrito, false, "");
             }
             actualizarVentana();
@@ -229,9 +225,9 @@ namespace ProyectoCompra.Formularios
         private void actualizarVentana()
         {
             //SE ACTUALIZA LA VENTANA
-            this.Close();
-            FrmCarrito frmCarrito = new FrmCarrito();
-            frmCarrito.ShowDialog();
+            this.tbProductos.Controls.Clear();
+            configuracionInicial();
+            cargarDatos();
         }
 
         private void btnVaciarCarrito_Click(object sender, EventArgs e)
@@ -240,7 +236,7 @@ namespace ProyectoCompra.Formularios
             {
                 foreach (Carrito producto in productos)
                 {
-                    carrito.vaciarCarrito(idUsuario, 0, true);
+                    carrito.vaciarCarrito(ConfigSesion.obtenerReferenciaIdUsuario(), 0, true);
                 }
                 this.Close();
             }
@@ -250,6 +246,7 @@ namespace ProyectoCompra.Formularios
                 CarritoProvisional.vaciarCarrito();
                 this.Close();
             }
+            this.frmBase.aumentarContador();
         }
     }
 }

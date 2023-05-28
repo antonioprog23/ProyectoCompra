@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogoMain = new System.Windows.Forms.Button();
             this.mnAlimentacion = new System.Windows.Forms.MenuStrip();
@@ -70,8 +69,6 @@
             this.lblContador = new System.Windows.Forms.Label();
             this.lblSaludo = new System.Windows.Forms.Label();
             this.btnCarrito = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnIdentificarse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.mnAlimentacion.SuspendLayout();
@@ -385,8 +382,6 @@
             this.panel2.Controls.Add(this.lblContador);
             this.panel2.Controls.Add(this.lblSaludo);
             this.panel2.Controls.Add(this.btnCarrito);
-            this.panel2.Controls.Add(this.btnBuscar);
-            this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.btnIdentificarse);
             this.panel2.Location = new System.Drawing.Point(95, 2);
             this.panel2.Name = "panel2";
@@ -432,11 +427,10 @@
             this.lblSaludo.Font = new System.Drawing.Font("Arial Nova Cond", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaludo.Location = new System.Drawing.Point(3, 6);
             this.lblSaludo.Name = "lblSaludo";
-            this.lblSaludo.Size = new System.Drawing.Size(206, 58);
+            this.lblSaludo.Size = new System.Drawing.Size(222, 58);
             this.lblSaludo.TabIndex = 5;
             this.lblSaludo.Text = "Easy Shop";
             this.lblSaludo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSaludo.Visible = false;
             // 
             // btnCarrito
             // 
@@ -460,27 +454,6 @@
             this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
             this.btnCarrito.MouseEnter += new System.EventHandler(this.btnCarrito_MouseEnter);
             this.btnCarrito.MouseLeave += new System.EventHandler(this.btnCarrito_MouseLeave);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(606, 28);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 22);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(275, 29);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(325, 20);
-            this.txtBuscar.TabIndex = 4;
             // 
             // btnIdentificarse
             // 
@@ -520,7 +493,6 @@
             this.mnAlimentacion.ResumeLayout(false);
             this.mnAlimentacion.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -533,8 +505,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnIdentificarse;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.MenuStrip mnAlimentacion;
         private System.Windows.Forms.ToolStripMenuItem alimentacion;
         private System.Windows.Forms.ToolStripMenuItem lacteosmn;

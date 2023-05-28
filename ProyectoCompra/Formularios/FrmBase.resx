@@ -120,17 +120,4 @@
   <metadata name="mnAlimentacion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAWZJREFUOE9joBoIDQ3lTEhIyALiNYmJiduB9EQgNoJK4wZJSUnqQA13khpm/E+e
-        d/Z/8qKr/5Mn7/qflFv+DyjeDFWGCUA2gjQmzzj0P2XrN1S88f3/xNLW/0D5ZKhyVAByKshGDI0wvPrx
-        /8TklKf19fVMUC0IANS8GuTUoj3f/1fs+/4/e8e3//WHfvxP3fbtf+vR72ADkoob/8fFxWlDtSAAKHCS
-        F1/7P/n0j/8LL/0Ea9x8+/f/vF3f/x95/BtsSFJFF8jp5lAtCAAKVVDgYDgXhrd8+Z+UVfAnNjZWGKoF
-        AUDRAQpVUOBg0wwyGKhmHVQ5JgBFByhUk1c9RtL4FawxMTn1HTAqS6BKsQNQdCQkJj8FBU5SZff/xMz8
-        PyAbgeLFwRHRf90CwxZDlWIHoOgAKtaKj4+3SE5OFoIKM7j5hywwd/f/T9AAXMA9MAxiQEDobKgQaQCk
-        0TMoPBzKJRcwMAAACHgATCO8OCcAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

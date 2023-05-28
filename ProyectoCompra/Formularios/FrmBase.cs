@@ -35,7 +35,6 @@ namespace ProyectoCompra.Formularios
             {
                 btnIdentificarse.Visible = false;
                 btnPerfil.Visible = true;
-                lblSaludo.Visible = true;
             }
             aumentarContador();
         }
@@ -60,7 +59,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            FrmCarrito frmCarrito = new FrmCarrito();
+            FrmCarrito frmCarrito = new FrmCarrito(this);
             frmCarrito.ShowDialog();
         }
 

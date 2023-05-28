@@ -30,9 +30,9 @@
         {
             this.btnVaciarCarrito = new System.Windows.Forms.Button();
             this.btnConfirmarCompra = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tbProductos = new System.Windows.Forms.TableLayoutPanel();
+            this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblCarritoVacio = new System.Windows.Forms.Label();
+            this.tbProductos = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,7 +44,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.gbProductos = new System.Windows.Forms.GroupBox();
             this.lblContador = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flPanel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -76,15 +76,27 @@
             this.btnConfirmarCompra.Visible = false;
             this.btnConfirmarCompra.Click += new System.EventHandler(this.btnConfirmarCompra_Click);
             // 
-            // flowLayoutPanel1
+            // flPanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.lblCarritoVacio);
-            this.flowLayoutPanel1.Controls.Add(this.tbProductos);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(465, 510);
-            this.flowLayoutPanel1.TabIndex = 5;
+            this.flPanel.AutoScroll = true;
+            this.flPanel.Controls.Add(this.lblCarritoVacio);
+            this.flPanel.Controls.Add(this.tbProductos);
+            this.flPanel.Location = new System.Drawing.Point(2, 2);
+            this.flPanel.Name = "flPanel";
+            this.flPanel.Size = new System.Drawing.Size(465, 510);
+            this.flPanel.TabIndex = 5;
+            // 
+            // lblCarritoVacio
+            // 
+            this.lblCarritoVacio.Font = new System.Drawing.Font("Arial Nova Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarritoVacio.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblCarritoVacio.Location = new System.Drawing.Point(3, 0);
+            this.lblCarritoVacio.Name = "lblCarritoVacio";
+            this.lblCarritoVacio.Size = new System.Drawing.Size(456, 501);
+            this.lblCarritoVacio.TabIndex = 1;
+            this.lblCarritoVacio.Text = "Ops... el carrito está vacío :/";
+            this.lblCarritoVacio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCarritoVacio.Visible = false;
             // 
             // tbProductos
             // 
@@ -98,18 +110,6 @@
             this.tbProductos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbProductos.Size = new System.Drawing.Size(0, 0);
             this.tbProductos.TabIndex = 0;
-            // 
-            // lblCarritoVacio
-            // 
-            this.lblCarritoVacio.Font = new System.Drawing.Font("Arial Nova Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarritoVacio.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblCarritoVacio.Location = new System.Drawing.Point(3, 0);
-            this.lblCarritoVacio.Name = "lblCarritoVacio";
-            this.lblCarritoVacio.Size = new System.Drawing.Size(456, 501);
-            this.lblCarritoVacio.TabIndex = 1;
-            this.lblCarritoVacio.Text = "Ops... el carrito está vacío :/";
-            this.lblCarritoVacio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCarritoVacio.Visible = false;
             // 
             // flowLayoutPanel2
             // 
@@ -233,7 +233,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(643, 553);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flPanel);
             this.Controls.Add(this.btnVaciarCarrito);
             this.Font = new System.Drawing.Font("Arial Nova Cond", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -241,8 +241,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cesta de productos";
             this.Load += new System.EventHandler(this.FrmCarrito_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.flPanel.ResumeLayout(false);
+            this.flPanel.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -258,7 +258,7 @@
         #endregion
         private System.Windows.Forms.Button btnConfirmarCompra;
         private System.Windows.Forms.Button btnVaciarCarrito;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flPanel;
         private System.Windows.Forms.TableLayoutPanel tbProductos;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.GroupBox groupBox1;
