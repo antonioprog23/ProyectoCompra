@@ -1,9 +1,7 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -12,41 +10,43 @@ namespace ProyectoCompra.Formularios
     public partial class FrmBase : Form
     {
         public Usuario usuarioRecuperado;
-        private Carrito carrito;
-        private List<Carrito> lista;
+        public List<Carrito> productos;
 
         public FrmBase()
         {
             InitializeComponent();
-            carrito = new Carrito();
+        }
+
+        public FrmBase(Form formPadre, Form formActual)
+        {
+            InitializeComponent();
         }
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
-            //USUARO
-            try
+            int idReferenciaUsuariao = ConfigSesion.obtenerReferenciaIdUsuario();
+            if (idReferenciaUsuariao != 0)
             {
-                int idReferenciaUsuariao = ConfigSesion.obtenerReferenciaIdUsuario();
-                if (idReferenciaUsuariao != 0)
-                {
-                    usuarioRecuperado = BDUsuario.obtenerDatos("", "", idReferenciaUsuariao.ToString());
-                }
-                if (usuarioRecuperado == null)
-                {
-                    btnIdentificarse.Visible = true;
-                    btnPerfil.Visible = false;
-                }
-                else
-                {
-                    btnIdentificarse.Visible = false;
-                    btnPerfil.Visible = true;
-                    lblSaludo.Visible = true;
-                }
+                usuarioRecuperado = BDUsuario.obtenerDatos("", "", idReferenciaUsuariao.ToString());
             }
-            catch (ConfigurationErrorsException ex)
+            if (usuarioRecuperado == null)
             {
-                throw ex;
+                btnIdentificarse.Visible = true;
+                btnPerfil.Visible = false;
             }
+            else
+            {
+                btnIdentificarse.Visible = false;
+                btnPerfil.Visible = true;
+                lblSaludo.Visible = true;
+            }
+            aumentarContador();
+        }
+
+        public void aumentarContador()
+        {
+            productos = BDCarrito.consultarCarrito(ConfigSesion.obtenerReferenciaIdUsuario());
+            lblContador.Text = productos.Count.ToString();
         }
 
         private void btnIdentificarse_Click(object sender, EventArgs e)
@@ -59,16 +59,6 @@ namespace ProyectoCompra.Formularios
         {
             FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado);
             frmPerfil.ShowDialog();
-        }
-
-        public Label GetLabelContador()
-        {
-            return this.lblContador;
-        }
-
-        private void lblContador_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCarrito_Click(object sender, EventArgs e)
@@ -105,6 +95,11 @@ namespace ProyectoCompra.Formularios
         private void btnCarrito_MouseEnter(object sender, EventArgs e)
         {
             btnCarrito.Font = new Font(btnCarrito.Font, FontStyle.Underline);
+        }
+
+        private void btnLogoMain_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

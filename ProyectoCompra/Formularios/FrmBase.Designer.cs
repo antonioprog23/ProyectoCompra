@@ -97,6 +97,7 @@
             this.btnLogoMain.Size = new System.Drawing.Size(86, 66);
             this.btnLogoMain.TabIndex = 5;
             this.btnLogoMain.UseVisualStyleBackColor = true;
+            this.btnLogoMain.Click += new System.EventHandler(this.btnLogoMain_Click);
             // 
             // mnAlimentacion
             // 
@@ -379,9 +380,9 @@
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.Image = global::ProyectoCompra.Properties.Resources.icon_perfil;
-            this.btnPerfil.Location = new System.Drawing.Point(983, 9);
+            this.btnPerfil.Location = new System.Drawing.Point(970, 11);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(41, 58);
+            this.btnPerfil.Size = new System.Drawing.Size(43, 58);
             this.btnPerfil.TabIndex = 4;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -396,9 +397,9 @@
             this.lblContador.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblContador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContador.Location = new System.Drawing.Point(1059, 32);
+            this.lblContador.Location = new System.Drawing.Point(1051, 36);
             this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(11, 11);
+            this.lblContador.Size = new System.Drawing.Size(21, 12);
             this.lblContador.TabIndex = 8;
             this.lblContador.Text = "0";
             // 
@@ -424,9 +425,9 @@
             this.btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCarrito.Image = global::ProyectoCompra.Properties.Resources.icon_carrito;
-            this.btnCarrito.Location = new System.Drawing.Point(1013, 1);
+            this.btnCarrito.Location = new System.Drawing.Point(1000, 3);
             this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(59, 63);
+            this.btnCarrito.Size = new System.Drawing.Size(72, 63);
             this.btnCarrito.TabIndex = 7;
             this.btnCarrito.Text = "Carrito";
             this.btnCarrito.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -468,9 +469,9 @@
             this.btnIdentificarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIdentificarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIdentificarse.Image = global::ProyectoCompra.Properties.Resources.icon_perfil;
-            this.btnIdentificarse.Location = new System.Drawing.Point(958, 9);
+            this.btnIdentificarse.Location = new System.Drawing.Point(945, 11);
             this.btnIdentificarse.Name = "btnIdentificarse";
-            this.btnIdentificarse.Size = new System.Drawing.Size(65, 58);
+            this.btnIdentificarse.Size = new System.Drawing.Size(67, 58);
             this.btnIdentificarse.TabIndex = 3;
             this.btnIdentificarse.Text = "Mi cuenta";
             this.btnIdentificarse.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -544,7 +545,7 @@
         private System.Windows.Forms.ToolStripMenuItem electrodomesticos;
         private System.Windows.Forms.ToolStripMenuItem tecnologia;
         private System.Windows.Forms.ToolStripMenuItem hogar;
-        private System.Windows.Forms.Label lblContador;
         private System.Windows.Forms.Button btnCarrito;
+        public System.Windows.Forms.Label lblContador;
     }
 }

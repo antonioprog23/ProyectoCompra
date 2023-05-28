@@ -10,7 +10,7 @@ CREATE PROCEDURE ConsultarPedido
 AS
 BEGIN
 	SET NOCOUNT ON
-	SELECT d.Nombre_Direccion,d.Direccion,d.Pais,d.Provincia,d.Ciudad,d.Codigo_Postal,d.Telefono,
+	SELECT TOP 5 d.Nombre_Direccion,d.Direccion,d.Pais,d.Provincia,d.Ciudad,d.Codigo_Postal,d.Telefono,
 	c.Nombre,c.Apellido,
 	i.Codigo_Imagen,
 	pro.Id_Producto,pro.Id_Subcategoria,pro.Nombre as 'Nombre_Producto',pro.Descripcion,pro.Precio,pro.Fabricante,

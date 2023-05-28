@@ -40,7 +40,7 @@ namespace ProyectoCompra.Base_datos
             return actualizado;
         }
 
-        public static List<Factura> consultarFacturas(int idUsuario)
+        public static List<Factura> consultarFacturas(int idUsuario, DateTime fechaDesde, DateTime fechaHasta)
         {
             List<Factura> facturas = new List<Factura>();
             List<LineaPedido> lineasPedido = new List<LineaPedido>();
@@ -74,10 +74,10 @@ namespace ProyectoCompra.Base_datos
                                 facturas.Add(factura);
                             }
                         }
+                        return facturas;
                     }
                 }
             }
-            return facturas;
         }
     }
 }

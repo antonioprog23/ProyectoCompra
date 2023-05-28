@@ -16,7 +16,13 @@ namespace ProyectoCompra.Formularios
 
         private void FrmHistorialPedidos_Load(object sender, EventArgs e)
         {
-            List<Factura> facturas = BDPedido.consultarFacturas(ConfigSesion.obtenerReferenciaIdUsuario());
+            this.lblContadorPedidos.Text = string.Format("{0} ({1})", lblContadorPedidos.Text, 0);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            tbPedidosLista.Controls.Clear();
+            List<Factura> facturas = BDPedido.consultarFacturas(ConfigSesion.obtenerReferenciaIdUsuario(), dtDesde.Value, dtHasta.Value);
             tbPedidosLista.RowCount = facturas.Count;
             for (int i = 0; i < tbPedidosLista.RowCount; i++)
             {
@@ -24,6 +30,8 @@ namespace ProyectoCompra.Formularios
                 ctrlHistorialPedido.factura = facturas[i];
                 tbPedidosLista.Controls.Add(ctrlHistorialPedido);
             }
+            this.lblContadorPedidos.Text = "";
+            this.lblContadorPedidos.Text = string.Format("Pedidos filtrados ({0})", facturas.Count);
         }
     }
 }

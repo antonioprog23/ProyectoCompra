@@ -1,10 +1,7 @@
 ﻿using ProyectoCompra.Clases;
-using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -49,5 +46,7 @@ namespace ProyectoCompra.Formularios
             }
             Close();
         }
+
+
     }
 }
