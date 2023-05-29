@@ -122,6 +122,7 @@ namespace ProyectoCompra.Formularios
                 this.formActual.Close();
             }
         }
+
         private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
