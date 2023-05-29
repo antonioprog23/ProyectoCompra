@@ -7,7 +7,7 @@ namespace ProyectoCompra.Formularios
     public partial class FrmPerfil : Form
     {
         private Usuario usuarioRecuperado;
-        private FrmBase frmBase;
+        public FrmBase frmBase { get; set; }
 
         public FrmPerfil()
         {
@@ -61,7 +61,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnOtrasOpciones_Click(object sender, EventArgs e)
         {
-            FrmOtrasOpciones frmOtrasOpciones = new FrmOtrasOpciones();
+            FrmOtrasOpciones frmOtrasOpciones = new FrmOtrasOpciones(this.frmBase);
             frmOtrasOpciones.ShowDialog();
         }
     }

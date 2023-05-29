@@ -10,11 +10,13 @@ namespace ProyectoCompra.Formularios
     public partial class FrmHistorialPedidos : Form
     {
         private CtrlHistorialPedido ctrlHistorialPedido;
+        public FrmBase frmBase { get; set; }
 
-        public FrmHistorialPedidos()
+        public FrmHistorialPedidos(FrmBase frmBase)
         {
             InitializeComponent();
             this.ctrlHistorialPedido = null;
+            this.frmBase = frmBase;
         }
 
         private void FrmHistorialPedidos_Load(object sender, EventArgs e)
@@ -38,6 +40,7 @@ namespace ProyectoCompra.Formularios
             {
                 ctrlHistorialPedido = new CtrlHistorialPedido();
                 ctrlHistorialPedido.factura = facturas[i];
+                ctrlHistorialPedido.frmBase = this.frmBase;
                 tbPedidosLista.Controls.Add(ctrlHistorialPedido);
             }
             this.lblContadorPedidos.Text = "";

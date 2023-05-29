@@ -8,7 +8,7 @@ namespace ProyectoCompra.Controles
     public partial class CtrlHistorialPedido : UserControl
     {
         public Factura factura { get; set; }
-
+        public FrmBase frmBase { get; set; }
         public CtrlHistorialPedido()
         {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace ProyectoCompra.Controles
 
         private void btnMasDetalles_Click(object sender, EventArgs e)
         {
-            FrmMasDetalles frmMasDetalles = new FrmMasDetalles(factura);
+            FrmMasDetalles frmMasDetalles = new FrmMasDetalles(factura,this.frmBase);
             frmMasDetalles.ShowDialog();
         }
 
