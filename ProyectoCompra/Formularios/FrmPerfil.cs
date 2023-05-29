@@ -7,15 +7,18 @@ namespace ProyectoCompra.Formularios
     public partial class FrmPerfil : Form
     {
         private Usuario usuarioRecuperado;
+        public FrmBase frmBase { get; set; }
+
         public FrmPerfil()
         {
             InitializeComponent();
         }
 
-        public FrmPerfil(Usuario usuario)
+        public FrmPerfil(Usuario usuario, FrmBase frmBase)
         {
             InitializeComponent();
             this.usuarioRecuperado = usuario;
+            this.frmBase = frmBase;
         }
 
         private void frmPerfil_Load(object sender, EventArgs e)
@@ -39,7 +42,10 @@ namespace ProyectoCompra.Formularios
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             ConfigSesion.borrarReferenciaIdUsuario();
-            Application.Restart();
+            this.frmBase.usuarioRecuperado = null;
+            this.frmBase.aumentarContador();
+            this.frmBase.configurarFrmBase();
+            this.Close();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -55,7 +61,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnOtrasOpciones_Click(object sender, EventArgs e)
         {
-            FrmOtrasOpciones frmOtrasOpciones = new FrmOtrasOpciones();
+            FrmOtrasOpciones frmOtrasOpciones = new FrmOtrasOpciones(this.frmBase);
             frmOtrasOpciones.ShowDialog();
         }
     }

@@ -10,10 +10,17 @@ namespace ProyectoCompra.Formularios
     public partial class frmInicioSesion : Form
     {
         private Usuario usuarioEncontrado;
+        private FrmBase frmBase;
 
         public frmInicioSesion()
         {
             InitializeComponent();
+        }
+
+        public frmInicioSesion(FrmBase frmBase)
+        {
+            InitializeComponent();
+            this.frmBase = frmBase;
         }
 
         #region Eventos
@@ -22,19 +29,23 @@ namespace ProyectoCompra.Formularios
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtUsuario.Text.Trim()) && !string.IsNullOrEmpty(contrasenia.TextBoxtxtContrasenia.Trim()))
+            if (string.IsNullOrEmpty(txtUsuario.Text.Trim()) && string.IsNullOrEmpty(contrasenia.TextBoxtxtContrasenia.Trim()))
             {
-                usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text.Trim(), contrasenia.TextBoxtxtContrasenia.Trim(), "");
-                if (usuarioEncontrado == null)
-                {
-                    MessageBox.Show("Usuario no encontrado.");
-                }
-                else
-                {
-                    MessageBox.Show("Bienvenido");
-                    ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
-                    Application.Restart();
-                }
+                MessageBox.Show("Los datos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text.Trim(), contrasenia.TextBoxtxtContrasenia.Trim(), "");
+            if (usuarioEncontrado == null)
+            {
+                MessageBox.Show("Usuario no encontrado.");
+            }
+            else
+            {
+                MessageBox.Show("Bienvenido");
+                ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
+                this.frmBase.aumentarContador();
+                this.frmBase.configurarFrmBase();
+                this.Close();
             }
         }
 

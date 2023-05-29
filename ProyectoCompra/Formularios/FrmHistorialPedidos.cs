@@ -9,9 +9,14 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmHistorialPedidos : Form
     {
-        public FrmHistorialPedidos()
+        private CtrlHistorialPedido ctrlHistorialPedido;
+        public FrmBase frmBase { get; set; }
+
+        public FrmHistorialPedidos(FrmBase frmBase)
         {
             InitializeComponent();
+            this.ctrlHistorialPedido = null;
+            this.frmBase = frmBase;
         }
 
         private void FrmHistorialPedidos_Load(object sender, EventArgs e)
@@ -21,16 +26,21 @@ namespace ProyectoCompra.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (tbPedidosLista.Controls.Contains(ctrlHistorialPedido1))
+            if (ctrlHistorialPedido != null)
             {
-                tbPedidosLista.Controls.Clear();
+                if (tbPedidosLista.Controls.Contains(ctrlHistorialPedido))
+                {
+                    tbPedidosLista.Controls.Clear();
+                }
             }
+
             List<Factura> facturas = BDPedido.consultarFacturas(ConfigSesion.obtenerReferenciaIdUsuario(), dtDesde.Value, dtHasta.Value);
             tbPedidosLista.RowCount = facturas.Count;
             for (int i = 0; i < tbPedidosLista.RowCount; i++)
             {
-                CtrlHistorialPedido ctrlHistorialPedido = new CtrlHistorialPedido();
+                ctrlHistorialPedido = new CtrlHistorialPedido();
                 ctrlHistorialPedido.factura = facturas[i];
+                ctrlHistorialPedido.frmBase = this.frmBase;
                 tbPedidosLista.Controls.Add(ctrlHistorialPedido);
             }
             this.lblContadorPedidos.Text = "";

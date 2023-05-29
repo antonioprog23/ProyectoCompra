@@ -52,22 +52,22 @@
             this.lblEnvio = new System.Windows.Forms.Label();
             this.rbtnCasa = new System.Windows.Forms.RadioButton();
             this.tpPago = new System.Windows.Forms.TabPage();
+            this.cbxEnviarFactura = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.gbxTarjeta = new System.Windows.Forms.GroupBox();
-            this.ctrlCVV = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.ctrlAnioVen = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblMesVen = new System.Windows.Forms.Label();
             this.lblAnioVen = new System.Windows.Forms.Label();
             this.lblCVV = new System.Windows.Forms.Label();
-            this.ctrlTxtMesVen = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.ctrlTxtTitular = new ProyectoCompra.Controles.CtrlTextoBox();
-            this.ctrlTxtNTarjeta = new ProyectoCompra.Controles.CtrlTextoBox();
             this.lblNTarjeta = new System.Windows.Forms.Label();
             this.lblTitular = new System.Windows.Forms.Label();
             this.rbnTarjeta = new System.Windows.Forms.RadioButton();
             this.gbxEfectivo = new System.Windows.Forms.GroupBox();
             this.rbnEfectivo = new System.Windows.Forms.RadioButton();
-            this.cbxEnviarFactura = new System.Windows.Forms.CheckBox();
+            this.ctrlCVV = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlAnioVen = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtMesVen = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtTitular = new ProyectoCompra.Controles.CtrlTextoBox();
+            this.ctrlTxtNTarjeta = new ProyectoCompra.Controles.CtrlTextoBox();
             this.gbxRecoger.SuspendLayout();
             this.panelDetalles.SuspendLayout();
             this.flProductos.SuspendLayout();
@@ -350,6 +350,19 @@
             this.tpPago.Text = "Pago";
             this.tpPago.UseVisualStyleBackColor = true;
             // 
+            // cbxEnviarFactura
+            // 
+            this.cbxEnviarFactura.AutoSize = true;
+            this.cbxEnviarFactura.Checked = true;
+            this.cbxEnviarFactura.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxEnviarFactura.Location = new System.Drawing.Point(318, 417);
+            this.cbxEnviarFactura.Name = "cbxEnviarFactura";
+            this.cbxEnviarFactura.Size = new System.Drawing.Size(143, 17);
+            this.cbxEnviarFactura.TabIndex = 9;
+            this.cbxEnviarFactura.Text = "Enviar factura por correo";
+            this.cbxEnviarFactura.UseVisualStyleBackColor = true;
+            this.cbxEnviarFactura.CheckedChanged += new System.EventHandler(this.cbxEnviarFactura_CheckedChanged);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -378,30 +391,6 @@
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 198);
             this.gbxTarjeta.TabIndex = 7;
             this.gbxTarjeta.TabStop = false;
-            // 
-            // ctrlCVV
-            // 
-            this.ctrlCVV.AutoSize = true;
-            this.ctrlCVV.IsNumerico = true;
-            this.ctrlCVV.IsReadOnly = true;
-            this.ctrlCVV.Location = new System.Drawing.Point(306, 154);
-            this.ctrlCVV.Name = "ctrlCVV";
-            this.ctrlCVV.Size = new System.Drawing.Size(54, 20);
-            this.ctrlCVV.TabIndex = 23;
-            this.ctrlCVV.Texto = "";
-            this.ctrlCVV.Visible = false;
-            // 
-            // ctrlAnioVen
-            // 
-            this.ctrlAnioVen.AutoSize = true;
-            this.ctrlAnioVen.IsNumerico = true;
-            this.ctrlAnioVen.IsReadOnly = true;
-            this.ctrlAnioVen.Location = new System.Drawing.Point(190, 154);
-            this.ctrlAnioVen.Name = "ctrlAnioVen";
-            this.ctrlAnioVen.Size = new System.Drawing.Size(86, 20);
-            this.ctrlAnioVen.TabIndex = 22;
-            this.ctrlAnioVen.Texto = "";
-            this.ctrlAnioVen.Visible = false;
             // 
             // lblMesVen
             // 
@@ -432,41 +421,6 @@
             this.lblCVV.TabIndex = 21;
             this.lblCVV.Text = "CVV:";
             this.lblCVV.Visible = false;
-            // 
-            // ctrlTxtMesVen
-            // 
-            this.ctrlTxtMesVen.AutoSize = true;
-            this.ctrlTxtMesVen.IsNumerico = true;
-            this.ctrlTxtMesVen.IsReadOnly = true;
-            this.ctrlTxtMesVen.Location = new System.Drawing.Point(75, 154);
-            this.ctrlTxtMesVen.Name = "ctrlTxtMesVen";
-            this.ctrlTxtMesVen.Size = new System.Drawing.Size(87, 20);
-            this.ctrlTxtMesVen.TabIndex = 18;
-            this.ctrlTxtMesVen.Texto = "";
-            this.ctrlTxtMesVen.Visible = false;
-            // 
-            // ctrlTxtTitular
-            // 
-            this.ctrlTxtTitular.AutoSize = true;
-            this.ctrlTxtTitular.IsReadOnly = true;
-            this.ctrlTxtTitular.Location = new System.Drawing.Point(75, 76);
-            this.ctrlTxtTitular.Name = "ctrlTxtTitular";
-            this.ctrlTxtTitular.Size = new System.Drawing.Size(285, 20);
-            this.ctrlTxtTitular.TabIndex = 17;
-            this.ctrlTxtTitular.Texto = "";
-            this.ctrlTxtTitular.Visible = false;
-            // 
-            // ctrlTxtNTarjeta
-            // 
-            this.ctrlTxtNTarjeta.AutoSize = true;
-            this.ctrlTxtNTarjeta.IsNumerico = true;
-            this.ctrlTxtNTarjeta.IsReadOnly = true;
-            this.ctrlTxtNTarjeta.Location = new System.Drawing.Point(75, 115);
-            this.ctrlTxtNTarjeta.Name = "ctrlTxtNTarjeta";
-            this.ctrlTxtNTarjeta.Size = new System.Drawing.Size(285, 20);
-            this.ctrlTxtNTarjeta.TabIndex = 16;
-            this.ctrlTxtNTarjeta.Texto = "";
-            this.ctrlTxtNTarjeta.Visible = false;
             // 
             // lblNTarjeta
             // 
@@ -523,18 +477,64 @@
             this.rbnEfectivo.UseVisualStyleBackColor = true;
             this.rbnEfectivo.Click += new System.EventHandler(this.rbnEfectivo_Click);
             // 
-            // cbxEnviarFactura
+            // ctrlCVV
             // 
-            this.cbxEnviarFactura.AutoSize = true;
-            this.cbxEnviarFactura.Checked = true;
-            this.cbxEnviarFactura.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxEnviarFactura.Location = new System.Drawing.Point(318, 417);
-            this.cbxEnviarFactura.Name = "cbxEnviarFactura";
-            this.cbxEnviarFactura.Size = new System.Drawing.Size(143, 17);
-            this.cbxEnviarFactura.TabIndex = 9;
-            this.cbxEnviarFactura.Text = "Enviar factura por correo";
-            this.cbxEnviarFactura.UseVisualStyleBackColor = true;
-            this.cbxEnviarFactura.CheckedChanged += new System.EventHandler(this.cbxEnviarFactura_CheckedChanged);
+            this.ctrlCVV.AutoSize = true;
+            this.ctrlCVV.IsNumerico = true;
+            this.ctrlCVV.IsReadOnly = true;
+            this.ctrlCVV.Location = new System.Drawing.Point(306, 154);
+            this.ctrlCVV.Name = "ctrlCVV";
+            this.ctrlCVV.Size = new System.Drawing.Size(54, 20);
+            this.ctrlCVV.TabIndex = 23;
+            this.ctrlCVV.Texto = "";
+            this.ctrlCVV.Visible = false;
+            // 
+            // ctrlAnioVen
+            // 
+            this.ctrlAnioVen.AutoSize = true;
+            this.ctrlAnioVen.IsNumerico = true;
+            this.ctrlAnioVen.IsReadOnly = true;
+            this.ctrlAnioVen.Location = new System.Drawing.Point(190, 154);
+            this.ctrlAnioVen.Name = "ctrlAnioVen";
+            this.ctrlAnioVen.Size = new System.Drawing.Size(86, 20);
+            this.ctrlAnioVen.TabIndex = 22;
+            this.ctrlAnioVen.Texto = "";
+            this.ctrlAnioVen.Visible = false;
+            // 
+            // ctrlTxtMesVen
+            // 
+            this.ctrlTxtMesVen.AutoSize = true;
+            this.ctrlTxtMesVen.IsNumerico = true;
+            this.ctrlTxtMesVen.IsReadOnly = true;
+            this.ctrlTxtMesVen.Location = new System.Drawing.Point(75, 154);
+            this.ctrlTxtMesVen.Name = "ctrlTxtMesVen";
+            this.ctrlTxtMesVen.Size = new System.Drawing.Size(87, 20);
+            this.ctrlTxtMesVen.TabIndex = 18;
+            this.ctrlTxtMesVen.Texto = "";
+            this.ctrlTxtMesVen.Visible = false;
+            // 
+            // ctrlTxtTitular
+            // 
+            this.ctrlTxtTitular.AutoSize = true;
+            this.ctrlTxtTitular.IsReadOnly = true;
+            this.ctrlTxtTitular.Location = new System.Drawing.Point(75, 76);
+            this.ctrlTxtTitular.Name = "ctrlTxtTitular";
+            this.ctrlTxtTitular.Size = new System.Drawing.Size(285, 20);
+            this.ctrlTxtTitular.TabIndex = 17;
+            this.ctrlTxtTitular.Texto = "";
+            this.ctrlTxtTitular.Visible = false;
+            // 
+            // ctrlTxtNTarjeta
+            // 
+            this.ctrlTxtNTarjeta.AutoSize = true;
+            this.ctrlTxtNTarjeta.IsNumerico = true;
+            this.ctrlTxtNTarjeta.IsReadOnly = true;
+            this.ctrlTxtNTarjeta.Location = new System.Drawing.Point(75, 115);
+            this.ctrlTxtNTarjeta.Name = "ctrlTxtNTarjeta";
+            this.ctrlTxtNTarjeta.Size = new System.Drawing.Size(285, 20);
+            this.ctrlTxtNTarjeta.TabIndex = 16;
+            this.ctrlTxtNTarjeta.Texto = "";
+            this.ctrlTxtNTarjeta.Visible = false;
             // 
             // CtrlEnvio
             // 

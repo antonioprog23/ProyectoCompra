@@ -10,11 +10,15 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmProductos : FrmBase
     {
+        #region Fields
+
         private List<Producto> lista;
         private Producto producto;
         private int categoria;
         private int subCategoria;
         private Form form;
+
+        #endregion
 
         public FrmProductos(int categoria, int subcategoria, Form form)
         {
@@ -27,10 +31,8 @@ namespace ProyectoCompra.Formularios
             if (form is FrmMain)
             {
                 this.form.Visible = false;
-            }
-            else
-            {
-                this.form.Visible = false;
+                formPadre = form;
+                formActual = this;
             }
         }
 
@@ -40,6 +42,7 @@ namespace ProyectoCompra.Formularios
             cargarBotones();
         }
 
+        #region Métodos privados
         private void cargarBotones()
         {
             int contador = 0;
@@ -69,14 +72,7 @@ namespace ProyectoCompra.Formularios
             }
         }
 
-        private void button_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            producto = obtenerProducto(Convert.ToInt32(button.Name));
-            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto, sender);
-            frmDetalleProducto.ShowDialog();
-            aumentarContador();
-        }
+
 
         private Producto obtenerProducto(int contador)
         {
@@ -117,6 +113,18 @@ namespace ProyectoCompra.Formularios
             }
         }
 
+        #endregion
+
+        #region Eventos
+        private void button_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            producto = obtenerProducto(Convert.ToInt32(button.Name));
+            FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto, sender);
+            frmDetalleProducto.ShowDialog();
+            aumentarContador();
+        }
+
         private void FrmProductos_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (this.form is FrmMain)
@@ -124,5 +132,6 @@ namespace ProyectoCompra.Formularios
                 this.form.Close();
             }
         }
+        #endregion
     }
 }

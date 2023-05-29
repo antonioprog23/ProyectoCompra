@@ -138,6 +138,7 @@ namespace ProyectoCompra.Controles
         private void rbnTarjeta_Click(object sender, EventArgs e)
         {
             rbnEfectivo.Checked = false;
+            this.isEfectivoElegida = false;
             this.gbxEfectivo.Size = new System.Drawing.Size(433, 57);
 
             FrmPagos frmPagos = new FrmPagos(true);
@@ -308,9 +309,21 @@ namespace ProyectoCompra.Controles
 
         private void comprobarBotonContinuar()
         {
-            if (((direcciones != null) && tarjetaCredit != null) || (((direcciones != null) && isEfectivoElegida)))
+            if (direcciones.Count > 0 && tarjetaCredit != null)
             {
                 this.btnContinuar.Enabled = true;
+            }
+            else
+            {
+                this.btnContinuar.Enabled = false;
+            }
+            if (direcciones.Count > 0 && isEfectivoElegida)
+            {
+                this.btnContinuar.Enabled = true;
+            }
+            else
+            {
+                this.btnContinuar.Enabled = false;
             }
         }
 
