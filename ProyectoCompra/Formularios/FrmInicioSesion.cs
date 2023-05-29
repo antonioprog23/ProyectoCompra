@@ -10,10 +10,17 @@ namespace ProyectoCompra.Formularios
     public partial class frmInicioSesion : Form
     {
         private Usuario usuarioEncontrado;
+        private FrmBase frmBase;
 
         public frmInicioSesion()
         {
             InitializeComponent();
+        }
+
+        public frmInicioSesion(FrmBase frmBase)
+        {
+            InitializeComponent();
+            this.frmBase = frmBase;
         }
 
         #region Eventos
@@ -33,7 +40,9 @@ namespace ProyectoCompra.Formularios
                 {
                     MessageBox.Show("Bienvenido");
                     ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
-                    Application.Restart();
+                    this.frmBase.aumentarContador();
+                    this.frmBase.configurarFrmBase();
+                    this.Close();
                 }
             }
         }

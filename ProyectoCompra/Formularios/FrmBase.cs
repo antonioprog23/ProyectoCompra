@@ -22,6 +22,12 @@ namespace ProyectoCompra.Formularios
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
+            configurarFrmBase();
+            aumentarContador();
+        }
+
+        public void configurarFrmBase()
+        {
             int idReferenciaUsuariao = ConfigSesion.obtenerReferenciaIdUsuario();
             if (idReferenciaUsuariao != 0)
             {
@@ -37,7 +43,6 @@ namespace ProyectoCompra.Formularios
                 btnIdentificarse.Visible = false;
                 btnPerfil.Visible = true;
             }
-            aumentarContador();
         }
 
         public void aumentarContador()
@@ -63,13 +68,13 @@ namespace ProyectoCompra.Formularios
         #region Eventos
         private void btnIdentificarse_Click(object sender, EventArgs e)
         {
-            frmInicioSesion inicioSesion = new frmInicioSesion();
+            frmInicioSesion inicioSesion = new frmInicioSesion(this);
             inicioSesion.ShowDialog();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado);
+            FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado, this);
             frmPerfil.ShowDialog();
         }
 
