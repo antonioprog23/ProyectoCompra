@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogoMain = new System.Windows.Forms.Button();
             this.mnAlimentacion = new System.Windows.Forms.MenuStrip();
@@ -70,6 +71,7 @@
             this.lblSaludo = new System.Windows.Forms.Label();
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnIdentificarse = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.mnAlimentacion.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -93,6 +95,7 @@
             this.btnLogoMain.Name = "btnLogoMain";
             this.btnLogoMain.Size = new System.Drawing.Size(86, 66);
             this.btnLogoMain.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnLogoMain, "Volver a la ventana principal");
             this.btnLogoMain.UseVisualStyleBackColor = true;
             this.btnLogoMain.Click += new System.EventHandler(this.btnLogoMain_Click);
             // 
@@ -542,5 +545,6 @@
         private System.Windows.Forms.ToolStripMenuItem hogar;
         private System.Windows.Forms.Button btnCarrito;
         public System.Windows.Forms.Label lblContador;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

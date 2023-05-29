@@ -9,22 +9,31 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmBase : Form
     {
+        #region Fields
+
         public Usuario usuarioRecuperado;
         public List<Carrito> productos;
         List<CarritoProvisional> provisional;
         public Form formPadre { get; set; }
         public Form formActual { get; set; }
 
+        #endregion
+
+        #region Constructores
         public FrmBase()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
             configurarFrmBase();
             aumentarContador();
         }
+
+        #region Métodos públicos
 
         public void configurarFrmBase()
         {
@@ -64,6 +73,8 @@ namespace ProyectoCompra.Formularios
                 }
             }
         }
+
+        #endregion
 
         #region Eventos
         private void btnIdentificarse_Click(object sender, EventArgs e)
@@ -116,10 +127,10 @@ namespace ProyectoCompra.Formularios
 
         private void btnLogoMain_Click(object sender, EventArgs e)
         {
-            if (!(this.formPadre is FrmMain) && this.formPadre != null)
+            if ((this.formPadre is FrmMain) && this.formPadre != null)
             {
                 this.formPadre.Visible = true;
-                this.formActual.Close();
+                this.formActual.Visible = false;
             }
         }
 
