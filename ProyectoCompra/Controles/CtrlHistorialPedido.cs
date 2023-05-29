@@ -1,4 +1,5 @@
-﻿using ProyectoCompra.Formularios;
+﻿using ProyectoCompra.Clases;
+using ProyectoCompra.Formularios;
 using System;
 using System.Windows.Forms;
 
@@ -6,6 +7,8 @@ namespace ProyectoCompra.Controles
 {
     public partial class CtrlHistorialPedido : UserControl
     {
+        public Factura factura { get; set; }
+
         public CtrlHistorialPedido()
         {
             InitializeComponent();
@@ -13,8 +16,20 @@ namespace ProyectoCompra.Controles
 
         private void btnMasDetalles_Click(object sender, EventArgs e)
         {
-            FrmMasDetalles frmMasDetalles = new FrmMasDetalles();
+            FrmMasDetalles frmMasDetalles = new FrmMasDetalles(factura);
             frmMasDetalles.ShowDialog();
         }
+
+        private void CtrlHistorialPedido_Load(object sender, EventArgs e)
+        {
+            if (factura != null)
+            {
+                lblIDMostrar.Text = factura.idFactura.ToString("D10");
+                lblFechaMostrar.Text = factura.fechaFactura.ToString("D");
+                lblContadorProd.Text = factura.pedido.obtenerCantidadTotalProductosPedido(factura.pedido.idPedido).ToString();
+            }
+        }
+
+
     }
 }

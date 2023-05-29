@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProyectoCompra.Clases
+﻿namespace ProyectoCompra.Clases
 {
     public class Cliente : Persona
     {
@@ -25,6 +19,10 @@ namespace ProyectoCompra.Clases
             this.id = id;
         }
         public Cliente(string nombre, string apellido, int edad, string fechaNacimiento, string sexo, string correo) : base(nombre, apellido, edad, fechaNacimiento, sexo, correo)
+        {
+
+        }
+        public Cliente(string nombre, string apellido) : base(nombre, apellido)
         {
 
         }

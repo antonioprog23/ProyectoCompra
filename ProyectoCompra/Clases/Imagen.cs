@@ -12,11 +12,6 @@ namespace ProyectoCompra.Clases
             this.imagen = imagen;
         }
 
-        public Imagen()
-        {
-
-        }
-
         public static Image cargarImagen(int contador, int subCategoria)
         {
             Image image = null;
@@ -127,6 +122,62 @@ namespace ProyectoCompra.Clases
                         image.Tag = $"_15_{contador}".ToString();
                     }
                     break;
+                case 16:
+                    image = AlimentacionS16.ResourceManager.GetObject(string.Format("_16_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_16_{contador}".ToString();
+                    }
+                    break;
+                case 17:
+                    image = AlimentacionS17.ResourceManager.GetObject(string.Format("_17_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_17_{contador}".ToString();
+                    }
+                    break;
+                case 18:
+                    image = AlimentacionS18.ResourceManager.GetObject(string.Format("_18_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_18_{contador}".ToString();
+                    }
+                    break;
+                case 19:
+                    image = AlimentacionS19.ResourceManager.GetObject(string.Format("_19_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_19_{contador}".ToString();
+                    }
+                    break;
+                case 20:
+                    image = AlimentacionS20.ResourceManager.GetObject(string.Format("_20_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_20_{contador}".ToString();
+                    }
+                    break;
+                case 21:
+                    image = AlimentacionS21.ResourceManager.GetObject(string.Format("_21_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_21_{contador}".ToString();
+                    }
+                    break;
+                case 22:
+                    image = AlimentacionS22.ResourceManager.GetObject(string.Format("_22_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_22_{contador}".ToString();
+                    }
+                    break;
+                case 23:
+                    image = AlimentacionS23.ResourceManager.GetObject(string.Format("_23_{0}", contador)) as Image;
+                    if (image != null)
+                    {
+                        image.Tag = $"_23_{contador}".ToString();
+                    }
+                    break;
             }
 
             return image;
@@ -185,8 +236,31 @@ namespace ProyectoCompra.Clases
                 case "15":
                     imagen = AlimentacionS15.ResourceManager.GetObject(rutaImagen) as Image;
                     break;
+                case "16":
+                    imagen = AlimentacionS16.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "17":
+                    imagen = AlimentacionS17.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "18":
+                    imagen = AlimentacionS18.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "19":
+                    imagen = AlimentacionS19.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "20":
+                    imagen = AlimentacionS20.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "21":
+                    imagen = AlimentacionS21.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "22":
+                    imagen = AlimentacionS22.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
+                case "23":
+                    imagen = AlimentacionS23.ResourceManager.GetObject(rutaImagen) as Image;
+                    break;
             }
-
             return imagen;
         }
 

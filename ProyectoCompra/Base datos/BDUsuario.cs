@@ -1,9 +1,7 @@
 ﻿using ProyectoCompra.Clases;
-using ProyectoCompra.Controles;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProyectoCompra.Base_datos
 {
@@ -35,6 +33,48 @@ namespace ProyectoCompra.Base_datos
                             //USUARIO
                             cmd.Parameters.AddWithValue("@Usuario_name", usuario.username);
                             cmd.Parameters.AddWithValue("@Contrasenia", usuario.password);
+                            cmd.Parameters.AddWithValue("@Invitado", usuario.invitado);
+                            cmd.ExecuteNonQuery();
+                            transaction.Commit();
+                            insertado = true;
+                        }
+                        catch (SqlException)
+                        {
+                            insertado = false;
+                            transaction.Rollback();
+                        }
+                    }
+                }
+            }
+            return insertado;
+        }
+
+        public static bool insertarDatosInvitado(Cliente cliente, Usuario usuario, Direccion direccion)
+        {
+            bool insertado = true;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    using (SqlCommand cmd = new SqlCommand("InsertarDatosInvitado", connection, transaction))
+                    {
+                        try
+                        {
+                            //cmd.CommandText = "InsertarDatos";
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            //CLIENTE
+                            cmd.Parameters.AddWithValue("@Nombre", cliente.nombre);
+                            //USUARIO
+                            cmd.Parameters.AddWithValue("@Invitado", usuario.invitado);
+                            //DIRECCION
+                            cmd.Parameters.AddWithValue("@Nombre_Direccion", direccion.nombre);
+                            cmd.Parameters.AddWithValue("@Direccion", direccion.direccion);
+                            cmd.Parameters.AddWithValue("@Pais", direccion.pais);
+                            cmd.Parameters.AddWithValue("@Provincia", direccion.provincia);
+                            cmd.Parameters.AddWithValue("@Ciudad", direccion.ciudad);
+                            cmd.Parameters.AddWithValue("@Codigo_Postal", direccion.codigoPostal);
+                            cmd.Parameters.AddWithValue("@Telefono", direccion.telefono);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             insertado = true;
