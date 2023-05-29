@@ -100,7 +100,7 @@ namespace ProyectoCompra.Formularios
             {
                 if (txtContrasena.Text.Equals(txtRepContrasenia.Text))
                 {
-                    usuario = new Usuario(textUsuario.Text.Trim(), txtContrasena.Text.Trim());
+                    usuario = new Usuario(textUsuario.Text.Trim(), txtContrasena.Text.Trim(), 0);
                 }
                 else
                 {

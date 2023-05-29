@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCompra.Clases
 {
-    internal class TarjetaCredit
+    public class TarjetaCredit
     {
         public int idUsusario { get; set; }
         public string titular { get; set; }
@@ -18,6 +18,15 @@ namespace ProyectoCompra.Clases
         public TarjetaCredit(int idUsuario, string titular, string numerosTarjeta, string mesVencimiento, string anioVencimiento, string cvv)
         {
             this.idUsusario = idUsuario;
+            this.titular = titular;
+            this.numerosTarjeta = numerosTarjeta;
+            this.mesVencimiento = mesVencimiento;
+            this.anioVencimiento = anioVencimiento;
+            this.cvv = cvv;
+        }
+
+        public TarjetaCredit(string titular, string numerosTarjeta, string mesVencimiento, string anioVencimiento, string cvv)
+        {
             this.titular = titular;
             this.numerosTarjeta = numerosTarjeta;
             this.mesVencimiento = mesVencimiento;

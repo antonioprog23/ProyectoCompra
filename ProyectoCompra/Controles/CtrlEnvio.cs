@@ -13,14 +13,19 @@ namespace ProyectoCompra.Controles
         public Carrito carritoListo { get; set; }
         public CarritoProvisional carritoProvisionalListo { get; set; }
 
-        private List<Direccion> direcciones;
-        private TarjetaCredit tarjetaCredit;
+        public List<Direccion> direcciones { get; set; }
+        public TarjetaCredit tarjetaCredit { get; set; }
+        public bool isEfectivoElegida { get; set; }
+        public bool enviarFactura { get; set; }
+        public Button btnContinuar { get; set; }
+        public FrmDireccion frmDireccion { get; set; }
 
         public CtrlEnvio()
         {
             InitializeComponent();
             //TARJETA
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            this.enviarFactura = true;
         }
 
         private void CtrlEnvio_Load(object sender, EventArgs e)
@@ -117,16 +122,17 @@ namespace ProyectoCompra.Controles
         {
             if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
             {
-                FrmDireccion frmDireccion = new FrmDireccion(true, true);
+                frmDireccion = new FrmDireccion(true, true);
                 frmDireccion.ShowDialog();
                 direccionInvitado();
             }
             else
             {
-                FrmDireccion frmDireccion = new FrmDireccion(true, false);
+                frmDireccion = new FrmDireccion(true, false);
                 frmDireccion.ShowDialog();
                 direccionUsuario();
             }
+            comprobarBotonContinuar();
         }
 
         private void rbnTarjeta_Click(object sender, EventArgs e)
@@ -139,11 +145,28 @@ namespace ProyectoCompra.Controles
 
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 208);
 
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+            {
+                tarjetaInvitado();
+            }
+            else
+            {
+                tarjetaUsuario();
+            }
+            comprobarBotonContinuar();
+        }
+
+        private void tarjetaUsuario()
+        {
             tarjetaCredit = BDTarjetaCredito.consultarTarjetaCredito(ConfigSesion.obtenerReferenciaIdUsuario());
             if (tarjetaCredit != null)
             {
                 ctrlTxtTitular.Texto = tarjetaCredit.titular;
                 ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                ctrlCVV.Texto = tarjetaCredit.cvv;
+                configuracionTarjeta();
             }
             else
             {
@@ -151,10 +174,45 @@ namespace ProyectoCompra.Controles
             }
         }
 
+        private void tarjetaInvitado()
+        {
+            tarjetaCredit = FicheroTarjeta.leerFichero();
+            if (tarjetaCredit != null)
+            {
+                ctrlTxtTitular.Texto = tarjetaCredit.titular;
+                ctrlTxtNTarjeta.Texto = tarjetaCredit.numerosTarjeta;
+                ctrlTxtMesVen.Texto = tarjetaCredit.mesVencimiento;
+                ctrlAnioVen.Texto = tarjetaCredit.anioVencimiento;
+                ctrlCVV.Texto = tarjetaCredit.cvv;
+                configuracionTarjeta();
+            }
+            else
+            {
+                this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            }
+        }
+
+        private void configuracionTarjeta()
+        {
+            ctrlTxtTitular.Visible = true;
+            ctrlTxtNTarjeta.Visible = true;
+            ctrlTxtMesVen.Visible = true;
+            ctrlAnioVen.Visible = true;
+            ctrlCVV.Visible = true;
+
+            lblTitular.Visible = true;
+            lblNTarjeta.Visible = true;
+            lblMesVen.Visible = true;
+            lblAnioVen.Visible = true;
+            lblCVV.Visible = true;
+        }
+
         private void rbnEfectivo_Click(object sender, EventArgs e)
         {
             rbnTarjeta.Checked = false;
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
+            this.isEfectivoElegida = true;
+            comprobarBotonContinuar();
         }
 
         private void direccionInvitado()
@@ -248,6 +306,20 @@ namespace ProyectoCompra.Controles
             }
         }
 
+        private void comprobarBotonContinuar()
+        {
+            if (((direcciones != null) && tarjetaCredit != null) || (((direcciones != null) && isEfectivoElegida)))
+            {
+                this.btnContinuar.Enabled = true;
+            }
+        }
 
+        private void cbxEnviarFactura_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!cbxEnviarFactura.Checked)
+            {
+                enviarFactura = false;
+            }
+        }
     }
 }

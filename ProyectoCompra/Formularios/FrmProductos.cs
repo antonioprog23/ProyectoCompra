@@ -14,13 +14,24 @@ namespace ProyectoCompra.Formularios
         private Producto producto;
         private int categoria;
         private int subCategoria;
+        private Form form;
 
-        public FrmProductos(int categoria, int subcategoria)
+        public FrmProductos(int categoria, int subcategoria, Form form)
         {
             InitializeComponent();
             this.categoria = categoria;
             this.subCategoria = subcategoria;
             lista = BDProducto.obtenerProductos(this.subCategoria);
+
+            this.form = form;
+            if (form is FrmMain)
+            {
+                this.form.Visible = false;
+            }
+            else
+            {
+                this.form.Visible = false;
+            }
         }
 
         private void FrmProductos_Load(object sender, EventArgs e)
@@ -64,6 +75,7 @@ namespace ProyectoCompra.Formularios
             producto = obtenerProducto(Convert.ToInt32(button.Name));
             FrmDetalleProducto frmDetalleProducto = new FrmDetalleProducto(producto, sender);
             frmDetalleProducto.ShowDialog();
+            aumentarContador();
         }
 
         private Producto obtenerProducto(int contador)
@@ -102,6 +114,14 @@ namespace ProyectoCompra.Formularios
                 case 9:
                     gbxCategoria.Text = "Hogar";
                     break;
+            }
+        }
+
+        private void FrmProductos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.form is FrmMain)
+            {
+                this.form.Close();
             }
         }
     }

@@ -1,7 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('InsertarDatos','P') IS NOT NULL
 	DROP PROCEDURE InsertarDatos;
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado InsertarDatos borrado.'
+GO
+	PRINT 'Procedimiento almacenado InsertarDatos creado.'
 GO
 CREATE PROCEDURE InsertarDatos
 @Nombre NVARCHAR(30),
@@ -11,7 +13,8 @@ CREATE PROCEDURE InsertarDatos
 @Sexo NVARCHAR(15),
 @Usuario_Name NVARCHAR(30),
 @Contrasenia NVARCHAR(30),
-@CorreoElectronico NVARCHAR(50)
+@CorreoElectronico NVARCHAR(50),
+@Invitado INT
 AS
 
 BEGIN
@@ -29,9 +32,9 @@ BEGIN
 	SET @Id_Usuario = (SELECT COALESCE(MAX(id_usuario + 1),1) FROM usuario)
 	SET @Fecha_alta = (SELECT CAST(GETDATE() AS date))
 
-	INSERT INTO usuario (Id_Usuario,Id_Cliente,Usuario_name, Contrasenia, Correo_Electronico) VALUES
-						(@Id_Usuario,@Id_Cliente,@Usuario_name, @Contrasenia, @CorreoElectronico)
+	INSERT INTO usuario (Id_Usuario,Id_Cliente,Usuario_name, Contrasenia, Correo_Electronico, Invitado) VALUES
+						(@Id_Usuario,@Id_Cliente,@Usuario_name, @Contrasenia, @CorreoElectronico,@Invitado)
 
 	INSERT INTO detalle_usuario (id_usuario,fecha_alta,fecha_ultima_modificacion) VALUES
-				(@id_usuario,@fecha_alta,@fecha_alta);
+	(@id_usuario,@fecha_alta,@fecha_alta)
 END

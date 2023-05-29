@@ -48,6 +48,7 @@ CREATE TABLE Usuario
 	Usuario_Name NVARCHAR(50),
 	Contrasenia NVARCHAR(50),
 	Correo_Electronico NVARCHAR(50),
+	Invitado INT,
 	CONSTRAINT constraint_cliente_fk FOREIGN KEY (Id_Cliente) REFERENCES Cliente (Id_Cliente) ON DELETE CASCADE
 )
 
@@ -122,23 +123,24 @@ CREATE TABLE Estado_Pedido
 CREATE TABLE Pedido
 (
 	Id_Pedido INT PRIMARY KEY,
-	Id_Cliente INT NOT NULL,
+	Id_Usuario INT NOT NULL,
+	Id_Direccion INT NOT NULL,
 	Id_Estado_Pedido int NOT NULL,
-	Total DECIMAL(5,2) NOT NULL,
 	Fecha DATETIME NOT NULL,
-	CONSTRAINT constraint_id_cliente_pedido_fk FOREIGN KEY (Id_Cliente) REFERENCES cliente (Id_Cliente),
-	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES estado_pedido (Id_Estado_Pedido)
+	CONSTRAINT constraint_id_usuario_pedido_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario),
+	CONSTRAINT constraint_id_direccion_pedido_fk FOREIGN KEY (Id_Direccion) REFERENCES Direccion (Id_Direccion),
+	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES Estado_Pedido (Id_Estado_Pedido)
 )
 
 -- LINEA_PEDIDO
 CREATE TABLE Linea_Pedido
 (
-	Id_Linea_Pedido INT PRIMARY KEY,
+	Id_Linea_Pedido INT IDENTITY,
 	Id_Pedido INT NOT NULL,
 	Id_Producto INT NOT NULL,
 	Cantidad INT NOT NULL,
 	Subtotal DECIMAL(5,2) NOT NULL,
-	IVA DECIMAL(5,2) NOT NULL,
+	CONSTRAINT constraint_id_linea_pedido_pk PRIMARY KEY (Id_Linea_Pedido,Id_Pedido),
 	CONSTRAINT constraint_id_pedido_fk FOREIGN KEY (Id_Pedido) REFERENCES Pedido (Id_Pedido) ON DELETE CASCADE,
 	CONSTRAINT constraint_id_producto_fk FOREIGN KEY (Id_Producto) REFERENCES producto (Id_Producto)
 )
@@ -146,9 +148,18 @@ CREATE TABLE Linea_Pedido
 -- FACTURA
 CREATE TABLE Factura (
     Id_Factura INT PRIMARY KEY,
-    Id_Pedido INT NOT NULL,
-    Fecha_Factura DATETIME,
-    CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (Id_Pedido) REFERENCES pedido (Id_Pedido) ON DELETE CASCADE
+	Id_Pedido INT NOT NULL,
+	Id_Estado_Factura INT NOT NULL,
+    Fecha_Factura DATETIME NOT NULL,
+    CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (Id_Pedido) REFERENCES Pedido (Id_Pedido) ON DELETE CASCADE,
+    CONSTRAINT constraint_id_estado_factura_fk FOREIGN KEY (Id_Estado_Factura) REFERENCES Estado_Factura (Id_Estado_Factura) ON DELETE CASCADE
+)
+
+CREATE TABLE Estado_Factura
+(
+	Id_Estado_Factura INT IDENTITY PRIMARY KEY,
+	Descripcion NVARCHAR(50),
+	
 )
 
 -- CARRITO
@@ -163,6 +174,15 @@ CREATE TABLE Carrito
 )
 
 -- INSERT INTO
+
+-- ESTADO PEDIDO
+INSERT INTO Estado_Pedido (Descripcion) VALUES ('En proceso')
+INSERT INTO Estado_Pedido (Descripcion) VALUES ('De camino')
+INSERT INTO Estado_Pedido (Descripcion) VALUES ('Entregado')
+
+-- ESTADO_FACTURA
+INSERT INTO Estado_Factura VALUES ('Pendiente')
+INSERT INTO Estado_Factura VALUES ('Cobrado')
 
 -- CATEGORIA
 INSERT INTO Categoria (Descripcion) VALUES ('Alimentación')
@@ -1284,3 +1304,195 @@ INSERT INTO Imagen VALUES (409, '_17_23')
 INSERT INTO Imagen VALUES (410, '_17_24')
 
 -- P18
+INSERT INTO Imagen VALUES (411, '_18_1')
+INSERT INTO Imagen VALUES (412, '_18_2')
+INSERT INTO Imagen VALUES (413, '_18_3')
+INSERT INTO Imagen VALUES (414, '_18_4')
+INSERT INTO Imagen VALUES (415, '_18_5')
+INSERT INTO Imagen VALUES (416, '_18_6')
+INSERT INTO Imagen VALUES (417, '_18_7')
+INSERT INTO Imagen VALUES (418, '_18_8')
+INSERT INTO Imagen VALUES (419, '_18_9')
+INSERT INTO Imagen VALUES (420, '_18_10')
+INSERT INTO Imagen VALUES (421, '_18_11')
+INSERT INTO Imagen VALUES (422, '_18_12')
+INSERT INTO Imagen VALUES (423, '_18_13')
+INSERT INTO Imagen VALUES (424, '_18_14')
+INSERT INTO Imagen VALUES (425, '_18_15')
+INSERT INTO Imagen VALUES (426, '_18_16')
+INSERT INTO Imagen VALUES (427, '_18_17')
+INSERT INTO Imagen VALUES (428, '_18_18')
+INSERT INTO Imagen VALUES (429, '_18_19')
+INSERT INTO Imagen VALUES (430, '_18_20')
+INSERT INTO Imagen VALUES (431, '_18_21')
+INSERT INTO Imagen VALUES (432, '_18_22')
+INSERT INTO Imagen VALUES (433, '_18_23')
+INSERT INTO Imagen VALUES (434, '_18_24')
+
+-- P19
+INSERT INTO Imagen VALUES (435, '_19_1')
+INSERT INTO Imagen VALUES (436, '_19_2')
+INSERT INTO Imagen VALUES (437, '_19_3')
+INSERT INTO Imagen VALUES (438, '_19_4')
+INSERT INTO Imagen VALUES (439, '_19_5')
+INSERT INTO Imagen VALUES (440, '_19_6')
+INSERT INTO Imagen VALUES (441, '_19_7')
+INSERT INTO Imagen VALUES (442, '_19_8')
+INSERT INTO Imagen VALUES (443, '_19_9')
+INSERT INTO Imagen VALUES (444, '_19_10')
+INSERT INTO Imagen VALUES (445, '_19_11')
+INSERT INTO Imagen VALUES (446, '_19_12')
+INSERT INTO Imagen VALUES (447, '_19_13')
+INSERT INTO Imagen VALUES (448, '_19_14')
+INSERT INTO Imagen VALUES (449, '_19_15')
+INSERT INTO Imagen VALUES (450, '_19_16')
+INSERT INTO Imagen VALUES (451, '_19_17')
+INSERT INTO Imagen VALUES (452, '_19_18')
+INSERT INTO Imagen VALUES (453, '_19_19')
+INSERT INTO Imagen VALUES (454, '_19_20')
+INSERT INTO Imagen VALUES (455, '_19_21')
+INSERT INTO Imagen VALUES (456, '_19_22')
+INSERT INTO Imagen VALUES (457, '_19_23')
+INSERT INTO Imagen VALUES (458, '_19_24')
+
+-- P20
+INSERT INTO Imagen VALUES (459, '_20_1')
+INSERT INTO Imagen VALUES (460, '_20_2')
+INSERT INTO Imagen VALUES (461, '_20_3')
+INSERT INTO Imagen VALUES (462, '_20_4')
+INSERT INTO Imagen VALUES (463, '_20_5')
+INSERT INTO Imagen VALUES (464, '_20_6')
+INSERT INTO Imagen VALUES (465, '_20_7')
+INSERT INTO Imagen VALUES (466, '_20_8')
+INSERT INTO Imagen VALUES (467, '_20_9')
+INSERT INTO Imagen VALUES (468, '_20_10')
+INSERT INTO Imagen VALUES (469, '_20_11')
+INSERT INTO Imagen VALUES (470, '_20_12')
+INSERT INTO Imagen VALUES (471, '_20_13')
+INSERT INTO Imagen VALUES (472, '_20_14')
+INSERT INTO Imagen VALUES (473, '_20_15')
+INSERT INTO Imagen VALUES (474, '_20_16')
+INSERT INTO Imagen VALUES (475, '_20_17')
+INSERT INTO Imagen VALUES (476, '_20_18')
+INSERT INTO Imagen VALUES (477, '_20_19')
+INSERT INTO Imagen VALUES (478, '_20_20')
+INSERT INTO Imagen VALUES (479, '_20_21')
+INSERT INTO Imagen VALUES (480, '_20_22')
+INSERT INTO Imagen VALUES (481, '_20_23')
+INSERT INTO Imagen VALUES (482, '_20_24')
+
+-- P21
+INSERT INTO Imagen VALUES (483, '_21_1')
+INSERT INTO Imagen VALUES (484, '_21_2')
+INSERT INTO Imagen VALUES (485, '_21_3')
+INSERT INTO Imagen VALUES (486, '_21_4')
+INSERT INTO Imagen VALUES (487, '_21_5')
+INSERT INTO Imagen VALUES (488, '_21_6')
+INSERT INTO Imagen VALUES (489, '_21_7')
+INSERT INTO Imagen VALUES (490, '_21_8')
+INSERT INTO Imagen VALUES (491, '_21_9')
+INSERT INTO Imagen VALUES (492, '_21_10')
+INSERT INTO Imagen VALUES (493, '_21_11')
+INSERT INTO Imagen VALUES (494, '_21_12')
+INSERT INTO Imagen VALUES (495, '_21_13')
+INSERT INTO Imagen VALUES (496, '_21_14')
+INSERT INTO Imagen VALUES (497, '_21_15')
+INSERT INTO Imagen VALUES (498, '_21_16')
+INSERT INTO Imagen VALUES (499, '_21_17')
+INSERT INTO Imagen VALUES (500, '_21_18')
+INSERT INTO Imagen VALUES (501, '_21_19')
+INSERT INTO Imagen VALUES (502, '_21_20')
+INSERT INTO Imagen VALUES (503, '_21_21')
+INSERT INTO Imagen VALUES (504, '_21_22')
+INSERT INTO Imagen VALUES (505, '_21_23')
+INSERT INTO Imagen VALUES (506, '_21_24')
+
+-- P22
+INSERT INTO Imagen VALUES (507, '_22_1')
+INSERT INTO Imagen VALUES (508, '_22_2')
+INSERT INTO Imagen VALUES (509, '_22_3')
+INSERT INTO Imagen VALUES (510, '_22_4')
+INSERT INTO Imagen VALUES (511, '_22_5')
+INSERT INTO Imagen VALUES (512, '_22_6')
+INSERT INTO Imagen VALUES (513, '_22_7')
+INSERT INTO Imagen VALUES (514, '_22_8')
+INSERT INTO Imagen VALUES (515, '_22_9')
+INSERT INTO Imagen VALUES (516, '_22_10')
+INSERT INTO Imagen VALUES (517, '_22_11')
+INSERT INTO Imagen VALUES (518, '_22_12')
+INSERT INTO Imagen VALUES (519, '_22_13')
+INSERT INTO Imagen VALUES (520, '_22_14')
+INSERT INTO Imagen VALUES (521, '_22_15')
+INSERT INTO Imagen VALUES (522, '_22_16')
+INSERT INTO Imagen VALUES (523, '_22_17')
+INSERT INTO Imagen VALUES (524, '_22_18')
+INSERT INTO Imagen VALUES (525, '_22_19')
+INSERT INTO Imagen VALUES (526, '_22_20')
+INSERT INTO Imagen VALUES (527, '_22_21')
+INSERT INTO Imagen VALUES (528, '_22_22')
+INSERT INTO Imagen VALUES (529, '_22_23')
+INSERT INTO Imagen VALUES (530, '_22_24')
+
+-- P23
+INSERT INTO Imagen VALUES (531, '_23_1')
+INSERT INTO Imagen VALUES (532, '_23_2')
+INSERT INTO Imagen VALUES (533, '_23_3')
+INSERT INTO Imagen VALUES (534, '_23_4')
+INSERT INTO Imagen VALUES (535, '_23_5')
+INSERT INTO Imagen VALUES (536, '_23_6')
+INSERT INTO Imagen VALUES (537, '_23_7')
+INSERT INTO Imagen VALUES (538, '_23_8')
+INSERT INTO Imagen VALUES (539, '_23_9')
+INSERT INTO Imagen VALUES (540, '_23_10')
+INSERT INTO Imagen VALUES (541, '_23_11')
+INSERT INTO Imagen VALUES (542, '_23_12')
+INSERT INTO Imagen VALUES (543, '_23_13')
+INSERT INTO Imagen VALUES (544, '_23_14')
+INSERT INTO Imagen VALUES (545, '_23_15')
+INSERT INTO Imagen VALUES (546, '_23_16')
+INSERT INTO Imagen VALUES (547, '_23_17')
+INSERT INTO Imagen VALUES (548, '_23_18')
+INSERT INTO Imagen VALUES (549, '_23_19')
+INSERT INTO Imagen VALUES (550, '_23_20')
+INSERT INTO Imagen VALUES (551, '_23_21')
+INSERT INTO Imagen VALUES (552, '_23_22')
+INSERT INTO Imagen VALUES (553, '_23_23')
+INSERT INTO Imagen VALUES (554, '_23_24')
+
+-- P24
+
+
+-- P25
+-- P26
+
+-- ¡ OJO ! IMPORTANTE
+-- SCRIPT PARA PROGRAMAR EL BORRADO AUTOMÁTICO DE LOS USUARIOS INVITADOS 
+
+USE msdb;
+GO
+EXEC dbo.sp_add_job
+    @job_name = N'BorrarUsuarioInvitado',
+    @enabled = 1;
+GO
+EXEC dbo.sp_add_jobstep
+    @job_name = N'BorrarUsuarioInvitado',
+    @step_name = N'BorrarRegistrosExpirados',
+    @subsystem = N'TSQL',
+    @command = N'DELETE FROM Usuario u
+				 INNER JOIN Detalle_Usuario d ON (u.Id_Usuario = d.Id_Usuario)
+				 WHERE d.Fecha_Ultima_Modificacion = GETDATE() AND
+				 u.Invitado = 1';
+GO
+EXEC dbo.sp_add_schedule
+    @schedule_name = N'ProgramacionBorradoUsuariosInvitados',
+    @freq_type = 4,
+    @freq_interval = 1,
+    @active_start_time = 010000;
+GO
+EXEC dbo.sp_attach_schedule
+    @job_name = N'BorrarUsuarioInvitado',
+    @schedule_name = N'ProgramacionBorradoUsuariosInvitados';
+GO
+EXEC dbo.sp_add_jobserver
+    @job_name = N'BorrarUsuarioInvitado';
+GO

@@ -61,11 +61,11 @@ namespace ProyectoCompra.Base_datos
                             Carrito c = new Carrito(cantidad, producto, rutaImagen);
                             lista.Add(c);
                         }
+                        return lista;
                     }
                 }
             }
-            return lista;
-        }
+                    }
 
         public static bool vaciarCarrito(int idUsuario, int idProducto, bool eliminarTodo)
         {
