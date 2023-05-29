@@ -1,5 +1,7 @@
 ﻿using ProyectoCompra.Clases;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -49,7 +51,7 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
-        public static bool insertarDatosInvitado(Cliente cliente, Usuario usuario, Direccion direccion)
+        public static bool insertarDatosInvitado(Cliente cliente, Usuario usuario, Direccion direccion, List<CarritoProvisional> provisional)
         {
             bool insertado = true;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
@@ -75,19 +77,37 @@ namespace ProyectoCompra.Base_datos
                             cmd.Parameters.AddWithValue("@Ciudad", direccion.ciudad);
                             cmd.Parameters.AddWithValue("@Codigo_Postal", direccion.codigoPostal);
                             cmd.Parameters.AddWithValue("@Telefono", direccion.telefono);
+                            //CARRITO PROVISIONAL
+                            cmd.Parameters.AddWithValue("@Productos", obtenerDT(provisional));
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             insertado = true;
                         }
-                        catch (SqlException)
+                        catch (SqlException e)
                         {
                             insertado = false;
                             transaction.Rollback();
+                            throw e;
                         }
                     }
                 }
             }
             return insertado;
+        }
+
+        private static DataTable obtenerDT(List<CarritoProvisional> carritoProvisional)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Id_Producto", typeof(int));
+            dt.Columns.Add("Cantidad", typeof(string));
+            foreach (CarritoProvisional productos in carritoProvisional)
+            {
+                DataRow dr = dt.NewRow();
+                dr["Id_Producto"] = productos.idProducto;
+                dr["Cantidad"] = productos.cantidad;
+                dt.Rows.Add(dr);
+            }
+            return dt;
         }
 
         public static Usuario obtenerDatos(params string[] datos)

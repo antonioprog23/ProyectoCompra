@@ -65,7 +65,7 @@ namespace ProyectoCompra.Base_datos
                     }
                 }
             }
-                    }
+        }
 
         public static bool vaciarCarrito(int idUsuario, int idProducto, bool eliminarTodo)
         {

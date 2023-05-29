@@ -9,6 +9,7 @@ namespace ProyectoCompra.Clases
         public int cantidad { get; set; }
         public string rutaImagen { get; set; }
         public Producto producto { get; set; }
+        public int idProducto { get; set; }
         public decimal total { get; set; }
         public string iva { get; set; }
         public List<CarritoProvisional> lista;
@@ -30,6 +31,12 @@ namespace ProyectoCompra.Clases
             this.lista = lista;
             this.iva = iva;
             this.total = total;
+        }
+
+        public CarritoProvisional(int idProducto, int cantidad)
+        {
+            this.cantidad = cantidad;
+            this.idProducto = idProducto;
         }
 
         public CarritoProvisional(string linea)
@@ -118,6 +125,19 @@ namespace ProyectoCompra.Clases
         public static List<CarritoProvisional> consultarCarritoProvisional()
         {
             return FicheroCarrito.leerFichero();
+        }
+
+        public static List<CarritoProvisional> prepararListaProvisionalBD()
+        {
+            List<CarritoProvisional> lista = new List<CarritoProvisional>();
+            List<CarritoProvisional> carrito = FicheroCarrito.leerFichero();
+            foreach (CarritoProvisional producto in carrito)
+            {
+                CarritoProvisional carritoProvisional = new CarritoProvisional(producto.producto.id_producto, producto.cantidad);
+                lista.Add(carritoProvisional);
+            }
+
+            return lista;
         }
 
         public decimal calcularSubTotal(List<CarritoProvisional> productos)

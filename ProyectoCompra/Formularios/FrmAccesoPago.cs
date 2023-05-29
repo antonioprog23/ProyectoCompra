@@ -1,5 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
+using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -68,21 +69,30 @@ namespace ProyectoCompra.Formularios
         {
             if (ctrlEnvio1.frmDireccion != null)
             {
-                List<Direccion> direcciones = ctrlEnvio1.frmDireccion.direcciones;
-                string nombre = direcciones[0].nombre;
-                Cliente cliente = new Cliente(nombre, "");
-                Usuario usuario = new Usuario("", "", 1);
+                List<Direccion> direcciones = FicheroDireccion.leerFichero();
+                if (direcciones.Count > 0)
+                {
+                    string nombre = direcciones[0].nombre;
+                    Cliente cliente = new Cliente(nombre, "");
+                    Usuario usuario = new Usuario("", "", 1);
 
-                string direccion = direcciones[0].direccion;
-                string pais = direcciones[0].pais;
-                string provincia = direcciones[0].provincia;
-                string ciudad = direcciones[0].ciudad;
-                string cp = direcciones[0].codigoPostal;
-                string telefono = direcciones[0].telefono;
-                Direccion direccionInvitado = new Direccion("Invitado", direccion, pais, provincia, ciudad, cp, telefono);
+                    string direccion = direcciones[0].direccion;
+                    string pais = direcciones[0].pais;
+                    string provincia = direcciones[0].provincia;
+                    string ciudad = direcciones[0].ciudad;
+                    string cp = direcciones[0].codigoPostal;
+                    string telefono = direcciones[0].telefono;
+                    Direccion direccionInvitado = new Direccion("Invitado", direccion, pais, provincia, ciudad, cp, telefono);
 
-                BDUsuario.insertarDatosInvitado(cliente, usuario, direccionInvitado);
-                Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 2);
+                    if (BDUsuario.insertarDatosInvitado(cliente, usuario, direccionInvitado, CarritoProvisional.prepararListaProvisionalBD()))
+                    {
+                        //Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 2);
+                        FicheroCarrito.borrarFicheroAux();
+                        FicheroDireccion.borrarFicheroAux();
+                        FicheroTarjeta.borrarFicheroAux();
+                    }
+                }
+
             }
         }
     }
