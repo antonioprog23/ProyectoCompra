@@ -14,7 +14,7 @@ namespace ProyectoCompra.Formularios
         private List<CarritoProvisional> productosProvisionales;
         private Carrito carrito;
         private Carrito carritoListo;
-
+        private CtrlProductoCarrito producto;
         private CarritoProvisional carritoProvisional;
         private CarritoProvisional carritoProvisionalListo;
         private FrmBase frmBase;
@@ -28,6 +28,7 @@ namespace ProyectoCompra.Formularios
         {
             InitializeComponent();
             this.frmBase = frmBase;
+            this.producto = null;
         }
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
@@ -35,8 +36,19 @@ namespace ProyectoCompra.Formularios
             int idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
             if (idUsuario == 0)
             {
-                FrmModoCompra frmModoCompra = new FrmModoCompra(carritoProvisionalListo);
+                FrmModoCompra frmModoCompra = new FrmModoCompra(carritoProvisionalListo, this.frmBase);
                 frmModoCompra.ShowDialog();
+                this.frmBase.configurarFrmBase();
+                this.frmBase.aumentarContador();
+                if (this.producto != null)
+                {
+                    if (this.tbProductos.Controls.Contains(producto))
+                    {
+                        this.tbProductos.Controls.Clear();
+                    }
+                    configuracionInicial();
+                    cargarDatos();
+                }
             }
             else
             {
@@ -115,7 +127,7 @@ namespace ProyectoCompra.Formularios
             lblContador.Text = productosProvisionales.Count.ToString();
             for (int i = 0; i < tbProductos.RowCount; i++)
             {
-                CtrlProductoCarrito producto = new CtrlProductoCarrito();
+                producto = new CtrlProductoCarrito();
 
                 Label id = (Label)producto.Controls.Find("lblIdMostrar", true)[0];
                 id.Text = productosProvisionales[i].producto.id_producto.ToString();

@@ -1,29 +1,23 @@
 ﻿using ProyectoCompra.Clases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
 {
     public partial class FrmModoCompra : Form
     {
-        private CarritoProvisional carritoProvisionalListo { get; set; }
-
+        public CarritoProvisional carritoProvisionalListo { get; set; }
+        public FrmBase frmBase { get; set; }
         public FrmModoCompra()
         {
             InitializeComponent();
         }
 
-        public FrmModoCompra(CarritoProvisional carritoProvisionalListo)
+        public FrmModoCompra(CarritoProvisional carritoProvisionalListo, FrmBase frmBase)
         {
             InitializeComponent();
             this.carritoProvisionalListo = carritoProvisionalListo;
+            this.frmBase = frmBase;
         }
 
         private void btnInvitado_Click(object sender, EventArgs e)
@@ -34,8 +28,9 @@ namespace ProyectoCompra.Formularios
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            frmInicioSesion frmInicioSesion = new frmInicioSesion();
+            frmInicioSesion frmInicioSesion = new frmInicioSesion(this.frmBase);
             frmInicioSesion.ShowDialog();
+            this.Close();
         }
     }
 }
