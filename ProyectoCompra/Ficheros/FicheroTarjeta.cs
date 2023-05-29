@@ -61,5 +61,27 @@ namespace ProyectoCompra.Ficheros
 
             return tarjetaCredit;
         }
+
+        public static bool borrarFicheroAux()
+        {
+            bool eliminado = false;
+            if (File.Exists(FICHERO))
+            {
+                try
+                {
+                    File.Delete(FICHERO);
+                    eliminado = true;
+                }
+                catch (DirectoryNotFoundException)
+                {
+
+                }
+                catch (IOException)
+                {
+
+                }
+            }
+            return eliminado;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ProyectoCompra.Clases;
+using ProyectoCompra.Formularios;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -7,6 +8,7 @@ namespace ProyectoCompra.Controles
     {
         public LineaPedido lineaPedido { get; set; }
         public Producto producto { get; set; }
+        public FrmBase frmBase { get; set; }
 
         public CtrlProductoHistorial()
         {
@@ -27,6 +29,8 @@ namespace ProyectoCompra.Controles
             Usuario usuario = new Usuario(ConfigSesion.obtenerReferenciaIdUsuario());
             Carrito carrito = new Carrito(lineaPedido.cantidad, lineaPedido.producto);
             carrito.insertarProducto(usuario, carrito, true, lineaPedido.producto.imagen);
+            this.frmBase.aumentarContador();
+            this.frmBase.configurarFrmBase();
         }
     }
 }

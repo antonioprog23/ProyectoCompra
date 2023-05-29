@@ -1,5 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
+using ProyectoCompra.Formularios;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace ProyectoCompra.Controles
     {
         public Factura factura { get; set; }
         private List<LineaPedido> lineasPedido;
+        public FrmBase frmBase { get; set; }
 
         public CtrlResumenPedido()
         {
@@ -35,6 +37,8 @@ namespace ProyectoCompra.Controles
                 Carrito carrito = new Carrito(lineaPedido.cantidad, lineaPedido.producto);
                 carrito.insertarProducto(usuario, carrito, true, lineaPedido.producto.imagen);
             }
+            this.frmBase.aumentarContador();
+            this.frmBase.configurarFrmBase();
         }
 
 

@@ -9,6 +9,8 @@ namespace ProyectoCompra.Controles
 {
     public partial class CtrlOtrasOpciones : UserControl
     {
+        public FrmBase frmBase { get; set; }
+
         public CtrlOtrasOpciones()
         {
             InitializeComponent();
@@ -68,7 +70,7 @@ namespace ProyectoCompra.Controles
                     frmPagos.ShowDialog();
                     break;
                 case "op_1": //PEDIDOS
-                    FrmHistorialPedidos frmHistorialPedidos = new FrmHistorialPedidos();
+                    FrmHistorialPedidos frmHistorialPedidos = new FrmHistorialPedidos(this.frmBase);
                     frmHistorialPedidos.ShowDialog();
                     break;
                 case "op_2": //DIRECCIONES

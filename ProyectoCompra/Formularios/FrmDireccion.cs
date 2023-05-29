@@ -208,7 +208,6 @@ namespace ProyectoCompra.Formularios
             idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
             if (idUsuario == 0)
             {
-                ctrlDireccion.isInvitado = isInvitado;
                 configurarInvitado();
             }
             else

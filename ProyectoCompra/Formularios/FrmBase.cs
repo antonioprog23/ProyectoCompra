@@ -9,17 +9,33 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmBase : Form
     {
+        #region Fields
+
         public Usuario usuarioRecuperado;
         public List<Carrito> productos;
+        List<CarritoProvisional> provisional;
         public Form formPadre { get; set; }
         public Form formActual { get; set; }
 
+        #endregion
+
+        #region Constructores
         public FrmBase()
         {
             InitializeComponent();
         }
 
+        #endregion
+
         private void FrmBase_Load(object sender, EventArgs e)
+        {
+            configurarFrmBase();
+            aumentarContador();
+        }
+
+        #region Métodos públicos
+
+        public void configurarFrmBase()
         {
             int idReferenciaUsuariao = ConfigSesion.obtenerReferenciaIdUsuario();
             if (idReferenciaUsuariao != 0)
@@ -36,24 +52,40 @@ namespace ProyectoCompra.Formularios
                 btnIdentificarse.Visible = false;
                 btnPerfil.Visible = true;
             }
-            aumentarContador();
         }
 
         public void aumentarContador()
         {
-            productos = BDCarrito.consultarCarrito(ConfigSesion.obtenerReferenciaIdUsuario());
-            lblContador.Text = productos.Count.ToString();
+            if (ConfigSesion.obtenerReferenciaIdUsuario() == 0)
+            {
+                provisional = CarritoProvisional.consultarCarritoProvisional();
+                if (provisional.Count >= 0)
+                {
+                    lblContador.Text = provisional.Count.ToString();
+                }
+            }
+            else
+            {
+                productos = BDCarrito.consultarCarrito(ConfigSesion.obtenerReferenciaIdUsuario());
+                if (productos.Count >= 0)
+                {
+                    lblContador.Text = productos.Count.ToString();
+                }
+            }
         }
 
+        #endregion
+
+        #region Eventos
         private void btnIdentificarse_Click(object sender, EventArgs e)
         {
-            frmInicioSesion inicioSesion = new frmInicioSesion();
+            frmInicioSesion inicioSesion = new frmInicioSesion(this);
             inicioSesion.ShowDialog();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado);
+            FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado, this);
             frmPerfil.ShowDialog();
         }
 
@@ -95,13 +127,21 @@ namespace ProyectoCompra.Formularios
 
         private void btnLogoMain_Click(object sender, EventArgs e)
         {
-            if (!(this.formPadre is FrmMain) && this.formPadre != null)
+            if ((this.formPadre is FrmMain) && this.formPadre != null)
             {
                 this.formPadre.Visible = true;
-                this.formActual.Close();
+                this.formActual.Visible = false;
             }
         }
 
+        private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
+        #region Menu
         private void lacteosmn_Click(object sender, EventArgs e)
         {
             FrmProductos frmProductos = new FrmProductos(1, 1, this);
@@ -241,7 +281,7 @@ namespace ProyectoCompra.Formularios
             FrmProductos frmProductos = new FrmProductos(4, 24, this);
             frmProductos.ShowDialog();
         }
-
+        #endregion
 
     }
 }
