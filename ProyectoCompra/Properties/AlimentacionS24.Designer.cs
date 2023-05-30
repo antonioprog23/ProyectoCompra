@@ -22,14 +22,14 @@ namespace ProyectoCompra.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AlimentacionS23 {
+    internal class AlimentacionS24 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal AlimentacionS23() {
+        internal AlimentacionS24() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ProyectoCompra.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProyectoCompra.Properties.AlimentacionS23", typeof(AlimentacionS23).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProyectoCompra.Properties.AlimentacionS24", typeof(AlimentacionS24).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_1 {
+        internal static System.Drawing.Bitmap _24_1 {
             get {
-                object obj = ResourceManager.GetObject("_23_1", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_10 {
+        internal static System.Drawing.Bitmap _24_10 {
             get {
-                object obj = ResourceManager.GetObject("_23_10", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_11 {
+        internal static System.Drawing.Bitmap _24_11 {
             get {
-                object obj = ResourceManager.GetObject("_23_11", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_12 {
+        internal static System.Drawing.Bitmap _24_12 {
             get {
-                object obj = ResourceManager.GetObject("_23_12", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_13 {
+        internal static System.Drawing.Bitmap _24_13 {
             get {
-                object obj = ResourceManager.GetObject("_23_13", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_14 {
+        internal static System.Drawing.Bitmap _24_14 {
             get {
-                object obj = ResourceManager.GetObject("_23_14", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_14", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_15 {
+        internal static System.Drawing.Bitmap _24_15 {
             get {
-                object obj = ResourceManager.GetObject("_23_15", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_15", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_16 {
+        internal static System.Drawing.Bitmap _24_16 {
             get {
-                object obj = ResourceManager.GetObject("_23_16", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_17 {
+        internal static System.Drawing.Bitmap _24_17 {
             get {
-                object obj = ResourceManager.GetObject("_23_17", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_17", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_18 {
+        internal static System.Drawing.Bitmap _24_18 {
             get {
-                object obj = ResourceManager.GetObject("_23_18", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_19 {
+        internal static System.Drawing.Bitmap _24_19 {
             get {
-                object obj = ResourceManager.GetObject("_23_19", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_19", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_2 {
+        internal static System.Drawing.Bitmap _24_2 {
             get {
-                object obj = ResourceManager.GetObject("_23_2", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_20 {
+        internal static System.Drawing.Bitmap _24_20 {
             get {
-                object obj = ResourceManager.GetObject("_23_20", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_21 {
+        internal static System.Drawing.Bitmap _24_21 {
             get {
-                object obj = ResourceManager.GetObject("_23_21", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_22 {
+        internal static System.Drawing.Bitmap _24_22 {
             get {
-                object obj = ResourceManager.GetObject("_23_22", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_23 {
+        internal static System.Drawing.Bitmap _24_23 {
             get {
-                object obj = ResourceManager.GetObject("_23_23", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_23", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_24 {
+        internal static System.Drawing.Bitmap _24_24 {
             get {
-                object obj = ResourceManager.GetObject("_23_24", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_3 {
+        internal static System.Drawing.Bitmap _24_3 {
             get {
-                object obj = ResourceManager.GetObject("_23_3", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_4 {
+        internal static System.Drawing.Bitmap _24_4 {
             get {
-                object obj = ResourceManager.GetObject("_23_4", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_5 {
+        internal static System.Drawing.Bitmap _24_5 {
             get {
-                object obj = ResourceManager.GetObject("_23_5", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_6 {
+        internal static System.Drawing.Bitmap _24_6 {
             get {
-                object obj = ResourceManager.GetObject("_23_6", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_7 {
+        internal static System.Drawing.Bitmap _24_7 {
             get {
-                object obj = ResourceManager.GetObject("_23_7", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +283,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_8 {
+        internal static System.Drawing.Bitmap _24_8 {
             get {
-                object obj = ResourceManager.GetObject("_23_8", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace ProyectoCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23_9 {
+        internal static System.Drawing.Bitmap _24_9 {
             get {
-                object obj = ResourceManager.GetObject("_23_9", resourceCulture);
+                object obj = ResourceManager.GetObject("_24_9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
