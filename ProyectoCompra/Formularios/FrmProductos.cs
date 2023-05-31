@@ -21,23 +21,23 @@ namespace ProyectoCompra.Formularios
 
         #endregion
 
+        #region Constructor
         public FrmProductos(int categoria, int subcategoria, FrmMain frmMain)
         {
             InitializeComponent();
             this.categoria = categoria;
             this.subCategoria = subcategoria;
             this.frmMain = frmMain;
-            this.frmProductos = formProductos;
-
-            ConfigVentanaNav.ConfigVentanaNav.addForm(this);
+            formProductos = this.frmProductos;
             lista = BDProducto.obtenerProductos(this.subCategoria);
-            configuracionFormMain();
         }
-
+        #endregion
+        
         private void FrmProductos_Load(object sender, EventArgs e)
         {
             cargarNombreGroupBox();
             cargarBotones();
+            configuracionFormMain();
         }
 
         #region Métodos privados
@@ -48,9 +48,11 @@ namespace ProyectoCompra.Formularios
             formPadre = frmMain;
             formActual = this;
 
+            //ConfigVentanaNav.ConfigVentanaNav.addForm(this);
+
             if (formProductos != null)
             {
-                formProductos.Visible = false;
+                //formProductos.Visible = false;
             }
         }
 
@@ -135,13 +137,14 @@ namespace ProyectoCompra.Formularios
             frmDetalleProducto.ShowDialog();
             aumentarContador();
         }
-        private void FrmProductos_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmProductos_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.frmMain.Visible = true;
-            ConfigVentanaNav.ConfigVentanaNav.deleteFormSecond();
+            this.frmMain.aumentarContador();
+            this.frmMain.BringToFront();
         }
+
+
         #endregion
-
-
     }
 }

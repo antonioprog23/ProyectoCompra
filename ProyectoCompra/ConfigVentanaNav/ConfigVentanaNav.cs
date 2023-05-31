@@ -1,7 +1,4 @@
-﻿using ProyectoCompra.Formularios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.ConfigVentanaNav
@@ -12,6 +9,7 @@ namespace ProyectoCompra.ConfigVentanaNav
 
         public static void addForm(Form form)
         {
+            pilaFormularios.Clear();
             pilaFormularios.Push(form);
         }
 

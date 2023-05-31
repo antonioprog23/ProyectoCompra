@@ -5,14 +5,16 @@ namespace ProyectoCompra.Formularios
 {
     public partial class FrmMain : FrmBase
     {
-        public Usuario usuarioEncontrado { get; set; }
-
+        #region Constructor 
         public FrmMain()
         {
             InitializeComponent();
             formPadre = this;
         }
 
+        #endregion
+
+        #region Eventos 
         private void button6_Click(object sender, EventArgs e)
         {
             FrmProductos frmProductos = new FrmProductos(1, 1, this);
@@ -383,5 +385,7 @@ namespace ProyectoCompra.Formularios
             frmProductos.ShowDialog();
             aumentarContador();
         }
+
+        #endregion
     }
 }

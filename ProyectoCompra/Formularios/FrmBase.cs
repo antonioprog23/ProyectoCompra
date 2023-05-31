@@ -135,7 +135,7 @@ namespace ProyectoCompra.Formularios
 
         private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //Application.Exit();
+            //this.formActual.Visible = false;
         }
 
         #endregion
