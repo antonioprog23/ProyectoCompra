@@ -114,6 +114,7 @@
     <Compile Include="Clases\TarjetaCredit.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
+    <Compile Include="ConfigVentanaNav\ConfigVentanaNav.cs" />
     <Compile Include="Controles\CtrlContraseña.cs">
       <SubType>UserControl</SubType>
     </Compile>

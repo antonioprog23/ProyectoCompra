@@ -5,7 +5,7 @@ namespace ProyectoCompra.Clases
 {
     internal class ConfigSesion
     {
-        public static void guardarReferenciaIdUsuario(int id)
+        public static bool guardarReferenciaIdUsuario(int id)
         {
             bool guardado = false;
             try
@@ -22,9 +22,10 @@ namespace ProyectoCompra.Clases
                 guardado = false;
                 throw ex;
             }
+            return guardado;
         }
 
-        public static void borrarReferenciaIdUsuario()
+        public static bool borrarReferenciaIdUsuario()
         {
             bool borrado = false;
             try
@@ -40,6 +41,7 @@ namespace ProyectoCompra.Clases
                 borrado = false;
                 throw ex;
             }
+            return borrado;
         }
 
         public static int obtenerReferenciaIdUsuario()

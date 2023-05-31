@@ -16,24 +16,22 @@ namespace ProyectoCompra.Formularios
         private Producto producto;
         private int categoria;
         private int subCategoria;
-        private Form form;
+        private FrmMain frmMain;
+        private FrmProductos frmProductos;
 
         #endregion
 
-        public FrmProductos(int categoria, int subcategoria, Form form)
+        public FrmProductos(int categoria, int subcategoria, FrmMain frmMain)
         {
             InitializeComponent();
             this.categoria = categoria;
             this.subCategoria = subcategoria;
-            lista = BDProducto.obtenerProductos(this.subCategoria);
+            this.frmMain = frmMain;
+            this.frmProductos = formProductos;
 
-            this.form = form;
-            if (form is FrmMain)
-            {
-                this.form.Visible = false;
-                formPadre = form;
-                formActual = this;
-            }
+            ConfigVentanaNav.ConfigVentanaNav.addForm(this);
+            lista = BDProducto.obtenerProductos(this.subCategoria);
+            configuracionFormMain();
         }
 
         private void FrmProductos_Load(object sender, EventArgs e)
@@ -43,6 +41,19 @@ namespace ProyectoCompra.Formularios
         }
 
         #region Métodos privados
+
+        private void configuracionFormMain()
+        {
+            this.frmMain.Visible = false;
+            formPadre = frmMain;
+            formActual = this;
+
+            if (formProductos != null)
+            {
+                formProductos.Visible = false;
+            }
+        }
+
         private void cargarBotones()
         {
             int contador = 0;
@@ -124,14 +135,13 @@ namespace ProyectoCompra.Formularios
             frmDetalleProducto.ShowDialog();
             aumentarContador();
         }
-
-        private void FrmProductos_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmProductos_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.form is FrmMain)
-            {
-                this.form.Close();
-            }
+            this.frmMain.Visible = true;
+            ConfigVentanaNav.ConfigVentanaNav.deleteFormSecond();
         }
         #endregion
+
+
     }
 }

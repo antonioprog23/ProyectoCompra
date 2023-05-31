@@ -10,6 +10,7 @@ namespace ProyectoCompra.Formularios
         public FrmMain()
         {
             InitializeComponent();
+            formPadre = this;
         }
 
         private void button6_Click(object sender, EventArgs e)
