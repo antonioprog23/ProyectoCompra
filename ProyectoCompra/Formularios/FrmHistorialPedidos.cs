@@ -47,9 +47,12 @@ namespace ProyectoCompra.Formularios
             {
                 this.lblContadorPedidos.Text = "";
                 this.lblContadorPedidos.Text = string.Format("Pedidos filtrados ({0})", facturas.Count);
+                this.lblContadorPedidos.Visible = false;
+                this.lblNotificadorPedidos.Visible = true;
                 return;
             }
 
+            this.lblNotificadorPedidos.Visible = false;
             tbPedidosLista.RowCount = facturas.Count;
             for (int i = 0; i < tbPedidosLista.RowCount; i++)
             {
@@ -61,6 +64,7 @@ namespace ProyectoCompra.Formularios
 
             this.lblContadorPedidos.Text = "";
             this.lblContadorPedidos.Text = string.Format("Pedidos filtrados ({0})", facturas.Count);
+            this.lblContadorPedidos.Visible = true;
         }
         #endregion
     }

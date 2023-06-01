@@ -30,13 +30,13 @@
         {
             this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tbPedidosLista = new System.Windows.Forms.TableLayoutPanel();
-            this.ctrlHistorialPedido1 = new ProyectoCompra.Controles.CtrlHistorialPedido();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dtDesde = new System.Windows.Forms.DateTimePicker();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.dtHasta = new System.Windows.Forms.DateTimePicker();
             this.lblContadorPedidos = new System.Windows.Forms.Label();
+            this.lblNotificadorPedidos = new System.Windows.Forms.Label();
             this.flPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             // 
             this.flPanel.AutoScroll = true;
             this.flPanel.Controls.Add(this.tbPedidosLista);
-            this.flPanel.Controls.Add(this.ctrlHistorialPedido1);
+            this.flPanel.Controls.Add(this.lblNotificadorPedidos);
             this.flPanel.Location = new System.Drawing.Point(12, 60);
             this.flPanel.Name = "flPanel";
             this.flPanel.Size = new System.Drawing.Size(469, 190);
@@ -67,17 +67,6 @@
             this.tbPedidosLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tbPedidosLista.Size = new System.Drawing.Size(0, 0);
             this.tbPedidosLista.TabIndex = 0;
-            // 
-            // ctrlHistorialPedido1
-            // 
-            this.ctrlHistorialPedido1.AutoSize = true;
-            this.ctrlHistorialPedido1.BackColor = System.Drawing.Color.White;
-            this.ctrlHistorialPedido1.factura = null;
-            this.ctrlHistorialPedido1.Location = new System.Drawing.Point(9, 3);
-            this.ctrlHistorialPedido1.Name = "ctrlHistorialPedido1";
-            this.ctrlHistorialPedido1.Size = new System.Drawing.Size(439, 176);
-            this.ctrlHistorialPedido1.TabIndex = 1;
-            this.ctrlHistorialPedido1.Visible = false;
             // 
             // btnBuscar
             // 
@@ -131,6 +120,18 @@
             this.lblContadorPedidos.Size = new System.Drawing.Size(84, 13);
             this.lblContadorPedidos.TabIndex = 7;
             this.lblContadorPedidos.Text = "Pedidos filtrados";
+            this.lblContadorPedidos.Visible = false;
+            // 
+            // lblNotificadorPedidos
+            // 
+            this.lblNotificadorPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotificadorPedidos.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblNotificadorPedidos.Location = new System.Drawing.Point(3, 6);
+            this.lblNotificadorPedidos.Name = "lblNotificadorPedidos";
+            this.lblNotificadorPedidos.Size = new System.Drawing.Size(460, 180);
+            this.lblNotificadorPedidos.TabIndex = 1;
+            this.lblNotificadorPedidos.Text = "Pedidos filtrados (0)";
+            this.lblNotificadorPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmHistorialPedidos
             // 
@@ -161,12 +162,12 @@
 
         private System.Windows.Forms.FlowLayoutPanel flPanel;
         private System.Windows.Forms.TableLayoutPanel tbPedidosLista;
-        private Controles.CtrlHistorialPedido ctrlHistorialPedido1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DateTimePicker dtDesde;
         private System.Windows.Forms.Label lblDesde;
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.DateTimePicker dtHasta;
         private System.Windows.Forms.Label lblContadorPedidos;
+        private System.Windows.Forms.Label lblNotificadorPedidos;
     }
 }
