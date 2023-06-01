@@ -132,47 +132,47 @@ namespace ProyectoCompra.Formularios
                 ConfigVentanaNav.ConfigVentanaNav.deleteFormSecond();
             }
         }
-
-        private void FrmBase_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //this.formActual.Visible = false;
-        }
-
         #endregion
 
         #region Menu
         private void lacteosmn_Click(object sender, EventArgs e)
         {
+
             formProductos = new FrmProductos(1, 1, this.formPadre);
             formProductos.ShowDialog();
         }
 
         private void aceitesVinagresYSalsasmn_Click(object sender, EventArgs e)
         {
+
             formProductos = new FrmProductos(1, 2, this.formPadre);
             formProductos.ShowDialog();
         }
 
         private void desayunomn_Click(object sender, EventArgs e)
         {
+
             formProductos = new FrmProductos(1, 3, this.formPadre);
             formProductos.ShowDialog();
         }
 
         private void conservasmn_Click(object sender, EventArgs e)
         {
+
             formProductos = new FrmProductos(1, 4, this.formPadre);
             formProductos.ShowDialog();
         }
 
         private void comiadsInternacionalesmn_Click(object sender, EventArgs e)
         {
+
             formProductos = new FrmProductos(1, 5, this.formPadre);
             formProductos.ShowDialog();
         }
 
         private void nutriciónDeportivamn_Click(object sender, EventArgs e)
         {
+
             formProductos = new FrmProductos(1, 6, this.formPadre);
             formProductos.ShowDialog();
         }
