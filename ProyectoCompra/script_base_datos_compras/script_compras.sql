@@ -127,7 +127,7 @@ CREATE TABLE Pedido
 	Id_Direccion INT NOT NULL,
 	Id_Estado_Pedido int NOT NULL,
 	Fecha DATETIME NOT NULL,
-	CONSTRAINT constraint_id_usuario_pedido_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario),
+	CONSTRAINT constraint_id_usuario_pedido_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario) ON DELETE CASCADE,
 	CONSTRAINT constraint_id_direccion_pedido_fk FOREIGN KEY (Id_Direccion) REFERENCES Direccion (Id_Direccion),
 	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES Estado_Pedido (Id_Estado_Pedido)
 )
@@ -145,6 +145,13 @@ CREATE TABLE Linea_Pedido
 	CONSTRAINT constraint_id_producto_fk FOREIGN KEY (Id_Producto) REFERENCES producto (Id_Producto)
 )
 
+CREATE TABLE Estado_Factura
+(
+	Id_Estado_Factura INT IDENTITY PRIMARY KEY,
+	Descripcion NVARCHAR(50),
+	
+)
+
 -- FACTURA
 CREATE TABLE Factura (
     Id_Factura INT PRIMARY KEY,
@@ -152,14 +159,7 @@ CREATE TABLE Factura (
 	Id_Estado_Factura INT NOT NULL,
     Fecha_Factura DATETIME NOT NULL,
     CONSTRAINT constraint_id_pedido_factura_fk FOREIGN KEY (Id_Pedido) REFERENCES Pedido (Id_Pedido) ON DELETE CASCADE,
-    CONSTRAINT constraint_id_estado_factura_fk FOREIGN KEY (Id_Estado_Factura) REFERENCES Estado_Factura (Id_Estado_Factura) ON DELETE CASCADE
-)
-
-CREATE TABLE Estado_Factura
-(
-	Id_Estado_Factura INT IDENTITY PRIMARY KEY,
-	Descripcion NVARCHAR(50),
-	
+    CONSTRAINT constraint_id_estado_factura_fk FOREIGN KEY (Id_Estado_Factura) REFERENCES Estado_Factura (Id_Estado_Factura)
 )
 
 -- CARRITO
@@ -1807,7 +1807,7 @@ INSERT INTO Imagen VALUES (554, '_23_24')
 -- ¡ OJO ! IMPORTANTE
 -- SCRIPT PARA PROGRAMAR EL BORRADO AUTOMÁTICO DE LOS USUARIOS INVITADOS 
 
-USE msdb;
+USE msdb; 
 GO
 EXEC dbo.sp_add_job
     @job_name = N'BorrarUsuarioInvitado',

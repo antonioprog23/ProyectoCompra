@@ -11,16 +11,16 @@ namespace ProyectoCompra.ConfigVentanaNav
         public static void addForm(Form form)
         {
             pilaFormularios.Push(form);
-            if (pilaFormularios.Count > 1)
+            if (pilaFormularios.Count > 0)
             {
                 foreach (Form ventana in pilaFormularios)
                 {
-                    ventana.Hide();
+                    ventana.Visible = false;
                 }
             }
         }
 
-        //Cierra el/los formularios abiertos que estan ocultos
+        //Cierra el/los formularios abiertos que estan abierto/s oculto/s
         public static void deleteFormSecond()
         {
             while (pilaFormularios.Count > 0)
