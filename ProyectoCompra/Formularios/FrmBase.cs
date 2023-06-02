@@ -79,14 +79,30 @@ namespace ProyectoCompra.Formularios
         #region Eventos
         private void btnIdentificarse_Click(object sender, EventArgs e)
         {
-            frmInicioSesion inicioSesion = new frmInicioSesion(this.formPadre);
+            frmInicioSesion inicioSesion = new frmInicioSesion();
             inicioSesion.ShowDialog();
+            if (inicioSesion.isLogIn)
+            {
+                this.configurarFrmBase();
+                this.formPadre.configurarFrmBase();
+                this.aumentarContador();
+                this.formPadre.aumentarContador();
+            }
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             FrmPerfil frmPerfil = new FrmPerfil(usuarioRecuperado, this);
             frmPerfil.ShowDialog();
+            if (frmPerfil.isLogOut)
+            {
+                this.usuarioRecuperado = null;
+                this.formPadre.usuarioRecuperado = null;
+                this.configurarFrmBase();
+                this.formPadre.configurarFrmBase();
+                this.aumentarContador();
+                this.formPadre.aumentarContador();
+            }
         }
 
         private void btnCarrito_Click(object sender, EventArgs e)

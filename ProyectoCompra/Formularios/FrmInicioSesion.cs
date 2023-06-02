@@ -10,17 +10,13 @@ namespace ProyectoCompra.Formularios
     public partial class frmInicioSesion : Form
     {
         private Usuario usuarioEncontrado;
-        private FrmBase frmBase;
+        public bool isLogIn { get; set; }
 
         public frmInicioSesion()
         {
             InitializeComponent();
-        }
 
-        public frmInicioSesion(FrmBase frmBase)
-        {
-            InitializeComponent();
-            this.frmBase = frmBase;
+            this.isLogIn = false;
         }
 
         #region Eventos
@@ -38,15 +34,12 @@ namespace ProyectoCompra.Formularios
             if (usuarioEncontrado == null)
             {
                 MessageBox.Show("Usuario no encontrado.");
+                return;
             }
-            else
-            {
-                MessageBox.Show("Bienvenido");
-                ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
-                this.frmBase.aumentarContador();
-                this.frmBase.configurarFrmBase();
-                this.Close();
-            }
+            ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
+            this.isLogIn = true;
+            MessageBox.Show("Bienvenido", "Inicio sesión", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            this.Close();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
