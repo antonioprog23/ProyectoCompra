@@ -15,12 +15,14 @@ namespace ProyectoCompra.Formularios
         private string valorCampoMoficiar;
         private bool editar;
         private string campo;
+        public bool isVerificado { get; set; }
 
         public FrmVerificarCuenta(Cliente cliente, Usuario usuario, string codigoVerificacion, string correoElectronico)
         {
             InitializeComponent();
             this.cliente = cliente;
             this.usuario = usuario;
+            this.isVerificado = false;
             this.codigoVerificacion = codigoVerificacion;
             this.correoElectronico = correoElectronico;
         }
@@ -52,9 +54,8 @@ namespace ProyectoCompra.Formularios
                 if ((BDUsuario.insertarDatos(cliente, usuario)))
                 {
                     MessageBox.Show("Usuario creado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.isVerificado = true;
                     this.Close();
-                    frmInicioSesion frmInicioSesion = new frmInicioSesion();
-                    frmInicioSesion.ShowDialog();
                 }
             }
             editarUsuario();
