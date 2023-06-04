@@ -119,6 +119,13 @@ CREATE TABLE Estado_Pedido
 	Descripcion NVARCHAR(50) NOT NULL
 )
 
+-- METODO PAGO
+CREATE TABLE Metodo_Pago
+(
+	Id_Metodo_Pago INT PRIMARY KEY IDENTITY,
+	Descripcion NVARCHAR(50)
+)
+
 -- PEDIDO
 CREATE TABLE Pedido
 (
@@ -127,9 +134,11 @@ CREATE TABLE Pedido
 	Id_Direccion INT NOT NULL,
 	Id_Estado_Pedido int NOT NULL,
 	Fecha DATETIME NOT NULL,
+	Id_Metodo_Pago INT NOT NULL,
 	CONSTRAINT constraint_id_usuario_pedido_fk FOREIGN KEY (Id_Usuario) REFERENCES Usuario (Id_Usuario) ON DELETE CASCADE,
 	CONSTRAINT constraint_id_direccion_pedido_fk FOREIGN KEY (Id_Direccion) REFERENCES Direccion (Id_Direccion),
-	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES Estado_Pedido (Id_Estado_Pedido)
+	CONSTRAINT constraint_id_estado_pedido FOREIGN KEY (Id_Estado_Pedido) REFERENCES Estado_Pedido (Id_Estado_Pedido),
+	CONSTRAINT constraint_metodo_pago_fk FOREIGN KEY (Id_Metodo_Pago) REFERENCES Metodo_Pago (Id_Metodo_Pago)
 )
 
 -- LINEA_PEDIDO
@@ -183,6 +192,10 @@ INSERT INTO Estado_Pedido (Descripcion) VALUES ('Entregado')
 -- ESTADO_FACTURA
 INSERT INTO Estado_Factura VALUES ('Pendiente')
 INSERT INTO Estado_Factura VALUES ('Cobrado')
+
+-- METODO PAGO
+INSERT INTO Metodo_Pago (Descripcion) VALUES ('Efectivo')
+INSERT INTO Metodo_Pago (Descripcion) VALUES ('Tarjeta_Credido')
 
 -- CATEGORIA
 INSERT INTO Categoria (Descripcion) VALUES ('Alimentación')

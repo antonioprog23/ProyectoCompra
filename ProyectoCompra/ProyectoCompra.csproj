@@ -195,6 +195,7 @@
     </Compile>
     <Compile Include="Enumerados\EEstadoFactura.cs" />
     <Compile Include="Enumerados\EEstadoPedido.cs" />
+    <Compile Include="Enumerados\EMetodoPago.cs" />
     <Compile Include="Enumerados\EOtrasOpciones.cs" />
     <Compile Include="Clases\CarritoProvisional.cs" />
     <Compile Include="Properties\AlimentacionS16.Designer.cs">

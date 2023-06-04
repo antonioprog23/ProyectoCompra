@@ -11,7 +11,7 @@ namespace ProyectoCompra.Base_datos
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
-        public static bool actualizarPedido(int idUsuario)
+        public static bool actualizarPedido(int idUsuario, int metodoPago)
         {
             bool actualizado = false;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
@@ -25,14 +25,16 @@ namespace ProyectoCompra.Base_datos
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
                             cmd.Parameters.AddWithValue("@Id_Usuario", idUsuario);
+                            cmd.Parameters.AddWithValue("@Id_Metodo_Pago", metodoPago);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             actualizado = true;
                         }
-                        catch (SqlException)
+                        catch (SqlException e)
                         {
                             actualizado = false;
                             transaction.Rollback();
+                            throw e;
                         }
                     }
                 }
@@ -64,7 +66,7 @@ namespace ProyectoCompra.Base_datos
                             Producto producto = new Producto(Convert.ToInt32(reader["Id_Producto"]), Convert.ToInt32(reader["Id_Subcategoria"]), reader["Nombre_Producto"].ToString(), reader["Descripcion"].ToString(), Convert.ToDecimal(reader["Precio"]), reader["Fabricante"].ToString(), imagen);
                             LineaPedido linea = new LineaPedido(Convert.ToInt32(reader["Id_Linea_Pedido"]), Convert.ToInt32(reader["Id_Pedido"]), producto, Convert.ToInt32(reader["Cantidad"]), Convert.ToDecimal(reader["Subtotal"]));
                             lineasPedido.Add(linea);
-                            Pedido pedido = new Pedido(Convert.ToInt32(reader["Id_Pedido"]), usuario, lineasPedido, direccion, Convert.ToInt32(reader["Id_Estado_Pedido"]), Convert.ToDateTime(reader["Fecha"]));
+                            Pedido pedido = new Pedido(Convert.ToInt32(reader["Id_Pedido"]), usuario, lineasPedido, direccion, Convert.ToInt32(reader["Id_Estado_Pedido"]), Convert.ToDateTime(reader["Fecha"]), Convert.ToInt32(reader["Id_Metodo_Pago"]));
 
                             //SE COMPROBRA SI EL IDFACTURA EXISTE YA EN LA LISTA O NO
                             //SI NO EXISTE EL IDFACTURA EN LA LISTA, SE CREA NUEVA FACTURA Y SE AÑADE A LA LISTA

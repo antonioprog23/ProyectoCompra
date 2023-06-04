@@ -24,8 +24,8 @@ namespace ProyectoCompra.Controles
             {
                 lineasPedido = factura.pedido.obtenerProductosDelPedido(factura.pedido.idPedido);
                 lblNumProductos.Text = string.Format("{0} ({1})", lblNumProductos.Text, lineasPedido.Count);
-                lblProductosMostrar.Text = factura.pedido.obtenerTotalPedido(factura.pedido.idPedido).ToString();
-                lblTotalMostrar.Text = (Convert.ToDecimal(lblProductosMostrar.Text) * 1.03m).ToString("0.00");
+                lblProductosMostrar.Text = factura.pedido.obtenerTotalPedido(factura.pedido.idPedido).ToString("0.00");
+                lblTotalMostrar.Text = factura.pedido.obtenerTotalPedidoConGastosEnvíoEIntereses(Convert.ToDecimal(lblProductosMostrar.Text)).ToString("0.00");
             }
         }
 

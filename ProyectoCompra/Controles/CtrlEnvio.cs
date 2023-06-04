@@ -1,5 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
+using ProyectoCompra.Enumerados;
 using ProyectoCompra.Ficheros;
 using ProyectoCompra.Formularios;
 using System;
@@ -309,21 +310,9 @@ namespace ProyectoCompra.Controles
 
         private void comprobarBotonContinuar()
         {
-            if (direcciones.Count > 0 && tarjetaCredit != null)
+            if (direcciones != null && (tarjetaCredit != null || isEfectivoElegida))
             {
                 this.btnContinuar.Enabled = true;
-            }
-            else
-            {
-                this.btnContinuar.Enabled = false;
-            }
-            if (direcciones.Count > 0 && isEfectivoElegida)
-            {
-                this.btnContinuar.Enabled = true;
-            }
-            else
-            {
-                this.btnContinuar.Enabled = false;
             }
         }
 
@@ -333,6 +322,16 @@ namespace ProyectoCompra.Controles
             {
                 enviarFactura = false;
             }
+        }
+
+        public int obtenerMetodoPagoElegido()
+        {
+            int metodoPago = (int)EMetodoPago.Tarjeta;
+            if (isEfectivoElegida)
+            {
+                metodoPago = (int)EMetodoPago.Efectivo;
+            }
+            return metodoPago;
         }
     }
 }
