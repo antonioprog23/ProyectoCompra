@@ -314,6 +314,10 @@ namespace ProyectoCompra.Controles
             {
                 this.btnContinuar.Enabled = true;
             }
+            if (tarjetaCredit == null && this.btnContinuar.Enabled && !isEfectivoElegida)
+            {
+                this.btnContinuar.Enabled = false;
+            }
         }
 
         private void cbxEnviarFactura_CheckedChanged(object sender, EventArgs e)

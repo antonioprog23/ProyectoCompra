@@ -18,7 +18,7 @@ namespace ProyectoCompra.Clases
 
         public static void obtenerReporte(int idUsuario, int idPedido)
         {
-            /*
+            
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
             {
                 connection.Open();
@@ -46,7 +46,7 @@ namespace ProyectoCompra.Clases
 
                     }
                 }
-            }*/
+            }
         }
     }
 }
