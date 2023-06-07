@@ -3,7 +3,7 @@ using System.Configuration;
 
 namespace ProyectoCompra.Clases
 {
-    internal class ConfigSesion
+    public class ConfigSesion
     {
         public static bool guardarReferenciaIdUsuario(int id)
         {

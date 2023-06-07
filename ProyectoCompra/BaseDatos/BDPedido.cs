@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace ProyectoCompra.Base_datos
 {
-    internal class BDPedido
+    public class BDPedido
     {
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
