@@ -62,14 +62,15 @@
             this.rvReporte.Location = new System.Drawing.Point(0, 0);
             this.rvReporte.Name = "rvReporte";
             this.rvReporte.ServerReport.BearerToken = null;
-            this.rvReporte.Size = new System.Drawing.Size(680, 450);
+            this.rvReporte.Size = new System.Drawing.Size(680, 587);
             this.rvReporte.TabIndex = 0;
+            this.rvReporte.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 450);
+            this.ClientSize = new System.Drawing.Size(680, 587);
             this.Controls.Add(this.rvReporte);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmFactura";

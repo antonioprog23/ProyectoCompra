@@ -239,6 +239,7 @@
                                 <TextRun>
                                   <Value>Unidades</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -277,6 +278,7 @@
                                 <TextRun>
                                   <Value>Descripción</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -315,6 +317,7 @@
                                 <TextRun>
                                   <Value>Precio</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -353,6 +356,7 @@
                                 <TextRun>
                                   <Value>Total</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -395,7 +399,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Cantidad.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -427,7 +433,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Nombre.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -457,7 +465,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Precio.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -489,7 +499,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Cantidad.Value*Fields!Precio.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -553,17 +565,19 @@
                   <TextRun>
                     <Value>Subtotal</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <Top>3.49195cm</Top>
-            <Left>6.46272cm</Left>
+            <Left>8.50964cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>1.38875cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -582,19 +596,21 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>IVA %</Value>
+                    <Value>IVA</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <Top>4.19779cm</Top>
-            <Left>6.46272cm</Left>
+            <Left>8.50964cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>1.38875cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -619,7 +635,7 @@
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>€ </Value>
+                    <Value> € </Value>
                     <Style>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -631,9 +647,9 @@
               </Paragraph>
             </Paragraphs>
             <Top>3.49195cm</Top>
-            <Left>9.03328cm</Left>
+            <Left>10.00422cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.17806cm</Width>
+            <Width>2.20712cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -652,7 +668,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>3%</Value>
+                    <Value>3 %</Value>
                     <Style>
                       <FontSize>9pt</FontSize>
                     </Style>
@@ -664,9 +680,9 @@
               </Paragraph>
             </Paragraphs>
             <Top>4.22425cm</Top>
-            <Left>10.35619cm</Left>
+            <Left>10.00422cm</Left>
             <Height>0.6cm</Height>
-            <Width>1.85515cm</Width>
+            <Width>2.20712cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -685,19 +701,21 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Gastos de envío</Value>
+                    <Value>Envío</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>4.88599cm</Top>
-            <Left>5.88064cm</Left>
+            <Top>4.90362cm</Top>
+            <Left>8.50964cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.08208cm</Width>
+            <Width>1.38875cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -728,9 +746,9 @@
               </Paragraph>
             </Paragraphs>
             <Top>4.93008cm</Top>
-            <Left>10.35619cm</Left>
+            <Left>10.00422cm</Left>
             <Height>0.6cm</Height>
-            <Width>1.85515cm</Width>
+            <Width>2.20712cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -753,7 +771,6 @@
                       <TextRun>
                         <Value>Total</Value>
                         <Style>
-                          <FontSize>9pt</FontSize>
                           <FontWeight>Bold</FontWeight>
                         </Style>
                       </TextRun>
@@ -762,7 +779,6 @@
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.0441cm</Top>
-                <Left>0cm</Left>
                 <Height>0.6cm</Height>
                 <Width>3.08208cm</Width>
                 <Style>
@@ -785,10 +801,24 @@
                         <Value>=Fields!Total_Compra.Value</Value>
                         <Style>
                           <FontSize>9pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
                         </Style>
                       </TextRun>
                       <TextRun>
-                        <Value> € </Value>
+                        <Value xml:space="preserve"> </Value>
+                        <Style>
+                          <FontSize>9pt</FontSize>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>€</Value>
+                        <Style>
+                          <FontSize>9pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value xml:space="preserve"> </Value>
                         <Style>
                           <FontSize>9pt</FontSize>
                         </Style>
@@ -818,7 +848,7 @@
             <KeepTogether>true</KeepTogether>
             <Top>5.66238cm</Top>
             <Left>1.26683cm</Left>
-            <Height>0.6441cm</Height>
+            <Height>0.67056cm</Height>
             <Width>10.94451cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
@@ -909,7 +939,7 @@
                     <TextRun>
                       <Value>=Fields!Fecha.Value</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -942,7 +972,7 @@
                     <TextRun>
                       <Value>C/ Pontevedra, 100</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -975,7 +1005,7 @@
                     <TextRun>
                       <Value>50007, Zaragoza</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1008,7 +1038,7 @@
                     <TextRun>
                       <Value>00000000S</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1041,7 +1071,7 @@
                     <TextRun>
                       <Value>easyshop@gmail.com</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1072,20 +1102,20 @@
                     <TextRun>
                       <Value>Factura Nº:</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value xml:space="preserve"> </Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Fields!Id_Factura.Value</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1116,19 +1146,19 @@
                     <TextRun>
                       <Value>=Fields!Codigo_Postal.Value</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>, </Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Fields!Ciudad.Value</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1139,7 +1169,7 @@
                     <TextRun>
                       <Value />
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1170,7 +1200,7 @@
                     <TextRun>
                       <Value>=Fields!Direccion.Value</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1201,7 +1231,7 @@
                     <TextRun>
                       <Value>000000000-A</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1234,7 +1264,7 @@
                     <TextRun>
                       <Value>=Fields!Telefono.Value</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1267,7 +1297,7 @@
                     <TextRun>
                       <Value>Datos cliente</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1309,19 +1339,15 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Vendido y enviado por</Value>
+                      <Value>Vendido y enviado por </Value>
                       <Style>
-                        <FontSize>8pt</FontSize>
+                        <FontSize>7pt</FontSize>
                       </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value xml:space="preserve"> </Value>
-                      <Style />
                     </TextRun>
                     <TextRun>
                       <Value>EasyShop</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>7pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1330,10 +1356,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox12</rd:DefaultName>
-              <Top>0.56416cm</Top>
-              <Left>3.99203cm</Left>
+              <Top>0.17639cm</Top>
+              <Left>4.8949cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.71152cm</Width>
+              <Width>4.06782cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
