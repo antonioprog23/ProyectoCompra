@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace ProyectoCompra.Base_datos
 {
-    internal class BDProducto
+    public class BDProducto
     {
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
@@ -23,7 +23,7 @@ namespace ProyectoCompra.Base_datos
                     {
                         while (reader.Read())
                         {
-                            Producto producto = new Producto(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3),reader.GetDecimal(4), reader.GetString(5));
+                            Producto producto = new Producto(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetDecimal(4), reader.GetString(5));
                             productos.Add(producto);
                         }
                     }

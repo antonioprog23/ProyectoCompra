@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCompra.Base_datos
 {
-    internal class BDDireccion
+    public class BDDireccion
     {
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";

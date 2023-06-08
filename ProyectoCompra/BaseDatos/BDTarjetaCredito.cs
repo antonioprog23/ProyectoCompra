@@ -1,14 +1,9 @@
 ﻿using ProyectoCompra.Clases;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoCompra.Base_datos
 {
-    internal class BDTarjetaCredito
+    public class BDTarjetaCredito
     {
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";

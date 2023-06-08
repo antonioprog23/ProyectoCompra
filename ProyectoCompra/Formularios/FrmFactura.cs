@@ -18,8 +18,8 @@ namespace ProyectoCompra.Formularios
         private void FrmFactura_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dSFactura.ConsultarFactura' Puede moverla o quitarla según sea necesario.
-            this.consultarFacturaTableAdapter.Fill(this.dSFactura.ConsultarFactura, this.idUsuario, this.idPedido);
-            this.reportViewer1.RefreshReport();
+            this.tAdapter.Fill(this.dSFactura.ConsultarFactura, this.idUsuario, this.idPedido);
+            this.rvReporte.RefreshReport();
         }
 
 

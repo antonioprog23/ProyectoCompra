@@ -92,7 +92,7 @@ namespace ProyectoCompra.Clases
             return codigoVerificacion;
         }
 
-        /*
+
         public static void enviareReporte(string destinatario)
         {
             bool correoValido = true;
@@ -103,8 +103,8 @@ namespace ProyectoCompra.Clases
                 mensaje.Body = $"Tu código de verificación es:";
 
                 //ADJUNTAR ARCHIVO
-                Attachment attachment = new Attachment(new MemoryStream(Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario())), "report.word", "application/word");
-                mensaje.Attachments.Add(attachment);
+                // Attachment attachment = new Attachment(new MemoryStream(Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario())), "report.word", "application/word");
+                //mensaje.Attachments.Add(attachment);
 
                 if (correoValido)
                 {
@@ -128,7 +128,6 @@ namespace ProyectoCompra.Clases
                 correoValido = false;
             }
         }
-        */
 
         //MÉTODOS PRIVADOS
         private static string obtenerCodigoVerificacion()

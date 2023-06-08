@@ -36,7 +36,7 @@ namespace ProyectoCompra.Formularios
             int idUsuario = ConfigSesion.obtenerReferenciaIdUsuario();
             if (idUsuario == 0)
             {
-                FrmModoCompra frmModoCompra = new FrmModoCompra(carritoProvisionalListo, this.frmBase);
+                FrmModoCompra frmModoCompra = new FrmModoCompra(carritoProvisionalListo);
                 frmModoCompra.ShowDialog();
                 this.frmBase.configurarFrmBase();
                 this.frmBase.aumentarContador();

@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace ProyectoCompra.Base_datos
 {
-    internal class BDCarrito
+    public class BDCarrito
     {
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";

@@ -16,25 +16,23 @@ namespace ProyectoCompra.Formularios
         private Producto producto;
         private int categoria;
         private int subCategoria;
-        private Form form;
+        private FrmMain frmMain;
+        private FrmProductos frmProductos;
 
         #endregion
 
-        public FrmProductos(int categoria, int subcategoria, Form form)
+        #region Constructor
+        public FrmProductos(int categoria, int subcategoria, FrmMain frmMain)
         {
             InitializeComponent();
             this.categoria = categoria;
             this.subCategoria = subcategoria;
+            this.frmMain = frmMain;
+            formProductos = this.frmProductos;
             lista = BDProducto.obtenerProductos(this.subCategoria);
-
-            this.form = form;
-            if (form is FrmMain)
-            {
-                this.form.Visible = false;
-                formPadre = form;
-                formActual = this;
-            }
+            configuracionFormMain();
         }
+        #endregion
 
         private void FrmProductos_Load(object sender, EventArgs e)
         {
@@ -43,6 +41,15 @@ namespace ProyectoCompra.Formularios
         }
 
         #region Métodos privados
+
+        private void configuracionFormMain()
+        {
+            this.frmMain.Visible = false;
+            formPadre = frmMain;
+            formActual = this;
+            ConfigVentanaNav.ConfigVentanaNav.addForm(this);
+        }
+
         private void cargarBotones()
         {
             int contador = 0;
@@ -124,14 +131,13 @@ namespace ProyectoCompra.Formularios
             frmDetalleProducto.ShowDialog();
             aumentarContador();
         }
-
         private void FrmProductos_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (this.form is FrmMain)
-            {
-                this.form.Close();
-            }
+            this.frmMain.aumentarContador();
+            this.frmMain.Visible = true;
+            this.frmMain.BringToFront();
         }
+
         #endregion
     }
 }

@@ -171,9 +171,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(242, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 13);
+            this.label7.Size = new System.Drawing.Size(147, 13);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Dirección de envío";
+            this.label7.Text = "Dirección de facturación";
             // 
             // btnDescargarFact
             // 

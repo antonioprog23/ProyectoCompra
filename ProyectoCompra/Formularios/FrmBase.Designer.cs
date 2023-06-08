@@ -490,7 +490,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmBase";
             this.Text = "FrmBase";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBase_FormClosed);
             this.Load += new System.EventHandler(this.FrmBase_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
