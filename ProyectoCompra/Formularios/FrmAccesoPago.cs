@@ -58,8 +58,7 @@ namespace ProyectoCompra.Formularios
                 bool enviarFactura = ctrlEnvio1.enviarFactura;
                 if (enviarFactura)
                 {
-                    // Mensaje.enviareReporte("antajac23@gmail.com");
-                    // Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 0);
+                    Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 0);
                 }
                 Application.Restart();
             }
