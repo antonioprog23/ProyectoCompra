@@ -25,7 +25,8 @@ CREATE PROCEDURE InsertarDatosInvitado
 @Ciudad NVARCHAR(150),
 @Codigo_Postal NVARCHAR(5),
 @Telefono NVARCHAR(9),
-@Productos dbo.CarritoProvisional READONLY
+@Productos dbo.CarritoProvisional READONLY,
+@Id_Metodo_Pago INT
 AS
 BEGIN
 	SET NOCOUNT ON
@@ -58,10 +59,20 @@ BEGIN
 	-- DIRECCION
 	INSERT INTO Direccion VALUES (@Id_Direccion_New,@Id_Cliente,@Nombre_Direccion,@Direccion,@Pais,@Provincia,@Ciudad,@Codigo_Postal,@Telefono)
 	
+	-- TARJETA CREDITO
+
 	-- PEDIDO
-	INSERT INTO Pedido VALUES (@Id_Pedido,@Id_Usuario,@Id_Direccion_New,1,GETDATE())
+	INSERT INTO Pedido VALUES (@Id_Pedido,@Id_Usuario,@Id_Direccion_New,1,GETDATE(),@Id_Metodo_Pago)
+	
 	--LINEA PEDIDO
 	INSERT INTO Linea_Pedido SELECT @Id_Pedido,pro.Id_Producto,pro.Cantidad, (Cantidad * (SELECT p.Precio FROM Producto p WHERE p.Id_Producto = pro.Id_Producto)) FROM @Productos pro
-	-- FACTURA
-	INSERT INTO Factura VALUES (@Id_Factura,@Id_Pedido,1,GETDATE())
+	
+	-- FACTURA (1 = Efectivo, 2 = Tarjeta)
+	IF (@Id_Metodo_Pago = 1)
+		BEGIN
+			INSERT INTO Factura VALUES (@Id_Factura,@Id_Pedido,1,CONVERT(date,GETDATE()))
+		END
+	ELSE
+			INSERT INTO Factura VALUES (@Id_Factura,@Id_Pedido,2,CONVERT(date,GETDATE()))
+	
 END

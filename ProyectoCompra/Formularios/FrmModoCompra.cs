@@ -7,17 +7,15 @@ namespace ProyectoCompra.Formularios
     public partial class FrmModoCompra : Form
     {
         public CarritoProvisional carritoProvisionalListo { get; set; }
-        public FrmBase frmBase { get; set; }
         public FrmModoCompra()
         {
             InitializeComponent();
         }
 
-        public FrmModoCompra(CarritoProvisional carritoProvisionalListo, FrmBase frmBase)
+        public FrmModoCompra(CarritoProvisional carritoProvisionalListo)
         {
             InitializeComponent();
             this.carritoProvisionalListo = carritoProvisionalListo;
-            this.frmBase = frmBase;
         }
 
         private void btnInvitado_Click(object sender, EventArgs e)
@@ -28,7 +26,7 @@ namespace ProyectoCompra.Formularios
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            frmInicioSesion frmInicioSesion = new frmInicioSesion(this.frmBase);
+            frmInicioSesion frmInicioSesion = new frmInicioSesion();
             frmInicioSesion.ShowDialog();
             this.Close();
         }

@@ -54,11 +54,10 @@ namespace ProyectoCompra.Formularios
             }
             else
             {
-                BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario());
+                BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario(), ctrlEnvio1.obtenerMetodoPagoElegido());
                 bool enviarFactura = ctrlEnvio1.enviarFactura;
                 if (enviarFactura)
                 {
-                    // Mensaje.enviareReporte("antajac23@gmail.com");
                     Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 0);
                 }
                 Application.Restart();

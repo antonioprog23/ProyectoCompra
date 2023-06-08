@@ -12,9 +12,10 @@ CREATE PROCEDURE ConsultarPedido
 AS
 BEGIN
 	SET NOCOUNT ON
+
 	SELECT 
 	f.Id_Factura,f.Id_Estado_Factura,f.Fecha_Factura,
-	p.Id_Pedido,p.Id_Estado_Pedido,p.Fecha,
+	p.Id_Pedido,p.Id_Estado_Pedido,p.Fecha,p.Id_Metodo_Pago,
 	lp.Id_Linea_Pedido,lp.Id_Pedido,lp.Cantidad,lp.Subtotal,
 	c.Nombre,c.Apellido,
 	d.Nombre_Direccion,d.Direccion,d.Pais,d.Provincia,d.Ciudad,d.Codigo_Postal,d.Telefono,

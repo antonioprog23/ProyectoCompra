@@ -359,6 +359,14 @@ namespace ProyectoCompra.Reportes {
             
             private global::System.Data.DataColumn columnTelefono;
             
+            private global::System.Data.DataColumn columnId_Metodo_Pago;
+            
+            private global::System.Data.DataColumn columnInvitado;
+            
+            private global::System.Data.DataColumn columnTotal_Compra;
+            
+            private global::System.Data.DataColumn columnSubtotal_Compra;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ConsultarFacturaDataTable() {
@@ -714,6 +722,38 @@ namespace ProyectoCompra.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Id_Metodo_PagoColumn {
+                get {
+                    return this.columnId_Metodo_Pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn InvitadoColumn {
+                get {
+                    return this.columnInvitado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Total_CompraColumn {
+                get {
+                    return this.columnTotal_Compra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Subtotal_CompraColumn {
+                get {
+                    return this.columnSubtotal_Compra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -787,7 +827,11 @@ namespace ProyectoCompra.Reportes {
                         string Provincia, 
                         string Ciudad, 
                         string Codigo_Postal, 
-                        string Telefono) {
+                        string Telefono, 
+                        int Id_Metodo_Pago, 
+                        int Invitado, 
+                        decimal Total_Compra, 
+                        decimal Subtotal_Compra) {
                 ConsultarFacturaRow rowConsultarFacturaRow = ((ConsultarFacturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id_Factura,
@@ -829,7 +873,11 @@ namespace ProyectoCompra.Reportes {
                         Provincia,
                         Ciudad,
                         Codigo_Postal,
-                        Telefono};
+                        Telefono,
+                        Id_Metodo_Pago,
+                        Invitado,
+                        Total_Compra,
+                        Subtotal_Compra};
                 rowConsultarFacturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowConsultarFacturaRow);
                 return rowConsultarFacturaRow;
@@ -906,6 +954,10 @@ namespace ProyectoCompra.Reportes {
                 this.columnCiudad = base.Columns["Ciudad"];
                 this.columnCodigo_Postal = base.Columns["Codigo_Postal"];
                 this.columnTelefono = base.Columns["Telefono"];
+                this.columnId_Metodo_Pago = base.Columns["Id_Metodo_Pago"];
+                this.columnInvitado = base.Columns["Invitado"];
+                this.columnTotal_Compra = base.Columns["Total_Compra"];
+                this.columnSubtotal_Compra = base.Columns["Subtotal_Compra"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -991,6 +1043,14 @@ namespace ProyectoCompra.Reportes {
                 base.Columns.Add(this.columnCodigo_Postal);
                 this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTelefono);
+                this.columnId_Metodo_Pago = new global::System.Data.DataColumn("Id_Metodo_Pago", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Metodo_Pago);
+                this.columnInvitado = new global::System.Data.DataColumn("Invitado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvitado);
+                this.columnTotal_Compra = new global::System.Data.DataColumn("Total_Compra", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Compra);
+                this.columnSubtotal_Compra = new global::System.Data.DataColumn("Subtotal_Compra", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubtotal_Compra);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_Factura,
                                 this.columnId_Pedido1,
@@ -1044,6 +1104,8 @@ namespace ProyectoCompra.Reportes {
                 this.columnCiudad.MaxLength = 150;
                 this.columnCodigo_Postal.MaxLength = 5;
                 this.columnTelefono.MaxLength = 9;
+                this.columnTotal_Compra.ReadOnly = true;
+                this.columnSubtotal_Compra.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1709,6 +1771,72 @@ namespace ProyectoCompra.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Id_Metodo_Pago {
+                get {
+                    try {
+                        return ((int)(this[this.tableConsultarFactura.Id_Metodo_PagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Id_Metodo_Pago\' de la tabla \'ConsultarFactura\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableConsultarFactura.Id_Metodo_PagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Invitado {
+                get {
+                    try {
+                        return ((int)(this[this.tableConsultarFactura.InvitadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Invitado\' de la tabla \'ConsultarFactura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConsultarFactura.InvitadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Total_Compra {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableConsultarFactura.Total_CompraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Total_Compra\' de la tabla \'ConsultarFactura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConsultarFactura.Total_CompraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Subtotal_Compra {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableConsultarFactura.Subtotal_CompraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Subtotal_Compra\' de la tabla \'ConsultarFactura\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableConsultarFactura.Subtotal_CompraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsUsuario_NameNull() {
                 return this.IsNull(this.tableConsultarFactura.Usuario_NameColumn);
             }
@@ -1897,6 +2025,54 @@ namespace ProyectoCompra.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTelefonoNull() {
                 this[this.tableConsultarFactura.TelefonoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsId_Metodo_PagoNull() {
+                return this.IsNull(this.tableConsultarFactura.Id_Metodo_PagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetId_Metodo_PagoNull() {
+                this[this.tableConsultarFactura.Id_Metodo_PagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsInvitadoNull() {
+                return this.IsNull(this.tableConsultarFactura.InvitadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetInvitadoNull() {
+                this[this.tableConsultarFactura.InvitadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotal_CompraNull() {
+                return this.IsNull(this.tableConsultarFactura.Total_CompraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotal_CompraNull() {
+                this[this.tableConsultarFactura.Total_CompraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSubtotal_CompraNull() {
+                return this.IsNull(this.tableConsultarFactura.Subtotal_CompraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSubtotal_CompraNull() {
+                this[this.tableConsultarFactura.Subtotal_CompraColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2099,6 +2275,10 @@ namespace ProyectoCompra.Reportes.DSFacturaTableAdapters {
             tableMapping.ColumnMappings.Add("Ciudad", "Ciudad");
             tableMapping.ColumnMappings.Add("Codigo_Postal", "Codigo_Postal");
             tableMapping.ColumnMappings.Add("Telefono", "Telefono");
+            tableMapping.ColumnMappings.Add("Id_Metodo_Pago", "Id_Metodo_Pago");
+            tableMapping.ColumnMappings.Add("Invitado", "Invitado");
+            tableMapping.ColumnMappings.Add("Total_Compra", "Total_Compra");
+            tableMapping.ColumnMappings.Add("Subtotal_Compra", "Subtotal_Compra");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

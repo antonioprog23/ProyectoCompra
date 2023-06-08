@@ -30,53 +30,54 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.ConsultarFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSFactura = new ProyectoCompra.Reportes.DSFactura();
-            this.consultarFacturaTableAdapter = new ProyectoCompra.Reportes.DSFacturaTableAdapters.ConsultarFacturaTableAdapter();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultarFacturaBindingSource)).BeginInit();
+            this.tAdapter = new ProyectoCompra.Reportes.DSFacturaTableAdapters.ConsultarFacturaTableAdapter();
+            this.rvReporte = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.bSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSFactura)).BeginInit();
             this.SuspendLayout();
             // 
-            // ConsultarFacturaBindingSource
+            // bSource
             // 
-            this.ConsultarFacturaBindingSource.DataMember = "ConsultarFactura";
-            this.ConsultarFacturaBindingSource.DataSource = this.dSFactura;
+            this.bSource.DataMember = "ConsultarFactura";
+            this.bSource.DataSource = this.dSFactura;
             // 
             // dSFactura
             // 
             this.dSFactura.DataSetName = "DSFactura";
             this.dSFactura.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // consultarFacturaTableAdapter
+            // tAdapter
             // 
-            this.consultarFacturaTableAdapter.ClearBeforeFill = true;
+            this.tAdapter.ClearBeforeFill = true;
             // 
-            // reportViewer1
+            // rvReporte
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rvReporte.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DSFactura";
-            reportDataSource1.Value = this.ConsultarFacturaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoCompra.Reportes.InformeFactura.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(693, 450);
-            this.reportViewer1.TabIndex = 0;
+            reportDataSource1.Value = this.bSource;
+            this.rvReporte.LocalReport.DataSources.Add(reportDataSource1);
+            this.rvReporte.LocalReport.ReportEmbeddedResource = "ProyectoCompra.Reportes.InformeFactura.rdlc";
+            this.rvReporte.Location = new System.Drawing.Point(0, 0);
+            this.rvReporte.Name = "rvReporte";
+            this.rvReporte.ServerReport.BearerToken = null;
+            this.rvReporte.Size = new System.Drawing.Size(680, 587);
+            this.rvReporte.TabIndex = 0;
+            this.rvReporte.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(680, 587);
+            this.Controls.Add(this.rvReporte);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Factura";
             this.Load += new System.EventHandler(this.FrmFactura_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultarFacturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSFactura)).EndInit();
             this.ResumeLayout(false);
 
@@ -84,8 +85,8 @@
 
         #endregion
         private Reportes.DSFactura dSFactura;
-        private System.Windows.Forms.BindingSource ConsultarFacturaBindingSource;
-        private Reportes.DSFacturaTableAdapters.ConsultarFacturaTableAdapter consultarFacturaTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource bSource;
+        private Reportes.DSFacturaTableAdapters.ConsultarFacturaTableAdapter tAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer rvReporte;
     }
 }

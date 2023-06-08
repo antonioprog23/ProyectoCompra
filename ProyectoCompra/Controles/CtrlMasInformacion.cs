@@ -1,5 +1,7 @@
 ﻿using ProyectoCompra.Clases;
+using ProyectoCompra.Enumerados;
 using ProyectoCompra.Formularios;
+using System;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Controles
@@ -23,6 +25,8 @@ namespace ProyectoCompra.Controles
 
         private void cargarDatos()
         {
+            lblMetodoPago.Text = Enum.GetName(typeof(EMetodoPago), factura.pedido.metodoPago);
+
             lblNomCliente.Text = string.Format("{0} {1}", factura.pedido.usuario.cliente.nombre, factura.pedido.usuario.cliente.apellido);
             lblCalle.Text = factura.pedido.direccion.direccion;
             lblCP.Text = string.Format("{0}, {1}", factura.pedido.direccion.ciudad, factura.pedido.direccion.codigoPostal);

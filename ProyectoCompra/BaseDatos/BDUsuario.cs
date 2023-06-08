@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ProyectoCompra.Base_datos
 {
-    internal class BDUsuario
+    public class BDUsuario
     {
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";

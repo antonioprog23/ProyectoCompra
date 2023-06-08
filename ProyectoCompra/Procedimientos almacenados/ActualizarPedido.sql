@@ -6,7 +6,8 @@ GO
 	PRINT 'Procedimiento almacenado creado.'
 GO
 CREATE PROCEDURE ActualizarPedido
-	@Id_Usuario INT
+	@Id_Usuario INT,
+	@Id_Metodo_Pago INT
 AS
 BEGIN
 	SET NOCOUNT ON
@@ -14,12 +15,13 @@ BEGIN
 	DECLARE @Id_Pedido INT
 	DECLARE @Id_Factura INT
 
+	-- SE CALCULA LOS ID DISPONIBLES EN LAS TABLAS CORRESPONDIENTES
 	SET @Id_Pedido = (SELECT COALESCE(MAX(Id_Pedido+ 1),1) FROM Pedido)
 	SET @Id_Factura = (SELECT COALESCE(MAX(Id_Factura+ 1),1) FROM Factura)
 
 	-- PEDIDO
-	INSERT INTO Pedido (Id_Pedido,Id_Usuario,Id_Direccion,Id_Estado_Pedido,Fecha) 
-	SELECT @Id_Pedido,@Id_Usuario,MIN(Id_Direccion),3,CONVERT(date, GETDATE()) FROM Direccion 
+	INSERT INTO Pedido (Id_Pedido,Id_Usuario,Id_Direccion,Id_Estado_Pedido,Fecha,Id_Metodo_Pago) 
+	SELECT @Id_Pedido,@Id_Usuario,MIN(Id_Direccion),3,CONVERT(date, GETDATE()),@Id_Metodo_Pago FROM Direccion 
 	WHERE Id_Cliente = (SELECT Id_Cliente FROM Usuario WHERE Id_Usuario = @Id_Usuario)
 
 	-- LINEA PEDIDO
@@ -28,8 +30,13 @@ BEGIN
 	INNER JOIN Producto p ON (c.Id_Producto = p.Id_Producto)
 	WHERE Id_Usuario = @Id_Usuario
 	
-	-- FACTURA
-	INSERT INTO Factura (Id_Factura,Id_Pedido,Id_Estado_Factura,Fecha_Factura) VALUES (@Id_Factura,@Id_Pedido,1,CONVERT(date,GETDATE()))
+	-- FACTURA (1 = Efectivo, 2 = Tarjeta)
+	IF (@Id_Metodo_Pago = 1)
+		BEGIN
+			INSERT INTO Factura VALUES (@Id_Factura,@Id_Pedido,1,CONVERT(date,GETDATE()))
+		END
+	ELSE
+			INSERT INTO Factura VALUES (@Id_Factura,@Id_Pedido,2,CONVERT(date,GETDATE()))
 	
 	-- POR ÚLTIMO, EL CARRITO DEL USUARIO SE VACIA
 	DELETE FROM Carrito WHERE Id_Usuario = @Id_Usuario

@@ -15,12 +15,14 @@ namespace ProyectoCompra.Formularios
         private string valorCampoMoficiar;
         private bool editar;
         private string campo;
+        public bool isVerificado { get; set; }
 
         public FrmVerificarCuenta(Cliente cliente, Usuario usuario, string codigoVerificacion, string correoElectronico)
         {
             InitializeComponent();
             this.cliente = cliente;
             this.usuario = usuario;
+            this.isVerificado = false;
             this.codigoVerificacion = codigoVerificacion;
             this.correoElectronico = correoElectronico;
         }
@@ -37,7 +39,6 @@ namespace ProyectoCompra.Formularios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            editarUsuario();
             if (!txtCodigoVerificacion.Text.Equals(codigoVerificacion))
             {
                 var resultado = MessageBox.Show("El código no coincide.\n¿Deseas volver a recibir el código?", "Error.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -48,14 +49,16 @@ namespace ProyectoCompra.Formularios
                 }
                 return;
             }
-
-            if ((BDUsuario.insertarDatos(cliente, usuario)))
+            if (!editar)
             {
-                MessageBox.Show("Usuario creado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-                frmInicioSesion frmInicioSesion = new frmInicioSesion();
-                frmInicioSesion.ShowDialog();
+                if ((BDUsuario.insertarDatos(cliente, usuario)))
+                {
+                    MessageBox.Show("Usuario creado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.isVerificado = true;
+                    this.Close();
+                }
             }
+            editarUsuario();
         }
 
         private void editarUsuario()
@@ -67,14 +70,14 @@ namespace ProyectoCompra.Formularios
                     case "Correo Electronico":
                         if (BDUsuario.actualiarDatos(usuarioName, "", valorCampoMoficiar))
                         {
-                            MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Application.Restart();
                         }
                         break;
                     case "Contrasenia":
                         if (BDUsuario.actualiarDatos(usuarioName, valorCampoMoficiar, ""))
                         {
-                            MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Application.Restart();
                         }
                         break;
