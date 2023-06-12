@@ -42,7 +42,7 @@ namespace ProyectoCompra.Formularios
             {
                 Carrito carrito = new Carrito(Convert.ToInt32(dwCantidad.Value), producto);
                 Usuario usuario = new Usuario(idUsuario);
-                carrito.insertarProducto(usuario, carrito, true, imagen.Tag);
+                carrito.insertarProducto(usuario, carrito, true);
             }
             Close();
         }

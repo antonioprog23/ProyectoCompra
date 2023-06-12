@@ -1,5 +1,6 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
+using ProyectoCompra.Ficheros;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -74,6 +75,18 @@ namespace ProyectoCompra.Formularios
             }
         }
 
+        public void recuperarProductosInvitado()
+        {
+            List<CarritoProvisional> productos = FicheroCarrito.leerFichero();
+            Carrito carrito = null;
+            Usuario usuario = new Usuario(ConfigSesion.obtenerReferenciaIdUsuario());
+            foreach (CarritoProvisional producto in productos)
+            {
+                carrito = new Carrito(Convert.ToInt32(producto.cantidad), producto.producto);
+                carrito.insertarProducto(usuario, carrito, true);
+            }
+            FicheroCarrito.borrarFicheroAux();
+        }
         #endregion
 
         #region Eventos
@@ -85,10 +98,13 @@ namespace ProyectoCompra.Formularios
             {
                 this.configurarFrmBase();
                 this.formPadre.configurarFrmBase();
+                recuperarProductosInvitado();
                 this.aumentarContador();
                 this.formPadre.aumentarContador();
             }
         }
+
+
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
