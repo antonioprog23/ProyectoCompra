@@ -312,7 +312,178 @@ namespace ProyectoCompra.Formularios
             formProductos = new FrmProductos(4, 24, this.formPadre);
             formProductos.ShowDialog();
         }
-        #endregion
+        private void lavadoDeRopaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(5, 25, this.formPadre);
+            formProductos.ShowDialog();
+        }
 
+        private void limpiezaDeHogarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(5, 26, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void lavavajillasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(5, 27, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void lejíasYAmoníacosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(5, 28, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void insecticidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(5, 29, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void limpiezaCalzadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(5, 30, this.formPadre);
+            formProductos.ShowDialog();
+        }
+        private void perfumeríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(6, 31, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void higieneBucalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(6, 32, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void botiquínToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(6, 33, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void cuidadoFacialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(6, 34, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void cuidadoCabelloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(6, 35, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void lociónSolarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(6, 36, this.formPadre);
+            formProductos.ShowDialog();
+        }
+        private void lavadorasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(7, 37, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void frigoríficosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(7, 38, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void secadorasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(7, 39, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void hornoPlacasYCampanasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(7, 40, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void cafeterasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(7, 41, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void climatizaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(7, 42, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void televisoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(8, 43, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void telefoníaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(8, 44, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void fotografíaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(8, 45, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void informáticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(8, 46, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void tabletsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(8, 47, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void audioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(8, 48, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void jardínYAireLibreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(9, 49, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void bricolajeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(9, 50, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void mascotaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(9, 51, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void casaYDecoraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(9, 52, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        private void textilHogarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductos = new FrmProductos(9, 53, this.formPadre);
+            formProductos.ShowDialog();
+        }
+
+        #endregion
     }
 }
