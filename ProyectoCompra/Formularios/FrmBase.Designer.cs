@@ -72,6 +72,35 @@
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnIdentificarse = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lavadoDeRopaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiezaDeHogarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lavavajillasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lejíasYAmoníacosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insecticidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limpiezaCalzadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfumeríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.higieneBucalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.botiquínToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuidadoFacialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuidadoCabelloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lociónSolarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lavadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frigoríficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hornoPlacasYCampanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cafeterasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.climatizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.televisoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.telefoníaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fotografíaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informáticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabletsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jardínYAireLibreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bricolajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mascotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.casaYDecoraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textilHogarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.mnAlimentacion.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -351,30 +380,64 @@
             // 
             // drogueria
             // 
+            this.drogueria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lavadoDeRopaToolStripMenuItem,
+            this.limpiezaDeHogarToolStripMenuItem,
+            this.lavavajillasToolStripMenuItem,
+            this.lejíasYAmoníacosToolStripMenuItem,
+            this.insecticidasToolStripMenuItem,
+            this.limpiezaCalzadoToolStripMenuItem});
             this.drogueria.Name = "drogueria";
             this.drogueria.Size = new System.Drawing.Size(76, 24);
             this.drogueria.Text = "Droguería";
             // 
             // cuidadoPersonal
             // 
+            this.cuidadoPersonal.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perfumeríaToolStripMenuItem,
+            this.higieneBucalToolStripMenuItem,
+            this.botiquínToolStripMenuItem,
+            this.cuidadoFacialToolStripMenuItem,
+            this.cuidadoCabelloToolStripMenuItem,
+            this.lociónSolarToolStripMenuItem});
             this.cuidadoPersonal.Name = "cuidadoPersonal";
             this.cuidadoPersonal.Size = new System.Drawing.Size(118, 24);
             this.cuidadoPersonal.Text = "Cuidado personal";
             // 
             // electrodomesticos
             // 
+            this.electrodomesticos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lavadorasToolStripMenuItem,
+            this.frigoríficosToolStripMenuItem,
+            this.secadorasToolStripMenuItem,
+            this.hornoPlacasYCampanasToolStripMenuItem,
+            this.cafeterasToolStripMenuItem,
+            this.climatizaciónToolStripMenuItem});
             this.electrodomesticos.Name = "electrodomesticos";
             this.electrodomesticos.Size = new System.Drawing.Size(124, 24);
             this.electrodomesticos.Text = "Electrodomésticos";
             // 
             // tecnologia
             // 
+            this.tecnologia.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.televisoresToolStripMenuItem,
+            this.telefoníaToolStripMenuItem,
+            this.fotografíaToolStripMenuItem,
+            this.informáticaToolStripMenuItem,
+            this.tabletsToolStripMenuItem,
+            this.audioToolStripMenuItem});
             this.tecnologia.Name = "tecnologia";
             this.tecnologia.Size = new System.Drawing.Size(80, 24);
             this.tecnologia.Text = "Tecnología";
             // 
             // hogar
             // 
+            this.hogar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jardínYAireLibreToolStripMenuItem,
+            this.bricolajeToolStripMenuItem,
+            this.mascotaToolStripMenuItem,
+            this.casaYDecoraciónToolStripMenuItem,
+            this.textilHogarToolStripMenuItem});
             this.hogar.Name = "hogar";
             this.hogar.Size = new System.Drawing.Size(54, 24);
             this.hogar.Text = "Hogar";
@@ -481,6 +544,209 @@
             this.btnIdentificarse.MouseEnter += new System.EventHandler(this.btnIdentificarse_MouseEnter);
             this.btnIdentificarse.MouseLeave += new System.EventHandler(this.btnIdentificarse_MouseLeave);
             // 
+            // lavadoDeRopaToolStripMenuItem
+            // 
+            this.lavadoDeRopaToolStripMenuItem.Name = "lavadoDeRopaToolStripMenuItem";
+            this.lavadoDeRopaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lavadoDeRopaToolStripMenuItem.Text = "Lavado de ropa";
+            this.lavadoDeRopaToolStripMenuItem.Click += new System.EventHandler(this.lavadoDeRopaToolStripMenuItem_Click);
+            // 
+            // limpiezaDeHogarToolStripMenuItem
+            // 
+            this.limpiezaDeHogarToolStripMenuItem.Name = "limpiezaDeHogarToolStripMenuItem";
+            this.limpiezaDeHogarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.limpiezaDeHogarToolStripMenuItem.Text = "Limpieza de hogar";
+            this.limpiezaDeHogarToolStripMenuItem.Click += new System.EventHandler(this.limpiezaDeHogarToolStripMenuItem_Click);
+            // 
+            // lavavajillasToolStripMenuItem
+            // 
+            this.lavavajillasToolStripMenuItem.Name = "lavavajillasToolStripMenuItem";
+            this.lavavajillasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lavavajillasToolStripMenuItem.Text = "Lavavajillas";
+            this.lavavajillasToolStripMenuItem.Click += new System.EventHandler(this.lavavajillasToolStripMenuItem_Click);
+            // 
+            // lejíasYAmoníacosToolStripMenuItem
+            // 
+            this.lejíasYAmoníacosToolStripMenuItem.Name = "lejíasYAmoníacosToolStripMenuItem";
+            this.lejíasYAmoníacosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lejíasYAmoníacosToolStripMenuItem.Text = "Lejías y amoníacos";
+            this.lejíasYAmoníacosToolStripMenuItem.Click += new System.EventHandler(this.lejíasYAmoníacosToolStripMenuItem_Click);
+            // 
+            // insecticidasToolStripMenuItem
+            // 
+            this.insecticidasToolStripMenuItem.Name = "insecticidasToolStripMenuItem";
+            this.insecticidasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.insecticidasToolStripMenuItem.Text = "Insecticidas";
+            this.insecticidasToolStripMenuItem.Click += new System.EventHandler(this.insecticidasToolStripMenuItem_Click);
+            // 
+            // limpiezaCalzadoToolStripMenuItem
+            // 
+            this.limpiezaCalzadoToolStripMenuItem.Name = "limpiezaCalzadoToolStripMenuItem";
+            this.limpiezaCalzadoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.limpiezaCalzadoToolStripMenuItem.Text = "Limpieza calzado";
+            this.limpiezaCalzadoToolStripMenuItem.Click += new System.EventHandler(this.limpiezaCalzadoToolStripMenuItem_Click);
+            // 
+            // perfumeríaToolStripMenuItem
+            // 
+            this.perfumeríaToolStripMenuItem.Name = "perfumeríaToolStripMenuItem";
+            this.perfumeríaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfumeríaToolStripMenuItem.Text = "Perfumería";
+            this.perfumeríaToolStripMenuItem.Click += new System.EventHandler(this.perfumeríaToolStripMenuItem_Click);
+            // 
+            // higieneBucalToolStripMenuItem
+            // 
+            this.higieneBucalToolStripMenuItem.Name = "higieneBucalToolStripMenuItem";
+            this.higieneBucalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.higieneBucalToolStripMenuItem.Text = "Higiene bucal";
+            this.higieneBucalToolStripMenuItem.Click += new System.EventHandler(this.higieneBucalToolStripMenuItem_Click);
+            // 
+            // botiquínToolStripMenuItem
+            // 
+            this.botiquínToolStripMenuItem.Name = "botiquínToolStripMenuItem";
+            this.botiquínToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.botiquínToolStripMenuItem.Text = "Botiquín";
+            this.botiquínToolStripMenuItem.Click += new System.EventHandler(this.botiquínToolStripMenuItem_Click);
+            // 
+            // cuidadoFacialToolStripMenuItem
+            // 
+            this.cuidadoFacialToolStripMenuItem.Name = "cuidadoFacialToolStripMenuItem";
+            this.cuidadoFacialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuidadoFacialToolStripMenuItem.Text = "Cuidado facial";
+            this.cuidadoFacialToolStripMenuItem.Click += new System.EventHandler(this.cuidadoFacialToolStripMenuItem_Click);
+            // 
+            // cuidadoCabelloToolStripMenuItem
+            // 
+            this.cuidadoCabelloToolStripMenuItem.Name = "cuidadoCabelloToolStripMenuItem";
+            this.cuidadoCabelloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuidadoCabelloToolStripMenuItem.Text = "Cuidado cabello";
+            this.cuidadoCabelloToolStripMenuItem.Click += new System.EventHandler(this.cuidadoCabelloToolStripMenuItem_Click);
+            // 
+            // lociónSolarToolStripMenuItem
+            // 
+            this.lociónSolarToolStripMenuItem.Name = "lociónSolarToolStripMenuItem";
+            this.lociónSolarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lociónSolarToolStripMenuItem.Text = "Loción solar";
+            this.lociónSolarToolStripMenuItem.Click += new System.EventHandler(this.lociónSolarToolStripMenuItem_Click);
+            // 
+            // lavadorasToolStripMenuItem
+            // 
+            this.lavadorasToolStripMenuItem.Name = "lavadorasToolStripMenuItem";
+            this.lavadorasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.lavadorasToolStripMenuItem.Text = "Lavadoras";
+            this.lavadorasToolStripMenuItem.Click += new System.EventHandler(this.lavadorasToolStripMenuItem_Click);
+            // 
+            // frigoríficosToolStripMenuItem
+            // 
+            this.frigoríficosToolStripMenuItem.Name = "frigoríficosToolStripMenuItem";
+            this.frigoríficosToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.frigoríficosToolStripMenuItem.Text = "Frigoríficos";
+            this.frigoríficosToolStripMenuItem.Click += new System.EventHandler(this.frigoríficosToolStripMenuItem_Click);
+            // 
+            // secadorasToolStripMenuItem
+            // 
+            this.secadorasToolStripMenuItem.Name = "secadorasToolStripMenuItem";
+            this.secadorasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.secadorasToolStripMenuItem.Text = "Secadoras";
+            this.secadorasToolStripMenuItem.Click += new System.EventHandler(this.secadorasToolStripMenuItem_Click);
+            // 
+            // hornoPlacasYCampanasToolStripMenuItem
+            // 
+            this.hornoPlacasYCampanasToolStripMenuItem.Name = "hornoPlacasYCampanasToolStripMenuItem";
+            this.hornoPlacasYCampanasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.hornoPlacasYCampanasToolStripMenuItem.Text = "Horno, placas y campanas";
+            this.hornoPlacasYCampanasToolStripMenuItem.Click += new System.EventHandler(this.hornoPlacasYCampanasToolStripMenuItem_Click);
+            // 
+            // cafeterasToolStripMenuItem
+            // 
+            this.cafeterasToolStripMenuItem.Name = "cafeterasToolStripMenuItem";
+            this.cafeterasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.cafeterasToolStripMenuItem.Text = "Cafeteras";
+            this.cafeterasToolStripMenuItem.Click += new System.EventHandler(this.cafeterasToolStripMenuItem_Click);
+            // 
+            // climatizaciónToolStripMenuItem
+            // 
+            this.climatizaciónToolStripMenuItem.Name = "climatizaciónToolStripMenuItem";
+            this.climatizaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.climatizaciónToolStripMenuItem.Text = "Climatización";
+            this.climatizaciónToolStripMenuItem.Click += new System.EventHandler(this.climatizaciónToolStripMenuItem_Click);
+            // 
+            // televisoresToolStripMenuItem
+            // 
+            this.televisoresToolStripMenuItem.Name = "televisoresToolStripMenuItem";
+            this.televisoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.televisoresToolStripMenuItem.Text = "Televisores";
+            this.televisoresToolStripMenuItem.Click += new System.EventHandler(this.televisoresToolStripMenuItem_Click);
+            // 
+            // telefoníaToolStripMenuItem
+            // 
+            this.telefoníaToolStripMenuItem.Name = "telefoníaToolStripMenuItem";
+            this.telefoníaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.telefoníaToolStripMenuItem.Text = "Telefonía";
+            this.telefoníaToolStripMenuItem.Click += new System.EventHandler(this.telefoníaToolStripMenuItem_Click);
+            // 
+            // fotografíaToolStripMenuItem
+            // 
+            this.fotografíaToolStripMenuItem.Name = "fotografíaToolStripMenuItem";
+            this.fotografíaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fotografíaToolStripMenuItem.Text = "Fotografía";
+            this.fotografíaToolStripMenuItem.Click += new System.EventHandler(this.fotografíaToolStripMenuItem_Click);
+            // 
+            // informáticaToolStripMenuItem
+            // 
+            this.informáticaToolStripMenuItem.Name = "informáticaToolStripMenuItem";
+            this.informáticaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informáticaToolStripMenuItem.Text = "Informática";
+            this.informáticaToolStripMenuItem.Click += new System.EventHandler(this.informáticaToolStripMenuItem_Click);
+            // 
+            // tabletsToolStripMenuItem
+            // 
+            this.tabletsToolStripMenuItem.Name = "tabletsToolStripMenuItem";
+            this.tabletsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tabletsToolStripMenuItem.Text = "Tablets";
+            this.tabletsToolStripMenuItem.Click += new System.EventHandler(this.tabletsToolStripMenuItem_Click);
+            // 
+            // audioToolStripMenuItem
+            // 
+            this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
+            this.audioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.audioToolStripMenuItem.Text = "Audio";
+            this.audioToolStripMenuItem.Click += new System.EventHandler(this.audioToolStripMenuItem_Click);
+            // 
+            // jardínYAireLibreToolStripMenuItem
+            // 
+            this.jardínYAireLibreToolStripMenuItem.Name = "jardínYAireLibreToolStripMenuItem";
+            this.jardínYAireLibreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jardínYAireLibreToolStripMenuItem.Text = "Jardín y aire libre";
+            this.jardínYAireLibreToolStripMenuItem.Click += new System.EventHandler(this.jardínYAireLibreToolStripMenuItem_Click);
+            // 
+            // bricolajeToolStripMenuItem
+            // 
+            this.bricolajeToolStripMenuItem.Name = "bricolajeToolStripMenuItem";
+            this.bricolajeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bricolajeToolStripMenuItem.Text = "Bricolaje";
+            this.bricolajeToolStripMenuItem.Click += new System.EventHandler(this.bricolajeToolStripMenuItem_Click);
+            // 
+            // mascotaToolStripMenuItem
+            // 
+            this.mascotaToolStripMenuItem.Name = "mascotaToolStripMenuItem";
+            this.mascotaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mascotaToolStripMenuItem.Text = "Mascota";
+            this.mascotaToolStripMenuItem.Click += new System.EventHandler(this.mascotaToolStripMenuItem_Click);
+            // 
+            // casaYDecoraciónToolStripMenuItem
+            // 
+            this.casaYDecoraciónToolStripMenuItem.Name = "casaYDecoraciónToolStripMenuItem";
+            this.casaYDecoraciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.casaYDecoraciónToolStripMenuItem.Text = "Casa y decoración";
+            this.casaYDecoraciónToolStripMenuItem.Click += new System.EventHandler(this.casaYDecoraciónToolStripMenuItem_Click);
+            // 
+            // textilHogarToolStripMenuItem
+            // 
+            this.textilHogarToolStripMenuItem.Name = "textilHogarToolStripMenuItem";
+            this.textilHogarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.textilHogarToolStripMenuItem.Text = "Textil hogar";
+            this.textilHogarToolStripMenuItem.Click += new System.EventHandler(this.textilHogarToolStripMenuItem_Click);
+            // 
             // FrmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,5 +811,34 @@
         private System.Windows.Forms.Button btnCarrito;
         public System.Windows.Forms.Label lblContador;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem lavadoDeRopaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limpiezaDeHogarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lavavajillasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lejíasYAmoníacosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insecticidasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limpiezaCalzadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfumeríaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem higieneBucalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem botiquínToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuidadoFacialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuidadoCabelloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lociónSolarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lavadorasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frigoríficosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem secadorasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hornoPlacasYCampanasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cafeterasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem climatizaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem televisoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem telefoníaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fotografíaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informáticaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tabletsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem audioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jardínYAireLibreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bricolajeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mascotaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem casaYDecoraciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem textilHogarToolStripMenuItem;
     }
 }
