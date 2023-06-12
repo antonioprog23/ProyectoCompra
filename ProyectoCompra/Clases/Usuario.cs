@@ -1,4 +1,6 @@
-﻿namespace ProyectoCompra.Clases
+﻿using ProyectoCompra.Base_datos;
+
+namespace ProyectoCompra.Clases
 {
     public class Usuario
     {
@@ -34,6 +36,10 @@
             this.username = username;
             this.password = password;
             this.invitado = invitado;
+            if (invitado == 1)
+            {
+                this.idUsuario = BDUsuario.consultarIdUsuarioInvitado();
+            }
         }
     }
 }

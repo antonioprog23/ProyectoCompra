@@ -14,6 +14,9 @@ BEGIN
 	DECLARE @Total_Compra DECIMAL(5,2)
 	DECLARE @Subtotal_Compra DECIMAL(5,2)
 
+	IF (@Id_Pedido = 0)
+		SET @Id_Pedido = (SELECT MAX(Id_Pedido) FROM Pedido WHERE Id_Usuario = @Id_Usuario)						
+
 	SET @Total_Compra = (SELECT ROUND((SUM((lp.Cantidad * pro.Precio)) * 1.03)+3.99,2) FROM Factura f
 						INNER JOIN Pedido p ON (f.Id_Pedido = p.Id_Pedido)
 						INNER JOIN Linea_Pedido lp ON (p.Id_Pedido = lp.Id_Pedido)
@@ -32,10 +35,6 @@ BEGIN
 						p.Id_Pedido = @Id_Pedido
 						GROUP BY f.Id_Factura)
 
-	IF(@Id_Pedido = 0)
-		BEGIN
-			SET @Id_Pedido = (SELECT MAX(Id_Pedido) FROM Pedido WHERE Id_Usuario = @Id_Usuario)
-		END
 	SELECT *,@Total_Compra AS Total_Compra,@Subtotal_Compra AS Subtotal_Compra FROM Factura f
 	INNER JOIN Pedido p ON (f.Id_Pedido = p.Id_Pedido)
 	INNER JOIN Linea_Pedido lp ON (p.Id_Pedido = lp.Id_Pedido)

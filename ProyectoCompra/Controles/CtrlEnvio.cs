@@ -17,7 +17,6 @@ namespace ProyectoCompra.Controles
         public List<Direccion> direcciones { get; set; }
         public TarjetaCredit tarjetaCredit { get; set; }
         public bool isEfectivoElegida { get; set; }
-        public bool enviarFactura { get; set; }
         public Button btnContinuar { get; set; }
         public FrmDireccion frmDireccion { get; set; }
 
@@ -26,7 +25,6 @@ namespace ProyectoCompra.Controles
             InitializeComponent();
             //TARJETA
             this.gbxTarjeta.Size = new System.Drawing.Size(433, 57);
-            this.enviarFactura = true;
         }
 
         private void CtrlEnvio_Load(object sender, EventArgs e)
@@ -317,14 +315,6 @@ namespace ProyectoCompra.Controles
             if (tarjetaCredit == null && this.btnContinuar.Enabled && !isEfectivoElegida)
             {
                 this.btnContinuar.Enabled = false;
-            }
-        }
-
-        private void cbxEnviarFactura_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!cbxEnviarFactura.Checked)
-            {
-                enviarFactura = false;
             }
         }
 
