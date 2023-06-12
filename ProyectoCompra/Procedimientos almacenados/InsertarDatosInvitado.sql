@@ -5,15 +5,12 @@ IF OBJECT_ID ('InsertarDatosInvitado','P') IS NOT NULL
 GO
 	PRINT 'Procedimiento almacenado InsertarDatosInvitado creado.'
 GO
-/*
-	IF EXISTS (SELECT 1 FROM sys.types WHERE name LIKE 'CarritoProvisional' AND is_table_type = 1)
-		DROP TYPE dbo.CarritoProvisional
-	CREATE TYPE dbo.CarritoProvisional AS TABLE
-	(
-		Id_Producto INT,
-		Cantidad INT
-	)
-*/
+	IF NOT EXISTS (SELECT 1 FROM sys.types WHERE name LIKE 'CarritoProvisional' AND is_table_type = 1)
+		CREATE TYPE dbo.CarritoProvisional AS TABLE
+		(
+			Id_Producto INT,
+			Cantidad INT
+		)
 GO
 CREATE PROCEDURE InsertarDatosInvitado
 @Nombre NVARCHAR(30),
