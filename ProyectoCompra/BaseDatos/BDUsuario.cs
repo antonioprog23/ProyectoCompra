@@ -51,7 +51,7 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
-        public static bool insertarDatosInvitado(Cliente cliente, Usuario usuario, Direccion direccion, List<CarritoProvisional> provisional)
+        public static bool insertarDatosInvitado(Cliente cliente, Usuario usuario, Direccion direccion, List<CarritoProvisional> provisional, int metodoPago)
         {
             bool insertado = true;
             using (SqlConnection connection = new SqlConnection(RUTA_DB))
@@ -69,6 +69,7 @@ namespace ProyectoCompra.Base_datos
                             cmd.Parameters.AddWithValue("@Nombre", cliente.nombre);
                             //USUARIO
                             cmd.Parameters.AddWithValue("@Invitado", usuario.invitado);
+                            cmd.Parameters.AddWithValue("@Id_Usuario", usuario.idUsuario);
                             //DIRECCION
                             cmd.Parameters.AddWithValue("@Nombre_Direccion", direccion.nombre);
                             cmd.Parameters.AddWithValue("@Direccion", direccion.direccion);
@@ -79,6 +80,8 @@ namespace ProyectoCompra.Base_datos
                             cmd.Parameters.AddWithValue("@Telefono", direccion.telefono);
                             //CARRITO PROVISIONAL
                             cmd.Parameters.AddWithValue("@Productos", obtenerDT(provisional));
+                            //METODO DE PAGO
+                            cmd.Parameters.AddWithValue("@Id_Metodo_Pago", metodoPago);
                             cmd.ExecuteNonQuery();
                             transaction.Commit();
                             insertado = true;
@@ -183,6 +186,28 @@ namespace ProyectoCompra.Base_datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Correo_Electronico", correoElectronico);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            idUsuario = reader.GetInt32(0);
+                        }
+                    }
+
+                }
+            }
+            return idUsuario;
+        }
+
+        public static int consultarIdUsuarioInvitado()
+        {
+            int idUsuario = 0;
+            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("ConsultarIdUsuarioInvitado", connection))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
