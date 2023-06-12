@@ -1,6 +1,6 @@
 USE EasyShop
 IF OBJECT_ID ('InsertarDatosInvitado','P') IS NOT NULL
-	DROP PROCEDURE InsertarDatosInvitado;
+	DROP PROCEDURE InsertarDatosInvitado
 	PRINT 'Procedimiento almacenado InsertarDatosInvitado borrado.'
 GO
 	PRINT 'Procedimiento almacenado InsertarDatosInvitado creado.'
@@ -18,6 +18,7 @@ GO
 CREATE PROCEDURE InsertarDatosInvitado
 @Nombre NVARCHAR(30),
 @Invitado INT,
+@Id_Usuario INT,
 @Nombre_Direccion NVARCHAR(150),
 @Direccion NVARCHAR(150),
 @Pais NVARCHAR(15),
@@ -32,7 +33,6 @@ BEGIN
 	SET NOCOUNT ON
 
 	DECLARE @Id_Cliente INT
-	DECLARE @Id_Usuario INT
 	DECLARE @Fecha_Alta DATE
 	DECLARE @Fecha_Expiracion DATE
 	DECLARE @Id_Direccion_New INT
@@ -40,7 +40,6 @@ BEGIN
 	DECLARE @Id_Factura INT
 
 	SET @Id_Direccion_New = (SELECT COALESCE(MAX(Id_Direccion + 1),1) FROM Direccion)
-	SET @Id_Usuario = (SELECT COALESCE(MAX(id_usuario + 1),1) FROM usuario)
 	SET @Fecha_alta = (SELECT CAST(GETDATE() AS date))
 	SET @Id_Cliente = (SELECT COALESCE(MAX(id_cliente + 1),1) FROM cliente)
 	SET @Fecha_Expiracion= (DATEADD(DAY,15,@Fecha_Alta))

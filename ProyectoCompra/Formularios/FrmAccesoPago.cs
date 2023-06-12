@@ -55,11 +55,6 @@ namespace ProyectoCompra.Formularios
             else
             {
                 BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario(), ctrlEnvio1.obtenerMetodoPagoElegido());
-                bool enviarFactura = ctrlEnvio1.enviarFactura;
-                if (enviarFactura)
-                {
-                    Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 0);
-                }
                 Application.Restart();
             }
         }
@@ -82,13 +77,13 @@ namespace ProyectoCompra.Formularios
                     string cp = direcciones[0].codigoPostal;
                     string telefono = direcciones[0].telefono;
                     Direccion direccionInvitado = new Direccion("Invitado", direccion, pais, provincia, ciudad, cp, telefono);
-
-                    if (BDUsuario.insertarDatosInvitado(cliente, usuario, direccionInvitado, CarritoProvisional.prepararListaProvisionalBD()))
+                    if (BDUsuario.insertarDatosInvitado(cliente, usuario, direccionInvitado, CarritoProvisional.prepararListaProvisionalBD(), ctrlEnvio1.obtenerMetodoPagoElegido()))
                     {
-                        //Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario(), 2);
                         FicheroCarrito.borrarFicheroAux();
                         FicheroDireccion.borrarFicheroAux();
                         FicheroTarjeta.borrarFicheroAux();
+                        FrmFactura frmFactura = new FrmFactura(usuario.idUsuario, 0);
+                        frmFactura.ShowDialog();
                     }
                 }
 
