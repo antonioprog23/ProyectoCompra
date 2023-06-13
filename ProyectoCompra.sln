@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoCompra", "ProyectoCompra\ProyectoCompra.csproj", "{84BB6C7D-E18A-44C0-9342-2BB56980083F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEasyShop", "TestEasyShop\TestEasyShop.csproj", "{00B8DFC0-8B8E-4B6B-8F59-DB46F7BAD89B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestEasyShop", "TestEasyShop\TestEasyShop.csproj", "{00B8DFC0-8B8E-4B6B-8F59-DB46F7BAD89B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

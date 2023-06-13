@@ -38,9 +38,14 @@ namespace ProyectoCompra.Clases
 
         public Carrito() { }
 
-        public void insertarProducto(params object[] data)
+        public bool insertarProducto(params object[] data)
         {
-            BDCarrito.insertarProductoCarrito(data);
+            bool insertado = false;
+            if (BDCarrito.insertarProductoCarrito(data))
+            {
+                insertado = true;
+            }
+            return insertado;
         }
 
         public List<Carrito> consultarProductosCarrito(int idUsuario)
