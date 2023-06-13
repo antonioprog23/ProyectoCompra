@@ -11,6 +11,13 @@ namespace ProyectoCompra.Base_datos
     {
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
+
+        /// <summary>
+        /// Da de alta en el sistema al nuevo usuario.
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <param name="usuario"></param>
+        /// <returns>True, insertado o false, no inertado.</returns>
         public static bool insertarDatos(Cliente cliente, Usuario usuario)
         {
             bool insertado = true;
@@ -51,6 +58,15 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
+        /// <summary>
+        /// Inserta los datos del usuario invitado una vez realizada la compra.
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <param name="usuario"></param>
+        /// <param name="direccion"></param>
+        /// <param name="provisional"></param>
+        /// <param name="metodoPago"></param>
+        /// <returns>True, insertado o false, no inertado.</returns>
         public static bool insertarDatosInvitado(Cliente cliente, Usuario usuario, Direccion direccion, List<CarritoProvisional> provisional, int metodoPago)
         {
             bool insertado = true;
@@ -98,6 +114,7 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
+        //Se obtiene la tabla que se pasara al procedimiento almacenado InsertarDatosInvitado
         private static DataTable obtenerDT(List<CarritoProvisional> carritoProvisional)
         {
             DataTable dt = new DataTable();
@@ -113,6 +130,14 @@ namespace ProyectoCompra.Base_datos
             return dt;
         }
 
+        /// <summary>
+        /// Se obtiene los datos del usuario mediante usuario y contraseña o con el IdUsuario.
+        /// Usos:
+        /// Este se emplea para el inicio de sesión.
+        /// Recuperar datos para mostrar en el perfil.
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns>Usuario con los datos.</returns>
         public static Usuario obtenerDatos(params string[] datos)
         {
             Usuario usuarioCompleto = null;
@@ -151,6 +176,12 @@ namespace ProyectoCompra.Base_datos
             return usuarioCompleto;
         }
 
+        /// <summary>
+        /// Devuelve el IdUsuario que tiene asociado el usuarioname.
+        /// Si el usuarioname no pertenece a un usuario, devuelve 0.
+        /// </summary>
+        /// <param name="usuarioName"></param>
+        /// <returns>IdUsuario o 0.</returns>
         public static int consultarUsuarioName(string usuarioName)
         {
             //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
@@ -175,6 +206,12 @@ namespace ProyectoCompra.Base_datos
             return idUsuario;
         }
 
+        /// <summary>
+        /// Devuelve el IdUsuario que tiene asociado el correo electrónico.
+        /// Si el correo electrónico no pertenece a un usuario, devuelve 0.
+        /// </summary>
+        /// <param name="correoElectronico"></param>
+        /// <returns>IdUsuario o 0.</returns>
         public static int consultarUsuarioCorreoElectronico(string correoElectronico)
         {
             //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
@@ -199,6 +236,10 @@ namespace ProyectoCompra.Base_datos
             return idUsuario;
         }
 
+        /// <summary>
+        /// Se consulta el IdUsuario asociado al usuario invitado.
+        /// </summary>
+        /// <returns>Id del usuario invitado.</returns>
         public static int consultarIdUsuarioInvitado()
         {
             int idUsuario = 0;
@@ -221,6 +262,12 @@ namespace ProyectoCompra.Base_datos
             return idUsuario;
         }
 
+        /// <summary>
+        /// Se actualizan los datos del usuario usando el usuarioname. 
+        /// Solamente se pueden actualizar la contraseña o el correo electrónico.
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns>True, actualizado o false, no actualizado.</returns>
         public static bool actualiarDatos(params string[] datos)
         {
             bool actualizado = false;
@@ -241,10 +288,11 @@ namespace ProyectoCompra.Base_datos
                             transaction.Commit();
                             actualizado = true;
                         }
-                        catch (SqlException)
+                        catch (SqlException e)
                         {
                             actualizado = false;
                             transaction.Rollback();
+                            throw e;
                         }
                     }
                 }
@@ -252,37 +300,12 @@ namespace ProyectoCompra.Base_datos
             return actualizado;
         }
 
-        public static bool insertarDatosLogin(string userName)
-        {
-            bool insertado = true;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
-            {
-                connection.Open();
-                using (SqlTransaction transaction = connection.BeginTransaction())
-                {
-                    using (SqlCommand cmd = new SqlCommand("InsertarDatosLogin", connection, transaction))
-                    {
-                        try
-                        {
-                            //cmd.CommandText = "InsertarDatos";
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            //USUARIO
-                            cmd.Parameters.AddWithValue("@Usuario_name", userName);
-                            cmd.ExecuteNonQuery();
-                            transaction.Commit();
-                            insertado = true;
-                        }
-                        catch (SqlException)
-                        {
-                            insertado = false;
-                            transaction.Rollback();
-                        }
-                    }
-                }
-            }
-            return insertado;
-        }
-
+        /// <summary>
+        /// Se da de baja al usuario empleado usuarioname y contraseña.
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="contrasenia"></param>
+        /// <returns>True, eliminado o false, no eliminado.</returns>
         public static bool darBajaUsuarioPorUsuario(string userName, string contrasenia)
         {
             bool eliminado = true;
@@ -304,9 +327,9 @@ namespace ProyectoCompra.Base_datos
                         }
                         catch (SqlException e)
                         {
-                            MessageBox.Show(e.Message);
                             eliminado = false;
                             transaction.Rollback();
+                            throw e;
                         }
                     }
                 }
@@ -314,6 +337,11 @@ namespace ProyectoCompra.Base_datos
             return eliminado;
         }
 
+        /// <summary>
+        /// Se da de baja al usuario empleado el correo electrónico.
+        /// </summary>
+        /// <param name="correoElectronico"></param>
+        /// <returns>True, eliminado o false, no eliminado.</returns>
         public static bool darBajaUsuarioPorCorreoElectronico(string correoElectronico)
         {
             bool eliminado = true;
@@ -332,10 +360,11 @@ namespace ProyectoCompra.Base_datos
                             transaction.Commit();
                             eliminado = true;
                         }
-                        catch (SqlException E)
+                        catch (SqlException e)
                         {
                             eliminado = false;
                             transaction.Rollback();
+                            throw e;
                         }
                     }
                 }

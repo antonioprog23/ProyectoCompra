@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCompra.Enumerados
 {
-    internal enum EMetodoPago
+    public enum EMetodoPago
     {
         Efectivo = 1,
         Tarjeta = 2

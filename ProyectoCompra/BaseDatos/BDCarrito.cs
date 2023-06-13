@@ -9,6 +9,11 @@ namespace ProyectoCompra.Base_datos
         //CONSTANTES
         private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
+        /// <summary>
+        /// Se inserta el producto al carrito.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>True, insertado o false, no insertado.</returns>
         public static bool insertarProductoCarrito(params object[] data)
         {
             bool insertado = false;
@@ -41,6 +46,11 @@ namespace ProyectoCompra.Base_datos
             return insertado;
         }
 
+        /// <summary>
+        /// Se consulta el carrito de un usuario.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>El carrito de productos</returns>
         public static List<Carrito> consultarCarrito(int id)
         {
             List<Carrito> lista = new List<Carrito>();
@@ -67,6 +77,13 @@ namespace ProyectoCompra.Base_datos
             }
         }
 
+        /// <summary>
+        /// Elimina todos los productos o solamente un producto del carrito del usuario.
+        /// </summary>
+        /// <param name="idUsuario"></param>
+        /// <param name="idProducto"></param>
+        /// <param name="eliminarTodo"></param>
+        /// <returns>True, eliminado o no eliminado, false.</returns>
         public static bool vaciarCarrito(int idUsuario, int idProducto, bool eliminarTodo)
         {
             bool eliminado = false;
