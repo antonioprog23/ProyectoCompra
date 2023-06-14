@@ -351,6 +351,146 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlimentacionS25.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AlimentacionS26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS26.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS27.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS28.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS29.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS30.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS31.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS32.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS33.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS34.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS35.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS36.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS37.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS38.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS39.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS40.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS41.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS42.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS43.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS44.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS44.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS45.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS45.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS46.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS46.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS47.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS47.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS48.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS49.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS49.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS50.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS51.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS52.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS52.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AlimentacionS53.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlimentacionS53.resx</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DSFactura.cs">
       <DependentUpon>DSFactura.xsd</DependentUpon>
     </Compile>
@@ -639,6 +779,118 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AlimentacionS25.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS26.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS26.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS27.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS27.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS28.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS28.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS29.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS29.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS30.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS30.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS31.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS31.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS32.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS32.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS33.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS33.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS34.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS34.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS35.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS35.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS36.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS36.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS37.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS37.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS38.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS38.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS39.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS39.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS40.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS40.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS41.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS41.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS42.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS42.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS43.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS43.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS44.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS44.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS45.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS45.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS46.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS46.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS47.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS47.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS48.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS48.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS49.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS49.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS50.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS50.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS51.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS51.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS52.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS52.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\AlimentacionS53.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlimentacionS53.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\InformeFactura.rdlc" />
     <EmbeddedResource Include="Formularios\FrmAccesoPago.resx">
       <DependentUpon>FrmAccesoPago.cs</DependentUpon>
@@ -854,6 +1106,294 @@
     <None Include="Resources\24_22.jpg" />
     <None Include="Resources\24_23.jpg" />
     <None Include="Resources\24_24.jpg" />
+    <None Include="Resources\29_5.jpg" />
+    <None Include="Resources\29_6.jpg" />
+    <None Include="Resources\29_7.jpg" />
+    <None Include="Resources\29_8.jpg" />
+    <None Include="Resources\29_9.jpg" />
+    <None Include="Resources\29_10.jpg" />
+    <None Include="Resources\29_1.jpg" />
+    <None Include="Resources\29_2.jpg" />
+    <None Include="Resources\29_3.jpg" />
+    <None Include="Resources\29_4.jpg" />
+    <None Include="Resources\29_16.jpg" />
+    <None Include="Resources\29_17.jpg" />
+    <None Include="Resources\29_18.jpg" />
+    <None Include="Resources\29_20.jpg" />
+    <None Include="Resources\29_11.jpg" />
+    <None Include="Resources\29_12.jpg" />
+    <None Include="Resources\29_13.jpg" />
+    <None Include="Resources\29_14.jpg" />
+    <None Include="Resources\29_15.jpg" />
+    <Content Include="Resources\29_19.jpg" />
+    <None Include="Resources\29_22.jpg" />
+    <None Include="Resources\29_23.jpg" />
+    <None Include="Resources\29_24.jpg" />
+    <None Include="Resources\29_21.jpg" />
+    <None Include="Resources\30_5.jpg" />
+    <None Include="Resources\30_6.jpg" />
+    <None Include="Resources\30_7.jpg" />
+    <None Include="Resources\30_8.jpg" />
+    <None Include="Resources\30_22.jpg" />
+    <None Include="Resources\30_23.jpg" />
+    <None Include="Resources\30_24.jpg" />
+    <None Include="Resources\30_9.jpg" />
+    <None Include="Resources\30_10.jpg" />
+    <None Include="Resources\30_11.jpg" />
+    <None Include="Resources\30_12.jpg" />
+    <None Include="Resources\30_13.jpg" />
+    <None Include="Resources\30_14.jpg" />
+    <None Include="Resources\30_15.jpg" />
+    <None Include="Resources\30_16.jpg" />
+    <None Include="Resources\30_17.jpg" />
+    <None Include="Resources\30_18.jpg" />
+    <None Include="Resources\30_19.jpg" />
+    <None Include="Resources\30_20.jpg" />
+    <None Include="Resources\30_21.jpg" />
+    <None Include="Resources\30_1.jpg" />
+    <None Include="Resources\30_2.jpg" />
+    <None Include="Resources\30_3.jpg" />
+    <None Include="Resources\30_4.jpg" />
+    <None Include="Resources\31_10.jpg" />
+    <None Include="Resources\31_11.jpg" />
+    <None Include="Resources\31_12.jpg" />
+    <None Include="Resources\31_13.jpg" />
+    <None Include="Resources\31_14.jpg" />
+    <None Include="Resources\31_15.jpg" />
+    <None Include="Resources\31_1.jpg" />
+    <None Include="Resources\31_2.jpg" />
+    <None Include="Resources\31_16.jpg" />
+    <None Include="Resources\31_17.jpg" />
+    <None Include="Resources\31_18.jpg" />
+    <None Include="Resources\31_19.jpg" />
+    <None Include="Resources\31_20.jpeg" />
+    <None Include="Resources\31_21.jpg" />
+    <None Include="Resources\31_22.jpg" />
+    <None Include="Resources\31_23.jpg" />
+    <None Include="Resources\31_24.jpeg" />
+    <None Include="Resources\31_3.jpg" />
+    <None Include="Resources\31_4.jpg" />
+    <None Include="Resources\31_5.jpg" />
+    <None Include="Resources\31_6.jpg" />
+    <None Include="Resources\31_7.jpg" />
+    <None Include="Resources\31_8.jpg" />
+    <None Include="Resources\31_9.jpg" />
+    <None Include="Resources\32_18.jpg" />
+    <None Include="Resources\32_19.jpg" />
+    <None Include="Resources\32_20.jpg" />
+    <None Include="Resources\32_21.jpg" />
+    <None Include="Resources\32_22.jpg" />
+    <None Include="Resources\32_23.jpg" />
+    <None Include="Resources\32_24.jpg" />
+    <None Include="Resources\32_5.jpg" />
+    <None Include="Resources\32_6.jpg" />
+    <None Include="Resources\32_7.jpg" />
+    <None Include="Resources\32_8.jpg" />
+    <None Include="Resources\32_9.jpg" />
+    <None Include="Resources\32_10.jpg" />
+    <None Include="Resources\32_11.jpg" />
+    <None Include="Resources\32_12.jpg" />
+    <None Include="Resources\32_13.jpg" />
+    <None Include="Resources\32_14.jpg" />
+    <None Include="Resources\32_15.jpg" />
+    <None Include="Resources\32_16.jpg" />
+    <None Include="Resources\32_17.jpg" />
+    <None Include="Resources\32_1.jpg" />
+    <None Include="Resources\32_2.png" />
+    <None Include="Resources\32_3.jpg" />
+    <None Include="Resources\32_4.jpg" />
+    <None Include="Resources\33_19.jpg" />
+    <None Include="Resources\33_20.jpg" />
+    <None Include="Resources\33_21.jpg" />
+    <None Include="Resources\33_22.jpg" />
+    <None Include="Resources\33_23.jpg" />
+    <None Include="Resources\33_24.jpg" />
+    <None Include="Resources\33_1.jpg" />
+    <None Include="Resources\33_2.jpg" />
+    <None Include="Resources\33_3.png" />
+    <None Include="Resources\33_4.jpg" />
+    <None Include="Resources\33_5.jpg" />
+    <None Include="Resources\33_6.jpg" />
+    <None Include="Resources\33_7.jpg" />
+    <None Include="Resources\33_8.jpg" />
+    <None Include="Resources\33_9.jpg" />
+    <None Include="Resources\33_10.jpg" />
+    <None Include="Resources\33_11.jpg" />
+    <None Include="Resources\33_12.jpg" />
+    <None Include="Resources\33_13.jpg" />
+    <None Include="Resources\33_14.jpg" />
+    <None Include="Resources\33_15.jpg" />
+    <None Include="Resources\33_16.jpg" />
+    <None Include="Resources\33_17.jpg" />
+    <None Include="Resources\33_18.jpg" />
+    <None Include="Resources\34_22.jpg" />
+    <None Include="Resources\34_23.jpg" />
+    <None Include="Resources\34_24.jpg" />
+    <None Include="Resources\34_1.jpg" />
+    <None Include="Resources\34_2.jpg" />
+    <None Include="Resources\34_3.jpg" />
+    <None Include="Resources\34_4.jpg" />
+    <None Include="Resources\34_5.jpeg" />
+    <None Include="Resources\34_6.jpg" />
+    <None Include="Resources\34_7.jpg" />
+    <None Include="Resources\34_8.jpg" />
+    <None Include="Resources\34_9.jpg" />
+    <None Include="Resources\34_10.jpg" />
+    <None Include="Resources\34_11.jpg" />
+    <None Include="Resources\34_12.jpg" />
+    <None Include="Resources\34_13.jpg" />
+    <None Include="Resources\34_14.jpg" />
+    <None Include="Resources\34_15.jpg" />
+    <None Include="Resources\34_16.jpg" />
+    <None Include="Resources\34_17.jpg" />
+    <None Include="Resources\34_18.jpg" />
+    <None Include="Resources\34_19.jpeg" />
+    <None Include="Resources\34_20.jpg" />
+    <None Include="Resources\34_21.jpg" />
+    <None Include="Resources\35_12.jpg" />
+    <None Include="Resources\35_13.png" />
+    <None Include="Resources\35_20.jpg" />
+    <None Include="Resources\35_21.jpg" />
+    <None Include="Resources\35_22.jpg" />
+    <None Include="Resources\35_24.jpg" />
+    <None Include="Resources\35_14.jpg" />
+    <None Include="Resources\35_15.jpg" />
+    <None Include="Resources\35_16.jpg" />
+    <None Include="Resources\35_17.jpg" />
+    <None Include="Resources\35_18.jpg" />
+    <None Include="Resources\35_19.jpg" />
+    <None Include="Resources\35_1.jpg" />
+    <None Include="Resources\35_2.jpg" />
+    <None Include="Resources\35_3.jpg" />
+    <None Include="Resources\35_4.jpg" />
+    <None Include="Resources\35_5.jpg" />
+    <None Include="Resources\35_6.png" />
+    <None Include="Resources\35_7.jpg" />
+    <None Include="Resources\35_8.jpg" />
+    <None Include="Resources\35_9.jpg" />
+    <None Include="Resources\35_10.jpg" />
+    <None Include="Resources\35_11.jpg" />
+    <Content Include="Resources\35_23.jpg" />
+    <None Include="Resources\36_24.jpg" />
+    <None Include="Resources\36_1.jpg" />
+    <None Include="Resources\36_2.jpg" />
+    <None Include="Resources\36_3.jpg" />
+    <None Include="Resources\36_4.jpg" />
+    <None Include="Resources\36_5.jpg" />
+    <None Include="Resources\36_6.png" />
+    <None Include="Resources\36_7.jpg" />
+    <None Include="Resources\36_8.jpg" />
+    <None Include="Resources\36_9.jpg" />
+    <None Include="Resources\36_10.jpg" />
+    <None Include="Resources\36_11.jpg" />
+    <None Include="Resources\36_12.jpg" />
+    <None Include="Resources\36_13.jpg" />
+    <None Include="Resources\36_14.jpg" />
+    <None Include="Resources\36_15.jpg" />
+    <None Include="Resources\36_16.jpg" />
+    <None Include="Resources\36_17.jpg" />
+    <None Include="Resources\36_18.jpg" />
+    <None Include="Resources\36_19.jpg" />
+    <None Include="Resources\36_20.jpg" />
+    <None Include="Resources\36_21.jpg" />
+    <None Include="Resources\36_22.jpg" />
+    <None Include="Resources\36_23.jpg" />
+    <None Include="Resources\37_2.jpg" />
+    <None Include="Resources\37_3.jpg" />
+    <None Include="Resources\37_4.jpg" />
+    <None Include="Resources\37_5.jpg" />
+    <None Include="Resources\37_6.jpg" />
+    <None Include="Resources\37_7.jpg" />
+    <None Include="Resources\37_8.jpg" />
+    <None Include="Resources\37_9.jpg" />
+    <None Include="Resources\37_10.jpg" />
+    <None Include="Resources\37_11.jpg" />
+    <None Include="Resources\37_12.png" />
+    <None Include="Resources\37_13.jpg" />
+    <None Include="Resources\37_14.jpg" />
+    <None Include="Resources\37_15.jpg" />
+    <None Include="Resources\37_16.jpg" />
+    <None Include="Resources\37_17.jpg" />
+    <None Include="Resources\37_18.jpg" />
+    <None Include="Resources\37_19.jpg" />
+    <None Include="Resources\37_20.jpg" />
+    <None Include="Resources\37_21.jpg" />
+    <None Include="Resources\37_22.jpg" />
+    <None Include="Resources\37_23.jpg" />
+    <None Include="Resources\37_24.png" />
+    <None Include="Resources\37_1.png" />
+    <None Include="Resources\38_19.jpg" />
+    <None Include="Resources\38_20.jpg" />
+    <None Include="Resources\38_21.jpg" />
+    <None Include="Resources\38_22.jpg" />
+    <None Include="Resources\38_23.jpg" />
+    <None Include="Resources\38_24.jpg" />
+    <None Include="Resources\38_1.jpg" />
+    <None Include="Resources\38_2.jpg" />
+    <None Include="Resources\38_3.jpg" />
+    <None Include="Resources\38_4.jpg" />
+    <None Include="Resources\38_5.jpg" />
+    <None Include="Resources\38_6.jpg" />
+    <None Include="Resources\38_7.jpg" />
+    <None Include="Resources\38_8.jpg" />
+    <None Include="Resources\38_9.jpg" />
+    <None Include="Resources\38_10.jpg" />
+    <None Include="Resources\38_11.jpg" />
+    <None Include="Resources\38_12.jpg" />
+    <None Include="Resources\38_13.jpg" />
+    <None Include="Resources\38_14.jpg" />
+    <None Include="Resources\38_15.jpg" />
+    <None Include="Resources\38_16.jpg" />
+    <None Include="Resources\38_17.jpg" />
+    <None Include="Resources\38_18.jpg" />
+    <None Include="Resources\39_1.jpg" />
+    <None Include="Resources\39_2.jpg" />
+    <None Include="Resources\39_3.jpg" />
+    <None Include="Resources\39_4.jpg" />
+    <None Include="Resources\39_5.jpg" />
+    <None Include="Resources\39_6.jpg" />
+    <None Include="Resources\39_7.jpg" />
+    <None Include="Resources\39_8.jpg" />
+    <None Include="Resources\39_9.jpg" />
+    <None Include="Resources\39_10.jpg" />
+    <None Include="Resources\39_11.jpg" />
+    <None Include="Resources\39_12.jpg" />
+    <None Include="Resources\39_13.jpg" />
+    <None Include="Resources\39_14.jpg" />
+    <None Include="Resources\39_15.jpg" />
+    <None Include="Resources\39_16.jpg" />
+    <None Include="Resources\39_17.jpg" />
+    <None Include="Resources\39_18.jpg" />
+    <None Include="Resources\39_19.jpg" />
+    <None Include="Resources\39_20.jpg" />
+    <None Include="Resources\39_21.jpg" />
+    <None Include="Resources\39_22.jpg" />
+    <None Include="Resources\39_23.jpg" />
+    <None Include="Resources\39_24.jpg" />
+    <None Include="Resources\40_22.jpg" />
+    <None Include="Resources\40_23.jpg" />
+    <None Include="Resources\40_24.jpg" />
+    <None Include="Resources\40_1.jpg" />
+    <None Include="Resources\40_2.jpg" />
+    <None Include="Resources\40_3.jpg" />
+    <None Include="Resources\40_4.jpg" />
+    <None Include="Resources\40_5.png" />
+    <None Include="Resources\40_6.png" />
+    <None Include="Resources\40_7.jpg" />
+    <None Include="Resources\40_8.jpg" />
+    <None Include="Resources\40_9.jpg" />
+    <None Include="Resources\40_10.jpg" />
+    <None Include="Resources\40_11.jpg" />
+    <None Include="Resources\40_12.jpg" />
+    <None Include="Resources\40_13.jpg" />
+    <None Include="Resources\40_14.jpg" />
+    <None Include="Resources\40_15.jpg" />
+    <None Include="Resources\40_16.jpg" />
+    <None Include="Resources\40_17.jpg" />
+    <None Include="Resources\40_18.jpg" />
+    <None Include="Resources\40_19.jpg" />
+    <None Include="Resources\40_20.jpg" />
+    <None Include="Resources\40_21.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
