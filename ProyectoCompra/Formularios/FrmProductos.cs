@@ -71,7 +71,7 @@ namespace ProyectoCompra.Formularios
                         tableLayoutPanel1.Controls.Add(button, j, i);
                         button.Name = contador.ToString();
                         contador++;
-                        Image image = Imagen.cargarImagen(contador, subCategoria);
+                        Image image = Imagen.obtenerImagen(contador, subCategoria);
                         button.Image = image;
                     }
 
