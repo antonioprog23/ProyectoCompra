@@ -134,7 +134,7 @@ namespace ProyectoCompra.Clases
         {
             string cadena = "";
             int indiceLetras = -1;
-            string letrasValidas = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            string letrasValidas = "ABCDEFGHJKMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
             Random random = new Random();
             for (int i = 0; i < 10; i++)
             {
