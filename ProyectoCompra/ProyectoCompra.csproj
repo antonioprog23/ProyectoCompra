@@ -183,6 +183,11 @@
     <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.NameResolution, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.NameResolution.4.3.0\lib\net46\System.Net.NameResolution.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -214,6 +219,7 @@
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Reporte.cs" />
+    <Compile Include="Clases\Servidor.cs" />
     <Compile Include="Clases\TarjetaCredit.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
@@ -1081,6 +1087,30 @@
     <None Include="Resources\23_15.jpg" />
     <None Include="Resources\23_16.jpg" />
     <None Include="Resources\23_17.jpg" />
+    <Content Include="Procedimientos almacenados\ActualizarDatos.sql" />
+    <Content Include="Procedimientos almacenados\ActualizarDireccion.sql" />
+    <Content Include="Procedimientos almacenados\ActualizarPedido.sql" />
+    <Content Include="Procedimientos almacenados\ActualizarTarjeta.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarDireccion.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarFactura.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarIdUsuarioInvitado.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarPedido.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarProductos.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarProductosCarrito.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarUsuario.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarUsuarioCorreoElectronico.sql" />
+    <Content Include="Procedimientos almacenados\ConsultarUsuarioName.sql" />
+    <Content Include="Procedimientos almacenados\ConsultaTarjetaCredito.sql" />
+    <Content Include="Procedimientos almacenados\DarBajaUsuario.sql" />
+    <Content Include="Procedimientos almacenados\DarBajaUsuarioPorCorreoElectronico.sql" />
+    <Content Include="Procedimientos almacenados\EditarTarjetaCredito.sql" />
+    <Content Include="Procedimientos almacenados\EditarUsuarioFechaAcceso.sql" />
+    <Content Include="Procedimientos almacenados\EliminarDireccion.sql" />
+    <Content Include="Procedimientos almacenados\EliminarProductoCarrito.sql" />
+    <Content Include="Procedimientos almacenados\EliminarTarjetaCredito.sql" />
+    <Content Include="Procedimientos almacenados\InsertarDatos.sql" />
+    <Content Include="Procedimientos almacenados\InsertarDatosInvitado.sql" />
+    <Content Include="Procedimientos almacenados\InsertarProductoCarrito.sql" />
     <Content Include="Resources\23_13.jpg" />
     <None Include="Resources\24_4.jpg" />
     <None Include="Resources\24_5.jpg" />
@@ -1783,6 +1813,7 @@
     <None Include="Resources\53_11.jpg" />
     <None Include="Resources\53_12.jpg" />
     <Content Include="Resources\53_1.jpg" />
+    <Content Include="script_base_datos_compras\script_compras.sql" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
