@@ -1,7 +1,9 @@
 Use EasyShop
 IF OBJECT_ID ('ActualizarDatos','P') IS NOT NULL
 	DROP PROCEDURE ActualizarDatos;
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado ActualizarDatos borrado.'
+GO
+	PRINT 'Procedimiento almacenado ActualizarDatos creado.'
 GO
 CREATE PROCEDURE ActualizarDatos
 @Usuario_Name NVARCHAR(30),
@@ -23,5 +25,4 @@ BEGIN
 								ELSE correo_electronico
 						 END
 	WHERE usuario_name = @Usuario_Name
-
 END
