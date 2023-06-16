@@ -1,7 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('ActualizarTarjeta','P') IS NOT NULL
 	DROP PROCEDURE ActualizarTarjeta
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado ActualizarTarjeta borrado.'
+GO
+	PRINT 'Procedimiento almacenado ActualizarTarjeta creado.'
 GO
 CREATE PROCEDURE ActualizarTarjeta
 	@Id_Usuario INT,

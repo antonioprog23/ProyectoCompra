@@ -1,7 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('DarBajaUsuarioPorUsuario','P') IS NOT NULL
 	DROP PROCEDURE DarBajaUsuarioPorUsuario
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado DarBajaUsuarioPorUsuario borrado.'
+GO
+	PRINT 'Procedimiento almacenado DarBajaUsuarioPorUsuario creado.'
 GO
 CREATE PROCEDURE DarBajaUsuarioPorUsuario
 @Usuario_name NVARCHAR(50),

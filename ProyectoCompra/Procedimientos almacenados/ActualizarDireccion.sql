@@ -1,7 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('ActualizarDireccion','P') IS NOT NULL
 	DROP PROCEDURE ActualizarDireccion
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado ActualizarDireccion borrado.'
+GO
+	PRINT 'Procedimiento almacenado ActualizarDireccion creado.'
 GO
 CREATE PROCEDURE ActualizarDireccion
 @Id_Direccion INT,
