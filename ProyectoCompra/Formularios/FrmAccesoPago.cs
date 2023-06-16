@@ -54,8 +54,13 @@ namespace ProyectoCompra.Formularios
             }
             else
             {
-                BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario(), ctrlEnvio1.obtenerMetodoPagoElegido());
-                Application.Restart();
+                if (BDPedido.actualizarPedido(ConfigSesion.obtenerReferenciaIdUsuario(), ctrlEnvio1.obtenerMetodoPagoElegido()))
+                {
+
+                    FrmFactura frmFactura = new FrmFactura(ConfigSesion.obtenerReferenciaIdUsuario(), 0);
+                    frmFactura.ShowDialog();
+                    Application.Restart();
+                }
             }
         }
 
@@ -84,6 +89,7 @@ namespace ProyectoCompra.Formularios
                         FicheroTarjeta.borrarFicheroAux();
                         FrmFactura frmFactura = new FrmFactura(usuario.idUsuario, 0);
                         frmFactura.ShowDialog();
+                        Application.Restart();
                     }
                 }
 

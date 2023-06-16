@@ -1,11 +1,10 @@
-﻿
-using Microsoft.Reporting.WebForms;
-using ProyectoCompra.Base_datos;
+﻿using ProyectoCompra.Base_datos;
 using System;
-using System.IO;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 using System.Windows.Forms;
+using System.Net.Mime;
 
 namespace ProyectoCompra.Clases
 {
@@ -27,7 +26,10 @@ namespace ProyectoCompra.Clases
                     {
                         MailMessage mensaje = new MailMessage(REMITENTE, destinatario);
                         mensaje.Subject = "Contraseña nueva.";
-                        mensaje.Body = $"Su nueva contraseña es: {contraseniaNueva}. Se le recomienda cambiarla.";
+                        //mensaje.Body = $"Su nueva contraseña es: {contraseniaNueva}. Se le recomienda cambiarla.";
+                        string html = prepararMensaje($"Su nueva contraseña es: {contraseniaNueva}. Se le recomienda cambiarla.");
+                        AlternateView htmlView = AlternateView.CreateAlternateViewFromString(html, Encoding.UTF8, MediaTypeNames.Text.Html);
+                        mensaje.AlternateViews.Add(htmlView);
                         if (correoValido)
                         {
                             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
@@ -65,7 +67,10 @@ namespace ProyectoCompra.Clases
                 {
                     MailMessage mensaje = new MailMessage(REMITENTE, destinatario);
                     mensaje.Subject = "´Código de verificación.";
-                    mensaje.Body = $"Tu código de verificación es: {codigoVerificacion}";
+                    //mensaje.Body = $"Tu código de verificación es: {codigoVerificacion}";
+                    string html = prepararMensaje($"Tu código de verificación es: {codigoVerificacion}");
+                    AlternateView htmlView = AlternateView.CreateAlternateViewFromString(html, Encoding.UTF8, MediaTypeNames.Text.Html);
+                    mensaje.AlternateViews.Add(htmlView);
                     if (correoValido)
                     {
                         SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
@@ -92,49 +97,12 @@ namespace ProyectoCompra.Clases
             return codigoVerificacion;
         }
 
-
-        public static void enviareReporte(string destinatario)
-        {
-            bool correoValido = true;
-            try
-            {
-                MailMessage mensaje = new MailMessage(REMITENTE, destinatario);
-                mensaje.Subject = "Código de verificación.";
-                mensaje.Body = $"Tu código de verificación es:";
-
-                //ADJUNTAR ARCHIVO
-                // Attachment attachment = new Attachment(new MemoryStream(Reporte.obtenerReporte(ConfigSesion.obtenerReferenciaIdUsuario())), "report.word", "application/word");
-                //mensaje.Attachments.Add(attachment);
-
-                if (correoValido)
-                {
-                    SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
-                    smtpClient.EnableSsl = true;
-                    smtpClient.UseDefaultCredentials = false;
-                    smtpClient.Credentials = new NetworkCredential(REMITENTE, CONTRASENIA_DE_APLICACION);
-                    smtpClient.Send(mensaje);
-                    MessageBox.Show("Se ha enviado un código de verificación a su correo. Por favor, introduzcalo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                }
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                correoValido = false;
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Correo electrónico error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                correoValido = false;
-            }
-        }
-
         //MÉTODOS PRIVADOS
         private static string obtenerCodigoVerificacion()
         {
             string cadena = "";
             int indiceLetras = -1;
-            string letrasValidas = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            string letrasValidas = "ABCDEFGHJKMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
             Random random = new Random();
             for (int i = 0; i < 10; i++)
             {
@@ -149,6 +117,31 @@ namespace ProyectoCompra.Clases
                 }
             }
             return cadena;
+        }
+
+        private static string prepararMensaje(string contenido)
+        {
+            string mensaje = "<!DOCTYPE html> " +
+                             "<html lang=\"es\"> " +
+                                    "<head>" +
+                                        "<meta charset=\"UTF-8\">" +
+                                        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">" +
+                                        "<title>EasyShop</title>" +
+                                        "<style> body { font-family: Arial, sans-serif; margin: 0; padding: 0; } header h1 { background-color: #333; color: #ffffff; padding: 20px; text-align: center; } nav ul { list-style: none; padding: 0; margin: 0; } nav ul li { display: inline; margin-right: 10px; } nav ul li a { color: #fff; text-decoration: none; } main { padding: 40px; } section { margin-bottom: 20px; } h1, h2 { color: #333; } footer { background-color: #333; color: #fff; padding: 20px; text-align: center; } </style>" +
+                                    "</head>" +
+                                    "<body>" +
+                                        "<header>" +
+                                            "<h1>Bienvenido a EasyShop</h1>" +
+                                        "</header>" +
+                                        "<main>" +
+                                            $"<p>{contenido}<p>" +
+                                        "</main>" +
+                                        "<footer>" +
+                                            "<p>&copy; Vendido y enviado por EasyShop</p>" +
+                                        "</footer>" +
+                                    "</body>" +
+                               "</html>";
+            return mensaje;
         }
     }
 }

@@ -12,9 +12,10 @@ namespace ProyectoCompra.Formularios
         private Cliente cliente;
         private string codigoVerificacion;
         private string correoElectronico;
-        private string valorCampoMoficiar;
         private bool editar;
-        private string campo;
+        private string correoActual;
+        private string nuevaContrasenia;
+        private string nuevoCorreoElectronico;
         public bool isVerificado { get; set; }
 
         public FrmVerificarCuenta(Cliente cliente, Usuario usuario, string codigoVerificacion, string correoElectronico)
@@ -27,14 +28,15 @@ namespace ProyectoCompra.Formularios
             this.correoElectronico = correoElectronico;
         }
 
-        public FrmVerificarCuenta(string codigoVerificacion, string valorCampoMoficiar, bool editar, string campo, string usuarioName)
+        public FrmVerificarCuenta(string codigoVerificacion, string nuevaContrasenia, string nuevoCorreoElectronico, string correoActual, bool editar, string usuarioName)
         {
             InitializeComponent();
             this.codigoVerificacion = codigoVerificacion;
-            this.valorCampoMoficiar = valorCampoMoficiar;
+            this.correoActual = correoActual;
             this.editar = editar;
             this.usuarioName = usuarioName;
-            this.campo = campo;
+            this.nuevaContrasenia = nuevaContrasenia;
+            this.nuevoCorreoElectronico = nuevoCorreoElectronico;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -45,45 +47,32 @@ namespace ProyectoCompra.Formularios
                 if (resultado is DialogResult.Yes)
                 {
                     txtCodigoVerificacion.Clear();
-                    this.codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(correoElectronico);
+                    if (editar)
+                    {
+                        this.codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(correoActual);
+                    }
+                    else
+                    {
+                        this.codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(correoElectronico);
+                    }
                 }
                 return;
             }
-            if (!editar)
-            {
-                if ((BDUsuario.insertarDatos(cliente, usuario)))
-                {
-                    MessageBox.Show("Usuario creado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.isVerificado = true;
-                    this.Close();
-                }
-            }
-            editarUsuario();
-        }
-
-        private void editarUsuario()
-        {
             if (editar)
             {
-                switch (campo)
+                if (BDUsuario.actualiarDatos(usuarioName, nuevaContrasenia, nuevoCorreoElectronico))
                 {
-                    case "Correo Electronico":
-                        if (BDUsuario.actualiarDatos(usuarioName, "", valorCampoMoficiar))
-                        {
-                            MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Application.Restart();
-                        }
-                        break;
-                    case "Contrasenia":
-                        if (BDUsuario.actualiarDatos(usuarioName, valorCampoMoficiar, ""))
-                        {
-                            MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Application.Restart();
-                        }
-                        break;
+                    MessageBox.Show("Los datos se han actualizado correctamente.", "Afirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Restart();
                 }
+                return;
             }
-            return;
+            if ((BDUsuario.insertarDatos(cliente, usuario)))
+            {
+                MessageBox.Show("Usuario creado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.isVerificado = true;
+                this.Close();
+            }
         }
     }
 }
