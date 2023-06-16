@@ -43,13 +43,13 @@ namespace ProyectoCompra.Clases
                 }
                 catch (ArgumentException)
                 {
-                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     correoValido = false;
                     contraseniaNueva = "-1";
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Correo electrónico error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     correoValido = false;
                     contraseniaNueva = "-1";
                 }
@@ -83,13 +83,13 @@ namespace ProyectoCompra.Clases
                 }
                 catch (ArgumentException)
                 {
-                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     correoValido = false;
                     codigoVerificacion = "-1";
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Correo electrónico error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El correo electrónico proporcionado no tiene un formato correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     correoValido = false;
                     codigoVerificacion = "-1";
                 }

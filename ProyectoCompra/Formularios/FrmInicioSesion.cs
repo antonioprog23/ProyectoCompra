@@ -34,7 +34,9 @@ namespace ProyectoCompra.Formularios
             usuarioEncontrado = BDUsuario.obtenerDatos(txtUsuario.Text.Trim(), contrasenia.TextBoxtxtContrasenia.Trim(), "");
             if (usuarioEncontrado == null)
             {
-                MessageBox.Show("Usuario no encontrado.");
+                MessageBox.Show("Los datos son erroneos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsuario.Clear();
+                contrasenia.TextBoxtxtContrasenia = "";
                 return;
             }
             ConfigSesion.guardarReferenciaIdUsuario(usuarioEncontrado.idUsuario);
@@ -147,7 +149,7 @@ namespace ProyectoCompra.Formularios
                 }
                 else
                 {
-                    MessageBox.Show("¡Las contraseñas no coinciden!");
+                    MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtContrasena.Clear();
                     txtRepContrasenia.Clear();
                 }
