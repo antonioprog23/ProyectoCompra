@@ -1,6 +1,7 @@
 ﻿using ProyectoCompra.Base_datos;
 using ProyectoCompra.Clases;
 using System;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace ProyectoCompra.Formularios
@@ -33,52 +34,78 @@ namespace ProyectoCompra.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (txtCorreo.Text.Equals("") && (ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && txtRepContrasenia.Text.Equals("")))
+            if (string.IsNullOrEmpty(txtCorreo.Text) && (string.IsNullOrEmpty(ctrlContrasenia.TextBoxtxtContrasenia) && string.IsNullOrEmpty(txtRepContrasenia.Text)))
             {
                 MessageBox.Show("Al menos rellena un campo de los posibles a modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            actualizarContrasenia();
-            actualizarCorreoElectronico();
-
+            if (!(string.IsNullOrEmpty(ctrlContrasenia.TextBoxtxtContrasenia) && string.IsNullOrEmpty(txtRepContrasenia.Text)) && !string.IsNullOrEmpty(txtCorreo.Text))
+            {
+                if (!comprobarCorreoElectronico() || !comprobarContrasenia())
+                {
+                    return;
+                }
+            }
+            if (!comprobarContrasenia() && string.IsNullOrEmpty(txtCorreo.Text))
+            {
+                return;
+            }
+            if (!comprobarCorreoElectronico() && (string.IsNullOrEmpty(ctrlContrasenia.TextBoxtxtContrasenia) && string.IsNullOrEmpty(txtRepContrasenia.Text)))
+            {
+                return;
+            }
+            string codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(usuarioModificar.cliente.correo);
+            if (!codigoVerificacion.Equals("-1"))
+            {
+                FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(codigoVerificacion, ctrlContrasenia.TextBoxtxtContrasenia, txtCorreo.Text, usuarioModificar.cliente.correo, true, txtUsuario.Text);
+                frmVerificarCuenta.ShowDialog();
+            }
         }
 
-        private void actualizarContrasenia()
+        private bool comprobarContrasenia()
         {
-            if (!ctrlContrasenia.TextBoxtxtContrasenia.Equals("") && !txtRepContrasenia.Text.Equals(""))
+            bool isValido = false;
+            if (!(string.IsNullOrEmpty(ctrlContrasenia.TextBoxtxtContrasenia) && string.IsNullOrEmpty(txtRepContrasenia.Text)))
             {
+
                 if (!ctrlContrasenia.TextBoxtxtContrasenia.Equals(txtRepContrasenia.Text))
                 {
                     MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ctrlContrasenia.TextBoxtxtContrasenia = "";
                     txtRepContrasenia.Text = "";
-                    return;
                 }
-                string codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(usuarioModificar.cliente.correo);
-                if (!codigoVerificacion.Equals("-1"))
+                else
                 {
-                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(codigoVerificacion, ctrlContrasenia.TextBoxtxtContrasenia, true, "Contrasenia", txtUsuario.Text);
-                    frmVerificarCuenta.ShowDialog();
+                    isValido = true;
                 }
             }
+            return isValido;
         }
 
-        private void actualizarCorreoElectronico()
+        private bool comprobarCorreoElectronico()
         {
-            if (!txtCorreo.Text.Equals(""))
+            bool isValido = false;
+            if (!string.IsNullOrEmpty(txtCorreo.Text))
             {
-                if (BDUsuario.consultarUsuarioCorreoElectronico(txtCorreo.Text) != 0)
+                try
                 {
-                    MessageBox.Show("El correo electrónico proporcionado está en uso.");
-                    return;
+                    MailAddress mail = new MailAddress(txtCorreo.Text);
+                    if (BDUsuario.consultarUsuarioCorreoElectronico(txtCorreo.Text) != 0)
+                    {
+                        MessageBox.Show("El correo electrónico proporcionado está en uso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        isValido = true;
+                    }
                 }
-                string codigoVerificacion = Mensaje.enviarMensajeCodigoVerificacionUnDestinatario(txtCorreo.Text);
-                if (!codigoVerificacion.Equals("-1"))
+                catch (FormatException ex)
                 {
-                    FrmVerificarCuenta frmVerificarCuenta = new FrmVerificarCuenta(codigoVerificacion, txtCorreo.Text, true, "Correo Electronico", txtUsuario.Text);
-                    frmVerificarCuenta.ShowDialog();
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isValido = false;
                 }
             }
+            return isValido;
         }
 
         private void cargarDatosAEditar()
