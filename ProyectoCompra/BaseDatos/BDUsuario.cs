@@ -3,15 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
+using System.Net;
 
 namespace ProyectoCompra.Base_datos
 {
     public class BDUsuario
     {
-        //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
-
         /// <summary>
         /// Da de alta en el sistema al nuevo usuario.
         /// </summary>
@@ -21,7 +18,7 @@ namespace ProyectoCompra.Base_datos
         public static bool insertarDatos(Cliente cliente, Usuario usuario)
         {
             bool insertado = true;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -70,7 +67,7 @@ namespace ProyectoCompra.Base_datos
         public static bool insertarDatosInvitado(Cliente cliente, Usuario usuario, Direccion direccion, List<CarritoProvisional> provisional, int metodoPago)
         {
             bool insertado = true;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -142,7 +139,7 @@ namespace ProyectoCompra.Base_datos
         {
             Usuario usuarioCompleto = null;
             Cliente cliente = null;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarUsuario", connection))
@@ -186,7 +183,7 @@ namespace ProyectoCompra.Base_datos
         {
             //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
             int idUsuario = 0;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarUsuarioName", connection))
@@ -216,7 +213,7 @@ namespace ProyectoCompra.Base_datos
         {
             //DEVOLVERA 1 EN CASO DE QUE EXISTA YA EN LA BASE DE DATOS (1 = TRUE)
             int idUsuario = 0;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarUsuarioCorreoElectronico", connection))
@@ -243,7 +240,7 @@ namespace ProyectoCompra.Base_datos
         public static int consultarIdUsuarioInvitado()
         {
             int idUsuario = 0;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarIdUsuarioInvitado", connection))
@@ -271,7 +268,7 @@ namespace ProyectoCompra.Base_datos
         public static bool actualiarDatos(params string[] datos)
         {
             bool actualizado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -309,7 +306,7 @@ namespace ProyectoCompra.Base_datos
         public static bool darBajaUsuarioPorUsuario(string userName, string contrasenia)
         {
             bool eliminado = true;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -345,7 +342,7 @@ namespace ProyectoCompra.Base_datos
         public static bool darBajaUsuarioPorCorreoElectronico(string correoElectronico)
         {
             bool eliminado = true;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())

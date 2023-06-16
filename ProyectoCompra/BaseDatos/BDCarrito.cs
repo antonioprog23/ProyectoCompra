@@ -1,13 +1,12 @@
 ﻿using ProyectoCompra.Clases;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Net;
 
 namespace ProyectoCompra.Base_datos
 {
     public class BDCarrito
     {
-        //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
         /// <summary>
         /// Se inserta el producto al carrito.
@@ -17,7 +16,7 @@ namespace ProyectoCompra.Base_datos
         public static bool insertarProductoCarrito(params object[] data)
         {
             bool insertado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -54,7 +53,7 @@ namespace ProyectoCompra.Base_datos
         public static List<Carrito> consultarCarrito(int id)
         {
             List<Carrito> lista = new List<Carrito>();
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarProductoCarrito", connection))
@@ -87,7 +86,7 @@ namespace ProyectoCompra.Base_datos
         public static bool vaciarCarrito(int idUsuario, int idProducto, bool eliminarTodo)
         {
             bool eliminado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())

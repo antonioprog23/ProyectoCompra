@@ -1,18 +1,16 @@
 ﻿using ProyectoCompra.Clases;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Net;
 
 namespace ProyectoCompra.Base_datos
 {
     public class BDProducto
     {
-        //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
-
         public static List<Producto> obtenerProductos(int subcategoria)
         {
             List<Producto> productos = new List<Producto>();
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand("ConsultarProductos", connection))

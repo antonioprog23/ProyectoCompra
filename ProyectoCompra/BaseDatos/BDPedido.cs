@@ -3,18 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 
 namespace ProyectoCompra.Base_datos
 {
     public class BDPedido
     {
-        //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
         public static bool actualizarPedido(int idUsuario, int metodoPago)
         {
             bool actualizado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -46,7 +45,7 @@ namespace ProyectoCompra.Base_datos
         {
             List<Factura> facturas = new List<Factura>();
             List<LineaPedido> lineasPedido = new List<LineaPedido>();
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarPedido", connection))
