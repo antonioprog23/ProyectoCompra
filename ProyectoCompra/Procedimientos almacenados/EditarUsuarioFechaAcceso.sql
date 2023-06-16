@@ -1,7 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('EditarUsuarioFechaAcceso','P') IS NOT NULL
 	DROP PROCEDURE EditarUsuarioFechaAcceso
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenadoEditarUsuarioFechaAcceso borrado.'
+GO
+	PRINT 'Procedimiento almacenadoEditarUsuarioFechaAcceso creado.'
 GO
 CREATE PROCEDURE EditarUsuarioFechaAcceso
 @id_usuario INT

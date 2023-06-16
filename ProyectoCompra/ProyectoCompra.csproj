@@ -1829,6 +1829,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ConfiguracionInvitadoDB\" />
     <Folder Include="obj\Debug\en\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

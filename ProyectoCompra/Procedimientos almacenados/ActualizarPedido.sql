@@ -1,9 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('ActualizarPedido','P') IS NOT NULL
 	DROP PROCEDURE ActualizarPedido
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado ActualizarPedido borrado.'
 GO
-	PRINT 'Procedimiento almacenado creado.'
+	PRINT 'Procedimiento almacenado ActualizarPedido creado.'
 GO
 CREATE PROCEDURE ActualizarPedido
 	@Id_Usuario INT,

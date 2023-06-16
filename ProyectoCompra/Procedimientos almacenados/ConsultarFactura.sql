@@ -1,9 +1,9 @@
 Use EasyShop
 IF OBJECT_ID ('ConsultarFactura','P') IS NOT NULL
 	DROP PROCEDURE ConsultarFactura;
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado ConsultarFactura borrado.'
 GO
-	PRINT 'Procedimiento almacenado creado.'
+	PRINT 'Procedimiento almacenado ConsultarFactura creado.'
 GO
 CREATE PROCEDURE ConsultarFactura
 @Id_Usuario INT,

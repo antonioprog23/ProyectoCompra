@@ -1,7 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('ConsultarUsuarioCorreoElectronico','P') IS NOT NULL
 	DROP PROCEDURE ConsultarUsuarioCorreoElectronico
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado ConsultarUsuarioCorreoElectronico borrado.'
+GO
+	PRINT 'Procedimiento almacenado ConsultarUsuarioCorreoElectronico creado.'
 GO
 CREATE PROCEDURE ConsultarUsuarioCorreoElectronico
 @Correo_Electronico NVARCHAR(100)

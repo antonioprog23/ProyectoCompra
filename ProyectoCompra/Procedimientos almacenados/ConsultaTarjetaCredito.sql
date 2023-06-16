@@ -1,7 +1,9 @@
 USE EasyShop
 IF OBJECT_ID ('ConsultarTarjetaCredito','P') IS NOT NULL
 	DROP PROCEDURE ConsultarTarjetaCredito
-	PRINT 'Procedimiento almacenado borrado.'
+	PRINT 'Procedimiento almacenado ConsultarTarjetaCredito borrado.'
+GO
+	PRINT 'Procedimiento almacenado ConsultarTarjetaCredito creado.'
 GO
 CREATE PROCEDURE ConsultarTarjetaCredito
 @Id_Usuario INT

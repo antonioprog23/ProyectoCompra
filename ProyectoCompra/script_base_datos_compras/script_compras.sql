@@ -876,7 +876,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (24, 'Refresco de cola Coca-Cola', 'Refresco de cola con gas y sin alcohol, con un sabor único y refrescante que lo convierte en una opción perfecta para cualquier momento del día.', 1.50, 'Coca-Cola')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (24, 'Agua mineral natural Bezoya', 'Agua mineral natural sin gas, con un sabor suave y una gran cantidad de minerales que la convierten en una opción saludable y refrescante.', 1.20, 'Bezoya')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (24, 'Refresco de lima y hierbabuena Kas', 'Refresco de lima y hierbabuena con gas y sin alcohol, con un sabor suave y refrescante que lo convierte en una opción ideal para cualquier momento del día.', 1.30, 'Kas')
-
 -- SUBCATEGORIA 25
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (25, 'Detergente en polvo', 'Detergente para lavado de ropa blanca', 9.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (25, 'Suavizante líquido', 'Suavizante con aroma a lavanda', 4.99, 'Marca B')
@@ -908,7 +907,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (25, 'Bolsas desechables para lavado', 'Bolsas de plástico para lavar prendas delicadas de forma segura', 2.49, 'Marca BB')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (25, 'Detergente líquido concentrado', 'Detergente concentrado para un mayor rendimiento en cada lavado', 11.49, 'Marca CC')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (25, 'Removedor de manchas en gel', 'Gel removedor de manchas para tratar manchas difíciles antes del lavado', 5.99, 'Marca DD')
-
 -- SUBCATEGORIA 26
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (26, 'Limpiador multiusos', 'Limpiador versátil para diferentes superficies', 7.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (26, 'Limpiador de vidrios', 'Limpiador especializado para ventanas y espejos', 5.99, 'Marca B')
@@ -936,7 +934,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (26, 'Limpiador de plata', 'Limpiador para mantener la plata limpia y brillante', 8.99, 'Marca X')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (26, 'Limpiador de tapicería', 'Limpiador para limpiar y desmanchar la tapicería de muebles', 9.99, 'Marca Y')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (26, 'Limpiador de cortinas', 'Limpiador para mantener limpias las cortinas y persianas', 7.99, 'Marca Z')
-
 -- SUBCATEGORIA 27
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (27, 'Pastillas para lavavajillas', 'Pastillas detergentes para lavavajillas', 9.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (27, 'Líquido lavavajillas', 'Detergente líquido para lavavajillas', 7.99, 'Marca B')
@@ -964,7 +961,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (27, 'Limpiador de puerta de lavavajillas', 'Producto para limpiar y desinfectar la puerta de lavavajillas', 7.99, 'Marca X')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (27, 'Pastillas lavavajillas sin fosfatos', 'Pastillas para lavavajillas sin fosfatos', 9.99, 'Marca Y')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (27, 'Limpiador de bandeja de lavavajillas', 'Producto para limpiar y desengrasar la bandeja de lavavajillas', 6.99, 'Marca Z')
-
 -- SUBCATEGORIA 28
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (28, 'Lejía concentrada', 'Lejía concentrada para desinfectar y blanquear', 5.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (28, 'Amoniaco líquido', 'Amoniaco líquido para limpieza y desinfección', 4.99, 'Marca B')
@@ -992,7 +988,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (28, 'Amoniaco en tabletas', 'Tabletas de amoníaco para limpieza', 8.99, 'Marca X')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (28, 'Lejía en formato líquido', 'Lejía en formato líquido para desinfectar', 4.99, 'Marca Y')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (28, 'Limpiador con amoníaco ecológico', 'Limpiador con base de amoníaco ecológico', 6.99, 'Marca Z')
-
 -- SUBCATEGORIA 29
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (29, 'Insecticida en aerosol', 'Insecticida en aerosol para eliminar insectos voladores', 7.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (29, 'Aerosol repelente de mosquitos', 'Repelente de mosquitos en aerosol', 6.49, 'Marca B')
@@ -1020,7 +1015,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (29, 'Ahuyentador ultrasónico de plagas', 'Ahuyentador ultrasónico de plagas para uso en interiores', 8.49, 'Marca X')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (29, 'Insecticida en spray para arañas', 'Insecticida en spray para eliminar arañas', 6.99, 'Marca Y')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (29, 'Repelente de insectos en loción', 'Repelente de insectos en formato loción', 5.99, 'Marca Z')
-
 -- SUBCATEGORIA 30
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (30, 'Limpiador de gamuza', 'Limpiador especial para calzado de gamuza', 9.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (30, 'Cepillo para calzado', 'Cepillo de cerdas suaves para limpiar y pulir el calzado', 4.99, 'Marca B')
@@ -1048,7 +1042,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (30, 'Esponja limpiadora de calzado', 'Esponja con producto limpiador para calzado de todo tipo', 5.99, 'Marca X')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (30, 'Kit de limpieza de gamuza', 'Kit completo para limpiar y mantener calzado de gamuza', 9.99, 'Marca Y')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (30, 'Líquido de renovación para cuero', 'Líquido para renovar y nutrir el cuero del calzado', 8.49, 'Marca Z')
-
 -- SUBCATEGORIA 31
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (31, 'Perfume floral femenino', 'Fragancia floral suave y femenina', 49.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (31, 'Colonias frescas unisex', 'Colonias frescas y versátiles para uso unisex', 29.99, 'Marca B')
@@ -1076,7 +1069,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (31, 'Colonias frescas de verano', 'Colonias frescas y ligera para los días calurosos de verano', 34.99, 'Marca X')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (31, 'Perfume sensual masculino', 'Fragancia sensual y seductora para hombres', 54.99, 'Marca Y')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (31, 'Perfume suave femenino', 'Fragancia suave y delicada para mujeres', 39.99, 'Marca Z')
-
 -- SUBCATEGORIA 32
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (32, 'Cepillo de dientes eléctrico', 'Cepillo de dientes eléctrico con tecnología avanzada', 39.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (32, 'Pasta dental blanqueadora', 'Pasta dental especializada en blanqueamiento dental', 9.99, 'Marca B')
@@ -1104,7 +1096,6 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (32, 'Pasta dental para niños', 'Pasta dental especialmente formulada para niños', 5.99, 'Marca X')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (32, 'Enjuague bucal en spray', 'Enjuague bucal en formato spray para un aliento fresco en cualquier momento', 4.99, 'Marca Y')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (32, 'Cepillo de dientes desechable', 'Cepillo de dientes desechable para un uso cómodo y práctico', 1.99, 'Marca Z')
-
 -- SUBCATEGORIA 33
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (33, 'Kit de primeros auxilios completo', 'Kit de primeros auxilios con suministros médicos básicos', 49.99, 'Marca A')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (33, 'Vendas adhesivas', 'Vendas adhesivas para el tratamiento de heridas leves', 6.99, 'Marca B')
@@ -1239,30 +1230,30 @@ INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) 
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (37, 'Lavadora Candy CST 360L-S', 'Lavadora de carga superior de 6 kg con inicio diferido programable', 499.99, 'Candy')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (37, 'Lavadora Hotpoint FML 842 P', 'Lavadora de carga frontal de 8 kg con tecnología Anti-Allergy', 749.99, 'Hotpoint')
 -- SUBCATEGORIA 38
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Samsung RS68N8321S9', 'Frigorífico Side by Side con tecnología Twin Cooling Plus', 1899.99, 'Samsung')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico LG GBF62PZGFS', 'Frigorífico de dos puertas con capacidad de 601 litros', 1499.99, 'LG')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Samsung RS68N8321S9', 'Frigorífico Side by Side con tecnología Twin Cooling Plus', 899.99, 'Samsung')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico LG GBF62PZGFS', 'Frigorífico de dos puertas con capacidad de 601 litros', 499.99, 'LG')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Bosch KGN39VWEA', 'Frigorífico de libre instalación con tecnología No Frost', 899.99, 'Bosch')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Hisense RS670N4BC3', 'Frigorífico Side by Side con capacidad de 516 litros', 1299.99, 'Hisense')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Hisense RS670N4BC3', 'Frigorífico Side by Side con capacidad de 516 litros', 299.99, 'Hisense')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Whirlpool W7 931O OX', 'Frigorífico combi de acero inoxidable con tecnología 6th Sense', 799.99, 'Whirlpool')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Haier HB18FGSAAA', 'Frigorífico combi con cajón MyZone y tecnología Total No Frost', 999.99, 'Haier')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Siemens KG39NXI47', 'Frigorífico combi con tecnología No Frost', 1199.99, 'Siemens')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Siemens KG39NXI47', 'Frigorífico combi con tecnología No Frost',199.99, 'Siemens')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Indesit XI9 T21 W', 'Frigorífico combi de libre instalación con tecnología No Frost', 599.99, 'Indesit')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Beko RCNE365K20ZXBN', 'Frigorífico combi de clase A++ con tecnología No Frost', 699.99, 'Beko')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Miele KFN 29283 D', 'Frigorífico combi con sistema DynaCool y tecnología No Frost', 1699.99, 'Miele')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Miele KFN 29283 D', 'Frigorífico combi con sistema DynaCool y tecnología No Frost', 699.99, 'Miele')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Electrolux EN3454MOX', 'Frigorífico combi con tecnología No Frost y sistema CustomFlex', 899.99, 'Electrolux')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Candy CMCL 5172XN', 'Frigorífico combi de clase A++ con tecnología No Frost', 499.99, 'Candy')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico AEG RCB63726OW', 'Frigorífico combi de clase A++ con tecnología No Frost', 1399.99, 'AEG')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Smeg FAB30RNE1', 'Frigorífico combi de estilo retro con capacidad de 293 litros', 1799.99, 'Smeg')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico AEG RCB63726OW', 'Frigorífico combi de clase A++ con tecnología No Frost', 399.99, 'AEG')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Smeg FAB30RNE1', 'Frigorífico combi de estilo retro con capacidad de 293 litros', 799.99, 'Smeg')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Sharp SJ-EX820FSL', 'Frigorífico combi de clase A++ con tecnología No Frost', 799.99, 'Sharp')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Panasonic NR-BN34FX1-XE', 'Frigorífico combi de clase A++ con tecnología Inverter', 999.99, 'Panasonic')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Gorenje ORB153R', 'Frigorífico combi de estilo retro con tecnología No Frost', 699.99, 'Gorenje')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Zanussi ZRB34315XV', 'Frigorífico combi de clase A++ con tecnología No Frost', 549.99, 'Zanussi')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Smeg FC400X2PE', 'Frigorífico combi de clase A+ con estilo vintage', 1199.99, 'Smeg')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Liebherr CNPes 5156', 'Frigorífico combi con tecnología No Frost y sistema DuoCooling', 1499.99, 'Liebherr')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Smeg FC400X2PE', 'Frigorífico combi de clase A+ con estilo vintage', 999.99, 'Smeg')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Liebherr CNPes 5156', 'Frigorífico combi con tecnología No Frost y sistema DuoCooling', 499.99, 'Liebherr')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Hotpoint E4D AA X C', 'Frigorífico Side by Side de clase A+ con tecnología No Frost', 999.99, 'Hotpoint')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Teka NFL 320 C', 'Frigorífico combi de clase A++ con tecnología No Frost', 649.99, 'Teka')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Smeg FQ960P', 'Frigorífico Side by Side de estilo retro con capacidad de 610 litros', 2499.99, 'Smeg')
-INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico LG GSL760PZXV', 'Frigorífico Side by Side con tecnología Total No Frost', 1799.99, 'LG')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico Smeg FQ960P', 'Frigorífico Side by Side de estilo retro con capacidad de 610 litros', 499.99, 'Smeg')
+INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (38, 'Frigorífico LG GSL760PZXV', 'Frigorífico Side by Side con tecnología Total No Frost', 799.99, 'LG')
 -- SUBCATEGORIA 39
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (39, 'Secadora Bosch Serie 6 WTG8729XEE', 'Secadora de condensación de 8 kg con bomba de calor', 899.99, 'Bosch')
 INSERT INTO Producto (Id_Subcategoria, Nombre, Descripcion, Precio, Fabricante) VALUES (39, 'Secadora LG RC90V9AV2Q', 'Secadora de condensación de 9 kg con tecnología TrueSteam', 999.99, 'LG')
@@ -3042,35 +3033,3 @@ INSERT INTO Imagen VALUES (1299, '_53_21')
 INSERT INTO Imagen VALUES (1300, '_53_22')
 INSERT INTO Imagen VALUES (1301, '_53_23')
 INSERT INTO Imagen VALUES (1302, '_53_24')
-
--- ¡ OJO ! IMPORTANTE
--- SCRIPT PARA PROGRAMAR EL BORRADO AUTOMÁTICO DE LOS USUARIOS INVITADOS 
-
-USE msdb; 
-GO
-EXEC dbo.sp_add_job
-    @job_name = N'BorrarUsuarioInvitado',
-    @enabled = 1;
-GO
-EXEC dbo.sp_add_jobstep
-    @job_name = N'BorrarUsuarioInvitado',
-    @step_name = N'BorrarRegistrosExpirados',
-    @subsystem = N'TSQL',
-    @command = N'DELETE FROM Usuario u
-				 INNER JOIN Detalle_Usuario d ON (u.Id_Usuario = d.Id_Usuario)
-				 WHERE d.Fecha_Ultima_Modificacion = GETDATE() AND
-				 u.Invitado = 1';
-GO
-EXEC dbo.sp_add_schedule
-    @schedule_name = N'ProgramacionBorradoUsuariosInvitados',
-    @freq_type = 4,
-    @freq_interval = 1,
-    @active_start_time = 010000;
-GO
-EXEC dbo.sp_attach_schedule
-    @job_name = N'BorrarUsuarioInvitado',
-    @schedule_name = N'ProgramacionBorradoUsuariosInvitados';
-GO
-EXEC dbo.sp_add_jobserver
-    @job_name = N'BorrarUsuarioInvitado';
-GO
