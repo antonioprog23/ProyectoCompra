@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,13 +11,11 @@ namespace ProyectoCompra.Base_datos
 {
     public class BDDireccion
     {
-        //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
 
         public static List<Direccion> consusltarDireccion(int idUsuario)
         {
             List<Direccion> direcciones = new List<Direccion>();
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarDireccion", connection))
@@ -39,7 +38,7 @@ namespace ProyectoCompra.Base_datos
         public static bool actualizarDireccion(Direccion direccion, int idUsuario)
         {
             bool actualizado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -76,7 +75,7 @@ namespace ProyectoCompra.Base_datos
         public static bool eliminarDireccion(Direccion direccion)
         {
             bool eliminado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())

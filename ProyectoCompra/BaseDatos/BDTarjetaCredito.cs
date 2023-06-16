@@ -1,17 +1,15 @@
 ﻿using ProyectoCompra.Clases;
 using System.Data.SqlClient;
+using System.Net;
 
 namespace ProyectoCompra.Base_datos
 {
     public class BDTarjetaCredito
     {
-        //CONSTANTES
-        private const string RUTA_DB = "Data Source=ANTONIO\\SQLEXPRESS;Initial Catalog=EasyShop;Integrated Security=True;";
-
         public static bool actualizarTarjetaCredito(TarjetaCredit tarjetaCredito)
         {
             bool insertado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -45,7 +43,7 @@ namespace ProyectoCompra.Base_datos
         public static bool eliminarTarjetaCredito(int idUsuario)
         {
             bool eliminado = false;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlTransaction transaction = connection.BeginTransaction())
@@ -74,7 +72,7 @@ namespace ProyectoCompra.Base_datos
         public static TarjetaCredit consultarTarjetaCredito(int idUsuario)
         {
             TarjetaCredit tarjetaCredit = null;
-            using (SqlConnection connection = new SqlConnection(RUTA_DB))
+            using (SqlConnection connection = new SqlConnection(Servidor.RUTA_DB))
             {
                 connection.Open();
                 using (SqlCommand cmd = new SqlCommand("ConsultarTarjetaCredito", connection))
