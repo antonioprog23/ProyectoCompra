@@ -112,6 +112,7 @@
             this.panel1.Controls.Add(this.mnAlimentacion);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 1);
+            this.panel1.MaximumSize = new System.Drawing.Size(1178, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1178, 100);
             this.panel1.TabIndex = 4;
@@ -653,6 +654,7 @@
             this.panel2.Controls.Add(this.btnCarrito);
             this.panel2.Controls.Add(this.btnIdentificarse);
             this.panel2.Location = new System.Drawing.Point(95, 2);
+            this.panel2.MaximumSize = new System.Drawing.Size(1080, 70);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1080, 70);
             this.panel2.TabIndex = 8;
