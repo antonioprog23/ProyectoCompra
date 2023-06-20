@@ -647,7 +647,6 @@
             // 
             // panel2
             // 
-            this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.btnPerfil);
             this.panel2.Controls.Add(this.lblContador);
             this.panel2.Controls.Add(this.lblSaludo);
@@ -655,7 +654,7 @@
             this.panel2.Controls.Add(this.btnIdentificarse);
             this.panel2.Location = new System.Drawing.Point(95, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 72);
+            this.panel2.Size = new System.Drawing.Size(1080, 70);
             this.panel2.TabIndex = 8;
             // 
             // btnPerfil
